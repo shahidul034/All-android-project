@@ -1,0 +1,5931 @@
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/Article">
+
+<!-- Mirrored from developer.android.com/reference/javax/net/ssl/SSLSocket.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 19 Nov 2017 16:46:25 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+
+  
+
+
+
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+
+
+
+
+
+<script>var a=window.devsite||{};window.devsite=a;a.readyCallbacks=[];window.devsite.readyCallbacks=a.readyCallbacks;a.ready=function(b){a.readyCallbacks.push(b)};window.devsite.ready=a.ready;
+</script>
+
+<meta charset="utf-8">
+
+
+
+<meta name="xsrf_token" content="oga8-K4uYbnHp_yuh8tfA2S10xMJt_-xWtMYyIv9SPM6MTUxMTEwODA2MzgxNjY1MA" />
+
+  
+    <link rel="canonical" href="SSLSocket.html">
+  
+
+  
+    <link rel="alternate" href="SSLSocket.html" hreflang="en">
+  
+    <link rel="alternate" href="https://developer.android.google.cn/reference/javax/net/ssl/SSLSocket.html" hreflang="en-cn">
+  
+
+  <link rel="alternate" href="SSLSocket.html" hreflang="x-default">
+
+
+
+
+<link rel="shortcut icon" href="../../../../_static/268f0926ba/images/android/favicon.png">
+
+<link rel="apple-touch-icon" href="../../../../_static/268f0926ba/images/android/touchicon-180.png">
+
+
+<title>
+
+  SSLSocket | Android Developers
+
+</title>
+
+
+
+  <meta itemprop="dateModified" content="2017-10-25T17:01:22.658910">
+
+
+<!-- STYLESHEETS -->
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto+Condensed">
+<link rel="stylesheet"
+    href="http://fonts.googleapis.com/css?family=Roboto:light,regular,medium,thin,italic,mediumitalic,bold"
+    title="roboto">
+<link rel="stylesheet" href="../../../../_static/268f0926ba/css/dac-devsite.css">
+
+
+
+
+
+
+
+<link href="../../../../static/css/default9a55.css?v=2017111904" rel="stylesheet" type="text/css">
+<!-- JAVASCRIPT -->
+<script src="../../../../_static/268f0926ba/js/android_3p-bundle.js" type="text/javascript"></script>
+<script src="../../../../_static/268f0926ba/js/script_foot_closure_android.js"></script>
+<script src="../../../../_static/268f0926ba/js/script_foot_android.js"></script>
+
+<script type="text/javascript">
+  var toRoot = 'https://developer.android.com/';
+  devsite.permissions.init({"f62218c009ec029abef196bba5aa34cf": true, "098dafe57affddc137df300142652cfd": false, "8e03e230de0bd8a6fe173fdf172e8b3f": false, "cb025a64a50094835616312f4774a53d": true, "c95bf81627eb648c2345aec06a66200a": true, "51470233c56fc1fde50f00b73c52b216": false, "d169d485cf24243a263783dbe42029b1": true, "039e5d84b87fd75807ffb37b7f1bbf2c": true, "752953480de00a336d911a46966cc16d": false, "700def1a83e356c06c0925afb05de4b0": false, "6749dcb526ce9bde6993550c7d928d24": true});
+
+  var replaceBlog = false;
+  var replaceYouTube = false;
+  var siteDefaultLocale = 'en';
+
+  var ANDROID_LANGUAGES = [
+      'id','de','en','es','es-419','fr','pt-br','vi','tr','ru','th','ja','zh-cn','zh-tw','ko'
+  ];
+</script>
+<script src="../../../../static/js/docs9a55.js?v=2017111904" type="text/javascript"></script>
+
+
+</head>
+
+<body class="gc-documentation
+            api apilevel-1
+            
+              develop
+              reference
+            
+            ">
+  
+
+
+  
+    <input class="google-analytics-id-json" type="hidden" value="{&quot;dimensions&quot;: {&quot;dimension6&quot;: &quot;en&quot;, &quot;dimension4&quot;: &quot;Reference&quot;, &quot;dimension5&quot;: &quot;en&quot;, &quot;dimension3&quot;: false, &quot;dimension1&quot;: &quot;Signed out&quot;, &quot;dimension8&quot;: null}, &quot;gaid&quot;: &quot;UA-49880327-2&quot;}">
+  
+    <input class="google-analytics-id-json" type="hidden" value="{&quot;dimensions&quot;: {&quot;dimension6&quot;: &quot;en&quot;, &quot;dimension4&quot;: &quot;Reference&quot;, &quot;dimension5&quot;: &quot;en&quot;, &quot;dimension3&quot;: false, &quot;dimension1&quot;: &quot;Signed out&quot;, &quot;dimension8&quot;: null}, &quot;gaid&quot;: &quot;UA-5831155-1&quot;}">
+  
+
+
+
+  
+  
+    <script>
+      var dataLayer = [{"freeTrialEligibleUser": "False", "userCountry": "BD", "language": {"requested": "en", "served": "en"}, "projectName": "Reference", "scriptsafe": null, "signedIn": "False", "internalUser": "False"}];
+    </script>
+  
+
+
+
+  
+  <a href="#top" id="skip-to-main">Skip to content</a>
+  <header id="header-wrapper">
+    <div class="dac-header" id="header">
+      <div class="dac-header-inner">
+        
+        <a class="dac-nav-toggle" data-dac-toggle-nav href="#" title="Open navigation">
+          <span class="dac-nav-hamburger">
+            <span class="dac-nav-hamburger-top"></span>
+            <span class="dac-nav-hamburger-mid"></span>
+            <span class="dac-nav-hamburger-bot"></span>
+          </span>
+        </a>
+        
+        <a class="dac-header-logo" href="https://developer.android.com/index.html">
+          <img class="dac-header-logo-image" src="../../../../static/images/android_logo.png"
+              srcset="https://developer.android.com/static/images/android_logo_2x.png 2x"
+              width="32" height="36" alt="Android"> Developers</a>
+        <ul class="dac-header-tabs">
+          <li>
+            <a class="dac-header-tab" href="https://developer.android.com/design/index.html"
+               zh-tw-lang="設計"
+               zh-cn-lang="设计"
+               ru-lang="Проектирование"
+               ko-lang="디자인"
+               ja-lang="設計"
+               es-lang="Diseñar">
+              
+              Design</a>
+          </li>
+          <li>
+            <a class="dac-header-tab" href="https://developer.android.com/develop/index.html"
+               zh-tw-lang="開發"
+               zh-cn-lang="开发"
+               ru-lang="Разработка"
+               ko-lang="개발"
+               ja-lang="開発"
+               es-lang="Desarrollar">
+              
+              Develop</a>
+          </li>
+          <li>
+            <a class="dac-header-tab" href="https://developer.android.com/distribute/index.html"
+               zh-tw-lang="發佈"
+               zh-cn-lang="分发"
+               ru-lang="Распространение"
+               ko-lang="배포"
+               ja-lang="配布"
+               es-lang="Distribuir">
+              
+              Distribute</a>
+          </li>
+        </ul>
+
+
+        
+
+        <a class="dac-header-console-btn gc-analytics-event" href="https://play.google.com/apps/publish/"
+           data-category="User" data-action="Console" data-label="Clicked">
+          
+          <img src="https://developer.android.com/static/images/developer-console-icon.svg" width="18" height="19" alt="">Play Console</a>
+        
+
+<form data-search="" class="dac-header-search">
+  <button class="dac-header-search-close" data-search-close="">
+    <i class="dac-sprite dac-back-arrow"></i>
+  </button>
+
+  <div class="dac-header-search-inner">
+    <i class="dac-sprite dac-search-white dac-header-search-icon"></i>
+    
+    <input id="search_autocomplete" type="text" value="" autocomplete="off" name="q" class="dac-header-search-input" placeholder="Search">
+    <button class="dac-header-search-clear dac-hidden" data-search-clear="">
+      <i class="dac-sprite dac-close-black"></i>
+    </button>
+  </div>
+</form>
+
+        
+      </div><!--/.header-wrap.wrap-->
+    </div><!--/.header-->
+
+    
+
+<div id="search-results" class="dac-search-results">
+  <div id="dac-search-results-history" class="dac-search-results-history">
+    <div class="wrap dac-search-results-history-wrap">
+      <div class="cols">
+        <div class="col-1of2 col-tablet-1of2 col-mobile-1of1">
+          
+          <h2>Most visited</h2>
+          <div class="resource-flow-layout" data-history-query="history:most/visited" data-maxresults="3" data-cardsizes="18x2"></div>
+        </div>
+
+        <div class="col-1of2 col-tablet-1of2 col-mobile-1of1">
+          
+          <h2>Recently visited</h2>
+          <div class="resource-flow-layout cols" data-history-query="history:recent" data-allow-duplicates="true" data-maxresults="3" data-cardsizes="18x2"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="dac-search-results-content" class="dac-search-results-content">
+    <div class="dac-search-results-metadata wrap">
+      <div class="dac-search-results-for">
+          <h2>
+          
+          Results for <span id="search-results-for"></span>
+          </h2>
+      </div>
+
+      <div id="dac-search-results-hero"></div>
+
+      <div class="dac-search-results-hero cols">
+        <div id="dac-search-results-reference" class="col-6of6 col-tablet-2of2 col-mobile-1of1">
+          <div class="suggest-card reference no-display">
+            <ul class="dac-search-results-reference">
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="cols dac-search-results-cse">
+        <script src="../../../../../cse.google.com/f4116.txt?cx=000521750095050289010:zpcpi1ea4s8" async></script>
+        <gcse:searchresults-only linkTarget="_self"></gcse:searchresults-only>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </header>
+
+  <a name="navigation" tabindex=0 class="nav-start-marker">navigation</a>
+  <nav class="dac-nav">
+    <div class="dac-nav-dimmer" data-dac-toggle-nav></div>
+    <div class="dac-nav-sidebar" data-swap data-dynamic="false" data-transition-speed="300" data-dac-nav>
+      <div data-swap-container>
+        
+        <a class="dac-nav-back-button dac-swap-section dac-up dac-no-anim" tabindex=0 data-swap-button>
+          
+          
+          <i class="dac-sprite dac-nav-back"></i> <span class="dac-nav-back-title">Back</span>
+        </a>
+
+        <div class="dac-nav-sub dac-swap-section dac-right dac-active" itemscope
+            itemtype="http://schema.org/SiteNavigationElement">
+          
+          
+            
+              
+              <button data-fullscreen="" class="dac-nav-fullscreen">
+                <i class="dac-sprite dac-fullscreen"></i>
+              </button>
+              <script>$('[data-fullscreen]').dacFullscreen();</script>
+              <div id="devdoc-nav">
+                <div id="api-nav-header">
+                  <div id="api-level-toggle">
+                    <label for="apiLevelCheckbox" class="disabled"
+                        
+                        title="Select your target API level to dim unavailable APIs">
+                        
+                        API:
+                    </label>
+                    <div class="select-wrapper">
+                      <select id="apiLevelSelector"></select>
+                    </div>
+                  </div><!-- end toggle -->
+                  <div id="api-nav-title">
+                    <select id="reference-selector">
+                      
+                      <option value="android">Android Platform</option>
+                      
+                      
+                      <option value="android/support">Android Support Library</option>
+                      
+                      
+                      <option value="android/arch">Architecture Components</option>
+                      
+                      <option value="android/support/constraint">Constraint Library</option>
+                      
+                      <option value="com/android/billingclient">Play Billing Library</option>
+                      
+                      <option value="android/support/test">Test Support Library</option>
+                      
+                      <option value="android/support/wearable">Wearable Library</option>
+                    </select>
+                  </div>
+                </div><!-- end nav header -->
+                <script>
+                  buildApiLevelSelector();
+                  initReferenceSelector();
+                </script>
+                <div class="dac-reference-nav" data-reference-tree="">
+                  <ul class="dac-reference-nav-list" data-reference-namespaces="">
+                    <li class="api no-toggle"><a href="../../../classes.html" >Class Index</a></li><li class="api no-toggle"><a href="../../../packages.html" >Package Index</a></li><li class="api apilevel-1"><a href="../../../android/package-summary.html" >android</a></li><li class="api apilevel-4"><a href="../../../android/accessibilityservice/package-summary.html" >android.accessibilityservice</a></li><li class="api apilevel-5"><a href="../../../android/accounts/package-summary.html" >android.accounts</a></li><li class="api apilevel-11"><a href="../../../android/animation/package-summary.html" >android.animation</a></li><li class="api apilevel-16"><a href="../../../android/annotation/package-summary.html" >android.annotation</a></li><li class="api apilevel-1"><a href="../../../android/app/package-summary.html" >android.app</a></li><li class="api apilevel-8"><a href="../../../android/app/admin/package-summary.html" >android.app.admin</a></li><li class="api apilevel-23"><a href="../../../android/app/assist/package-summary.html" >android.app.assist</a></li><li class="api apilevel-8"><a href="../../../android/app/backup/package-summary.html" >android.app.backup</a></li><li class="api apilevel-21"><a href="../../../android/app/job/package-summary.html" >android.app.job</a></li><li class="api apilevel-21"><a href="../../../android/app/usage/package-summary.html" >android.app.usage</a></li><li class="api apilevel-3"><a href="../../../android/appwidget/package-summary.html" >android.appwidget</a></li><li class="api apilevel-5"><a href="../../../android/bluetooth/package-summary.html" >android.bluetooth</a></li><li class="api apilevel-21"><a href="../../../android/bluetooth/le/package-summary.html" >android.bluetooth.le</a></li><li class="api apilevel-26"><a href="../../../android/companion/package-summary.html" >android.companion</a></li><li class="api apilevel-1"><a href="../../../android/content/package-summary.html" >android.content</a></li><li class="api apilevel-1"><a href="../../../android/content/pm/package-summary.html" >android.content.pm</a></li><li class="api apilevel-1"><a href="../../../android/content/res/package-summary.html" >android.content.res</a></li><li class="api apilevel-1"><a href="../../../android/database/package-summary.html" >android.database</a></li><li class="api apilevel-1"><a href="../../../android/database/sqlite/package-summary.html" >android.database.sqlite</a></li><li class="api apilevel-"><a href="../../../android/databinding/package-summary.html" >android.databinding</a></li><li class="api apilevel-11"><a href="../../../android/drm/package-summary.html" >android.drm</a></li><li class="api apilevel-4"><a href="../../../android/gesture/package-summary.html" >android.gesture</a></li><li class="api apilevel-1"><a href="../../../android/graphics/package-summary.html" >android.graphics</a></li><li class="api apilevel-1"><a href="../../../android/graphics/drawable/package-summary.html" >android.graphics.drawable</a></li><li class="api apilevel-1"><a href="../../../android/graphics/drawable/shapes/package-summary.html" >android.graphics.drawable.shapes</a></li><li class="api apilevel-26"><a href="../../../android/graphics/fonts/package-summary.html" >android.graphics.fonts</a></li><li class="api apilevel-19"><a href="../../../android/graphics/pdf/package-summary.html" >android.graphics.pdf</a></li><li class="api apilevel-1"><a href="../../../android/hardware/package-summary.html" >android.hardware</a></li><li class="api apilevel-21"><a href="../../../android/hardware/camera2/package-summary.html" >android.hardware.camera2</a></li><li class="api apilevel-21"><a href="../../../android/hardware/camera2/params/package-summary.html" >android.hardware.camera2.params</a></li><li class="api apilevel-17"><a href="../../../android/hardware/display/package-summary.html" >android.hardware.display</a></li><li class="api apilevel-23"><a href="../../../android/hardware/fingerprint/package-summary.html" >android.hardware.fingerprint</a></li><li class="api apilevel-16"><a href="../../../android/hardware/input/package-summary.html" >android.hardware.input</a></li><li class="api apilevel-12"><a href="../../../android/hardware/usb/package-summary.html" >android.hardware.usb</a></li><li class="api apilevel-24"><a href="../../../android/icu/lang/package-summary.html" >android.icu.lang</a></li><li class="api apilevel-24"><a href="../../../android/icu/math/package-summary.html" >android.icu.math</a></li><li class="api apilevel-24"><a href="../../../android/icu/text/package-summary.html" >android.icu.text</a></li><li class="api apilevel-24"><a href="../../../android/icu/util/package-summary.html" >android.icu.util</a></li><li class="api apilevel-3"><a href="../../../android/inputmethodservice/package-summary.html" >android.inputmethodservice</a></li><li class="api apilevel-1"><a href="../../../android/location/package-summary.html" >android.location</a></li><li class="api apilevel-1"><a href="../../../android/media/package-summary.html" >android.media</a></li><li class="api apilevel-9"><a href="../../../android/media/audiofx/package-summary.html" >android.media.audiofx</a></li><li class="api apilevel-21"><a href="../../../android/media/browse/package-summary.html" >android.media.browse</a></li><li class="api apilevel-14"><a href="../../../android/media/effect/package-summary.html" >android.media.effect</a></li><li class="api apilevel-23"><a href="../../../android/media/midi/package-summary.html" >android.media.midi</a></li><li class="api apilevel-21"><a href="../../../android/media/projection/package-summary.html" >android.media.projection</a></li><li class="api apilevel-21"><a href="../../../android/media/session/package-summary.html" >android.media.session</a></li><li class="api apilevel-21"><a href="../../../android/media/tv/package-summary.html" >android.media.tv</a></li><li class="api apilevel-12"><a href="../../../android/mtp/package-summary.html" >android.mtp</a></li><li class="api apilevel-1"><a href="../../../android/net/package-summary.html" >android.net</a></li><li class="api apilevel-1"><a href="../../../android/net/http/package-summary.html" >android.net.http</a></li><li class="api apilevel-16"><a href="../../../android/net/nsd/package-summary.html" >android.net.nsd</a></li><li class="api apilevel-12"><a href="../../../android/net/rtp/package-summary.html" >android.net.rtp</a></li><li class="api apilevel-9"><a href="../../../android/net/sip/package-summary.html" >android.net.sip</a></li><li class="api apilevel-1"><a href="../../../android/net/wifi/package-summary.html" >android.net.wifi</a></li><li class="api apilevel-26"><a href="../../../android/net/wifi/aware/package-summary.html" >android.net.wifi.aware</a></li><li class="api apilevel-26"><a href="../../../android/net/wifi/hotspot2/package-summary.html" >android.net.wifi.hotspot2</a></li><li class="api apilevel-26"><a href="../../../android/net/wifi/hotspot2/omadm/package-summary.html" >android.net.wifi.hotspot2.omadm</a></li><li class="api apilevel-26"><a href="../../../android/net/wifi/hotspot2/pps/package-summary.html" >android.net.wifi.hotspot2.pps</a></li><li class="api apilevel-14"><a href="../../../android/net/wifi/p2p/package-summary.html" >android.net.wifi.p2p</a></li><li class="api apilevel-16"><a href="../../../android/net/wifi/p2p/nsd/package-summary.html" >android.net.wifi.p2p.nsd</a></li><li class="api apilevel-9"><a href="../../../android/nfc/package-summary.html" >android.nfc</a></li><li class="api apilevel-19"><a href="../../../android/nfc/cardemulation/package-summary.html" >android.nfc.cardemulation</a></li><li class="api apilevel-10"><a href="../../../android/nfc/tech/package-summary.html" >android.nfc.tech</a></li><li class="api apilevel-1"><a href="../../../android/opengl/package-summary.html" >android.opengl</a></li><li class="api apilevel-1"><a href="../../../android/os/package-summary.html" >android.os</a></li><li class="api apilevel-24"><a href="../../../android/os/health/package-summary.html" >android.os.health</a></li><li class="api apilevel-9"><a href="../../../android/os/storage/package-summary.html" >android.os.storage</a></li><li class="api apilevel-1"><a href="../../../android/preference/package-summary.html" >android.preference</a></li><li class="api apilevel-19"><a href="../../../android/print/package-summary.html" >android.print</a></li><li class="api apilevel-19"><a href="../../../android/print/pdf/package-summary.html" >android.print.pdf</a></li><li class="api apilevel-19"><a href="../../../android/printservice/package-summary.html" >android.printservice</a></li><li class="api apilevel-1"><a href="../../../android/provider/package-summary.html" >android.provider</a></li><li class="api apilevel-11"><a href="../../../android/renderscript/package-summary.html" >android.renderscript</a></li><li class="api apilevel-1"><a href="../../../android/sax/package-summary.html" >android.sax</a></li><li class="api apilevel-14"><a href="../../../android/security/package-summary.html" >android.security</a></li><li class="api apilevel-23"><a href="../../../android/security/keystore/package-summary.html" >android.security.keystore</a></li><li class="api apilevel-26"><a href="../../../android/service/autofill/package-summary.html" >android.service.autofill</a></li><li class="api apilevel-22"><a href="../../../android/service/carrier/package-summary.html" >android.service.carrier</a></li><li class="api apilevel-23"><a href="../../../android/service/chooser/package-summary.html" >android.service.chooser</a></li><li class="api apilevel-17"><a href="../../../android/service/dreams/package-summary.html" >android.service.dreams</a></li><li class="api apilevel-21"><a href="../../../android/service/media/package-summary.html" >android.service.media</a></li><li class="api apilevel-18"><a href="../../../android/service/notification/package-summary.html" >android.service.notification</a></li><li class="api apilevel-24"><a href="../../../android/service/quicksettings/package-summary.html" >android.service.quicksettings</a></li><li class="api apilevel-21"><a href="../../../android/service/restrictions/package-summary.html" >android.service.restrictions</a></li><li class="api apilevel-14"><a href="../../../android/service/textservice/package-summary.html" >android.service.textservice</a></li><li class="api apilevel-21"><a href="../../../android/service/voice/package-summary.html" >android.service.voice</a></li><li class="api apilevel-24"><a href="../../../android/service/vr/package-summary.html" >android.service.vr</a></li><li class="api apilevel-7"><a href="../../../android/service/wallpaper/package-summary.html" >android.service.wallpaper</a></li><li class="api apilevel-3"><a href="../../../android/speech/package-summary.html" >android.speech</a></li><li class="api apilevel-4"><a href="../../../android/speech/tts/package-summary.html" >android.speech.tts</a></li><li class="api apilevel-21"><a href="../../../android/system/package-summary.html" >android.system</a></li><li class="api apilevel-21"><a href="../../../android/telecom/package-summary.html" >android.telecom</a></li><li class="api apilevel-1"><a href="../../../android/telephony/package-summary.html" >android.telephony</a></li><li class="api apilevel-5"><a href="../../../android/telephony/cdma/package-summary.html" >android.telephony.cdma</a></li><li class="api apilevel-1"><a href="../../../android/telephony/gsm/package-summary.html" >android.telephony.gsm</a></li><li class="api apilevel-1"><a href="../../../android/test/package-summary.html" >android.test</a></li><li class="api apilevel-1"><a href="../../../android/test/mock/package-summary.html" >android.test.mock</a></li><li class="api apilevel-1"><a href="../../../android/test/suitebuilder/package-summary.html" >android.test.suitebuilder</a></li><li class="api apilevel-1"><a href="../../../android/test/suitebuilder/annotation/package-summary.html" >android.test.suitebuilder.annotation</a></li><li class="api apilevel-1"><a href="../../../android/text/package-summary.html" >android.text</a></li><li class="api apilevel-3"><a href="../../../android/text/format/package-summary.html" >android.text.format</a></li><li class="api apilevel-1"><a href="../../../android/text/method/package-summary.html" >android.text.method</a></li><li class="api apilevel-1"><a href="../../../android/text/style/package-summary.html" >android.text.style</a></li><li class="api apilevel-1"><a href="../../../android/text/util/package-summary.html" >android.text.util</a></li><li class="api apilevel-19"><a href="../../../android/transition/package-summary.html" >android.transition</a></li><li class="api apilevel-1"><a href="../../../android/util/package-summary.html" >android.util</a></li><li class="api apilevel-1"><a href="../../../android/view/package-summary.html" >android.view</a></li><li class="api apilevel-4"><a href="../../../android/view/accessibility/package-summary.html" >android.view.accessibility</a></li><li class="api apilevel-1"><a href="../../../android/view/animation/package-summary.html" >android.view.animation</a></li><li class="api apilevel-26"><a href="../../../android/view/autofill/package-summary.html" >android.view.autofill</a></li><li class="api apilevel-3"><a href="../../../android/view/inputmethod/package-summary.html" >android.view.inputmethod</a></li><li class="api apilevel-26"><a href="../../../android/view/textclassifier/package-summary.html" >android.view.textclassifier</a></li><li class="api apilevel-14"><a href="../../../android/view/textservice/package-summary.html" >android.view.textservice</a></li><li class="api apilevel-1"><a href="../../../android/webkit/package-summary.html" >android.webkit</a></li><li class="api apilevel-1"><a href="../../../android/widget/package-summary.html" >android.widget</a></li><li class="api apilevel-1"><a href="../../../com/android/internal/util/package-summary.html" >com.android.internal.util</a></li><li class="api apilevel-1"><a href="../../../dalvik/annotation/package-summary.html" >dalvik.annotation</a></li><li class="api apilevel-1"><a href="../../../dalvik/bytecode/package-summary.html" >dalvik.bytecode</a></li><li class="api apilevel-1"><a href="../../../dalvik/system/package-summary.html" >dalvik.system</a></li><li class="api apilevel-1"><a href="../../../java/awt/font/package-summary.html" >java.awt.font</a></li><li class="api apilevel-3"><a href="../../../java/beans/package-summary.html" >java.beans</a></li><li class="api apilevel-1"><a href="../../../java/io/package-summary.html" >java.io</a></li><li class="api apilevel-1"><a href="../../../java/lang/package-summary.html" >java.lang</a></li><li class="api apilevel-1"><a href="../../../java/lang/annotation/package-summary.html" >java.lang.annotation</a></li><li class="api apilevel-26"><a href="../../../java/lang/invoke/package-summary.html" >java.lang.invoke</a></li><li class="api apilevel-1"><a href="../../../java/lang/ref/package-summary.html" >java.lang.ref</a></li><li class="api apilevel-1"><a href="../../../java/lang/reflect/package-summary.html" >java.lang.reflect</a></li><li class="api apilevel-1"><a href="../../../java/math/package-summary.html" >java.math</a></li><li class="api apilevel-1"><a href="../../../java/net/package-summary.html" >java.net</a></li><li class="api apilevel-1"><a href="../../../java/nio/package-summary.html" >java.nio</a></li><li class="api apilevel-1"><a href="../../../java/nio/channels/package-summary.html" >java.nio.channels</a></li><li class="api apilevel-1"><a href="../../../java/nio/channels/spi/package-summary.html" >java.nio.channels.spi</a></li><li class="api apilevel-1"><a href="../../../java/nio/charset/package-summary.html" >java.nio.charset</a></li><li class="api apilevel-1"><a href="../../../java/nio/charset/spi/package-summary.html" >java.nio.charset.spi</a></li><li class="api apilevel-26"><a href="../../../java/nio/file/package-summary.html" >java.nio.file</a></li><li class="api apilevel-26"><a href="../../../java/nio/file/attribute/package-summary.html" >java.nio.file.attribute</a></li><li class="api apilevel-26"><a href="../../../java/nio/file/spi/package-summary.html" >java.nio.file.spi</a></li><li class="api apilevel-1"><a href="../../../java/security/package-summary.html" >java.security</a></li><li class="api apilevel-1"><a href="../../../java/security/acl/package-summary.html" >java.security.acl</a></li><li class="api apilevel-1"><a href="../../../java/security/cert/package-summary.html" >java.security.cert</a></li><li class="api apilevel-1"><a href="../../../java/security/interfaces/package-summary.html" >java.security.interfaces</a></li><li class="api apilevel-1"><a href="../../../java/security/spec/package-summary.html" >java.security.spec</a></li><li class="api apilevel-1"><a href="../../../java/sql/package-summary.html" >java.sql</a></li><li class="api apilevel-1"><a href="../../../java/text/package-summary.html" >java.text</a></li><li class="api apilevel-26"><a href="../../../java/time/package-summary.html" >java.time</a></li><li class="api apilevel-26"><a href="../../../java/time/chrono/package-summary.html" >java.time.chrono</a></li><li class="api apilevel-26"><a href="../../../java/time/format/package-summary.html" >java.time.format</a></li><li class="api apilevel-26"><a href="../../../java/time/temporal/package-summary.html" >java.time.temporal</a></li><li class="api apilevel-26"><a href="../../../java/time/zone/package-summary.html" >java.time.zone</a></li><li class="api apilevel-1"><a href="../../../java/util/package-summary.html" >java.util</a></li><li class="api apilevel-1"><a href="../../../java/util/concurrent/package-summary.html" >java.util.concurrent</a></li><li class="api apilevel-1"><a href="../../../java/util/concurrent/atomic/package-summary.html" >java.util.concurrent.atomic</a></li><li class="api apilevel-1"><a href="../../../java/util/concurrent/locks/package-summary.html" >java.util.concurrent.locks</a></li><li class="api apilevel-24"><a href="../../../java/util/function/package-summary.html" >java.util.function</a></li><li class="api apilevel-1"><a href="../../../java/util/jar/package-summary.html" >java.util.jar</a></li><li class="api apilevel-1"><a href="../../../java/util/logging/package-summary.html" >java.util.logging</a></li><li class="api apilevel-1"><a href="../../../java/util/prefs/package-summary.html" >java.util.prefs</a></li><li class="api apilevel-1"><a href="../../../java/util/regex/package-summary.html" >java.util.regex</a></li><li class="api apilevel-24"><a href="../../../java/util/stream/package-summary.html" >java.util.stream</a></li><li class="api apilevel-1"><a href="../../../java/util/zip/package-summary.html" >java.util.zip</a></li><li class="api apilevel-1"><a href="../../crypto/package-summary.html" >javax.crypto</a></li><li class="api apilevel-1"><a href="../../crypto/interfaces/package-summary.html" >javax.crypto.interfaces</a></li><li class="api apilevel-1"><a href="../../crypto/spec/package-summary.html" >javax.crypto.spec</a></li><li class="api apilevel-1"><a href="../../microedition/khronos/egl/package-summary.html" >javax.microedition.khronos.egl</a></li><li class="api apilevel-1"><a href="../../microedition/khronos/opengles/package-summary.html" >javax.microedition.khronos.opengles</a></li><li class="api apilevel-1"><a href="../package-summary.html" >javax.net</a></li><li class="api apilevel-1"><a href="package-summary.html" >javax.net.ssl</a></li><li class="api apilevel-1"><a href="../../security/auth/package-summary.html" >javax.security.auth</a></li><li class="api apilevel-1"><a href="../../security/auth/callback/package-summary.html" >javax.security.auth.callback</a></li><li class="api apilevel-1"><a href="../../security/auth/login/package-summary.html" >javax.security.auth.login</a></li><li class="api apilevel-1"><a href="../../security/auth/x500/package-summary.html" >javax.security.auth.x500</a></li><li class="api apilevel-1"><a href="../../security/cert/package-summary.html" >javax.security.cert</a></li><li class="api apilevel-1"><a href="../../sql/package-summary.html" >javax.sql</a></li><li class="api apilevel-1"><a href="../../xml/package-summary.html" >javax.xml</a></li><li class="api apilevel-8"><a href="../../xml/datatype/package-summary.html" >javax.xml.datatype</a></li><li class="api apilevel-8"><a href="../../xml/namespace/package-summary.html" >javax.xml.namespace</a></li><li class="api apilevel-1"><a href="../../xml/parsers/package-summary.html" >javax.xml.parsers</a></li><li class="api apilevel-8"><a href="../../xml/transform/package-summary.html" >javax.xml.transform</a></li><li class="api apilevel-8"><a href="../../xml/transform/dom/package-summary.html" >javax.xml.transform.dom</a></li><li class="api apilevel-8"><a href="../../xml/transform/sax/package-summary.html" >javax.xml.transform.sax</a></li><li class="api apilevel-8"><a href="../../xml/transform/stream/package-summary.html" >javax.xml.transform.stream</a></li><li class="api apilevel-8"><a href="../../xml/validation/package-summary.html" >javax.xml.validation</a></li><li class="api apilevel-8"><a href="../../xml/xpath/package-summary.html" >javax.xml.xpath</a></li><li class="api apilevel-1"><a href="../../../junit/framework/package-summary.html" >junit.framework</a></li><li class="api apilevel-1"><a href="../../../junit/runner/package-summary.html" >junit.runner</a></li><li class="api apilevel-1"><a href="../../../org/apache/http/conn/package-summary.html" >org.apache.http.conn</a></li><li class="api apilevel-1"><a href="../../../org/apache/http/conn/scheme/package-summary.html" >org.apache.http.conn.scheme</a></li><li class="api apilevel-1"><a href="../../../org/apache/http/conn/ssl/package-summary.html" >org.apache.http.conn.ssl</a></li><li class="api apilevel-1"><a href="../../../org/apache/http/params/package-summary.html" >org.apache.http.params</a></li><li class="api apilevel-1"><a href="../../../org/json/package-summary.html" >org.json</a></li><li class="api apilevel-1"><a href="../../../org/w3c/dom/package-summary.html" >org.w3c.dom</a></li><li class="api apilevel-8"><a href="../../../org/w3c/dom/ls/package-summary.html" >org.w3c.dom.ls</a></li><li class="api apilevel-1"><a href="../../../org/xml/sax/package-summary.html" >org.xml.sax</a></li><li class="api apilevel-1"><a href="../../../org/xml/sax/ext/package-summary.html" >org.xml.sax.ext</a></li><li class="api apilevel-1"><a href="../../../org/xml/sax/helpers/package-summary.html" >org.xml.sax.helpers</a></li><li class="api apilevel-1"><a href="../../../org/xmlpull/v1/package-summary.html" >org.xmlpull.v1</a></li><li class="api apilevel-1"><a href="../../../org/xmlpull/v1/sax2/package-summary.html" >org.xmlpull.v1.sax2</a></li>
+                  </ul>
+                </div>
+              </div>
+            
+          
+        </div>
+        
+        
+          
+
+
+
+<ul id="dac-main-navigation" class="dac-nav-list dac-swap-section dac-left dac-no-anim" tabindex=0>
+  <li class="dac-nav-item home">
+    
+    <a class="dac-nav-link" href="https://developer.android.com/index.html">Home</a>
+    <i class="dac-sprite dac-expand-more-black dac-nav-sub-slider" tabindex=0></i>
+    <ul class="dac-nav-secondary about">
+      <li class="dac-nav-item versions">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/about/versions/o/index.html">Android</a>
+      </li>
+      <li class="dac-nav-item wear">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/wear/index.html">Wear</a>
+      </li>
+      <li class="dac-nav-item tv">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/tv/index.html">TV</a>
+      </li>
+      <li class="dac-nav-item auto">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/auto/index.html">Auto</a>
+      </li>
+      
+      <li class="dac-nav-item chrome-os">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/chrome-os/index.html">Chrome OS</a>
+      </li>
+      
+      <li class="dac-nav-item things">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/things/index.html">Things</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dac-nav-item design">
+    <a class="dac-nav-link" href="https://developer.android.com/design/index.html"
+       zh-tw-lang="設計"
+       zh-cn-lang="设计"
+       ru-lang="Проектирование"
+       ko-lang="디자인"
+       ja-lang="設計"
+       es-lang="Diseñar">
+      
+      Design</a>
+  </li>
+  <li class="dac-nav-item develop">
+    <a class="dac-nav-link" href="https://developer.android.com/develop/index.html"
+       zh-tw-lang="開發"
+       zh-cn-lang="开发"
+       ru-lang="Разработка"
+       ko-lang="개발"
+       ja-lang="開発"
+       es-lang="Desarrollar">
+      
+      Develop</a>
+    <i class="dac-sprite dac-expand-more-black dac-nav-sub-slider" tabindex=0></i>
+    <ul class="dac-nav-secondary develop">
+      <li class="dac-nav-item training">
+        <a class="dac-nav-link" href="https://developer.android.com/training/index.html"
+           zh-tw-lang="訓練課程"
+           zh-cn-lang="培训"
+           ru-lang="Курсы"
+           ko-lang="교육"
+           ja-lang="トレーニング"
+           es-lang="Capacitación">
+            
+            Training</a>
+      </li>
+      <li class="dac-nav-item guide">
+        <a class="dac-nav-link" href="https://developer.android.com/guide/index.html"
+           zh-tw-lang="API 指南"
+           zh-cn-lang="API 指南"
+           ru-lang="Руководства по API"
+           ko-lang="API 가이드"
+           ja-lang="API ガイド"
+           es-lang="Guías de la API">
+          
+          API Guides</a>
+      </li>
+      <li class="dac-nav-item reference">
+        <a class="dac-nav-link" href="../../../packages.html"
+           zh-tw-lang="參考資源"
+           zh-cn-lang="参考"
+           ru-lang="Справочник"
+           ko-lang="참조문서"
+           ja-lang="リファレンス"
+           es-lang="Referencia">
+          
+          Reference</a>
+      </li>
+      <li class="dac-nav-item samples">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/samples/index.html">Samples</a>
+      </li>
+      <li class="dac-nav-item libraries">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/topic/libraries/index.html">Libraries</a></li>
+      <li class="dac-nav-item studio">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/studio/index.html">Android Studio</a></li>
+      <li class="dac-nav-item ndk">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/ndk/index.html">Android NDK</a></li>
+      <li class="dac-nav-item google">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/google/index.html">Google Services</a>
+      </li>
+      <li class="dac-nav-item quality-guidelines">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/develop/quality-guidelines/index.html">Quality Guidelines</a>
+      </li>
+      <li class="dac-nav-item kotlin">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/kotlin/index.html">Kotlin</a>
+       </li>
+    </ul>
+  </li>
+  <li class="dac-nav-item distribute">
+    <a class="dac-nav-link" href="https://developer.android.com/distribute/index.html"
+       zh-tw-lang="發佈"
+       zh-cn-lang="分发"
+       ru-lang="Распространение"
+       ko-lang="배포"
+       ja-lang="配布"
+       de-lang="Vertrieb"
+       es-lang="Distribuir"
+       es-419-lang="Distribuye"
+       fr-lang="Distribuer"
+       id-lang="Distribusikan"
+       pt-br-lang="Distribuição"
+       th-lang="จัดจำหน่าย"
+       tr-lang="Dağıtma"
+       vi-lang="Phân phối">
+      
+      Distribute</a>
+    <i class="dac-sprite dac-expand-more-black dac-nav-sub-slider" tabindex=0></i>
+    <ul class="dac-nav-secondary distribute">
+      <li class="dac-nav-item google-play">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/distribute/google-play/index.html">Google Play</a>
+      </li>
+      <li class="dac-nav-item console">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/distribute/console/index.html">Play Console</a>
+      </li>
+      <li class="dac-nav-item best-practices">
+        <a class="dac-nav-link" href="https://developer.android.com/distribute/best-practices/index.html"
+          es-419-lang="Recomendaciones"
+          fr-lang="Bonnes pratiques"
+          id-lang="Praktik terbaik"
+          ja-lang="おすすめの方法"
+          ko-lang="권장사항"
+          pt-br-lang="Práticas recomendadas"
+          ru-lang="Рекомендации"
+          th-lang="จัดจำหน่าย"
+          tr-lang="En iyi uygulamalar"
+          vi-lang="Các phương pháp hay nhất"
+          zh-cn-lang="最佳做法"
+          zh-tw-lang="最佳做法">
+          
+          Best practices</a>
+      </li>
+      <li class="dac-nav-item marketing-tools">
+        <a class="dac-nav-link" href="https://developer.android.com/distribute/marketing-tools/index.html"
+          de-lang="Marketing-Tools"
+          es-419-lang="Herramientas de marketing"
+          fr-lang="Outils marketing"
+          id-lang="Fitur pemasaran"
+          ja-lang="マーケティング ツール"
+          ko-lang="마케팅 도구"
+          pt-br-lang="Ferramentas de marketing"
+          ru-lang="Маркетинговые инструменты"
+          th-lang="เครื่องมือการตลาด"
+          tr-lang="Pazarlama araçları"
+          vi-lang="Công cụ tiếp thị"
+          zh-cn-lang="营销工具"
+          zh-tw-lang="行銷工具">
+          
+          Marketing tools</a>
+      </li>
+      <li class="dac-nav-item policy-center">
+        
+        <a class="dac-nav-link" href="https://play.google.com/about/developer-content-policy/" target="_blank">Policy center</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dac-nav-item stories">
+    
+    <a class="dac-nav-link" href="https://developer.android.com/stories/index.html">Stories</a>
+  </li>
+  
+  <li class="dac-nav-item preview">
+    
+    <a class="dac-nav-link" href="https://developer.android.com/preview/index.html">Preview</a>
+  </li>
+  
+</ul>
+
+        
+      </div>
+    </div>
+  </nav>
+
+  <a name="top" tabindex="0"></a>
+  
+  <div class="wrap clearfix" id="body-content">
+  
+    
+      
+    
+    <div class="jd-descr " itemprop="articleBody">
+      <div id="doc-api-level" class="1" style="display:none"></div>
+
+
+
+
+<div id="naMessage"></div>
+
+<div id="api-info-block">
+<div class="api-level">
+  
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 1</a>
+  
+  
+  
+  
+
+</div>
+
+
+
+  
+   
+  
+  
+  
+  
+
+  
+   
+  
+  
+  
+  
+
+  
+   
+  
+  
+  
+  
+
+  
+   
+  
+  
+  
+  
+
+
+<div class="sum-details-links">
+
+Summary:
+
+
+
+
+
+
+
+
+
+
+  <a href="#proctors">Protected Ctors</a>
+  
+
+
+  &#124; <a href="#pubmethods">Methods</a>
+  
+
+
+
+  &#124; <a href="#inhmethods">Inherited Methods</a>
+
+&#124; <a href="#" onclick="return toggleAllClassInherited()" id="toggleAllClassInherited">[Expand All]</a>
+
+</div><!-- end sum-details-links -->
+</div><!-- end api-info-block -->
+
+<div class="api apilevel-1" id="jd-content">
+
+<!-- ======== START OF CLASS DATA ======== -->
+
+<h1 class="api-title">SSLSocket</h1>
+<p>
+<code class="api-signature">
+  public
+  
+  
+  abstract
+  class
+  SSLSocket
+</code>
+<br>
+
+
+<code class="api-signature">
+  
+  
+  
+</code>
+
+<code class="api-signature">
+  
+    extends <a href="../../../java/net/Socket.html">Socket</a>
+  
+  
+  
+</code>
+
+<code class="api-signature">
+  
+  
+  
+</code>
+
+</p><table class="jd-inheritance-table">
+
+
+  <tr>
+    
+    <td colspan="3" class="jd-inheritance-class-cell"><a href="../../../java/lang/Object.html">java.lang.Object</a>
+    </td>
+  </tr>
+  
+
+  <tr>
+    
+      <td class="jd-inheritance-space">&nbsp;&nbsp;&nbsp;&#x21b3;</td>
+    
+    <td colspan="2" class="jd-inheritance-class-cell"><a href="../../../java/net/Socket.html">java.net.Socket</a>
+    </td>
+  </tr>
+  
+
+  <tr>
+    
+      <td class="jd-inheritance-space">&nbsp;</td>
+    
+      <td class="jd-inheritance-space">&nbsp;&nbsp;&nbsp;&#x21b3;</td>
+    
+    <td colspan="1" class="jd-inheritance-class-cell">javax.net.ssl.SSLSocket
+    </td>
+  </tr>
+  
+
+</table>
+  
+
+    
+
+<br><hr>
+
+
+  <p>This class extends <code>Socket</code>s and provides secure
+ socket using protocols such as the "Secure
+ Sockets Layer" (SSL) or IETF "Transport Layer Security" (TLS) protocols.
+ <P>
+ Such sockets are normal stream sockets, but they
+ add a layer of security protections over the underlying network transport
+ protocol, such as TCP.  Those protections include: <UL>
+
+      <LI> <em>Integrity Protection</em>.  SSL protects against
+      modification of messages by an active wiretapper.
+
+      <LI> <em>Authentication</em>.  In most modes, SSL provides
+      peer authentication.  Servers are usually authenticated,
+      and clients may be authenticated as requested by servers.
+
+      <LI> <em>Confidentiality (Privacy Protection)</em>.  In most
+      modes, SSL encrypts data being sent between client and server.
+      This protects the confidentiality of data, so that passive
+      wiretappers won't see sensitive data such as financial
+      information or personal information of many kinds.
+
+      </UL>
+
+ <P>These kinds of protection are specified by a "cipher suite", which
+ is a combination of cryptographic algorithms used by a given SSL connection.
+ During the negotiation process, the two endpoints must agree on
+ a ciphersuite that is available in both environments.
+ If there is no such suite in common, no SSL connection can
+ be established, and no data can be exchanged.
+
+ <P> The cipher suite used is established by a negotiation process
+ called "handshaking".  The goal of this
+ process is to create or rejoin a "session", which may protect many
+ connections over time.  After handshaking has completed, you can access
+ session attributes by using the <em>getSession</em> method.
+ The initial handshake on this connection can be initiated in
+ one of three ways: <UL>
+
+      <LI> calling <code>startHandshake</code> which explicitly
+              begins handshakes, or
+      <LI> any attempt to read or write application data on
+              this socket causes an implicit handshake, or
+      <LI> a call to <code>getSession</code> tries to set up a session
+              if there is no currently valid session, and
+              an implicit handshake is done.
+ </UL>
+
+ <P>If handshaking fails for any reason, the <code>SSLSocket</code>
+ is closed, and no further communications can be done.
+
+ <P>There are two groups of cipher suites which you will need to know
+ about when managing cipher suites: <UL>
+
+      <LI> <em>Supported</em> cipher suites:  all the suites which are
+      supported by the SSL implementation.  This list is reported
+      using <em>getSupportedCipherSuites</em>.
+
+      <LI> <em>Enabled</em> cipher suites, which may be fewer
+      than the full set of supported suites.  This group is
+      set using the <em>setEnabledCipherSuites</em> method, and
+      queried using the <em>getEnabledCipherSuites</em> method.
+      Initially, a default set of cipher suites will be enabled on
+      a new socket that represents the minimum suggested configuration.
+
+      </UL>
+
+ <P> Implementation defaults require that only cipher
+ suites which authenticate servers and provide confidentiality
+ be enabled by default.
+ Only if both sides explicitly agree to unauthenticated and/or
+ non-private (unencrypted) communications will such a ciphersuite be
+ selected.
+
+ <P>When <code>SSLSocket</code>s are first created, no handshaking
+ is done so that applications may first set their communication
+ preferences:  what cipher suites to use, whether the socket should be
+ in client or server mode, etc.
+ However, security is always provided by the time that application data
+ is sent over the connection.
+
+ <P> You may register to receive event notification of handshake
+ completion.  This involves
+ the use of two additional classes.  <em>HandshakeCompletedEvent</em>
+ objects are passed to <em>HandshakeCompletedListener</em> instances,
+ which are registered by users of this API.
+
+ <code>SSLSocket</code>s are created by <code>SSLSocketFactory</code>s,
+ or by <code>accept</code>ing a connection from a
+ <code>SSLServerSocket</code>.
+
+ <P>A SSL socket must choose to operate in the client or server mode.
+ This will determine who begins the handshaking process, as well
+ as which messages should be sent by each party.  Each
+ connection must have one client and one server, or handshaking
+ will not progress properly.  Once the initial handshaking has started, a
+ socket can not switch between client and server modes, even when
+ performing renegotiations.
+
+ <h3>Default configuration for different Android versions</h3>
+ <p><code>SSLSocket</code> instances obtained from default <code><a href="SSLSocketFactory.html">SSLSocketFactory</a></code>,
+ <code><a href="SSLServerSocketFactory.html">SSLServerSocketFactory</a></code>, and <code><a href="SSLContext.html">SSLContext</a></code> are configured as follows:
+
+ <style type="text/css">
+   tr.deprecated {
+     background-color: #ccc;
+     color: #999;
+     font-style: italic;
+   }
+ </style>
+
+ <h4>Protocols</h4>
+
+ <p>Client socket:
+ <table>
+     <thead>
+         <tr>
+             <th>Protocol</th>
+             <th>Supported (API Levels)</th>
+             <th>Enabled by default (API Levels)</th>
+         </tr>
+     </thead>
+     <tbody>
+         <tr class="deprecated">
+             <td>SSLv3</td>
+             <td>1&ndash;25</td>
+             <td>1&ndash;22</td>
+         </tr>
+         <tr>
+             <td>TLSv1</td>
+             <td>1+</td>
+             <td>1+</td>
+         </tr>
+         <tr>
+             <td>TLSv1.1</td>
+             <td>16+</td>
+             <td>20+</td>
+         </tr>
+         <tr>
+             <td>TLSv1.2</td>
+             <td>16+</td>
+             <td>20+</td>
+         </tr>
+     </tbody>
+ </table>
+
+ <p>Server socket:
+ <table>
+     <thead>
+         <tr>
+             <th>Protocol</th>
+             <th>Supported (API Levels)</th>
+             <th>Enabled by default (API Levels)</th>
+         </tr>
+     </thead>
+     <tbody>
+         <tr class="deprecated">
+             <td>SSLv3</td>
+             <td>1&ndash;25</td>
+             <td>1&ndash;22</td>
+         </tr>
+         <tr>
+             <td>TLSv1</td>
+             <td>1+</td>
+             <td>1+</td>
+         </tr>
+         <tr>
+             <td>TLSv1.1</td>
+             <td>16+</td>
+             <td>16+</td>
+         </tr>
+         <tr>
+             <td>TLSv1.2</td>
+             <td>16+</td>
+             <td>16+</td>
+         </tr>
+     </tbody>
+ </table>
+
+ <h4>Cipher suites</h4>
+
+ <p>Methods that operate with cipher suite names (for example,
+ <code><a href="SSLSocket.html#getSupportedCipherSuites()">getSupportedCipherSuites</a></code>,
+ <code><a href="SSLSocket.html#setEnabledCipherSuites(java.lang.String[])">setEnabledCipherSuites</a></code>) have used
+ standard names for cipher suites since API Level 9, as listed in the table
+ below. Prior to API Level 9, non-standard (OpenSSL) names had been used (see
+ the table following this table).
+ <table>
+   <thead>
+     <tr>
+       <th>Cipher suite</th>
+       <th>Supported (API Levels)</th>
+       <th>Enabled by default (API Levels)</th>
+     </tr>
+   </thead>
+   <tbody>
+     <tr class="deprecated">
+       <td>SSL_DHE_DSS_EXPORT_WITH_DES40_CBC_SHA</td>
+       <td>9-22</td>
+       <td>9-19</td>
+     </tr>
+     <tr class="deprecated">
+       <td>SSL_DHE_DSS_WITH_3DES_EDE_CBC_SHA</td>
+       <td>9-22</td>
+       <td>9-19</td>
+     </tr>
+     <tr class="deprecated">
+       <td>SSL_DHE_DSS_WITH_DES_CBC_SHA</td>
+       <td>9-22</td>
+       <td>9-19</td>
+     </tr>
+     <tr class="deprecated">
+       <td>SSL_DHE_RSA_EXPORT_WITH_DES40_CBC_SHA</td>
+       <td>9-22</td>
+       <td>9-19</td>
+     </tr>
+     <tr class="deprecated">
+       <td>SSL_DHE_RSA_WITH_3DES_EDE_CBC_SHA</td>
+       <td>9-22</td>
+       <td>9-19</td>
+     </tr>
+     <tr class="deprecated">
+       <td>SSL_DHE_RSA_WITH_DES_CBC_SHA</td>
+       <td>9-22</td>
+       <td>9-19</td>
+     </tr>
+     <tr class="deprecated">
+       <td>SSL_DH_anon_EXPORT_WITH_DES40_CBC_SHA</td>
+       <td>9-22</td>
+       <td></td>
+     </tr>
+     <tr class="deprecated">
+       <td>SSL_DH_anon_EXPORT_WITH_RC4_40_MD5</td>
+       <td>9-22</td>
+       <td></td>
+     </tr>
+     <tr class="deprecated">
+       <td>SSL_DH_anon_WITH_3DES_EDE_CBC_SHA</td>
+       <td>9-22</td>
+       <td></td>
+     </tr>
+     <tr class="deprecated">
+       <td>SSL_DH_anon_WITH_DES_CBC_SHA</td>
+       <td>9-22</td>
+       <td></td>
+     </tr>
+     <tr class="deprecated">
+       <td>SSL_DH_anon_WITH_RC4_128_MD5</td>
+       <td>9-22</td>
+       <td></td>
+     </tr>
+     <tr class="deprecated">
+       <td>SSL_RSA_EXPORT_WITH_DES40_CBC_SHA</td>
+       <td>9-22</td>
+       <td>9-19</td>
+     </tr>
+     <tr class="deprecated">
+       <td>SSL_RSA_EXPORT_WITH_RC4_40_MD5</td>
+       <td>9-22</td>
+       <td>9-19</td>
+     </tr>
+     <tr>
+       <td>SSL_RSA_WITH_3DES_EDE_CBC_SHA</td>
+       <td>9+</td>
+       <td>9-19</td>
+     </tr>
+     <tr class="deprecated">
+       <td>SSL_RSA_WITH_DES_CBC_SHA</td>
+       <td>9-22</td>
+       <td>9-19</td>
+     </tr>
+     <tr class="deprecated">
+       <td>SSL_RSA_WITH_NULL_MD5</td>
+       <td>9-22</td>
+       <td></td>
+     </tr>
+     <tr class="deprecated">
+       <td>SSL_RSA_WITH_NULL_SHA</td>
+       <td>9-22</td>
+       <td></td>
+     </tr>
+     <tr class="deprecated">
+       <td>SSL_RSA_WITH_RC4_128_MD5</td>
+       <td>9-25</td>
+       <td>9-19</td>
+     </tr>
+     <tr class="deprecated">
+       <td>SSL_RSA_WITH_RC4_128_SHA</td>
+       <td>9-25</td>
+       <td>9-23</td>
+     </tr>
+     <tr class="deprecated">
+       <td>TLS_DHE_DSS_WITH_AES_128_CBC_SHA</td>
+       <td>9-22</td>
+       <td>9-22</td>
+     </tr>
+     <tr class="deprecated">
+       <td>TLS_DHE_DSS_WITH_AES_128_CBC_SHA256</td>
+       <td>20-22</td>
+       <td></td>
+     </tr>
+     <tr class="deprecated">
+       <td>TLS_DHE_DSS_WITH_AES_128_GCM_SHA256</td>
+       <td>20-22</td>
+       <td></td>
+     </tr>
+     <tr class="deprecated">
+       <td>TLS_DHE_DSS_WITH_AES_256_CBC_SHA</td>
+       <td>9-22</td>
+       <td>11-22</td>
+     </tr>
+     <tr class="deprecated">
+       <td>TLS_DHE_DSS_WITH_AES_256_CBC_SHA256</td>
+       <td>20-22</td>
+       <td></td>
+     </tr>
+     <tr class="deprecated">
+       <td>TLS_DHE_DSS_WITH_AES_256_GCM_SHA384</td>
+       <td>20-22</td>
+       <td></td>
+     </tr>
+     <tr class="deprecated">
+       <td>TLS_DHE_RSA_WITH_AES_128_CBC_SHA</td>
+       <td>9-25</td>
+       <td>9-25</td>
+     </tr>
+     <tr class="deprecated">
+       <td>TLS_DHE_RSA_WITH_AES_128_CBC_SHA256</td>
+       <td>20-25</td>
+       <td></td>
+     </tr>
+     <tr class="deprecated">
+       <td>TLS_DHE_RSA_WITH_AES_128_GCM_SHA256</td>
+       <td>20-25</td>
+       <td>20-25</td>
+     </tr>
+     <tr class="deprecated">
+       <td>TLS_DHE_RSA_WITH_AES_256_CBC_SHA</td>
+       <td>9-25</td>
+       <td>11-25</td>
+     </tr>
+     <tr class="deprecated">
+       <td>TLS_DHE_RSA_WITH_AES_256_CBC_SHA256</td>
+       <td>20-25</td>
+       <td></td>
+     </tr>
+     <tr class="deprecated">
+       <td>TLS_DHE_RSA_WITH_AES_256_GCM_SHA384</td>
+       <td>20-25</td>
+       <td>20-25</td>
+     </tr>
+     <tr class="deprecated">
+       <td>TLS_DH_anon_WITH_AES_128_CBC_SHA</td>
+       <td>9-22</td>
+       <td></td>
+     </tr>
+     <tr class="deprecated">
+       <td>TLS_DH_anon_WITH_AES_128_CBC_SHA256</td>
+       <td>20-22</td>
+       <td></td>
+     </tr>
+     <tr class="deprecated">
+       <td>TLS_DH_anon_WITH_AES_128_GCM_SHA256</td>
+       <td>20-22</td>
+       <td></td>
+     </tr>
+     <tr class="deprecated">
+       <td>TLS_DH_anon_WITH_AES_256_CBC_SHA</td>
+       <td>9-22</td>
+       <td></td>
+     </tr>
+     <tr class="deprecated">
+       <td>TLS_DH_anon_WITH_AES_256_CBC_SHA256</td>
+       <td>20-22</td>
+       <td></td>
+     </tr>
+     <tr class="deprecated">
+       <td>TLS_DH_anon_WITH_AES_256_GCM_SHA384</td>
+       <td>20-22</td>
+       <td></td>
+     </tr>
+     <tr class="deprecated">
+       <td>TLS_ECDHE_ECDSA_WITH_3DES_EDE_CBC_SHA</td>
+       <td>11-22</td>
+       <td>11-19</td>
+     </tr>
+     <tr>
+       <td>TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA</td>
+       <td>11+</td>
+       <td>11+</td>
+     </tr>
+     <tr>
+       <td>TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256</td>
+       <td>20+</td>
+       <td></td>
+     </tr>
+     <tr>
+       <td>TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256</td>
+       <td>20+</td>
+       <td>20+</td>
+     </tr>
+     <tr>
+       <td>TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA</td>
+       <td>11+</td>
+       <td>11+</td>
+     </tr>
+     <tr>
+       <td>TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384</td>
+       <td>20+</td>
+       <td></td>
+     </tr>
+     <tr>
+       <td>TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384</td>
+       <td>20+</td>
+       <td>20+</td>
+     </tr>
+     <tr>
+       <td>TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256</td>
+       <td>24+</td>
+       <td>24+</td>
+     </tr>
+     <tr class="deprecated">
+       <td>TLS_ECDHE_ECDSA_WITH_NULL_SHA</td>
+       <td>11-22</td>
+       <td></td>
+     </tr>
+     <tr class="deprecated">
+       <td>TLS_ECDHE_ECDSA_WITH_RC4_128_SHA</td>
+       <td>11-25</td>
+       <td>11-23</td>
+     </tr>
+     <tr>
+       <td>TLS_ECDHE_PSK_WITH_AES_128_CBC_SHA</td>
+       <td>21+</td>
+       <td>21+</td>
+     </tr>
+     <tr>
+       <td>TLS_ECDHE_PSK_WITH_AES_256_CBC_SHA</td>
+       <td>21+</td>
+       <td>21+</td>
+     </tr>
+     <tr>
+       <td>TLS_ECDHE_PSK_WITH_CHACHA20_POLY1305_SHA256</td>
+       <td>24+</td>
+       <td>24+</td>
+     </tr>
+     <tr class="deprecated">
+       <td>TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA</td>
+       <td>11-22</td>
+       <td>11-19</td>
+     </tr>
+     <tr>
+       <td>TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA</td>
+       <td>11+</td>
+       <td>11+</td>
+     </tr>
+     <tr>
+       <td>TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256</td>
+       <td>20+</td>
+       <td></td>
+     </tr>
+     <tr>
+       <td>TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256</td>
+       <td>20+</td>
+       <td>20+</td>
+     </tr>
+     <tr>
+       <td>TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA</td>
+       <td>11+</td>
+       <td>11+</td>
+     </tr>
+     <tr>
+       <td>TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384</td>
+       <td>20+</td>
+       <td></td>
+     </tr>
+     <tr>
+       <td>TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384</td>
+       <td>20+</td>
+       <td>20+</td>
+     </tr>
+     <tr>
+       <td>TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256</td>
+       <td>24+</td>
+       <td>24+</td>
+     </tr>
+     <tr class="deprecated">
+       <td>TLS_ECDHE_RSA_WITH_NULL_SHA</td>
+       <td>11-22</td>
+       <td></td>
+     </tr>
+     <tr class="deprecated">
+       <td>TLS_ECDHE_RSA_WITH_RC4_128_SHA</td>
+       <td>11-25</td>
+       <td>11-23</td>
+     </tr>
+     <tr class="deprecated">
+       <td>TLS_ECDH_ECDSA_WITH_3DES_EDE_CBC_SHA</td>
+       <td>11-22</td>
+       <td>11-19</td>
+     </tr>
+     <tr class="deprecated">
+       <td>TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA</td>
+       <td>11-22</td>
+       <td>11-19</td>
+     </tr>
+     <tr class="deprecated">
+       <td>TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA256</td>
+       <td>20-22</td>
+       <td></td>
+     </tr>
+     <tr class="deprecated">
+       <td>TLS_ECDH_ECDSA_WITH_AES_128_GCM_SHA256</td>
+       <td>20-22</td>
+       <td></td>
+     </tr>
+     <tr class="deprecated">
+       <td>TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA</td>
+       <td>11-22</td>
+       <td>11-19</td>
+     </tr>
+     <tr class="deprecated">
+       <td>TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA384</td>
+       <td>20-22</td>
+       <td></td>
+     </tr>
+     <tr class="deprecated">
+       <td>TLS_ECDH_ECDSA_WITH_AES_256_GCM_SHA384</td>
+       <td>20-22</td>
+       <td></td>
+     </tr>
+     <tr class="deprecated">
+       <td>TLS_ECDH_ECDSA_WITH_NULL_SHA</td>
+       <td>11-22</td>
+       <td></td>
+     </tr>
+     <tr class="deprecated">
+       <td>TLS_ECDH_ECDSA_WITH_RC4_128_SHA</td>
+       <td>11-22</td>
+       <td>11-19</td>
+     </tr>
+     <tr class="deprecated">
+       <td>TLS_ECDH_RSA_WITH_3DES_EDE_CBC_SHA</td>
+       <td>11-22</td>
+       <td>11-19</td>
+     </tr>
+     <tr class="deprecated">
+       <td>TLS_ECDH_RSA_WITH_AES_128_CBC_SHA</td>
+       <td>11-22</td>
+       <td>11-19</td>
+     </tr>
+     <tr class="deprecated">
+       <td>TLS_ECDH_RSA_WITH_AES_128_CBC_SHA256</td>
+       <td>20-22</td>
+       <td></td>
+     </tr>
+     <tr class="deprecated">
+       <td>TLS_ECDH_RSA_WITH_AES_128_GCM_SHA256</td>
+       <td>20-22</td>
+       <td></td>
+     </tr>
+     <tr class="deprecated">
+       <td>TLS_ECDH_RSA_WITH_AES_256_CBC_SHA</td>
+       <td>11-22</td>
+       <td>11-19</td>
+     </tr>
+     <tr class="deprecated">
+       <td>TLS_ECDH_RSA_WITH_AES_256_CBC_SHA384</td>
+       <td>20-22</td>
+       <td></td>
+     </tr>
+     <tr class="deprecated">
+       <td>TLS_ECDH_RSA_WITH_AES_256_GCM_SHA384</td>
+       <td>20-22</td>
+       <td></td>
+     </tr>
+     <tr class="deprecated">
+       <td>TLS_ECDH_RSA_WITH_NULL_SHA</td>
+       <td>11-22</td>
+       <td></td>
+     </tr>
+     <tr class="deprecated">
+       <td>TLS_ECDH_RSA_WITH_RC4_128_SHA</td>
+       <td>11-22</td>
+       <td>11-19</td>
+     </tr>
+     <tr class="deprecated">
+       <td>TLS_ECDH_anon_WITH_3DES_EDE_CBC_SHA</td>
+       <td>11-22</td>
+       <td></td>
+     </tr>
+     <tr class="deprecated">
+       <td>TLS_ECDH_anon_WITH_AES_128_CBC_SHA</td>
+       <td>11-22</td>
+       <td></td>
+     </tr>
+     <tr class="deprecated">
+       <td>TLS_ECDH_anon_WITH_AES_256_CBC_SHA</td>
+       <td>11-22</td>
+       <td></td>
+     </tr>
+     <tr class="deprecated">
+       <td>TLS_ECDH_anon_WITH_NULL_SHA</td>
+       <td>11-22</td>
+       <td></td>
+     </tr>
+     <tr class="deprecated">
+       <td>TLS_ECDH_anon_WITH_RC4_128_SHA</td>
+       <td>11-22</td>
+       <td></td>
+     </tr>
+     <tr>
+       <td>TLS_EMPTY_RENEGOTIATION_INFO_SCSV</td>
+       <td>11+</td>
+       <td>11+</td>
+     </tr>
+     <tr>
+       <td>TLS_FALLBACK_SCSV</td>
+       <td>21+</td>
+       <td></td>
+     </tr>
+     <tr class="deprecated">
+       <td>TLS_PSK_WITH_3DES_EDE_CBC_SHA</td>
+       <td>21-22</td>
+       <td></td>
+     </tr>
+     <tr>
+       <td>TLS_PSK_WITH_AES_128_CBC_SHA</td>
+       <td>21+</td>
+       <td>21+</td>
+     </tr>
+     <tr>
+       <td>TLS_PSK_WITH_AES_256_CBC_SHA</td>
+       <td>21+</td>
+       <td>21+</td>
+     </tr>
+     <tr class="deprecated">
+       <td>TLS_PSK_WITH_RC4_128_SHA</td>
+       <td>21-25</td>
+       <td></td>
+     </tr>
+     <tr>
+       <td>TLS_RSA_WITH_AES_128_CBC_SHA</td>
+       <td>9+</td>
+       <td>9+</td>
+     </tr>
+     <tr>
+       <td>TLS_RSA_WITH_AES_128_CBC_SHA256</td>
+       <td>20+</td>
+       <td></td>
+     </tr>
+     <tr>
+       <td>TLS_RSA_WITH_AES_128_GCM_SHA256</td>
+       <td>20+</td>
+       <td>20+</td>
+     </tr>
+     <tr>
+       <td>TLS_RSA_WITH_AES_256_CBC_SHA</td>
+       <td>9+</td>
+       <td>11+</td>
+     </tr>
+     <tr>
+       <td>TLS_RSA_WITH_AES_256_CBC_SHA256</td>
+       <td>20+</td>
+       <td></td>
+     </tr>
+     <tr>
+       <td>TLS_RSA_WITH_AES_256_GCM_SHA384</td>
+       <td>20+</td>
+       <td>20+</td>
+     </tr>
+     <tr class="deprecated">
+       <td>TLS_RSA_WITH_NULL_SHA256</td>
+       <td>20-22</td>
+       <td></td>
+     </tr>
+   </tbody>
+ </table>
+
+ <p><em>NOTE</em>: PSK cipher suites are enabled by default only if the <code>SSLContext</code> through
+ which the socket was created has been initialized with a <code>PSKKeyManager</code>.
+
+ <p>API Levels 1 to 8 use OpenSSL names for cipher suites. The table below
+ lists these OpenSSL names and their corresponding standard names used in API
+ Levels 9 and newer.
+ <table>
+     <thead>
+         <tr>
+             <th>OpenSSL cipher suite</th>
+             <th>Standard cipher suite</th>
+             <th>Supported (API Levels)</th>
+             <th>Enabled by default (API Levels)</th>
+         </tr>
+     </thead>
+
+     <tbody>
+         <tr>
+             <td>AES128-SHA</td>
+             <td>TLS_RSA_WITH_AES_128_CBC_SHA</td>
+             <td>1+</td>
+             <td>1+</td>
+         </tr>
+         <tr>
+             <td>AES256-SHA</td>
+             <td>TLS_RSA_WITH_AES_256_CBC_SHA</td>
+             <td>1+</td>
+             <td>1&ndash;8, 11+</td>
+         </tr>
+         <tr>
+             <td>DES-CBC-MD5</td>
+             <td>SSL_CK_DES_64_CBC_WITH_MD5</td>
+             <td>1&ndash;8</td>
+             <td>1&ndash;8</td>
+         </tr>
+         <tr class="deprecated">
+             <td>DES-CBC-SHA</td>
+             <td>SSL_RSA_WITH_DES_CBC_SHA</td>
+             <td>1&ndash;22</td>
+             <td>1&ndash;19</td>
+         </tr>
+         <tr>
+             <td>DES-CBC3-MD5</td>
+             <td>SSL_CK_DES_192_EDE3_CBC_WITH_MD5</td>
+             <td>1&ndash;8</td>
+             <td>1&ndash;8</td>
+         </tr>
+         <tr>
+             <td>DES-CBC3-SHA</td>
+             <td>SSL_RSA_WITH_3DES_EDE_CBC_SHA</td>
+             <td>1+</td>
+             <td>1&ndash;19</td>
+         </tr>
+         <tr class="deprecated">
+             <td>DHE-DSS-AES128-SHA</td>
+             <td>TLS_DHE_DSS_WITH_AES_128_CBC_SHA</td>
+             <td>1&ndash;22</td>
+             <td>1&ndash;22</td>
+         </tr>
+         <tr class="deprecated">
+             <td>DHE-DSS-AES256-SHA</td>
+             <td>TLS_DHE_DSS_WITH_AES_256_CBC_SHA</td>
+             <td>1&ndash;22</td>
+             <td>1&ndash;8, 11&ndash;22</td>
+         </tr>
+         <tr>
+             <td>DHE-RSA-AES128-SHA</td>
+             <td>TLS_DHE_RSA_WITH_AES_128_CBC_SHA</td>
+             <td>1+</td>
+             <td>1+</td>
+         </tr>
+         <tr>
+             <td>DHE-RSA-AES256-SHA</td>
+             <td>TLS_DHE_RSA_WITH_AES_256_CBC_SHA</td>
+             <td>1+</td>
+             <td>1&ndash;8, 11+</td>
+         </tr>
+         <tr class="deprecated">
+             <td>EDH-DSS-DES-CBC-SHA</td>
+             <td>SSL_DHE_DSS_WITH_DES_CBC_SHA</td>
+             <td>1&ndash;22</td>
+             <td>1&ndash;19</td>
+         </tr>
+         <tr class="deprecated">
+             <td>EDH-DSS-DES-CBC3-SHA</td>
+             <td>SSL_DHE_DSS_WITH_3DES_EDE_CBC_SHA</td>
+             <td>1&ndash;22</td>
+             <td>1&ndash;19</td>
+         </tr>
+         <tr class="deprecated">
+             <td>EDH-RSA-DES-CBC-SHA</td>
+             <td>SSL_DHE_RSA_WITH_DES_CBC_SHA</td>
+             <td>1&ndash;22</td>
+             <td>1&ndash;19</td>
+         </tr>
+         <tr class="deprecated">
+             <td>EDH-RSA-DES-CBC3-SHA</td>
+             <td>SSL_DHE_RSA_WITH_3DES_EDE_CBC_SHA</td>
+             <td>1&ndash;22</td>
+             <td>1&ndash;19</td>
+         </tr>
+         <tr class="deprecated">
+             <td>EXP-DES-CBC-SHA</td>
+             <td>SSL_RSA_EXPORT_WITH_DES40_CBC_SHA</td>
+             <td>1&ndash;22</td>
+             <td>1&ndash;19</td>
+         </tr>
+         <tr class="deprecated">
+             <td>EXP-EDH-DSS-DES-CBC-SHA</td>
+             <td>SSL_DHE_DSS_EXPORT_WITH_DES40_CBC_SHA</td>
+             <td>1&ndash;22</td>
+             <td>1&ndash;19</td>
+         </tr>
+         <tr class="deprecated">
+             <td>EXP-EDH-RSA-DES-CBC-SHA</td>
+             <td>SSL_DHE_RSA_EXPORT_WITH_DES40_CBC_SHA</td>
+             <td>1&ndash;22</td>
+             <td>1&ndash;19</td>
+         </tr>
+         <tr>
+             <td>EXP-RC2-CBC-MD5</td>
+             <td>SSL_RSA_EXPORT_WITH_RC2_CBC_40_MD5</td>
+             <td>1&ndash;8</td>
+             <td>1&ndash;8</td>
+         </tr>
+         <tr class="deprecated">
+             <td>EXP-RC4-MD5</td>
+             <td>SSL_RSA_EXPORT_WITH_RC4_40_MD5</td>
+             <td>1&ndash;22</td>
+             <td>1&ndash;19</td>
+         </tr>
+         <tr>
+             <td>RC2-CBC-MD5</td>
+             <td>SSL_CK_RC2_128_CBC_WITH_MD5</td>
+             <td>1&ndash;8</td>
+             <td>1&ndash;8</td>
+         </tr>
+         <tr class="deprecated">
+             <td>RC4-MD5</td>
+             <td>SSL_RSA_WITH_RC4_128_MD5</td>
+             <td>1&ndash;25</td>
+             <td>1&ndash;19</td>
+         </tr>
+         <tr class="deprecated">
+             <td>RC4-SHA</td>
+             <td>SSL_RSA_WITH_RC4_128_SHA</td>
+             <td>1&ndash;25</td>
+             <td>1&ndash;23</td>
+         </tr>
+     </tbody>
+ </table></p>
+
+
+
+
+
+  <div>
+      <p><b>See also:</b></p>
+      <ul class="nolist"><li><code><a href="../../../java/net/Socket.html">Socket</a></code></li><li><code><a href="SSLServerSocket.html">SSLServerSocket</a></code></li><li><code><a href="SSLSocketFactory.html">SSLSocketFactory</a></code></li>
+      </ul>
+  </div>
+
+
+
+
+<h2 class="api-section">Summary</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<table id="proctors" class="responsive constructors">
+<tr><th colspan="2"><h3>Protected constructors</h3></th></tr>
+
+
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td width="100%">
+      <code>
+      <a href="SSLSocket.html#SSLSocket()">SSLSocket</a>()
+      </code>
+      
+        <p>Used only by subclasses.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td width="100%">
+      <code>
+      <a href="SSLSocket.html#SSLSocket(java.lang.String, int)">SSLSocket</a>(<a href="../../../java/lang/String.html">String</a> host, int port)
+      </code>
+      
+        <p>Used only by subclasses.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td width="100%">
+      <code>
+      <a href="SSLSocket.html#SSLSocket(java.net.InetAddress, int)">SSLSocket</a>(<a href="../../../java/net/InetAddress.html">InetAddress</a> address, int port)
+      </code>
+      
+        <p>Used only by subclasses.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td width="100%">
+      <code>
+      <a href="SSLSocket.html#SSLSocket(java.lang.String, int, java.net.InetAddress, int)">SSLSocket</a>(<a href="../../../java/lang/String.html">String</a> host, int port, <a href="../../../java/net/InetAddress.html">InetAddress</a> clientAddress, int clientPort)
+      </code>
+      
+        <p>Used only by subclasses.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td width="100%">
+      <code>
+      <a href="SSLSocket.html#SSLSocket(java.net.InetAddress, int, java.net.InetAddress, int)">SSLSocket</a>(<a href="../../../java/net/InetAddress.html">InetAddress</a> address, int port, <a href="../../../java/net/InetAddress.html">InetAddress</a> clientAddress, int clientPort)
+      </code>
+      
+        <p>Used only by subclasses.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+
+</table>
+
+
+
+
+<!-- ========== METHOD SUMMARY =========== -->
+<table id="pubmethods" class="responsive methods">
+<tr><th colspan="2"><h3>Public methods</h3></th></tr>
+
+
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        abstract
+        
+        
+        
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="SSLSocket.html#addHandshakeCompletedListener(javax.net.ssl.HandshakeCompletedListener)">addHandshakeCompletedListener</a>(<a href="HandshakeCompletedListener.html">HandshakeCompletedListener</a> listener)
+      </code>
+      
+        <p>Registers an event listener to receive notifications that an
+ SSL handshake has completed on this connection.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        abstract
+        
+        
+        
+        
+        boolean</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="SSLSocket.html#getEnableSessionCreation()">getEnableSessionCreation</a>()
+      </code>
+      
+        <p>Returns true if new SSL sessions may be established by this socket.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        abstract
+        
+        
+        
+        
+        <a href="../../../java/lang/String.html">String[]</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="SSLSocket.html#getEnabledCipherSuites()">getEnabledCipherSuites</a>()
+      </code>
+      
+        <p>Returns the names of the SSL cipher suites which are currently
+ enabled for use on this connection.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        abstract
+        
+        
+        
+        
+        <a href="../../../java/lang/String.html">String[]</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="SSLSocket.html#getEnabledProtocols()">getEnabledProtocols</a>()
+      </code>
+      
+        <p>Returns the names of the protocol versions which are currently
+ enabled for use on this connection.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-24" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        <a href="SSLSession.html">SSLSession</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="SSLSocket.html#getHandshakeSession()">getHandshakeSession</a>()
+      </code>
+      
+        <p>Returns the <code>SSLSession</code> being constructed during a SSL/TLS
+ handshake.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        abstract
+        
+        
+        
+        
+        boolean</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="SSLSocket.html#getNeedClientAuth()">getNeedClientAuth</a>()
+      </code>
+      
+        <p>Returns true if the socket will <i>require</i> client authentication.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-9" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        <a href="SSLParameters.html">SSLParameters</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="SSLSocket.html#getSSLParameters()">getSSLParameters</a>()
+      </code>
+      
+        <p>Returns the SSLParameters in effect for this SSLSocket.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        abstract
+        
+        
+        
+        
+        <a href="SSLSession.html">SSLSession</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="SSLSocket.html#getSession()">getSession</a>()
+      </code>
+      
+        <p>Returns the SSL Session in use by this connection.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        abstract
+        
+        
+        
+        
+        <a href="../../../java/lang/String.html">String[]</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="SSLSocket.html#getSupportedCipherSuites()">getSupportedCipherSuites</a>()
+      </code>
+      
+        <p>Returns the names of the cipher suites which could be enabled for use
+ on this connection.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        abstract
+        
+        
+        
+        
+        <a href="../../../java/lang/String.html">String[]</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="SSLSocket.html#getSupportedProtocols()">getSupportedProtocols</a>()
+      </code>
+      
+        <p>Returns the names of the protocols which could be enabled for use
+ on an SSL connection.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        abstract
+        
+        
+        
+        
+        boolean</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="SSLSocket.html#getUseClientMode()">getUseClientMode</a>()
+      </code>
+      
+        <p>Returns true if the socket is set to use client mode when
+ handshaking.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        abstract
+        
+        
+        
+        
+        boolean</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="SSLSocket.html#getWantClientAuth()">getWantClientAuth</a>()
+      </code>
+      
+        <p>Returns true if the socket will <i>request</i> client authentication.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        abstract
+        
+        
+        
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="SSLSocket.html#removeHandshakeCompletedListener(javax.net.ssl.HandshakeCompletedListener)">removeHandshakeCompletedListener</a>(<a href="HandshakeCompletedListener.html">HandshakeCompletedListener</a> listener)
+      </code>
+      
+        <p>Removes a previously registered handshake completion listener.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        abstract
+        
+        
+        
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="SSLSocket.html#setEnableSessionCreation(boolean)">setEnableSessionCreation</a>(boolean flag)
+      </code>
+      
+        <p>Controls whether new SSL sessions may be established by this socket.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        abstract
+        
+        
+        
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="SSLSocket.html#setEnabledCipherSuites(java.lang.String[])">setEnabledCipherSuites</a>(<a href="../../../java/lang/String.html">String[]</a> suites)
+      </code>
+      
+        <p>Sets the cipher suites enabled for use on this connection.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        abstract
+        
+        
+        
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="SSLSocket.html#setEnabledProtocols(java.lang.String[])">setEnabledProtocols</a>(<a href="../../../java/lang/String.html">String[]</a> protocols)
+      </code>
+      
+        <p>Sets the protocol versions enabled for use on this connection.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        abstract
+        
+        
+        
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="SSLSocket.html#setNeedClientAuth(boolean)">setNeedClientAuth</a>(boolean need)
+      </code>
+      
+        <p>Configures the socket to <i>require</i> client authentication.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-9" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="SSLSocket.html#setSSLParameters(javax.net.ssl.SSLParameters)">setSSLParameters</a>(<a href="SSLParameters.html">SSLParameters</a> params)
+      </code>
+      
+        <p>Applies SSLParameters to this socket.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        abstract
+        
+        
+        
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="SSLSocket.html#setUseClientMode(boolean)">setUseClientMode</a>(boolean mode)
+      </code>
+      
+        <p>Configures the socket to use client (or server) mode when
+ handshaking.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        abstract
+        
+        
+        
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="SSLSocket.html#setWantClientAuth(boolean)">setWantClientAuth</a>(boolean want)
+      </code>
+      
+        <p>Configures the socket to <i>request</i> client authentication.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        abstract
+        
+        
+        
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="SSLSocket.html#startHandshake()">startHandshake</a>()
+      </code>
+      
+        <p>Starts an SSL handshake on this connection.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        <a href="../../../java/lang/String.html">String</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="SSLSocket.html#toString()">toString</a>()
+      </code>
+      
+        <p>Converts this socket to a <code>String</code>.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+
+</table>
+
+
+
+
+
+
+
+<!-- ========== METHOD SUMMARY =========== -->
+<table id="inhmethods" class="methods inhtable">
+<tr><th><h3>Inherited methods</h3></th></tr>
+
+
+<tr class="api apilevel-" >
+<td colspan="2">
+  <a href="#" id="inherited-methods-java.net.Socket" class="jd-expando-trigger closed"
+     onclick="return toggleInherited(this, null)" >
+    <img id="inherited-methods-java.net.Socket-trigger" class="jd-expando-trigger-img"
+         height="34"
+         src="../../../../assets/images/styles/disclosure_down.png" />
+  </a>From
+class
+<code>
+  
+    <a href="../../../java/net/Socket.html">java.net.Socket</a>
+  
+</code>
+<div id="inherited-methods-java.net.Socket">
+  <div id="inherited-methods-java.net.Socket-list"
+        class="jd-inheritedlinks">
+  </div>
+  <div id="inherited-methods-java.net.Socket-summary" style="display: none;">
+    <table class="jd-sumtable-expando responsive">
+      
+
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../../../java/net/Socket.html#bind(java.net.SocketAddress)">bind</a>(<a href="../../../java/net/SocketAddress.html">SocketAddress</a> bindpoint)
+      </code>
+      
+        <p>Binds the socket to a local address.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../../../java/net/Socket.html#close()">close</a>()
+      </code>
+      
+        <p>Closes this socket.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../../../java/net/Socket.html#connect(java.net.SocketAddress, int)">connect</a>(<a href="../../../java/net/SocketAddress.html">SocketAddress</a> endpoint, int timeout)
+      </code>
+      
+        <p>Connects this socket to the server with a specified timeout value.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../../../java/net/Socket.html#connect(java.net.SocketAddress)">connect</a>(<a href="../../../java/net/SocketAddress.html">SocketAddress</a> endpoint)
+      </code>
+      
+        <p>Connects this socket to the server.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        <a href="../../../java/nio/channels/SocketChannel.html">SocketChannel</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../../../java/net/Socket.html#getChannel()">getChannel</a>()
+      </code>
+      
+        <p>Returns the unique <code><a href="../../../java/nio/channels/SocketChannel.html">SocketChannel</a></code>
+ object associated with this socket, if any.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        <a href="../../../java/net/InetAddress.html">InetAddress</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../../../java/net/Socket.html#getInetAddress()">getInetAddress</a>()
+      </code>
+      
+        <p>Returns the address to which the socket is connected.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        <a href="../../../java/io/InputStream.html">InputStream</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../../../java/net/Socket.html#getInputStream()">getInputStream</a>()
+      </code>
+      
+        <p>Returns an input stream for this socket.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        boolean</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../../../java/net/Socket.html#getKeepAlive()">getKeepAlive</a>()
+      </code>
+      
+        <p>Tests if <code><a href="../../../java/net/SocketOptions.html#SO_KEEPALIVE">SO_KEEPALIVE</a></code> is enabled.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        <a href="../../../java/net/InetAddress.html">InetAddress</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../../../java/net/Socket.html#getLocalAddress()">getLocalAddress</a>()
+      </code>
+      
+        <p>Gets the local address to which the socket is bound.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        int</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../../../java/net/Socket.html#getLocalPort()">getLocalPort</a>()
+      </code>
+      
+        <p>Returns the local port number to which this socket is bound.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        <a href="../../../java/net/SocketAddress.html">SocketAddress</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../../../java/net/Socket.html#getLocalSocketAddress()">getLocalSocketAddress</a>()
+      </code>
+      
+        <p>Returns the address of the endpoint this socket is bound to.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        boolean</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../../../java/net/Socket.html#getOOBInline()">getOOBInline</a>()
+      </code>
+      
+        <p>Tests if <code><a href="../../../java/net/SocketOptions.html#SO_OOBINLINE">SO_OOBINLINE</a></code> is enabled.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        <a href="../../../java/io/OutputStream.html">OutputStream</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../../../java/net/Socket.html#getOutputStream()">getOutputStream</a>()
+      </code>
+      
+        <p>Returns an output stream for this socket.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        int</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../../../java/net/Socket.html#getPort()">getPort</a>()
+      </code>
+      
+        <p>Returns the remote port number to which this socket is connected.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        int</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../../../java/net/Socket.html#getReceiveBufferSize()">getReceiveBufferSize</a>()
+      </code>
+      
+        <p>Gets the value of the <code><a href="../../../java/net/SocketOptions.html#SO_RCVBUF">SO_RCVBUF</a></code> option
+ for this <code>Socket</code>, that is the buffer size used by the platform
+ for input on this <code>Socket</code>.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        <a href="../../../java/net/SocketAddress.html">SocketAddress</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../../../java/net/Socket.html#getRemoteSocketAddress()">getRemoteSocketAddress</a>()
+      </code>
+      
+        <p>Returns the address of the endpoint this socket is connected to, or
+ <code>null</code> if it is unconnected.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        boolean</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../../../java/net/Socket.html#getReuseAddress()">getReuseAddress</a>()
+      </code>
+      
+        <p>Tests if <code><a href="../../../java/net/SocketOptions.html#SO_REUSEADDR">SO_REUSEADDR</a></code> is enabled.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        int</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../../../java/net/Socket.html#getSendBufferSize()">getSendBufferSize</a>()
+      </code>
+      
+        <p>Get value of the <code><a href="../../../java/net/SocketOptions.html#SO_SNDBUF">SO_SNDBUF</a></code> option
+ for this <code>Socket</code>, that is the buffer size used by the platform
+ for output on this <code>Socket</code>.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        int</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../../../java/net/Socket.html#getSoLinger()">getSoLinger</a>()
+      </code>
+      
+        <p>Returns setting for <code><a href="../../../java/net/SocketOptions.html#SO_LINGER">SO_LINGER</a></code>.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        int</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../../../java/net/Socket.html#getSoTimeout()">getSoTimeout</a>()
+      </code>
+      
+        <p>Returns setting for <code><a href="../../../java/net/SocketOptions.html#SO_TIMEOUT">SO_TIMEOUT</a></code>.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        boolean</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../../../java/net/Socket.html#getTcpNoDelay()">getTcpNoDelay</a>()
+      </code>
+      
+        <p>Tests if <code><a href="../../../java/net/SocketOptions.html#TCP_NODELAY">TCP_NODELAY</a></code> is enabled.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        int</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../../../java/net/Socket.html#getTrafficClass()">getTrafficClass</a>()
+      </code>
+      
+        <p>Gets traffic class or type-of-service in the IP header
+ for packets sent from this Socket
+ <p>
+ As the underlying network implementation may ignore the
+ traffic class or type-of-service set using <code><a href="../../../java/net/Socket.html#setTrafficClass(int)">setTrafficClass(int)</a></code>
+ this method may return a different value than was previously
+ set using the <code><a href="../../../java/net/Socket.html#setTrafficClass(int)">setTrafficClass(int)</a></code> method on this Socket.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        boolean</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../../../java/net/Socket.html#isBound()">isBound</a>()
+      </code>
+      
+        <p>Returns the binding state of the socket.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        boolean</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../../../java/net/Socket.html#isClosed()">isClosed</a>()
+      </code>
+      
+        <p>Returns the closed state of the socket.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        boolean</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../../../java/net/Socket.html#isConnected()">isConnected</a>()
+      </code>
+      
+        <p>Returns the connection state of the socket.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        boolean</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../../../java/net/Socket.html#isInputShutdown()">isInputShutdown</a>()
+      </code>
+      
+        <p>Returns whether the read-half of the socket connection is closed.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        boolean</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../../../java/net/Socket.html#isOutputShutdown()">isOutputShutdown</a>()
+      </code>
+      
+        <p>Returns whether the write-half of the socket connection is closed.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../../../java/net/Socket.html#sendUrgentData(int)">sendUrgentData</a>(int data)
+      </code>
+      
+        <p>Send one byte of urgent data on the socket.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../../../java/net/Socket.html#setKeepAlive(boolean)">setKeepAlive</a>(boolean on)
+      </code>
+      
+        <p>Enable/disable <code><a href="../../../java/net/SocketOptions.html#SO_KEEPALIVE">SO_KEEPALIVE</a></code>.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../../../java/net/Socket.html#setOOBInline(boolean)">setOOBInline</a>(boolean on)
+      </code>
+      
+        <p>Enable/disable <code><a href="../../../java/net/SocketOptions.html#SO_OOBINLINE">SO_OOBINLINE</a></code>
+ (receipt of TCP urgent data)
+
+ By default, this option is disabled and TCP urgent data received on a
+ socket is silently discarded.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../../../java/net/Socket.html#setPerformancePreferences(int, int, int)">setPerformancePreferences</a>(int connectionTime, int latency, int bandwidth)
+      </code>
+      
+        <p>Sets performance preferences for this socket.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../../../java/net/Socket.html#setReceiveBufferSize(int)">setReceiveBufferSize</a>(int size)
+      </code>
+      
+        <p>Sets the <code><a href="../../../java/net/SocketOptions.html#SO_RCVBUF">SO_RCVBUF</a></code> option to the
+ specified value for this <code>Socket</code>.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../../../java/net/Socket.html#setReuseAddress(boolean)">setReuseAddress</a>(boolean on)
+      </code>
+      
+        <p>Enable/disable the <code><a href="../../../java/net/SocketOptions.html#SO_REUSEADDR">SO_REUSEADDR</a></code>
+ socket option.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../../../java/net/Socket.html#setSendBufferSize(int)">setSendBufferSize</a>(int size)
+      </code>
+      
+        <p>Sets the <code><a href="../../../java/net/SocketOptions.html#SO_SNDBUF">SO_SNDBUF</a></code> option to the
+ specified value for this <code>Socket</code>.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../../../java/net/Socket.html#setSoLinger(boolean, int)">setSoLinger</a>(boolean on, int linger)
+      </code>
+      
+        <p>Enable/disable <code><a href="../../../java/net/SocketOptions.html#SO_LINGER">SO_LINGER</a></code> with the
+ specified linger time in seconds.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../../../java/net/Socket.html#setSoTimeout(int)">setSoTimeout</a>(int timeout)
+      </code>
+      
+        <p>Enable/disable <code><a href="../../../java/net/SocketOptions.html#SO_TIMEOUT">SO_TIMEOUT</a></code>
+  with the specified timeout, in milliseconds.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        static
+        
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../../../java/net/Socket.html#setSocketImplFactory(java.net.SocketImplFactory)">setSocketImplFactory</a>(<a href="../../../java/net/SocketImplFactory.html">SocketImplFactory</a> fac)
+      </code>
+      
+        <p>Sets the client socket implementation factory for the
+ application.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../../../java/net/Socket.html#setTcpNoDelay(boolean)">setTcpNoDelay</a>(boolean on)
+      </code>
+      
+        <p>Enable/disable <code><a href="../../../java/net/SocketOptions.html#TCP_NODELAY">TCP_NODELAY</a></code>
+ (disable/enable Nagle's algorithm).
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../../../java/net/Socket.html#setTrafficClass(int)">setTrafficClass</a>(int tc)
+      </code>
+      
+        <p>Sets traffic class or type-of-service octet in the IP
+ header for packets sent from this Socket.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../../../java/net/Socket.html#shutdownInput()">shutdownInput</a>()
+      </code>
+      
+        <p>Places the input stream for this socket at "end of stream".
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../../../java/net/Socket.html#shutdownOutput()">shutdownOutput</a>()
+      </code>
+      
+        <p>Disables the output stream for this socket.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        <a href="../../../java/lang/String.html">String</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../../../java/net/Socket.html#toString()">toString</a>()
+      </code>
+      
+        <p>Converts this socket to a <code>String</code>.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+
+    </table>
+  </div>
+</div>
+</td></tr>
+
+
+
+<tr class="api apilevel-" >
+<td colspan="2">
+  <a href="#" id="inherited-methods-java.lang.Object" class="jd-expando-trigger closed"
+     onclick="return toggleInherited(this, null)" >
+    <img id="inherited-methods-java.lang.Object-trigger" class="jd-expando-trigger-img"
+         height="34"
+         src="../../../../assets/images/styles/disclosure_down.png" />
+  </a>From
+class
+<code>
+  
+    <a href="../../../java/lang/Object.html">java.lang.Object</a>
+  
+</code>
+<div id="inherited-methods-java.lang.Object">
+  <div id="inherited-methods-java.lang.Object-list"
+        class="jd-inheritedlinks">
+  </div>
+  <div id="inherited-methods-java.lang.Object-summary" style="display: none;">
+    <table class="jd-sumtable-expando responsive">
+      
+
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        <a href="../../../java/lang/Object.html">Object</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../../../java/lang/Object.html#clone()">clone</a>()
+      </code>
+      
+        <p>Creates and returns a copy of this object.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        boolean</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../../../java/lang/Object.html#equals(java.lang.Object)">equals</a>(<a href="../../../java/lang/Object.html">Object</a> obj)
+      </code>
+      
+        <p>Indicates whether some other object is "equal to" this one.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../../../java/lang/Object.html#finalize()">finalize</a>()
+      </code>
+      
+        <p>Called by the garbage collector on an object when garbage collection
+ determines that there are no more references to the object.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        final
+        
+        <a href="../../../java/lang/Class.html">Class</a>&lt;?&gt;</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../../../java/lang/Object.html#getClass()">getClass</a>()
+      </code>
+      
+        <p>Returns the runtime class of this <code>Object</code>.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        int</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../../../java/lang/Object.html#hashCode()">hashCode</a>()
+      </code>
+      
+        <p>Returns a hash code value for the object.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        final
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../../../java/lang/Object.html#notify()">notify</a>()
+      </code>
+      
+        <p>Wakes up a single thread that is waiting on this object's
+ monitor.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        final
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../../../java/lang/Object.html#notifyAll()">notifyAll</a>()
+      </code>
+      
+        <p>Wakes up all threads that are waiting on this object's monitor.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        <a href="../../../java/lang/String.html">String</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../../../java/lang/Object.html#toString()">toString</a>()
+      </code>
+      
+        <p>Returns a string representation of the object.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        final
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../../../java/lang/Object.html#wait(long, int)">wait</a>(long millis, int nanos)
+      </code>
+      
+        <p>Causes the current thread to wait until another thread invokes the
+ <code><a href="../../../java/lang/Object.html#notify()">notify()</a></code> method or the
+ <code><a href="../../../java/lang/Object.html#notifyAll()">notifyAll()</a></code> method for this object, or
+ some other thread interrupts the current thread, or a certain
+ amount of real time has elapsed.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        final
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../../../java/lang/Object.html#wait(long)">wait</a>(long millis)
+      </code>
+      
+        <p>Causes the current thread to wait until either another thread invokes the
+ <code><a href="../../../java/lang/Object.html#notify()">notify()</a></code> method or the
+ <code><a href="../../../java/lang/Object.html#notifyAll()">notifyAll()</a></code> method for this object, or a
+ specified amount of time has elapsed.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        final
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../../../java/lang/Object.html#wait()">wait</a>()
+      </code>
+      
+        <p>Causes the current thread to wait until another thread invokes the
+ <code><a href="../../../java/lang/Object.html#notify()">notify()</a></code> method or the
+ <code><a href="../../../java/lang/Object.html#notifyAll()">notifyAll()</a></code> method for this object.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+
+    </table>
+  </div>
+</div>
+</td></tr>
+
+
+
+<tr class="api apilevel-" >
+<td colspan="2">
+  <a href="#" id="inherited-methods-java.io.Closeable" class="jd-expando-trigger closed"
+     onclick="return toggleInherited(this, null)" >
+    <img id="inherited-methods-java.io.Closeable-trigger" class="jd-expando-trigger-img"
+         height="34"
+         src="../../../../assets/images/styles/disclosure_down.png" />
+  </a>From
+interface
+<code>
+  
+    <a href="../../../java/io/Closeable.html">java.io.Closeable</a>
+  
+</code>
+<div id="inherited-methods-java.io.Closeable">
+  <div id="inherited-methods-java.io.Closeable-list"
+        class="jd-inheritedlinks">
+  </div>
+  <div id="inherited-methods-java.io.Closeable-summary" style="display: none;">
+    <table class="jd-sumtable-expando responsive">
+      
+
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        abstract
+        
+        
+        
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../../../java/io/Closeable.html#close()">close</a>()
+      </code>
+      
+        <p>Closes this stream and releases any system resources associated
+ with it.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+
+    </table>
+  </div>
+</div>
+</td></tr>
+
+
+
+<tr class="api apilevel-" >
+<td colspan="2">
+  <a href="#" id="inherited-methods-java.lang.AutoCloseable" class="jd-expando-trigger closed"
+     onclick="return toggleInherited(this, null)" >
+    <img id="inherited-methods-java.lang.AutoCloseable-trigger" class="jd-expando-trigger-img"
+         height="34"
+         src="../../../../assets/images/styles/disclosure_down.png" />
+  </a>From
+interface
+<code>
+  
+    <a href="../../../java/lang/AutoCloseable.html">java.lang.AutoCloseable</a>
+  
+</code>
+<div id="inherited-methods-java.lang.AutoCloseable">
+  <div id="inherited-methods-java.lang.AutoCloseable-list"
+        class="jd-inheritedlinks">
+  </div>
+  <div id="inherited-methods-java.lang.AutoCloseable-summary" style="display: none;">
+    <table class="jd-sumtable-expando responsive">
+      
+
+
+  
+  <tr class="api apilevel-19" >
+  
+  
+    <td><code>
+        abstract
+        
+        
+        
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../../../java/lang/AutoCloseable.html#close()">close</a>()
+      </code>
+      
+        <p>Closes this resource, relinquishing any underlying resources.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+
+    </table>
+  </div>
+</div>
+</td></tr>
+
+
+</table>
+
+
+
+<!-- XML Attributes -->
+
+
+<!-- Enum Values -->
+
+
+<!-- Constants -->
+
+
+<!-- Fields -->
+
+
+<!-- Public ctors -->
+
+
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<!-- Protected ctors -->
+
+<h2 class="api-section">Protected constructors</h2>
+
+
+
+<A NAME="SSLSocket()"></A>
+
+<div class="api apilevel-1">
+    <h3 class="api-name">SSLSocket</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 1</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+SSLSocket ()</pre>
+    
+    
+
+    
+  <p>Used only by subclasses.
+ Constructs an uninitialized, unconnected TCP socket.
+</p></p>
+
+</div>
+
+
+<A NAME="SSLSocket(java.lang.String, int)"></A>
+
+<div class="api apilevel-1">
+    <h3 class="api-name">SSLSocket</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 1</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+SSLSocket (<a href="../../../java/lang/String.html">String</a> host, 
+                int port)</pre>
+    
+    
+
+    
+  <p>Used only by subclasses.
+ Constructs a TCP connection to a named host at a specified port.
+ This acts as the SSL client.
+ <p>
+ If there is a security manager, its <code>checkConnect</code>
+ method is called with the host address and <code>port</code>
+ as its arguments. This could result in a SecurityException.</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>host</code></td>
+        <td width="100%">
+          <code>String</code>: name of the host with which to connect, or
+        <code>null</code> for the loopback address.</p></td>
+      </tr>
+      <tr>
+        <td><code>port</code></td>
+        <td width="100%">
+          <code>int</code>: number of the server's port</p></td>
+      </tr>
+    </table>
+      <table class="responsive">
+      <tr><th colspan=2>Throws</th></tr>
+        <tr>
+          <td><code><a href="../../../java/io/IOException.html">IOException</a></code></td>
+          <td width="100%">if an I/O error occurs when creating the socket</td>
+        </tr>
+        <tr>
+          <td><code><a href="../../../java/lang/SecurityException.html">SecurityException</a></code></td>
+          <td width="100%">if a security manager exists and its
+         <code>checkConnect</code> method doesn't allow the operation.</td>
+        </tr>
+        <tr>
+          <td><code><a href="../../../java/net/UnknownHostException.html">UnknownHostException</a></code></td>
+          <td width="100%">if the host is not known</td>
+        </tr>
+        <tr>
+          <td><code><a href="../../../java/lang/IllegalArgumentException.html">IllegalArgumentException</a></code></td>
+          <td width="100%">if the port parameter is outside the
+         specified range of valid port values, which is between 0 and
+         65535, inclusive.</td>
+        </tr>
+      </table>
+  
+  <div>
+      <p><b>See also:</b></p>
+      <ul class="nolist"><li><code><a href="../../../java/lang/SecurityManager.html#checkConnect(java.lang.String, int)">checkConnect(String, int)</a></code></li>
+      </ul>
+  </div>
+
+</div>
+
+
+<A NAME="SSLSocket(java.net.InetAddress, int)"></A>
+
+<div class="api apilevel-1">
+    <h3 class="api-name">SSLSocket</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 1</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+SSLSocket (<a href="../../../java/net/InetAddress.html">InetAddress</a> address, 
+                int port)</pre>
+    
+    
+
+    
+  <p>Used only by subclasses.
+ Constructs a TCP connection to a server at a specified address
+ and port.  This acts as the SSL client.
+ <p>
+ If there is a security manager, its <code>checkConnect</code>
+ method is called with the host address and <code>port</code>
+ as its arguments. This could result in a SecurityException.</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>address</code></td>
+        <td width="100%">
+          <code>InetAddress</code>: the server's host</p></td>
+      </tr>
+      <tr>
+        <td><code>port</code></td>
+        <td width="100%">
+          <code>int</code>: its port</p></td>
+      </tr>
+    </table>
+      <table class="responsive">
+      <tr><th colspan=2>Throws</th></tr>
+        <tr>
+          <td><code><a href="../../../java/io/IOException.html">IOException</a></code></td>
+          <td width="100%">if an I/O error occurs when creating the socket</td>
+        </tr>
+        <tr>
+          <td><code><a href="../../../java/lang/SecurityException.html">SecurityException</a></code></td>
+          <td width="100%">if a security manager exists and its
+         <code>checkConnect</code> method doesn't allow the operation.</td>
+        </tr>
+        <tr>
+          <td><code><a href="../../../java/lang/IllegalArgumentException.html">IllegalArgumentException</a></code></td>
+          <td width="100%">if the port parameter is outside the
+         specified range of valid port values, which is between 0 and
+         65535, inclusive.</td>
+        </tr>
+        <tr>
+          <td><code><a href="../../../java/lang/NullPointerException.html">NullPointerException</a></code></td>
+          <td width="100%">if <code>address</code> is null.</td>
+        </tr>
+      </table>
+  
+  <div>
+      <p><b>See also:</b></p>
+      <ul class="nolist"><li><code><a href="../../../java/lang/SecurityManager.html#checkConnect(java.lang.String, int)">checkConnect(String, int)</a></code></li>
+      </ul>
+  </div>
+
+</div>
+
+
+<A NAME="SSLSocket(java.lang.String, int, java.net.InetAddress, int)"></A>
+
+<div class="api apilevel-1">
+    <h3 class="api-name">SSLSocket</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 1</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+SSLSocket (<a href="../../../java/lang/String.html">String</a> host, 
+                int port, 
+                <a href="../../../java/net/InetAddress.html">InetAddress</a> clientAddress, 
+                int clientPort)</pre>
+    
+    
+
+    
+  <p>Used only by subclasses.
+ Constructs an SSL connection to a named host at a specified port,
+ binding the client side of the connection a given address and port.
+ This acts as the SSL client.
+ <p>
+ If there is a security manager, its <code>checkConnect</code>
+ method is called with the host address and <code>port</code>
+ as its arguments. This could result in a SecurityException.</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>host</code></td>
+        <td width="100%">
+          <code>String</code>: name of the host with which to connect, or
+        <code>null</code> for the loopback address.</p></td>
+      </tr>
+      <tr>
+        <td><code>port</code></td>
+        <td width="100%">
+          <code>int</code>: number of the server's port</p></td>
+      </tr>
+      <tr>
+        <td><code>clientAddress</code></td>
+        <td width="100%">
+          <code>InetAddress</code>: the client's address the socket is bound to, or
+        <code>null</code> for the <code>anyLocal</code> address.</p></td>
+      </tr>
+      <tr>
+        <td><code>clientPort</code></td>
+        <td width="100%">
+          <code>int</code>: the client's port the socket is bound to, or
+        <code>zero</code> for a system selected free port.</p></td>
+      </tr>
+    </table>
+      <table class="responsive">
+      <tr><th colspan=2>Throws</th></tr>
+        <tr>
+          <td><code><a href="../../../java/io/IOException.html">IOException</a></code></td>
+          <td width="100%">if an I/O error occurs when creating the socket</td>
+        </tr>
+        <tr>
+          <td><code><a href="../../../java/lang/SecurityException.html">SecurityException</a></code></td>
+          <td width="100%">if a security manager exists and its
+         <code>checkConnect</code> method doesn't allow the operation.</td>
+        </tr>
+        <tr>
+          <td><code><a href="../../../java/net/UnknownHostException.html">UnknownHostException</a></code></td>
+          <td width="100%">if the host is not known</td>
+        </tr>
+        <tr>
+          <td><code><a href="../../../java/lang/IllegalArgumentException.html">IllegalArgumentException</a></code></td>
+          <td width="100%">if the port parameter or clientPort
+         parameter is outside the specified range of valid port values,
+         which is between 0 and 65535, inclusive.</td>
+        </tr>
+      </table>
+  
+  <div>
+      <p><b>See also:</b></p>
+      <ul class="nolist"><li><code><a href="../../../java/lang/SecurityManager.html#checkConnect(java.lang.String, int)">checkConnect(String, int)</a></code></li>
+      </ul>
+  </div>
+
+</div>
+
+
+<A NAME="SSLSocket(java.net.InetAddress, int, java.net.InetAddress, int)"></A>
+
+<div class="api apilevel-1">
+    <h3 class="api-name">SSLSocket</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 1</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+SSLSocket (<a href="../../../java/net/InetAddress.html">InetAddress</a> address, 
+                int port, 
+                <a href="../../../java/net/InetAddress.html">InetAddress</a> clientAddress, 
+                int clientPort)</pre>
+    
+    
+
+    
+  <p>Used only by subclasses.
+ Constructs an SSL connection to a server at a specified address
+ and TCP port, binding the client side of the connection a given
+ address and port.  This acts as the SSL client.
+ <p>
+ If there is a security manager, its <code>checkConnect</code>
+ method is called with the host address and <code>port</code>
+ as its arguments. This could result in a SecurityException.</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>address</code></td>
+        <td width="100%">
+          <code>InetAddress</code>: the server's host</p></td>
+      </tr>
+      <tr>
+        <td><code>port</code></td>
+        <td width="100%">
+          <code>int</code>: its port</p></td>
+      </tr>
+      <tr>
+        <td><code>clientAddress</code></td>
+        <td width="100%">
+          <code>InetAddress</code>: the client's address the socket is bound to, or
+        <code>null</code> for the <code>anyLocal</code> address.</p></td>
+      </tr>
+      <tr>
+        <td><code>clientPort</code></td>
+        <td width="100%">
+          <code>int</code>: the client's port the socket is bound to, or
+        <code>zero</code> for a system selected free port.</p></td>
+      </tr>
+    </table>
+      <table class="responsive">
+      <tr><th colspan=2>Throws</th></tr>
+        <tr>
+          <td><code><a href="../../../java/io/IOException.html">IOException</a></code></td>
+          <td width="100%">if an I/O error occurs when creating the socket</td>
+        </tr>
+        <tr>
+          <td><code><a href="../../../java/lang/SecurityException.html">SecurityException</a></code></td>
+          <td width="100%">if a security manager exists and its
+         <code>checkConnect</code> method doesn't allow the operation.</td>
+        </tr>
+        <tr>
+          <td><code><a href="../../../java/lang/IllegalArgumentException.html">IllegalArgumentException</a></code></td>
+          <td width="100%">if the port parameter or clientPort
+         parameter is outside the specified range of valid port values,
+         which is between 0 and 65535, inclusive.</td>
+        </tr>
+        <tr>
+          <td><code><a href="../../../java/lang/NullPointerException.html">NullPointerException</a></code></td>
+          <td width="100%">if <code>address</code> is null.</td>
+        </tr>
+      </table>
+  
+  <div>
+      <p><b>See also:</b></p>
+      <ul class="nolist"><li><code><a href="../../../java/lang/SecurityManager.html#checkConnect(java.lang.String, int)">checkConnect(String, int)</a></code></li>
+      </ul>
+  </div>
+
+</div>
+
+
+
+
+
+<!-- ========= METHOD DETAIL ======== -->
+<!-- Public methdos -->
+
+<h2 class="api-section">Public methods</h2>
+
+
+
+<A NAME="addHandshakeCompletedListener(javax.net.ssl.HandshakeCompletedListener)"></A>
+
+<div class="api apilevel-1">
+    <h3 class="api-name">addHandshakeCompletedListener</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 1</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+void addHandshakeCompletedListener (<a href="HandshakeCompletedListener.html">HandshakeCompletedListener</a> listener)</pre>
+    
+    
+
+    
+  <p>Registers an event listener to receive notifications that an
+ SSL handshake has completed on this connection.</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>listener</code></td>
+        <td width="100%">
+          <code>HandshakeCompletedListener</code>: the HandShake Completed event listener</p></td>
+      </tr>
+    </table>
+      <table class="responsive">
+      <tr><th colspan=2>Throws</th></tr>
+        <tr>
+          <td><code><a href="../../../java/lang/IllegalArgumentException.html">IllegalArgumentException</a></code></td>
+          <td width="100%">if the argument is null.
+</td>
+        </tr>
+      </table>
+  
+  <div>
+      <p><b>See also:</b></p>
+      <ul class="nolist"><li><code><a href="SSLSocket.html#startHandshake()">startHandshake()</a></code></li><li><code><a href="SSLSocket.html#removeHandshakeCompletedListener(javax.net.ssl.HandshakeCompletedListener)">removeHandshakeCompletedListener(HandshakeCompletedListener)</a></code></li>
+      </ul>
+  </div>
+
+</div>
+
+
+<A NAME="getEnableSessionCreation()"></A>
+
+<div class="api apilevel-1">
+    <h3 class="api-name">getEnableSessionCreation</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 1</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+boolean getEnableSessionCreation ()</pre>
+    
+    
+
+    
+  <p>Returns true if new SSL sessions may be established by this socket.</p></p>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code>boolean</code></td>
+        <td width="100%">true indicates that sessions may be created; this
+          is the default.  false indicates that an existing session
+          must be resumed</p></td>
+      </tr>
+    </table>
+  <div>
+      <p><b>See also:</b></p>
+      <ul class="nolist"><li><code><a href="SSLSocket.html#setEnableSessionCreation(boolean)">setEnableSessionCreation(boolean)</a></code></li>
+      </ul>
+  </div>
+
+</div>
+
+
+<A NAME="getEnabledCipherSuites()"></A>
+
+<div class="api apilevel-1">
+    <h3 class="api-name">getEnabledCipherSuites</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 1</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="../../../java/lang/String.html">String[]</a> getEnabledCipherSuites ()</pre>
+    
+    
+
+    
+  <p>Returns the names of the SSL cipher suites which are currently
+ enabled for use on this connection.  When an SSLSocket is first
+ created, all enabled cipher suites support a minimum quality of
+ service.  Thus, in some environments this value might be empty.
+ <P>
+ Even if a suite has been enabled, it might never be used.  (For
+ example, the peer does not support it, the requisite certificates
+ (and private keys) for the suite are not available, or an
+ anonymous suite is enabled but authentication is required.</p></p>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="../../../java/lang/String.html">String[]</a></code></td>
+        <td width="100%">an array of cipher suite names</p></td>
+      </tr>
+    </table>
+  <div>
+      <p><b>See also:</b></p>
+      <ul class="nolist"><li><code><a href="SSLSocket.html#getSupportedCipherSuites()">getSupportedCipherSuites()</a></code></li><li><code><a href="SSLSocket.html#setEnabledCipherSuites(java.lang.String[])">setEnabledCipherSuites(String[])</a></code></li>
+      </ul>
+  </div>
+
+</div>
+
+
+<A NAME="getEnabledProtocols()"></A>
+
+<div class="api apilevel-1">
+    <h3 class="api-name">getEnabledProtocols</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 1</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="../../../java/lang/String.html">String[]</a> getEnabledProtocols ()</pre>
+    
+    
+
+    
+  <p>Returns the names of the protocol versions which are currently
+ enabled for use on this connection.</p></p>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="../../../java/lang/String.html">String[]</a></code></td>
+        <td width="100%">an array of protocols
+</p></td>
+      </tr>
+    </table>
+  <div>
+      <p><b>See also:</b></p>
+      <ul class="nolist"><li><code><a href="SSLSocket.html#setEnabledProtocols(java.lang.String[])">setEnabledProtocols(String[])</a></code></li>
+      </ul>
+  </div>
+
+</div>
+
+
+<A NAME="getHandshakeSession()"></A>
+
+<div class="api apilevel-24">
+    <h3 class="api-name">getHandshakeSession</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 24</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="SSLSession.html">SSLSession</a> getHandshakeSession ()</pre>
+    
+    
+
+    
+  <p>Returns the <code>SSLSession</code> being constructed during a SSL/TLS
+ handshake.
+ <p>
+ TLS protocols may negotiate parameters that are needed when using
+ an instance of this class, but before the <code>SSLSession</code> has
+ been completely initialized and made available via <code>getSession</code>.
+ For example, the list of valid signature algorithms may restrict
+ the type of certificates that can used during TrustManager
+ decisions, or the maximum TLS fragment packet sizes can be
+ resized to better support the network environment.
+ <p>
+ This method provides early access to the <code>SSLSession</code> being
+ constructed.  Depending on how far the handshake has progressed,
+ some data may not yet be available for use.  For example, if a
+ remote server will be sending a Certificate chain, but that chain
+ has yet not been processed, the <code>getPeerCertificates</code>
+ method of <code>SSLSession</code> will throw a
+ SSLPeerUnverifiedException.  Once that chain has been processed,
+ <code>getPeerCertificates</code> will return the proper value.
+ <p>
+ Unlike <code><a href="SSLSocket.html#getSession()">getSession()</a></code>, this method does not initiate the
+ initial handshake and does not block until handshaking is
+ complete.</p></p>
+    
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="SSLSession.html">SSLSession</a></code></td>
+        <td width="100%">null if this instance is not currently handshaking, or
+         if the current handshake has not progressed far enough to
+         create a basic SSLSession.  Otherwise, this method returns the
+         <code>SSLSession</code> currently being negotiated.</p></td>
+      </tr>
+    </table>
+      <table class="responsive">
+      <tr><th colspan=2>Throws</th></tr>
+        <tr>
+          <td><code><a href="../../../java/lang/UnsupportedOperationException.html">UnsupportedOperationException</a></code></td>
+          <td width="100%">if the underlying provider
+         does not implement the operation.</td>
+        </tr>
+      </table>
+  
+  <div>
+      <p><b>See also:</b></p>
+      <ul class="nolist"><li><code><a href="SSLEngine.html">SSLEngine</a></code></li><li><code><a href="SSLSession.html">SSLSession</a></code></li><li><code><a href="ExtendedSSLSession.html">ExtendedSSLSession</a></code></li><li><code><a href="X509ExtendedKeyManager.html">X509ExtendedKeyManager</a></code></li><li><code><a href="X509ExtendedTrustManager.html">X509ExtendedTrustManager</a></code></li>
+      </ul>
+  </div>
+
+</div>
+
+
+<A NAME="getNeedClientAuth()"></A>
+
+<div class="api apilevel-1">
+    <h3 class="api-name">getNeedClientAuth</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 1</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+boolean getNeedClientAuth ()</pre>
+    
+    
+
+    
+  <p>Returns true if the socket will <i>require</i> client authentication.
+ This option is only useful to sockets in the server mode.</p></p>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code>boolean</code></td>
+        <td width="100%">true if client authentication is required,
+          or false if no client authentication is desired.</p></td>
+      </tr>
+    </table>
+  <div>
+      <p><b>See also:</b></p>
+      <ul class="nolist"><li><code><a href="SSLSocket.html#setNeedClientAuth(boolean)">setNeedClientAuth(boolean)</a></code></li><li><code><a href="SSLSocket.html#setWantClientAuth(boolean)">setWantClientAuth(boolean)</a></code></li><li><code><a href="SSLSocket.html#getWantClientAuth()">getWantClientAuth()</a></code></li><li><code><a href="SSLSocket.html#setUseClientMode(boolean)">setUseClientMode(boolean)</a></code></li>
+      </ul>
+  </div>
+
+</div>
+
+
+<A NAME="getSSLParameters()"></A>
+
+<div class="api apilevel-9">
+    <h3 class="api-name">getSSLParameters</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 9</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="SSLParameters.html">SSLParameters</a> getSSLParameters ()</pre>
+    
+    
+
+    
+  <p>Returns the SSLParameters in effect for this SSLSocket.
+ The ciphersuites and protocols of the returned SSLParameters
+ are always non-null.</p></p>
+    
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="SSLParameters.html">SSLParameters</a></code></td>
+        <td width="100%">the SSLParameters in effect for this SSLSocket.</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="getSession()"></A>
+
+<div class="api apilevel-1">
+    <h3 class="api-name">getSession</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 1</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="SSLSession.html">SSLSession</a> getSession ()</pre>
+    
+    
+
+    
+  <p>Returns the SSL Session in use by this connection.  These can
+ be long lived, and frequently correspond to an entire login session
+ for some user.  The session specifies a particular cipher suite
+ which is being actively used by all connections in that session,
+ as well as the identities of the session's client and server.
+ <P>
+ This method will initiate the initial handshake if
+ necessary and then block until the handshake has been
+ established.
+ <P>
+ If an error occurs during the initial handshake, this method
+ returns an invalid session object which reports an invalid
+ cipher suite of "SSL_NULL_WITH_NULL_NULL".</p></p>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="SSLSession.html">SSLSession</a></code></td>
+        <td width="100%">the <code>SSLSession</code>
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="getSupportedCipherSuites()"></A>
+
+<div class="api apilevel-1">
+    <h3 class="api-name">getSupportedCipherSuites</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 1</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="../../../java/lang/String.html">String[]</a> getSupportedCipherSuites ()</pre>
+    
+    
+
+    
+  <p>Returns the names of the cipher suites which could be enabled for use
+ on this connection.  Normally, only a subset of these will actually
+ be enabled by default, since this list may include cipher suites which
+ do not meet quality of service requirements for those defaults.  Such
+ cipher suites might be useful in specialized applications.</p></p>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="../../../java/lang/String.html">String[]</a></code></td>
+        <td width="100%">an array of cipher suite names</p></td>
+      </tr>
+    </table>
+  <div>
+      <p><b>See also:</b></p>
+      <ul class="nolist"><li><code><a href="SSLSocket.html#getEnabledCipherSuites()">getEnabledCipherSuites()</a></code></li><li><code><a href="SSLSocket.html#setEnabledCipherSuites(java.lang.String[])">setEnabledCipherSuites(String[])</a></code></li>
+      </ul>
+  </div>
+
+</div>
+
+
+<A NAME="getSupportedProtocols()"></A>
+
+<div class="api apilevel-1">
+    <h3 class="api-name">getSupportedProtocols</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 1</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="../../../java/lang/String.html">String[]</a> getSupportedProtocols ()</pre>
+    
+    
+
+    
+  <p>Returns the names of the protocols which could be enabled for use
+ on an SSL connection.</p></p>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="../../../java/lang/String.html">String[]</a></code></td>
+        <td width="100%">an array of protocols supported
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="getUseClientMode()"></A>
+
+<div class="api apilevel-1">
+    <h3 class="api-name">getUseClientMode</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 1</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+boolean getUseClientMode ()</pre>
+    
+    
+
+    
+  <p>Returns true if the socket is set to use client mode when
+ handshaking.</p></p>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code>boolean</code></td>
+        <td width="100%">true if the socket should do handshaking
+          in "client" mode</p></td>
+      </tr>
+    </table>
+  <div>
+      <p><b>See also:</b></p>
+      <ul class="nolist"><li><code><a href="SSLSocket.html#setUseClientMode(boolean)">setUseClientMode(boolean)</a></code></li>
+      </ul>
+  </div>
+
+</div>
+
+
+<A NAME="getWantClientAuth()"></A>
+
+<div class="api apilevel-1">
+    <h3 class="api-name">getWantClientAuth</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 1</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+boolean getWantClientAuth ()</pre>
+    
+    
+
+    
+  <p>Returns true if the socket will <i>request</i> client authentication.
+ This option is only useful for sockets in the server mode.</p></p>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code>boolean</code></td>
+        <td width="100%">true if client authentication is requested,
+          or false if no client authentication is desired.</p></td>
+      </tr>
+    </table>
+  <div>
+      <p><b>See also:</b></p>
+      <ul class="nolist"><li><code><a href="SSLSocket.html#setNeedClientAuth(boolean)">setNeedClientAuth(boolean)</a></code></li><li><code><a href="SSLSocket.html#getNeedClientAuth()">getNeedClientAuth()</a></code></li><li><code><a href="SSLSocket.html#setWantClientAuth(boolean)">setWantClientAuth(boolean)</a></code></li><li><code><a href="SSLSocket.html#setUseClientMode(boolean)">setUseClientMode(boolean)</a></code></li>
+      </ul>
+  </div>
+
+</div>
+
+
+<A NAME="removeHandshakeCompletedListener(javax.net.ssl.HandshakeCompletedListener)"></A>
+
+<div class="api apilevel-1">
+    <h3 class="api-name">removeHandshakeCompletedListener</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 1</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+void removeHandshakeCompletedListener (<a href="HandshakeCompletedListener.html">HandshakeCompletedListener</a> listener)</pre>
+    
+    
+
+    
+  <p>Removes a previously registered handshake completion listener.</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>listener</code></td>
+        <td width="100%">
+          <code>HandshakeCompletedListener</code>: the HandShake Completed event listener</p></td>
+      </tr>
+    </table>
+      <table class="responsive">
+      <tr><th colspan=2>Throws</th></tr>
+        <tr>
+          <td><code><a href="../../../java/lang/IllegalArgumentException.html">IllegalArgumentException</a></code></td>
+          <td width="100%">if the listener is not registered,
+ or the argument is null.</td>
+        </tr>
+      </table>
+  
+  <div>
+      <p><b>See also:</b></p>
+      <ul class="nolist"><li><code><a href="SSLSocket.html#addHandshakeCompletedListener(javax.net.ssl.HandshakeCompletedListener)">addHandshakeCompletedListener(HandshakeCompletedListener)</a></code></li>
+      </ul>
+  </div>
+
+</div>
+
+
+<A NAME="setEnableSessionCreation(boolean)"></A>
+
+<div class="api apilevel-1">
+    <h3 class="api-name">setEnableSessionCreation</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 1</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+void setEnableSessionCreation (boolean flag)</pre>
+    
+    
+
+    
+  <p>Controls whether new SSL sessions may be established by this socket.
+ If session creations are not allowed, and there are no
+ existing sessions to resume, there will be no successful
+ handshaking.</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>flag</code></td>
+        <td width="100%">
+          <code>boolean</code>: true indicates that sessions may be created; this
+          is the default.  false indicates that an existing session
+          must be resumed</p></td>
+      </tr>
+    </table>
+  <div>
+      <p><b>See also:</b></p>
+      <ul class="nolist"><li><code><a href="SSLSocket.html#getEnableSessionCreation()">getEnableSessionCreation()</a></code></li>
+      </ul>
+  </div>
+
+</div>
+
+
+<A NAME="setEnabledCipherSuites(java.lang.String[])"></A>
+
+<div class="api apilevel-1">
+    <h3 class="api-name">setEnabledCipherSuites</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 1</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+void setEnabledCipherSuites (<a href="../../../java/lang/String.html">String[]</a> suites)</pre>
+    
+    
+
+    
+  <p>Sets the cipher suites enabled for use on this connection.
+ <P>
+ Each cipher suite in the <code>suites</code> parameter must have
+ been listed by getSupportedCipherSuites(), or the method will
+ fail.  Following a successful call to this method, only suites
+ listed in the <code>suites</code> parameter are enabled for use.
+ <P>
+ See <code><a href="SSLSocket.html#getEnabledCipherSuites()">getEnabledCipherSuites()</a></code> for more information
+ on why a specific ciphersuite may never be used on a connection.</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>suites</code></td>
+        <td width="100%">
+          <code>String</code>: Names of all the cipher suites to enable</p></td>
+      </tr>
+    </table>
+      <table class="responsive">
+      <tr><th colspan=2>Throws</th></tr>
+        <tr>
+          <td><code><a href="../../../java/lang/IllegalArgumentException.html">IllegalArgumentException</a></code></td>
+          <td width="100%">when one or more of the ciphers
+          named by the parameter is not supported, or when the
+          parameter is null.</td>
+        </tr>
+      </table>
+  
+  <div>
+      <p><b>See also:</b></p>
+      <ul class="nolist"><li><code><a href="SSLSocket.html#getSupportedCipherSuites()">getSupportedCipherSuites()</a></code></li><li><code><a href="SSLSocket.html#getEnabledCipherSuites()">getEnabledCipherSuites()</a></code></li>
+      </ul>
+  </div>
+
+</div>
+
+
+<A NAME="setEnabledProtocols(java.lang.String[])"></A>
+
+<div class="api apilevel-1">
+    <h3 class="api-name">setEnabledProtocols</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 1</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+void setEnabledProtocols (<a href="../../../java/lang/String.html">String[]</a> protocols)</pre>
+    
+    
+
+    
+  <p>Sets the protocol versions enabled for use on this connection.
+ <P>
+ The protocols must have been listed by
+ <code>getSupportedProtocols()</code> as being supported.
+ Following a successful call to this method, only protocols listed
+ in the <code>protocols</code> parameter are enabled for use.
+ <p>
+ Because of the way the protocol version is negotiated, connections
+ will only be able to use a member of the lowest set of contiguous
+ enabled protocol versions.  For example, enabling TLSv1.2 and TLSv1
+ will result in connections only being able to use TLSv1.</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>protocols</code></td>
+        <td width="100%">
+          <code>String</code>: Names of all the protocols to enable.</p></td>
+      </tr>
+    </table>
+      <table class="responsive">
+      <tr><th colspan=2>Throws</th></tr>
+        <tr>
+          <td><code><a href="../../../java/lang/IllegalArgumentException.html">IllegalArgumentException</a></code></td>
+          <td width="100%">when one or more of
+            the protocols named by the parameter is not supported or
+            when the protocols parameter is null.</td>
+        </tr>
+      </table>
+  
+  <div>
+      <p><b>See also:</b></p>
+      <ul class="nolist"><li><code><a href="SSLSocket.html#getEnabledProtocols()">getEnabledProtocols()</a></code></li>
+      </ul>
+  </div>
+
+</div>
+
+
+<A NAME="setNeedClientAuth(boolean)"></A>
+
+<div class="api apilevel-1">
+    <h3 class="api-name">setNeedClientAuth</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 1</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+void setNeedClientAuth (boolean need)</pre>
+    
+    
+
+    
+  <p>Configures the socket to <i>require</i> client authentication.  This
+ option is only useful for sockets in the server mode.
+ <P>
+ A socket's client authentication setting is one of the following:
+ <ul>
+ <li> client authentication required
+ <li> client authentication requested
+ <li> no client authentication desired
+ </ul>
+ <P>
+ Unlike <code><a href="SSLSocket.html#setWantClientAuth(boolean)">setWantClientAuth(boolean)</a></code>, if this option is set and
+ the client chooses not to provide authentication information
+ about itself, <i>the negotiations will stop and the connection
+ will be dropped</i>.
+ <P>
+ Calling this method overrides any previous setting made by
+ this method or <code><a href="SSLSocket.html#setWantClientAuth(boolean)">setWantClientAuth(boolean)</a></code>.</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>need</code></td>
+        <td width="100%">
+          <code>boolean</code>: set to true if client authentication is required,
+          or false if no client authentication is desired.</p></td>
+      </tr>
+    </table>
+  <div>
+      <p><b>See also:</b></p>
+      <ul class="nolist"><li><code><a href="SSLSocket.html#getNeedClientAuth()">getNeedClientAuth()</a></code></li><li><code><a href="SSLSocket.html#setWantClientAuth(boolean)">setWantClientAuth(boolean)</a></code></li><li><code><a href="SSLSocket.html#getWantClientAuth()">getWantClientAuth()</a></code></li><li><code><a href="SSLSocket.html#setUseClientMode(boolean)">setUseClientMode(boolean)</a></code></li>
+      </ul>
+  </div>
+
+</div>
+
+
+<A NAME="setSSLParameters(javax.net.ssl.SSLParameters)"></A>
+
+<div class="api apilevel-9">
+    <h3 class="api-name">setSSLParameters</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 9</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+void setSSLParameters (<a href="SSLParameters.html">SSLParameters</a> params)</pre>
+    
+    
+
+    
+  <p>Applies SSLParameters to this socket.
+
+ <p>This means:
+ <ul>
+ <li>If <code>params.getCipherSuites()</code> is non-null,
+   <code>setEnabledCipherSuites()</code> is called with that value.</li>
+ <li>If <code>params.getProtocols()</code> is non-null,
+   <code>setEnabledProtocols()</code> is called with that value.</li>
+ <li>If <code>params.getNeedClientAuth()</code> or
+   <code>params.getWantClientAuth()</code> return <code>true</code>,
+   <code>setNeedClientAuth(true)</code> and
+   <code>setWantClientAuth(true)</code> are called, respectively;
+   otherwise <code>setWantClientAuth(false)</code> is called.</li>
+ <li>If <code>params.getServerNames()</code> is non-null, the socket will
+   configure its server names with that value.</li>
+ <li>If <code>params.getSNIMatchers()</code> is non-null, the socket will
+   configure its SNI matchers with that value.</li>
+ </ul></p></p>
+    
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>params</code></td>
+        <td width="100%">
+          <code>SSLParameters</code>: the parameters</p></td>
+      </tr>
+    </table>
+      <table class="responsive">
+      <tr><th colspan=2>Throws</th></tr>
+        <tr>
+          <td><code><a href="../../../java/lang/IllegalArgumentException.html">IllegalArgumentException</a></code></td>
+          <td width="100%">if the setEnabledCipherSuites() or
+    the setEnabledProtocols() call fails</td>
+        </tr>
+      </table>
+  
+
+</div>
+
+
+<A NAME="setUseClientMode(boolean)"></A>
+
+<div class="api apilevel-1">
+    <h3 class="api-name">setUseClientMode</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 1</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+void setUseClientMode (boolean mode)</pre>
+    
+    
+
+    
+  <p>Configures the socket to use client (or server) mode when
+ handshaking.
+ <P>
+ This method must be called before any handshaking occurs.
+ Once handshaking has begun, the mode can not be reset for the
+ life of this socket.
+ <P>
+ Servers normally authenticate themselves, and clients
+ are not required to do so.</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>mode</code></td>
+        <td width="100%">
+          <code>boolean</code>: true if the socket should start its handshaking
+          in "client" mode</p></td>
+      </tr>
+    </table>
+      <table class="responsive">
+      <tr><th colspan=2>Throws</th></tr>
+        <tr>
+          <td><code><a href="../../../java/lang/IllegalArgumentException.html">IllegalArgumentException</a></code></td>
+          <td width="100%">if a mode change is attempted
+          after the initial handshake has begun.</td>
+        </tr>
+      </table>
+  
+  <div>
+      <p><b>See also:</b></p>
+      <ul class="nolist"><li><code><a href="SSLSocket.html#getUseClientMode()">getUseClientMode()</a></code></li>
+      </ul>
+  </div>
+
+</div>
+
+
+<A NAME="setWantClientAuth(boolean)"></A>
+
+<div class="api apilevel-1">
+    <h3 class="api-name">setWantClientAuth</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 1</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+void setWantClientAuth (boolean want)</pre>
+    
+    
+
+    
+  <p>Configures the socket to <i>request</i> client authentication.
+ This option is only useful for sockets in the server mode.
+ <P>
+ A socket's client authentication setting is one of the following:
+ <ul>
+ <li> client authentication required
+ <li> client authentication requested
+ <li> no client authentication desired
+ </ul>
+ <P>
+ Unlike <code><a href="SSLSocket.html#setNeedClientAuth(boolean)">setNeedClientAuth(boolean)</a></code>, if this option is set and
+ the client chooses not to provide authentication information
+ about itself, <i>the negotiations will continue</i>.
+ <P>
+ Calling this method overrides any previous setting made by
+ this method or <code><a href="SSLSocket.html#setNeedClientAuth(boolean)">setNeedClientAuth(boolean)</a></code>.</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>want</code></td>
+        <td width="100%">
+          <code>boolean</code>: set to true if client authentication is requested,
+          or false if no client authentication is desired.</p></td>
+      </tr>
+    </table>
+  <div>
+      <p><b>See also:</b></p>
+      <ul class="nolist"><li><code><a href="SSLSocket.html#getWantClientAuth()">getWantClientAuth()</a></code></li><li><code><a href="SSLSocket.html#setNeedClientAuth(boolean)">setNeedClientAuth(boolean)</a></code></li><li><code><a href="SSLSocket.html#getNeedClientAuth()">getNeedClientAuth()</a></code></li><li><code><a href="SSLSocket.html#setUseClientMode(boolean)">setUseClientMode(boolean)</a></code></li>
+      </ul>
+  </div>
+
+</div>
+
+
+<A NAME="startHandshake()"></A>
+
+<div class="api apilevel-1">
+    <h3 class="api-name">startHandshake</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 1</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+void startHandshake ()</pre>
+    
+    
+
+    
+  <p>Starts an SSL handshake on this connection.  Common reasons include
+ a need to use new encryption keys, to change cipher suites, or to
+ initiate a new session.  To force complete reauthentication, the
+ current session could be invalidated before starting this handshake.
+
+ <P> If data has already been sent on the connection, it continues
+ to flow during this handshake.  When the handshake completes, this
+ will be signaled with an event.
+
+ This method is synchronous for the initial handshake on a connection
+ and returns when the negotiated handshake is complete. Some
+ protocols may not support multiple handshakes on an existing socket
+ and may throw an IOException.</p></p>
+      <table class="responsive">
+      <tr><th colspan=2>Throws</th></tr>
+        <tr>
+          <td><code><a href="../../../java/io/IOException.html">IOException</a></code></td>
+          <td width="100%">on a network level error</td>
+        </tr>
+      </table>
+  
+  <div>
+      <p><b>See also:</b></p>
+      <ul class="nolist"><li><code><a href="SSLSocket.html#addHandshakeCompletedListener(javax.net.ssl.HandshakeCompletedListener)">addHandshakeCompletedListener(HandshakeCompletedListener)</a></code></li>
+      </ul>
+  </div>
+
+</div>
+
+
+<A NAME="toString()"></A>
+
+<div class="api apilevel-1">
+    <h3 class="api-name">toString</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 1</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="../../../java/lang/String.html">String</a> toString ()</pre>
+    
+    
+
+    
+  <p>Converts this socket to a <code>String</code>.</p></p>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="../../../java/lang/String.html">String</a></code></td>
+        <td width="100%">a string representation of this socket.
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+
+
+
+<!-- ========= METHOD DETAIL ======== -->
+
+
+
+<!-- ========= END OF CLASS DATA ========= -->
+
+</div><!-- end jd-content -->
+
+
+
+<div class="data-reference-resources-wrapper">
+  
+  <ul data-reference-resources>
+    
+    
+    <li><h2>Interfaces</h2>
+      <ul>
+          <li class="api apilevel-1"><a href="HandshakeCompletedListener.html">HandshakeCompletedListener</a></li>
+          <li class="api apilevel-1"><a href="HostnameVerifier.html">HostnameVerifier</a></li>
+          <li class="api apilevel-1"><a href="KeyManager.html">KeyManager</a></li>
+          <li class="api apilevel-1"><a href="ManagerFactoryParameters.html">ManagerFactoryParameters</a></li>
+          <li class="api apilevel-1"><a href="SSLSession.html">SSLSession</a></li>
+          <li class="api apilevel-1"><a href="SSLSessionBindingListener.html">SSLSessionBindingListener</a></li>
+          <li class="api apilevel-1"><a href="SSLSessionContext.html">SSLSessionContext</a></li>
+          <li class="api apilevel-1"><a href="TrustManager.html">TrustManager</a></li>
+          <li class="api apilevel-1"><a href="X509KeyManager.html">X509KeyManager</a></li>
+          <li class="api apilevel-1"><a href="X509TrustManager.html">X509TrustManager</a></li>
+      </ul>
+    </li>
+    
+    <li><h2>Classes</h2>
+      <ul>
+          <li class="api apilevel-1"><a href="CertPathTrustManagerParameters.html">CertPathTrustManagerParameters</a></li>
+          <li class="api apilevel-24"><a href="ExtendedSSLSession.html">ExtendedSSLSession</a></li>
+          <li class="api apilevel-1"><a href="HandshakeCompletedEvent.html">HandshakeCompletedEvent</a></li>
+          <li class="api apilevel-1"><a href="HttpsURLConnection.html">HttpsURLConnection</a></li>
+          <li class="api apilevel-1"><a href="KeyManagerFactory.html">KeyManagerFactory</a></li>
+          <li class="api apilevel-1"><a href="KeyManagerFactorySpi.html">KeyManagerFactorySpi</a></li>
+          <li class="api apilevel-1"><a href="KeyStoreBuilderParameters.html">KeyStoreBuilderParameters</a></li>
+          <li class="api apilevel-24"><a href="SNIHostName.html">SNIHostName</a></li>
+          <li class="api apilevel-24"><a href="SNIMatcher.html">SNIMatcher</a></li>
+          <li class="api apilevel-24"><a href="SNIServerName.html">SNIServerName</a></li>
+          <li class="api apilevel-1"><a href="SSLContext.html">SSLContext</a></li>
+          <li class="api apilevel-1"><a href="SSLContextSpi.html">SSLContextSpi</a></li>
+          <li class="api apilevel-1"><a href="SSLEngine.html">SSLEngine</a></li>
+          <li class="api apilevel-1"><a href="SSLEngineResult.html">SSLEngineResult</a></li>
+          <li class="api apilevel-9"><a href="SSLParameters.html">SSLParameters</a></li>
+          <li class="api apilevel-1"><a href="SSLPermission.html">SSLPermission</a></li>
+          <li class="api apilevel-1"><a href="SSLServerSocket.html">SSLServerSocket</a></li>
+          <li class="api apilevel-1"><a href="SSLServerSocketFactory.html">SSLServerSocketFactory</a></li>
+          <li class="api apilevel-1"><a href="SSLSessionBindingEvent.html">SSLSessionBindingEvent</a></li>
+          <li class="selected api apilevel-1"><a href="SSLSocket.html">SSLSocket</a></li>
+          <li class="api apilevel-1"><a href="SSLSocketFactory.html">SSLSocketFactory</a></li>
+          <li class="api apilevel-24"><a href="StandardConstants.html">StandardConstants</a></li>
+          <li class="api apilevel-1"><a href="TrustManagerFactory.html">TrustManagerFactory</a></li>
+          <li class="api apilevel-1"><a href="TrustManagerFactorySpi.html">TrustManagerFactorySpi</a></li>
+          <li class="api apilevel-1"><a href="X509ExtendedKeyManager.html">X509ExtendedKeyManager</a></li>
+          <li class="api apilevel-24"><a href="X509ExtendedTrustManager.html">X509ExtendedTrustManager</a></li>
+      </ul>
+    </li>
+    
+    <li><h2>Enums</h2>
+      <ul>
+          <li class="api apilevel-1"><a href="SSLEngineResult.HandshakeStatus.html">SSLEngineResult.HandshakeStatus</a></li>
+          <li class="api apilevel-1"><a href="SSLEngineResult.Status.html">SSLEngineResult.Status</a></li>
+      </ul>
+    </li>
+    
+    <li><h2>Exceptions</h2>
+      <ul>
+          <li class="api apilevel-1"><a href="SSLException.html">SSLException</a></li>
+          <li class="api apilevel-1"><a href="SSLHandshakeException.html">SSLHandshakeException</a></li>
+          <li class="api apilevel-1"><a href="SSLKeyException.html">SSLKeyException</a></li>
+          <li class="api apilevel-1"><a href="SSLPeerUnverifiedException.html">SSLPeerUnverifiedException</a></li>
+          <li class="api apilevel-1"><a href="SSLProtocolException.html">SSLProtocolException</a></li>
+      </ul>
+    </li>
+    
+  </ul>
+  
+</div>
+
+
+
+
+    </div>
+
+    
+
+  
+    
+  
+    
+
+
+
+
+  
+
+
+<footer class="devsite-footer-promos nocontent">
+  <nav class="devsite-full-site-width">
+    <ul class="devsite-footer-promos-list">
+      
+      <li class="devsite-footer-promo">
+        <a href="http://twitter.com/AndroidDev"
+           class="devsite-footer-promo-title gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Twitter Promo"
+           >
+          
+          
+          <img class="devsite-footer-promo-icon" src="https://developer.android.com/static/images/footer/logo-twitter.svg">
+          
+          
+            Twitter
+          
+        </a>
+        <div class="devsite-footer-promo-description">Follow @AndroidDev on Twitter</div>
+      </li>
+      
+      <li class="devsite-footer-promo">
+        <a href="http://plus.google.com/+AndroidDevelopers"
+           class="devsite-footer-promo-title gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Google+ Promo"
+           >
+          
+          
+          <img class="devsite-footer-promo-icon" src="../../../../../www.gstatic.com/images/branding/product/2x/google_plus_48dp.png">
+          
+          
+            Google+
+          
+        </a>
+        <div class="devsite-footer-promo-description">Follow Android Developers on Google+</div>
+      </li>
+      
+      <li class="devsite-footer-promo">
+        <a href="http://www.youtube.com/user/androiddevelopers"
+           class="devsite-footer-promo-title gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer YouTube Promo"
+           >
+          
+          
+          <img class="devsite-footer-promo-icon" src="../../../../../www.gstatic.com/images/icons/material/product/2x/youtube_48dp.png">
+          
+          
+            YouTube
+          
+        </a>
+        <div class="devsite-footer-promo-description">Check out Android Developers on YouTube</div>
+      </li>
+      
+    </ul>
+  </nav>
+</footer>
+
+
+
+<div class="wrap dac-footer-container">
+  <footer class="dac-footer ">
+    <div class="cols dac-footer-main">
+      <div class="col-1of1">
+        <div class="dac-footer-contact">
+          
+          <a class="dac-footer-contact-link" href="https://developer.android.com/newsletter/index.html" title="Newsletter">Newsletter</a>
+          
+          <a class="dac-footer-contact-link" href="https://android-developers.blogspot.com/" title="Blog" target="_blank">Blog</a>
+          
+          <a class="dac-footer-contact-link" href="https://developer.android.com/support.html" title="Support">Support</a>
+          
+          <a class="dac-footer-contact-link" href="https://docs.google.com/forms/d/e/1FAIpQLSf27XIxoFmNpTjTYdk-m1uKWGqEnd7_4C_E1AD5fdCfyTBWNA/viewform?usp=pp_url&amp;entry.1909689089&amp;entry.208743710&amp;entry.408796755&amp;entry.1341430893&amp;entry.594931249&amp;entry.1640656812&amp;entry.1759804042&amp;entry.1441312344=developer.android.com" title="Join user studies" target="_blank">Join user studies</a>
+        </div>
+      </div>
+    </div>
+
+    <hr class="dac-footer-separator"/>
+      
+      <p class="dac-footer-copyright">
+        
+        Except as noted, this content is licensed under <a href="http://creativecommons.org/licenses/by/2.5/" target="_blank">Creative Commons Attribution 2.5</a>. For details and restrictions, see the <a href="https://developer.android.com/license.html">Content License</a>.
+      </p>
+    
+
+    <p class="dac-footer-links">
+      
+      <a href="https://www.android.com/" title="Android.com" target="_blank">Android.com</a>
+      
+      <a href="https://developer.android.com/" title="Android Developers">Android Developers</a>
+      
+      <a href="https://developer.android.com/studio/index.html" title="Android Studio">Android Studio</a>
+      
+      <a href="https://developer.android.com/distribute/console/index.html" title="Google Play Console">Google Play Console</a>
+      
+      <a href="https://developer.android.com/legal.html" title="Legal Notice">Legal Notice</a>
+    </p>
+
+    
+    <form class="devsite-utility-footer-language" id="setlang" action="https://developer.android.com/i18n/setlang/" method="post">
+      <input type="hidden" name="xsrf_token" value="oga8-K4uYbnHp_yuh8tfA2S10xMJt_-xWtMYyIv9SPM6MTUxMTEwODA2MzgxNjY1MA" />
+      <input type="hidden" name="next" value="SSLSocket.html">
+      <span id="language" class="locales">
+        <select class="devsite-utility-footer-language-select" name="language">
+          
+          <option value="id"
+            >
+            Bahasa Indonesia
+          </option>
+          
+          <option value="de"
+            >
+            Deutsch
+          </option>
+          
+          <option value="en"
+             selected="selected" >
+            English
+          </option>
+          
+          <option value="es"
+            >
+            español
+          </option>
+          
+          <option value="es-419"
+            >
+            Español (América Latina)
+          </option>
+          
+          <option value="fr"
+            >
+            français
+          </option>
+          
+          <option value="pt-br"
+            >
+            Português Brasileiro
+          </option>
+          
+          <option value="vi"
+            >
+            Tiếng Việt
+          </option>
+          
+          <option value="tr"
+            >
+            Türkçe
+          </option>
+          
+          <option value="ru"
+            >
+            Русский
+          </option>
+          
+          <option value="th"
+            >
+            ภาษาไทย
+          </option>
+          
+          <option value="ja"
+            >
+            日本語
+          </option>
+          
+          <option value="zh-cn"
+            >
+            简体中文
+          </option>
+          
+          <option value="zh-tw"
+            >
+            繁體中文
+          </option>
+          
+          <option value="ko"
+            >
+            한국어
+          </option>
+          
+        </select>
+      </span>
+    </form>
+  </footer>
+</div><!--/.wrap -->
+
+<div class="dac-toast-group">
+  <div class="dac-toast" data-toast>
+    <div class="dac-toast-wrap">
+      
+      This site uses cookies to store your preferences for site-specific language and display options.
+      <button class="dac-toast-close-btn">
+        
+        <span class="dac-button dac-raised dac-primary">OK</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<div data-modal="newsletter" data-newsletter-fb data-swap class="dac-modal newsletter">
+  <div class="dac-modal-container">
+    <div class="dac-modal-window">
+      <header class="dac-modal-header">
+        <div class="dac-modal-header-actions">
+          <button class="dac-modal-header-close" data-modal-toggle></button>
+        </div>
+        <div class="dac-swap" data-swap-container>
+          <section class="dac-swap-section dac-active dac-down">
+            
+            <h2 class="norule dac-modal-header-title" data-t="newsletter.title">Get the latest Android developer news and tips that will help you find success on Google Play.</h2>
+            
+            <p class="dac-modal-header-subtitle" data-t="newsletter.requiredHint">* Required Fields</p>
+          </section>
+          <section class="dac-swap-section dac-up">
+            
+            <h2 class="norule dac-modal-header-title" data-t="newsletter.successTitle">Hooray!</h2>
+          </section>
+        </div>
+      </header>
+      <div class="dac-swap" data-swap-container>
+        <section class="dac-swap-section dac-active dac-left">
+          <form action="https://services.google.com/fb/submissions/android-developer-mailing-list/" class="dac-form" method="post">
+            <section class="dac-modal-content">
+              <fieldset class="dac-form-fieldset">
+                <div class="cols">
+                  <div class="col-1of2 newsletter-leftCol">
+                    <div class="dac-form-input-group">
+                      
+                      <label for="newsletter-full-name" class="dac-form-floatlabel" data-t="newsletter.name">Full name</label>
+                      <input type="text" class="dac-form-input" name="fullname" id="newsletter-full-name" required>
+                      <span class="dac-form-required">*</span>
+                    </div>
+                    <div class="dac-form-input-group">
+                      
+                      <label for="newsletter-email" class="dac-form-floatlabel" data-t="newsletter.email">Email address</label>
+                      <input type="email" class="dac-form-input" name="emailaddress" id="newsletter-email" required>
+                      <span class="dac-form-required">*</span>
+                    </div>
+                  </div>
+                  <div class="col-1of2 newsletter-rightCol">
+                    <div class="dac-form-input-group">
+                      
+                      <label for="newsletter-company" class="dac-form-floatlabel" data-t="newsletter.company">Company / developer name</label>
+                      <input type="text" class="dac-form-input" name="companydevelopername" id="newsletter-company">
+                    </div>
+                    <div class="dac-form-input-group">
+                      
+                      <label for="newsletter-play-store" class="dac-form-floatlabel" data-t="newsletter.appUrl">One of your Play Store app URLs</label>
+                      <input type="url" class="dac-form-input" name="playstoreappurls" id="newsletter-play-store">
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+              <fieldset class="dac-form-fieldset">
+                <div class="cols">
+                  
+                  <div class="col-1of2 newsletter-leftCol newsletter-interested" data-validation-message="Please check at least one item.">
+                    
+                    <legend class="dac-form-legend">What are you interested in?<span class="dac-form-required">*</span></legend>
+                    <div class="dac-form-radio-group">
+                      <input type="checkbox" class="dac-form-checkbox" name="interested" id="interested-whats-new" value="whats-new">
+                      <label for="interested-whats-new" class="dac-form-checkbox-button"></label>
+                      
+                      <label for="interested-whats-new" class="dac-form-label">What's new</label>
+                    </div>
+                    <div class="dac-form-radio-group">
+                      <input type="checkbox" class="dac-form-checkbox" name="interested" id="interested-games-updates" value="games-updates">
+                      <label for="interested-games-updates" class="dac-form-checkbox-button"></label>
+                      
+                      <label for="interested-games-updates" class="dac-form-label">Games updates</label>
+                    </div>
+                    <div class="dac-form-radio-group">
+                      <input type="checkbox" class="dac-form-checkbox" name="interested" id="interested-android-development" value="android-development">
+                      <label for="interested-android-development" class="dac-form-checkbox-button"></label>
+                      
+                      <label for="interested-android-development" class="dac-form-label">Android development</label>
+                    </div>
+                  </div>
+                  <div class="col-1of2 newsletter-rightCol newsletter-checkboxes">
+                    <div class="dac-form-input-group">
+                      
+                      <label for="newsletter-receive-in">Receive newsletter in</label>
+                      <select name="language" class="dac-form-select" id="newsletter-receive-in">
+                        <option value="en-US" selected>English</option>
+                        <option value="ar">Arabic</option>
+                        <option value="zh">Chinese (Simplified)</option>
+                        <option value="zh-TW">Chinese (Traditional)</option>
+                        <option value="fr">French</option>
+                        <option value="de">German</option>
+                        <option value="id">Indonesian (Bahasa)</option>
+                        <option value="ja">Japanese</option>
+                        <option value="ko">Korean</option>
+                        <option value="pt-BR">Portuguese (Brazilian)</option>
+                        <option value="ru">Russian</option>
+                        <option value="es-419">Spanish (Latin American)</option>
+                        <option value="th">Thai</option>
+                        <option value="tr">Turkish</option>
+                        <option value="vi">Vietnamese</option>
+                      </select>
+                    </div>
+                    <div class="dac-form-radio-group">
+                      <div class="dac-media">
+                        <div class="dac-media-figure">
+                          <input type="checkbox" class="dac-form-checkbox" name="marketingoptin" id="newsletter-add" required value="Add me to the mailing list.">
+                          <label for="newsletter-add" class="dac-form-checkbox-button"></label>
+                        </div>
+                        <div class="dac-media-body">
+                          <label for="newsletter-add" class="dac-form-label dac-form-aside">
+                            
+                            Add me to the mailing list.
+                            <span class="dac-form-required">*</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="dac-form-radio-group">
+                      <div class="dac-media">
+                        <div class="dac-media-figure">
+                          <input type="checkbox" class="dac-form-checkbox" name="privacystatement" id="newsletter-terms" required value="I acknowledge that the information provided in this form will be subject to Google's privacy policy (https://www.google.com/policies/privacy/).">
+                          <label for="newsletter-terms" class="dac-form-checkbox-button"></label>
+                        </div>
+                        <div class="dac-media-body">
+                          <label for="newsletter-terms" class="dac-form-label dac-form-aside"><span data-t="newsletter.privacyPolicy" data-t-html>
+                            
+                            I acknowledge that the information provided in this form will be subject to <a href="https://www.google.com/policies/privacy/">Google's privacy policy</a>.
+                          </span>
+                          <span class="dac-form-required">*</span></label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+            </section>
+            <input type="hidden" name="referrer" value="dac">
+            <footer class="dac-modal-footer">
+              <div class="cols">
+                <div class="col-2of5">
+                </div>
+              </div>
+              <button type="submit" value="Submit" class="dac-fab dac-primary dac-large dac-modal-action"><i class="dac-sprite dac-arrow-right"></i></button>
+            </footer>
+          </form>
+        </section>
+        <section class="dac-swap-section dac-right">
+          <div class="dac-modal-content">
+            <p class="newsletter-success-message" data-t="newsletter.successDetails">
+              
+              You have successfully signed up for the latest Android developer news and tips.
+            </p>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</div><!--/.dac-modal.newsletter-->
+
+<div data-modal="wechat" class="dac-modal">
+  <div class="dac-modal-container">
+    <div class="dac-modal-window">
+      <header class="dac-modal-header">
+        <div class="dac-modal-header-actions">
+          <button class="dac-modal-header-close" data-modal-toggle></button>
+        </div>
+        <section>
+          
+          <h2 class="norule dac-modal-header-title">Follow Google Developers on WeChat</h2>
+        </section>
+      </header>
+      <section class="dac-modal-content figure-center center-img">
+        <img src="../../../../static/images/qr-wechat.png">
+      </section>
+    </div>
+  </div>
+</div><!--/.dac-modal[dac-modal=wechat]-->
+
+
+<div data-modal="langform" class="dac-modal" id="langform">
+  <div class="dac-modal-container">
+    <div class="dac-modal-window">
+      <header class="dac-modal-header">
+        <div class="dac-modal-header-actions">
+          <button class="dac-modal-header-close" data-modal-toggle></button>
+        </div>
+        <section class="dac-swap-section dac-active dac-down">
+          <h2 class="norule dac-modal-header-title">
+            
+            Browse this site in <span class="span-target-lang"></span>?
+          </h2>
+        </section>
+      </header>
+      <section class="dac-swap-section dac-active dac-left">
+          <section class="dac-modal-content">
+            <fieldset class="dac-form-fieldset">
+              <div class="cols">
+                <div class="col-2of2 langform-leftCol">
+                  <p id="resetLangText">
+                    
+                    You requested a page in <span class="span-target-lang"></span>, but your language preference for this site is <span class="span-current-lang"></span>.
+                  </p>
+                  <p id="resetLangCta">
+                    
+                    Would you like to change your language preference and browse this site in <span class="span-target-lang"></span>? If you want to change your language preference later, use the language menu at the bottom of each page.
+                  </p>
+                </div>
+              </div>
+            </fieldset>
+          </section>
+          <footer class="dac-modal-footer" id="langfooter">
+            <div class="cols">
+              <div class="col-2of5">
+              </div>
+            </div>
+            <a href="#" class="yes" onclick="return false;">
+              <button class="button dac-primary dac-modal-action lang yes" data-t="newsletter.resetLangButtonYes" data-modal-toggle>
+                
+                Change Language
+              </button>
+            </a>
+            <a href="#" class="" onclick="return false;">
+              <button class="button dac-primary dac-modal-action lang no" data-t="newsletter.resetLangButtonNo" data-modal-toggle>
+                
+                Not Now
+              </button>
+            </a>
+          </footer>
+        </form>
+      </section>
+    </div>
+  </div>
+</div><!--/.dac-modal-->
+
+
+<div data-modal="api-unavailable" class="dac-modal" id="api-unavailable">
+  <div class="dac-modal-container">
+    <div class="dac-modal-window">
+      <header class="dac-modal-header">
+        <div class="dac-modal-header-actions">
+          <button class="dac-modal-header-close" data-modal-toggle></button>
+        </div>
+        <section class="dac-swap-section dac-active dac-down">
+          <h2 class="norule dac-modal-header-title">
+            
+            This class requires API level <span class="api-level"></span> or higher
+          </h2>
+        </section>
+      </header>
+      <section class="dac-swap-section dac-active dac-left">
+          <section class="dac-modal-content">
+            <p>
+              
+              This doc is hidden because your selected API level for the documentation is <span class="api-level"></span>. You can change the documentation API level with the selector above the left navigation.
+            </p>
+            
+            <p>For more information about specifying the API level your app requires, read <a href="https://developer.android.com/training/basics/supporting-devices/platforms.html">Supporting Different Platform Versions</a>.</p>
+          </section>
+          <footer class="dac-modal-footer" id="langfooter">
+            <div class="cols">
+              <div class="col-2of5">
+              </div>
+            </div>
+            <a href="#" class="ok" onclick="return false;">
+              <button class="button dac-primary dac-modal-action ok"
+              data-modal-toggle>
+                
+                OK, make this page visible
+              </button>
+            </a>
+          </footer>
+        </form>
+      </section>
+    </div>
+  </div>
+</div><!--/.dac-modal#api-unavailable-->
+
+    
+  </div><!--/#body-content-->
+
+  <!-- Nav Setup -->
+  <script>$('[data-dac-nav]').dacNav();</script>
+  <script type="text/javascript">
+    $('.slideshow-container').dacSlideshow({
+        btnPrev: '.slideshow-prev',
+        btnNext: '.slideshow-next',
+        btnPause: '#pauseButton'
+    });
+
+    $(".feed").dacTabbedList({
+      nav_id: '.feed-nav',
+      frame_id: '.feed-frame'
+    });
+  </script>
+  
+  <script src="../../../../ytblogger_lists_unified9a55.js?v=2017111904" defer></script>
+  <script src="../../../../android_metadata_en9a55.js?v=2017111904" defer></script>
+  
+  <script src="../../../lists9a55.js?v=2017111904" defer></script>
+  <script src="../../../gms_lists9a55.js?v=2017111904" defer></script>
+  <script src="../../../android/support/wearable/lists9a55.js?v=2017111904" defer></script>
+  <script src="../../../android/support/test/lists9a55.js?v=2017111904" defer></script>
+  <script src="../../../android/support/constraint/lists9a55.js?v=2017111904" defer></script>
+  <script src="../../../android/arch/lists9a55.js?v=2017111904" defer></script>
+  <script src="https://developer.android.com/_static2/268f0926ba/jsi18n/"></script>
+  <script>
+    // Load localized metadata.
+    (function(lang) {
+      if (lang === 'en') { return; }
+      document.write('<script src="https://developer.android.com/android_metadata_en.js?v=2017111904" defer></' + 'script>');
+    })(getLangPref())
+
+    // Add skip to content for accessibility.
+    $('#skip-to-main').click(function() {
+      $('a[name=top]').focus();
+    });
+
+    $('.devsite-utility-footer-language-select').each(function() {
+      $(this).change(function() {
+        changeLangPref(this.value, true)
+        $('.devsite-utility-footer-language').submit();
+      });
+    });
+  </script>
+
+  <script>
+    (function($) {
+      devsite.analytics.InitAnalytics();
+      devsite.navigatingRadio.init();
+      devsite.kennedy.InitializeTabbars();
+      // overflowMenu must be initialized after tabbar.
+      devsite.overflowMenu.init();
+    })(jQuery);
+  </script>
+
+  
+
+
+<div id="survey-box-wrapper">
+  <div class="material-dialog" style="width:270px">
+    <div class="material-dialog-title">
+      Take a short survey?
+    </div>
+    <div class="material-dialog-description">
+      Help us improve the Android developer experience.
+      <br>(Sep 2017 survey)
+    </div>
+    <div class="material-button-bar">
+      <a class="dac-button dac-primary dac-raised" target="_blank"
+          href="https://goo.gl/dNPzCR">Okay</a>
+      <a class="dac-button" href="#">No thanks</a>
+    </div>
+  </div>
+</div>
+
+</body>
+
+<!-- Mirrored from developer.android.com/reference/javax/net/ssl/SSLSocket.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 19 Nov 2017 16:46:25 GMT -->
+</html>

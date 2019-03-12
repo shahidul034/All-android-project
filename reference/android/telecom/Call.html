@@ -1,0 +1,4422 @@
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/Article">
+
+<!-- Mirrored from developer.android.com/reference/android/telecom/Call.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 19 Nov 2017 16:34:16 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+
+  
+
+
+
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+
+
+
+
+
+<script>var a=window.devsite||{};window.devsite=a;a.readyCallbacks=[];window.devsite.readyCallbacks=a.readyCallbacks;a.ready=function(b){a.readyCallbacks.push(b)};window.devsite.ready=a.ready;
+</script>
+
+<meta charset="utf-8">
+
+
+
+<meta name="xsrf_token" content="i0pKD57m0Dn35fLh5qs_5an-HrsbIasFvKvRamFiXYI6MTUxMTEwNDgzNjY3NTUwMA" />
+
+  
+    <link rel="canonical" href="Call.html">
+  
+
+  
+    <link rel="alternate" href="Call.html" hreflang="en">
+  
+    <link rel="alternate" href="https://developer.android.google.cn/reference/android/telecom/Call.html" hreflang="en-cn">
+  
+
+  <link rel="alternate" href="Call.html" hreflang="x-default">
+
+
+
+
+<link rel="shortcut icon" href="../../../_static/268f0926ba/images/android/favicon.png">
+
+<link rel="apple-touch-icon" href="../../../_static/268f0926ba/images/android/touchicon-180.png">
+
+
+<title>
+
+  Call | Android Developers
+
+</title>
+
+
+
+  <meta itemprop="dateModified" content="2017-10-25T17:01:47.115220">
+
+
+<!-- STYLESHEETS -->
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto+Condensed">
+<link rel="stylesheet"
+    href="http://fonts.googleapis.com/css?family=Roboto:light,regular,medium,thin,italic,mediumitalic,bold"
+    title="roboto">
+<link rel="stylesheet" href="../../../_static/268f0926ba/css/dac-devsite.css">
+
+
+
+
+
+
+
+<link href="../../../static/css/default543b.css?v=2017111903" rel="stylesheet" type="text/css">
+<!-- JAVASCRIPT -->
+<script src="../../../_static/268f0926ba/js/android_3p-bundle.js" type="text/javascript"></script>
+<script src="../../../_static/268f0926ba/js/script_foot_closure_android.js"></script>
+<script src="../../../_static/268f0926ba/js/script_foot_android.js"></script>
+
+<script type="text/javascript">
+  var toRoot = 'https://developer.android.com/';
+  devsite.permissions.init({"f62218c009ec029abef196bba5aa34cf": true, "098dafe57affddc137df300142652cfd": false, "8e03e230de0bd8a6fe173fdf172e8b3f": false, "cb025a64a50094835616312f4774a53d": true, "c95bf81627eb648c2345aec06a66200a": true, "51470233c56fc1fde50f00b73c52b216": false, "d169d485cf24243a263783dbe42029b1": true, "039e5d84b87fd75807ffb37b7f1bbf2c": true, "752953480de00a336d911a46966cc16d": false, "700def1a83e356c06c0925afb05de4b0": false, "6749dcb526ce9bde6993550c7d928d24": true});
+
+  var replaceBlog = false;
+  var replaceYouTube = false;
+  var siteDefaultLocale = 'en';
+
+  var ANDROID_LANGUAGES = [
+      'id','de','en','es','es-419','fr','pt-br','vi','tr','ru','th','ja','zh-cn','zh-tw','ko'
+  ];
+</script>
+<script src="../../../static/js/docs543b.js?v=2017111903" type="text/javascript"></script>
+
+
+</head>
+
+<body class="gc-documentation
+            api apilevel-23
+            
+              develop
+              reference
+            
+            ">
+  
+
+
+  
+    <input class="google-analytics-id-json" type="hidden" value="{&quot;dimensions&quot;: {&quot;dimension6&quot;: &quot;en&quot;, &quot;dimension4&quot;: &quot;Reference&quot;, &quot;dimension5&quot;: &quot;en&quot;, &quot;dimension3&quot;: false, &quot;dimension1&quot;: &quot;Signed out&quot;, &quot;dimension8&quot;: null}, &quot;gaid&quot;: &quot;UA-49880327-2&quot;}">
+  
+    <input class="google-analytics-id-json" type="hidden" value="{&quot;dimensions&quot;: {&quot;dimension6&quot;: &quot;en&quot;, &quot;dimension4&quot;: &quot;Reference&quot;, &quot;dimension5&quot;: &quot;en&quot;, &quot;dimension3&quot;: false, &quot;dimension1&quot;: &quot;Signed out&quot;, &quot;dimension8&quot;: null}, &quot;gaid&quot;: &quot;UA-5831155-1&quot;}">
+  
+
+
+
+  
+  
+    <script>
+      var dataLayer = [{"freeTrialEligibleUser": "False", "userCountry": "BD", "language": {"requested": "en", "served": "en"}, "projectName": "Reference", "scriptsafe": null, "signedIn": "False", "internalUser": "False"}];
+    </script>
+  
+
+
+
+  
+  <a href="#top" id="skip-to-main">Skip to content</a>
+  <header id="header-wrapper">
+    <div class="dac-header" id="header">
+      <div class="dac-header-inner">
+        
+        <a class="dac-nav-toggle" data-dac-toggle-nav href="#" title="Open navigation">
+          <span class="dac-nav-hamburger">
+            <span class="dac-nav-hamburger-top"></span>
+            <span class="dac-nav-hamburger-mid"></span>
+            <span class="dac-nav-hamburger-bot"></span>
+          </span>
+        </a>
+        
+        <a class="dac-header-logo" href="https://developer.android.com/index.html">
+          <img class="dac-header-logo-image" src="../../../static/images/android_logo.png"
+              srcset="https://developer.android.com/static/images/android_logo_2x.png 2x"
+              width="32" height="36" alt="Android"> Developers</a>
+        <ul class="dac-header-tabs">
+          <li>
+            <a class="dac-header-tab" href="https://developer.android.com/design/index.html"
+               zh-tw-lang="設計"
+               zh-cn-lang="设计"
+               ru-lang="Проектирование"
+               ko-lang="디자인"
+               ja-lang="設計"
+               es-lang="Diseñar">
+              
+              Design</a>
+          </li>
+          <li>
+            <a class="dac-header-tab" href="https://developer.android.com/develop/index.html"
+               zh-tw-lang="開發"
+               zh-cn-lang="开发"
+               ru-lang="Разработка"
+               ko-lang="개발"
+               ja-lang="開発"
+               es-lang="Desarrollar">
+              
+              Develop</a>
+          </li>
+          <li>
+            <a class="dac-header-tab" href="https://developer.android.com/distribute/index.html"
+               zh-tw-lang="發佈"
+               zh-cn-lang="分发"
+               ru-lang="Распространение"
+               ko-lang="배포"
+               ja-lang="配布"
+               es-lang="Distribuir">
+              
+              Distribute</a>
+          </li>
+        </ul>
+
+
+        
+
+        <a class="dac-header-console-btn gc-analytics-event" href="https://play.google.com/apps/publish/"
+           data-category="User" data-action="Console" data-label="Clicked">
+          
+          <img src="https://developer.android.com/static/images/developer-console-icon.svg" width="18" height="19" alt="">Play Console</a>
+        
+
+<form data-search="" class="dac-header-search">
+  <button class="dac-header-search-close" data-search-close="">
+    <i class="dac-sprite dac-back-arrow"></i>
+  </button>
+
+  <div class="dac-header-search-inner">
+    <i class="dac-sprite dac-search-white dac-header-search-icon"></i>
+    
+    <input id="search_autocomplete" type="text" value="" autocomplete="off" name="q" class="dac-header-search-input" placeholder="Search">
+    <button class="dac-header-search-clear dac-hidden" data-search-clear="">
+      <i class="dac-sprite dac-close-black"></i>
+    </button>
+  </div>
+</form>
+
+        
+      </div><!--/.header-wrap.wrap-->
+    </div><!--/.header-->
+
+    
+
+<div id="search-results" class="dac-search-results">
+  <div id="dac-search-results-history" class="dac-search-results-history">
+    <div class="wrap dac-search-results-history-wrap">
+      <div class="cols">
+        <div class="col-1of2 col-tablet-1of2 col-mobile-1of1">
+          
+          <h2>Most visited</h2>
+          <div class="resource-flow-layout" data-history-query="history:most/visited" data-maxresults="3" data-cardsizes="18x2"></div>
+        </div>
+
+        <div class="col-1of2 col-tablet-1of2 col-mobile-1of1">
+          
+          <h2>Recently visited</h2>
+          <div class="resource-flow-layout cols" data-history-query="history:recent" data-allow-duplicates="true" data-maxresults="3" data-cardsizes="18x2"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="dac-search-results-content" class="dac-search-results-content">
+    <div class="dac-search-results-metadata wrap">
+      <div class="dac-search-results-for">
+          <h2>
+          
+          Results for <span id="search-results-for"></span>
+          </h2>
+      </div>
+
+      <div id="dac-search-results-hero"></div>
+
+      <div class="dac-search-results-hero cols">
+        <div id="dac-search-results-reference" class="col-6of6 col-tablet-2of2 col-mobile-1of1">
+          <div class="suggest-card reference no-display">
+            <ul class="dac-search-results-reference">
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="cols dac-search-results-cse">
+        <script src="../../../../cse.google.com/f4116.txt?cx=000521750095050289010:zpcpi1ea4s8" async></script>
+        <gcse:searchresults-only linkTarget="_self"></gcse:searchresults-only>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </header>
+
+  <a name="navigation" tabindex=0 class="nav-start-marker">navigation</a>
+  <nav class="dac-nav">
+    <div class="dac-nav-dimmer" data-dac-toggle-nav></div>
+    <div class="dac-nav-sidebar" data-swap data-dynamic="false" data-transition-speed="300" data-dac-nav>
+      <div data-swap-container>
+        
+        <a class="dac-nav-back-button dac-swap-section dac-up dac-no-anim" tabindex=0 data-swap-button>
+          
+          
+          <i class="dac-sprite dac-nav-back"></i> <span class="dac-nav-back-title">Back</span>
+        </a>
+
+        <div class="dac-nav-sub dac-swap-section dac-right dac-active" itemscope
+            itemtype="http://schema.org/SiteNavigationElement">
+          
+          
+            
+              
+              <button data-fullscreen="" class="dac-nav-fullscreen">
+                <i class="dac-sprite dac-fullscreen"></i>
+              </button>
+              <script>$('[data-fullscreen]').dacFullscreen();</script>
+              <div id="devdoc-nav">
+                <div id="api-nav-header">
+                  <div id="api-level-toggle">
+                    <label for="apiLevelCheckbox" class="disabled"
+                        
+                        title="Select your target API level to dim unavailable APIs">
+                        
+                        API:
+                    </label>
+                    <div class="select-wrapper">
+                      <select id="apiLevelSelector"></select>
+                    </div>
+                  </div><!-- end toggle -->
+                  <div id="api-nav-title">
+                    <select id="reference-selector">
+                      
+                      <option value="android">Android Platform</option>
+                      
+                      
+                      <option value="android/support">Android Support Library</option>
+                      
+                      
+                      <option value="android/arch">Architecture Components</option>
+                      
+                      <option value="android/support/constraint">Constraint Library</option>
+                      
+                      <option value="com/android/billingclient">Play Billing Library</option>
+                      
+                      <option value="android/support/test">Test Support Library</option>
+                      
+                      <option value="android/support/wearable">Wearable Library</option>
+                    </select>
+                  </div>
+                </div><!-- end nav header -->
+                <script>
+                  buildApiLevelSelector();
+                  initReferenceSelector();
+                </script>
+                <div class="dac-reference-nav" data-reference-tree="">
+                  <ul class="dac-reference-nav-list" data-reference-namespaces="">
+                    <li class="api no-toggle"><a href="../../classes.html" >Class Index</a></li><li class="api no-toggle"><a href="../../packages.html" >Package Index</a></li><li class="api apilevel-1"><a href="../package-summary.html" >android</a></li><li class="api apilevel-4"><a href="../accessibilityservice/package-summary.html" >android.accessibilityservice</a></li><li class="api apilevel-5"><a href="../accounts/package-summary.html" >android.accounts</a></li><li class="api apilevel-11"><a href="../animation/package-summary.html" >android.animation</a></li><li class="api apilevel-16"><a href="../annotation/package-summary.html" >android.annotation</a></li><li class="api apilevel-1"><a href="../app/package-summary.html" >android.app</a></li><li class="api apilevel-8"><a href="../app/admin/package-summary.html" >android.app.admin</a></li><li class="api apilevel-23"><a href="../app/assist/package-summary.html" >android.app.assist</a></li><li class="api apilevel-8"><a href="../app/backup/package-summary.html" >android.app.backup</a></li><li class="api apilevel-21"><a href="../app/job/package-summary.html" >android.app.job</a></li><li class="api apilevel-21"><a href="../app/usage/package-summary.html" >android.app.usage</a></li><li class="api apilevel-3"><a href="../appwidget/package-summary.html" >android.appwidget</a></li><li class="api apilevel-5"><a href="../bluetooth/package-summary.html" >android.bluetooth</a></li><li class="api apilevel-21"><a href="../bluetooth/le/package-summary.html" >android.bluetooth.le</a></li><li class="api apilevel-26"><a href="../companion/package-summary.html" >android.companion</a></li><li class="api apilevel-1"><a href="../content/package-summary.html" >android.content</a></li><li class="api apilevel-1"><a href="../content/pm/package-summary.html" >android.content.pm</a></li><li class="api apilevel-1"><a href="../content/res/package-summary.html" >android.content.res</a></li><li class="api apilevel-1"><a href="../database/package-summary.html" >android.database</a></li><li class="api apilevel-1"><a href="../database/sqlite/package-summary.html" >android.database.sqlite</a></li><li class="api apilevel-"><a href="../databinding/package-summary.html" >android.databinding</a></li><li class="api apilevel-11"><a href="../drm/package-summary.html" >android.drm</a></li><li class="api apilevel-4"><a href="../gesture/package-summary.html" >android.gesture</a></li><li class="api apilevel-1"><a href="../graphics/package-summary.html" >android.graphics</a></li><li class="api apilevel-1"><a href="../graphics/drawable/package-summary.html" >android.graphics.drawable</a></li><li class="api apilevel-1"><a href="../graphics/drawable/shapes/package-summary.html" >android.graphics.drawable.shapes</a></li><li class="api apilevel-26"><a href="../graphics/fonts/package-summary.html" >android.graphics.fonts</a></li><li class="api apilevel-19"><a href="../graphics/pdf/package-summary.html" >android.graphics.pdf</a></li><li class="api apilevel-1"><a href="../hardware/package-summary.html" >android.hardware</a></li><li class="api apilevel-21"><a href="../hardware/camera2/package-summary.html" >android.hardware.camera2</a></li><li class="api apilevel-21"><a href="../hardware/camera2/params/package-summary.html" >android.hardware.camera2.params</a></li><li class="api apilevel-17"><a href="../hardware/display/package-summary.html" >android.hardware.display</a></li><li class="api apilevel-23"><a href="../hardware/fingerprint/package-summary.html" >android.hardware.fingerprint</a></li><li class="api apilevel-16"><a href="../hardware/input/package-summary.html" >android.hardware.input</a></li><li class="api apilevel-12"><a href="../hardware/usb/package-summary.html" >android.hardware.usb</a></li><li class="api apilevel-24"><a href="../icu/lang/package-summary.html" >android.icu.lang</a></li><li class="api apilevel-24"><a href="../icu/math/package-summary.html" >android.icu.math</a></li><li class="api apilevel-24"><a href="../icu/text/package-summary.html" >android.icu.text</a></li><li class="api apilevel-24"><a href="../icu/util/package-summary.html" >android.icu.util</a></li><li class="api apilevel-3"><a href="../inputmethodservice/package-summary.html" >android.inputmethodservice</a></li><li class="api apilevel-1"><a href="../location/package-summary.html" >android.location</a></li><li class="api apilevel-1"><a href="../media/package-summary.html" >android.media</a></li><li class="api apilevel-9"><a href="../media/audiofx/package-summary.html" >android.media.audiofx</a></li><li class="api apilevel-21"><a href="../media/browse/package-summary.html" >android.media.browse</a></li><li class="api apilevel-14"><a href="../media/effect/package-summary.html" >android.media.effect</a></li><li class="api apilevel-23"><a href="../media/midi/package-summary.html" >android.media.midi</a></li><li class="api apilevel-21"><a href="../media/projection/package-summary.html" >android.media.projection</a></li><li class="api apilevel-21"><a href="../media/session/package-summary.html" >android.media.session</a></li><li class="api apilevel-21"><a href="../media/tv/package-summary.html" >android.media.tv</a></li><li class="api apilevel-12"><a href="../mtp/package-summary.html" >android.mtp</a></li><li class="api apilevel-1"><a href="../net/package-summary.html" >android.net</a></li><li class="api apilevel-1"><a href="../net/http/package-summary.html" >android.net.http</a></li><li class="api apilevel-16"><a href="../net/nsd/package-summary.html" >android.net.nsd</a></li><li class="api apilevel-12"><a href="../net/rtp/package-summary.html" >android.net.rtp</a></li><li class="api apilevel-9"><a href="../net/sip/package-summary.html" >android.net.sip</a></li><li class="api apilevel-1"><a href="../net/wifi/package-summary.html" >android.net.wifi</a></li><li class="api apilevel-26"><a href="../net/wifi/aware/package-summary.html" >android.net.wifi.aware</a></li><li class="api apilevel-26"><a href="../net/wifi/hotspot2/package-summary.html" >android.net.wifi.hotspot2</a></li><li class="api apilevel-26"><a href="../net/wifi/hotspot2/omadm/package-summary.html" >android.net.wifi.hotspot2.omadm</a></li><li class="api apilevel-26"><a href="../net/wifi/hotspot2/pps/package-summary.html" >android.net.wifi.hotspot2.pps</a></li><li class="api apilevel-14"><a href="../net/wifi/p2p/package-summary.html" >android.net.wifi.p2p</a></li><li class="api apilevel-16"><a href="../net/wifi/p2p/nsd/package-summary.html" >android.net.wifi.p2p.nsd</a></li><li class="api apilevel-9"><a href="../nfc/package-summary.html" >android.nfc</a></li><li class="api apilevel-19"><a href="../nfc/cardemulation/package-summary.html" >android.nfc.cardemulation</a></li><li class="api apilevel-10"><a href="../nfc/tech/package-summary.html" >android.nfc.tech</a></li><li class="api apilevel-1"><a href="../opengl/package-summary.html" >android.opengl</a></li><li class="api apilevel-1"><a href="../os/package-summary.html" >android.os</a></li><li class="api apilevel-24"><a href="../os/health/package-summary.html" >android.os.health</a></li><li class="api apilevel-9"><a href="../os/storage/package-summary.html" >android.os.storage</a></li><li class="api apilevel-1"><a href="../preference/package-summary.html" >android.preference</a></li><li class="api apilevel-19"><a href="../print/package-summary.html" >android.print</a></li><li class="api apilevel-19"><a href="../print/pdf/package-summary.html" >android.print.pdf</a></li><li class="api apilevel-19"><a href="../printservice/package-summary.html" >android.printservice</a></li><li class="api apilevel-1"><a href="../provider/package-summary.html" >android.provider</a></li><li class="api apilevel-11"><a href="../renderscript/package-summary.html" >android.renderscript</a></li><li class="api apilevel-1"><a href="../sax/package-summary.html" >android.sax</a></li><li class="api apilevel-14"><a href="../security/package-summary.html" >android.security</a></li><li class="api apilevel-23"><a href="../security/keystore/package-summary.html" >android.security.keystore</a></li><li class="api apilevel-26"><a href="../service/autofill/package-summary.html" >android.service.autofill</a></li><li class="api apilevel-22"><a href="../service/carrier/package-summary.html" >android.service.carrier</a></li><li class="api apilevel-23"><a href="../service/chooser/package-summary.html" >android.service.chooser</a></li><li class="api apilevel-17"><a href="../service/dreams/package-summary.html" >android.service.dreams</a></li><li class="api apilevel-21"><a href="../service/media/package-summary.html" >android.service.media</a></li><li class="api apilevel-18"><a href="../service/notification/package-summary.html" >android.service.notification</a></li><li class="api apilevel-24"><a href="../service/quicksettings/package-summary.html" >android.service.quicksettings</a></li><li class="api apilevel-21"><a href="../service/restrictions/package-summary.html" >android.service.restrictions</a></li><li class="api apilevel-14"><a href="../service/textservice/package-summary.html" >android.service.textservice</a></li><li class="api apilevel-21"><a href="../service/voice/package-summary.html" >android.service.voice</a></li><li class="api apilevel-24"><a href="../service/vr/package-summary.html" >android.service.vr</a></li><li class="api apilevel-7"><a href="../service/wallpaper/package-summary.html" >android.service.wallpaper</a></li><li class="api apilevel-3"><a href="../speech/package-summary.html" >android.speech</a></li><li class="api apilevel-4"><a href="../speech/tts/package-summary.html" >android.speech.tts</a></li><li class="api apilevel-21"><a href="../system/package-summary.html" >android.system</a></li><li class="api apilevel-21"><a href="package-summary.html" >android.telecom</a></li><li class="api apilevel-1"><a href="../telephony/package-summary.html" >android.telephony</a></li><li class="api apilevel-5"><a href="../telephony/cdma/package-summary.html" >android.telephony.cdma</a></li><li class="api apilevel-1"><a href="../telephony/gsm/package-summary.html" >android.telephony.gsm</a></li><li class="api apilevel-1"><a href="../test/package-summary.html" >android.test</a></li><li class="api apilevel-1"><a href="../test/mock/package-summary.html" >android.test.mock</a></li><li class="api apilevel-1"><a href="../test/suitebuilder/package-summary.html" >android.test.suitebuilder</a></li><li class="api apilevel-1"><a href="../test/suitebuilder/annotation/package-summary.html" >android.test.suitebuilder.annotation</a></li><li class="api apilevel-1"><a href="../text/package-summary.html" >android.text</a></li><li class="api apilevel-3"><a href="../text/format/package-summary.html" >android.text.format</a></li><li class="api apilevel-1"><a href="../text/method/package-summary.html" >android.text.method</a></li><li class="api apilevel-1"><a href="../text/style/package-summary.html" >android.text.style</a></li><li class="api apilevel-1"><a href="../text/util/package-summary.html" >android.text.util</a></li><li class="api apilevel-19"><a href="../transition/package-summary.html" >android.transition</a></li><li class="api apilevel-1"><a href="../util/package-summary.html" >android.util</a></li><li class="api apilevel-1"><a href="../view/package-summary.html" >android.view</a></li><li class="api apilevel-4"><a href="../view/accessibility/package-summary.html" >android.view.accessibility</a></li><li class="api apilevel-1"><a href="../view/animation/package-summary.html" >android.view.animation</a></li><li class="api apilevel-26"><a href="../view/autofill/package-summary.html" >android.view.autofill</a></li><li class="api apilevel-3"><a href="../view/inputmethod/package-summary.html" >android.view.inputmethod</a></li><li class="api apilevel-26"><a href="../view/textclassifier/package-summary.html" >android.view.textclassifier</a></li><li class="api apilevel-14"><a href="../view/textservice/package-summary.html" >android.view.textservice</a></li><li class="api apilevel-1"><a href="../webkit/package-summary.html" >android.webkit</a></li><li class="api apilevel-1"><a href="../widget/package-summary.html" >android.widget</a></li><li class="api apilevel-1"><a href="../../com/android/internal/util/package-summary.html" >com.android.internal.util</a></li><li class="api apilevel-1"><a href="../../dalvik/annotation/package-summary.html" >dalvik.annotation</a></li><li class="api apilevel-1"><a href="../../dalvik/bytecode/package-summary.html" >dalvik.bytecode</a></li><li class="api apilevel-1"><a href="../../dalvik/system/package-summary.html" >dalvik.system</a></li><li class="api apilevel-1"><a href="../../java/awt/font/package-summary.html" >java.awt.font</a></li><li class="api apilevel-3"><a href="../../java/beans/package-summary.html" >java.beans</a></li><li class="api apilevel-1"><a href="../../java/io/package-summary.html" >java.io</a></li><li class="api apilevel-1"><a href="../../java/lang/package-summary.html" >java.lang</a></li><li class="api apilevel-1"><a href="../../java/lang/annotation/package-summary.html" >java.lang.annotation</a></li><li class="api apilevel-26"><a href="../../java/lang/invoke/package-summary.html" >java.lang.invoke</a></li><li class="api apilevel-1"><a href="../../java/lang/ref/package-summary.html" >java.lang.ref</a></li><li class="api apilevel-1"><a href="../../java/lang/reflect/package-summary.html" >java.lang.reflect</a></li><li class="api apilevel-1"><a href="../../java/math/package-summary.html" >java.math</a></li><li class="api apilevel-1"><a href="../../java/net/package-summary.html" >java.net</a></li><li class="api apilevel-1"><a href="../../java/nio/package-summary.html" >java.nio</a></li><li class="api apilevel-1"><a href="../../java/nio/channels/package-summary.html" >java.nio.channels</a></li><li class="api apilevel-1"><a href="../../java/nio/channels/spi/package-summary.html" >java.nio.channels.spi</a></li><li class="api apilevel-1"><a href="../../java/nio/charset/package-summary.html" >java.nio.charset</a></li><li class="api apilevel-1"><a href="../../java/nio/charset/spi/package-summary.html" >java.nio.charset.spi</a></li><li class="api apilevel-26"><a href="../../java/nio/file/package-summary.html" >java.nio.file</a></li><li class="api apilevel-26"><a href="../../java/nio/file/attribute/package-summary.html" >java.nio.file.attribute</a></li><li class="api apilevel-26"><a href="../../java/nio/file/spi/package-summary.html" >java.nio.file.spi</a></li><li class="api apilevel-1"><a href="../../java/security/package-summary.html" >java.security</a></li><li class="api apilevel-1"><a href="../../java/security/acl/package-summary.html" >java.security.acl</a></li><li class="api apilevel-1"><a href="../../java/security/cert/package-summary.html" >java.security.cert</a></li><li class="api apilevel-1"><a href="../../java/security/interfaces/package-summary.html" >java.security.interfaces</a></li><li class="api apilevel-1"><a href="../../java/security/spec/package-summary.html" >java.security.spec</a></li><li class="api apilevel-1"><a href="../../java/sql/package-summary.html" >java.sql</a></li><li class="api apilevel-1"><a href="../../java/text/package-summary.html" >java.text</a></li><li class="api apilevel-26"><a href="../../java/time/package-summary.html" >java.time</a></li><li class="api apilevel-26"><a href="../../java/time/chrono/package-summary.html" >java.time.chrono</a></li><li class="api apilevel-26"><a href="../../java/time/format/package-summary.html" >java.time.format</a></li><li class="api apilevel-26"><a href="../../java/time/temporal/package-summary.html" >java.time.temporal</a></li><li class="api apilevel-26"><a href="../../java/time/zone/package-summary.html" >java.time.zone</a></li><li class="api apilevel-1"><a href="../../java/util/package-summary.html" >java.util</a></li><li class="api apilevel-1"><a href="../../java/util/concurrent/package-summary.html" >java.util.concurrent</a></li><li class="api apilevel-1"><a href="../../java/util/concurrent/atomic/package-summary.html" >java.util.concurrent.atomic</a></li><li class="api apilevel-1"><a href="../../java/util/concurrent/locks/package-summary.html" >java.util.concurrent.locks</a></li><li class="api apilevel-24"><a href="../../java/util/function/package-summary.html" >java.util.function</a></li><li class="api apilevel-1"><a href="../../java/util/jar/package-summary.html" >java.util.jar</a></li><li class="api apilevel-1"><a href="../../java/util/logging/package-summary.html" >java.util.logging</a></li><li class="api apilevel-1"><a href="../../java/util/prefs/package-summary.html" >java.util.prefs</a></li><li class="api apilevel-1"><a href="../../java/util/regex/package-summary.html" >java.util.regex</a></li><li class="api apilevel-24"><a href="../../java/util/stream/package-summary.html" >java.util.stream</a></li><li class="api apilevel-1"><a href="../../java/util/zip/package-summary.html" >java.util.zip</a></li><li class="api apilevel-1"><a href="../../javax/crypto/package-summary.html" >javax.crypto</a></li><li class="api apilevel-1"><a href="../../javax/crypto/interfaces/package-summary.html" >javax.crypto.interfaces</a></li><li class="api apilevel-1"><a href="../../javax/crypto/spec/package-summary.html" >javax.crypto.spec</a></li><li class="api apilevel-1"><a href="../../javax/microedition/khronos/egl/package-summary.html" >javax.microedition.khronos.egl</a></li><li class="api apilevel-1"><a href="../../javax/microedition/khronos/opengles/package-summary.html" >javax.microedition.khronos.opengles</a></li><li class="api apilevel-1"><a href="../../javax/net/package-summary.html" >javax.net</a></li><li class="api apilevel-1"><a href="../../javax/net/ssl/package-summary.html" >javax.net.ssl</a></li><li class="api apilevel-1"><a href="../../javax/security/auth/package-summary.html" >javax.security.auth</a></li><li class="api apilevel-1"><a href="../../javax/security/auth/callback/package-summary.html" >javax.security.auth.callback</a></li><li class="api apilevel-1"><a href="../../javax/security/auth/login/package-summary.html" >javax.security.auth.login</a></li><li class="api apilevel-1"><a href="../../javax/security/auth/x500/package-summary.html" >javax.security.auth.x500</a></li><li class="api apilevel-1"><a href="../../javax/security/cert/package-summary.html" >javax.security.cert</a></li><li class="api apilevel-1"><a href="../../javax/sql/package-summary.html" >javax.sql</a></li><li class="api apilevel-1"><a href="../../javax/xml/package-summary.html" >javax.xml</a></li><li class="api apilevel-8"><a href="../../javax/xml/datatype/package-summary.html" >javax.xml.datatype</a></li><li class="api apilevel-8"><a href="../../javax/xml/namespace/package-summary.html" >javax.xml.namespace</a></li><li class="api apilevel-1"><a href="../../javax/xml/parsers/package-summary.html" >javax.xml.parsers</a></li><li class="api apilevel-8"><a href="../../javax/xml/transform/package-summary.html" >javax.xml.transform</a></li><li class="api apilevel-8"><a href="../../javax/xml/transform/dom/package-summary.html" >javax.xml.transform.dom</a></li><li class="api apilevel-8"><a href="../../javax/xml/transform/sax/package-summary.html" >javax.xml.transform.sax</a></li><li class="api apilevel-8"><a href="../../javax/xml/transform/stream/package-summary.html" >javax.xml.transform.stream</a></li><li class="api apilevel-8"><a href="../../javax/xml/validation/package-summary.html" >javax.xml.validation</a></li><li class="api apilevel-8"><a href="../../javax/xml/xpath/package-summary.html" >javax.xml.xpath</a></li><li class="api apilevel-1"><a href="../../junit/framework/package-summary.html" >junit.framework</a></li><li class="api apilevel-1"><a href="../../junit/runner/package-summary.html" >junit.runner</a></li><li class="api apilevel-1"><a href="../../org/apache/http/conn/package-summary.html" >org.apache.http.conn</a></li><li class="api apilevel-1"><a href="../../org/apache/http/conn/scheme/package-summary.html" >org.apache.http.conn.scheme</a></li><li class="api apilevel-1"><a href="../../org/apache/http/conn/ssl/package-summary.html" >org.apache.http.conn.ssl</a></li><li class="api apilevel-1"><a href="../../org/apache/http/params/package-summary.html" >org.apache.http.params</a></li><li class="api apilevel-1"><a href="../../org/json/package-summary.html" >org.json</a></li><li class="api apilevel-1"><a href="../../org/w3c/dom/package-summary.html" >org.w3c.dom</a></li><li class="api apilevel-8"><a href="../../org/w3c/dom/ls/package-summary.html" >org.w3c.dom.ls</a></li><li class="api apilevel-1"><a href="../../org/xml/sax/package-summary.html" >org.xml.sax</a></li><li class="api apilevel-1"><a href="../../org/xml/sax/ext/package-summary.html" >org.xml.sax.ext</a></li><li class="api apilevel-1"><a href="../../org/xml/sax/helpers/package-summary.html" >org.xml.sax.helpers</a></li><li class="api apilevel-1"><a href="../../org/xmlpull/v1/package-summary.html" >org.xmlpull.v1</a></li><li class="api apilevel-1"><a href="../../org/xmlpull/v1/sax2/package-summary.html" >org.xmlpull.v1.sax2</a></li>
+                  </ul>
+                </div>
+              </div>
+            
+          
+        </div>
+        
+        
+          
+
+
+
+<ul id="dac-main-navigation" class="dac-nav-list dac-swap-section dac-left dac-no-anim" tabindex=0>
+  <li class="dac-nav-item home">
+    
+    <a class="dac-nav-link" href="https://developer.android.com/index.html">Home</a>
+    <i class="dac-sprite dac-expand-more-black dac-nav-sub-slider" tabindex=0></i>
+    <ul class="dac-nav-secondary about">
+      <li class="dac-nav-item versions">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/about/versions/o/index.html">Android</a>
+      </li>
+      <li class="dac-nav-item wear">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/wear/index.html">Wear</a>
+      </li>
+      <li class="dac-nav-item tv">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/tv/index.html">TV</a>
+      </li>
+      <li class="dac-nav-item auto">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/auto/index.html">Auto</a>
+      </li>
+      
+      <li class="dac-nav-item chrome-os">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/chrome-os/index.html">Chrome OS</a>
+      </li>
+      
+      <li class="dac-nav-item things">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/things/index.html">Things</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dac-nav-item design">
+    <a class="dac-nav-link" href="https://developer.android.com/design/index.html"
+       zh-tw-lang="設計"
+       zh-cn-lang="设计"
+       ru-lang="Проектирование"
+       ko-lang="디자인"
+       ja-lang="設計"
+       es-lang="Diseñar">
+      
+      Design</a>
+  </li>
+  <li class="dac-nav-item develop">
+    <a class="dac-nav-link" href="https://developer.android.com/develop/index.html"
+       zh-tw-lang="開發"
+       zh-cn-lang="开发"
+       ru-lang="Разработка"
+       ko-lang="개발"
+       ja-lang="開発"
+       es-lang="Desarrollar">
+      
+      Develop</a>
+    <i class="dac-sprite dac-expand-more-black dac-nav-sub-slider" tabindex=0></i>
+    <ul class="dac-nav-secondary develop">
+      <li class="dac-nav-item training">
+        <a class="dac-nav-link" href="https://developer.android.com/training/index.html"
+           zh-tw-lang="訓練課程"
+           zh-cn-lang="培训"
+           ru-lang="Курсы"
+           ko-lang="교육"
+           ja-lang="トレーニング"
+           es-lang="Capacitación">
+            
+            Training</a>
+      </li>
+      <li class="dac-nav-item guide">
+        <a class="dac-nav-link" href="https://developer.android.com/guide/index.html"
+           zh-tw-lang="API 指南"
+           zh-cn-lang="API 指南"
+           ru-lang="Руководства по API"
+           ko-lang="API 가이드"
+           ja-lang="API ガイド"
+           es-lang="Guías de la API">
+          
+          API Guides</a>
+      </li>
+      <li class="dac-nav-item reference">
+        <a class="dac-nav-link" href="../../packages.html"
+           zh-tw-lang="參考資源"
+           zh-cn-lang="参考"
+           ru-lang="Справочник"
+           ko-lang="참조문서"
+           ja-lang="リファレンス"
+           es-lang="Referencia">
+          
+          Reference</a>
+      </li>
+      <li class="dac-nav-item samples">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/samples/index.html">Samples</a>
+      </li>
+      <li class="dac-nav-item libraries">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/topic/libraries/index.html">Libraries</a></li>
+      <li class="dac-nav-item studio">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/studio/index.html">Android Studio</a></li>
+      <li class="dac-nav-item ndk">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/ndk/index.html">Android NDK</a></li>
+      <li class="dac-nav-item google">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/google/index.html">Google Services</a>
+      </li>
+      <li class="dac-nav-item quality-guidelines">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/develop/quality-guidelines/index.html">Quality Guidelines</a>
+      </li>
+      <li class="dac-nav-item kotlin">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/kotlin/index.html">Kotlin</a>
+       </li>
+    </ul>
+  </li>
+  <li class="dac-nav-item distribute">
+    <a class="dac-nav-link" href="https://developer.android.com/distribute/index.html"
+       zh-tw-lang="發佈"
+       zh-cn-lang="分发"
+       ru-lang="Распространение"
+       ko-lang="배포"
+       ja-lang="配布"
+       de-lang="Vertrieb"
+       es-lang="Distribuir"
+       es-419-lang="Distribuye"
+       fr-lang="Distribuer"
+       id-lang="Distribusikan"
+       pt-br-lang="Distribuição"
+       th-lang="จัดจำหน่าย"
+       tr-lang="Dağıtma"
+       vi-lang="Phân phối">
+      
+      Distribute</a>
+    <i class="dac-sprite dac-expand-more-black dac-nav-sub-slider" tabindex=0></i>
+    <ul class="dac-nav-secondary distribute">
+      <li class="dac-nav-item google-play">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/distribute/google-play/index.html">Google Play</a>
+      </li>
+      <li class="dac-nav-item console">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/distribute/console/index.html">Play Console</a>
+      </li>
+      <li class="dac-nav-item best-practices">
+        <a class="dac-nav-link" href="https://developer.android.com/distribute/best-practices/index.html"
+          es-419-lang="Recomendaciones"
+          fr-lang="Bonnes pratiques"
+          id-lang="Praktik terbaik"
+          ja-lang="おすすめの方法"
+          ko-lang="권장사항"
+          pt-br-lang="Práticas recomendadas"
+          ru-lang="Рекомендации"
+          th-lang="จัดจำหน่าย"
+          tr-lang="En iyi uygulamalar"
+          vi-lang="Các phương pháp hay nhất"
+          zh-cn-lang="最佳做法"
+          zh-tw-lang="最佳做法">
+          
+          Best practices</a>
+      </li>
+      <li class="dac-nav-item marketing-tools">
+        <a class="dac-nav-link" href="https://developer.android.com/distribute/marketing-tools/index.html"
+          de-lang="Marketing-Tools"
+          es-419-lang="Herramientas de marketing"
+          fr-lang="Outils marketing"
+          id-lang="Fitur pemasaran"
+          ja-lang="マーケティング ツール"
+          ko-lang="마케팅 도구"
+          pt-br-lang="Ferramentas de marketing"
+          ru-lang="Маркетинговые инструменты"
+          th-lang="เครื่องมือการตลาด"
+          tr-lang="Pazarlama araçları"
+          vi-lang="Công cụ tiếp thị"
+          zh-cn-lang="营销工具"
+          zh-tw-lang="行銷工具">
+          
+          Marketing tools</a>
+      </li>
+      <li class="dac-nav-item policy-center">
+        
+        <a class="dac-nav-link" href="https://play.google.com/about/developer-content-policy/" target="_blank">Policy center</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dac-nav-item stories">
+    
+    <a class="dac-nav-link" href="https://developer.android.com/stories/index.html">Stories</a>
+  </li>
+  
+  <li class="dac-nav-item preview">
+    
+    <a class="dac-nav-link" href="https://developer.android.com/preview/index.html">Preview</a>
+  </li>
+  
+</ul>
+
+        
+      </div>
+    </div>
+  </nav>
+
+  <a name="top" tabindex="0"></a>
+  
+  <div class="wrap clearfix" id="body-content">
+  
+    
+      
+    
+    <div class="jd-descr " itemprop="articleBody">
+      <div id="doc-api-level" class="23" style="display:none"></div>
+
+
+
+
+<div id="naMessage"></div>
+
+<div id="api-info-block">
+<div class="api-level">
+  
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 23</a>
+  
+  
+  
+  
+
+</div>
+
+
+
+  
+   
+  
+  
+  
+  
+
+
+<div class="sum-details-links">
+
+Summary:
+
+  <a href="#nestedclasses">Nested Classes</a>
+  
+
+
+
+
+
+  &#124; <a href="#constants">Constants</a>
+  
+
+
+
+
+
+
+
+  &#124; <a href="#pubmethods">Methods</a>
+  
+
+
+
+  &#124; <a href="#inhmethods">Inherited Methods</a>
+
+&#124; <a href="#" onclick="return toggleAllClassInherited()" id="toggleAllClassInherited">[Expand All]</a>
+
+</div><!-- end sum-details-links -->
+</div><!-- end api-info-block -->
+
+<div class="api apilevel-23" id="jd-content">
+
+<!-- ======== START OF CLASS DATA ======== -->
+
+<h1 class="api-title">Call</h1>
+<p>
+<code class="api-signature">
+  public
+  
+  final
+  
+  class
+  Call
+</code>
+<br>
+
+
+<code class="api-signature">
+  
+    extends <a href="../../java/lang/Object.html">Object</a>
+  
+  
+  
+</code>
+
+<code class="api-signature">
+  
+  
+  
+</code>
+
+</p><table class="jd-inheritance-table">
+
+
+  <tr>
+    
+    <td colspan="2" class="jd-inheritance-class-cell"><a href="../../java/lang/Object.html">java.lang.Object</a>
+    </td>
+  </tr>
+  
+
+  <tr>
+    
+      <td class="jd-inheritance-space">&nbsp;&nbsp;&nbsp;&#x21b3;</td>
+    
+    <td colspan="1" class="jd-inheritance-class-cell">android.telecom.Call
+    </td>
+  </tr>
+  
+
+</table>
+  
+
+    
+
+<br><hr>
+
+
+  <p>Represents an ongoing phone call that the in-call app should present to the user.
+</p>
+
+
+
+
+
+
+
+
+
+<h2 class="api-section">Summary</h2>
+
+
+
+<!-- ======== NESTED CLASS SUMMARY ======== -->
+<table id="nestedclasses" class="responsive">
+<tr><th colspan="2"><h3>Nested classes</h3></th></tr>
+
+
+  
+    <tr class="api apilevel-23" >
+      <td class="jd-typecol"><code>
+        
+        
+        
+        
+        class</code></td>
+      <td class="jd-descrcol" width="100%">
+        <code><a href="Call.Callback.html">Call.Callback</a></code>
+        <p>Defines callbacks which inform the <code><a href="InCallService.html">InCallService</a></code> of changes to a <code><a href="Call.html">Call</a></code>.&nbsp;
+        
+    
+</p>
+      </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-23" >
+      <td class="jd-typecol"><code>
+        
+        
+        
+        
+        class</code></td>
+      <td class="jd-descrcol" width="100%">
+        <code><a href="Call.Details.html">Call.Details</a></code>
+        <p>&nbsp;
+        
+    
+</p>
+      </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-26" >
+      <td class="jd-typecol"><code>
+        
+        
+        
+        
+        class</code></td>
+      <td class="jd-descrcol" width="100%">
+        <code><a href="Call.RttCall.html">Call.RttCall</a></code>
+        <p>A class that holds the state that describes the state of the RTT channel to the remote
+ party, if it is active.&nbsp;
+        
+    
+</p>
+      </td>
+    </tr>
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- =========== ENUM CONSTANT SUMMARY =========== -->
+<table id="constants" class="responsive constants">
+<tr><th colspan="2"><h3>Constants</h3></th></tr>
+
+
+    
+    <tr class="api apilevel-23" >
+        <td><code><a href="../../java/lang/String.html">String</a></code></td>
+        <td width="100%">
+          <code><a href="Call.html#AVAILABLE_PHONE_ACCOUNTS">AVAILABLE_PHONE_ACCOUNTS</a></code>
+          <p>The key to retrieve the optional <code>PhoneAccount</code>s Telecom can bundle with its Call
+ extras.
+          
+    
+</p>
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-26" >
+        <td><code><a href="../../java/lang/String.html">String</a></code></td>
+        <td width="100%">
+          <code><a href="Call.html#EXTRA_LAST_EMERGENCY_CALLBACK_TIME_MILLIS">EXTRA_LAST_EMERGENCY_CALLBACK_TIME_MILLIS</a></code>
+          <p>Extra key used to indicate the time (in milliseconds since midnight, January 1, 1970 UTC)
+ when the last outgoing emergency call was made.
+          
+    
+</p>
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-23" >
+        <td><code>int</code></td>
+        <td width="100%">
+          <code><a href="Call.html#STATE_ACTIVE">STATE_ACTIVE</a></code>
+          <p>The state of a <code>Call</code> when actively supporting conversation.
+          
+    
+</p>
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-23" >
+        <td><code>int</code></td>
+        <td width="100%">
+          <code><a href="Call.html#STATE_CONNECTING">STATE_CONNECTING</a></code>
+          <p>The initial state of an outgoing <code>Call</code>.
+          
+    
+</p>
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-23" >
+        <td><code>int</code></td>
+        <td width="100%">
+          <code><a href="Call.html#STATE_DIALING">STATE_DIALING</a></code>
+          <p>The state of an outgoing <code>Call</code> when dialing the remote number, but not yet connected.
+          
+    
+</p>
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-23" >
+        <td><code>int</code></td>
+        <td width="100%">
+          <code><a href="Call.html#STATE_DISCONNECTED">STATE_DISCONNECTED</a></code>
+          <p>The state of a <code>Call</code> when no further voice or other communication is being
+ transmitted, the remote side has been or will inevitably be informed that the <code>Call</code>
+ is no longer active, and the local data transport has or inevitably will release resources
+ associated with this <code>Call</code>.
+          
+    
+</p>
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-23" >
+        <td><code>int</code></td>
+        <td width="100%">
+          <code><a href="Call.html#STATE_DISCONNECTING">STATE_DISCONNECTING</a></code>
+          <p>The state of a <code>Call</code> when the user has initiated a disconnection of the call, but the
+ call has not yet been disconnected by the underlying <code>ConnectionService</code>.
+          
+    
+</p>
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-23" >
+        <td><code>int</code></td>
+        <td width="100%">
+          <code><a href="Call.html#STATE_HOLDING">STATE_HOLDING</a></code>
+          <p>The state of a <code>Call</code> when in a holding state.
+          
+    
+</p>
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-23" >
+        <td><code>int</code></td>
+        <td width="100%">
+          <code><a href="Call.html#STATE_NEW">STATE_NEW</a></code>
+          <p>The state of a <code>Call</code> when newly created.
+          
+    
+</p>
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-25" >
+        <td><code>int</code></td>
+        <td width="100%">
+          <code><a href="Call.html#STATE_PULLING_CALL">STATE_PULLING_CALL</a></code>
+          <p>The state of an external call which is in the process of being pulled from a remote device to
+ the local device.
+          
+    
+</p>
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-23" >
+        <td><code>int</code></td>
+        <td width="100%">
+          <code><a href="Call.html#STATE_RINGING">STATE_RINGING</a></code>
+          <p>The state of an incoming <code>Call</code> when ringing locally, but not yet connected.
+          
+    
+</p>
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-23" >
+        <td><code>int</code></td>
+        <td width="100%">
+          <code><a href="Call.html#STATE_SELECT_PHONE_ACCOUNT">STATE_SELECT_PHONE_ACCOUNT</a></code>
+          <p>The state of an outgoing <code>Call</code> when waiting on user to select a
+ <code><a href="PhoneAccount.html">PhoneAccount</a></code> through which to place the call.
+          
+    
+</p>
+        </td>
+    </tr>
+    
+    
+
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ========== METHOD SUMMARY =========== -->
+<table id="pubmethods" class="responsive methods">
+<tr><th colspan="2"><h3>Public methods</h3></th></tr>
+
+
+
+  
+  <tr class="api apilevel-23" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="Call.html#answer(int)">answer</a>(int videoState)
+      </code>
+      
+        <p>Instructs this <code><a href="Call.html#STATE_RINGING">STATE_RINGING</a></code> <code>Call</code> to answer.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-23" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="Call.html#conference(android.telecom.Call)">conference</a>(<a href="Call.html">Call</a> callToConferenceWith)
+      </code>
+      
+        <p>Instructs this <code>Call</code> to enter a conference.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-23" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="Call.html#disconnect()">disconnect</a>()
+      </code>
+      
+        <p>Instructs this <code>Call</code> to disconnect.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-23" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        <a href="../../java/util/List.html">List</a>&lt;<a href="../../java/lang/String.html">String</a>&gt;</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="Call.html#getCannedTextResponses()">getCannedTextResponses</a>()
+      </code>
+      
+        <p>Obtains a list of canned, pre-configured message responses to present to the user as
+ ways of rejecting this <code>Call</code> using via a text message.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-23" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        <a href="../../java/util/List.html">List</a>&lt;<a href="Call.html">Call</a>&gt;</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="Call.html#getChildren()">getChildren</a>()
+      </code>
+      
+        <p>Obtains the children of this conference <code>Call</code>, if any.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-23" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        <a href="../../java/util/List.html">List</a>&lt;<a href="Call.html">Call</a>&gt;</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="Call.html#getConferenceableCalls()">getConferenceableCalls</a>()
+      </code>
+      
+        <p>Returns the list of <code>Call</code>s with which this <code>Call</code> is allowed to conference.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-23" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        <a href="Call.Details.html">Call.Details</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="Call.html#getDetails()">getDetails</a>()
+      </code>
+      
+        <p>Obtains an object containing call details.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-23" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        <a href="Call.html">Call</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="Call.html#getParent()">getParent</a>()
+      </code>
+      
+        <p>Obtains the parent of this <code>Call</code> in a conference, if any.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-23" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        <a href="../../java/lang/String.html">String</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="Call.html#getRemainingPostDialSequence()">getRemainingPostDialSequence</a>()
+      </code>
+      
+        <p>Obtains the post-dial sequence remaining to be emitted by this <code>Call</code>, if any.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-26" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        <a href="Call.RttCall.html">Call.RttCall</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="Call.html#getRttCall()">getRttCall</a>()
+      </code>
+      
+        <p>Returns this call's RttCall object.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-23" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        int</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="Call.html#getState()">getState</a>()
+      </code>
+      
+        <p>Obtains the state of this <code>Call</code>.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-23" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        <a href="InCallService.VideoCall.html">InCallService.VideoCall</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="Call.html#getVideoCall()">getVideoCall</a>()
+      </code>
+      
+        <p>Obtains an object that can be used to display video from this <code>Call</code>.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-23" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="Call.html#hold()">hold</a>()
+      </code>
+      
+        <p>Instructs this <code>Call</code> to go on hold.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-26" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        boolean</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="Call.html#isRttActive()">isRttActive</a>()
+      </code>
+      
+        <p>Returns whether this call has an active RTT connection.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-23" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="Call.html#mergeConference()">mergeConference</a>()
+      </code>
+      
+        <p>Merges the calls within this conference.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-23" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="Call.html#phoneAccountSelected(android.telecom.PhoneAccountHandle, boolean)">phoneAccountSelected</a>(<a href="PhoneAccountHandle.html">PhoneAccountHandle</a> accountHandle, boolean setDefault)
+      </code>
+      
+        <p>Notifies this <code>Call</code> that an account has been selected and to proceed with placing
+ an outgoing call.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-23" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="Call.html#playDtmfTone(char)">playDtmfTone</a>(char digit)
+      </code>
+      
+        <p>Instructs this <code>Call</code> to play a dual-tone multi-frequency signaling (DTMF) tone.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-23" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="Call.html#postDialContinue(boolean)">postDialContinue</a>(boolean proceed)
+      </code>
+      
+        <p>Instructs this <code>Call</code> to continue playing a post-dial DTMF string.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-25" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="Call.html#pullExternalCall()">pullExternalCall</a>()
+      </code>
+      
+        <p>Initiates a request to the <code><a href="ConnectionService.html">ConnectionService</a></code> to pull an external call to the local
+ device.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-25" >
+  
+  
+    <td><code>
+        
+        
+        
+        final
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="Call.html#putExtras(android.os.Bundle)">putExtras</a>(<a href="../os/Bundle.html">Bundle</a> extras)
+      </code>
+      
+        <p>Adds some extras to this <code><a href="Call.html">Call</a></code>.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-23" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="Call.html#registerCallback(android.telecom.Call.Callback)">registerCallback</a>(<a href="Call.Callback.html">Call.Callback</a> callback)
+      </code>
+      
+        <p>Registers a callback to this <code>Call</code>.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-23" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="Call.html#registerCallback(android.telecom.Call.Callback, android.os.Handler)">registerCallback</a>(<a href="Call.Callback.html">Call.Callback</a> callback, <a href="../os/Handler.html">Handler</a> handler)
+      </code>
+      
+        <p>Registers a callback to this <code>Call</code>.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-23" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="Call.html#reject(boolean, java.lang.String)">reject</a>(boolean rejectWithMessage, <a href="../../java/lang/String.html">String</a> textMessage)
+      </code>
+      
+        <p>Instructs this <code><a href="Call.html#STATE_RINGING">STATE_RINGING</a></code> <code>Call</code> to reject.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-25" >
+  
+  
+    <td><code>
+        
+        
+        
+        final
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="Call.html#removeExtras(java.util.List<java.lang.String>)">removeExtras</a>(<a href="../../java/util/List.html">List</a>&lt;<a href="../../java/lang/String.html">String</a>&gt; keys)
+      </code>
+      
+        <p>Removes extras from this <code><a href="Call.html">Call</a></code>.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-25" >
+  
+  
+    <td><code>
+        
+        
+        
+        final
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="Call.html#removeExtras(java.lang.String...)">removeExtras</a>(<a href="../../java/lang/String.html">String...</a> keys)
+      </code>
+      
+        <p>Removes extras from this <code><a href="Call.html">Call</a></code>.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-26" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="Call.html#respondToRttRequest(int, boolean)">respondToRttRequest</a>(int id, boolean accept)
+      </code>
+      
+        <p>Responds to an RTT request received via the <code><a href="Call.Callback.html#onRttRequest(android.telecom.Call, int)">onRttRequest(Call, int)</a></code> )}
+ callback.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-25" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="Call.html#sendCallEvent(java.lang.String, android.os.Bundle)">sendCallEvent</a>(<a href="../../java/lang/String.html">String</a> event, <a href="../os/Bundle.html">Bundle</a> extras)
+      </code>
+      
+        <p>Sends a <code>Call</code> event from this <code>Call</code> to the associated <code><a href="Connection.html">Connection</a></code> in
+ the <code><a href="ConnectionService.html">ConnectionService</a></code>.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-26" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="Call.html#sendRttRequest()">sendRttRequest</a>()
+      </code>
+      
+        <p>Sends an RTT upgrade request to the remote end of the connection.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-23" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="Call.html#splitFromConference()">splitFromConference</a>()
+      </code>
+      
+        <p>Instructs this <code>Call</code> to split from any conference call with which it may be
+ connected.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-23" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="Call.html#stopDtmfTone()">stopDtmfTone</a>()
+      </code>
+      
+        <p>Instructs this <code>Call</code> to stop any dual-tone multi-frequency signaling (DTMF) tone
+ currently playing.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-26" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="Call.html#stopRtt()">stopRtt</a>()
+      </code>
+      
+        <p>Terminate the RTT session on this call.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-23" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="Call.html#swapConference()">swapConference</a>()
+      </code>
+      
+        <p>Swaps the calls within this conference.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-23" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        <a href="../../java/lang/String.html">String</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="Call.html#toString()">toString</a>()
+      </code>
+      
+        <p>Returns a string representation of the object.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-23" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="Call.html#unhold()">unhold</a>()
+      </code>
+      
+        <p>Instructs this <code><a href="Call.html#STATE_HOLDING">STATE_HOLDING</a></code> call to release from hold.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-23" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="Call.html#unregisterCallback(android.telecom.Call.Callback)">unregisterCallback</a>(<a href="Call.Callback.html">Call.Callback</a> callback)
+      </code>
+      
+        <p>Unregisters a callback from this <code>Call</code>.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+
+</table>
+
+
+
+
+
+
+
+<!-- ========== METHOD SUMMARY =========== -->
+<table id="inhmethods" class="methods inhtable">
+<tr><th><h3>Inherited methods</h3></th></tr>
+
+
+<tr class="api apilevel-" >
+<td colspan="2">
+  <a href="#" id="inherited-methods-java.lang.Object" class="jd-expando-trigger closed"
+     onclick="return toggleInherited(this, null)" >
+    <img id="inherited-methods-java.lang.Object-trigger" class="jd-expando-trigger-img"
+         height="34"
+         src="../../../assets/images/styles/disclosure_down.png" />
+  </a>From
+class
+<code>
+  
+    <a href="../../java/lang/Object.html">java.lang.Object</a>
+  
+</code>
+<div id="inherited-methods-java.lang.Object">
+  <div id="inherited-methods-java.lang.Object-list"
+        class="jd-inheritedlinks">
+  </div>
+  <div id="inherited-methods-java.lang.Object-summary" style="display: none;">
+    <table class="jd-sumtable-expando responsive">
+      
+
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        <a href="../../java/lang/Object.html">Object</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../../java/lang/Object.html#clone()">clone</a>()
+      </code>
+      
+        <p>Creates and returns a copy of this object.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        boolean</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../../java/lang/Object.html#equals(java.lang.Object)">equals</a>(<a href="../../java/lang/Object.html">Object</a> obj)
+      </code>
+      
+        <p>Indicates whether some other object is "equal to" this one.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../../java/lang/Object.html#finalize()">finalize</a>()
+      </code>
+      
+        <p>Called by the garbage collector on an object when garbage collection
+ determines that there are no more references to the object.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        final
+        
+        <a href="../../java/lang/Class.html">Class</a>&lt;?&gt;</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../../java/lang/Object.html#getClass()">getClass</a>()
+      </code>
+      
+        <p>Returns the runtime class of this <code>Object</code>.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        int</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../../java/lang/Object.html#hashCode()">hashCode</a>()
+      </code>
+      
+        <p>Returns a hash code value for the object.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        final
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../../java/lang/Object.html#notify()">notify</a>()
+      </code>
+      
+        <p>Wakes up a single thread that is waiting on this object's
+ monitor.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        final
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../../java/lang/Object.html#notifyAll()">notifyAll</a>()
+      </code>
+      
+        <p>Wakes up all threads that are waiting on this object's monitor.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        <a href="../../java/lang/String.html">String</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../../java/lang/Object.html#toString()">toString</a>()
+      </code>
+      
+        <p>Returns a string representation of the object.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        final
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../../java/lang/Object.html#wait(long, int)">wait</a>(long millis, int nanos)
+      </code>
+      
+        <p>Causes the current thread to wait until another thread invokes the
+ <code><a href="../../java/lang/Object.html#notify()">notify()</a></code> method or the
+ <code><a href="../../java/lang/Object.html#notifyAll()">notifyAll()</a></code> method for this object, or
+ some other thread interrupts the current thread, or a certain
+ amount of real time has elapsed.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        final
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../../java/lang/Object.html#wait(long)">wait</a>(long millis)
+      </code>
+      
+        <p>Causes the current thread to wait until either another thread invokes the
+ <code><a href="../../java/lang/Object.html#notify()">notify()</a></code> method or the
+ <code><a href="../../java/lang/Object.html#notifyAll()">notifyAll()</a></code> method for this object, or a
+ specified amount of time has elapsed.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        final
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../../java/lang/Object.html#wait()">wait</a>()
+      </code>
+      
+        <p>Causes the current thread to wait until another thread invokes the
+ <code><a href="../../java/lang/Object.html#notify()">notify()</a></code> method or the
+ <code><a href="../../java/lang/Object.html#notifyAll()">notifyAll()</a></code> method for this object.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+
+    </table>
+  </div>
+</div>
+</td></tr>
+
+
+</table>
+
+
+
+<!-- XML Attributes -->
+
+
+<!-- Enum Values -->
+
+
+<!-- Constants -->
+
+
+<!-- ========= ENUM CONSTANTS DETAIL ======== -->
+<h2 class="api-section">Constants</h2>
+
+
+
+
+<A NAME="AVAILABLE_PHONE_ACCOUNTS"></A>
+
+<div class="api apilevel-23">
+    <h3 class="api-name">AVAILABLE_PHONE_ACCOUNTS</h3>
+    <div class="api-level">
+      
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 23</a>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="../../java/lang/String.html">String</a> AVAILABLE_PHONE_ACCOUNTS</pre>
+    
+    
+
+    
+  <p>The key to retrieve the optional <code>PhoneAccount</code>s Telecom can bundle with its Call
+ extras. Used to pass the phone accounts to display on the front end to the user in order to
+ select phone accounts to (for example) place a call.
+</p></p>
+
+    
+      <p>Constant Value:
+      
+          "selectPhoneAccountAccounts"
+      
+    
+</div>
+
+
+
+<A NAME="EXTRA_LAST_EMERGENCY_CALLBACK_TIME_MILLIS"></A>
+
+<div class="api apilevel-26">
+    <h3 class="api-name">EXTRA_LAST_EMERGENCY_CALLBACK_TIME_MILLIS</h3>
+    <div class="api-level">
+      
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 26</a>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="../../java/lang/String.html">String</a> EXTRA_LAST_EMERGENCY_CALLBACK_TIME_MILLIS</pre>
+    
+    
+
+    
+  <p>Extra key used to indicate the time (in milliseconds since midnight, January 1, 1970 UTC)
+ when the last outgoing emergency call was made.  This is used to identify potential emergency
+ callbacks.
+</p></p>
+
+    
+      <p>Constant Value:
+      
+          "android.telecom.extra.LAST_EMERGENCY_CALLBACK_TIME_MILLIS"
+      
+    
+</div>
+
+
+
+<A NAME="STATE_ACTIVE"></A>
+
+<div class="api apilevel-23">
+    <h3 class="api-name">STATE_ACTIVE</h3>
+    <div class="api-level">
+      
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 23</a>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+int STATE_ACTIVE</pre>
+    
+    
+
+    
+  <p>The state of a <code>Call</code> when actively supporting conversation.
+</p></p>
+
+    
+      <p>Constant Value:
+      
+          4
+          (0x00000004)
+      
+    
+</div>
+
+
+
+<A NAME="STATE_CONNECTING"></A>
+
+<div class="api apilevel-23">
+    <h3 class="api-name">STATE_CONNECTING</h3>
+    <div class="api-level">
+      
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 23</a>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+int STATE_CONNECTING</pre>
+    
+    
+
+    
+  <p>The initial state of an outgoing <code>Call</code>.
+ Common transitions are to <code><a href="Call.html#STATE_DIALING">STATE_DIALING</a></code> state for a successful call or
+ <code><a href="Call.html#STATE_DISCONNECTED">STATE_DISCONNECTED</a></code> if it failed.
+</p></p>
+
+    
+      <p>Constant Value:
+      
+          9
+          (0x00000009)
+      
+    
+</div>
+
+
+
+<A NAME="STATE_DIALING"></A>
+
+<div class="api apilevel-23">
+    <h3 class="api-name">STATE_DIALING</h3>
+    <div class="api-level">
+      
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 23</a>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+int STATE_DIALING</pre>
+    
+    
+
+    
+  <p>The state of an outgoing <code>Call</code> when dialing the remote number, but not yet connected.
+</p></p>
+
+    
+      <p>Constant Value:
+      
+          1
+          (0x00000001)
+      
+    
+</div>
+
+
+
+<A NAME="STATE_DISCONNECTED"></A>
+
+<div class="api apilevel-23">
+    <h3 class="api-name">STATE_DISCONNECTED</h3>
+    <div class="api-level">
+      
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 23</a>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+int STATE_DISCONNECTED</pre>
+    
+    
+
+    
+  <p>The state of a <code>Call</code> when no further voice or other communication is being
+ transmitted, the remote side has been or will inevitably be informed that the <code>Call</code>
+ is no longer active, and the local data transport has or inevitably will release resources
+ associated with this <code>Call</code>.
+</p></p>
+
+    
+      <p>Constant Value:
+      
+          7
+          (0x00000007)
+      
+    
+</div>
+
+
+
+<A NAME="STATE_DISCONNECTING"></A>
+
+<div class="api apilevel-23">
+    <h3 class="api-name">STATE_DISCONNECTING</h3>
+    <div class="api-level">
+      
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 23</a>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+int STATE_DISCONNECTING</pre>
+    
+    
+
+    
+  <p>The state of a <code>Call</code> when the user has initiated a disconnection of the call, but the
+ call has not yet been disconnected by the underlying <code>ConnectionService</code>.  The next
+ state of the call is (potentially) <code><a href="Call.html#STATE_DISCONNECTED">STATE_DISCONNECTED</a></code>.
+</p></p>
+
+    
+      <p>Constant Value:
+      
+          10
+          (0x0000000a)
+      
+    
+</div>
+
+
+
+<A NAME="STATE_HOLDING"></A>
+
+<div class="api apilevel-23">
+    <h3 class="api-name">STATE_HOLDING</h3>
+    <div class="api-level">
+      
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 23</a>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+int STATE_HOLDING</pre>
+    
+    
+
+    
+  <p>The state of a <code>Call</code> when in a holding state.
+</p></p>
+
+    
+      <p>Constant Value:
+      
+          3
+          (0x00000003)
+      
+    
+</div>
+
+
+
+<A NAME="STATE_NEW"></A>
+
+<div class="api apilevel-23">
+    <h3 class="api-name">STATE_NEW</h3>
+    <div class="api-level">
+      
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 23</a>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+int STATE_NEW</pre>
+    
+    
+
+    
+  <p>The state of a <code>Call</code> when newly created.
+</p></p>
+
+    
+      <p>Constant Value:
+      
+          0
+          (0x00000000)
+      
+    
+</div>
+
+
+
+<A NAME="STATE_PULLING_CALL"></A>
+
+<div class="api apilevel-25">
+    <h3 class="api-name">STATE_PULLING_CALL</h3>
+    <div class="api-level">
+      
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 25</a>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+int STATE_PULLING_CALL</pre>
+    
+    
+
+    
+  <p>The state of an external call which is in the process of being pulled from a remote device to
+ the local device.
+ <p>
+ A call can only be in this state if the <code><a href="Call.Details.html#PROPERTY_IS_EXTERNAL_CALL">PROPERTY_IS_EXTERNAL_CALL</a></code> property
+ and <code><a href="Call.Details.html#CAPABILITY_CAN_PULL_CALL">CAPABILITY_CAN_PULL_CALL</a></code> capability are set on the call.
+ <p>
+ An <code><a href="InCallService.html">InCallService</a></code> will only see this state if it has the
+ <code><a href="TelecomManager.html#METADATA_INCLUDE_EXTERNAL_CALLS">METADATA_INCLUDE_EXTERNAL_CALLS</a></code> metadata set to <code>true</code> in its
+ manifest.
+</p></p>
+
+    
+      <p>Constant Value:
+      
+          11
+          (0x0000000b)
+      
+    
+</div>
+
+
+
+<A NAME="STATE_RINGING"></A>
+
+<div class="api apilevel-23">
+    <h3 class="api-name">STATE_RINGING</h3>
+    <div class="api-level">
+      
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 23</a>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+int STATE_RINGING</pre>
+    
+    
+
+    
+  <p>The state of an incoming <code>Call</code> when ringing locally, but not yet connected.
+</p></p>
+
+    
+      <p>Constant Value:
+      
+          2
+          (0x00000002)
+      
+    
+</div>
+
+
+
+<A NAME="STATE_SELECT_PHONE_ACCOUNT"></A>
+
+<div class="api apilevel-23">
+    <h3 class="api-name">STATE_SELECT_PHONE_ACCOUNT</h3>
+    <div class="api-level">
+      
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 23</a>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+int STATE_SELECT_PHONE_ACCOUNT</pre>
+    
+    
+
+    
+  <p>The state of an outgoing <code>Call</code> when waiting on user to select a
+ <code><a href="PhoneAccount.html">PhoneAccount</a></code> through which to place the call.
+</p></p>
+
+    
+      <p>Constant Value:
+      
+          8
+          (0x00000008)
+      
+    
+</div>
+
+
+
+
+<!-- Fields -->
+
+
+<!-- Public ctors -->
+
+
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<!-- Protected ctors -->
+
+
+
+<!-- ========= METHOD DETAIL ======== -->
+<!-- Public methdos -->
+
+<h2 class="api-section">Public methods</h2>
+
+
+
+<A NAME="answer(int)"></A>
+
+<div class="api apilevel-23">
+    <h3 class="api-name">answer</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 23</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+void answer (int videoState)</pre>
+    
+    
+
+    
+  <p>Instructs this <code><a href="Call.html#STATE_RINGING">STATE_RINGING</a></code> <code>Call</code> to answer.</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>videoState</code></td>
+        <td width="100%">
+          <code>int</code>: The video state in which to answer the call.
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="conference(android.telecom.Call)"></A>
+
+<div class="api apilevel-23">
+    <h3 class="api-name">conference</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 23</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+void conference (<a href="Call.html">Call</a> callToConferenceWith)</pre>
+    
+    
+
+    
+  <p>Instructs this <code>Call</code> to enter a conference.</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>callToConferenceWith</code></td>
+        <td width="100%">
+          <code>Call</code>: The other call with which to conference.
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="disconnect()"></A>
+
+<div class="api apilevel-23">
+    <h3 class="api-name">disconnect</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 23</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+void disconnect ()</pre>
+    
+    
+
+    
+  <p>Instructs this <code>Call</code> to disconnect.
+</p></p>
+
+</div>
+
+
+<A NAME="getCannedTextResponses()"></A>
+
+<div class="api apilevel-23">
+    <h3 class="api-name">getCannedTextResponses</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 23</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="../../java/util/List.html">List</a>&lt;<a href="../../java/lang/String.html">String</a>&gt; getCannedTextResponses ()</pre>
+    
+    
+
+    
+  <p>Obtains a list of canned, pre-configured message responses to present to the user as
+ ways of rejecting this <code>Call</code> using via a text message.</p></p>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="../../java/util/List.html">List</a>&lt;<a href="../../java/lang/String.html">String</a>&gt;</code></td>
+        <td width="100%">A list of canned text message responses.
+</p></td>
+      </tr>
+    </table>
+  <div>
+      <p><b>See also:</b></p>
+      <ul class="nolist"><li><code><a href="Call.html#reject(boolean, java.lang.String)">reject(boolean, String)</a></code></li>
+      </ul>
+  </div>
+
+</div>
+
+
+<A NAME="getChildren()"></A>
+
+<div class="api apilevel-23">
+    <h3 class="api-name">getChildren</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 23</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="../../java/util/List.html">List</a>&lt;<a href="Call.html">Call</a>&gt; getChildren ()</pre>
+    
+    
+
+    
+  <p>Obtains the children of this conference <code>Call</code>, if any.</p></p>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="../../java/util/List.html">List</a>&lt;<a href="Call.html">Call</a>&gt;</code></td>
+        <td width="100%">The children of this <code>Call</code> if this <code>Call</code> is a conference, or an empty
+ <code>List</code> otherwise.
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="getConferenceableCalls()"></A>
+
+<div class="api apilevel-23">
+    <h3 class="api-name">getConferenceableCalls</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 23</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="../../java/util/List.html">List</a>&lt;<a href="Call.html">Call</a>&gt; getConferenceableCalls ()</pre>
+    
+    
+
+    
+  <p>Returns the list of <code>Call</code>s with which this <code>Call</code> is allowed to conference.</p></p>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="../../java/util/List.html">List</a>&lt;<a href="Call.html">Call</a>&gt;</code></td>
+        <td width="100%">The list of conferenceable <code>Call</code>s.
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="getDetails()"></A>
+
+<div class="api apilevel-23">
+    <h3 class="api-name">getDetails</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 23</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="Call.Details.html">Call.Details</a> getDetails ()</pre>
+    
+    
+
+    
+  <p>Obtains an object containing call details.</p></p>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="Call.Details.html">Call.Details</a></code></td>
+        <td width="100%">A <code><a href="Call.Details.html">Call.Details</a></code> object. Depending on the state of the <code>Call</code>, the
+ result may be <code>null</code>.
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="getParent()"></A>
+
+<div class="api apilevel-23">
+    <h3 class="api-name">getParent</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 23</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="Call.html">Call</a> getParent ()</pre>
+    
+    
+
+    
+  <p>Obtains the parent of this <code>Call</code> in a conference, if any.</p></p>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="Call.html">Call</a></code></td>
+        <td width="100%">The parent <code>Call</code>, or <code>null</code> if this <code>Call</code> is not a
+ child of any conference <code>Call</code>s.
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="getRemainingPostDialSequence()"></A>
+
+<div class="api apilevel-23">
+    <h3 class="api-name">getRemainingPostDialSequence</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 23</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="../../java/lang/String.html">String</a> getRemainingPostDialSequence ()</pre>
+    
+    
+
+    
+  <p>Obtains the post-dial sequence remaining to be emitted by this <code>Call</code>, if any.</p></p>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="../../java/lang/String.html">String</a></code></td>
+        <td width="100%">The remaining post-dial sequence, or <code>null</code> if there is no post-dial sequence
+ remaining or this <code>Call</code> is not in a post-dial state.
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="getRttCall()"></A>
+
+<div class="api apilevel-26">
+    <h3 class="api-name">getRttCall</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 26</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="Call.RttCall.html">Call.RttCall</a> getRttCall ()</pre>
+    
+    
+
+    
+  <p>Returns this call's RttCall object. The <code><a href="Call.RttCall.html">Call.RttCall</a></code> instance is used to send and
+ receive RTT text data, as well as to change the RTT mode.</p></p>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="Call.RttCall.html">Call.RttCall</a></code></td>
+        <td width="100%">A <code><a href="Call.RttCall.html">Call.RttCall</a></code>. <code>null</code> if there is no active RTT connection.
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="getState()"></A>
+
+<div class="api apilevel-23">
+    <h3 class="api-name">getState</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 23</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+int getState ()</pre>
+    
+    
+
+    
+  <p>Obtains the state of this <code>Call</code>.</p></p>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code>int</code></td>
+        <td width="100%">A state value, chosen from the <code>STATE_*</code> constants.
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="getVideoCall()"></A>
+
+<div class="api apilevel-23">
+    <h3 class="api-name">getVideoCall</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 23</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="InCallService.VideoCall.html">InCallService.VideoCall</a> getVideoCall ()</pre>
+    
+    
+
+    
+  <p>Obtains an object that can be used to display video from this <code>Call</code>.</p></p>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="InCallService.VideoCall.html">InCallService.VideoCall</a></code></td>
+        <td width="100%">An <code>Call.VideoCall</code>.
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="hold()"></A>
+
+<div class="api apilevel-23">
+    <h3 class="api-name">hold</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 23</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+void hold ()</pre>
+    
+    
+
+    
+  <p>Instructs this <code>Call</code> to go on hold.
+</p></p>
+
+</div>
+
+
+<A NAME="isRttActive()"></A>
+
+<div class="api apilevel-26">
+    <h3 class="api-name">isRttActive</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 26</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+boolean isRttActive ()</pre>
+    
+    
+
+    
+  <p>Returns whether this call has an active RTT connection.</p></p>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code>boolean</code></td>
+        <td width="100%">true if there is a connection, false otherwise.
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="mergeConference()"></A>
+
+<div class="api apilevel-23">
+    <h3 class="api-name">mergeConference</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 23</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+void mergeConference ()</pre>
+    
+    
+
+    
+  <p>Merges the calls within this conference. See <code><a href="Call.Details.html#CAPABILITY_MERGE_CONFERENCE">CAPABILITY_MERGE_CONFERENCE</a></code>.
+</p></p>
+
+</div>
+
+
+<A NAME="phoneAccountSelected(android.telecom.PhoneAccountHandle, boolean)"></A>
+
+<div class="api apilevel-23">
+    <h3 class="api-name">phoneAccountSelected</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 23</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+void phoneAccountSelected (<a href="PhoneAccountHandle.html">PhoneAccountHandle</a> accountHandle, 
+                boolean setDefault)</pre>
+    
+    
+
+    
+  <p>Notifies this <code>Call</code> that an account has been selected and to proceed with placing
+ an outgoing call. Optionally sets this account as the default account.
+</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>accountHandle</code></td>
+        <td width="100%">
+          <code>PhoneAccountHandle</code> <!-- no parameter comment --></p></td>
+      </tr>
+      <tr>
+        <td><code>setDefault</code></td>
+        <td width="100%">
+          <code>boolean</code> <!-- no parameter comment --></p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="playDtmfTone(char)"></A>
+
+<div class="api apilevel-23">
+    <h3 class="api-name">playDtmfTone</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 23</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+void playDtmfTone (char digit)</pre>
+    
+    
+
+    
+  <p>Instructs this <code>Call</code> to play a dual-tone multi-frequency signaling (DTMF) tone.
+
+ Any other currently playing DTMF tone in the specified call is immediately stopped.</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>digit</code></td>
+        <td width="100%">
+          <code>char</code>: A character representing the DTMF digit for which to play the tone. This
+         value must be one of <code>'0'</code> through <code>'9'</code>, <code>'*'</code> or <code>'#'</code>.
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="postDialContinue(boolean)"></A>
+
+<div class="api apilevel-23">
+    <h3 class="api-name">postDialContinue</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 23</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+void postDialContinue (boolean proceed)</pre>
+    
+    
+
+    
+  <p>Instructs this <code>Call</code> to continue playing a post-dial DTMF string.
+
+ A post-dial DTMF string is a string of digits entered after a phone number, when dialed,
+ that are immediately sent as DTMF tones to the recipient as soon as the connection is made.
+
+ If the DTMF string contains a <code><a href="TelecomManager.html#DTMF_CHARACTER_PAUSE">DTMF_CHARACTER_PAUSE</a></code> symbol, this
+ <code>Call</code> will temporarily pause playing the tones for a pre-defined period of time.
+
+ If the DTMF string contains a <code><a href="TelecomManager.html#DTMF_CHARACTER_WAIT">DTMF_CHARACTER_WAIT</a></code> symbol, this
+ <code>Call</code> will pause playing the tones and notify callbacks via
+ <code><a href="Call.Callback.html#onPostDialWait(android.telecom.Call, java.lang.String)">onPostDialWait(Call, String)</a></code>. At this point, the in-call app
+ should display to the user an indication of this state and an affordance to continue
+ the postdial sequence. When the user decides to continue the postdial sequence, the in-call
+ app should invoke the <code><a href="Call.html#postDialContinue(boolean)">postDialContinue(boolean)</a></code> method.</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>proceed</code></td>
+        <td width="100%">
+          <code>boolean</code>: Whether or not to continue with the post-dial sequence.
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="pullExternalCall()"></A>
+
+<div class="api apilevel-25">
+    <h3 class="api-name">pullExternalCall</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 25</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+void pullExternalCall ()</pre>
+    
+    
+
+    
+  <p>Initiates a request to the <code><a href="ConnectionService.html">ConnectionService</a></code> to pull an external call to the local
+ device.
+ <p>
+ Calls to this method are ignored if the call does not have the
+ <code><a href="Call.Details.html#PROPERTY_IS_EXTERNAL_CALL">PROPERTY_IS_EXTERNAL_CALL</a></code> property set.
+ <p>
+ An <code><a href="InCallService.html">InCallService</a></code> will only see calls which support this method if it has the
+ <code><a href="TelecomManager.html#METADATA_INCLUDE_EXTERNAL_CALLS">METADATA_INCLUDE_EXTERNAL_CALLS</a></code> metadata set to <code>true</code>
+ in its manifest.
+</p></p>
+
+</div>
+
+
+<A NAME="putExtras(android.os.Bundle)"></A>
+
+<div class="api apilevel-25">
+    <h3 class="api-name">putExtras</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 25</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+void putExtras (<a href="../os/Bundle.html">Bundle</a> extras)</pre>
+    
+    
+
+    
+  <p>Adds some extras to this <code><a href="Call.html">Call</a></code>.  Existing keys are replaced and new ones are
+ added.
+ <p>
+ No assumptions should be made as to how an In-Call UI or service will handle these
+ extras.  Keys should be fully qualified (e.g., com.example.MY_EXTRA) to avoid conflicts.</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>extras</code></td>
+        <td width="100%">
+          <code>Bundle</code>: The extras to add.
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="registerCallback(android.telecom.Call.Callback)"></A>
+
+<div class="api apilevel-23">
+    <h3 class="api-name">registerCallback</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 23</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+void registerCallback (<a href="Call.Callback.html">Call.Callback</a> callback)</pre>
+    
+    
+
+    
+  <p>Registers a callback to this <code>Call</code>.</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>callback</code></td>
+        <td width="100%">
+          <code>Call.Callback</code>: A <code>Callback</code>.
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="registerCallback(android.telecom.Call.Callback, android.os.Handler)"></A>
+
+<div class="api apilevel-23">
+    <h3 class="api-name">registerCallback</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 23</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+void registerCallback (<a href="Call.Callback.html">Call.Callback</a> callback, 
+                <a href="../os/Handler.html">Handler</a> handler)</pre>
+    
+    
+
+    
+  <p>Registers a callback to this <code>Call</code>.</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>callback</code></td>
+        <td width="100%">
+          <code>Call.Callback</code>: A <code>Callback</code>.</p></td>
+      </tr>
+      <tr>
+        <td><code>handler</code></td>
+        <td width="100%">
+          <code>Handler</code>: A handler which command and status changes will be delivered to.
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="reject(boolean, java.lang.String)"></A>
+
+<div class="api apilevel-23">
+    <h3 class="api-name">reject</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 23</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+void reject (boolean rejectWithMessage, 
+                <a href="../../java/lang/String.html">String</a> textMessage)</pre>
+    
+    
+
+    
+  <p>Instructs this <code><a href="Call.html#STATE_RINGING">STATE_RINGING</a></code> <code>Call</code> to reject.</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>rejectWithMessage</code></td>
+        <td width="100%">
+          <code>boolean</code>: Whether to reject with a text message.</p></td>
+      </tr>
+      <tr>
+        <td><code>textMessage</code></td>
+        <td width="100%">
+          <code>String</code>: An optional text message with which to respond.
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="removeExtras(java.util.List<java.lang.String>)"></A>
+
+<div class="api apilevel-25">
+    <h3 class="api-name">removeExtras</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 25</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+void removeExtras (<a href="../../java/util/List.html">List</a>&lt;<a href="../../java/lang/String.html">String</a>&gt; keys)</pre>
+    
+    
+
+    
+  <p>Removes extras from this <code><a href="Call.html">Call</a></code>.</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>keys</code></td>
+        <td width="100%">
+          <code>List</code>: The keys of the extras to remove.
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="removeExtras(java.lang.String...)"></A>
+
+<div class="api apilevel-25">
+    <h3 class="api-name">removeExtras</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 25</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+void removeExtras (<a href="../../java/lang/String.html">String...</a> keys)</pre>
+    
+    
+
+    
+  <p>Removes extras from this <code><a href="Call.html">Call</a></code>.</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>keys</code></td>
+        <td width="100%">
+          <code>String</code>: The keys of the extras to remove.
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="respondToRttRequest(int, boolean)"></A>
+
+<div class="api apilevel-26">
+    <h3 class="api-name">respondToRttRequest</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 26</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+void respondToRttRequest (int id, 
+                boolean accept)</pre>
+    
+    
+
+    
+  <p>Responds to an RTT request received via the <code><a href="Call.Callback.html#onRttRequest(android.telecom.Call, int)">onRttRequest(Call, int)</a></code> )}
+ callback.
+ The ID used here should be the same as the ID that was received via the callback.</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>id</code></td>
+        <td width="100%">
+          <code>int</code>: The request ID received via <code><a href="Call.Callback.html#onRttRequest(android.telecom.Call, int)">onRttRequest(Call, int)</a></code></p></td>
+      </tr>
+      <tr>
+        <td><code>accept</code></td>
+        <td width="100%">
+          <code>boolean</code>: <code>true</code> if the RTT request should be accepted, <code>false</code> otherwise.
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="sendCallEvent(java.lang.String, android.os.Bundle)"></A>
+
+<div class="api apilevel-25">
+    <h3 class="api-name">sendCallEvent</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 25</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+void sendCallEvent (<a href="../../java/lang/String.html">String</a> event, 
+                <a href="../os/Bundle.html">Bundle</a> extras)</pre>
+    
+    
+
+    
+  <p>Sends a <code>Call</code> event from this <code>Call</code> to the associated <code><a href="Connection.html">Connection</a></code> in
+ the <code><a href="ConnectionService.html">ConnectionService</a></code>.
+ <p>
+ Call events are used to communicate point in time information from an <code><a href="InCallService.html">InCallService</a></code>
+ to a <code><a href="ConnectionService.html">ConnectionService</a></code>.  A <code><a href="ConnectionService.html">ConnectionService</a></code> implementation could define
+ events which enable the <code><a href="InCallService.html">InCallService</a></code>, for example, toggle a unique feature of the
+ <code><a href="ConnectionService.html">ConnectionService</a></code>.
+ <p>
+ A <code><a href="ConnectionService.html">ConnectionService</a></code> can communicate to the <code><a href="InCallService.html">InCallService</a></code> using
+ <code><a href="Connection.html#sendConnectionEvent(java.lang.String, android.os.Bundle)">sendConnectionEvent(String, Bundle)</a></code>.
+ <p>
+ Events are exposed to <code><a href="ConnectionService.html">ConnectionService</a></code> implementations via
+ <code><a href="Connection.html#onCallEvent(java.lang.String, android.os.Bundle)">onCallEvent(String, Bundle)</a></code>.
+ <p>
+ No assumptions should be made as to how a <code><a href="ConnectionService.html">ConnectionService</a></code> will handle these events.
+ The <code><a href="InCallService.html">InCallService</a></code> must assume that the <code><a href="ConnectionService.html">ConnectionService</a></code> could chose to
+ ignore some events altogether.
+ <p>
+ Events should be fully qualified (e.g., <code>com.example.event.MY_EVENT</code>) to avoid
+ conflicts between <code><a href="InCallService.html">InCallService</a></code> implementations.  Further, <code><a href="InCallService.html">InCallService</a></code>
+ implementations shall not re-purpose events in the <code>android.*</code> namespace, nor shall
+ they define their own event types in this namespace.  When defining a custom event type,
+ ensure the contents of the extras <code><a href="../os/Bundle.html">Bundle</a></code> is clearly defined.  Extra keys for this
+ bundle should be named similar to the event type (e.g. <code>com.example.extra.MY_EXTRA</code>).
+ <p>
+ When defining events and the associated extras, it is important to keep their behavior
+ consistent when the associated <code><a href="InCallService.html">InCallService</a></code> is updated.  Support for deprecated
+ events/extras should me maintained to ensure backwards compatibility with older
+ <code><a href="ConnectionService.html">ConnectionService</a></code> implementations which were built to support the older behavior.</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>event</code></td>
+        <td width="100%">
+          <code>String</code>: The connection event.</p></td>
+      </tr>
+      <tr>
+        <td><code>extras</code></td>
+        <td width="100%">
+          <code>Bundle</code>: Bundle containing extra information associated with the event.
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="sendRttRequest()"></A>
+
+<div class="api apilevel-26">
+    <h3 class="api-name">sendRttRequest</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 26</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+void sendRttRequest ()</pre>
+    
+    
+
+    
+  <p>Sends an RTT upgrade request to the remote end of the connection. Success is not
+ guaranteed, and notification of success will be via the
+ <code><a href="Call.Callback.html#onRttStatusChanged(android.telecom.Call, boolean, android.telecom.Call.RttCall)">onRttStatusChanged(Call, boolean, RttCall)</a></code> callback.
+</p></p>
+
+</div>
+
+
+<A NAME="splitFromConference()"></A>
+
+<div class="api apilevel-23">
+    <h3 class="api-name">splitFromConference</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 23</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+void splitFromConference ()</pre>
+    
+    
+
+    
+  <p>Instructs this <code>Call</code> to split from any conference call with which it may be
+ connected.
+</p></p>
+
+</div>
+
+
+<A NAME="stopDtmfTone()"></A>
+
+<div class="api apilevel-23">
+    <h3 class="api-name">stopDtmfTone</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 23</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+void stopDtmfTone ()</pre>
+    
+    
+
+    
+  <p>Instructs this <code>Call</code> to stop any dual-tone multi-frequency signaling (DTMF) tone
+ currently playing.
+
+ DTMF tones are played by calling <code><a href="Call.html#playDtmfTone(char)">playDtmfTone(char)</a></code>. If no DTMF tone is
+ currently playing, this method will do nothing.
+</p></p>
+
+</div>
+
+
+<A NAME="stopRtt()"></A>
+
+<div class="api apilevel-26">
+    <h3 class="api-name">stopRtt</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 26</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+void stopRtt ()</pre>
+    
+    
+
+    
+  <p>Terminate the RTT session on this call. The resulting state change will be notified via
+ the <code><a href="Call.Callback.html#onRttStatusChanged(android.telecom.Call, boolean, android.telecom.Call.RttCall)">onRttStatusChanged(Call, boolean, RttCall)</a></code> callback.
+</p></p>
+
+</div>
+
+
+<A NAME="swapConference()"></A>
+
+<div class="api apilevel-23">
+    <h3 class="api-name">swapConference</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 23</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+void swapConference ()</pre>
+    
+    
+
+    
+  <p>Swaps the calls within this conference. See <code><a href="Call.Details.html#CAPABILITY_SWAP_CONFERENCE">CAPABILITY_SWAP_CONFERENCE</a></code>.
+</p></p>
+
+</div>
+
+
+<A NAME="toString()"></A>
+
+<div class="api apilevel-23">
+    <h3 class="api-name">toString</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 23</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="../../java/lang/String.html">String</a> toString ()</pre>
+    
+    
+
+    
+  <p>Returns a string representation of the object. In general, the
+ <code>toString</code> method returns a string that
+ "textually represents" this object. The result should
+ be a concise but informative representation that is easy for a
+ person to read.
+ It is recommended that all subclasses override this method.
+ <p>
+ The <code>toString</code> method for class <code>Object</code>
+ returns a string consisting of the name of the class of which the
+ object is an instance, the at-sign character `<code>@</code>', and
+ the unsigned hexadecimal representation of the hash code of the
+ object. In other words, this method returns a string equal to the
+ value of:
+ <blockquote>
+ <pre>
+ getClass().getName() + '@' + Integer.toHexString(hashCode())
+ </pre></blockquote></p></p>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="../../java/lang/String.html">String</a></code></td>
+        <td width="100%">a string representation of the object.
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="unhold()"></A>
+
+<div class="api apilevel-23">
+    <h3 class="api-name">unhold</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 23</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+void unhold ()</pre>
+    
+    
+
+    
+  <p>Instructs this <code><a href="Call.html#STATE_HOLDING">STATE_HOLDING</a></code> call to release from hold.
+</p></p>
+
+</div>
+
+
+<A NAME="unregisterCallback(android.telecom.Call.Callback)"></A>
+
+<div class="api apilevel-23">
+    <h3 class="api-name">unregisterCallback</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 23</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+void unregisterCallback (<a href="Call.Callback.html">Call.Callback</a> callback)</pre>
+    
+    
+
+    
+  <p>Unregisters a callback from this <code>Call</code>.</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>callback</code></td>
+        <td width="100%">
+          <code>Call.Callback</code>: A <code>Callback</code>.
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+
+
+
+<!-- ========= METHOD DETAIL ======== -->
+
+
+
+<!-- ========= END OF CLASS DATA ========= -->
+
+</div><!-- end jd-content -->
+
+
+
+<div class="data-reference-resources-wrapper">
+  
+  <ul data-reference-resources>
+    
+    
+    
+    <li><h2>Classes</h2>
+      <ul>
+          <li class="selected api apilevel-23"><a href="Call.html">Call</a></li>
+          <li class="api apilevel-23"><a href="Call.Callback.html">Call.Callback</a></li>
+          <li class="api apilevel-23"><a href="Call.Details.html">Call.Details</a></li>
+          <li class="api apilevel-26"><a href="Call.RttCall.html">Call.RttCall</a></li>
+          <li class="api apilevel-23"><a href="CallAudioState.html">CallAudioState</a></li>
+          <li class="api apilevel-24"><a href="CallScreeningService.html">CallScreeningService</a></li>
+          <li class="api apilevel-24"><a href="CallScreeningService.CallResponse.html">CallScreeningService.CallResponse</a></li>
+          <li class="api apilevel-24"><a href="CallScreeningService.CallResponse.Builder.html">CallScreeningService.CallResponse.Builder</a></li>
+          <li class="api apilevel-23"><a href="Conference.html">Conference</a></li>
+          <li class="api apilevel-23"><a href="Conferenceable.html">Conferenceable</a></li>
+          <li class="api apilevel-23"><a href="Connection.html">Connection</a></li>
+          <li class="api apilevel-26"><a href="Connection.RttModifyStatus.html">Connection.RttModifyStatus</a></li>
+          <li class="api apilevel-23"><a href="Connection.VideoProvider.html">Connection.VideoProvider</a></li>
+          <li class="api apilevel-23"><a href="ConnectionRequest.html">ConnectionRequest</a></li>
+          <li class="api apilevel-23"><a href="ConnectionService.html">ConnectionService</a></li>
+          <li class="api apilevel-23"><a href="DisconnectCause.html">DisconnectCause</a></li>
+          <li class="api apilevel-23"><a href="GatewayInfo.html">GatewayInfo</a></li>
+          <li class="api apilevel-23"><a href="InCallService.html">InCallService</a></li>
+          <li class="api apilevel-23"><a href="InCallService.VideoCall.html">InCallService.VideoCall</a></li>
+          <li class="api apilevel-23"><a href="InCallService.VideoCall.Callback.html">InCallService.VideoCall.Callback</a></li>
+          <li class="api apilevel-23"><a href="PhoneAccount.html">PhoneAccount</a></li>
+          <li class="api apilevel-23"><a href="PhoneAccount.Builder.html">PhoneAccount.Builder</a></li>
+          <li class="api apilevel-23"><a href="PhoneAccountHandle.html">PhoneAccountHandle</a></li>
+          <li class="api apilevel-23"><a href="RemoteConference.html">RemoteConference</a></li>
+          <li class="api apilevel-23"><a href="RemoteConference.Callback.html">RemoteConference.Callback</a></li>
+          <li class="api apilevel-23"><a href="RemoteConnection.html">RemoteConnection</a></li>
+          <li class="api apilevel-23"><a href="RemoteConnection.Callback.html">RemoteConnection.Callback</a></li>
+          <li class="api apilevel-23"><a href="RemoteConnection.VideoProvider.html">RemoteConnection.VideoProvider</a></li>
+          <li class="api apilevel-23"><a href="RemoteConnection.VideoProvider.Callback.html">RemoteConnection.VideoProvider.Callback</a></li>
+          <li class="api apilevel-23"><a href="StatusHints.html">StatusHints</a></li>
+          <li class="api apilevel-21"><a href="TelecomManager.html">TelecomManager</a></li>
+          <li class="api apilevel-23"><a href="VideoProfile.html">VideoProfile</a></li>
+          <li class="api apilevel-23"><a href="VideoProfile.CameraCapabilities.html">VideoProfile.CameraCapabilities</a></li>
+      </ul>
+    </li>
+    
+    
+    
+  </ul>
+  
+</div>
+
+
+
+
+    </div>
+
+    
+
+  
+    
+  
+    
+
+
+
+
+  
+
+
+<footer class="devsite-footer-promos nocontent">
+  <nav class="devsite-full-site-width">
+    <ul class="devsite-footer-promos-list">
+      
+      <li class="devsite-footer-promo">
+        <a href="http://twitter.com/AndroidDev"
+           class="devsite-footer-promo-title gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Twitter Promo"
+           >
+          
+          
+          <img class="devsite-footer-promo-icon" src="https://developer.android.com/static/images/footer/logo-twitter.svg">
+          
+          
+            Twitter
+          
+        </a>
+        <div class="devsite-footer-promo-description">Follow @AndroidDev on Twitter</div>
+      </li>
+      
+      <li class="devsite-footer-promo">
+        <a href="http://plus.google.com/+AndroidDevelopers"
+           class="devsite-footer-promo-title gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Google+ Promo"
+           >
+          
+          
+          <img class="devsite-footer-promo-icon" src="../../../../www.gstatic.com/images/branding/product/2x/google_plus_48dp.png">
+          
+          
+            Google+
+          
+        </a>
+        <div class="devsite-footer-promo-description">Follow Android Developers on Google+</div>
+      </li>
+      
+      <li class="devsite-footer-promo">
+        <a href="http://www.youtube.com/user/androiddevelopers"
+           class="devsite-footer-promo-title gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer YouTube Promo"
+           >
+          
+          
+          <img class="devsite-footer-promo-icon" src="../../../../www.gstatic.com/images/icons/material/product/2x/youtube_48dp.png">
+          
+          
+            YouTube
+          
+        </a>
+        <div class="devsite-footer-promo-description">Check out Android Developers on YouTube</div>
+      </li>
+      
+    </ul>
+  </nav>
+</footer>
+
+
+
+<div class="wrap dac-footer-container">
+  <footer class="dac-footer ">
+    <div class="cols dac-footer-main">
+      <div class="col-1of1">
+        <div class="dac-footer-contact">
+          
+          <a class="dac-footer-contact-link" href="https://developer.android.com/newsletter/index.html" title="Newsletter">Newsletter</a>
+          
+          <a class="dac-footer-contact-link" href="https://android-developers.blogspot.com/" title="Blog" target="_blank">Blog</a>
+          
+          <a class="dac-footer-contact-link" href="https://developer.android.com/support.html" title="Support">Support</a>
+          
+          <a class="dac-footer-contact-link" href="https://docs.google.com/forms/d/e/1FAIpQLSf27XIxoFmNpTjTYdk-m1uKWGqEnd7_4C_E1AD5fdCfyTBWNA/viewform?usp=pp_url&amp;entry.1909689089&amp;entry.208743710&amp;entry.408796755&amp;entry.1341430893&amp;entry.594931249&amp;entry.1640656812&amp;entry.1759804042&amp;entry.1441312344=developer.android.com" title="Join user studies" target="_blank">Join user studies</a>
+        </div>
+      </div>
+    </div>
+
+    <hr class="dac-footer-separator"/>
+      
+      <p class="dac-footer-copyright">
+        
+        Except as noted, this content is licensed under <a href="http://creativecommons.org/licenses/by/2.5/" target="_blank">Creative Commons Attribution 2.5</a>. For details and restrictions, see the <a href="https://developer.android.com/license.html">Content License</a>.
+      </p>
+    
+
+    <p class="dac-footer-links">
+      
+      <a href="https://www.android.com/" title="Android.com" target="_blank">Android.com</a>
+      
+      <a href="https://developer.android.com/" title="Android Developers">Android Developers</a>
+      
+      <a href="https://developer.android.com/studio/index.html" title="Android Studio">Android Studio</a>
+      
+      <a href="https://developer.android.com/distribute/console/index.html" title="Google Play Console">Google Play Console</a>
+      
+      <a href="https://developer.android.com/legal.html" title="Legal Notice">Legal Notice</a>
+    </p>
+
+    
+    <form class="devsite-utility-footer-language" id="setlang" action="https://developer.android.com/i18n/setlang/" method="post">
+      <input type="hidden" name="xsrf_token" value="i0pKD57m0Dn35fLh5qs_5an-HrsbIasFvKvRamFiXYI6MTUxMTEwNDgzNjY3NTUwMA" />
+      <input type="hidden" name="next" value="Call.html">
+      <span id="language" class="locales">
+        <select class="devsite-utility-footer-language-select" name="language">
+          
+          <option value="id"
+            >
+            Bahasa Indonesia
+          </option>
+          
+          <option value="de"
+            >
+            Deutsch
+          </option>
+          
+          <option value="en"
+             selected="selected" >
+            English
+          </option>
+          
+          <option value="es"
+            >
+            español
+          </option>
+          
+          <option value="es-419"
+            >
+            Español (América Latina)
+          </option>
+          
+          <option value="fr"
+            >
+            français
+          </option>
+          
+          <option value="pt-br"
+            >
+            Português Brasileiro
+          </option>
+          
+          <option value="vi"
+            >
+            Tiếng Việt
+          </option>
+          
+          <option value="tr"
+            >
+            Türkçe
+          </option>
+          
+          <option value="ru"
+            >
+            Русский
+          </option>
+          
+          <option value="th"
+            >
+            ภาษาไทย
+          </option>
+          
+          <option value="ja"
+            >
+            日本語
+          </option>
+          
+          <option value="zh-cn"
+            >
+            简体中文
+          </option>
+          
+          <option value="zh-tw"
+            >
+            繁體中文
+          </option>
+          
+          <option value="ko"
+            >
+            한국어
+          </option>
+          
+        </select>
+      </span>
+    </form>
+  </footer>
+</div><!--/.wrap -->
+
+<div class="dac-toast-group">
+  <div class="dac-toast" data-toast>
+    <div class="dac-toast-wrap">
+      
+      This site uses cookies to store your preferences for site-specific language and display options.
+      <button class="dac-toast-close-btn">
+        
+        <span class="dac-button dac-raised dac-primary">OK</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<div data-modal="newsletter" data-newsletter-fb data-swap class="dac-modal newsletter">
+  <div class="dac-modal-container">
+    <div class="dac-modal-window">
+      <header class="dac-modal-header">
+        <div class="dac-modal-header-actions">
+          <button class="dac-modal-header-close" data-modal-toggle></button>
+        </div>
+        <div class="dac-swap" data-swap-container>
+          <section class="dac-swap-section dac-active dac-down">
+            
+            <h2 class="norule dac-modal-header-title" data-t="newsletter.title">Get the latest Android developer news and tips that will help you find success on Google Play.</h2>
+            
+            <p class="dac-modal-header-subtitle" data-t="newsletter.requiredHint">* Required Fields</p>
+          </section>
+          <section class="dac-swap-section dac-up">
+            
+            <h2 class="norule dac-modal-header-title" data-t="newsletter.successTitle">Hooray!</h2>
+          </section>
+        </div>
+      </header>
+      <div class="dac-swap" data-swap-container>
+        <section class="dac-swap-section dac-active dac-left">
+          <form action="https://services.google.com/fb/submissions/android-developer-mailing-list/" class="dac-form" method="post">
+            <section class="dac-modal-content">
+              <fieldset class="dac-form-fieldset">
+                <div class="cols">
+                  <div class="col-1of2 newsletter-leftCol">
+                    <div class="dac-form-input-group">
+                      
+                      <label for="newsletter-full-name" class="dac-form-floatlabel" data-t="newsletter.name">Full name</label>
+                      <input type="text" class="dac-form-input" name="fullname" id="newsletter-full-name" required>
+                      <span class="dac-form-required">*</span>
+                    </div>
+                    <div class="dac-form-input-group">
+                      
+                      <label for="newsletter-email" class="dac-form-floatlabel" data-t="newsletter.email">Email address</label>
+                      <input type="email" class="dac-form-input" name="emailaddress" id="newsletter-email" required>
+                      <span class="dac-form-required">*</span>
+                    </div>
+                  </div>
+                  <div class="col-1of2 newsletter-rightCol">
+                    <div class="dac-form-input-group">
+                      
+                      <label for="newsletter-company" class="dac-form-floatlabel" data-t="newsletter.company">Company / developer name</label>
+                      <input type="text" class="dac-form-input" name="companydevelopername" id="newsletter-company">
+                    </div>
+                    <div class="dac-form-input-group">
+                      
+                      <label for="newsletter-play-store" class="dac-form-floatlabel" data-t="newsletter.appUrl">One of your Play Store app URLs</label>
+                      <input type="url" class="dac-form-input" name="playstoreappurls" id="newsletter-play-store">
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+              <fieldset class="dac-form-fieldset">
+                <div class="cols">
+                  
+                  <div class="col-1of2 newsletter-leftCol newsletter-interested" data-validation-message="Please check at least one item.">
+                    
+                    <legend class="dac-form-legend">What are you interested in?<span class="dac-form-required">*</span></legend>
+                    <div class="dac-form-radio-group">
+                      <input type="checkbox" class="dac-form-checkbox" name="interested" id="interested-whats-new" value="whats-new">
+                      <label for="interested-whats-new" class="dac-form-checkbox-button"></label>
+                      
+                      <label for="interested-whats-new" class="dac-form-label">What's new</label>
+                    </div>
+                    <div class="dac-form-radio-group">
+                      <input type="checkbox" class="dac-form-checkbox" name="interested" id="interested-games-updates" value="games-updates">
+                      <label for="interested-games-updates" class="dac-form-checkbox-button"></label>
+                      
+                      <label for="interested-games-updates" class="dac-form-label">Games updates</label>
+                    </div>
+                    <div class="dac-form-radio-group">
+                      <input type="checkbox" class="dac-form-checkbox" name="interested" id="interested-android-development" value="android-development">
+                      <label for="interested-android-development" class="dac-form-checkbox-button"></label>
+                      
+                      <label for="interested-android-development" class="dac-form-label">Android development</label>
+                    </div>
+                  </div>
+                  <div class="col-1of2 newsletter-rightCol newsletter-checkboxes">
+                    <div class="dac-form-input-group">
+                      
+                      <label for="newsletter-receive-in">Receive newsletter in</label>
+                      <select name="language" class="dac-form-select" id="newsletter-receive-in">
+                        <option value="en-US" selected>English</option>
+                        <option value="ar">Arabic</option>
+                        <option value="zh">Chinese (Simplified)</option>
+                        <option value="zh-TW">Chinese (Traditional)</option>
+                        <option value="fr">French</option>
+                        <option value="de">German</option>
+                        <option value="id">Indonesian (Bahasa)</option>
+                        <option value="ja">Japanese</option>
+                        <option value="ko">Korean</option>
+                        <option value="pt-BR">Portuguese (Brazilian)</option>
+                        <option value="ru">Russian</option>
+                        <option value="es-419">Spanish (Latin American)</option>
+                        <option value="th">Thai</option>
+                        <option value="tr">Turkish</option>
+                        <option value="vi">Vietnamese</option>
+                      </select>
+                    </div>
+                    <div class="dac-form-radio-group">
+                      <div class="dac-media">
+                        <div class="dac-media-figure">
+                          <input type="checkbox" class="dac-form-checkbox" name="marketingoptin" id="newsletter-add" required value="Add me to the mailing list.">
+                          <label for="newsletter-add" class="dac-form-checkbox-button"></label>
+                        </div>
+                        <div class="dac-media-body">
+                          <label for="newsletter-add" class="dac-form-label dac-form-aside">
+                            
+                            Add me to the mailing list.
+                            <span class="dac-form-required">*</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="dac-form-radio-group">
+                      <div class="dac-media">
+                        <div class="dac-media-figure">
+                          <input type="checkbox" class="dac-form-checkbox" name="privacystatement" id="newsletter-terms" required value="I acknowledge that the information provided in this form will be subject to Google's privacy policy (https://www.google.com/policies/privacy/).">
+                          <label for="newsletter-terms" class="dac-form-checkbox-button"></label>
+                        </div>
+                        <div class="dac-media-body">
+                          <label for="newsletter-terms" class="dac-form-label dac-form-aside"><span data-t="newsletter.privacyPolicy" data-t-html>
+                            
+                            I acknowledge that the information provided in this form will be subject to <a href="https://www.google.com/policies/privacy/">Google's privacy policy</a>.
+                          </span>
+                          <span class="dac-form-required">*</span></label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+            </section>
+            <input type="hidden" name="referrer" value="dac">
+            <footer class="dac-modal-footer">
+              <div class="cols">
+                <div class="col-2of5">
+                </div>
+              </div>
+              <button type="submit" value="Submit" class="dac-fab dac-primary dac-large dac-modal-action"><i class="dac-sprite dac-arrow-right"></i></button>
+            </footer>
+          </form>
+        </section>
+        <section class="dac-swap-section dac-right">
+          <div class="dac-modal-content">
+            <p class="newsletter-success-message" data-t="newsletter.successDetails">
+              
+              You have successfully signed up for the latest Android developer news and tips.
+            </p>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</div><!--/.dac-modal.newsletter-->
+
+<div data-modal="wechat" class="dac-modal">
+  <div class="dac-modal-container">
+    <div class="dac-modal-window">
+      <header class="dac-modal-header">
+        <div class="dac-modal-header-actions">
+          <button class="dac-modal-header-close" data-modal-toggle></button>
+        </div>
+        <section>
+          
+          <h2 class="norule dac-modal-header-title">Follow Google Developers on WeChat</h2>
+        </section>
+      </header>
+      <section class="dac-modal-content figure-center center-img">
+        <img src="../../../static/images/qr-wechat.png">
+      </section>
+    </div>
+  </div>
+</div><!--/.dac-modal[dac-modal=wechat]-->
+
+
+<div data-modal="langform" class="dac-modal" id="langform">
+  <div class="dac-modal-container">
+    <div class="dac-modal-window">
+      <header class="dac-modal-header">
+        <div class="dac-modal-header-actions">
+          <button class="dac-modal-header-close" data-modal-toggle></button>
+        </div>
+        <section class="dac-swap-section dac-active dac-down">
+          <h2 class="norule dac-modal-header-title">
+            
+            Browse this site in <span class="span-target-lang"></span>?
+          </h2>
+        </section>
+      </header>
+      <section class="dac-swap-section dac-active dac-left">
+          <section class="dac-modal-content">
+            <fieldset class="dac-form-fieldset">
+              <div class="cols">
+                <div class="col-2of2 langform-leftCol">
+                  <p id="resetLangText">
+                    
+                    You requested a page in <span class="span-target-lang"></span>, but your language preference for this site is <span class="span-current-lang"></span>.
+                  </p>
+                  <p id="resetLangCta">
+                    
+                    Would you like to change your language preference and browse this site in <span class="span-target-lang"></span>? If you want to change your language preference later, use the language menu at the bottom of each page.
+                  </p>
+                </div>
+              </div>
+            </fieldset>
+          </section>
+          <footer class="dac-modal-footer" id="langfooter">
+            <div class="cols">
+              <div class="col-2of5">
+              </div>
+            </div>
+            <a href="#" class="yes" onclick="return false;">
+              <button class="button dac-primary dac-modal-action lang yes" data-t="newsletter.resetLangButtonYes" data-modal-toggle>
+                
+                Change Language
+              </button>
+            </a>
+            <a href="#" class="" onclick="return false;">
+              <button class="button dac-primary dac-modal-action lang no" data-t="newsletter.resetLangButtonNo" data-modal-toggle>
+                
+                Not Now
+              </button>
+            </a>
+          </footer>
+        </form>
+      </section>
+    </div>
+  </div>
+</div><!--/.dac-modal-->
+
+
+<div data-modal="api-unavailable" class="dac-modal" id="api-unavailable">
+  <div class="dac-modal-container">
+    <div class="dac-modal-window">
+      <header class="dac-modal-header">
+        <div class="dac-modal-header-actions">
+          <button class="dac-modal-header-close" data-modal-toggle></button>
+        </div>
+        <section class="dac-swap-section dac-active dac-down">
+          <h2 class="norule dac-modal-header-title">
+            
+            This class requires API level <span class="api-level"></span> or higher
+          </h2>
+        </section>
+      </header>
+      <section class="dac-swap-section dac-active dac-left">
+          <section class="dac-modal-content">
+            <p>
+              
+              This doc is hidden because your selected API level for the documentation is <span class="api-level"></span>. You can change the documentation API level with the selector above the left navigation.
+            </p>
+            
+            <p>For more information about specifying the API level your app requires, read <a href="https://developer.android.com/training/basics/supporting-devices/platforms.html">Supporting Different Platform Versions</a>.</p>
+          </section>
+          <footer class="dac-modal-footer" id="langfooter">
+            <div class="cols">
+              <div class="col-2of5">
+              </div>
+            </div>
+            <a href="#" class="ok" onclick="return false;">
+              <button class="button dac-primary dac-modal-action ok"
+              data-modal-toggle>
+                
+                OK, make this page visible
+              </button>
+            </a>
+          </footer>
+        </form>
+      </section>
+    </div>
+  </div>
+</div><!--/.dac-modal#api-unavailable-->
+
+    
+  </div><!--/#body-content-->
+
+  <!-- Nav Setup -->
+  <script>$('[data-dac-nav]').dacNav();</script>
+  <script type="text/javascript">
+    $('.slideshow-container').dacSlideshow({
+        btnPrev: '.slideshow-prev',
+        btnNext: '.slideshow-next',
+        btnPause: '#pauseButton'
+    });
+
+    $(".feed").dacTabbedList({
+      nav_id: '.feed-nav',
+      frame_id: '.feed-frame'
+    });
+  </script>
+  
+  <script src="../../../ytblogger_lists_unified543b.js?v=2017111903" defer></script>
+  <script src="../../../android_metadata_en543b.js?v=2017111903" defer></script>
+  
+  <script src="../../lists543b.js?v=2017111903" defer></script>
+  <script src="../../gms_lists543b.js?v=2017111903" defer></script>
+  <script src="../support/wearable/lists543b.js?v=2017111903" defer></script>
+  <script src="../support/test/lists543b.js?v=2017111903" defer></script>
+  <script src="../support/constraint/lists543b.js?v=2017111903" defer></script>
+  <script src="../arch/lists543b.js?v=2017111903" defer></script>
+  <script src="https://developer.android.com/_static2/268f0926ba/jsi18n/"></script>
+  <script>
+    // Load localized metadata.
+    (function(lang) {
+      if (lang === 'en') { return; }
+      document.write('<script src="https://developer.android.com/android_metadata_en.js?v=2017111903" defer></' + 'script>');
+    })(getLangPref())
+
+    // Add skip to content for accessibility.
+    $('#skip-to-main').click(function() {
+      $('a[name=top]').focus();
+    });
+
+    $('.devsite-utility-footer-language-select').each(function() {
+      $(this).change(function() {
+        changeLangPref(this.value, true)
+        $('.devsite-utility-footer-language').submit();
+      });
+    });
+  </script>
+
+  <script>
+    (function($) {
+      devsite.analytics.InitAnalytics();
+      devsite.navigatingRadio.init();
+      devsite.kennedy.InitializeTabbars();
+      // overflowMenu must be initialized after tabbar.
+      devsite.overflowMenu.init();
+    })(jQuery);
+  </script>
+
+  
+
+
+<div id="survey-box-wrapper">
+  <div class="material-dialog" style="width:270px">
+    <div class="material-dialog-title">
+      Take a short survey?
+    </div>
+    <div class="material-dialog-description">
+      Help us improve the Android developer experience.
+      <br>(Sep 2017 survey)
+    </div>
+    <div class="material-button-bar">
+      <a class="dac-button dac-primary dac-raised" target="_blank"
+          href="https://goo.gl/dNPzCR">Okay</a>
+      <a class="dac-button" href="#">No thanks</a>
+    </div>
+  </div>
+</div>
+
+</body>
+
+<!-- Mirrored from developer.android.com/reference/android/telecom/Call.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 19 Nov 2017 16:34:16 GMT -->
+</html>

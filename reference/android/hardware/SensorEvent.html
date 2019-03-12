@@ -1,0 +1,2488 @@
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/Article">
+
+<!-- Mirrored from developer.android.com/reference/android/hardware/SensorEvent.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 19 Nov 2017 16:45:48 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+
+  
+
+
+
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+
+
+
+
+
+<script>var a=window.devsite||{};window.devsite=a;a.readyCallbacks=[];window.devsite.readyCallbacks=a.readyCallbacks;a.ready=function(b){a.readyCallbacks.push(b)};window.devsite.ready=a.ready;
+</script>
+
+<meta charset="utf-8">
+
+
+
+<meta name="xsrf_token" content="8gDmbsb5sCm_7Zl0yse_dWRQsDYK3Ozpgm1SdpMP0_Y6MTUxMTEwNzgwOTc3MzUzMA" />
+
+  
+    <link rel="canonical" href="SensorEvent.html">
+  
+
+  
+    <link rel="alternate" href="SensorEvent.html" hreflang="en">
+  
+    <link rel="alternate" href="https://developer.android.google.cn/reference/android/hardware/SensorEvent.html" hreflang="en-cn">
+  
+
+  <link rel="alternate" href="SensorEvent.html" hreflang="x-default">
+
+
+
+
+<link rel="shortcut icon" href="../../../_static/268f0926ba/images/android/favicon.png">
+
+<link rel="apple-touch-icon" href="../../../_static/268f0926ba/images/android/touchicon-180.png">
+
+
+<title>
+
+  SensorEvent | Android Developers
+
+</title>
+
+
+
+  <meta itemprop="dateModified" content="2017-10-25T17:01:20.093250">
+
+
+<!-- STYLESHEETS -->
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto+Condensed">
+<link rel="stylesheet"
+    href="http://fonts.googleapis.com/css?family=Roboto:light,regular,medium,thin,italic,mediumitalic,bold"
+    title="roboto">
+<link rel="stylesheet" href="../../../_static/268f0926ba/css/dac-devsite.css">
+
+
+
+
+
+
+
+<link href="../../../static/css/default9a55.css?v=2017111904" rel="stylesheet" type="text/css">
+<!-- JAVASCRIPT -->
+<script src="../../../_static/268f0926ba/js/android_3p-bundle.js" type="text/javascript"></script>
+<script src="../../../_static/268f0926ba/js/script_foot_closure_android.js"></script>
+<script src="../../../_static/268f0926ba/js/script_foot_android.js"></script>
+
+<script type="text/javascript">
+  var toRoot = 'https://developer.android.com/';
+  devsite.permissions.init({"f62218c009ec029abef196bba5aa34cf": true, "098dafe57affddc137df300142652cfd": false, "8e03e230de0bd8a6fe173fdf172e8b3f": false, "cb025a64a50094835616312f4774a53d": true, "c95bf81627eb648c2345aec06a66200a": true, "51470233c56fc1fde50f00b73c52b216": false, "d169d485cf24243a263783dbe42029b1": true, "039e5d84b87fd75807ffb37b7f1bbf2c": true, "752953480de00a336d911a46966cc16d": false, "700def1a83e356c06c0925afb05de4b0": false, "6749dcb526ce9bde6993550c7d928d24": true});
+
+  var replaceBlog = false;
+  var replaceYouTube = false;
+  var siteDefaultLocale = 'en';
+
+  var ANDROID_LANGUAGES = [
+      'id','de','en','es','es-419','fr','pt-br','vi','tr','ru','th','ja','zh-cn','zh-tw','ko'
+  ];
+</script>
+<script src="../../../static/js/docs9a55.js?v=2017111904" type="text/javascript"></script>
+
+
+</head>
+
+<body class="gc-documentation
+            api apilevel-3
+            
+              develop
+              reference
+            
+            ">
+  
+
+
+  
+    <input class="google-analytics-id-json" type="hidden" value="{&quot;dimensions&quot;: {&quot;dimension6&quot;: &quot;en&quot;, &quot;dimension4&quot;: &quot;Reference&quot;, &quot;dimension5&quot;: &quot;en&quot;, &quot;dimension3&quot;: false, &quot;dimension1&quot;: &quot;Signed out&quot;, &quot;dimension8&quot;: null}, &quot;gaid&quot;: &quot;UA-49880327-2&quot;}">
+  
+    <input class="google-analytics-id-json" type="hidden" value="{&quot;dimensions&quot;: {&quot;dimension6&quot;: &quot;en&quot;, &quot;dimension4&quot;: &quot;Reference&quot;, &quot;dimension5&quot;: &quot;en&quot;, &quot;dimension3&quot;: false, &quot;dimension1&quot;: &quot;Signed out&quot;, &quot;dimension8&quot;: null}, &quot;gaid&quot;: &quot;UA-5831155-1&quot;}">
+  
+
+
+
+  
+  
+    <script>
+      var dataLayer = [{"freeTrialEligibleUser": "False", "userCountry": "BD", "language": {"requested": "en", "served": "en"}, "projectName": "Reference", "scriptsafe": null, "signedIn": "False", "internalUser": "False"}];
+    </script>
+  
+
+
+
+  
+  <a href="#top" id="skip-to-main">Skip to content</a>
+  <header id="header-wrapper">
+    <div class="dac-header" id="header">
+      <div class="dac-header-inner">
+        
+        <a class="dac-nav-toggle" data-dac-toggle-nav href="#" title="Open navigation">
+          <span class="dac-nav-hamburger">
+            <span class="dac-nav-hamburger-top"></span>
+            <span class="dac-nav-hamburger-mid"></span>
+            <span class="dac-nav-hamburger-bot"></span>
+          </span>
+        </a>
+        
+        <a class="dac-header-logo" href="https://developer.android.com/index.html">
+          <img class="dac-header-logo-image" src="../../../static/images/android_logo.png"
+              srcset="https://developer.android.com/static/images/android_logo_2x.png 2x"
+              width="32" height="36" alt="Android"> Developers</a>
+        <ul class="dac-header-tabs">
+          <li>
+            <a class="dac-header-tab" href="https://developer.android.com/design/index.html"
+               zh-tw-lang="設計"
+               zh-cn-lang="设计"
+               ru-lang="Проектирование"
+               ko-lang="디자인"
+               ja-lang="設計"
+               es-lang="Diseñar">
+              
+              Design</a>
+          </li>
+          <li>
+            <a class="dac-header-tab" href="https://developer.android.com/develop/index.html"
+               zh-tw-lang="開發"
+               zh-cn-lang="开发"
+               ru-lang="Разработка"
+               ko-lang="개발"
+               ja-lang="開発"
+               es-lang="Desarrollar">
+              
+              Develop</a>
+          </li>
+          <li>
+            <a class="dac-header-tab" href="https://developer.android.com/distribute/index.html"
+               zh-tw-lang="發佈"
+               zh-cn-lang="分发"
+               ru-lang="Распространение"
+               ko-lang="배포"
+               ja-lang="配布"
+               es-lang="Distribuir">
+              
+              Distribute</a>
+          </li>
+        </ul>
+
+
+        
+
+        <a class="dac-header-console-btn gc-analytics-event" href="https://play.google.com/apps/publish/"
+           data-category="User" data-action="Console" data-label="Clicked">
+          
+          <img src="https://developer.android.com/static/images/developer-console-icon.svg" width="18" height="19" alt="">Play Console</a>
+        
+
+<form data-search="" class="dac-header-search">
+  <button class="dac-header-search-close" data-search-close="">
+    <i class="dac-sprite dac-back-arrow"></i>
+  </button>
+
+  <div class="dac-header-search-inner">
+    <i class="dac-sprite dac-search-white dac-header-search-icon"></i>
+    
+    <input id="search_autocomplete" type="text" value="" autocomplete="off" name="q" class="dac-header-search-input" placeholder="Search">
+    <button class="dac-header-search-clear dac-hidden" data-search-clear="">
+      <i class="dac-sprite dac-close-black"></i>
+    </button>
+  </div>
+</form>
+
+        
+      </div><!--/.header-wrap.wrap-->
+    </div><!--/.header-->
+
+    
+
+<div id="search-results" class="dac-search-results">
+  <div id="dac-search-results-history" class="dac-search-results-history">
+    <div class="wrap dac-search-results-history-wrap">
+      <div class="cols">
+        <div class="col-1of2 col-tablet-1of2 col-mobile-1of1">
+          
+          <h2>Most visited</h2>
+          <div class="resource-flow-layout" data-history-query="history:most/visited" data-maxresults="3" data-cardsizes="18x2"></div>
+        </div>
+
+        <div class="col-1of2 col-tablet-1of2 col-mobile-1of1">
+          
+          <h2>Recently visited</h2>
+          <div class="resource-flow-layout cols" data-history-query="history:recent" data-allow-duplicates="true" data-maxresults="3" data-cardsizes="18x2"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="dac-search-results-content" class="dac-search-results-content">
+    <div class="dac-search-results-metadata wrap">
+      <div class="dac-search-results-for">
+          <h2>
+          
+          Results for <span id="search-results-for"></span>
+          </h2>
+      </div>
+
+      <div id="dac-search-results-hero"></div>
+
+      <div class="dac-search-results-hero cols">
+        <div id="dac-search-results-reference" class="col-6of6 col-tablet-2of2 col-mobile-1of1">
+          <div class="suggest-card reference no-display">
+            <ul class="dac-search-results-reference">
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="cols dac-search-results-cse">
+        <script src="../../../../cse.google.com/f4116.txt?cx=000521750095050289010:zpcpi1ea4s8" async></script>
+        <gcse:searchresults-only linkTarget="_self"></gcse:searchresults-only>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </header>
+
+  <a name="navigation" tabindex=0 class="nav-start-marker">navigation</a>
+  <nav class="dac-nav">
+    <div class="dac-nav-dimmer" data-dac-toggle-nav></div>
+    <div class="dac-nav-sidebar" data-swap data-dynamic="false" data-transition-speed="300" data-dac-nav>
+      <div data-swap-container>
+        
+        <a class="dac-nav-back-button dac-swap-section dac-up dac-no-anim" tabindex=0 data-swap-button>
+          
+          
+          <i class="dac-sprite dac-nav-back"></i> <span class="dac-nav-back-title">Back</span>
+        </a>
+
+        <div class="dac-nav-sub dac-swap-section dac-right dac-active" itemscope
+            itemtype="http://schema.org/SiteNavigationElement">
+          
+          
+            
+              
+              <button data-fullscreen="" class="dac-nav-fullscreen">
+                <i class="dac-sprite dac-fullscreen"></i>
+              </button>
+              <script>$('[data-fullscreen]').dacFullscreen();</script>
+              <div id="devdoc-nav">
+                <div id="api-nav-header">
+                  <div id="api-level-toggle">
+                    <label for="apiLevelCheckbox" class="disabled"
+                        
+                        title="Select your target API level to dim unavailable APIs">
+                        
+                        API:
+                    </label>
+                    <div class="select-wrapper">
+                      <select id="apiLevelSelector"></select>
+                    </div>
+                  </div><!-- end toggle -->
+                  <div id="api-nav-title">
+                    <select id="reference-selector">
+                      
+                      <option value="android">Android Platform</option>
+                      
+                      
+                      <option value="android/support">Android Support Library</option>
+                      
+                      
+                      <option value="android/arch">Architecture Components</option>
+                      
+                      <option value="android/support/constraint">Constraint Library</option>
+                      
+                      <option value="com/android/billingclient">Play Billing Library</option>
+                      
+                      <option value="android/support/test">Test Support Library</option>
+                      
+                      <option value="android/support/wearable">Wearable Library</option>
+                    </select>
+                  </div>
+                </div><!-- end nav header -->
+                <script>
+                  buildApiLevelSelector();
+                  initReferenceSelector();
+                </script>
+                <div class="dac-reference-nav" data-reference-tree="">
+                  <ul class="dac-reference-nav-list" data-reference-namespaces="">
+                    <li class="api no-toggle"><a href="../../classes.html" >Class Index</a></li><li class="api no-toggle"><a href="../../packages.html" >Package Index</a></li><li class="api apilevel-1"><a href="../package-summary.html" >android</a></li><li class="api apilevel-4"><a href="../accessibilityservice/package-summary.html" >android.accessibilityservice</a></li><li class="api apilevel-5"><a href="../accounts/package-summary.html" >android.accounts</a></li><li class="api apilevel-11"><a href="../animation/package-summary.html" >android.animation</a></li><li class="api apilevel-16"><a href="../annotation/package-summary.html" >android.annotation</a></li><li class="api apilevel-1"><a href="../app/package-summary.html" >android.app</a></li><li class="api apilevel-8"><a href="../app/admin/package-summary.html" >android.app.admin</a></li><li class="api apilevel-23"><a href="../app/assist/package-summary.html" >android.app.assist</a></li><li class="api apilevel-8"><a href="../app/backup/package-summary.html" >android.app.backup</a></li><li class="api apilevel-21"><a href="../app/job/package-summary.html" >android.app.job</a></li><li class="api apilevel-21"><a href="../app/usage/package-summary.html" >android.app.usage</a></li><li class="api apilevel-3"><a href="../appwidget/package-summary.html" >android.appwidget</a></li><li class="api apilevel-5"><a href="../bluetooth/package-summary.html" >android.bluetooth</a></li><li class="api apilevel-21"><a href="../bluetooth/le/package-summary.html" >android.bluetooth.le</a></li><li class="api apilevel-26"><a href="../companion/package-summary.html" >android.companion</a></li><li class="api apilevel-1"><a href="../content/package-summary.html" >android.content</a></li><li class="api apilevel-1"><a href="../content/pm/package-summary.html" >android.content.pm</a></li><li class="api apilevel-1"><a href="../content/res/package-summary.html" >android.content.res</a></li><li class="api apilevel-1"><a href="../database/package-summary.html" >android.database</a></li><li class="api apilevel-1"><a href="../database/sqlite/package-summary.html" >android.database.sqlite</a></li><li class="api apilevel-"><a href="../databinding/package-summary.html" >android.databinding</a></li><li class="api apilevel-11"><a href="../drm/package-summary.html" >android.drm</a></li><li class="api apilevel-4"><a href="../gesture/package-summary.html" >android.gesture</a></li><li class="api apilevel-1"><a href="../graphics/package-summary.html" >android.graphics</a></li><li class="api apilevel-1"><a href="../graphics/drawable/package-summary.html" >android.graphics.drawable</a></li><li class="api apilevel-1"><a href="../graphics/drawable/shapes/package-summary.html" >android.graphics.drawable.shapes</a></li><li class="api apilevel-26"><a href="../graphics/fonts/package-summary.html" >android.graphics.fonts</a></li><li class="api apilevel-19"><a href="../graphics/pdf/package-summary.html" >android.graphics.pdf</a></li><li class="api apilevel-1"><a href="package-summary.html" >android.hardware</a></li><li class="api apilevel-21"><a href="camera2/package-summary.html" >android.hardware.camera2</a></li><li class="api apilevel-21"><a href="camera2/params/package-summary.html" >android.hardware.camera2.params</a></li><li class="api apilevel-17"><a href="display/package-summary.html" >android.hardware.display</a></li><li class="api apilevel-23"><a href="fingerprint/package-summary.html" >android.hardware.fingerprint</a></li><li class="api apilevel-16"><a href="input/package-summary.html" >android.hardware.input</a></li><li class="api apilevel-12"><a href="usb/package-summary.html" >android.hardware.usb</a></li><li class="api apilevel-24"><a href="../icu/lang/package-summary.html" >android.icu.lang</a></li><li class="api apilevel-24"><a href="../icu/math/package-summary.html" >android.icu.math</a></li><li class="api apilevel-24"><a href="../icu/text/package-summary.html" >android.icu.text</a></li><li class="api apilevel-24"><a href="../icu/util/package-summary.html" >android.icu.util</a></li><li class="api apilevel-3"><a href="../inputmethodservice/package-summary.html" >android.inputmethodservice</a></li><li class="api apilevel-1"><a href="../location/package-summary.html" >android.location</a></li><li class="api apilevel-1"><a href="../media/package-summary.html" >android.media</a></li><li class="api apilevel-9"><a href="../media/audiofx/package-summary.html" >android.media.audiofx</a></li><li class="api apilevel-21"><a href="../media/browse/package-summary.html" >android.media.browse</a></li><li class="api apilevel-14"><a href="../media/effect/package-summary.html" >android.media.effect</a></li><li class="api apilevel-23"><a href="../media/midi/package-summary.html" >android.media.midi</a></li><li class="api apilevel-21"><a href="../media/projection/package-summary.html" >android.media.projection</a></li><li class="api apilevel-21"><a href="../media/session/package-summary.html" >android.media.session</a></li><li class="api apilevel-21"><a href="../media/tv/package-summary.html" >android.media.tv</a></li><li class="api apilevel-12"><a href="../mtp/package-summary.html" >android.mtp</a></li><li class="api apilevel-1"><a href="../net/package-summary.html" >android.net</a></li><li class="api apilevel-1"><a href="../net/http/package-summary.html" >android.net.http</a></li><li class="api apilevel-16"><a href="../net/nsd/package-summary.html" >android.net.nsd</a></li><li class="api apilevel-12"><a href="../net/rtp/package-summary.html" >android.net.rtp</a></li><li class="api apilevel-9"><a href="../net/sip/package-summary.html" >android.net.sip</a></li><li class="api apilevel-1"><a href="../net/wifi/package-summary.html" >android.net.wifi</a></li><li class="api apilevel-26"><a href="../net/wifi/aware/package-summary.html" >android.net.wifi.aware</a></li><li class="api apilevel-26"><a href="../net/wifi/hotspot2/package-summary.html" >android.net.wifi.hotspot2</a></li><li class="api apilevel-26"><a href="../net/wifi/hotspot2/omadm/package-summary.html" >android.net.wifi.hotspot2.omadm</a></li><li class="api apilevel-26"><a href="../net/wifi/hotspot2/pps/package-summary.html" >android.net.wifi.hotspot2.pps</a></li><li class="api apilevel-14"><a href="../net/wifi/p2p/package-summary.html" >android.net.wifi.p2p</a></li><li class="api apilevel-16"><a href="../net/wifi/p2p/nsd/package-summary.html" >android.net.wifi.p2p.nsd</a></li><li class="api apilevel-9"><a href="../nfc/package-summary.html" >android.nfc</a></li><li class="api apilevel-19"><a href="../nfc/cardemulation/package-summary.html" >android.nfc.cardemulation</a></li><li class="api apilevel-10"><a href="../nfc/tech/package-summary.html" >android.nfc.tech</a></li><li class="api apilevel-1"><a href="../opengl/package-summary.html" >android.opengl</a></li><li class="api apilevel-1"><a href="../os/package-summary.html" >android.os</a></li><li class="api apilevel-24"><a href="../os/health/package-summary.html" >android.os.health</a></li><li class="api apilevel-9"><a href="../os/storage/package-summary.html" >android.os.storage</a></li><li class="api apilevel-1"><a href="../preference/package-summary.html" >android.preference</a></li><li class="api apilevel-19"><a href="../print/package-summary.html" >android.print</a></li><li class="api apilevel-19"><a href="../print/pdf/package-summary.html" >android.print.pdf</a></li><li class="api apilevel-19"><a href="../printservice/package-summary.html" >android.printservice</a></li><li class="api apilevel-1"><a href="../provider/package-summary.html" >android.provider</a></li><li class="api apilevel-11"><a href="../renderscript/package-summary.html" >android.renderscript</a></li><li class="api apilevel-1"><a href="../sax/package-summary.html" >android.sax</a></li><li class="api apilevel-14"><a href="../security/package-summary.html" >android.security</a></li><li class="api apilevel-23"><a href="../security/keystore/package-summary.html" >android.security.keystore</a></li><li class="api apilevel-26"><a href="../service/autofill/package-summary.html" >android.service.autofill</a></li><li class="api apilevel-22"><a href="../service/carrier/package-summary.html" >android.service.carrier</a></li><li class="api apilevel-23"><a href="../service/chooser/package-summary.html" >android.service.chooser</a></li><li class="api apilevel-17"><a href="../service/dreams/package-summary.html" >android.service.dreams</a></li><li class="api apilevel-21"><a href="../service/media/package-summary.html" >android.service.media</a></li><li class="api apilevel-18"><a href="../service/notification/package-summary.html" >android.service.notification</a></li><li class="api apilevel-24"><a href="../service/quicksettings/package-summary.html" >android.service.quicksettings</a></li><li class="api apilevel-21"><a href="../service/restrictions/package-summary.html" >android.service.restrictions</a></li><li class="api apilevel-14"><a href="../service/textservice/package-summary.html" >android.service.textservice</a></li><li class="api apilevel-21"><a href="../service/voice/package-summary.html" >android.service.voice</a></li><li class="api apilevel-24"><a href="../service/vr/package-summary.html" >android.service.vr</a></li><li class="api apilevel-7"><a href="../service/wallpaper/package-summary.html" >android.service.wallpaper</a></li><li class="api apilevel-3"><a href="../speech/package-summary.html" >android.speech</a></li><li class="api apilevel-4"><a href="../speech/tts/package-summary.html" >android.speech.tts</a></li><li class="api apilevel-21"><a href="../system/package-summary.html" >android.system</a></li><li class="api apilevel-21"><a href="../telecom/package-summary.html" >android.telecom</a></li><li class="api apilevel-1"><a href="../telephony/package-summary.html" >android.telephony</a></li><li class="api apilevel-5"><a href="../telephony/cdma/package-summary.html" >android.telephony.cdma</a></li><li class="api apilevel-1"><a href="../telephony/gsm/package-summary.html" >android.telephony.gsm</a></li><li class="api apilevel-1"><a href="../test/package-summary.html" >android.test</a></li><li class="api apilevel-1"><a href="../test/mock/package-summary.html" >android.test.mock</a></li><li class="api apilevel-1"><a href="../test/suitebuilder/package-summary.html" >android.test.suitebuilder</a></li><li class="api apilevel-1"><a href="../test/suitebuilder/annotation/package-summary.html" >android.test.suitebuilder.annotation</a></li><li class="api apilevel-1"><a href="../text/package-summary.html" >android.text</a></li><li class="api apilevel-3"><a href="../text/format/package-summary.html" >android.text.format</a></li><li class="api apilevel-1"><a href="../text/method/package-summary.html" >android.text.method</a></li><li class="api apilevel-1"><a href="../text/style/package-summary.html" >android.text.style</a></li><li class="api apilevel-1"><a href="../text/util/package-summary.html" >android.text.util</a></li><li class="api apilevel-19"><a href="../transition/package-summary.html" >android.transition</a></li><li class="api apilevel-1"><a href="../util/package-summary.html" >android.util</a></li><li class="api apilevel-1"><a href="../view/package-summary.html" >android.view</a></li><li class="api apilevel-4"><a href="../view/accessibility/package-summary.html" >android.view.accessibility</a></li><li class="api apilevel-1"><a href="../view/animation/package-summary.html" >android.view.animation</a></li><li class="api apilevel-26"><a href="../view/autofill/package-summary.html" >android.view.autofill</a></li><li class="api apilevel-3"><a href="../view/inputmethod/package-summary.html" >android.view.inputmethod</a></li><li class="api apilevel-26"><a href="../view/textclassifier/package-summary.html" >android.view.textclassifier</a></li><li class="api apilevel-14"><a href="../view/textservice/package-summary.html" >android.view.textservice</a></li><li class="api apilevel-1"><a href="../webkit/package-summary.html" >android.webkit</a></li><li class="api apilevel-1"><a href="../widget/package-summary.html" >android.widget</a></li><li class="api apilevel-1"><a href="../../com/android/internal/util/package-summary.html" >com.android.internal.util</a></li><li class="api apilevel-1"><a href="../../dalvik/annotation/package-summary.html" >dalvik.annotation</a></li><li class="api apilevel-1"><a href="../../dalvik/bytecode/package-summary.html" >dalvik.bytecode</a></li><li class="api apilevel-1"><a href="../../dalvik/system/package-summary.html" >dalvik.system</a></li><li class="api apilevel-1"><a href="../../java/awt/font/package-summary.html" >java.awt.font</a></li><li class="api apilevel-3"><a href="../../java/beans/package-summary.html" >java.beans</a></li><li class="api apilevel-1"><a href="../../java/io/package-summary.html" >java.io</a></li><li class="api apilevel-1"><a href="../../java/lang/package-summary.html" >java.lang</a></li><li class="api apilevel-1"><a href="../../java/lang/annotation/package-summary.html" >java.lang.annotation</a></li><li class="api apilevel-26"><a href="../../java/lang/invoke/package-summary.html" >java.lang.invoke</a></li><li class="api apilevel-1"><a href="../../java/lang/ref/package-summary.html" >java.lang.ref</a></li><li class="api apilevel-1"><a href="../../java/lang/reflect/package-summary.html" >java.lang.reflect</a></li><li class="api apilevel-1"><a href="../../java/math/package-summary.html" >java.math</a></li><li class="api apilevel-1"><a href="../../java/net/package-summary.html" >java.net</a></li><li class="api apilevel-1"><a href="../../java/nio/package-summary.html" >java.nio</a></li><li class="api apilevel-1"><a href="../../java/nio/channels/package-summary.html" >java.nio.channels</a></li><li class="api apilevel-1"><a href="../../java/nio/channels/spi/package-summary.html" >java.nio.channels.spi</a></li><li class="api apilevel-1"><a href="../../java/nio/charset/package-summary.html" >java.nio.charset</a></li><li class="api apilevel-1"><a href="../../java/nio/charset/spi/package-summary.html" >java.nio.charset.spi</a></li><li class="api apilevel-26"><a href="../../java/nio/file/package-summary.html" >java.nio.file</a></li><li class="api apilevel-26"><a href="../../java/nio/file/attribute/package-summary.html" >java.nio.file.attribute</a></li><li class="api apilevel-26"><a href="../../java/nio/file/spi/package-summary.html" >java.nio.file.spi</a></li><li class="api apilevel-1"><a href="../../java/security/package-summary.html" >java.security</a></li><li class="api apilevel-1"><a href="../../java/security/acl/package-summary.html" >java.security.acl</a></li><li class="api apilevel-1"><a href="../../java/security/cert/package-summary.html" >java.security.cert</a></li><li class="api apilevel-1"><a href="../../java/security/interfaces/package-summary.html" >java.security.interfaces</a></li><li class="api apilevel-1"><a href="../../java/security/spec/package-summary.html" >java.security.spec</a></li><li class="api apilevel-1"><a href="../../java/sql/package-summary.html" >java.sql</a></li><li class="api apilevel-1"><a href="../../java/text/package-summary.html" >java.text</a></li><li class="api apilevel-26"><a href="../../java/time/package-summary.html" >java.time</a></li><li class="api apilevel-26"><a href="../../java/time/chrono/package-summary.html" >java.time.chrono</a></li><li class="api apilevel-26"><a href="../../java/time/format/package-summary.html" >java.time.format</a></li><li class="api apilevel-26"><a href="../../java/time/temporal/package-summary.html" >java.time.temporal</a></li><li class="api apilevel-26"><a href="../../java/time/zone/package-summary.html" >java.time.zone</a></li><li class="api apilevel-1"><a href="../../java/util/package-summary.html" >java.util</a></li><li class="api apilevel-1"><a href="../../java/util/concurrent/package-summary.html" >java.util.concurrent</a></li><li class="api apilevel-1"><a href="../../java/util/concurrent/atomic/package-summary.html" >java.util.concurrent.atomic</a></li><li class="api apilevel-1"><a href="../../java/util/concurrent/locks/package-summary.html" >java.util.concurrent.locks</a></li><li class="api apilevel-24"><a href="../../java/util/function/package-summary.html" >java.util.function</a></li><li class="api apilevel-1"><a href="../../java/util/jar/package-summary.html" >java.util.jar</a></li><li class="api apilevel-1"><a href="../../java/util/logging/package-summary.html" >java.util.logging</a></li><li class="api apilevel-1"><a href="../../java/util/prefs/package-summary.html" >java.util.prefs</a></li><li class="api apilevel-1"><a href="../../java/util/regex/package-summary.html" >java.util.regex</a></li><li class="api apilevel-24"><a href="../../java/util/stream/package-summary.html" >java.util.stream</a></li><li class="api apilevel-1"><a href="../../java/util/zip/package-summary.html" >java.util.zip</a></li><li class="api apilevel-1"><a href="../../javax/crypto/package-summary.html" >javax.crypto</a></li><li class="api apilevel-1"><a href="../../javax/crypto/interfaces/package-summary.html" >javax.crypto.interfaces</a></li><li class="api apilevel-1"><a href="../../javax/crypto/spec/package-summary.html" >javax.crypto.spec</a></li><li class="api apilevel-1"><a href="../../javax/microedition/khronos/egl/package-summary.html" >javax.microedition.khronos.egl</a></li><li class="api apilevel-1"><a href="../../javax/microedition/khronos/opengles/package-summary.html" >javax.microedition.khronos.opengles</a></li><li class="api apilevel-1"><a href="../../javax/net/package-summary.html" >javax.net</a></li><li class="api apilevel-1"><a href="../../javax/net/ssl/package-summary.html" >javax.net.ssl</a></li><li class="api apilevel-1"><a href="../../javax/security/auth/package-summary.html" >javax.security.auth</a></li><li class="api apilevel-1"><a href="../../javax/security/auth/callback/package-summary.html" >javax.security.auth.callback</a></li><li class="api apilevel-1"><a href="../../javax/security/auth/login/package-summary.html" >javax.security.auth.login</a></li><li class="api apilevel-1"><a href="../../javax/security/auth/x500/package-summary.html" >javax.security.auth.x500</a></li><li class="api apilevel-1"><a href="../../javax/security/cert/package-summary.html" >javax.security.cert</a></li><li class="api apilevel-1"><a href="../../javax/sql/package-summary.html" >javax.sql</a></li><li class="api apilevel-1"><a href="../../javax/xml/package-summary.html" >javax.xml</a></li><li class="api apilevel-8"><a href="../../javax/xml/datatype/package-summary.html" >javax.xml.datatype</a></li><li class="api apilevel-8"><a href="../../javax/xml/namespace/package-summary.html" >javax.xml.namespace</a></li><li class="api apilevel-1"><a href="../../javax/xml/parsers/package-summary.html" >javax.xml.parsers</a></li><li class="api apilevel-8"><a href="../../javax/xml/transform/package-summary.html" >javax.xml.transform</a></li><li class="api apilevel-8"><a href="../../javax/xml/transform/dom/package-summary.html" >javax.xml.transform.dom</a></li><li class="api apilevel-8"><a href="../../javax/xml/transform/sax/package-summary.html" >javax.xml.transform.sax</a></li><li class="api apilevel-8"><a href="../../javax/xml/transform/stream/package-summary.html" >javax.xml.transform.stream</a></li><li class="api apilevel-8"><a href="../../javax/xml/validation/package-summary.html" >javax.xml.validation</a></li><li class="api apilevel-8"><a href="../../javax/xml/xpath/package-summary.html" >javax.xml.xpath</a></li><li class="api apilevel-1"><a href="../../junit/framework/package-summary.html" >junit.framework</a></li><li class="api apilevel-1"><a href="../../junit/runner/package-summary.html" >junit.runner</a></li><li class="api apilevel-1"><a href="../../org/apache/http/conn/package-summary.html" >org.apache.http.conn</a></li><li class="api apilevel-1"><a href="../../org/apache/http/conn/scheme/package-summary.html" >org.apache.http.conn.scheme</a></li><li class="api apilevel-1"><a href="../../org/apache/http/conn/ssl/package-summary.html" >org.apache.http.conn.ssl</a></li><li class="api apilevel-1"><a href="../../org/apache/http/params/package-summary.html" >org.apache.http.params</a></li><li class="api apilevel-1"><a href="../../org/json/package-summary.html" >org.json</a></li><li class="api apilevel-1"><a href="../../org/w3c/dom/package-summary.html" >org.w3c.dom</a></li><li class="api apilevel-8"><a href="../../org/w3c/dom/ls/package-summary.html" >org.w3c.dom.ls</a></li><li class="api apilevel-1"><a href="../../org/xml/sax/package-summary.html" >org.xml.sax</a></li><li class="api apilevel-1"><a href="../../org/xml/sax/ext/package-summary.html" >org.xml.sax.ext</a></li><li class="api apilevel-1"><a href="../../org/xml/sax/helpers/package-summary.html" >org.xml.sax.helpers</a></li><li class="api apilevel-1"><a href="../../org/xmlpull/v1/package-summary.html" >org.xmlpull.v1</a></li><li class="api apilevel-1"><a href="../../org/xmlpull/v1/sax2/package-summary.html" >org.xmlpull.v1.sax2</a></li>
+                  </ul>
+                </div>
+              </div>
+            
+          
+        </div>
+        
+        
+          
+
+
+
+<ul id="dac-main-navigation" class="dac-nav-list dac-swap-section dac-left dac-no-anim" tabindex=0>
+  <li class="dac-nav-item home">
+    
+    <a class="dac-nav-link" href="https://developer.android.com/index.html">Home</a>
+    <i class="dac-sprite dac-expand-more-black dac-nav-sub-slider" tabindex=0></i>
+    <ul class="dac-nav-secondary about">
+      <li class="dac-nav-item versions">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/about/versions/o/index.html">Android</a>
+      </li>
+      <li class="dac-nav-item wear">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/wear/index.html">Wear</a>
+      </li>
+      <li class="dac-nav-item tv">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/tv/index.html">TV</a>
+      </li>
+      <li class="dac-nav-item auto">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/auto/index.html">Auto</a>
+      </li>
+      
+      <li class="dac-nav-item chrome-os">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/chrome-os/index.html">Chrome OS</a>
+      </li>
+      
+      <li class="dac-nav-item things">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/things/index.html">Things</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dac-nav-item design">
+    <a class="dac-nav-link" href="https://developer.android.com/design/index.html"
+       zh-tw-lang="設計"
+       zh-cn-lang="设计"
+       ru-lang="Проектирование"
+       ko-lang="디자인"
+       ja-lang="設計"
+       es-lang="Diseñar">
+      
+      Design</a>
+  </li>
+  <li class="dac-nav-item develop">
+    <a class="dac-nav-link" href="https://developer.android.com/develop/index.html"
+       zh-tw-lang="開發"
+       zh-cn-lang="开发"
+       ru-lang="Разработка"
+       ko-lang="개발"
+       ja-lang="開発"
+       es-lang="Desarrollar">
+      
+      Develop</a>
+    <i class="dac-sprite dac-expand-more-black dac-nav-sub-slider" tabindex=0></i>
+    <ul class="dac-nav-secondary develop">
+      <li class="dac-nav-item training">
+        <a class="dac-nav-link" href="https://developer.android.com/training/index.html"
+           zh-tw-lang="訓練課程"
+           zh-cn-lang="培训"
+           ru-lang="Курсы"
+           ko-lang="교육"
+           ja-lang="トレーニング"
+           es-lang="Capacitación">
+            
+            Training</a>
+      </li>
+      <li class="dac-nav-item guide">
+        <a class="dac-nav-link" href="https://developer.android.com/guide/index.html"
+           zh-tw-lang="API 指南"
+           zh-cn-lang="API 指南"
+           ru-lang="Руководства по API"
+           ko-lang="API 가이드"
+           ja-lang="API ガイド"
+           es-lang="Guías de la API">
+          
+          API Guides</a>
+      </li>
+      <li class="dac-nav-item reference">
+        <a class="dac-nav-link" href="../../packages.html"
+           zh-tw-lang="參考資源"
+           zh-cn-lang="参考"
+           ru-lang="Справочник"
+           ko-lang="참조문서"
+           ja-lang="リファレンス"
+           es-lang="Referencia">
+          
+          Reference</a>
+      </li>
+      <li class="dac-nav-item samples">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/samples/index.html">Samples</a>
+      </li>
+      <li class="dac-nav-item libraries">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/topic/libraries/index.html">Libraries</a></li>
+      <li class="dac-nav-item studio">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/studio/index.html">Android Studio</a></li>
+      <li class="dac-nav-item ndk">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/ndk/index.html">Android NDK</a></li>
+      <li class="dac-nav-item google">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/google/index.html">Google Services</a>
+      </li>
+      <li class="dac-nav-item quality-guidelines">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/develop/quality-guidelines/index.html">Quality Guidelines</a>
+      </li>
+      <li class="dac-nav-item kotlin">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/kotlin/index.html">Kotlin</a>
+       </li>
+    </ul>
+  </li>
+  <li class="dac-nav-item distribute">
+    <a class="dac-nav-link" href="https://developer.android.com/distribute/index.html"
+       zh-tw-lang="發佈"
+       zh-cn-lang="分发"
+       ru-lang="Распространение"
+       ko-lang="배포"
+       ja-lang="配布"
+       de-lang="Vertrieb"
+       es-lang="Distribuir"
+       es-419-lang="Distribuye"
+       fr-lang="Distribuer"
+       id-lang="Distribusikan"
+       pt-br-lang="Distribuição"
+       th-lang="จัดจำหน่าย"
+       tr-lang="Dağıtma"
+       vi-lang="Phân phối">
+      
+      Distribute</a>
+    <i class="dac-sprite dac-expand-more-black dac-nav-sub-slider" tabindex=0></i>
+    <ul class="dac-nav-secondary distribute">
+      <li class="dac-nav-item google-play">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/distribute/google-play/index.html">Google Play</a>
+      </li>
+      <li class="dac-nav-item console">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/distribute/console/index.html">Play Console</a>
+      </li>
+      <li class="dac-nav-item best-practices">
+        <a class="dac-nav-link" href="https://developer.android.com/distribute/best-practices/index.html"
+          es-419-lang="Recomendaciones"
+          fr-lang="Bonnes pratiques"
+          id-lang="Praktik terbaik"
+          ja-lang="おすすめの方法"
+          ko-lang="권장사항"
+          pt-br-lang="Práticas recomendadas"
+          ru-lang="Рекомендации"
+          th-lang="จัดจำหน่าย"
+          tr-lang="En iyi uygulamalar"
+          vi-lang="Các phương pháp hay nhất"
+          zh-cn-lang="最佳做法"
+          zh-tw-lang="最佳做法">
+          
+          Best practices</a>
+      </li>
+      <li class="dac-nav-item marketing-tools">
+        <a class="dac-nav-link" href="https://developer.android.com/distribute/marketing-tools/index.html"
+          de-lang="Marketing-Tools"
+          es-419-lang="Herramientas de marketing"
+          fr-lang="Outils marketing"
+          id-lang="Fitur pemasaran"
+          ja-lang="マーケティング ツール"
+          ko-lang="마케팅 도구"
+          pt-br-lang="Ferramentas de marketing"
+          ru-lang="Маркетинговые инструменты"
+          th-lang="เครื่องมือการตลาด"
+          tr-lang="Pazarlama araçları"
+          vi-lang="Công cụ tiếp thị"
+          zh-cn-lang="营销工具"
+          zh-tw-lang="行銷工具">
+          
+          Marketing tools</a>
+      </li>
+      <li class="dac-nav-item policy-center">
+        
+        <a class="dac-nav-link" href="https://play.google.com/about/developer-content-policy/" target="_blank">Policy center</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dac-nav-item stories">
+    
+    <a class="dac-nav-link" href="https://developer.android.com/stories/index.html">Stories</a>
+  </li>
+  
+  <li class="dac-nav-item preview">
+    
+    <a class="dac-nav-link" href="https://developer.android.com/preview/index.html">Preview</a>
+  </li>
+  
+</ul>
+
+        
+      </div>
+    </div>
+  </nav>
+
+  <a name="top" tabindex="0"></a>
+  
+  <div class="wrap clearfix" id="body-content">
+  
+    
+      
+    
+    <div class="jd-descr " itemprop="articleBody">
+      <div id="doc-api-level" class="3" style="display:none"></div>
+
+
+
+
+<div id="naMessage"></div>
+
+<div id="api-info-block">
+<div class="api-level">
+  
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 3</a>
+  
+  
+  
+  
+
+</div>
+
+
+
+  
+   
+  
+  
+  
+  
+
+
+<div class="sum-details-links">
+
+Summary:
+
+
+
+
+
+
+
+  <a href="#lfields">Fields</a>
+  
+
+
+
+
+
+
+
+  &#124; <a href="#inhmethods">Inherited Methods</a>
+
+&#124; <a href="#" onclick="return toggleAllClassInherited()" id="toggleAllClassInherited">[Expand All]</a>
+
+</div><!-- end sum-details-links -->
+</div><!-- end api-info-block -->
+
+<div class="api apilevel-3" id="jd-content">
+
+<!-- ======== START OF CLASS DATA ======== -->
+
+<h1 class="api-title">SensorEvent</h1>
+<p>
+<code class="api-signature">
+  public
+  
+  
+  
+  class
+  SensorEvent
+</code>
+<br>
+
+
+<code class="api-signature">
+  
+    extends <a href="../../java/lang/Object.html">Object</a>
+  
+  
+  
+</code>
+
+<code class="api-signature">
+  
+  
+  
+</code>
+
+</p><table class="jd-inheritance-table">
+
+
+  <tr>
+    
+    <td colspan="2" class="jd-inheritance-class-cell"><a href="../../java/lang/Object.html">java.lang.Object</a>
+    </td>
+  </tr>
+  
+
+  <tr>
+    
+      <td class="jd-inheritance-space">&nbsp;&nbsp;&nbsp;&#x21b3;</td>
+    
+    <td colspan="1" class="jd-inheritance-class-cell">android.hardware.SensorEvent
+    </td>
+  </tr>
+  
+
+</table>
+  
+
+    
+
+<br><hr>
+
+
+  <p>This class represents a <code><a href="Sensor.html">Sensor</a></code> event and
+ holds information such as the sensor's type, the time-stamp, accuracy and of
+ course the sensor's <code><a href="SensorEvent.html#values">data</a></code>.
+
+ <p>
+ <u>Definition of the coordinate system used by the SensorEvent API.</u>
+ </p>
+
+ <p>
+ The coordinate-system is defined relative to the screen of the phone in its
+ default orientation. The axes are not swapped when the device's screen
+ orientation changes.
+ </p>
+
+ <p>
+ The X axis is horizontal and points to the right, the Y axis is vertical and
+ points up and the Z axis points towards the outside of the front face of the
+ screen. In this system, coordinates behind the screen have negative Z values.
+ </p>
+
+ <p>
+ <center><img src="../../../images/axis_device.png"
+ alt="Sensors coordinate-system diagram." border="0" /></center>
+ </p>
+
+ <p>
+ <b>Note:</b> This coordinate system is different from the one used in the
+ Android 2D APIs where the origin is in the top-left corner.
+ </p></p>
+
+
+
+
+
+  <div>
+      <p><b>See also:</b></p>
+      <ul class="nolist"><li><code><a href="SensorManager.html">SensorManager</a></code></li><li><code><a href="SensorEvent.html">SensorEvent</a></code></li><li><code><a href="Sensor.html">Sensor</a></code></li>
+      </ul>
+  </div>
+
+
+
+
+<h2 class="api-section">Summary</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- =========== FIELD SUMMARY =========== -->
+<table id="lfields" class="responsive properties">
+<tr><th colspan="2"><h3>Fields</h3></th></tr>
+
+
+
+  <tr class="api apilevel-3" >
+    <td><code>
+    public
+    
+    
+    int</code></td>
+    <td width="100%">
+      <code><a href="SensorEvent.html#accuracy">accuracy</a></code>
+      <p>The accuracy of this event.
+      
+    
+</p>
+    </td>
+  </tr>
+  
+
+  <tr class="api apilevel-3" >
+    <td><code>
+    public
+    
+    
+    <a href="Sensor.html">Sensor</a></code></td>
+    <td width="100%">
+      <code><a href="SensorEvent.html#sensor">sensor</a></code>
+      <p>The sensor that generated this event.
+      
+    
+</p>
+    </td>
+  </tr>
+  
+
+  <tr class="api apilevel-3" >
+    <td><code>
+    public
+    
+    
+    long</code></td>
+    <td width="100%">
+      <code><a href="SensorEvent.html#timestamp">timestamp</a></code>
+      <p>The time in nanosecond at which the event happened
+
+      
+    
+</p>
+    </td>
+  </tr>
+  
+
+  <tr class="api apilevel-3" >
+    <td><code>
+    public
+    
+    final
+    float[]</code></td>
+    <td width="100%">
+      <code><a href="SensorEvent.html#values">values</a></code>
+      <p><p>
+ The length and contents of the <code><a href="SensorEvent.html#values">values</a></code> array depends on
+ which <code><a href="Sensor.html">sensor</a></code> type is being monitored (see
+ also <code><a href="SensorEvent.html">SensorEvent</a></code> for a definition of the coordinate system used).
+      
+    
+</p>
+    </td>
+  </tr>
+  
+
+
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ========== METHOD SUMMARY =========== -->
+<table id="inhmethods" class="methods inhtable">
+<tr><th><h3>Inherited methods</h3></th></tr>
+
+
+<tr class="api apilevel-" >
+<td colspan="2">
+  <a href="#" id="inherited-methods-java.lang.Object" class="jd-expando-trigger closed"
+     onclick="return toggleInherited(this, null)" >
+    <img id="inherited-methods-java.lang.Object-trigger" class="jd-expando-trigger-img"
+         height="34"
+         src="../../../assets/images/styles/disclosure_down.png" />
+  </a>From
+class
+<code>
+  
+    <a href="../../java/lang/Object.html">java.lang.Object</a>
+  
+</code>
+<div id="inherited-methods-java.lang.Object">
+  <div id="inherited-methods-java.lang.Object-list"
+        class="jd-inheritedlinks">
+  </div>
+  <div id="inherited-methods-java.lang.Object-summary" style="display: none;">
+    <table class="jd-sumtable-expando responsive">
+      
+
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        <a href="../../java/lang/Object.html">Object</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../../java/lang/Object.html#clone()">clone</a>()
+      </code>
+      
+        <p>Creates and returns a copy of this object.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        boolean</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../../java/lang/Object.html#equals(java.lang.Object)">equals</a>(<a href="../../java/lang/Object.html">Object</a> obj)
+      </code>
+      
+        <p>Indicates whether some other object is "equal to" this one.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../../java/lang/Object.html#finalize()">finalize</a>()
+      </code>
+      
+        <p>Called by the garbage collector on an object when garbage collection
+ determines that there are no more references to the object.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        final
+        
+        <a href="../../java/lang/Class.html">Class</a>&lt;?&gt;</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../../java/lang/Object.html#getClass()">getClass</a>()
+      </code>
+      
+        <p>Returns the runtime class of this <code>Object</code>.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        int</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../../java/lang/Object.html#hashCode()">hashCode</a>()
+      </code>
+      
+        <p>Returns a hash code value for the object.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        final
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../../java/lang/Object.html#notify()">notify</a>()
+      </code>
+      
+        <p>Wakes up a single thread that is waiting on this object's
+ monitor.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        final
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../../java/lang/Object.html#notifyAll()">notifyAll</a>()
+      </code>
+      
+        <p>Wakes up all threads that are waiting on this object's monitor.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        <a href="../../java/lang/String.html">String</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../../java/lang/Object.html#toString()">toString</a>()
+      </code>
+      
+        <p>Returns a string representation of the object.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        final
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../../java/lang/Object.html#wait(long, int)">wait</a>(long millis, int nanos)
+      </code>
+      
+        <p>Causes the current thread to wait until another thread invokes the
+ <code><a href="../../java/lang/Object.html#notify()">notify()</a></code> method or the
+ <code><a href="../../java/lang/Object.html#notifyAll()">notifyAll()</a></code> method for this object, or
+ some other thread interrupts the current thread, or a certain
+ amount of real time has elapsed.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        final
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../../java/lang/Object.html#wait(long)">wait</a>(long millis)
+      </code>
+      
+        <p>Causes the current thread to wait until either another thread invokes the
+ <code><a href="../../java/lang/Object.html#notify()">notify()</a></code> method or the
+ <code><a href="../../java/lang/Object.html#notifyAll()">notifyAll()</a></code> method for this object, or a
+ specified amount of time has elapsed.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        final
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../../java/lang/Object.html#wait()">wait</a>()
+      </code>
+      
+        <p>Causes the current thread to wait until another thread invokes the
+ <code><a href="../../java/lang/Object.html#notify()">notify()</a></code> method or the
+ <code><a href="../../java/lang/Object.html#notifyAll()">notifyAll()</a></code> method for this object.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+
+    </table>
+  </div>
+</div>
+</td></tr>
+
+
+</table>
+
+
+
+<!-- XML Attributes -->
+
+
+<!-- Enum Values -->
+
+
+<!-- Constants -->
+
+
+<!-- Fields -->
+
+
+<!-- ========= FIELD DETAIL ======== -->
+<h2 class="api-section">Fields</h2>
+
+
+
+
+<A NAME="accuracy"></A>
+
+<div class="api apilevel-3">
+    <h3 class="api-name">accuracy</h3>
+    <div class="api-level">
+      
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 3</a>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+int accuracy</pre>
+    
+    
+
+    
+  <p>The accuracy of this event. See <code><a href="SensorManager.html">SensorManager</a></code> for details.
+</p></p>
+
+    
+</div>
+
+
+
+<A NAME="sensor"></A>
+
+<div class="api apilevel-3">
+    <h3 class="api-name">sensor</h3>
+    <div class="api-level">
+      
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 3</a>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="Sensor.html">Sensor</a> sensor</pre>
+    
+    
+
+    
+  <p>The sensor that generated this event. See
+ <code><a href="SensorManager.html">SensorManager</a></code> for details.
+</p></p>
+
+    
+</div>
+
+
+
+<A NAME="timestamp"></A>
+
+<div class="api apilevel-3">
+    <h3 class="api-name">timestamp</h3>
+    <div class="api-level">
+      
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 3</a>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+long timestamp</pre>
+    
+    
+
+    
+  <p>The time in nanosecond at which the event happened
+</p></p>
+
+    
+</div>
+
+
+
+<A NAME="values"></A>
+
+<div class="api apilevel-3">
+    <h3 class="api-name">values</h3>
+    <div class="api-level">
+      
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 3</a>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+float[] values</pre>
+    
+    
+
+    
+  <p><p>
+ The length and contents of the <code><a href="SensorEvent.html#values">values</a></code> array depends on
+ which <code><a href="Sensor.html">sensor</a></code> type is being monitored (see
+ also <code><a href="SensorEvent.html">SensorEvent</a></code> for a definition of the coordinate system used).
+ </p>
+
+ <h4><code><a href="Sensor.html#TYPE_ACCELEROMETER">Sensor.TYPE_ACCELEROMETER</a></code>:</h4> All values are in SI units (m/s^2)
+
+ <ul>
+ <li> values[0]: Acceleration minus Gx on the x-axis </li>
+ <li> values[1]: Acceleration minus Gy on the y-axis </li>
+ <li> values[2]: Acceleration minus Gz on the z-axis </li>
+ </ul>
+
+ <p>
+ A sensor of this type measures the acceleration applied to the device
+ (<b>Ad</b>). Conceptually, it does so by measuring forces applied to the
+ sensor itself (<b>Fs</b>) using the relation:
+ </p>
+
+ <b><center>Ad = - &#8721;Fs / mass</center></b>
+
+ <p>
+ In particular, the force of gravity is always influencing the measured
+ acceleration:
+ </p>
+
+ <b><center>Ad = -g - &#8721;F / mass</center></b>
+
+ <p>
+ For this reason, when the device is sitting on a table (and obviously not
+ accelerating), the accelerometer reads a magnitude of <b>g</b> = 9.81
+ m/s^2
+ </p>
+
+ <p>
+ Similarly, when the device is in free-fall and therefore dangerously
+ accelerating towards to ground at 9.81 m/s^2, its accelerometer reads a
+ magnitude of 0 m/s^2.
+ </p>
+
+ <p>
+ It should be apparent that in order to measure the real acceleration of
+ the device, the contribution of the force of gravity must be eliminated.
+ This can be achieved by applying a <i>high-pass</i> filter. Conversely, a
+ <i>low-pass</i> filter can be used to isolate the force of gravity.
+ </p>
+
+ <pre class="prettyprint">
+
+     public void onSensorChanged(SensorEvent event)
+     {
+          // alpha is calculated as t / (t + dT)
+          // with t, the low-pass filter's time-constant
+          // and dT, the event delivery rate
+
+          final float alpha = 0.8;
+
+          gravity[0] = alpha * gravity[0] + (1 - alpha) * event.values[0];
+          gravity[1] = alpha * gravity[1] + (1 - alpha) * event.values[1];
+          gravity[2] = alpha * gravity[2] + (1 - alpha) * event.values[2];
+
+          linear_acceleration[0] = event.values[0] - gravity[0];
+          linear_acceleration[1] = event.values[1] - gravity[1];
+          linear_acceleration[2] = event.values[2] - gravity[2];
+     }
+ </pre>
+
+ <p>
+ <u>Examples</u>:
+ <ul>
+ <li>When the device lies flat on a table and is pushed on its left side
+ toward the right, the x acceleration value is positive.</li>
+
+ <li>When the device lies flat on a table, the acceleration value is
+ +9.81, which correspond to the acceleration of the device (0 m/s^2) minus
+ the force of gravity (-9.81 m/s^2).</li>
+
+ <li>When the device lies flat on a table and is pushed toward the sky
+ with an acceleration of A m/s^2, the acceleration value is equal to
+ A+9.81 which correspond to the acceleration of the device (+A m/s^2)
+ minus the force of gravity (-9.81 m/s^2).</li>
+ </ul>
+
+
+ <h4><code><a href="Sensor.html#TYPE_MAGNETIC_FIELD">Sensor.TYPE_MAGNETIC_FIELD</a></code>:</h4>
+ All values are in micro-Tesla (uT) and measure the ambient magnetic field
+ in the X, Y and Z axis.
+
+ <h4><code><a href="Sensor.html#TYPE_GYROSCOPE">Sensor.TYPE_GYROSCOPE</a></code>:
+ </h4> All values are in radians/second and measure the rate of rotation
+ around the device's local X, Y and Z axis. The coordinate system is the
+ same as is used for the acceleration sensor. Rotation is positive in the
+ counter-clockwise direction. That is, an observer looking from some
+ positive location on the x, y or z axis at a device positioned on the
+ origin would report positive rotation if the device appeared to be
+ rotating counter clockwise. Note that this is the standard mathematical
+ definition of positive rotation and does not agree with the definition of
+ roll given earlier.
+ <ul>
+ <li> values[0]: Angular speed around the x-axis </li>
+ <li> values[1]: Angular speed around the y-axis </li>
+ <li> values[2]: Angular speed around the z-axis </li>
+ </ul>
+ <p>
+ Typically the output of the gyroscope is integrated over time to
+ calculate a rotation describing the change of angles over the time step,
+ for example:
+ </p>
+
+ <pre class="prettyprint">
+     private static final float NS2S = 1.0f / 1000000000.0f;
+     private final float[] deltaRotationVector = new float[4]();
+     private float timestamp;
+
+     public void onSensorChanged(SensorEvent event) {
+          // This time step's delta rotation to be multiplied by the current rotation
+          // after computing it from the gyro sample data.
+          if (timestamp != 0) {
+              final float dT = (event.timestamp - timestamp) * NS2S;
+              // Axis of the rotation sample, not normalized yet.
+              float axisX = event.values[0];
+              float axisY = event.values[1];
+              float axisZ = event.values[2];
+
+              // Calculate the angular speed of the sample
+              float omegaMagnitude = sqrt(axisX*axisX + axisY*axisY + axisZ*axisZ);
+
+              // Normalize the rotation vector if it's big enough to get the axis
+              if (omegaMagnitude > EPSILON) {
+                  axisX /= omegaMagnitude;
+                  axisY /= omegaMagnitude;
+                  axisZ /= omegaMagnitude;
+              }
+
+              // Integrate around this axis with the angular speed by the time step
+              // in order to get a delta rotation from this sample over the time step
+              // We will convert this axis-angle representation of the delta rotation
+              // into a quaternion before turning it into the rotation matrix.
+              float thetaOverTwo = omegaMagnitude * dT / 2.0f;
+              float sinThetaOverTwo = sin(thetaOverTwo);
+              float cosThetaOverTwo = cos(thetaOverTwo);
+              deltaRotationVector[0] = sinThetaOverTwo * axisX;
+              deltaRotationVector[1] = sinThetaOverTwo * axisY;
+              deltaRotationVector[2] = sinThetaOverTwo * axisZ;
+              deltaRotationVector[3] = cosThetaOverTwo;
+          }
+          timestamp = event.timestamp;
+          float[] deltaRotationMatrix = new float[9];
+          SensorManager.getRotationMatrixFromVector(deltaRotationMatrix, deltaRotationVector);
+          // User code should concatenate the delta rotation we computed with the current rotation
+          // in order to get the updated rotation.
+          // rotationCurrent = rotationCurrent * deltaRotationMatrix;
+     }
+ </pre>
+ <p>
+ In practice, the gyroscope noise and offset will introduce some errors
+ which need to be compensated for. This is usually done using the
+ information from other sensors, but is beyond the scope of this document.
+ </p>
+ <h4><code><a href="Sensor.html#TYPE_LIGHT">Sensor.TYPE_LIGHT</a></code>:</h4>
+ <ul>
+ <li>values[0]: Ambient light level in SI lux units </li>
+ </ul>
+
+ <h4><code><a href="Sensor.html#TYPE_PRESSURE">Sensor.TYPE_PRESSURE</a></code>:</h4>
+ <ul>
+ <li>values[0]: Atmospheric pressure in hPa (millibar) </li>
+ </ul>
+
+ <h4><code><a href="Sensor.html#TYPE_PROXIMITY">Sensor.TYPE_PROXIMITY</a></code>:
+ </h4>
+
+ <ul>
+ <li>values[0]: Proximity sensor distance measured in centimeters </li>
+ </ul>
+
+ <p>
+ <b>Note:</b> Some proximity sensors only support a binary <i>near</i> or
+ <i>far</i> measurement. In this case, the sensor should report its
+ <code><a href="Sensor.html#getMaximumRange()">maximum range</a></code> value in
+ the <i>far</i> state and a lesser value in the <i>near</i> state.
+ </p>
+
+  <h4><code><a href="Sensor.html#TYPE_GRAVITY">Sensor.TYPE_GRAVITY</a></code>:</h4>
+  <p>A three dimensional vector indicating the direction and magnitude of gravity.  Units
+  are m/s^2. The coordinate system is the same as is used by the acceleration sensor.</p>
+  <p><b>Note:</b> When the device is at rest, the output of the gravity sensor should be identical
+  to that of the accelerometer.</p>
+
+  <h4><code><a href="Sensor.html#TYPE_LINEAR_ACCELERATION">Sensor.TYPE_LINEAR_ACCELERATION</a></code>:</h4>
+  A three dimensional vector indicating acceleration along each device axis, not including
+  gravity.  All values have units of m/s^2.  The coordinate system is the same as is used by the
+  acceleration sensor.
+  <p>The output of the accelerometer, gravity and  linear-acceleration sensors must obey the
+  following relation:</p>
+   <p><ul>acceleration = gravity + linear-acceleration</ul></p>
+
+  <h4><code><a href="Sensor.html#TYPE_ROTATION_VECTOR">Sensor.TYPE_ROTATION_VECTOR</a></code>:</h4>
+  <p>The rotation vector represents the orientation of the device as a combination of an <i>angle</i>
+  and an <i>axis</i>, in which the device has rotated through an angle &#952 around an axis
+  &lt;x, y, z>.</p>
+  <p>The three elements of the rotation vector are
+  &lt;x*sin(&#952/2), y*sin(&#952/2), z*sin(&#952/2)>, such that the magnitude of the rotation
+  vector is equal to sin(&#952/2), and the direction of the rotation vector is equal to the
+  direction of the axis of rotation.</p>
+  </p>The three elements of the rotation vector are equal to
+  the last three components of a <b>unit</b> quaternion
+  &lt;cos(&#952/2), x*sin(&#952/2), y*sin(&#952/2), z*sin(&#952/2)>.</p>
+  <p>Elements of the rotation vector are unitless.
+  The x,y, and z axis are defined in the same way as the acceleration
+  sensor.</p>
+  The reference coordinate system is defined as a direct orthonormal basis,
+  where:
+ </p>
+
+ <ul>
+ <li>X is defined as the vector product <b>Y.Z</b> (It is tangential to
+ the ground at the device's current location and roughly points East).</li>
+ <li>Y is tangential to the ground at the device's current location and
+ points towards magnetic north.</li>
+ <li>Z points towards the sky and is perpendicular to the ground.</li>
+ </ul>
+
+ <p>
+ <center><img src="../../../images/axis_globe.png"
+ alt="World coordinate-system diagram." border="0" /></center>
+ </p>
+
+ <ul>
+ <li> values[0]: x*sin(&#952/2) </li>
+ <li> values[1]: y*sin(&#952/2) </li>
+ <li> values[2]: z*sin(&#952/2) </li>
+ <li> values[3]: cos(&#952/2) </li>
+ <li> values[4]: estimated heading Accuracy (in radians) (-1 if unavailable)</li>
+ </ul>
+ <p> values[3], originally optional, will always be present from SDK Level 18 onwards.
+ values[4] is a new value that has been added in SDK Level 18.
+ </p>
+
+ <h4><code><a href="Sensor.html#TYPE_ORIENTATION">Sensor.TYPE_ORIENTATION</a></code>:</h4> All values are angles in degrees.
+
+ <ul>
+ <li> values[0]: Azimuth, angle between the magnetic north direction and the
+ y-axis, around the z-axis (0 to 359). 0=North, 90=East, 180=South,
+ 270=West
+ </p>
+
+ <p>
+ values[1]: Pitch, rotation around x-axis (-180 to 180), with positive
+ values when the z-axis moves <b>toward</b> the y-axis.
+ </p>
+
+ <p>
+ values[2]: Roll, rotation around the y-axis (-90 to 90)
+ increasing as the device moves clockwise.
+ </p>
+ </ul>
+
+ <p>
+ <b>Note:</b> This definition is different from <b>yaw, pitch and roll</b>
+ used in aviation where the X axis is along the long side of the plane
+ (tail to nose).
+ </p>
+
+ <p>
+ <b>Note:</b> This sensor type exists for legacy reasons, please use
+ <code><a href="Sensor.html#TYPE_ROTATION_VECTOR">rotation vector sensor type</a></code> and
+ <code><a href="SensorManager.html#getRotationMatrix(float[], float[], float[], float[])">getRotationMatrix()</a></code> in conjunction with
+ <code><a href="SensorManager.html#remapCoordinateSystem(float[], int, int, float[])">remapCoordinateSystem()</a></code> and
+ <code><a href="SensorManager.html#getOrientation(float[], float[])">getOrientation()</a></code> to
+ compute these values instead.
+ </p>
+
+ <p>
+ <b>Important note:</b> For historical reasons the roll angle is positive
+ in the clockwise direction (mathematically speaking, it should be
+ positive in the counter-clockwise direction).
+ </p>
+
+ <h4><code><a href="Sensor.html#TYPE_RELATIVE_HUMIDITY">Sensor.TYPE_RELATIVE_HUMIDITY</a></code>:</h4>
+ <ul>
+ <li> values[0]: Relative ambient air humidity in percent </li>
+ </ul>
+ <p>
+ When relative ambient air humidity and ambient temperature are
+ measured, the dew point and absolute humidity can be calculated.
+ </p>
+ <u>Dew Point</u>
+ <p>
+ The dew point is the temperature to which a given parcel of air must be
+ cooled, at constant barometric pressure, for water vapor to condense
+ into water.
+ </p>
+ <center><pre>
+                    ln(RH/100%) + m&#183;t/(T<sub>n</sub>+t)
+ t<sub>d</sub>(t,RH) = T<sub>n</sub> &#183; ------------------------------
+                 m - [ln(RH/100%) + m&#183;t/(T<sub>n</sub>+t)]
+ </pre></center>
+ <dl>
+ <dt>t<sub>d</sub></dt> <dd>dew point temperature in &deg;C</dd>
+ <dt>t</dt>             <dd>actual temperature in &deg;C</dd>
+ <dt>RH</dt>            <dd>actual relative humidity in %</dd>
+ <dt>m</dt>             <dd>17.62</dd>
+ <dt>T<sub>n</sub></dt> <dd>243.12 &deg;C</dd>
+ </dl>
+ <p>for example:</p>
+ <pre class="prettyprint">
+ h = Math.log(rh / 100.0) + (17.62 * t) / (243.12 + t);
+ td = 243.12 * h / (17.62 - h);
+ </pre>
+ <u>Absolute Humidity</u>
+ <p>
+ The absolute humidity is the mass of water vapor in a particular volume
+ of dry air. The unit is g/m<sup>3</sup>.
+ </p>
+ <center><pre>
+                    RH/100%&#183;A&#183;exp(m&#183;t/(T<sub>n</sub>+t))
+ d<sub>v</sub>(t,RH) = 216.7 &#183; -------------------------
+                           273.15 + t
+ </pre></center>
+ <dl>
+ <dt>d<sub>v</sub></dt> <dd>absolute humidity in g/m<sup>3</sup></dd>
+ <dt>t</dt>             <dd>actual temperature in &deg;C</dd>
+ <dt>RH</dt>            <dd>actual relative humidity in %</dd>
+ <dt>m</dt>             <dd>17.62</dd>
+ <dt>T<sub>n</sub></dt> <dd>243.12 &deg;C</dd>
+ <dt>A</dt>             <dd>6.112 hPa</dd>
+ </dl>
+ <p>for example:</p>
+ <pre class="prettyprint">
+ dv = 216.7 *
+ (rh / 100.0 * 6.112 * Math.exp(17.62 * t / (243.12 + t)) / (273.15 + t));
+ </pre>
+
+ <h4><code><a href="Sensor.html#TYPE_AMBIENT_TEMPERATURE">Sensor.TYPE_AMBIENT_TEMPERATURE</a></code>:
+ </h4>
+
+ <ul>
+ <li> values[0]: ambient (room) temperature in degree Celsius.</li>
+ </ul>
+
+
+ <h4><code><a href="Sensor.html#TYPE_MAGNETIC_FIELD_UNCALIBRATED">Sensor.TYPE_MAGNETIC_FIELD_UNCALIBRATED</a></code>:</h4>
+ Similar to <code><a href="Sensor.html#TYPE_MAGNETIC_FIELD">TYPE_MAGNETIC_FIELD</a></code>,
+ but the hard iron calibration is reported separately instead of being included
+ in the measurement. Factory calibration and temperature compensation will still
+ be applied to the "uncalibrated" measurement. Assumptions that the magnetic field
+ is due to the Earth's poles is avoided.
+ <p>
+ The values array is shown below:
+ <ul>
+ <li> values[0] = x_uncalib </li>
+ <li> values[1] = y_uncalib </li>
+ <li> values[2] = z_uncalib </li>
+ <li> values[3] = x_bias </li>
+ <li> values[4] = y_bias </li>
+ <li> values[5] = z_bias </li>
+ </ul>
+ </p>
+ <p>
+ x_uncalib, y_uncalib, z_uncalib are the measured magnetic field in X, Y, Z axes.
+ Soft iron and temperature calibrations are applied. But the hard iron
+ calibration is not applied. The values are in micro-Tesla (uT).
+ </p>
+ <p>
+ x_bias, y_bias, z_bias give the iron bias estimated in X, Y, Z axes.
+ Each field is a component of the estimated hard iron calibration.
+ The values are in micro-Tesla (uT).
+ </p>
+ <p> Hard iron - These distortions arise due to the magnetized iron, steel or permanent
+ magnets on the device.
+ Soft iron - These distortions arise due to the interaction with the earth's magnetic
+ field.
+ </p>
+ <h4> <code><a href="Sensor.html#TYPE_GAME_ROTATION_VECTOR">Sensor.TYPE_GAME_ROTATION_VECTOR</a></code>:</h4>
+ Identical to <code><a href="Sensor.html#TYPE_ROTATION_VECTOR">TYPE_ROTATION_VECTOR</a></code> except that it
+ doesn't use the geomagnetic field. Therefore the Y axis doesn't
+ point north, but instead to some other reference, that reference is
+ allowed to drift by the same order of magnitude as the gyroscope
+ drift around the Z axis.
+ <p>
+ In the ideal case, a phone rotated and returning to the same real-world
+ orientation will report the same game rotation vector
+ (without using the earth's geomagnetic field). However, the orientation
+ may drift somewhat over time. See <code><a href="Sensor.html#TYPE_ROTATION_VECTOR">TYPE_ROTATION_VECTOR</a></code>
+ for a detailed description of the values. This sensor will not have
+ the estimated heading accuracy value.
+ </p>
+
+ <h4> <code><a href="Sensor.html#TYPE_GYROSCOPE_UNCALIBRATED">Sensor.TYPE_GYROSCOPE_UNCALIBRATED</a></code>:</h4>
+ All values are in radians/second and measure the rate of rotation
+ around the X, Y and Z axis. An estimation of the drift on each axis is
+ reported as well.
+ <p>
+ No gyro-drift compensation is performed. Factory calibration and temperature
+ compensation is still applied to the rate of rotation (angular speeds).
+ </p>
+ <p>
+ The coordinate system is the same as is used for the
+ <code><a href="Sensor.html#TYPE_ACCELEROMETER">TYPE_ACCELEROMETER</a></code>
+ Rotation is positive in the counter-clockwise direction (right-hand rule).
+ That is, an observer looking from some positive location on the x, y or z axis
+ at a device positioned on the origin would report positive rotation if the device
+ appeared to be rotating counter clockwise.
+ The range would at least be 17.45 rad/s (ie: ~1000 deg/s).
+ <ul>
+ <li> values[0] : angular speed (w/o drift compensation) around the X axis in rad/s </li>
+ <li> values[1] : angular speed (w/o drift compensation) around the Y axis in rad/s </li>
+ <li> values[2] : angular speed (w/o drift compensation) around the Z axis in rad/s </li>
+ <li> values[3] : estimated drift around X axis in rad/s </li>
+ <li> values[4] : estimated drift around Y axis in rad/s </li>
+ <li> values[5] : estimated drift around Z axis in rad/s </li>
+ </ul>
+ </p>
+ <p><b>Pro Tip:</b> Always use the length of the values array while performing operations
+ on it. In earlier versions, this used to be always 3 which has changed now. </p>
+
+   <h4><code><a href="Sensor.html#TYPE_POSE_6DOF">Sensor.TYPE_POSE_6DOF</a></code>:</h4>
+
+ A TYPE_POSE_6DOF event consists of a rotation expressed as a quaternion and a translation
+ expressed in SI units. The event also contains a delta rotation and translation that show
+ how the device?s pose has changed since the previous sequence numbered pose.
+ The event uses the cannonical Android Sensor axes.
+
+
+ <ul>
+ <li> values[0]: x*sin(&#952/2) </li>
+ <li> values[1]: y*sin(&#952/2) </li>
+ <li> values[2]: z*sin(&#952/2) </li>
+ <li> values[3]: cos(&#952/2)   </li>
+
+
+ <li> values[4]: Translation along x axis from an arbitrary origin. </li>
+ <li> values[5]: Translation along y axis from an arbitrary origin. </li>
+ <li> values[6]: Translation along z axis from an arbitrary origin. </li>
+
+ <li> values[7]:  Delta quaternion rotation x*sin(&#952/2) </li>
+ <li> values[8]:  Delta quaternion rotation y*sin(&#952/2) </li>
+ <li> values[9]:  Delta quaternion rotation z*sin(&#952/2) </li>
+ <li> values[10]: Delta quaternion rotation cos(&#952/2) </li>
+
+ <li> values[11]: Delta translation along x axis. </li>
+ <li> values[12]: Delta translation along y axis. </li>
+ <li> values[13]: Delta translation along z axis. </li>
+
+ <li> values[14]: Sequence number </li>
+
+ </ul>
+
+   <h4><code><a href="Sensor.html#TYPE_STATIONARY_DETECT">Sensor.TYPE_STATIONARY_DETECT</a></code>:</h4>
+
+ A TYPE_STATIONARY_DETECT event is produced if the device has been
+ stationary for at least 5 seconds with a maximal latency of 5
+ additional seconds. ie: it may take up anywhere from 5 to 10 seconds
+ afte the device has been at rest to trigger this event.
+
+ The only allowed value is 1.0.
+
+ <ul>
+  <li> values[0]: 1.0 </li>
+ </ul>
+
+   <h4><code><a href="Sensor.html#TYPE_MOTION_DETECT">Sensor.TYPE_MOTION_DETECT</a></code>:</h4>
+
+ A TYPE_MOTION_DETECT event is produced if the device has been in
+ motion  for at least 5 seconds with a maximal latency of 5
+ additional seconds. ie: it may take up anywhere from 5 to 10 seconds
+ afte the device has been at rest to trigger this event.
+
+ The only allowed value is 1.0.
+
+ <ul>
+  <li> values[0]: 1.0 </li>
+ </ul>
+
+   <h4><code><a href="Sensor.html#TYPE_HEART_BEAT">Sensor.TYPE_HEART_BEAT</a></code>:</h4>
+
+ A sensor of this type returns an event everytime a hear beat peak is
+ detected.
+
+ Peak here ideally corresponds to the positive peak in the QRS complex of
+ an ECG signal.
+
+ <ul>
+  <li> values[0]: confidence</li>
+ </ul>
+
+ <p>
+ A confidence value of 0.0 indicates complete uncertainty - that a peak
+ is as likely to be at the indicated timestamp as anywhere else.
+ A confidence value of 1.0 indicates complete certainly - that a peak is
+ completely unlikely to be anywhere else on the QRS complex.
+ </p>
+
+ <h4><code><a href="Sensor.html#TYPE_LOW_LATENCY_OFFBODY_DETECT">Sensor.TYPE_LOW_LATENCY_OFFBODY_DETECT</a></code>:</h4>
+
+ <p>
+ A sensor of this type returns an event every time the device transitions
+ from off-body to on-body and from on-body to off-body (e.g. a wearable
+ device being removed from the wrist would trigger an event indicating an
+ off-body transition). The event returned will contain a single value to
+ indicate off-body state:
+ </p>
+
+ <ul>
+  <li> values[0]: off-body state</li>
+ </ul>
+
+ <p>
+     Valid values for off-body state:
+ <ul>
+  <li> 1.0 (device is on-body)</li>
+  <li> 0.0 (device is off-body)</li>
+ </ul>
+ </p>
+
+ <p>
+ When a sensor of this type is activated, it must deliver the initial
+ on-body or off-body event representing the current device state within
+ 5 seconds of activating the sensor.
+ </p>
+
+ <p>
+ This sensor must be able to detect and report an on-body to off-body
+ transition within 1 second of the device being removed from the body,
+ and must be able to detect and report an off-body to on-body transition
+ within 5 seconds of the device being put back onto the body.
+ </p>
+
+ <h4><code><a href="Sensor.html#TYPE_ACCELEROMETER_UNCALIBRATED">Sensor.TYPE_ACCELEROMETER_UNCALIBRATED</a></code>:</h4> All values are in SI
+ units (m/s^2)
+
+ Similar to <code><a href="Sensor.html#TYPE_ACCELEROMETER">TYPE_ACCELEROMETER</a></code>,
+ Factory calibration and temperature compensation will still be applied
+ to the "uncalibrated" measurement.
+
+ <p>
+ The values array is shown below:
+ <ul>
+ <li> values[0] = x_uncalib without bias compensation </li>
+ <li> values[1] = y_uncalib without bias compensation </li>
+ <li> values[2] = z_uncalib without bias compensation </li>
+ <li> values[3] = estimated x_bias </li>
+ <li> values[4] = estimated y_bias </li>
+ <li> values[5] = estimated z_bias </li>
+ </ul>
+ </p>
+ <p>
+ x_uncalib, y_uncalib, z_uncalib are the measured acceleration in X, Y, Z
+ axes similar to the  <code><a href="Sensor.html#TYPE_ACCELEROMETER">TYPE_ACCELEROMETER</a></code>,
+ without any bias correction (factory bias compensation and any
+ temperature compensation is allowed).
+ x_bias, y_bias, z_bias are the estimated biases.
+ </p></p></p>
+  <div>
+      <p><b>See also:</b></p>
+      <ul class="nolist"><li><code><a href="GeomagneticField.html">GeomagneticField</a></code></li>
+      </ul>
+  </div>
+
+    
+</div>
+
+
+
+
+<!-- Public ctors -->
+
+
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<!-- Protected ctors -->
+
+
+
+<!-- ========= METHOD DETAIL ======== -->
+<!-- Public methdos -->
+
+
+
+<!-- ========= METHOD DETAIL ======== -->
+
+
+
+<!-- ========= END OF CLASS DATA ========= -->
+
+</div><!-- end jd-content -->
+
+
+
+<div class="data-reference-resources-wrapper">
+  
+  <ul data-reference-resources>
+    
+    
+    <li><h2>Interfaces</h2>
+      <ul>
+          <li class="api apilevel-1"><a href="Camera.AutoFocusCallback.html">Camera.AutoFocusCallback</a></li>
+          <li class="api apilevel-16"><a href="Camera.AutoFocusMoveCallback.html">Camera.AutoFocusMoveCallback</a></li>
+          <li class="api apilevel-1"><a href="Camera.ErrorCallback.html">Camera.ErrorCallback</a></li>
+          <li class="api apilevel-14"><a href="Camera.FaceDetectionListener.html">Camera.FaceDetectionListener</a></li>
+          <li class="api apilevel-8"><a href="Camera.OnZoomChangeListener.html">Camera.OnZoomChangeListener</a></li>
+          <li class="api apilevel-1"><a href="Camera.PictureCallback.html">Camera.PictureCallback</a></li>
+          <li class="api apilevel-1"><a href="Camera.PreviewCallback.html">Camera.PreviewCallback</a></li>
+          <li class="api apilevel-1"><a href="Camera.ShutterCallback.html">Camera.ShutterCallback</a></li>
+          <li class="api apilevel-3"><a href="SensorEventListener.html">SensorEventListener</a></li>
+          <li class="api apilevel-19"><a href="SensorEventListener2.html">SensorEventListener2</a></li>
+          <li class="api apilevel-1"><a href="SensorListener.html">SensorListener</a></li>
+      </ul>
+    </li>
+    
+    <li><h2>Classes</h2>
+      <ul>
+          <li class="api apilevel-1"><a href="Camera.html">Camera</a></li>
+          <li class="api apilevel-14"><a href="Camera.Area.html">Camera.Area</a></li>
+          <li class="api apilevel-9"><a href="Camera.CameraInfo.html">Camera.CameraInfo</a></li>
+          <li class="api apilevel-14"><a href="Camera.Face.html">Camera.Face</a></li>
+          <li class="api apilevel-1"><a href="Camera.Parameters.html">Camera.Parameters</a></li>
+          <li class="api apilevel-1"><a href="Camera.Size.html">Camera.Size</a></li>
+          <li class="api apilevel-19"><a href="ConsumerIrManager.html">ConsumerIrManager</a></li>
+          <li class="api apilevel-19"><a href="ConsumerIrManager.CarrierFrequencyRange.html">ConsumerIrManager.CarrierFrequencyRange</a></li>
+          <li class="api apilevel-3"><a href="GeomagneticField.html">GeomagneticField</a></li>
+          <li class="api apilevel-26"><a href="HardwareBuffer.html">HardwareBuffer</a></li>
+          <li class="api apilevel-3"><a href="Sensor.html">Sensor</a></li>
+          <li class="api apilevel-24"><a href="SensorAdditionalInfo.html">SensorAdditionalInfo</a></li>
+          <li class="api apilevel-26"><a href="SensorDirectChannel.html">SensorDirectChannel</a></li>
+          <li class="selected api apilevel-3"><a href="SensorEvent.html">SensorEvent</a></li>
+          <li class="api apilevel-24"><a href="SensorEventCallback.html">SensorEventCallback</a></li>
+          <li class="api apilevel-1"><a href="SensorManager.html">SensorManager</a></li>
+          <li class="api apilevel-24"><a href="SensorManager.DynamicSensorCallback.html">SensorManager.DynamicSensorCallback</a></li>
+          <li class="api apilevel-18"><a href="TriggerEvent.html">TriggerEvent</a></li>
+          <li class="api apilevel-18"><a href="TriggerEventListener.html">TriggerEventListener</a></li>
+      </ul>
+    </li>
+    
+    
+    
+  </ul>
+  
+</div>
+
+
+
+
+    </div>
+
+    
+
+  
+    
+  
+    
+
+
+
+
+  
+
+
+<footer class="devsite-footer-promos nocontent">
+  <nav class="devsite-full-site-width">
+    <ul class="devsite-footer-promos-list">
+      
+      <li class="devsite-footer-promo">
+        <a href="http://twitter.com/AndroidDev"
+           class="devsite-footer-promo-title gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Twitter Promo"
+           >
+          
+          
+          <img class="devsite-footer-promo-icon" src="https://developer.android.com/static/images/footer/logo-twitter.svg">
+          
+          
+            Twitter
+          
+        </a>
+        <div class="devsite-footer-promo-description">Follow @AndroidDev on Twitter</div>
+      </li>
+      
+      <li class="devsite-footer-promo">
+        <a href="http://plus.google.com/+AndroidDevelopers"
+           class="devsite-footer-promo-title gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Google+ Promo"
+           >
+          
+          
+          <img class="devsite-footer-promo-icon" src="../../../../www.gstatic.com/images/branding/product/2x/google_plus_48dp.png">
+          
+          
+            Google+
+          
+        </a>
+        <div class="devsite-footer-promo-description">Follow Android Developers on Google+</div>
+      </li>
+      
+      <li class="devsite-footer-promo">
+        <a href="http://www.youtube.com/user/androiddevelopers"
+           class="devsite-footer-promo-title gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer YouTube Promo"
+           >
+          
+          
+          <img class="devsite-footer-promo-icon" src="../../../../www.gstatic.com/images/icons/material/product/2x/youtube_48dp.png">
+          
+          
+            YouTube
+          
+        </a>
+        <div class="devsite-footer-promo-description">Check out Android Developers on YouTube</div>
+      </li>
+      
+    </ul>
+  </nav>
+</footer>
+
+
+
+<div class="wrap dac-footer-container">
+  <footer class="dac-footer ">
+    <div class="cols dac-footer-main">
+      <div class="col-1of1">
+        <div class="dac-footer-contact">
+          
+          <a class="dac-footer-contact-link" href="https://developer.android.com/newsletter/index.html" title="Newsletter">Newsletter</a>
+          
+          <a class="dac-footer-contact-link" href="https://android-developers.blogspot.com/" title="Blog" target="_blank">Blog</a>
+          
+          <a class="dac-footer-contact-link" href="https://developer.android.com/support.html" title="Support">Support</a>
+          
+          <a class="dac-footer-contact-link" href="https://docs.google.com/forms/d/e/1FAIpQLSf27XIxoFmNpTjTYdk-m1uKWGqEnd7_4C_E1AD5fdCfyTBWNA/viewform?usp=pp_url&amp;entry.1909689089&amp;entry.208743710&amp;entry.408796755&amp;entry.1341430893&amp;entry.594931249&amp;entry.1640656812&amp;entry.1759804042&amp;entry.1441312344=developer.android.com" title="Join user studies" target="_blank">Join user studies</a>
+        </div>
+      </div>
+    </div>
+
+    <hr class="dac-footer-separator"/>
+      
+      <p class="dac-footer-copyright">
+        
+        Except as noted, this content is licensed under <a href="http://creativecommons.org/licenses/by/2.5/" target="_blank">Creative Commons Attribution 2.5</a>. For details and restrictions, see the <a href="https://developer.android.com/license.html">Content License</a>.
+      </p>
+    
+
+    <p class="dac-footer-links">
+      
+      <a href="https://www.android.com/" title="Android.com" target="_blank">Android.com</a>
+      
+      <a href="https://developer.android.com/" title="Android Developers">Android Developers</a>
+      
+      <a href="https://developer.android.com/studio/index.html" title="Android Studio">Android Studio</a>
+      
+      <a href="https://developer.android.com/distribute/console/index.html" title="Google Play Console">Google Play Console</a>
+      
+      <a href="https://developer.android.com/legal.html" title="Legal Notice">Legal Notice</a>
+    </p>
+
+    
+    <form class="devsite-utility-footer-language" id="setlang" action="https://developer.android.com/i18n/setlang/" method="post">
+      <input type="hidden" name="xsrf_token" value="8gDmbsb5sCm_7Zl0yse_dWRQsDYK3Ozpgm1SdpMP0_Y6MTUxMTEwNzgwOTc3MzUzMA" />
+      <input type="hidden" name="next" value="SensorEvent.html">
+      <span id="language" class="locales">
+        <select class="devsite-utility-footer-language-select" name="language">
+          
+          <option value="id"
+            >
+            Bahasa Indonesia
+          </option>
+          
+          <option value="de"
+            >
+            Deutsch
+          </option>
+          
+          <option value="en"
+             selected="selected" >
+            English
+          </option>
+          
+          <option value="es"
+            >
+            español
+          </option>
+          
+          <option value="es-419"
+            >
+            Español (América Latina)
+          </option>
+          
+          <option value="fr"
+            >
+            français
+          </option>
+          
+          <option value="pt-br"
+            >
+            Português Brasileiro
+          </option>
+          
+          <option value="vi"
+            >
+            Tiếng Việt
+          </option>
+          
+          <option value="tr"
+            >
+            Türkçe
+          </option>
+          
+          <option value="ru"
+            >
+            Русский
+          </option>
+          
+          <option value="th"
+            >
+            ภาษาไทย
+          </option>
+          
+          <option value="ja"
+            >
+            日本語
+          </option>
+          
+          <option value="zh-cn"
+            >
+            简体中文
+          </option>
+          
+          <option value="zh-tw"
+            >
+            繁體中文
+          </option>
+          
+          <option value="ko"
+            >
+            한국어
+          </option>
+          
+        </select>
+      </span>
+    </form>
+  </footer>
+</div><!--/.wrap -->
+
+<div class="dac-toast-group">
+  <div class="dac-toast" data-toast>
+    <div class="dac-toast-wrap">
+      
+      This site uses cookies to store your preferences for site-specific language and display options.
+      <button class="dac-toast-close-btn">
+        
+        <span class="dac-button dac-raised dac-primary">OK</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<div data-modal="newsletter" data-newsletter-fb data-swap class="dac-modal newsletter">
+  <div class="dac-modal-container">
+    <div class="dac-modal-window">
+      <header class="dac-modal-header">
+        <div class="dac-modal-header-actions">
+          <button class="dac-modal-header-close" data-modal-toggle></button>
+        </div>
+        <div class="dac-swap" data-swap-container>
+          <section class="dac-swap-section dac-active dac-down">
+            
+            <h2 class="norule dac-modal-header-title" data-t="newsletter.title">Get the latest Android developer news and tips that will help you find success on Google Play.</h2>
+            
+            <p class="dac-modal-header-subtitle" data-t="newsletter.requiredHint">* Required Fields</p>
+          </section>
+          <section class="dac-swap-section dac-up">
+            
+            <h2 class="norule dac-modal-header-title" data-t="newsletter.successTitle">Hooray!</h2>
+          </section>
+        </div>
+      </header>
+      <div class="dac-swap" data-swap-container>
+        <section class="dac-swap-section dac-active dac-left">
+          <form action="https://services.google.com/fb/submissions/android-developer-mailing-list/" class="dac-form" method="post">
+            <section class="dac-modal-content">
+              <fieldset class="dac-form-fieldset">
+                <div class="cols">
+                  <div class="col-1of2 newsletter-leftCol">
+                    <div class="dac-form-input-group">
+                      
+                      <label for="newsletter-full-name" class="dac-form-floatlabel" data-t="newsletter.name">Full name</label>
+                      <input type="text" class="dac-form-input" name="fullname" id="newsletter-full-name" required>
+                      <span class="dac-form-required">*</span>
+                    </div>
+                    <div class="dac-form-input-group">
+                      
+                      <label for="newsletter-email" class="dac-form-floatlabel" data-t="newsletter.email">Email address</label>
+                      <input type="email" class="dac-form-input" name="emailaddress" id="newsletter-email" required>
+                      <span class="dac-form-required">*</span>
+                    </div>
+                  </div>
+                  <div class="col-1of2 newsletter-rightCol">
+                    <div class="dac-form-input-group">
+                      
+                      <label for="newsletter-company" class="dac-form-floatlabel" data-t="newsletter.company">Company / developer name</label>
+                      <input type="text" class="dac-form-input" name="companydevelopername" id="newsletter-company">
+                    </div>
+                    <div class="dac-form-input-group">
+                      
+                      <label for="newsletter-play-store" class="dac-form-floatlabel" data-t="newsletter.appUrl">One of your Play Store app URLs</label>
+                      <input type="url" class="dac-form-input" name="playstoreappurls" id="newsletter-play-store">
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+              <fieldset class="dac-form-fieldset">
+                <div class="cols">
+                  
+                  <div class="col-1of2 newsletter-leftCol newsletter-interested" data-validation-message="Please check at least one item.">
+                    
+                    <legend class="dac-form-legend">What are you interested in?<span class="dac-form-required">*</span></legend>
+                    <div class="dac-form-radio-group">
+                      <input type="checkbox" class="dac-form-checkbox" name="interested" id="interested-whats-new" value="whats-new">
+                      <label for="interested-whats-new" class="dac-form-checkbox-button"></label>
+                      
+                      <label for="interested-whats-new" class="dac-form-label">What's new</label>
+                    </div>
+                    <div class="dac-form-radio-group">
+                      <input type="checkbox" class="dac-form-checkbox" name="interested" id="interested-games-updates" value="games-updates">
+                      <label for="interested-games-updates" class="dac-form-checkbox-button"></label>
+                      
+                      <label for="interested-games-updates" class="dac-form-label">Games updates</label>
+                    </div>
+                    <div class="dac-form-radio-group">
+                      <input type="checkbox" class="dac-form-checkbox" name="interested" id="interested-android-development" value="android-development">
+                      <label for="interested-android-development" class="dac-form-checkbox-button"></label>
+                      
+                      <label for="interested-android-development" class="dac-form-label">Android development</label>
+                    </div>
+                  </div>
+                  <div class="col-1of2 newsletter-rightCol newsletter-checkboxes">
+                    <div class="dac-form-input-group">
+                      
+                      <label for="newsletter-receive-in">Receive newsletter in</label>
+                      <select name="language" class="dac-form-select" id="newsletter-receive-in">
+                        <option value="en-US" selected>English</option>
+                        <option value="ar">Arabic</option>
+                        <option value="zh">Chinese (Simplified)</option>
+                        <option value="zh-TW">Chinese (Traditional)</option>
+                        <option value="fr">French</option>
+                        <option value="de">German</option>
+                        <option value="id">Indonesian (Bahasa)</option>
+                        <option value="ja">Japanese</option>
+                        <option value="ko">Korean</option>
+                        <option value="pt-BR">Portuguese (Brazilian)</option>
+                        <option value="ru">Russian</option>
+                        <option value="es-419">Spanish (Latin American)</option>
+                        <option value="th">Thai</option>
+                        <option value="tr">Turkish</option>
+                        <option value="vi">Vietnamese</option>
+                      </select>
+                    </div>
+                    <div class="dac-form-radio-group">
+                      <div class="dac-media">
+                        <div class="dac-media-figure">
+                          <input type="checkbox" class="dac-form-checkbox" name="marketingoptin" id="newsletter-add" required value="Add me to the mailing list.">
+                          <label for="newsletter-add" class="dac-form-checkbox-button"></label>
+                        </div>
+                        <div class="dac-media-body">
+                          <label for="newsletter-add" class="dac-form-label dac-form-aside">
+                            
+                            Add me to the mailing list.
+                            <span class="dac-form-required">*</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="dac-form-radio-group">
+                      <div class="dac-media">
+                        <div class="dac-media-figure">
+                          <input type="checkbox" class="dac-form-checkbox" name="privacystatement" id="newsletter-terms" required value="I acknowledge that the information provided in this form will be subject to Google's privacy policy (https://www.google.com/policies/privacy/).">
+                          <label for="newsletter-terms" class="dac-form-checkbox-button"></label>
+                        </div>
+                        <div class="dac-media-body">
+                          <label for="newsletter-terms" class="dac-form-label dac-form-aside"><span data-t="newsletter.privacyPolicy" data-t-html>
+                            
+                            I acknowledge that the information provided in this form will be subject to <a href="https://www.google.com/policies/privacy/">Google's privacy policy</a>.
+                          </span>
+                          <span class="dac-form-required">*</span></label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+            </section>
+            <input type="hidden" name="referrer" value="dac">
+            <footer class="dac-modal-footer">
+              <div class="cols">
+                <div class="col-2of5">
+                </div>
+              </div>
+              <button type="submit" value="Submit" class="dac-fab dac-primary dac-large dac-modal-action"><i class="dac-sprite dac-arrow-right"></i></button>
+            </footer>
+          </form>
+        </section>
+        <section class="dac-swap-section dac-right">
+          <div class="dac-modal-content">
+            <p class="newsletter-success-message" data-t="newsletter.successDetails">
+              
+              You have successfully signed up for the latest Android developer news and tips.
+            </p>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</div><!--/.dac-modal.newsletter-->
+
+<div data-modal="wechat" class="dac-modal">
+  <div class="dac-modal-container">
+    <div class="dac-modal-window">
+      <header class="dac-modal-header">
+        <div class="dac-modal-header-actions">
+          <button class="dac-modal-header-close" data-modal-toggle></button>
+        </div>
+        <section>
+          
+          <h2 class="norule dac-modal-header-title">Follow Google Developers on WeChat</h2>
+        </section>
+      </header>
+      <section class="dac-modal-content figure-center center-img">
+        <img src="../../../static/images/qr-wechat.png">
+      </section>
+    </div>
+  </div>
+</div><!--/.dac-modal[dac-modal=wechat]-->
+
+
+<div data-modal="langform" class="dac-modal" id="langform">
+  <div class="dac-modal-container">
+    <div class="dac-modal-window">
+      <header class="dac-modal-header">
+        <div class="dac-modal-header-actions">
+          <button class="dac-modal-header-close" data-modal-toggle></button>
+        </div>
+        <section class="dac-swap-section dac-active dac-down">
+          <h2 class="norule dac-modal-header-title">
+            
+            Browse this site in <span class="span-target-lang"></span>?
+          </h2>
+        </section>
+      </header>
+      <section class="dac-swap-section dac-active dac-left">
+          <section class="dac-modal-content">
+            <fieldset class="dac-form-fieldset">
+              <div class="cols">
+                <div class="col-2of2 langform-leftCol">
+                  <p id="resetLangText">
+                    
+                    You requested a page in <span class="span-target-lang"></span>, but your language preference for this site is <span class="span-current-lang"></span>.
+                  </p>
+                  <p id="resetLangCta">
+                    
+                    Would you like to change your language preference and browse this site in <span class="span-target-lang"></span>? If you want to change your language preference later, use the language menu at the bottom of each page.
+                  </p>
+                </div>
+              </div>
+            </fieldset>
+          </section>
+          <footer class="dac-modal-footer" id="langfooter">
+            <div class="cols">
+              <div class="col-2of5">
+              </div>
+            </div>
+            <a href="#" class="yes" onclick="return false;">
+              <button class="button dac-primary dac-modal-action lang yes" data-t="newsletter.resetLangButtonYes" data-modal-toggle>
+                
+                Change Language
+              </button>
+            </a>
+            <a href="#" class="" onclick="return false;">
+              <button class="button dac-primary dac-modal-action lang no" data-t="newsletter.resetLangButtonNo" data-modal-toggle>
+                
+                Not Now
+              </button>
+            </a>
+          </footer>
+        </form>
+      </section>
+    </div>
+  </div>
+</div><!--/.dac-modal-->
+
+
+<div data-modal="api-unavailable" class="dac-modal" id="api-unavailable">
+  <div class="dac-modal-container">
+    <div class="dac-modal-window">
+      <header class="dac-modal-header">
+        <div class="dac-modal-header-actions">
+          <button class="dac-modal-header-close" data-modal-toggle></button>
+        </div>
+        <section class="dac-swap-section dac-active dac-down">
+          <h2 class="norule dac-modal-header-title">
+            
+            This class requires API level <span class="api-level"></span> or higher
+          </h2>
+        </section>
+      </header>
+      <section class="dac-swap-section dac-active dac-left">
+          <section class="dac-modal-content">
+            <p>
+              
+              This doc is hidden because your selected API level for the documentation is <span class="api-level"></span>. You can change the documentation API level with the selector above the left navigation.
+            </p>
+            
+            <p>For more information about specifying the API level your app requires, read <a href="https://developer.android.com/training/basics/supporting-devices/platforms.html">Supporting Different Platform Versions</a>.</p>
+          </section>
+          <footer class="dac-modal-footer" id="langfooter">
+            <div class="cols">
+              <div class="col-2of5">
+              </div>
+            </div>
+            <a href="#" class="ok" onclick="return false;">
+              <button class="button dac-primary dac-modal-action ok"
+              data-modal-toggle>
+                
+                OK, make this page visible
+              </button>
+            </a>
+          </footer>
+        </form>
+      </section>
+    </div>
+  </div>
+</div><!--/.dac-modal#api-unavailable-->
+
+    
+  </div><!--/#body-content-->
+
+  <!-- Nav Setup -->
+  <script>$('[data-dac-nav]').dacNav();</script>
+  <script type="text/javascript">
+    $('.slideshow-container').dacSlideshow({
+        btnPrev: '.slideshow-prev',
+        btnNext: '.slideshow-next',
+        btnPause: '#pauseButton'
+    });
+
+    $(".feed").dacTabbedList({
+      nav_id: '.feed-nav',
+      frame_id: '.feed-frame'
+    });
+  </script>
+  
+  <script src="../../../ytblogger_lists_unified9a55.js?v=2017111904" defer></script>
+  <script src="../../../android_metadata_en9a55.js?v=2017111904" defer></script>
+  
+  <script src="../../lists9a55.js?v=2017111904" defer></script>
+  <script src="../../gms_lists9a55.js?v=2017111904" defer></script>
+  <script src="../support/wearable/lists9a55.js?v=2017111904" defer></script>
+  <script src="../support/test/lists9a55.js?v=2017111904" defer></script>
+  <script src="../support/constraint/lists9a55.js?v=2017111904" defer></script>
+  <script src="../arch/lists9a55.js?v=2017111904" defer></script>
+  <script src="https://developer.android.com/_static2/268f0926ba/jsi18n/"></script>
+  <script>
+    // Load localized metadata.
+    (function(lang) {
+      if (lang === 'en') { return; }
+      document.write('<script src="https://developer.android.com/android_metadata_en.js?v=2017111904" defer></' + 'script>');
+    })(getLangPref())
+
+    // Add skip to content for accessibility.
+    $('#skip-to-main').click(function() {
+      $('a[name=top]').focus();
+    });
+
+    $('.devsite-utility-footer-language-select').each(function() {
+      $(this).change(function() {
+        changeLangPref(this.value, true)
+        $('.devsite-utility-footer-language').submit();
+      });
+    });
+  </script>
+
+  <script>
+    (function($) {
+      devsite.analytics.InitAnalytics();
+      devsite.navigatingRadio.init();
+      devsite.kennedy.InitializeTabbars();
+      // overflowMenu must be initialized after tabbar.
+      devsite.overflowMenu.init();
+    })(jQuery);
+  </script>
+
+  
+
+
+<div id="survey-box-wrapper">
+  <div class="material-dialog" style="width:270px">
+    <div class="material-dialog-title">
+      Take a short survey?
+    </div>
+    <div class="material-dialog-description">
+      Help us improve the Android developer experience.
+      <br>(Sep 2017 survey)
+    </div>
+    <div class="material-button-bar">
+      <a class="dac-button dac-primary dac-raised" target="_blank"
+          href="https://goo.gl/dNPzCR">Okay</a>
+      <a class="dac-button" href="#">No thanks</a>
+    </div>
+  </div>
+</div>
+
+</body>
+
+<!-- Mirrored from developer.android.com/reference/android/hardware/SensorEvent.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 19 Nov 2017 16:45:50 GMT -->
+</html>

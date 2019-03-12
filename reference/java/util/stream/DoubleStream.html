@@ -1,0 +1,4718 @@
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/Article">
+
+<!-- Mirrored from developer.android.com/reference/java/util/stream/DoubleStream.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 19 Nov 2017 16:36:36 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+
+  
+
+
+
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+
+
+
+
+
+<script>var a=window.devsite||{};window.devsite=a;a.readyCallbacks=[];window.devsite.readyCallbacks=a.readyCallbacks;a.ready=function(b){a.readyCallbacks.push(b)};window.devsite.ready=a.ready;
+</script>
+
+<meta charset="utf-8">
+
+
+
+<meta name="xsrf_token" content="zBWDsJxFldKUxxL9Chfmxxe-kk8V-bJ_lzy7SW8FLIY6MTUxMTEwNTYyNTA5NDYyMA" />
+
+  
+    <link rel="canonical" href="DoubleStream.html">
+  
+
+  
+    <link rel="alternate" href="DoubleStream.html" hreflang="en">
+  
+    <link rel="alternate" href="https://developer.android.google.cn/reference/java/util/stream/DoubleStream.html" hreflang="en-cn">
+  
+
+  <link rel="alternate" href="DoubleStream.html" hreflang="x-default">
+
+
+
+
+<link rel="shortcut icon" href="../../../../_static/268f0926ba/images/android/favicon.png">
+
+<link rel="apple-touch-icon" href="../../../../_static/268f0926ba/images/android/touchicon-180.png">
+
+
+<title>
+
+  DoubleStream | Android Developers
+
+</title>
+
+
+
+  <meta itemprop="dateModified" content="2017-10-25T17:01:43.225880">
+
+
+<!-- STYLESHEETS -->
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto+Condensed">
+<link rel="stylesheet"
+    href="http://fonts.googleapis.com/css?family=Roboto:light,regular,medium,thin,italic,mediumitalic,bold"
+    title="roboto">
+<link rel="stylesheet" href="../../../../_static/268f0926ba/css/dac-devsite.css">
+
+
+
+
+
+
+
+<link href="../../../../static/css/default543b.css?v=2017111903" rel="stylesheet" type="text/css">
+<!-- JAVASCRIPT -->
+<script src="../../../../_static/268f0926ba/js/android_3p-bundle.js" type="text/javascript"></script>
+<script src="../../../../_static/268f0926ba/js/script_foot_closure_android.js"></script>
+<script src="../../../../_static/268f0926ba/js/script_foot_android.js"></script>
+
+<script type="text/javascript">
+  var toRoot = 'https://developer.android.com/';
+  devsite.permissions.init({"f62218c009ec029abef196bba5aa34cf": true, "098dafe57affddc137df300142652cfd": false, "8e03e230de0bd8a6fe173fdf172e8b3f": false, "cb025a64a50094835616312f4774a53d": true, "c95bf81627eb648c2345aec06a66200a": true, "51470233c56fc1fde50f00b73c52b216": false, "d169d485cf24243a263783dbe42029b1": true, "039e5d84b87fd75807ffb37b7f1bbf2c": true, "752953480de00a336d911a46966cc16d": false, "700def1a83e356c06c0925afb05de4b0": false, "6749dcb526ce9bde6993550c7d928d24": true});
+
+  var replaceBlog = false;
+  var replaceYouTube = false;
+  var siteDefaultLocale = 'en';
+
+  var ANDROID_LANGUAGES = [
+      'id','de','en','es','es-419','fr','pt-br','vi','tr','ru','th','ja','zh-cn','zh-tw','ko'
+  ];
+</script>
+<script src="../../../../static/js/docs543b.js?v=2017111903" type="text/javascript"></script>
+
+
+</head>
+
+<body class="gc-documentation
+            api apilevel-24
+            
+              develop
+              reference
+            
+            ">
+  
+
+
+  
+    <input class="google-analytics-id-json" type="hidden" value="{&quot;dimensions&quot;: {&quot;dimension6&quot;: &quot;en&quot;, &quot;dimension4&quot;: &quot;Reference&quot;, &quot;dimension5&quot;: &quot;en&quot;, &quot;dimension3&quot;: false, &quot;dimension1&quot;: &quot;Signed out&quot;, &quot;dimension8&quot;: null}, &quot;gaid&quot;: &quot;UA-49880327-2&quot;}">
+  
+    <input class="google-analytics-id-json" type="hidden" value="{&quot;dimensions&quot;: {&quot;dimension6&quot;: &quot;en&quot;, &quot;dimension4&quot;: &quot;Reference&quot;, &quot;dimension5&quot;: &quot;en&quot;, &quot;dimension3&quot;: false, &quot;dimension1&quot;: &quot;Signed out&quot;, &quot;dimension8&quot;: null}, &quot;gaid&quot;: &quot;UA-5831155-1&quot;}">
+  
+
+
+
+  
+  
+    <script>
+      var dataLayer = [{"freeTrialEligibleUser": "False", "userCountry": "BD", "language": {"requested": "en", "served": "en"}, "projectName": "Reference", "scriptsafe": null, "signedIn": "False", "internalUser": "False"}];
+    </script>
+  
+
+
+
+  
+  <a href="#top" id="skip-to-main">Skip to content</a>
+  <header id="header-wrapper">
+    <div class="dac-header" id="header">
+      <div class="dac-header-inner">
+        
+        <a class="dac-nav-toggle" data-dac-toggle-nav href="#" title="Open navigation">
+          <span class="dac-nav-hamburger">
+            <span class="dac-nav-hamburger-top"></span>
+            <span class="dac-nav-hamburger-mid"></span>
+            <span class="dac-nav-hamburger-bot"></span>
+          </span>
+        </a>
+        
+        <a class="dac-header-logo" href="https://developer.android.com/index.html">
+          <img class="dac-header-logo-image" src="../../../../static/images/android_logo.png"
+              srcset="https://developer.android.com/static/images/android_logo_2x.png 2x"
+              width="32" height="36" alt="Android"> Developers</a>
+        <ul class="dac-header-tabs">
+          <li>
+            <a class="dac-header-tab" href="https://developer.android.com/design/index.html"
+               zh-tw-lang="設計"
+               zh-cn-lang="设计"
+               ru-lang="Проектирование"
+               ko-lang="디자인"
+               ja-lang="設計"
+               es-lang="Diseñar">
+              
+              Design</a>
+          </li>
+          <li>
+            <a class="dac-header-tab" href="https://developer.android.com/develop/index.html"
+               zh-tw-lang="開發"
+               zh-cn-lang="开发"
+               ru-lang="Разработка"
+               ko-lang="개발"
+               ja-lang="開発"
+               es-lang="Desarrollar">
+              
+              Develop</a>
+          </li>
+          <li>
+            <a class="dac-header-tab" href="https://developer.android.com/distribute/index.html"
+               zh-tw-lang="發佈"
+               zh-cn-lang="分发"
+               ru-lang="Распространение"
+               ko-lang="배포"
+               ja-lang="配布"
+               es-lang="Distribuir">
+              
+              Distribute</a>
+          </li>
+        </ul>
+
+
+        
+
+        <a class="dac-header-console-btn gc-analytics-event" href="https://play.google.com/apps/publish/"
+           data-category="User" data-action="Console" data-label="Clicked">
+          
+          <img src="https://developer.android.com/static/images/developer-console-icon.svg" width="18" height="19" alt="">Play Console</a>
+        
+
+<form data-search="" class="dac-header-search">
+  <button class="dac-header-search-close" data-search-close="">
+    <i class="dac-sprite dac-back-arrow"></i>
+  </button>
+
+  <div class="dac-header-search-inner">
+    <i class="dac-sprite dac-search-white dac-header-search-icon"></i>
+    
+    <input id="search_autocomplete" type="text" value="" autocomplete="off" name="q" class="dac-header-search-input" placeholder="Search">
+    <button class="dac-header-search-clear dac-hidden" data-search-clear="">
+      <i class="dac-sprite dac-close-black"></i>
+    </button>
+  </div>
+</form>
+
+        
+      </div><!--/.header-wrap.wrap-->
+    </div><!--/.header-->
+
+    
+
+<div id="search-results" class="dac-search-results">
+  <div id="dac-search-results-history" class="dac-search-results-history">
+    <div class="wrap dac-search-results-history-wrap">
+      <div class="cols">
+        <div class="col-1of2 col-tablet-1of2 col-mobile-1of1">
+          
+          <h2>Most visited</h2>
+          <div class="resource-flow-layout" data-history-query="history:most/visited" data-maxresults="3" data-cardsizes="18x2"></div>
+        </div>
+
+        <div class="col-1of2 col-tablet-1of2 col-mobile-1of1">
+          
+          <h2>Recently visited</h2>
+          <div class="resource-flow-layout cols" data-history-query="history:recent" data-allow-duplicates="true" data-maxresults="3" data-cardsizes="18x2"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="dac-search-results-content" class="dac-search-results-content">
+    <div class="dac-search-results-metadata wrap">
+      <div class="dac-search-results-for">
+          <h2>
+          
+          Results for <span id="search-results-for"></span>
+          </h2>
+      </div>
+
+      <div id="dac-search-results-hero"></div>
+
+      <div class="dac-search-results-hero cols">
+        <div id="dac-search-results-reference" class="col-6of6 col-tablet-2of2 col-mobile-1of1">
+          <div class="suggest-card reference no-display">
+            <ul class="dac-search-results-reference">
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="cols dac-search-results-cse">
+        <script src="../../../../../cse.google.com/f4116.txt?cx=000521750095050289010:zpcpi1ea4s8" async></script>
+        <gcse:searchresults-only linkTarget="_self"></gcse:searchresults-only>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </header>
+
+  <a name="navigation" tabindex=0 class="nav-start-marker">navigation</a>
+  <nav class="dac-nav">
+    <div class="dac-nav-dimmer" data-dac-toggle-nav></div>
+    <div class="dac-nav-sidebar" data-swap data-dynamic="false" data-transition-speed="300" data-dac-nav>
+      <div data-swap-container>
+        
+        <a class="dac-nav-back-button dac-swap-section dac-up dac-no-anim" tabindex=0 data-swap-button>
+          
+          
+          <i class="dac-sprite dac-nav-back"></i> <span class="dac-nav-back-title">Back</span>
+        </a>
+
+        <div class="dac-nav-sub dac-swap-section dac-right dac-active" itemscope
+            itemtype="http://schema.org/SiteNavigationElement">
+          
+          
+            
+              
+              <button data-fullscreen="" class="dac-nav-fullscreen">
+                <i class="dac-sprite dac-fullscreen"></i>
+              </button>
+              <script>$('[data-fullscreen]').dacFullscreen();</script>
+              <div id="devdoc-nav">
+                <div id="api-nav-header">
+                  <div id="api-level-toggle">
+                    <label for="apiLevelCheckbox" class="disabled"
+                        
+                        title="Select your target API level to dim unavailable APIs">
+                        
+                        API:
+                    </label>
+                    <div class="select-wrapper">
+                      <select id="apiLevelSelector"></select>
+                    </div>
+                  </div><!-- end toggle -->
+                  <div id="api-nav-title">
+                    <select id="reference-selector">
+                      
+                      <option value="android">Android Platform</option>
+                      
+                      
+                      <option value="android/support">Android Support Library</option>
+                      
+                      
+                      <option value="android/arch">Architecture Components</option>
+                      
+                      <option value="android/support/constraint">Constraint Library</option>
+                      
+                      <option value="com/android/billingclient">Play Billing Library</option>
+                      
+                      <option value="android/support/test">Test Support Library</option>
+                      
+                      <option value="android/support/wearable">Wearable Library</option>
+                    </select>
+                  </div>
+                </div><!-- end nav header -->
+                <script>
+                  buildApiLevelSelector();
+                  initReferenceSelector();
+                </script>
+                <div class="dac-reference-nav" data-reference-tree="">
+                  <ul class="dac-reference-nav-list" data-reference-namespaces="">
+                    <li class="api no-toggle"><a href="../../../classes.html" >Class Index</a></li><li class="api no-toggle"><a href="../../../packages.html" >Package Index</a></li><li class="api apilevel-1"><a href="../../../android/package-summary.html" >android</a></li><li class="api apilevel-4"><a href="../../../android/accessibilityservice/package-summary.html" >android.accessibilityservice</a></li><li class="api apilevel-5"><a href="../../../android/accounts/package-summary.html" >android.accounts</a></li><li class="api apilevel-11"><a href="../../../android/animation/package-summary.html" >android.animation</a></li><li class="api apilevel-16"><a href="../../../android/annotation/package-summary.html" >android.annotation</a></li><li class="api apilevel-1"><a href="../../../android/app/package-summary.html" >android.app</a></li><li class="api apilevel-8"><a href="../../../android/app/admin/package-summary.html" >android.app.admin</a></li><li class="api apilevel-23"><a href="../../../android/app/assist/package-summary.html" >android.app.assist</a></li><li class="api apilevel-8"><a href="../../../android/app/backup/package-summary.html" >android.app.backup</a></li><li class="api apilevel-21"><a href="../../../android/app/job/package-summary.html" >android.app.job</a></li><li class="api apilevel-21"><a href="../../../android/app/usage/package-summary.html" >android.app.usage</a></li><li class="api apilevel-3"><a href="../../../android/appwidget/package-summary.html" >android.appwidget</a></li><li class="api apilevel-5"><a href="../../../android/bluetooth/package-summary.html" >android.bluetooth</a></li><li class="api apilevel-21"><a href="../../../android/bluetooth/le/package-summary.html" >android.bluetooth.le</a></li><li class="api apilevel-26"><a href="../../../android/companion/package-summary.html" >android.companion</a></li><li class="api apilevel-1"><a href="../../../android/content/package-summary.html" >android.content</a></li><li class="api apilevel-1"><a href="../../../android/content/pm/package-summary.html" >android.content.pm</a></li><li class="api apilevel-1"><a href="../../../android/content/res/package-summary.html" >android.content.res</a></li><li class="api apilevel-1"><a href="../../../android/database/package-summary.html" >android.database</a></li><li class="api apilevel-1"><a href="../../../android/database/sqlite/package-summary.html" >android.database.sqlite</a></li><li class="api apilevel-"><a href="../../../android/databinding/package-summary.html" >android.databinding</a></li><li class="api apilevel-11"><a href="../../../android/drm/package-summary.html" >android.drm</a></li><li class="api apilevel-4"><a href="../../../android/gesture/package-summary.html" >android.gesture</a></li><li class="api apilevel-1"><a href="../../../android/graphics/package-summary.html" >android.graphics</a></li><li class="api apilevel-1"><a href="../../../android/graphics/drawable/package-summary.html" >android.graphics.drawable</a></li><li class="api apilevel-1"><a href="../../../android/graphics/drawable/shapes/package-summary.html" >android.graphics.drawable.shapes</a></li><li class="api apilevel-26"><a href="../../../android/graphics/fonts/package-summary.html" >android.graphics.fonts</a></li><li class="api apilevel-19"><a href="../../../android/graphics/pdf/package-summary.html" >android.graphics.pdf</a></li><li class="api apilevel-1"><a href="../../../android/hardware/package-summary.html" >android.hardware</a></li><li class="api apilevel-21"><a href="../../../android/hardware/camera2/package-summary.html" >android.hardware.camera2</a></li><li class="api apilevel-21"><a href="../../../android/hardware/camera2/params/package-summary.html" >android.hardware.camera2.params</a></li><li class="api apilevel-17"><a href="../../../android/hardware/display/package-summary.html" >android.hardware.display</a></li><li class="api apilevel-23"><a href="../../../android/hardware/fingerprint/package-summary.html" >android.hardware.fingerprint</a></li><li class="api apilevel-16"><a href="../../../android/hardware/input/package-summary.html" >android.hardware.input</a></li><li class="api apilevel-12"><a href="../../../android/hardware/usb/package-summary.html" >android.hardware.usb</a></li><li class="api apilevel-24"><a href="../../../android/icu/lang/package-summary.html" >android.icu.lang</a></li><li class="api apilevel-24"><a href="../../../android/icu/math/package-summary.html" >android.icu.math</a></li><li class="api apilevel-24"><a href="../../../android/icu/text/package-summary.html" >android.icu.text</a></li><li class="api apilevel-24"><a href="../../../android/icu/util/package-summary.html" >android.icu.util</a></li><li class="api apilevel-3"><a href="../../../android/inputmethodservice/package-summary.html" >android.inputmethodservice</a></li><li class="api apilevel-1"><a href="../../../android/location/package-summary.html" >android.location</a></li><li class="api apilevel-1"><a href="../../../android/media/package-summary.html" >android.media</a></li><li class="api apilevel-9"><a href="../../../android/media/audiofx/package-summary.html" >android.media.audiofx</a></li><li class="api apilevel-21"><a href="../../../android/media/browse/package-summary.html" >android.media.browse</a></li><li class="api apilevel-14"><a href="../../../android/media/effect/package-summary.html" >android.media.effect</a></li><li class="api apilevel-23"><a href="../../../android/media/midi/package-summary.html" >android.media.midi</a></li><li class="api apilevel-21"><a href="../../../android/media/projection/package-summary.html" >android.media.projection</a></li><li class="api apilevel-21"><a href="../../../android/media/session/package-summary.html" >android.media.session</a></li><li class="api apilevel-21"><a href="../../../android/media/tv/package-summary.html" >android.media.tv</a></li><li class="api apilevel-12"><a href="../../../android/mtp/package-summary.html" >android.mtp</a></li><li class="api apilevel-1"><a href="../../../android/net/package-summary.html" >android.net</a></li><li class="api apilevel-1"><a href="../../../android/net/http/package-summary.html" >android.net.http</a></li><li class="api apilevel-16"><a href="../../../android/net/nsd/package-summary.html" >android.net.nsd</a></li><li class="api apilevel-12"><a href="../../../android/net/rtp/package-summary.html" >android.net.rtp</a></li><li class="api apilevel-9"><a href="../../../android/net/sip/package-summary.html" >android.net.sip</a></li><li class="api apilevel-1"><a href="../../../android/net/wifi/package-summary.html" >android.net.wifi</a></li><li class="api apilevel-26"><a href="../../../android/net/wifi/aware/package-summary.html" >android.net.wifi.aware</a></li><li class="api apilevel-26"><a href="../../../android/net/wifi/hotspot2/package-summary.html" >android.net.wifi.hotspot2</a></li><li class="api apilevel-26"><a href="../../../android/net/wifi/hotspot2/omadm/package-summary.html" >android.net.wifi.hotspot2.omadm</a></li><li class="api apilevel-26"><a href="../../../android/net/wifi/hotspot2/pps/package-summary.html" >android.net.wifi.hotspot2.pps</a></li><li class="api apilevel-14"><a href="../../../android/net/wifi/p2p/package-summary.html" >android.net.wifi.p2p</a></li><li class="api apilevel-16"><a href="../../../android/net/wifi/p2p/nsd/package-summary.html" >android.net.wifi.p2p.nsd</a></li><li class="api apilevel-9"><a href="../../../android/nfc/package-summary.html" >android.nfc</a></li><li class="api apilevel-19"><a href="../../../android/nfc/cardemulation/package-summary.html" >android.nfc.cardemulation</a></li><li class="api apilevel-10"><a href="../../../android/nfc/tech/package-summary.html" >android.nfc.tech</a></li><li class="api apilevel-1"><a href="../../../android/opengl/package-summary.html" >android.opengl</a></li><li class="api apilevel-1"><a href="../../../android/os/package-summary.html" >android.os</a></li><li class="api apilevel-24"><a href="../../../android/os/health/package-summary.html" >android.os.health</a></li><li class="api apilevel-9"><a href="../../../android/os/storage/package-summary.html" >android.os.storage</a></li><li class="api apilevel-1"><a href="../../../android/preference/package-summary.html" >android.preference</a></li><li class="api apilevel-19"><a href="../../../android/print/package-summary.html" >android.print</a></li><li class="api apilevel-19"><a href="../../../android/print/pdf/package-summary.html" >android.print.pdf</a></li><li class="api apilevel-19"><a href="../../../android/printservice/package-summary.html" >android.printservice</a></li><li class="api apilevel-1"><a href="../../../android/provider/package-summary.html" >android.provider</a></li><li class="api apilevel-11"><a href="../../../android/renderscript/package-summary.html" >android.renderscript</a></li><li class="api apilevel-1"><a href="../../../android/sax/package-summary.html" >android.sax</a></li><li class="api apilevel-14"><a href="../../../android/security/package-summary.html" >android.security</a></li><li class="api apilevel-23"><a href="../../../android/security/keystore/package-summary.html" >android.security.keystore</a></li><li class="api apilevel-26"><a href="../../../android/service/autofill/package-summary.html" >android.service.autofill</a></li><li class="api apilevel-22"><a href="../../../android/service/carrier/package-summary.html" >android.service.carrier</a></li><li class="api apilevel-23"><a href="../../../android/service/chooser/package-summary.html" >android.service.chooser</a></li><li class="api apilevel-17"><a href="../../../android/service/dreams/package-summary.html" >android.service.dreams</a></li><li class="api apilevel-21"><a href="../../../android/service/media/package-summary.html" >android.service.media</a></li><li class="api apilevel-18"><a href="../../../android/service/notification/package-summary.html" >android.service.notification</a></li><li class="api apilevel-24"><a href="../../../android/service/quicksettings/package-summary.html" >android.service.quicksettings</a></li><li class="api apilevel-21"><a href="../../../android/service/restrictions/package-summary.html" >android.service.restrictions</a></li><li class="api apilevel-14"><a href="../../../android/service/textservice/package-summary.html" >android.service.textservice</a></li><li class="api apilevel-21"><a href="../../../android/service/voice/package-summary.html" >android.service.voice</a></li><li class="api apilevel-24"><a href="../../../android/service/vr/package-summary.html" >android.service.vr</a></li><li class="api apilevel-7"><a href="../../../android/service/wallpaper/package-summary.html" >android.service.wallpaper</a></li><li class="api apilevel-3"><a href="../../../android/speech/package-summary.html" >android.speech</a></li><li class="api apilevel-4"><a href="../../../android/speech/tts/package-summary.html" >android.speech.tts</a></li><li class="api apilevel-21"><a href="../../../android/system/package-summary.html" >android.system</a></li><li class="api apilevel-21"><a href="../../../android/telecom/package-summary.html" >android.telecom</a></li><li class="api apilevel-1"><a href="../../../android/telephony/package-summary.html" >android.telephony</a></li><li class="api apilevel-5"><a href="../../../android/telephony/cdma/package-summary.html" >android.telephony.cdma</a></li><li class="api apilevel-1"><a href="../../../android/telephony/gsm/package-summary.html" >android.telephony.gsm</a></li><li class="api apilevel-1"><a href="../../../android/test/package-summary.html" >android.test</a></li><li class="api apilevel-1"><a href="../../../android/test/mock/package-summary.html" >android.test.mock</a></li><li class="api apilevel-1"><a href="../../../android/test/suitebuilder/package-summary.html" >android.test.suitebuilder</a></li><li class="api apilevel-1"><a href="../../../android/test/suitebuilder/annotation/package-summary.html" >android.test.suitebuilder.annotation</a></li><li class="api apilevel-1"><a href="../../../android/text/package-summary.html" >android.text</a></li><li class="api apilevel-3"><a href="../../../android/text/format/package-summary.html" >android.text.format</a></li><li class="api apilevel-1"><a href="../../../android/text/method/package-summary.html" >android.text.method</a></li><li class="api apilevel-1"><a href="../../../android/text/style/package-summary.html" >android.text.style</a></li><li class="api apilevel-1"><a href="../../../android/text/util/package-summary.html" >android.text.util</a></li><li class="api apilevel-19"><a href="../../../android/transition/package-summary.html" >android.transition</a></li><li class="api apilevel-1"><a href="../../../android/util/package-summary.html" >android.util</a></li><li class="api apilevel-1"><a href="../../../android/view/package-summary.html" >android.view</a></li><li class="api apilevel-4"><a href="../../../android/view/accessibility/package-summary.html" >android.view.accessibility</a></li><li class="api apilevel-1"><a href="../../../android/view/animation/package-summary.html" >android.view.animation</a></li><li class="api apilevel-26"><a href="../../../android/view/autofill/package-summary.html" >android.view.autofill</a></li><li class="api apilevel-3"><a href="../../../android/view/inputmethod/package-summary.html" >android.view.inputmethod</a></li><li class="api apilevel-26"><a href="../../../android/view/textclassifier/package-summary.html" >android.view.textclassifier</a></li><li class="api apilevel-14"><a href="../../../android/view/textservice/package-summary.html" >android.view.textservice</a></li><li class="api apilevel-1"><a href="../../../android/webkit/package-summary.html" >android.webkit</a></li><li class="api apilevel-1"><a href="../../../android/widget/package-summary.html" >android.widget</a></li><li class="api apilevel-1"><a href="../../../com/android/internal/util/package-summary.html" >com.android.internal.util</a></li><li class="api apilevel-1"><a href="../../../dalvik/annotation/package-summary.html" >dalvik.annotation</a></li><li class="api apilevel-1"><a href="../../../dalvik/bytecode/package-summary.html" >dalvik.bytecode</a></li><li class="api apilevel-1"><a href="../../../dalvik/system/package-summary.html" >dalvik.system</a></li><li class="api apilevel-1"><a href="../../awt/font/package-summary.html" >java.awt.font</a></li><li class="api apilevel-3"><a href="../../beans/package-summary.html" >java.beans</a></li><li class="api apilevel-1"><a href="../../io/package-summary.html" >java.io</a></li><li class="api apilevel-1"><a href="../../lang/package-summary.html" >java.lang</a></li><li class="api apilevel-1"><a href="../../lang/annotation/package-summary.html" >java.lang.annotation</a></li><li class="api apilevel-26"><a href="../../lang/invoke/package-summary.html" >java.lang.invoke</a></li><li class="api apilevel-1"><a href="../../lang/ref/package-summary.html" >java.lang.ref</a></li><li class="api apilevel-1"><a href="../../lang/reflect/package-summary.html" >java.lang.reflect</a></li><li class="api apilevel-1"><a href="../../math/package-summary.html" >java.math</a></li><li class="api apilevel-1"><a href="../../net/package-summary.html" >java.net</a></li><li class="api apilevel-1"><a href="../../nio/package-summary.html" >java.nio</a></li><li class="api apilevel-1"><a href="../../nio/channels/package-summary.html" >java.nio.channels</a></li><li class="api apilevel-1"><a href="../../nio/channels/spi/package-summary.html" >java.nio.channels.spi</a></li><li class="api apilevel-1"><a href="../../nio/charset/package-summary.html" >java.nio.charset</a></li><li class="api apilevel-1"><a href="../../nio/charset/spi/package-summary.html" >java.nio.charset.spi</a></li><li class="api apilevel-26"><a href="../../nio/file/package-summary.html" >java.nio.file</a></li><li class="api apilevel-26"><a href="../../nio/file/attribute/package-summary.html" >java.nio.file.attribute</a></li><li class="api apilevel-26"><a href="../../nio/file/spi/package-summary.html" >java.nio.file.spi</a></li><li class="api apilevel-1"><a href="../../security/package-summary.html" >java.security</a></li><li class="api apilevel-1"><a href="../../security/acl/package-summary.html" >java.security.acl</a></li><li class="api apilevel-1"><a href="../../security/cert/package-summary.html" >java.security.cert</a></li><li class="api apilevel-1"><a href="../../security/interfaces/package-summary.html" >java.security.interfaces</a></li><li class="api apilevel-1"><a href="../../security/spec/package-summary.html" >java.security.spec</a></li><li class="api apilevel-1"><a href="../../sql/package-summary.html" >java.sql</a></li><li class="api apilevel-1"><a href="../../text/package-summary.html" >java.text</a></li><li class="api apilevel-26"><a href="../../time/package-summary.html" >java.time</a></li><li class="api apilevel-26"><a href="../../time/chrono/package-summary.html" >java.time.chrono</a></li><li class="api apilevel-26"><a href="../../time/format/package-summary.html" >java.time.format</a></li><li class="api apilevel-26"><a href="../../time/temporal/package-summary.html" >java.time.temporal</a></li><li class="api apilevel-26"><a href="../../time/zone/package-summary.html" >java.time.zone</a></li><li class="api apilevel-1"><a href="../package-summary.html" >java.util</a></li><li class="api apilevel-1"><a href="../concurrent/package-summary.html" >java.util.concurrent</a></li><li class="api apilevel-1"><a href="../concurrent/atomic/package-summary.html" >java.util.concurrent.atomic</a></li><li class="api apilevel-1"><a href="../concurrent/locks/package-summary.html" >java.util.concurrent.locks</a></li><li class="api apilevel-24"><a href="../function/package-summary.html" >java.util.function</a></li><li class="api apilevel-1"><a href="../jar/package-summary.html" >java.util.jar</a></li><li class="api apilevel-1"><a href="../logging/package-summary.html" >java.util.logging</a></li><li class="api apilevel-1"><a href="../prefs/package-summary.html" >java.util.prefs</a></li><li class="api apilevel-1"><a href="../regex/package-summary.html" >java.util.regex</a></li><li class="api apilevel-24"><a href="package-summary.html" >java.util.stream</a></li><li class="api apilevel-1"><a href="../zip/package-summary.html" >java.util.zip</a></li><li class="api apilevel-1"><a href="../../../javax/crypto/package-summary.html" >javax.crypto</a></li><li class="api apilevel-1"><a href="../../../javax/crypto/interfaces/package-summary.html" >javax.crypto.interfaces</a></li><li class="api apilevel-1"><a href="../../../javax/crypto/spec/package-summary.html" >javax.crypto.spec</a></li><li class="api apilevel-1"><a href="../../../javax/microedition/khronos/egl/package-summary.html" >javax.microedition.khronos.egl</a></li><li class="api apilevel-1"><a href="../../../javax/microedition/khronos/opengles/package-summary.html" >javax.microedition.khronos.opengles</a></li><li class="api apilevel-1"><a href="../../../javax/net/package-summary.html" >javax.net</a></li><li class="api apilevel-1"><a href="../../../javax/net/ssl/package-summary.html" >javax.net.ssl</a></li><li class="api apilevel-1"><a href="../../../javax/security/auth/package-summary.html" >javax.security.auth</a></li><li class="api apilevel-1"><a href="../../../javax/security/auth/callback/package-summary.html" >javax.security.auth.callback</a></li><li class="api apilevel-1"><a href="../../../javax/security/auth/login/package-summary.html" >javax.security.auth.login</a></li><li class="api apilevel-1"><a href="../../../javax/security/auth/x500/package-summary.html" >javax.security.auth.x500</a></li><li class="api apilevel-1"><a href="../../../javax/security/cert/package-summary.html" >javax.security.cert</a></li><li class="api apilevel-1"><a href="../../../javax/sql/package-summary.html" >javax.sql</a></li><li class="api apilevel-1"><a href="../../../javax/xml/package-summary.html" >javax.xml</a></li><li class="api apilevel-8"><a href="../../../javax/xml/datatype/package-summary.html" >javax.xml.datatype</a></li><li class="api apilevel-8"><a href="../../../javax/xml/namespace/package-summary.html" >javax.xml.namespace</a></li><li class="api apilevel-1"><a href="../../../javax/xml/parsers/package-summary.html" >javax.xml.parsers</a></li><li class="api apilevel-8"><a href="../../../javax/xml/transform/package-summary.html" >javax.xml.transform</a></li><li class="api apilevel-8"><a href="../../../javax/xml/transform/dom/package-summary.html" >javax.xml.transform.dom</a></li><li class="api apilevel-8"><a href="../../../javax/xml/transform/sax/package-summary.html" >javax.xml.transform.sax</a></li><li class="api apilevel-8"><a href="../../../javax/xml/transform/stream/package-summary.html" >javax.xml.transform.stream</a></li><li class="api apilevel-8"><a href="../../../javax/xml/validation/package-summary.html" >javax.xml.validation</a></li><li class="api apilevel-8"><a href="../../../javax/xml/xpath/package-summary.html" >javax.xml.xpath</a></li><li class="api apilevel-1"><a href="../../../junit/framework/package-summary.html" >junit.framework</a></li><li class="api apilevel-1"><a href="../../../junit/runner/package-summary.html" >junit.runner</a></li><li class="api apilevel-1"><a href="../../../org/apache/http/conn/package-summary.html" >org.apache.http.conn</a></li><li class="api apilevel-1"><a href="../../../org/apache/http/conn/scheme/package-summary.html" >org.apache.http.conn.scheme</a></li><li class="api apilevel-1"><a href="../../../org/apache/http/conn/ssl/package-summary.html" >org.apache.http.conn.ssl</a></li><li class="api apilevel-1"><a href="../../../org/apache/http/params/package-summary.html" >org.apache.http.params</a></li><li class="api apilevel-1"><a href="../../../org/json/package-summary.html" >org.json</a></li><li class="api apilevel-1"><a href="../../../org/w3c/dom/package-summary.html" >org.w3c.dom</a></li><li class="api apilevel-8"><a href="../../../org/w3c/dom/ls/package-summary.html" >org.w3c.dom.ls</a></li><li class="api apilevel-1"><a href="../../../org/xml/sax/package-summary.html" >org.xml.sax</a></li><li class="api apilevel-1"><a href="../../../org/xml/sax/ext/package-summary.html" >org.xml.sax.ext</a></li><li class="api apilevel-1"><a href="../../../org/xml/sax/helpers/package-summary.html" >org.xml.sax.helpers</a></li><li class="api apilevel-1"><a href="../../../org/xmlpull/v1/package-summary.html" >org.xmlpull.v1</a></li><li class="api apilevel-1"><a href="../../../org/xmlpull/v1/sax2/package-summary.html" >org.xmlpull.v1.sax2</a></li>
+                  </ul>
+                </div>
+              </div>
+            
+          
+        </div>
+        
+        
+          
+
+
+
+<ul id="dac-main-navigation" class="dac-nav-list dac-swap-section dac-left dac-no-anim" tabindex=0>
+  <li class="dac-nav-item home">
+    
+    <a class="dac-nav-link" href="https://developer.android.com/index.html">Home</a>
+    <i class="dac-sprite dac-expand-more-black dac-nav-sub-slider" tabindex=0></i>
+    <ul class="dac-nav-secondary about">
+      <li class="dac-nav-item versions">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/about/versions/o/index.html">Android</a>
+      </li>
+      <li class="dac-nav-item wear">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/wear/index.html">Wear</a>
+      </li>
+      <li class="dac-nav-item tv">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/tv/index.html">TV</a>
+      </li>
+      <li class="dac-nav-item auto">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/auto/index.html">Auto</a>
+      </li>
+      
+      <li class="dac-nav-item chrome-os">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/chrome-os/index.html">Chrome OS</a>
+      </li>
+      
+      <li class="dac-nav-item things">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/things/index.html">Things</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dac-nav-item design">
+    <a class="dac-nav-link" href="https://developer.android.com/design/index.html"
+       zh-tw-lang="設計"
+       zh-cn-lang="设计"
+       ru-lang="Проектирование"
+       ko-lang="디자인"
+       ja-lang="設計"
+       es-lang="Diseñar">
+      
+      Design</a>
+  </li>
+  <li class="dac-nav-item develop">
+    <a class="dac-nav-link" href="https://developer.android.com/develop/index.html"
+       zh-tw-lang="開發"
+       zh-cn-lang="开发"
+       ru-lang="Разработка"
+       ko-lang="개발"
+       ja-lang="開発"
+       es-lang="Desarrollar">
+      
+      Develop</a>
+    <i class="dac-sprite dac-expand-more-black dac-nav-sub-slider" tabindex=0></i>
+    <ul class="dac-nav-secondary develop">
+      <li class="dac-nav-item training">
+        <a class="dac-nav-link" href="https://developer.android.com/training/index.html"
+           zh-tw-lang="訓練課程"
+           zh-cn-lang="培训"
+           ru-lang="Курсы"
+           ko-lang="교육"
+           ja-lang="トレーニング"
+           es-lang="Capacitación">
+            
+            Training</a>
+      </li>
+      <li class="dac-nav-item guide">
+        <a class="dac-nav-link" href="https://developer.android.com/guide/index.html"
+           zh-tw-lang="API 指南"
+           zh-cn-lang="API 指南"
+           ru-lang="Руководства по API"
+           ko-lang="API 가이드"
+           ja-lang="API ガイド"
+           es-lang="Guías de la API">
+          
+          API Guides</a>
+      </li>
+      <li class="dac-nav-item reference">
+        <a class="dac-nav-link" href="../../../packages.html"
+           zh-tw-lang="參考資源"
+           zh-cn-lang="参考"
+           ru-lang="Справочник"
+           ko-lang="참조문서"
+           ja-lang="リファレンス"
+           es-lang="Referencia">
+          
+          Reference</a>
+      </li>
+      <li class="dac-nav-item samples">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/samples/index.html">Samples</a>
+      </li>
+      <li class="dac-nav-item libraries">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/topic/libraries/index.html">Libraries</a></li>
+      <li class="dac-nav-item studio">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/studio/index.html">Android Studio</a></li>
+      <li class="dac-nav-item ndk">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/ndk/index.html">Android NDK</a></li>
+      <li class="dac-nav-item google">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/google/index.html">Google Services</a>
+      </li>
+      <li class="dac-nav-item quality-guidelines">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/develop/quality-guidelines/index.html">Quality Guidelines</a>
+      </li>
+      <li class="dac-nav-item kotlin">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/kotlin/index.html">Kotlin</a>
+       </li>
+    </ul>
+  </li>
+  <li class="dac-nav-item distribute">
+    <a class="dac-nav-link" href="https://developer.android.com/distribute/index.html"
+       zh-tw-lang="發佈"
+       zh-cn-lang="分发"
+       ru-lang="Распространение"
+       ko-lang="배포"
+       ja-lang="配布"
+       de-lang="Vertrieb"
+       es-lang="Distribuir"
+       es-419-lang="Distribuye"
+       fr-lang="Distribuer"
+       id-lang="Distribusikan"
+       pt-br-lang="Distribuição"
+       th-lang="จัดจำหน่าย"
+       tr-lang="Dağıtma"
+       vi-lang="Phân phối">
+      
+      Distribute</a>
+    <i class="dac-sprite dac-expand-more-black dac-nav-sub-slider" tabindex=0></i>
+    <ul class="dac-nav-secondary distribute">
+      <li class="dac-nav-item google-play">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/distribute/google-play/index.html">Google Play</a>
+      </li>
+      <li class="dac-nav-item console">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/distribute/console/index.html">Play Console</a>
+      </li>
+      <li class="dac-nav-item best-practices">
+        <a class="dac-nav-link" href="https://developer.android.com/distribute/best-practices/index.html"
+          es-419-lang="Recomendaciones"
+          fr-lang="Bonnes pratiques"
+          id-lang="Praktik terbaik"
+          ja-lang="おすすめの方法"
+          ko-lang="권장사항"
+          pt-br-lang="Práticas recomendadas"
+          ru-lang="Рекомендации"
+          th-lang="จัดจำหน่าย"
+          tr-lang="En iyi uygulamalar"
+          vi-lang="Các phương pháp hay nhất"
+          zh-cn-lang="最佳做法"
+          zh-tw-lang="最佳做法">
+          
+          Best practices</a>
+      </li>
+      <li class="dac-nav-item marketing-tools">
+        <a class="dac-nav-link" href="https://developer.android.com/distribute/marketing-tools/index.html"
+          de-lang="Marketing-Tools"
+          es-419-lang="Herramientas de marketing"
+          fr-lang="Outils marketing"
+          id-lang="Fitur pemasaran"
+          ja-lang="マーケティング ツール"
+          ko-lang="마케팅 도구"
+          pt-br-lang="Ferramentas de marketing"
+          ru-lang="Маркетинговые инструменты"
+          th-lang="เครื่องมือการตลาด"
+          tr-lang="Pazarlama araçları"
+          vi-lang="Công cụ tiếp thị"
+          zh-cn-lang="营销工具"
+          zh-tw-lang="行銷工具">
+          
+          Marketing tools</a>
+      </li>
+      <li class="dac-nav-item policy-center">
+        
+        <a class="dac-nav-link" href="https://play.google.com/about/developer-content-policy/" target="_blank">Policy center</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dac-nav-item stories">
+    
+    <a class="dac-nav-link" href="https://developer.android.com/stories/index.html">Stories</a>
+  </li>
+  
+  <li class="dac-nav-item preview">
+    
+    <a class="dac-nav-link" href="https://developer.android.com/preview/index.html">Preview</a>
+  </li>
+  
+</ul>
+
+        
+      </div>
+    </div>
+  </nav>
+
+  <a name="top" tabindex="0"></a>
+  
+  <div class="wrap clearfix" id="body-content">
+  
+    
+      
+    
+    <div class="jd-descr " itemprop="articleBody">
+      <div id="doc-api-level" class="24" style="display:none"></div>
+
+
+
+
+<div id="naMessage"></div>
+
+<div id="api-info-block">
+<div class="api-level">
+  
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 24</a>
+  
+  
+  
+  
+
+</div>
+
+
+
+  
+   
+  
+  
+  
+  
+
+  
+   
+  
+  
+  
+  
+
+
+<div class="sum-details-links">
+
+Summary:
+
+  <a href="#nestedclasses">Nested Classes</a>
+  
+
+
+
+
+
+
+
+
+
+
+
+  &#124; <a href="#pubmethods">Methods</a>
+  
+
+
+
+  &#124; <a href="#inhmethods">Inherited Methods</a>
+
+&#124; <a href="#" onclick="return toggleAllClassInherited()" id="toggleAllClassInherited">[Expand All]</a>
+
+</div><!-- end sum-details-links -->
+</div><!-- end api-info-block -->
+
+<div class="api apilevel-24" id="jd-content">
+
+<!-- ======== START OF CLASS DATA ======== -->
+
+<h1 class="api-title">DoubleStream</h1>
+<p>
+<code class="api-signature">
+  public
+  
+  
+  
+  interface
+  DoubleStream
+</code>
+<br>
+
+
+<code class="api-signature">
+  
+  
+      implements
+      
+        <a href="BaseStream.html">BaseStream</a>&lt;<a href="../../lang/Double.html">Double</a>,&nbsp;<a href="DoubleStream.html">DoubleStream</a>&gt;
+      
+  
+  
+</code>
+
+</p><table class="jd-inheritance-table">
+
+
+  <tr>
+    
+    <td colspan="1" class="jd-inheritance-class-cell">java.util.stream.DoubleStream
+    </td>
+  </tr>
+  
+
+</table>
+  
+
+    
+
+<br><hr>
+
+
+  <p>A sequence of primitive double-valued elements supporting sequential and parallel
+ aggregate operations.  This is the <code>double</code> primitive specialization of
+ <code><a href="Stream.html">Stream</a></code>.
+
+ <p>The following example illustrates an aggregate operation using
+ <code><a href="Stream.html">Stream</a></code> and <code><a href="DoubleStream.html">DoubleStream</a></code>, computing the sum of the weights of the
+ red widgets:
+
+ <pre><code>double sum = widgets.stream()
+                         .filter(w -&gt; w.getColor() == RED)
+                         .mapToDouble(w -&gt; w.getWeight())
+                         .sum();
+ </code></pre>
+
+ See the class documentation for <code><a href="Stream.html">Stream</a></code> and the package documentation
+ for <a href="package-summary.html">java.util.stream</a> for additional
+ specification of streams, stream operations, stream pipelines, and
+ parallelism.</p>
+
+
+
+
+
+  <div>
+      <p><b>See also:</b></p>
+      <ul class="nolist"><li><code><a href="Stream.html">Stream</a></code></li><li><a href="package-summary.html">java.util.stream</a></li>
+      </ul>
+  </div>
+
+
+
+
+<h2 class="api-section">Summary</h2>
+
+
+
+<!-- ======== NESTED CLASS SUMMARY ======== -->
+<table id="nestedclasses" class="responsive">
+<tr><th colspan="2"><h3>Nested classes</h3></th></tr>
+
+
+  
+    <tr class="api apilevel-24" >
+      <td class="jd-typecol"><code>
+        
+        
+        
+        
+        interface</code></td>
+      <td class="jd-descrcol" width="100%">
+        <code><a href="DoubleStream.Builder.html">DoubleStream.Builder</a></code>
+        <p>A mutable builder for a <code>DoubleStream</code>.&nbsp;
+        
+    
+</p>
+      </td>
+    </tr>
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ========== METHOD SUMMARY =========== -->
+<table id="pubmethods" class="responsive methods">
+<tr><th colspan="2"><h3>Public methods</h3></th></tr>
+
+
+
+  
+  <tr class="api apilevel-24" >
+  
+  
+    <td><code>
+        abstract
+        
+        
+        
+        
+        boolean</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="DoubleStream.html#allMatch(java.util.function.DoublePredicate)">allMatch</a>(<a href="../function/DoublePredicate.html">DoublePredicate</a> predicate)
+      </code>
+      
+        <p>Returns whether all elements of this stream match the provided predicate.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-24" >
+  
+  
+    <td><code>
+        abstract
+        
+        
+        
+        
+        boolean</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="DoubleStream.html#anyMatch(java.util.function.DoublePredicate)">anyMatch</a>(<a href="../function/DoublePredicate.html">DoublePredicate</a> predicate)
+      </code>
+      
+        <p>Returns whether any elements of this stream match the provided
+ predicate.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-24" >
+  
+  
+    <td><code>
+        abstract
+        
+        
+        
+        
+        <a href="../OptionalDouble.html">OptionalDouble</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="DoubleStream.html#average()">average</a>()
+      </code>
+      
+        <p>Returns an <code>OptionalDouble</code> describing the arithmetic
+ mean of elements of this stream, or an empty optional if this
+ stream is empty.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-24" >
+  
+  
+    <td><code>
+        abstract
+        
+        
+        
+        
+        <a href="Stream.html">Stream</a>&lt;<a href="../../lang/Double.html">Double</a>&gt;</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="DoubleStream.html#boxed()">boxed</a>()
+      </code>
+      
+        <p>Returns a <code>Stream</code> consisting of the elements of this stream,
+ boxed to <code>Double</code>.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-24" >
+  
+  
+    <td><code>
+        
+        
+        static
+        
+        
+        <a href="DoubleStream.Builder.html">DoubleStream.Builder</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="DoubleStream.html#builder()">builder</a>()
+      </code>
+      
+        <p>Returns a builder for a <code>DoubleStream</code>.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-24" >
+  
+  
+    <td><code>
+        abstract
+        
+        
+        
+        &lt;R&gt;
+        R</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="DoubleStream.html#collect(java.util.function.Supplier<R>, java.util.function.ObjDoubleConsumer<R>, java.util.function.BiConsumer<R, R>)">collect</a>(<a href="../function/Supplier.html">Supplier</a>&lt;R&gt; supplier, <a href="../function/ObjDoubleConsumer.html">ObjDoubleConsumer</a>&lt;R&gt; accumulator, <a href="../function/BiConsumer.html">BiConsumer</a>&lt;R,&nbsp;R&gt; combiner)
+      </code>
+      
+        <p>Performs a <a href="package-summary.html#MutableReduction">mutable
+ reduction</a> operation on the elements of this stream.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-24" >
+  
+  
+    <td><code>
+        
+        
+        static
+        
+        
+        <a href="DoubleStream.html">DoubleStream</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="DoubleStream.html#concat(java.util.stream.DoubleStream, java.util.stream.DoubleStream)">concat</a>(<a href="DoubleStream.html">DoubleStream</a> a, <a href="DoubleStream.html">DoubleStream</a> b)
+      </code>
+      
+        <p>Creates a lazily concatenated stream whose elements are all the
+ elements of the first stream followed by all the elements of the
+ second stream.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-24" >
+  
+  
+    <td><code>
+        abstract
+        
+        
+        
+        
+        long</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="DoubleStream.html#count()">count</a>()
+      </code>
+      
+        <p>Returns the count of elements in this stream.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-24" >
+  
+  
+    <td><code>
+        abstract
+        
+        
+        
+        
+        <a href="DoubleStream.html">DoubleStream</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="DoubleStream.html#distinct()">distinct</a>()
+      </code>
+      
+        <p>Returns a stream consisting of the distinct elements of this stream.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-24" >
+  
+  
+    <td><code>
+        
+        
+        static
+        
+        
+        <a href="DoubleStream.html">DoubleStream</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="DoubleStream.html#empty()">empty</a>()
+      </code>
+      
+        <p>Returns an empty sequential <code>DoubleStream</code>.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-24" >
+  
+  
+    <td><code>
+        abstract
+        
+        
+        
+        
+        <a href="DoubleStream.html">DoubleStream</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="DoubleStream.html#filter(java.util.function.DoublePredicate)">filter</a>(<a href="../function/DoublePredicate.html">DoublePredicate</a> predicate)
+      </code>
+      
+        <p>Returns a stream consisting of the elements of this stream that match
+ the given predicate.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-24" >
+  
+  
+    <td><code>
+        abstract
+        
+        
+        
+        
+        <a href="../OptionalDouble.html">OptionalDouble</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="DoubleStream.html#findAny()">findAny</a>()
+      </code>
+      
+        <p>Returns an <code><a href="../OptionalDouble.html">OptionalDouble</a></code> describing some element of the stream,
+ or an empty <code>OptionalDouble</code> if the stream is empty.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-24" >
+  
+  
+    <td><code>
+        abstract
+        
+        
+        
+        
+        <a href="../OptionalDouble.html">OptionalDouble</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="DoubleStream.html#findFirst()">findFirst</a>()
+      </code>
+      
+        <p>Returns an <code><a href="../OptionalDouble.html">OptionalDouble</a></code> describing the first element of this
+ stream, or an empty <code>OptionalDouble</code> if the stream is empty.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-24" >
+  
+  
+    <td><code>
+        abstract
+        
+        
+        
+        
+        <a href="DoubleStream.html">DoubleStream</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="DoubleStream.html#flatMap(java.util.function.DoubleFunction<? extends java.util.stream.DoubleStream>)">flatMap</a>(<a href="../function/DoubleFunction.html">DoubleFunction</a>&lt;?&nbsp;extends&nbsp;<a href="DoubleStream.html">DoubleStream</a>&gt; mapper)
+      </code>
+      
+        <p>Returns a stream consisting of the results of replacing each element of
+ this stream with the contents of a mapped stream produced by applying
+ the provided mapping function to each element.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-24" >
+  
+  
+    <td><code>
+        abstract
+        
+        
+        
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="DoubleStream.html#forEach(java.util.function.DoubleConsumer)">forEach</a>(<a href="../function/DoubleConsumer.html">DoubleConsumer</a> action)
+      </code>
+      
+        <p>Performs an action for each element of this stream.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-24" >
+  
+  
+    <td><code>
+        abstract
+        
+        
+        
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="DoubleStream.html#forEachOrdered(java.util.function.DoubleConsumer)">forEachOrdered</a>(<a href="../function/DoubleConsumer.html">DoubleConsumer</a> action)
+      </code>
+      
+        <p>Performs an action for each element of this stream, guaranteeing that
+ each element is processed in encounter order for streams that have a
+ defined encounter order.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-24" >
+  
+  
+    <td><code>
+        
+        
+        static
+        
+        
+        <a href="DoubleStream.html">DoubleStream</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="DoubleStream.html#generate(java.util.function.DoubleSupplier)">generate</a>(<a href="../function/DoubleSupplier.html">DoubleSupplier</a> s)
+      </code>
+      
+        <p>Returns an infinite sequential unordered stream where each element is
+ generated by the provided <code>DoubleSupplier</code>.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-24" >
+  
+  
+    <td><code>
+        
+        
+        static
+        
+        
+        <a href="DoubleStream.html">DoubleStream</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="DoubleStream.html#iterate(double, java.util.function.DoubleUnaryOperator)">iterate</a>(double seed, <a href="../function/DoubleUnaryOperator.html">DoubleUnaryOperator</a> f)
+      </code>
+      
+        <p>Returns an infinite sequential ordered <code>DoubleStream</code> produced by iterative
+ application of a function <code>f</code> to an initial element <code>seed</code>,
+ producing a <code>Stream</code> consisting of <code>seed</code>, <code>f(seed)</code>,
+ <code>f(f(seed))</code>, etc.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-24" >
+  
+  
+    <td><code>
+        abstract
+        
+        
+        
+        
+        <a href="../PrimitiveIterator.OfDouble.html">PrimitiveIterator.OfDouble</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="DoubleStream.html#iterator()">iterator</a>()
+      </code>
+      
+        <p>Returns an iterator for the elements of this stream.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-24" >
+  
+  
+    <td><code>
+        abstract
+        
+        
+        
+        
+        <a href="DoubleStream.html">DoubleStream</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="DoubleStream.html#limit(long)">limit</a>(long maxSize)
+      </code>
+      
+        <p>Returns a stream consisting of the elements of this stream, truncated
+ to be no longer than <code>maxSize</code> in length.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-24" >
+  
+  
+    <td><code>
+        abstract
+        
+        
+        
+        
+        <a href="DoubleStream.html">DoubleStream</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="DoubleStream.html#map(java.util.function.DoubleUnaryOperator)">map</a>(<a href="../function/DoubleUnaryOperator.html">DoubleUnaryOperator</a> mapper)
+      </code>
+      
+        <p>Returns a stream consisting of the results of applying the given
+ function to the elements of this stream.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-24" >
+  
+  
+    <td><code>
+        abstract
+        
+        
+        
+        
+        <a href="IntStream.html">IntStream</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="DoubleStream.html#mapToInt(java.util.function.DoubleToIntFunction)">mapToInt</a>(<a href="../function/DoubleToIntFunction.html">DoubleToIntFunction</a> mapper)
+      </code>
+      
+        <p>Returns an <code>IntStream</code> consisting of the results of applying the
+ given function to the elements of this stream.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-24" >
+  
+  
+    <td><code>
+        abstract
+        
+        
+        
+        
+        <a href="LongStream.html">LongStream</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="DoubleStream.html#mapToLong(java.util.function.DoubleToLongFunction)">mapToLong</a>(<a href="../function/DoubleToLongFunction.html">DoubleToLongFunction</a> mapper)
+      </code>
+      
+        <p>Returns a <code>LongStream</code> consisting of the results of applying the
+ given function to the elements of this stream.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-24" >
+  
+  
+    <td><code>
+        abstract
+        
+        
+        
+        &lt;U&gt;
+        <a href="Stream.html">Stream</a>&lt;U&gt;</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="DoubleStream.html#mapToObj(java.util.function.DoubleFunction<? extends U>)">mapToObj</a>(<a href="../function/DoubleFunction.html">DoubleFunction</a>&lt;?&nbsp;extends&nbsp;U&gt; mapper)
+      </code>
+      
+        <p>Returns an object-valued <code>Stream</code> consisting of the results of
+ applying the given function to the elements of this stream.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-24" >
+  
+  
+    <td><code>
+        abstract
+        
+        
+        
+        
+        <a href="../OptionalDouble.html">OptionalDouble</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="DoubleStream.html#max()">max</a>()
+      </code>
+      
+        <p>Returns an <code>OptionalDouble</code> describing the maximum element of this
+ stream, or an empty OptionalDouble if this stream is empty.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-24" >
+  
+  
+    <td><code>
+        abstract
+        
+        
+        
+        
+        <a href="../OptionalDouble.html">OptionalDouble</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="DoubleStream.html#min()">min</a>()
+      </code>
+      
+        <p>Returns an <code>OptionalDouble</code> describing the minimum element of this
+ stream, or an empty OptionalDouble if this stream is empty.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-24" >
+  
+  
+    <td><code>
+        abstract
+        
+        
+        
+        
+        boolean</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="DoubleStream.html#noneMatch(java.util.function.DoublePredicate)">noneMatch</a>(<a href="../function/DoublePredicate.html">DoublePredicate</a> predicate)
+      </code>
+      
+        <p>Returns whether no elements of this stream match the provided predicate.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-24" >
+  
+  
+    <td><code>
+        
+        
+        static
+        
+        
+        <a href="DoubleStream.html">DoubleStream</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="DoubleStream.html#of(double...)">of</a>(double... values)
+      </code>
+      
+        <p>Returns a sequential ordered stream whose elements are the specified values.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-24" >
+  
+  
+    <td><code>
+        
+        
+        static
+        
+        
+        <a href="DoubleStream.html">DoubleStream</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="DoubleStream.html#of(double)">of</a>(double t)
+      </code>
+      
+        <p>Returns a sequential <code>DoubleStream</code> containing a single element.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-24" >
+  
+  
+    <td><code>
+        abstract
+        
+        
+        
+        
+        <a href="DoubleStream.html">DoubleStream</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="DoubleStream.html#parallel()">parallel</a>()
+      </code>
+      
+        <p>Returns an equivalent stream that is parallel.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-24" >
+  
+  
+    <td><code>
+        abstract
+        
+        
+        
+        
+        <a href="DoubleStream.html">DoubleStream</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="DoubleStream.html#peek(java.util.function.DoubleConsumer)">peek</a>(<a href="../function/DoubleConsumer.html">DoubleConsumer</a> action)
+      </code>
+      
+        <p>Returns a stream consisting of the elements of this stream, additionally
+ performing the provided action on each element as elements are consumed
+ from the resulting stream.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-24" >
+  
+  
+    <td><code>
+        abstract
+        
+        
+        
+        
+        <a href="../OptionalDouble.html">OptionalDouble</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="DoubleStream.html#reduce(java.util.function.DoubleBinaryOperator)">reduce</a>(<a href="../function/DoubleBinaryOperator.html">DoubleBinaryOperator</a> op)
+      </code>
+      
+        <p>Performs a <a href="package-summary.html#Reduction">reduction</a> on the
+ elements of this stream, using an
+ <a href="package-summary.html#Associativity">associative</a> accumulation
+ function, and returns an <code>OptionalDouble</code> describing the reduced
+ value, if any.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-24" >
+  
+  
+    <td><code>
+        abstract
+        
+        
+        
+        
+        double</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="DoubleStream.html#reduce(double, java.util.function.DoubleBinaryOperator)">reduce</a>(double identity, <a href="../function/DoubleBinaryOperator.html">DoubleBinaryOperator</a> op)
+      </code>
+      
+        <p>Performs a <a href="package-summary.html#Reduction">reduction</a> on the
+ elements of this stream, using the provided identity value and an
+ <a href="package-summary.html#Associativity">associative</a>
+ accumulation function, and returns the reduced value.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-24" >
+  
+  
+    <td><code>
+        abstract
+        
+        
+        
+        
+        <a href="DoubleStream.html">DoubleStream</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="DoubleStream.html#sequential()">sequential</a>()
+      </code>
+      
+        <p>Returns an equivalent stream that is sequential.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-24" >
+  
+  
+    <td><code>
+        abstract
+        
+        
+        
+        
+        <a href="DoubleStream.html">DoubleStream</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="DoubleStream.html#skip(long)">skip</a>(long n)
+      </code>
+      
+        <p>Returns a stream consisting of the remaining elements of this stream
+ after discarding the first <code>n</code> elements of the stream.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-24" >
+  
+  
+    <td><code>
+        abstract
+        
+        
+        
+        
+        <a href="DoubleStream.html">DoubleStream</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="DoubleStream.html#sorted()">sorted</a>()
+      </code>
+      
+        <p>Returns a stream consisting of the elements of this stream in sorted
+ order.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-24" >
+  
+  
+    <td><code>
+        abstract
+        
+        
+        
+        
+        <a href="../Spliterator.OfDouble.html">Spliterator.OfDouble</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="DoubleStream.html#spliterator()">spliterator</a>()
+      </code>
+      
+        <p>Returns a spliterator for the elements of this stream.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-24" >
+  
+  
+    <td><code>
+        abstract
+        
+        
+        
+        
+        double</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="DoubleStream.html#sum()">sum</a>()
+      </code>
+      
+        <p>Returns the sum of elements in this stream.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-24" >
+  
+  
+    <td><code>
+        abstract
+        
+        
+        
+        
+        <a href="../DoubleSummaryStatistics.html">DoubleSummaryStatistics</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="DoubleStream.html#summaryStatistics()">summaryStatistics</a>()
+      </code>
+      
+        <p>Returns a <code>DoubleSummaryStatistics</code> describing various summary data
+ about the elements of this stream.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-24" >
+  
+  
+    <td><code>
+        abstract
+        
+        
+        
+        
+        double[]</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="DoubleStream.html#toArray()">toArray</a>()
+      </code>
+      
+        <p>Returns an array containing the elements of this stream.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+
+</table>
+
+
+
+
+
+
+
+<!-- ========== METHOD SUMMARY =========== -->
+<table id="inhmethods" class="methods inhtable">
+<tr><th><h3>Inherited methods</h3></th></tr>
+
+
+<tr class="api apilevel-" >
+<td colspan="2">
+  <a href="#" id="inherited-methods-java.util.stream.BaseStream" class="jd-expando-trigger closed"
+     onclick="return toggleInherited(this, null)" >
+    <img id="inherited-methods-java.util.stream.BaseStream-trigger" class="jd-expando-trigger-img"
+         height="34"
+         src="../../../../assets/images/styles/disclosure_down.png" />
+  </a>From
+interface
+<code>
+  
+    <a href="BaseStream.html">java.util.stream.BaseStream</a>
+  
+</code>
+<div id="inherited-methods-java.util.stream.BaseStream">
+  <div id="inherited-methods-java.util.stream.BaseStream-list"
+        class="jd-inheritedlinks">
+  </div>
+  <div id="inherited-methods-java.util.stream.BaseStream-summary" style="display: none;">
+    <table class="jd-sumtable-expando responsive">
+      
+
+
+  
+  <tr class="api apilevel-24" >
+  
+  
+    <td><code>
+        abstract
+        
+        
+        
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="BaseStream.html#close()">close</a>()
+      </code>
+      
+        <p>Closes this stream, causing all close handlers for this stream pipeline
+ to be called.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-24" >
+  
+  
+    <td><code>
+        abstract
+        
+        
+        
+        
+        boolean</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="BaseStream.html#isParallel()">isParallel</a>()
+      </code>
+      
+        <p>Returns whether this stream, if a terminal operation were to be executed,
+ would execute in parallel.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-24" >
+  
+  
+    <td><code>
+        abstract
+        
+        
+        
+        
+        <a href="../Iterator.html">Iterator</a>&lt;<a href="../../lang/Double.html">Double</a>&gt;</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="BaseStream.html#iterator()">iterator</a>()
+      </code>
+      
+        <p>Returns an iterator for the elements of this stream.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-24" >
+  
+  
+    <td><code>
+        abstract
+        
+        
+        
+        
+        S</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="BaseStream.html#onClose(java.lang.Runnable)">onClose</a>(<a href="../../lang/Runnable.html">Runnable</a> closeHandler)
+      </code>
+      
+        <p>Returns an equivalent stream with an additional close handler.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-24" >
+  
+  
+    <td><code>
+        abstract
+        
+        
+        
+        
+        S</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="BaseStream.html#parallel()">parallel</a>()
+      </code>
+      
+        <p>Returns an equivalent stream that is parallel.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-24" >
+  
+  
+    <td><code>
+        abstract
+        
+        
+        
+        
+        S</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="BaseStream.html#sequential()">sequential</a>()
+      </code>
+      
+        <p>Returns an equivalent stream that is sequential.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-24" >
+  
+  
+    <td><code>
+        abstract
+        
+        
+        
+        
+        <a href="../Spliterator.html">Spliterator</a>&lt;<a href="../../lang/Double.html">Double</a>&gt;</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="BaseStream.html#spliterator()">spliterator</a>()
+      </code>
+      
+        <p>Returns a spliterator for the elements of this stream.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-24" >
+  
+  
+    <td><code>
+        abstract
+        
+        
+        
+        
+        S</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="BaseStream.html#unordered()">unordered</a>()
+      </code>
+      
+        <p>Returns an equivalent stream that is
+ <a href="package-summary.html#Ordering">unordered</a>.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+
+    </table>
+  </div>
+</div>
+</td></tr>
+
+
+
+<tr class="api apilevel-" >
+<td colspan="2">
+  <a href="#" id="inherited-methods-java.lang.AutoCloseable" class="jd-expando-trigger closed"
+     onclick="return toggleInherited(this, null)" >
+    <img id="inherited-methods-java.lang.AutoCloseable-trigger" class="jd-expando-trigger-img"
+         height="34"
+         src="../../../../assets/images/styles/disclosure_down.png" />
+  </a>From
+interface
+<code>
+  
+    <a href="../../lang/AutoCloseable.html">java.lang.AutoCloseable</a>
+  
+</code>
+<div id="inherited-methods-java.lang.AutoCloseable">
+  <div id="inherited-methods-java.lang.AutoCloseable-list"
+        class="jd-inheritedlinks">
+  </div>
+  <div id="inherited-methods-java.lang.AutoCloseable-summary" style="display: none;">
+    <table class="jd-sumtable-expando responsive">
+      
+
+
+  
+  <tr class="api apilevel-19" >
+  
+  
+    <td><code>
+        abstract
+        
+        
+        
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../../lang/AutoCloseable.html#close()">close</a>()
+      </code>
+      
+        <p>Closes this resource, relinquishing any underlying resources.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+
+    </table>
+  </div>
+</div>
+</td></tr>
+
+
+</table>
+
+
+
+<!-- XML Attributes -->
+
+
+<!-- Enum Values -->
+
+
+<!-- Constants -->
+
+
+<!-- Fields -->
+
+
+<!-- Public ctors -->
+
+
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<!-- Protected ctors -->
+
+
+
+<!-- ========= METHOD DETAIL ======== -->
+<!-- Public methdos -->
+
+<h2 class="api-section">Public methods</h2>
+
+
+
+<A NAME="allMatch(java.util.function.DoublePredicate)"></A>
+
+<div class="api apilevel-24">
+    <h3 class="api-name">allMatch</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 24</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+boolean allMatch (<a href="../function/DoublePredicate.html">DoublePredicate</a> predicate)</pre>
+    
+    
+
+    
+  <p>Returns whether all elements of this stream match the provided predicate.
+ May not evaluate the predicate on all elements if not necessary for
+ determining the result.  If the stream is empty then <code>true</code> is
+ returned and the predicate is not evaluated.
+
+ <p>This is a <a href="package-summary.html#StreamOps">short-circuiting
+ terminal operation</a>.</p></p>
+    
+        <div class="jd-tagdata">
+          <h5 class="jd-tagtitle">API Note:</h5>
+          <ul class="nolist"><li>This method evaluates the <em>universal quantification</em> of the
+ predicate over the elements of the stream (for all x P(x)).  If the
+ stream is empty, the quantification is said to be <em>vacuously
+ satisfied</em> and is always <code>true</code> (regardless of P(x)).</li></ul>
+        </div>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>predicate</code></td>
+        <td width="100%">
+          <code>DoublePredicate</code>: a <a href="package-summary.html#NonInterference">non-interfering</a>,
+                  <a href="package-summary.html#Statelessness">stateless</a>
+                  predicate to apply to elements of this stream</p></td>
+      </tr>
+    </table>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code>boolean</code></td>
+        <td width="100%"><code>true</code> if either all elements of the stream match the
+ provided predicate or the stream is empty, otherwise <code>false</code>
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="anyMatch(java.util.function.DoublePredicate)"></A>
+
+<div class="api apilevel-24">
+    <h3 class="api-name">anyMatch</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 24</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+boolean anyMatch (<a href="../function/DoublePredicate.html">DoublePredicate</a> predicate)</pre>
+    
+    
+
+    
+  <p>Returns whether any elements of this stream match the provided
+ predicate.  May not evaluate the predicate on all elements if not
+ necessary for determining the result.  If the stream is empty then
+ <code>false</code> is returned and the predicate is not evaluated.
+
+ <p>This is a <a href="package-summary.html#StreamOps">short-circuiting
+ terminal operation</a>.</p></p>
+    
+        <div class="jd-tagdata">
+          <h5 class="jd-tagtitle">API Note:</h5>
+          <ul class="nolist"><li>This method evaluates the <em>existential quantification</em> of the
+ predicate over the elements of the stream (for some x P(x)).</li></ul>
+        </div>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>predicate</code></td>
+        <td width="100%">
+          <code>DoublePredicate</code>: a <a href="package-summary.html#NonInterference">non-interfering</a>,
+                  <a href="package-summary.html#Statelessness">stateless</a>
+                  predicate to apply to elements of this stream</p></td>
+      </tr>
+    </table>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code>boolean</code></td>
+        <td width="100%"><code>true</code> if any elements of the stream match the provided
+ predicate, otherwise <code>false</code>
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="average()"></A>
+
+<div class="api apilevel-24">
+    <h3 class="api-name">average</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 24</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="../OptionalDouble.html">OptionalDouble</a> average ()</pre>
+    
+    
+
+    
+  <p>Returns an <code>OptionalDouble</code> describing the arithmetic
+ mean of elements of this stream, or an empty optional if this
+ stream is empty.
+
+ If any recorded value is a NaN or the sum is at any point a NaN
+ then the average will be NaN.
+
+ <p>The average returned can vary depending upon the order in
+ which values are recorded.
+
+ This method may be implemented using compensated summation or
+ other technique to reduce the error bound in the <code><a href="DoubleStream.html#sum()">numerical sum</a></code> used to compute the average.
+
+  <p>The average is a special case of a <a
+  href="package-summary.html#Reduction">reduction</a>.
+
+ <p>This is a <a href="package-summary.html#StreamOps">terminal
+ operation</a>.</p></p>
+    
+        <div class="jd-tagdata">
+          <h5 class="jd-tagtitle">API Note:</h5>
+          <ul class="nolist"><li>Elements sorted by increasing absolute magnitude tend
+ to yield more accurate results.</li></ul>
+        </div>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="../OptionalDouble.html">OptionalDouble</a></code></td>
+        <td width="100%">an <code>OptionalDouble</code> containing the average element of this
+ stream, or an empty optional if the stream is empty
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="boxed()"></A>
+
+<div class="api apilevel-24">
+    <h3 class="api-name">boxed</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 24</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="Stream.html">Stream</a>&lt;<a href="../../lang/Double.html">Double</a>&gt; boxed ()</pre>
+    
+    
+
+    
+  <p>Returns a <code>Stream</code> consisting of the elements of this stream,
+ boxed to <code>Double</code>.
+
+ <p>This is an <a href="package-summary.html#StreamOps">intermediate
+ operation</a>.</p></p>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="Stream.html">Stream</a>&lt;<a href="../../lang/Double.html">Double</a>&gt;</code></td>
+        <td width="100%">a <code>Stream</code> consistent of the elements of this stream,
+ each boxed to a <code>Double</code>
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="builder()"></A>
+
+<div class="api apilevel-24">
+    <h3 class="api-name">builder</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 24</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="DoubleStream.Builder.html">DoubleStream.Builder</a> builder ()</pre>
+    
+    
+
+    
+  <p>Returns a builder for a <code>DoubleStream</code>.</p></p>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="DoubleStream.Builder.html">DoubleStream.Builder</a></code></td>
+        <td width="100%">a stream builder
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="collect(java.util.function.Supplier<R>, java.util.function.ObjDoubleConsumer<R>, java.util.function.BiConsumer<R, R>)"></A>
+
+<div class="api apilevel-24">
+    <h3 class="api-name">collect</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 24</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+R collect (<a href="../function/Supplier.html">Supplier</a>&lt;R&gt; supplier, 
+                <a href="../function/ObjDoubleConsumer.html">ObjDoubleConsumer</a>&lt;R&gt; accumulator, 
+                <a href="../function/BiConsumer.html">BiConsumer</a>&lt;R,&nbsp;R&gt; combiner)</pre>
+    
+    
+
+    
+  <p>Performs a <a href="package-summary.html#MutableReduction">mutable
+ reduction</a> operation on the elements of this stream.  A mutable
+ reduction is one in which the reduced value is a mutable result container,
+ such as an <code>ArrayList</code>, and elements are incorporated by updating
+ the state of the result rather than by replacing the result.  This
+ produces a result equivalent to:
+ <pre><code>R result = supplier.get();
+     for (double element : this stream)
+         accumulator.accept(result, element);
+     return result;
+ </code></pre>
+
+ <p>Like <code><a href="DoubleStream.html#reduce(double, java.util.function.DoubleBinaryOperator)">reduce(double, DoubleBinaryOperator)</a></code>, <code>collect</code>
+ operations can be parallelized without requiring additional
+ synchronization.
+
+ <p>This is a <a href="package-summary.html#StreamOps">terminal
+ operation</a>.</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>supplier</code></td>
+        <td width="100%">
+          <code>Supplier</code>: a function that creates a new result container. For a
+                 parallel execution, this function may be called
+                 multiple times and must return a fresh value each time.</p></td>
+      </tr>
+      <tr>
+        <td><code>accumulator</code></td>
+        <td width="100%">
+          <code>ObjDoubleConsumer</code>: an <a href="package-summary.html#Associativity">associative</a>,
+                    <a href="package-summary.html#NonInterference">non-interfering</a>,
+                    <a href="package-summary.html#Statelessness">stateless</a>
+                    function for incorporating an additional element into a result</p></td>
+      </tr>
+      <tr>
+        <td><code>combiner</code></td>
+        <td width="100%">
+          <code>BiConsumer</code>: an <a href="package-summary.html#Associativity">associative</a>,
+                    <a href="package-summary.html#NonInterference">non-interfering</a>,
+                    <a href="package-summary.html#Statelessness">stateless</a>
+                    function for combining two values, which must be
+                    compatible with the accumulator function</p></td>
+      </tr>
+    </table>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code>R</code></td>
+        <td width="100%">the result of the reduction</p></td>
+      </tr>
+    </table>
+  <div>
+      <p><b>See also:</b></p>
+      <ul class="nolist"><li><code><a href="Stream.html#collect(java.util.function.Supplier<R>, java.util.function.BiConsumer<R, ? super T>, java.util.function.BiConsumer<R, R>)">collect(Supplier, BiConsumer, BiConsumer)</a></code></li>
+      </ul>
+  </div>
+
+</div>
+
+
+<A NAME="concat(java.util.stream.DoubleStream, java.util.stream.DoubleStream)"></A>
+
+<div class="api apilevel-24">
+    <h3 class="api-name">concat</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 24</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="DoubleStream.html">DoubleStream</a> concat (<a href="DoubleStream.html">DoubleStream</a> a, 
+                <a href="DoubleStream.html">DoubleStream</a> b)</pre>
+    
+    
+
+    
+  <p>Creates a lazily concatenated stream whose elements are all the
+ elements of the first stream followed by all the elements of the
+ second stream.  The resulting stream is ordered if both
+ of the input streams are ordered, and parallel if either of the input
+ streams is parallel.  When the resulting stream is closed, the close
+ handlers for both input streams are invoked.</p></p>
+    
+        <div class="jd-tagdata">
+          <h5 class="jd-tagtitle">Implementation Note:</h5>
+          <ul class="nolist"><li>Use caution when constructing streams from repeated concatenation.
+ Accessing an element of a deeply concatenated stream can result in deep
+ call chains, or even <code>StackOverflowException</code>.</li></ul>
+        </div>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>a</code></td>
+        <td width="100%">
+          <code>DoubleStream</code>: the first stream</p></td>
+      </tr>
+      <tr>
+        <td><code>b</code></td>
+        <td width="100%">
+          <code>DoubleStream</code>: the second stream</p></td>
+      </tr>
+    </table>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="DoubleStream.html">DoubleStream</a></code></td>
+        <td width="100%">the concatenation of the two input streams
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="count()"></A>
+
+<div class="api apilevel-24">
+    <h3 class="api-name">count</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 24</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+long count ()</pre>
+    
+    
+
+    
+  <p>Returns the count of elements in this stream.  This is a special case of
+ a <a href="package-summary.html#Reduction">reduction</a> and is
+ equivalent to:
+ <pre><code>return mapToLong(e -&gt; 1L).sum();
+ </code></pre>
+
+ <p>This is a <a href="package-summary.html#StreamOps">terminal operation</a>.</p></p>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code>long</code></td>
+        <td width="100%">the count of elements in this stream
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="distinct()"></A>
+
+<div class="api apilevel-24">
+    <h3 class="api-name">distinct</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 24</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="DoubleStream.html">DoubleStream</a> distinct ()</pre>
+    
+    
+
+    
+  <p>Returns a stream consisting of the distinct elements of this stream. The
+ elements are compared for equality according to
+ <code><a href="../../lang/Double.html#compare(double, double)">compare(double, double)</a></code>.
+
+ <p>This is a <a href="package-summary.html#StreamOps">stateful
+ intermediate operation</a>.</p></p>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="DoubleStream.html">DoubleStream</a></code></td>
+        <td width="100%">the result stream
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="empty()"></A>
+
+<div class="api apilevel-24">
+    <h3 class="api-name">empty</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 24</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="DoubleStream.html">DoubleStream</a> empty ()</pre>
+    
+    
+
+    
+  <p>Returns an empty sequential <code>DoubleStream</code>.</p></p>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="DoubleStream.html">DoubleStream</a></code></td>
+        <td width="100%">an empty sequential stream
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="filter(java.util.function.DoublePredicate)"></A>
+
+<div class="api apilevel-24">
+    <h3 class="api-name">filter</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 24</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="DoubleStream.html">DoubleStream</a> filter (<a href="../function/DoublePredicate.html">DoublePredicate</a> predicate)</pre>
+    
+    
+
+    
+  <p>Returns a stream consisting of the elements of this stream that match
+ the given predicate.
+
+ <p>This is an <a href="package-summary.html#StreamOps">intermediate
+ operation</a>.</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>predicate</code></td>
+        <td width="100%">
+          <code>DoublePredicate</code>: a <a href="package-summary.html#NonInterference">non-interfering</a>,
+                  <a href="package-summary.html#Statelessness">stateless</a>
+                  predicate to apply to each element to determine if it
+                  should be included</p></td>
+      </tr>
+    </table>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="DoubleStream.html">DoubleStream</a></code></td>
+        <td width="100%">the new stream
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="findAny()"></A>
+
+<div class="api apilevel-24">
+    <h3 class="api-name">findAny</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 24</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="../OptionalDouble.html">OptionalDouble</a> findAny ()</pre>
+    
+    
+
+    
+  <p>Returns an <code><a href="../OptionalDouble.html">OptionalDouble</a></code> describing some element of the stream,
+ or an empty <code>OptionalDouble</code> if the stream is empty.
+
+ <p>This is a <a href="package-summary.html#StreamOps">short-circuiting
+ terminal operation</a>.
+
+ <p>The behavior of this operation is explicitly nondeterministic; it is
+ free to select any element in the stream.  This is to allow for maximal
+ performance in parallel operations; the cost is that multiple invocations
+ on the same source may not return the same result.  (If a stable result
+ is desired, use <code><a href="DoubleStream.html#findFirst()">findFirst()</a></code> instead.)</p></p>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="../OptionalDouble.html">OptionalDouble</a></code></td>
+        <td width="100%">an <code>OptionalDouble</code> describing some element of this stream,
+ or an empty <code>OptionalDouble</code> if the stream is empty</p></td>
+      </tr>
+    </table>
+  <div>
+      <p><b>See also:</b></p>
+      <ul class="nolist"><li><code><a href="DoubleStream.html#findFirst()">findFirst()</a></code></li>
+      </ul>
+  </div>
+
+</div>
+
+
+<A NAME="findFirst()"></A>
+
+<div class="api apilevel-24">
+    <h3 class="api-name">findFirst</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 24</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="../OptionalDouble.html">OptionalDouble</a> findFirst ()</pre>
+    
+    
+
+    
+  <p>Returns an <code><a href="../OptionalDouble.html">OptionalDouble</a></code> describing the first element of this
+ stream, or an empty <code>OptionalDouble</code> if the stream is empty.  If
+ the stream has no encounter order, then any element may be returned.
+
+ <p>This is a <a href="package-summary.html#StreamOps">short-circuiting
+ terminal operation</a>.</p></p>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="../OptionalDouble.html">OptionalDouble</a></code></td>
+        <td width="100%">an <code>OptionalDouble</code> describing the first element of this
+ stream, or an empty <code>OptionalDouble</code> if the stream is empty
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="flatMap(java.util.function.DoubleFunction<? extends java.util.stream.DoubleStream>)"></A>
+
+<div class="api apilevel-24">
+    <h3 class="api-name">flatMap</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 24</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="DoubleStream.html">DoubleStream</a> flatMap (<a href="../function/DoubleFunction.html">DoubleFunction</a>&lt;?&nbsp;extends&nbsp;<a href="DoubleStream.html">DoubleStream</a>&gt; mapper)</pre>
+    
+    
+
+    
+  <p>Returns a stream consisting of the results of replacing each element of
+ this stream with the contents of a mapped stream produced by applying
+ the provided mapping function to each element.  Each mapped stream is
+ <code><a href="BaseStream.html#close()">closed</a></code> after its contents
+ have been placed into this stream.  (If a mapped stream is <code>null</code>
+ an empty stream is used, instead.)
+
+ <p>This is an <a href="package-summary.html#StreamOps">intermediate
+ operation</a>.</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>mapper</code></td>
+        <td width="100%">
+          <code>DoubleFunction</code>: a <a href="package-summary.html#NonInterference">non-interfering</a>,
+               <a href="package-summary.html#Statelessness">stateless</a>
+               function to apply to each element which produces a
+               <code>DoubleStream</code> of new values</p></td>
+      </tr>
+    </table>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="DoubleStream.html">DoubleStream</a></code></td>
+        <td width="100%">the new stream</p></td>
+      </tr>
+    </table>
+  <div>
+      <p><b>See also:</b></p>
+      <ul class="nolist"><li><code><a href="Stream.html#flatMap(java.util.function.Function<? super T, ? extends java.util.stream.Stream<? extends R>>)">flatMap(Function)</a></code></li>
+      </ul>
+  </div>
+
+</div>
+
+
+<A NAME="forEach(java.util.function.DoubleConsumer)"></A>
+
+<div class="api apilevel-24">
+    <h3 class="api-name">forEach</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 24</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+void forEach (<a href="../function/DoubleConsumer.html">DoubleConsumer</a> action)</pre>
+    
+    
+
+    
+  <p>Performs an action for each element of this stream.
+
+ <p>This is a <a href="package-summary.html#StreamOps">terminal
+ operation</a>.
+
+ <p>For parallel stream pipelines, this operation does <em>not</em>
+ guarantee to respect the encounter order of the stream, as doing so
+ would sacrifice the benefit of parallelism.  For any given element, the
+ action may be performed at whatever time and in whatever thread the
+ library chooses.  If the action accesses shared state, it is
+ responsible for providing the required synchronization.</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>action</code></td>
+        <td width="100%">
+          <code>DoubleConsumer</code>: a <a href="package-summary.html#NonInterference">
+               non-interfering</a> action to perform on the elements
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="forEachOrdered(java.util.function.DoubleConsumer)"></A>
+
+<div class="api apilevel-24">
+    <h3 class="api-name">forEachOrdered</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 24</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+void forEachOrdered (<a href="../function/DoubleConsumer.html">DoubleConsumer</a> action)</pre>
+    
+    
+
+    
+  <p>Performs an action for each element of this stream, guaranteeing that
+ each element is processed in encounter order for streams that have a
+ defined encounter order.
+
+ <p>This is a <a href="package-summary.html#StreamOps">terminal
+ operation</a>.</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>action</code></td>
+        <td width="100%">
+          <code>DoubleConsumer</code>: a <a href="package-summary.html#NonInterference">
+               non-interfering</a> action to perform on the elements</p></td>
+      </tr>
+    </table>
+  <div>
+      <p><b>See also:</b></p>
+      <ul class="nolist"><li><code><a href="DoubleStream.html#forEach(java.util.function.DoubleConsumer)">forEach(DoubleConsumer)</a></code></li>
+      </ul>
+  </div>
+
+</div>
+
+
+<A NAME="generate(java.util.function.DoubleSupplier)"></A>
+
+<div class="api apilevel-24">
+    <h3 class="api-name">generate</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 24</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="DoubleStream.html">DoubleStream</a> generate (<a href="../function/DoubleSupplier.html">DoubleSupplier</a> s)</pre>
+    
+    
+
+    
+  <p>Returns an infinite sequential unordered stream where each element is
+ generated by the provided <code>DoubleSupplier</code>.  This is suitable for
+ generating constant streams, streams of random elements, etc.</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>s</code></td>
+        <td width="100%">
+          <code>DoubleSupplier</code>: the <code>DoubleSupplier</code> for generated elements</p></td>
+      </tr>
+    </table>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="DoubleStream.html">DoubleStream</a></code></td>
+        <td width="100%">a new infinite sequential unordered <code>DoubleStream</code>
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="iterate(double, java.util.function.DoubleUnaryOperator)"></A>
+
+<div class="api apilevel-24">
+    <h3 class="api-name">iterate</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 24</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="DoubleStream.html">DoubleStream</a> iterate (double seed, 
+                <a href="../function/DoubleUnaryOperator.html">DoubleUnaryOperator</a> f)</pre>
+    
+    
+
+    
+  <p>Returns an infinite sequential ordered <code>DoubleStream</code> produced by iterative
+ application of a function <code>f</code> to an initial element <code>seed</code>,
+ producing a <code>Stream</code> consisting of <code>seed</code>, <code>f(seed)</code>,
+ <code>f(f(seed))</code>, etc.
+
+ <p>The first element (position <code>0</code>) in the <code>DoubleStream</code>
+ will be the provided <code>seed</code>.  For <code>n &gt; 0</code>, the element at
+ position <code>n</code>, will be the result of applying the function <code>f</code>
+  to the element at position <code>n - 1</code>.</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>seed</code></td>
+        <td width="100%">
+          <code>double</code>: the initial element</p></td>
+      </tr>
+      <tr>
+        <td><code>f</code></td>
+        <td width="100%">
+          <code>DoubleUnaryOperator</code>: a function to be applied to to the previous element to produce
+          a new element</p></td>
+      </tr>
+    </table>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="DoubleStream.html">DoubleStream</a></code></td>
+        <td width="100%">a new sequential <code>DoubleStream</code>
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="iterator()"></A>
+
+<div class="api apilevel-24">
+    <h3 class="api-name">iterator</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 24</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="../PrimitiveIterator.OfDouble.html">PrimitiveIterator.OfDouble</a> iterator ()</pre>
+    
+    
+
+    
+  <p>Returns an iterator for the elements of this stream.
+
+ <p>This is a <a href="package-summary.html#StreamOps">terminal
+ operation</a>.</p></p>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="../PrimitiveIterator.OfDouble.html">PrimitiveIterator.OfDouble</a></code></td>
+        <td width="100%">the element iterator for this stream
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="limit(long)"></A>
+
+<div class="api apilevel-24">
+    <h3 class="api-name">limit</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 24</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="DoubleStream.html">DoubleStream</a> limit (long maxSize)</pre>
+    
+    
+
+    
+  <p>Returns a stream consisting of the elements of this stream, truncated
+ to be no longer than <code>maxSize</code> in length.
+
+ <p>This is a <a href="package-summary.html#StreamOps">short-circuiting
+ stateful intermediate operation</a>.</p></p>
+    
+        <div class="jd-tagdata">
+          <h5 class="jd-tagtitle">API Note:</h5>
+          <ul class="nolist"><li>While <code>limit()</code> is generally a cheap operation on sequential
+ stream pipelines, it can be quite expensive on ordered parallel pipelines,
+ especially for large values of <code>maxSize</code>, since <code>limit(n)</code>
+ is constrained to return not just any <em>n</em> elements, but the
+ <em>first n</em> elements in the encounter order.  Using an unordered
+ stream source (such as <code><a href="DoubleStream.html#generate(java.util.function.DoubleSupplier)">generate(DoubleSupplier)</a></code>) or removing the
+ ordering constraint with <code><a href="BaseStream.html#unordered()">unordered()</a></code> may result in significant
+ speedups of <code>limit()</code> in parallel pipelines, if the semantics of
+ your situation permit.  If consistency with encounter order is required,
+ and you are experiencing poor performance or memory utilization with
+ <code>limit()</code> in parallel pipelines, switching to sequential execution
+ with <code><a href="DoubleStream.html#sequential()">sequential()</a></code> may improve performance.</li></ul>
+        </div>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>maxSize</code></td>
+        <td width="100%">
+          <code>long</code>: the number of elements the stream should be limited to</p></td>
+      </tr>
+    </table>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="DoubleStream.html">DoubleStream</a></code></td>
+        <td width="100%">the new stream</p></td>
+      </tr>
+    </table>
+      <table class="responsive">
+      <tr><th colspan=2>Throws</th></tr>
+        <tr>
+          <td><code><a href="../../lang/IllegalArgumentException.html">IllegalArgumentException</a></code></td>
+          <td width="100%">if <code>maxSize</code> is negative
+</td>
+        </tr>
+      </table>
+  
+
+</div>
+
+
+<A NAME="map(java.util.function.DoubleUnaryOperator)"></A>
+
+<div class="api apilevel-24">
+    <h3 class="api-name">map</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 24</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="DoubleStream.html">DoubleStream</a> map (<a href="../function/DoubleUnaryOperator.html">DoubleUnaryOperator</a> mapper)</pre>
+    
+    
+
+    
+  <p>Returns a stream consisting of the results of applying the given
+ function to the elements of this stream.
+
+ <p>This is an <a href="package-summary.html#StreamOps">intermediate
+ operation</a>.</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>mapper</code></td>
+        <td width="100%">
+          <code>DoubleUnaryOperator</code>: a <a href="package-summary.html#NonInterference">non-interfering</a>,
+               <a href="package-summary.html#Statelessness">stateless</a>
+               function to apply to each element</p></td>
+      </tr>
+    </table>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="DoubleStream.html">DoubleStream</a></code></td>
+        <td width="100%">the new stream
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="mapToInt(java.util.function.DoubleToIntFunction)"></A>
+
+<div class="api apilevel-24">
+    <h3 class="api-name">mapToInt</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 24</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="IntStream.html">IntStream</a> mapToInt (<a href="../function/DoubleToIntFunction.html">DoubleToIntFunction</a> mapper)</pre>
+    
+    
+
+    
+  <p>Returns an <code>IntStream</code> consisting of the results of applying the
+ given function to the elements of this stream.
+
+ <p>This is an <a href="package-summary.html#StreamOps">intermediate
+ operation</a>.</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>mapper</code></td>
+        <td width="100%">
+          <code>DoubleToIntFunction</code>: a <a href="package-summary.html#NonInterference">non-interfering</a>,
+               <a href="package-summary.html#Statelessness">stateless</a>
+               function to apply to each element</p></td>
+      </tr>
+    </table>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="IntStream.html">IntStream</a></code></td>
+        <td width="100%">the new stream
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="mapToLong(java.util.function.DoubleToLongFunction)"></A>
+
+<div class="api apilevel-24">
+    <h3 class="api-name">mapToLong</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 24</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="LongStream.html">LongStream</a> mapToLong (<a href="../function/DoubleToLongFunction.html">DoubleToLongFunction</a> mapper)</pre>
+    
+    
+
+    
+  <p>Returns a <code>LongStream</code> consisting of the results of applying the
+ given function to the elements of this stream.
+
+ <p>This is an <a href="package-summary.html#StreamOps">intermediate
+ operation</a>.</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>mapper</code></td>
+        <td width="100%">
+          <code>DoubleToLongFunction</code>: a <a href="package-summary.html#NonInterference">non-interfering</a>,
+               <a href="package-summary.html#Statelessness">stateless</a>
+               function to apply to each element</p></td>
+      </tr>
+    </table>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="LongStream.html">LongStream</a></code></td>
+        <td width="100%">the new stream
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="mapToObj(java.util.function.DoubleFunction<? extends U>)"></A>
+
+<div class="api apilevel-24">
+    <h3 class="api-name">mapToObj</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 24</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="Stream.html">Stream</a>&lt;U&gt; mapToObj (<a href="../function/DoubleFunction.html">DoubleFunction</a>&lt;?&nbsp;extends&nbsp;U&gt; mapper)</pre>
+    
+    
+
+    
+  <p>Returns an object-valued <code>Stream</code> consisting of the results of
+ applying the given function to the elements of this stream.
+
+ <p>This is an <a href="package-summary.html#StreamOps">
+     intermediate operation</a>.</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>mapper</code></td>
+        <td width="100%">
+          <code>DoubleFunction</code>: a <a href="package-summary.html#NonInterference">non-interfering</a>,
+               <a href="package-summary.html#Statelessness">stateless</a>
+               function to apply to each element</p></td>
+      </tr>
+    </table>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="Stream.html">Stream</a>&lt;U&gt;</code></td>
+        <td width="100%">the new stream
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="max()"></A>
+
+<div class="api apilevel-24">
+    <h3 class="api-name">max</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 24</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="../OptionalDouble.html">OptionalDouble</a> max ()</pre>
+    
+    
+
+    
+  <p>Returns an <code>OptionalDouble</code> describing the maximum element of this
+ stream, or an empty OptionalDouble if this stream is empty.  The maximum
+ element will be <code>Double.NaN</code> if any stream element was NaN. Unlike
+ the numerical comparison operators, this method considers negative zero
+ to be strictly smaller than positive zero. This is a
+ special case of a
+ <a href="package-summary.html#Reduction">reduction</a> and is
+ equivalent to:
+ <pre><code>return reduce(Double::max);
+ </code></pre>
+
+ <p>This is a <a href="package-summary.html#StreamOps">terminal
+ operation</a>.</p></p>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="../OptionalDouble.html">OptionalDouble</a></code></td>
+        <td width="100%">an <code>OptionalDouble</code> containing the maximum element of this
+ stream, or an empty optional if the stream is empty
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="min()"></A>
+
+<div class="api apilevel-24">
+    <h3 class="api-name">min</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 24</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="../OptionalDouble.html">OptionalDouble</a> min ()</pre>
+    
+    
+
+    
+  <p>Returns an <code>OptionalDouble</code> describing the minimum element of this
+ stream, or an empty OptionalDouble if this stream is empty.  The minimum
+ element will be <code>Double.NaN</code> if any stream element was NaN. Unlike
+ the numerical comparison operators, this method considers negative zero
+ to be strictly smaller than positive zero. This is a special case of a
+ <a href="package-summary.html#Reduction">reduction</a> and is
+ equivalent to:
+ <pre><code>return reduce(Double::min);
+ </code></pre>
+
+ <p>This is a <a href="package-summary.html#StreamOps">terminal
+ operation</a>.</p></p>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="../OptionalDouble.html">OptionalDouble</a></code></td>
+        <td width="100%">an <code>OptionalDouble</code> containing the minimum element of this
+ stream, or an empty optional if the stream is empty
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="noneMatch(java.util.function.DoublePredicate)"></A>
+
+<div class="api apilevel-24">
+    <h3 class="api-name">noneMatch</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 24</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+boolean noneMatch (<a href="../function/DoublePredicate.html">DoublePredicate</a> predicate)</pre>
+    
+    
+
+    
+  <p>Returns whether no elements of this stream match the provided predicate.
+ May not evaluate the predicate on all elements if not necessary for
+ determining the result.  If the stream is empty then <code>true</code> is
+ returned and the predicate is not evaluated.
+
+ <p>This is a <a href="package-summary.html#StreamOps">short-circuiting
+ terminal operation</a>.</p></p>
+    
+        <div class="jd-tagdata">
+          <h5 class="jd-tagtitle">API Note:</h5>
+          <ul class="nolist"><li>This method evaluates the <em>universal quantification</em> of the
+ negated predicate over the elements of the stream (for all x ~P(x)).  If
+ the stream is empty, the quantification is said to be vacuously satisfied
+ and is always <code>true</code>, regardless of P(x).</li></ul>
+        </div>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>predicate</code></td>
+        <td width="100%">
+          <code>DoublePredicate</code>: a <a href="package-summary.html#NonInterference">non-interfering</a>,
+                  <a href="package-summary.html#Statelessness">stateless</a>
+                  predicate to apply to elements of this stream</p></td>
+      </tr>
+    </table>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code>boolean</code></td>
+        <td width="100%"><code>true</code> if either no elements of the stream match the
+ provided predicate or the stream is empty, otherwise <code>false</code>
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="of(double...)"></A>
+
+<div class="api apilevel-24">
+    <h3 class="api-name">of</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 24</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="DoubleStream.html">DoubleStream</a> of (double... values)</pre>
+    
+    
+
+    
+  <p>Returns a sequential ordered stream whose elements are the specified values.</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>values</code></td>
+        <td width="100%">
+          <code>double</code>: the elements of the new stream</p></td>
+      </tr>
+    </table>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="DoubleStream.html">DoubleStream</a></code></td>
+        <td width="100%">the new stream
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="of(double)"></A>
+
+<div class="api apilevel-24">
+    <h3 class="api-name">of</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 24</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="DoubleStream.html">DoubleStream</a> of (double t)</pre>
+    
+    
+
+    
+  <p>Returns a sequential <code>DoubleStream</code> containing a single element.</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>t</code></td>
+        <td width="100%">
+          <code>double</code>: the single element</p></td>
+      </tr>
+    </table>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="DoubleStream.html">DoubleStream</a></code></td>
+        <td width="100%">a singleton sequential stream
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="parallel()"></A>
+
+<div class="api apilevel-24">
+    <h3 class="api-name">parallel</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 24</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="DoubleStream.html">DoubleStream</a> parallel ()</pre>
+    
+    
+
+    
+  <p>Returns an equivalent stream that is parallel.  May return
+ itself, either because the stream was already parallel, or because
+ the underlying stream state was modified to be parallel.
+
+ <p>This is an <a href="package-summary.html#StreamOps">intermediate
+ operation</a>.</p></p>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="DoubleStream.html">DoubleStream</a></code></td>
+        <td width="100%">a parallel stream
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="peek(java.util.function.DoubleConsumer)"></A>
+
+<div class="api apilevel-24">
+    <h3 class="api-name">peek</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 24</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="DoubleStream.html">DoubleStream</a> peek (<a href="../function/DoubleConsumer.html">DoubleConsumer</a> action)</pre>
+    
+    
+
+    
+  <p>Returns a stream consisting of the elements of this stream, additionally
+ performing the provided action on each element as elements are consumed
+ from the resulting stream.
+
+ <p>This is an <a href="package-summary.html#StreamOps">intermediate
+ operation</a>.
+
+ <p>For parallel stream pipelines, the action may be called at
+ whatever time and in whatever thread the element is made available by the
+ upstream operation.  If the action modifies shared state,
+ it is responsible for providing the required synchronization.</p></p>
+    
+        <div class="jd-tagdata">
+          <h5 class="jd-tagtitle">API Note:</h5>
+          <ul class="nolist"><li>This method exists mainly to support debugging, where you want
+ to see the elements as they flow past a certain point in a pipeline:
+ <pre><code>DoubleStream.of(1, 2, 3, 4)
+         .filter(e -&gt; e &gt; 2)
+         .peek(e -&gt; System.out.println("Filtered value: " + e))
+         .map(e -&gt; e * e)
+         .peek(e -&gt; System.out.println("Mapped value: " + e))
+         .sum();
+ </code></pre></li></ul>
+        </div>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>action</code></td>
+        <td width="100%">
+          <code>DoubleConsumer</code>: a <a href="package-summary.html#NonInterference">
+               non-interfering</a> action to perform on the elements as
+               they are consumed from the stream</p></td>
+      </tr>
+    </table>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="DoubleStream.html">DoubleStream</a></code></td>
+        <td width="100%">the new stream
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="reduce(java.util.function.DoubleBinaryOperator)"></A>
+
+<div class="api apilevel-24">
+    <h3 class="api-name">reduce</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 24</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="../OptionalDouble.html">OptionalDouble</a> reduce (<a href="../function/DoubleBinaryOperator.html">DoubleBinaryOperator</a> op)</pre>
+    
+    
+
+    
+  <p>Performs a <a href="package-summary.html#Reduction">reduction</a> on the
+ elements of this stream, using an
+ <a href="package-summary.html#Associativity">associative</a> accumulation
+ function, and returns an <code>OptionalDouble</code> describing the reduced
+ value, if any. This is equivalent to:
+ <pre><code>boolean foundAny = false;
+     double result = null;
+     for (double element : this stream) {
+         if (!foundAny) {
+             foundAny = true;
+             result = element;
+         }
+         else
+             result = accumulator.applyAsDouble(result, element);
+     }
+     return foundAny ? OptionalDouble.of(result) : OptionalDouble.empty();
+ </code></pre>
+
+ but is not constrained to execute sequentially.
+
+ <p>The <code>accumulator</code> function must be an
+ <a href="package-summary.html#Associativity">associative</a> function.
+
+ <p>This is a <a href="package-summary.html#StreamOps">terminal
+ operation</a>.</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>op</code></td>
+        <td width="100%">
+          <code>DoubleBinaryOperator</code>: an <a href="package-summary.html#Associativity">associative</a>,
+           <a href="package-summary.html#NonInterference">non-interfering</a>,
+           <a href="package-summary.html#Statelessness">stateless</a>
+           function for combining two values</p></td>
+      </tr>
+    </table>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="../OptionalDouble.html">OptionalDouble</a></code></td>
+        <td width="100%">the result of the reduction</p></td>
+      </tr>
+    </table>
+  <div>
+      <p><b>See also:</b></p>
+      <ul class="nolist"><li><code><a href="DoubleStream.html#reduce(double, java.util.function.DoubleBinaryOperator)">reduce(double, DoubleBinaryOperator)</a></code></li>
+      </ul>
+  </div>
+
+</div>
+
+
+<A NAME="reduce(double, java.util.function.DoubleBinaryOperator)"></A>
+
+<div class="api apilevel-24">
+    <h3 class="api-name">reduce</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 24</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+double reduce (double identity, 
+                <a href="../function/DoubleBinaryOperator.html">DoubleBinaryOperator</a> op)</pre>
+    
+    
+
+    
+  <p>Performs a <a href="package-summary.html#Reduction">reduction</a> on the
+ elements of this stream, using the provided identity value and an
+ <a href="package-summary.html#Associativity">associative</a>
+ accumulation function, and returns the reduced value.  This is equivalent
+ to:
+ <pre><code>double result = identity;
+     for (double element : this stream)
+         result = accumulator.applyAsDouble(result, element)
+     return result;
+ </code></pre>
+
+ but is not constrained to execute sequentially.
+
+ <p>The <code>identity</code> value must be an identity for the accumulator
+ function. This means that for all <code>x</code>,
+ <code>accumulator.apply(identity, x)</code> is equal to <code>x</code>.
+ The <code>accumulator</code> function must be an
+ <a href="package-summary.html#Associativity">associative</a> function.
+
+ <p>This is a <a href="package-summary.html#StreamOps">terminal
+ operation</a>.</p></p>
+    
+        <div class="jd-tagdata">
+          <h5 class="jd-tagtitle">API Note:</h5>
+          <ul class="nolist"><li>Sum, min, max, and average are all special cases of reduction.
+ Summing a stream of numbers can be expressed as:
+
+ <pre><code>double sum = numbers.reduce(0, (a, b) -&gt; a+b);
+ </code></pre>
+
+ or more compactly:
+
+ <pre><code>double sum = numbers.reduce(0, Double::sum);
+ </code></pre>
+
+ <p>While this may seem a more roundabout way to perform an aggregation
+ compared to simply mutating a running total in a loop, reduction
+ operations parallelize more gracefully, without needing additional
+ synchronization and with greatly reduced risk of data races.</li></ul>
+        </div>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>identity</code></td>
+        <td width="100%">
+          <code>double</code>: the identity value for the accumulating function</p></td>
+      </tr>
+      <tr>
+        <td><code>op</code></td>
+        <td width="100%">
+          <code>DoubleBinaryOperator</code>: an <a href="package-summary.html#Associativity">associative</a>,
+           <a href="package-summary.html#NonInterference">non-interfering</a>,
+           <a href="package-summary.html#Statelessness">stateless</a>
+           function for combining two values</p></td>
+      </tr>
+    </table>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code>double</code></td>
+        <td width="100%">the result of the reduction</p></td>
+      </tr>
+    </table>
+  <div>
+      <p><b>See also:</b></p>
+      <ul class="nolist"><li><code><a href="DoubleStream.html#sum()">sum()</a></code></li><li><code><a href="DoubleStream.html#min()">min()</a></code></li><li><code><a href="DoubleStream.html#max()">max()</a></code></li><li><code><a href="DoubleStream.html#average()">average()</a></code></li>
+      </ul>
+  </div>
+
+</div>
+
+
+<A NAME="sequential()"></A>
+
+<div class="api apilevel-24">
+    <h3 class="api-name">sequential</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 24</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="DoubleStream.html">DoubleStream</a> sequential ()</pre>
+    
+    
+
+    
+  <p>Returns an equivalent stream that is sequential.  May return
+ itself, either because the stream was already sequential, or because
+ the underlying stream state was modified to be sequential.
+
+ <p>This is an <a href="package-summary.html#StreamOps">intermediate
+ operation</a>.</p></p>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="DoubleStream.html">DoubleStream</a></code></td>
+        <td width="100%">a sequential stream
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="skip(long)"></A>
+
+<div class="api apilevel-24">
+    <h3 class="api-name">skip</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 24</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="DoubleStream.html">DoubleStream</a> skip (long n)</pre>
+    
+    
+
+    
+  <p>Returns a stream consisting of the remaining elements of this stream
+ after discarding the first <code>n</code> elements of the stream.
+ If this stream contains fewer than <code>n</code> elements then an
+ empty stream will be returned.
+
+ <p>This is a <a href="package-summary.html#StreamOps">stateful
+ intermediate operation</a>.</p></p>
+    
+        <div class="jd-tagdata">
+          <h5 class="jd-tagtitle">API Note:</h5>
+          <ul class="nolist"><li>While <code>skip()</code> is generally a cheap operation on sequential
+ stream pipelines, it can be quite expensive on ordered parallel pipelines,
+ especially for large values of <code>n</code>, since <code>skip(n)</code>
+ is constrained to skip not just any <em>n</em> elements, but the
+ <em>first n</em> elements in the encounter order.  Using an unordered
+ stream source (such as <code><a href="DoubleStream.html#generate(java.util.function.DoubleSupplier)">generate(DoubleSupplier)</a></code>) or removing the
+ ordering constraint with <code><a href="BaseStream.html#unordered()">unordered()</a></code> may result in significant
+ speedups of <code>skip()</code> in parallel pipelines, if the semantics of
+ your situation permit.  If consistency with encounter order is required,
+ and you are experiencing poor performance or memory utilization with
+ <code>skip()</code> in parallel pipelines, switching to sequential execution
+ with <code><a href="DoubleStream.html#sequential()">sequential()</a></code> may improve performance.</li></ul>
+        </div>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>n</code></td>
+        <td width="100%">
+          <code>long</code>: the number of leading elements to skip</p></td>
+      </tr>
+    </table>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="DoubleStream.html">DoubleStream</a></code></td>
+        <td width="100%">the new stream</p></td>
+      </tr>
+    </table>
+      <table class="responsive">
+      <tr><th colspan=2>Throws</th></tr>
+        <tr>
+          <td><code><a href="../../lang/IllegalArgumentException.html">IllegalArgumentException</a></code></td>
+          <td width="100%">if <code>n</code> is negative
+</td>
+        </tr>
+      </table>
+  
+
+</div>
+
+
+<A NAME="sorted()"></A>
+
+<div class="api apilevel-24">
+    <h3 class="api-name">sorted</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 24</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="DoubleStream.html">DoubleStream</a> sorted ()</pre>
+    
+    
+
+    
+  <p>Returns a stream consisting of the elements of this stream in sorted
+ order. The elements are compared for equality according to
+ <code><a href="../../lang/Double.html#compare(double, double)">compare(double, double)</a></code>.
+
+ <p>This is a <a href="package-summary.html#StreamOps">stateful
+ intermediate operation</a>.</p></p>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="DoubleStream.html">DoubleStream</a></code></td>
+        <td width="100%">the result stream
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="spliterator()"></A>
+
+<div class="api apilevel-24">
+    <h3 class="api-name">spliterator</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 24</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="../Spliterator.OfDouble.html">Spliterator.OfDouble</a> spliterator ()</pre>
+    
+    
+
+    
+  <p>Returns a spliterator for the elements of this stream.
+
+ <p>This is a <a href="package-summary.html#StreamOps">terminal
+ operation</a>.</p></p>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="../Spliterator.OfDouble.html">Spliterator.OfDouble</a></code></td>
+        <td width="100%">the element spliterator for this stream
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="sum()"></A>
+
+<div class="api apilevel-24">
+    <h3 class="api-name">sum</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 24</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+double sum ()</pre>
+    
+    
+
+    
+  <p>Returns the sum of elements in this stream.
+
+ Summation is a special case of a <a
+ href="package-summary.html#Reduction">reduction</a>. If
+ floating-point summation were exact, this method would be
+ equivalent to:
+
+ <pre><code>return reduce(0, Double::sum);
+ </code></pre>
+
+ However, since floating-point summation is not exact, the above
+ code is not necessarily equivalent to the summation computation
+ done by this method.
+
+ <p>If any stream element is a NaN or the sum is at any point a NaN
+ then the sum will be NaN.
+
+ The value of a floating-point sum is a function both
+ of the input values as well as the order of addition
+ operations. The order of addition operations of this method is
+ intentionally not defined to allow for implementation
+ flexibility to improve the speed and accuracy of the computed
+ result.
+
+ In particular, this method may be implemented using compensated
+ summation or other technique to reduce the error bound in the
+ numerical sum compared to a simple summation of <code>double</code>
+ values.
+
+ <p>This is a <a href="package-summary.html#StreamOps">terminal
+ operation</a>.</p></p>
+    
+        <div class="jd-tagdata">
+          <h5 class="jd-tagtitle">API Note:</h5>
+          <ul class="nolist"><li>Elements sorted by increasing absolute magnitude tend
+ to yield more accurate results.</li></ul>
+        </div>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code>double</code></td>
+        <td width="100%">the sum of elements in this stream
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="summaryStatistics()"></A>
+
+<div class="api apilevel-24">
+    <h3 class="api-name">summaryStatistics</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 24</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="../DoubleSummaryStatistics.html">DoubleSummaryStatistics</a> summaryStatistics ()</pre>
+    
+    
+
+    
+  <p>Returns a <code>DoubleSummaryStatistics</code> describing various summary data
+ about the elements of this stream.  This is a special
+ case of a <a href="package-summary.html#Reduction">reduction</a>.
+
+ <p>This is a <a href="package-summary.html#StreamOps">terminal
+ operation</a>.</p></p>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="../DoubleSummaryStatistics.html">DoubleSummaryStatistics</a></code></td>
+        <td width="100%">a <code>DoubleSummaryStatistics</code> describing various summary data
+ about the elements of this stream
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="toArray()"></A>
+
+<div class="api apilevel-24">
+    <h3 class="api-name">toArray</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 24</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+double[] toArray ()</pre>
+    
+    
+
+    
+  <p>Returns an array containing the elements of this stream.
+
+ <p>This is a <a href="package-summary.html#StreamOps">terminal
+ operation</a>.</p></p>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code>double[]</code></td>
+        <td width="100%">an array containing the elements of this stream
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+
+
+
+<!-- ========= METHOD DETAIL ======== -->
+
+
+
+<!-- ========= END OF CLASS DATA ========= -->
+
+</div><!-- end jd-content -->
+
+
+
+<div class="data-reference-resources-wrapper">
+  
+  <ul data-reference-resources>
+    
+    
+    <li><h2>Interfaces</h2>
+      <ul>
+          <li class="api apilevel-24"><a href="BaseStream.html">BaseStream</a></li>
+          <li class="api apilevel-24"><a href="Collector.html">Collector</a></li>
+          <li class="selected api apilevel-24"><a href="DoubleStream.html">DoubleStream</a></li>
+          <li class="api apilevel-24"><a href="DoubleStream.Builder.html">DoubleStream.Builder</a></li>
+          <li class="api apilevel-24"><a href="IntStream.html">IntStream</a></li>
+          <li class="api apilevel-24"><a href="IntStream.Builder.html">IntStream.Builder</a></li>
+          <li class="api apilevel-24"><a href="LongStream.html">LongStream</a></li>
+          <li class="api apilevel-24"><a href="LongStream.Builder.html">LongStream.Builder</a></li>
+          <li class="api apilevel-24"><a href="Stream.html">Stream</a></li>
+          <li class="api apilevel-24"><a href="Stream.Builder.html">Stream.Builder</a></li>
+      </ul>
+    </li>
+    
+    <li><h2>Classes</h2>
+      <ul>
+          <li class="api apilevel-24"><a href="Collectors.html">Collectors</a></li>
+          <li class="api apilevel-24"><a href="StreamSupport.html">StreamSupport</a></li>
+      </ul>
+    </li>
+    
+    <li><h2>Enums</h2>
+      <ul>
+          <li class="api apilevel-24"><a href="Collector.Characteristics.html">Collector.Characteristics</a></li>
+      </ul>
+    </li>
+    
+    
+  </ul>
+  
+</div>
+
+
+
+
+    </div>
+
+    
+
+  
+    
+  
+    
+
+
+
+
+  
+
+
+<footer class="devsite-footer-promos nocontent">
+  <nav class="devsite-full-site-width">
+    <ul class="devsite-footer-promos-list">
+      
+      <li class="devsite-footer-promo">
+        <a href="http://twitter.com/AndroidDev"
+           class="devsite-footer-promo-title gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Twitter Promo"
+           >
+          
+          
+          <img class="devsite-footer-promo-icon" src="https://developer.android.com/static/images/footer/logo-twitter.svg">
+          
+          
+            Twitter
+          
+        </a>
+        <div class="devsite-footer-promo-description">Follow @AndroidDev on Twitter</div>
+      </li>
+      
+      <li class="devsite-footer-promo">
+        <a href="http://plus.google.com/+AndroidDevelopers"
+           class="devsite-footer-promo-title gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Google+ Promo"
+           >
+          
+          
+          <img class="devsite-footer-promo-icon" src="../../../../../www.gstatic.com/images/branding/product/2x/google_plus_48dp.png">
+          
+          
+            Google+
+          
+        </a>
+        <div class="devsite-footer-promo-description">Follow Android Developers on Google+</div>
+      </li>
+      
+      <li class="devsite-footer-promo">
+        <a href="http://www.youtube.com/user/androiddevelopers"
+           class="devsite-footer-promo-title gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer YouTube Promo"
+           >
+          
+          
+          <img class="devsite-footer-promo-icon" src="../../../../../www.gstatic.com/images/icons/material/product/2x/youtube_48dp.png">
+          
+          
+            YouTube
+          
+        </a>
+        <div class="devsite-footer-promo-description">Check out Android Developers on YouTube</div>
+      </li>
+      
+    </ul>
+  </nav>
+</footer>
+
+
+
+<div class="wrap dac-footer-container">
+  <footer class="dac-footer ">
+    <div class="cols dac-footer-main">
+      <div class="col-1of1">
+        <div class="dac-footer-contact">
+          
+          <a class="dac-footer-contact-link" href="https://developer.android.com/newsletter/index.html" title="Newsletter">Newsletter</a>
+          
+          <a class="dac-footer-contact-link" href="https://android-developers.blogspot.com/" title="Blog" target="_blank">Blog</a>
+          
+          <a class="dac-footer-contact-link" href="https://developer.android.com/support.html" title="Support">Support</a>
+          
+          <a class="dac-footer-contact-link" href="https://docs.google.com/forms/d/e/1FAIpQLSf27XIxoFmNpTjTYdk-m1uKWGqEnd7_4C_E1AD5fdCfyTBWNA/viewform?usp=pp_url&amp;entry.1909689089&amp;entry.208743710&amp;entry.408796755&amp;entry.1341430893&amp;entry.594931249&amp;entry.1640656812&amp;entry.1759804042&amp;entry.1441312344=developer.android.com" title="Join user studies" target="_blank">Join user studies</a>
+        </div>
+      </div>
+    </div>
+
+    <hr class="dac-footer-separator"/>
+      
+      <p class="dac-footer-copyright">
+        
+        Except as noted, this content is licensed under <a href="http://creativecommons.org/licenses/by/2.5/" target="_blank">Creative Commons Attribution 2.5</a>. For details and restrictions, see the <a href="https://developer.android.com/license.html">Content License</a>.
+      </p>
+    
+
+    <p class="dac-footer-links">
+      
+      <a href="https://www.android.com/" title="Android.com" target="_blank">Android.com</a>
+      
+      <a href="https://developer.android.com/" title="Android Developers">Android Developers</a>
+      
+      <a href="https://developer.android.com/studio/index.html" title="Android Studio">Android Studio</a>
+      
+      <a href="https://developer.android.com/distribute/console/index.html" title="Google Play Console">Google Play Console</a>
+      
+      <a href="https://developer.android.com/legal.html" title="Legal Notice">Legal Notice</a>
+    </p>
+
+    
+    <form class="devsite-utility-footer-language" id="setlang" action="https://developer.android.com/i18n/setlang/" method="post">
+      <input type="hidden" name="xsrf_token" value="zBWDsJxFldKUxxL9Chfmxxe-kk8V-bJ_lzy7SW8FLIY6MTUxMTEwNTYyNTA5NDYyMA" />
+      <input type="hidden" name="next" value="DoubleStream.html">
+      <span id="language" class="locales">
+        <select class="devsite-utility-footer-language-select" name="language">
+          
+          <option value="id"
+            >
+            Bahasa Indonesia
+          </option>
+          
+          <option value="de"
+            >
+            Deutsch
+          </option>
+          
+          <option value="en"
+             selected="selected" >
+            English
+          </option>
+          
+          <option value="es"
+            >
+            español
+          </option>
+          
+          <option value="es-419"
+            >
+            Español (América Latina)
+          </option>
+          
+          <option value="fr"
+            >
+            français
+          </option>
+          
+          <option value="pt-br"
+            >
+            Português Brasileiro
+          </option>
+          
+          <option value="vi"
+            >
+            Tiếng Việt
+          </option>
+          
+          <option value="tr"
+            >
+            Türkçe
+          </option>
+          
+          <option value="ru"
+            >
+            Русский
+          </option>
+          
+          <option value="th"
+            >
+            ภาษาไทย
+          </option>
+          
+          <option value="ja"
+            >
+            日本語
+          </option>
+          
+          <option value="zh-cn"
+            >
+            简体中文
+          </option>
+          
+          <option value="zh-tw"
+            >
+            繁體中文
+          </option>
+          
+          <option value="ko"
+            >
+            한국어
+          </option>
+          
+        </select>
+      </span>
+    </form>
+  </footer>
+</div><!--/.wrap -->
+
+<div class="dac-toast-group">
+  <div class="dac-toast" data-toast>
+    <div class="dac-toast-wrap">
+      
+      This site uses cookies to store your preferences for site-specific language and display options.
+      <button class="dac-toast-close-btn">
+        
+        <span class="dac-button dac-raised dac-primary">OK</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<div data-modal="newsletter" data-newsletter-fb data-swap class="dac-modal newsletter">
+  <div class="dac-modal-container">
+    <div class="dac-modal-window">
+      <header class="dac-modal-header">
+        <div class="dac-modal-header-actions">
+          <button class="dac-modal-header-close" data-modal-toggle></button>
+        </div>
+        <div class="dac-swap" data-swap-container>
+          <section class="dac-swap-section dac-active dac-down">
+            
+            <h2 class="norule dac-modal-header-title" data-t="newsletter.title">Get the latest Android developer news and tips that will help you find success on Google Play.</h2>
+            
+            <p class="dac-modal-header-subtitle" data-t="newsletter.requiredHint">* Required Fields</p>
+          </section>
+          <section class="dac-swap-section dac-up">
+            
+            <h2 class="norule dac-modal-header-title" data-t="newsletter.successTitle">Hooray!</h2>
+          </section>
+        </div>
+      </header>
+      <div class="dac-swap" data-swap-container>
+        <section class="dac-swap-section dac-active dac-left">
+          <form action="https://services.google.com/fb/submissions/android-developer-mailing-list/" class="dac-form" method="post">
+            <section class="dac-modal-content">
+              <fieldset class="dac-form-fieldset">
+                <div class="cols">
+                  <div class="col-1of2 newsletter-leftCol">
+                    <div class="dac-form-input-group">
+                      
+                      <label for="newsletter-full-name" class="dac-form-floatlabel" data-t="newsletter.name">Full name</label>
+                      <input type="text" class="dac-form-input" name="fullname" id="newsletter-full-name" required>
+                      <span class="dac-form-required">*</span>
+                    </div>
+                    <div class="dac-form-input-group">
+                      
+                      <label for="newsletter-email" class="dac-form-floatlabel" data-t="newsletter.email">Email address</label>
+                      <input type="email" class="dac-form-input" name="emailaddress" id="newsletter-email" required>
+                      <span class="dac-form-required">*</span>
+                    </div>
+                  </div>
+                  <div class="col-1of2 newsletter-rightCol">
+                    <div class="dac-form-input-group">
+                      
+                      <label for="newsletter-company" class="dac-form-floatlabel" data-t="newsletter.company">Company / developer name</label>
+                      <input type="text" class="dac-form-input" name="companydevelopername" id="newsletter-company">
+                    </div>
+                    <div class="dac-form-input-group">
+                      
+                      <label for="newsletter-play-store" class="dac-form-floatlabel" data-t="newsletter.appUrl">One of your Play Store app URLs</label>
+                      <input type="url" class="dac-form-input" name="playstoreappurls" id="newsletter-play-store">
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+              <fieldset class="dac-form-fieldset">
+                <div class="cols">
+                  
+                  <div class="col-1of2 newsletter-leftCol newsletter-interested" data-validation-message="Please check at least one item.">
+                    
+                    <legend class="dac-form-legend">What are you interested in?<span class="dac-form-required">*</span></legend>
+                    <div class="dac-form-radio-group">
+                      <input type="checkbox" class="dac-form-checkbox" name="interested" id="interested-whats-new" value="whats-new">
+                      <label for="interested-whats-new" class="dac-form-checkbox-button"></label>
+                      
+                      <label for="interested-whats-new" class="dac-form-label">What's new</label>
+                    </div>
+                    <div class="dac-form-radio-group">
+                      <input type="checkbox" class="dac-form-checkbox" name="interested" id="interested-games-updates" value="games-updates">
+                      <label for="interested-games-updates" class="dac-form-checkbox-button"></label>
+                      
+                      <label for="interested-games-updates" class="dac-form-label">Games updates</label>
+                    </div>
+                    <div class="dac-form-radio-group">
+                      <input type="checkbox" class="dac-form-checkbox" name="interested" id="interested-android-development" value="android-development">
+                      <label for="interested-android-development" class="dac-form-checkbox-button"></label>
+                      
+                      <label for="interested-android-development" class="dac-form-label">Android development</label>
+                    </div>
+                  </div>
+                  <div class="col-1of2 newsletter-rightCol newsletter-checkboxes">
+                    <div class="dac-form-input-group">
+                      
+                      <label for="newsletter-receive-in">Receive newsletter in</label>
+                      <select name="language" class="dac-form-select" id="newsletter-receive-in">
+                        <option value="en-US" selected>English</option>
+                        <option value="ar">Arabic</option>
+                        <option value="zh">Chinese (Simplified)</option>
+                        <option value="zh-TW">Chinese (Traditional)</option>
+                        <option value="fr">French</option>
+                        <option value="de">German</option>
+                        <option value="id">Indonesian (Bahasa)</option>
+                        <option value="ja">Japanese</option>
+                        <option value="ko">Korean</option>
+                        <option value="pt-BR">Portuguese (Brazilian)</option>
+                        <option value="ru">Russian</option>
+                        <option value="es-419">Spanish (Latin American)</option>
+                        <option value="th">Thai</option>
+                        <option value="tr">Turkish</option>
+                        <option value="vi">Vietnamese</option>
+                      </select>
+                    </div>
+                    <div class="dac-form-radio-group">
+                      <div class="dac-media">
+                        <div class="dac-media-figure">
+                          <input type="checkbox" class="dac-form-checkbox" name="marketingoptin" id="newsletter-add" required value="Add me to the mailing list.">
+                          <label for="newsletter-add" class="dac-form-checkbox-button"></label>
+                        </div>
+                        <div class="dac-media-body">
+                          <label for="newsletter-add" class="dac-form-label dac-form-aside">
+                            
+                            Add me to the mailing list.
+                            <span class="dac-form-required">*</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="dac-form-radio-group">
+                      <div class="dac-media">
+                        <div class="dac-media-figure">
+                          <input type="checkbox" class="dac-form-checkbox" name="privacystatement" id="newsletter-terms" required value="I acknowledge that the information provided in this form will be subject to Google's privacy policy (https://www.google.com/policies/privacy/).">
+                          <label for="newsletter-terms" class="dac-form-checkbox-button"></label>
+                        </div>
+                        <div class="dac-media-body">
+                          <label for="newsletter-terms" class="dac-form-label dac-form-aside"><span data-t="newsletter.privacyPolicy" data-t-html>
+                            
+                            I acknowledge that the information provided in this form will be subject to <a href="https://www.google.com/policies/privacy/">Google's privacy policy</a>.
+                          </span>
+                          <span class="dac-form-required">*</span></label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+            </section>
+            <input type="hidden" name="referrer" value="dac">
+            <footer class="dac-modal-footer">
+              <div class="cols">
+                <div class="col-2of5">
+                </div>
+              </div>
+              <button type="submit" value="Submit" class="dac-fab dac-primary dac-large dac-modal-action"><i class="dac-sprite dac-arrow-right"></i></button>
+            </footer>
+          </form>
+        </section>
+        <section class="dac-swap-section dac-right">
+          <div class="dac-modal-content">
+            <p class="newsletter-success-message" data-t="newsletter.successDetails">
+              
+              You have successfully signed up for the latest Android developer news and tips.
+            </p>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</div><!--/.dac-modal.newsletter-->
+
+<div data-modal="wechat" class="dac-modal">
+  <div class="dac-modal-container">
+    <div class="dac-modal-window">
+      <header class="dac-modal-header">
+        <div class="dac-modal-header-actions">
+          <button class="dac-modal-header-close" data-modal-toggle></button>
+        </div>
+        <section>
+          
+          <h2 class="norule dac-modal-header-title">Follow Google Developers on WeChat</h2>
+        </section>
+      </header>
+      <section class="dac-modal-content figure-center center-img">
+        <img src="../../../../static/images/qr-wechat.png">
+      </section>
+    </div>
+  </div>
+</div><!--/.dac-modal[dac-modal=wechat]-->
+
+
+<div data-modal="langform" class="dac-modal" id="langform">
+  <div class="dac-modal-container">
+    <div class="dac-modal-window">
+      <header class="dac-modal-header">
+        <div class="dac-modal-header-actions">
+          <button class="dac-modal-header-close" data-modal-toggle></button>
+        </div>
+        <section class="dac-swap-section dac-active dac-down">
+          <h2 class="norule dac-modal-header-title">
+            
+            Browse this site in <span class="span-target-lang"></span>?
+          </h2>
+        </section>
+      </header>
+      <section class="dac-swap-section dac-active dac-left">
+          <section class="dac-modal-content">
+            <fieldset class="dac-form-fieldset">
+              <div class="cols">
+                <div class="col-2of2 langform-leftCol">
+                  <p id="resetLangText">
+                    
+                    You requested a page in <span class="span-target-lang"></span>, but your language preference for this site is <span class="span-current-lang"></span>.
+                  </p>
+                  <p id="resetLangCta">
+                    
+                    Would you like to change your language preference and browse this site in <span class="span-target-lang"></span>? If you want to change your language preference later, use the language menu at the bottom of each page.
+                  </p>
+                </div>
+              </div>
+            </fieldset>
+          </section>
+          <footer class="dac-modal-footer" id="langfooter">
+            <div class="cols">
+              <div class="col-2of5">
+              </div>
+            </div>
+            <a href="#" class="yes" onclick="return false;">
+              <button class="button dac-primary dac-modal-action lang yes" data-t="newsletter.resetLangButtonYes" data-modal-toggle>
+                
+                Change Language
+              </button>
+            </a>
+            <a href="#" class="" onclick="return false;">
+              <button class="button dac-primary dac-modal-action lang no" data-t="newsletter.resetLangButtonNo" data-modal-toggle>
+                
+                Not Now
+              </button>
+            </a>
+          </footer>
+        </form>
+      </section>
+    </div>
+  </div>
+</div><!--/.dac-modal-->
+
+
+<div data-modal="api-unavailable" class="dac-modal" id="api-unavailable">
+  <div class="dac-modal-container">
+    <div class="dac-modal-window">
+      <header class="dac-modal-header">
+        <div class="dac-modal-header-actions">
+          <button class="dac-modal-header-close" data-modal-toggle></button>
+        </div>
+        <section class="dac-swap-section dac-active dac-down">
+          <h2 class="norule dac-modal-header-title">
+            
+            This class requires API level <span class="api-level"></span> or higher
+          </h2>
+        </section>
+      </header>
+      <section class="dac-swap-section dac-active dac-left">
+          <section class="dac-modal-content">
+            <p>
+              
+              This doc is hidden because your selected API level for the documentation is <span class="api-level"></span>. You can change the documentation API level with the selector above the left navigation.
+            </p>
+            
+            <p>For more information about specifying the API level your app requires, read <a href="https://developer.android.com/training/basics/supporting-devices/platforms.html">Supporting Different Platform Versions</a>.</p>
+          </section>
+          <footer class="dac-modal-footer" id="langfooter">
+            <div class="cols">
+              <div class="col-2of5">
+              </div>
+            </div>
+            <a href="#" class="ok" onclick="return false;">
+              <button class="button dac-primary dac-modal-action ok"
+              data-modal-toggle>
+                
+                OK, make this page visible
+              </button>
+            </a>
+          </footer>
+        </form>
+      </section>
+    </div>
+  </div>
+</div><!--/.dac-modal#api-unavailable-->
+
+    
+  </div><!--/#body-content-->
+
+  <!-- Nav Setup -->
+  <script>$('[data-dac-nav]').dacNav();</script>
+  <script type="text/javascript">
+    $('.slideshow-container').dacSlideshow({
+        btnPrev: '.slideshow-prev',
+        btnNext: '.slideshow-next',
+        btnPause: '#pauseButton'
+    });
+
+    $(".feed").dacTabbedList({
+      nav_id: '.feed-nav',
+      frame_id: '.feed-frame'
+    });
+  </script>
+  
+  <script src="../../../../ytblogger_lists_unified543b.js?v=2017111903" defer></script>
+  <script src="../../../../android_metadata_en543b.js?v=2017111903" defer></script>
+  
+  <script src="../../../lists543b.js?v=2017111903" defer></script>
+  <script src="../../../gms_lists543b.js?v=2017111903" defer></script>
+  <script src="../../../android/support/wearable/lists543b.js?v=2017111903" defer></script>
+  <script src="../../../android/support/test/lists543b.js?v=2017111903" defer></script>
+  <script src="../../../android/support/constraint/lists543b.js?v=2017111903" defer></script>
+  <script src="../../../android/arch/lists543b.js?v=2017111903" defer></script>
+  <script src="https://developer.android.com/_static2/268f0926ba/jsi18n/"></script>
+  <script>
+    // Load localized metadata.
+    (function(lang) {
+      if (lang === 'en') { return; }
+      document.write('<script src="https://developer.android.com/android_metadata_en.js?v=2017111903" defer></' + 'script>');
+    })(getLangPref())
+
+    // Add skip to content for accessibility.
+    $('#skip-to-main').click(function() {
+      $('a[name=top]').focus();
+    });
+
+    $('.devsite-utility-footer-language-select').each(function() {
+      $(this).change(function() {
+        changeLangPref(this.value, true)
+        $('.devsite-utility-footer-language').submit();
+      });
+    });
+  </script>
+
+  <script>
+    (function($) {
+      devsite.analytics.InitAnalytics();
+      devsite.navigatingRadio.init();
+      devsite.kennedy.InitializeTabbars();
+      // overflowMenu must be initialized after tabbar.
+      devsite.overflowMenu.init();
+    })(jQuery);
+  </script>
+
+  
+
+
+<div id="survey-box-wrapper">
+  <div class="material-dialog" style="width:270px">
+    <div class="material-dialog-title">
+      Take a short survey?
+    </div>
+    <div class="material-dialog-description">
+      Help us improve the Android developer experience.
+      <br>(Sep 2017 survey)
+    </div>
+    <div class="material-button-bar">
+      <a class="dac-button dac-primary dac-raised" target="_blank"
+          href="https://goo.gl/dNPzCR">Okay</a>
+      <a class="dac-button" href="#">No thanks</a>
+    </div>
+  </div>
+</div>
+
+</body>
+
+<!-- Mirrored from developer.android.com/reference/java/util/stream/DoubleStream.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 19 Nov 2017 16:36:36 GMT -->
+</html>

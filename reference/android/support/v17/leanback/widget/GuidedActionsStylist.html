@@ -1,0 +1,5310 @@
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/Article">
+
+<!-- Mirrored from developer.android.com/reference/android/support/v17/leanback/widget/GuidedActionsStylist.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 19 Nov 2017 17:20:13 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+
+  
+
+
+
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+
+
+
+
+
+<script>var a=window.devsite||{};window.devsite=a;a.readyCallbacks=[];window.devsite.readyCallbacks=a.readyCallbacks;a.ready=function(b){a.readyCallbacks.push(b)};window.devsite.ready=a.ready;
+</script>
+
+<meta charset="utf-8">
+
+
+
+<meta name="xsrf_token" content="wClEMe7YmU4Fu9j-PsfhhaGaotEdBdcApTVYz3yBz4I6MTUxMTExMDk2MDYwNjg5MA" />
+
+  
+    <link rel="canonical" href="GuidedActionsStylist.html">
+  
+
+  
+    <link rel="alternate" href="GuidedActionsStylist.html" hreflang="en">
+  
+    <link rel="alternate" href="https://developer.android.google.cn/reference/android/support/v17/leanback/widget/GuidedActionsStylist.html" hreflang="en-cn">
+  
+
+  <link rel="alternate" href="GuidedActionsStylist.html" hreflang="x-default">
+
+
+
+
+<link rel="shortcut icon" href="../../../../../../_static/268f0926ba/images/android/favicon.png">
+
+<link rel="apple-touch-icon" href="../../../../../../_static/268f0926ba/images/android/touchicon-180.png">
+
+
+<title>
+
+  GuidedActionsStylist | Android Developers
+
+</title>
+
+
+
+  <meta itemprop="dateModified" content="2017-10-25T17:02:37.682330">
+
+
+<!-- STYLESHEETS -->
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto+Condensed">
+<link rel="stylesheet"
+    href="http://fonts.googleapis.com/css?family=Roboto:light,regular,medium,thin,italic,mediumitalic,bold"
+    title="roboto">
+<link rel="stylesheet" href="../../../../../../_static/268f0926ba/css/dac-devsite.css">
+
+
+
+
+
+
+
+<link href="../../../../../../static/css/default8941.css?v=2017111905" rel="stylesheet" type="text/css">
+<!-- JAVASCRIPT -->
+<script src="../../../../../../_static/268f0926ba/js/android_3p-bundle.js" type="text/javascript"></script>
+<script src="../../../../../../_static/268f0926ba/js/script_foot_closure_android.js"></script>
+<script src="../../../../../../_static/268f0926ba/js/script_foot_android.js"></script>
+
+<script type="text/javascript">
+  var toRoot = 'https://developer.android.com/';
+  devsite.permissions.init({"f62218c009ec029abef196bba5aa34cf": true, "098dafe57affddc137df300142652cfd": false, "8e03e230de0bd8a6fe173fdf172e8b3f": false, "cb025a64a50094835616312f4774a53d": true, "c95bf81627eb648c2345aec06a66200a": true, "51470233c56fc1fde50f00b73c52b216": false, "d169d485cf24243a263783dbe42029b1": true, "039e5d84b87fd75807ffb37b7f1bbf2c": true, "752953480de00a336d911a46966cc16d": false, "700def1a83e356c06c0925afb05de4b0": false, "6749dcb526ce9bde6993550c7d928d24": true});
+
+  var replaceBlog = false;
+  var replaceYouTube = false;
+  var siteDefaultLocale = 'en';
+
+  var ANDROID_LANGUAGES = [
+      'id','de','en','es','es-419','fr','pt-br','vi','tr','ru','th','ja','zh-cn','zh-tw','ko'
+  ];
+</script>
+<script src="../../../../../../static/js/docs8941.js?v=2017111905" type="text/javascript"></script>
+
+
+</head>
+
+<body class="gc-documentation
+            api apilevel-22.1.0
+            
+              develop
+              reference
+            
+            ">
+  
+
+
+  
+    <input class="google-analytics-id-json" type="hidden" value="{&quot;dimensions&quot;: {&quot;dimension6&quot;: &quot;en&quot;, &quot;dimension4&quot;: &quot;Reference&quot;, &quot;dimension5&quot;: &quot;en&quot;, &quot;dimension3&quot;: false, &quot;dimension1&quot;: &quot;Signed out&quot;, &quot;dimension8&quot;: null}, &quot;gaid&quot;: &quot;UA-49880327-2&quot;}">
+  
+    <input class="google-analytics-id-json" type="hidden" value="{&quot;dimensions&quot;: {&quot;dimension6&quot;: &quot;en&quot;, &quot;dimension4&quot;: &quot;Reference&quot;, &quot;dimension5&quot;: &quot;en&quot;, &quot;dimension3&quot;: false, &quot;dimension1&quot;: &quot;Signed out&quot;, &quot;dimension8&quot;: null}, &quot;gaid&quot;: &quot;UA-5831155-1&quot;}">
+  
+
+
+
+  
+  
+    <script>
+      var dataLayer = [{"freeTrialEligibleUser": "False", "userCountry": "BD", "language": {"requested": "en", "served": "en"}, "projectName": "Reference", "scriptsafe": null, "signedIn": "False", "internalUser": "False"}];
+    </script>
+  
+
+
+
+  
+  <a href="#top" id="skip-to-main">Skip to content</a>
+  <header id="header-wrapper">
+    <div class="dac-header" id="header">
+      <div class="dac-header-inner">
+        
+        <a class="dac-nav-toggle" data-dac-toggle-nav href="#" title="Open navigation">
+          <span class="dac-nav-hamburger">
+            <span class="dac-nav-hamburger-top"></span>
+            <span class="dac-nav-hamburger-mid"></span>
+            <span class="dac-nav-hamburger-bot"></span>
+          </span>
+        </a>
+        
+        <a class="dac-header-logo" href="https://developer.android.com/index.html">
+          <img class="dac-header-logo-image" src="../../../../../../static/images/android_logo.png"
+              srcset="https://developer.android.com/static/images/android_logo_2x.png 2x"
+              width="32" height="36" alt="Android"> Developers</a>
+        <ul class="dac-header-tabs">
+          <li>
+            <a class="dac-header-tab" href="https://developer.android.com/design/index.html"
+               zh-tw-lang="設計"
+               zh-cn-lang="设计"
+               ru-lang="Проектирование"
+               ko-lang="디자인"
+               ja-lang="設計"
+               es-lang="Diseñar">
+              
+              Design</a>
+          </li>
+          <li>
+            <a class="dac-header-tab" href="https://developer.android.com/develop/index.html"
+               zh-tw-lang="開發"
+               zh-cn-lang="开发"
+               ru-lang="Разработка"
+               ko-lang="개발"
+               ja-lang="開発"
+               es-lang="Desarrollar">
+              
+              Develop</a>
+          </li>
+          <li>
+            <a class="dac-header-tab" href="https://developer.android.com/distribute/index.html"
+               zh-tw-lang="發佈"
+               zh-cn-lang="分发"
+               ru-lang="Распространение"
+               ko-lang="배포"
+               ja-lang="配布"
+               es-lang="Distribuir">
+              
+              Distribute</a>
+          </li>
+        </ul>
+
+
+        
+
+        <a class="dac-header-console-btn gc-analytics-event" href="https://play.google.com/apps/publish/"
+           data-category="User" data-action="Console" data-label="Clicked">
+          
+          <img src="https://developer.android.com/static/images/developer-console-icon.svg" width="18" height="19" alt="">Play Console</a>
+        
+
+<form data-search="" class="dac-header-search">
+  <button class="dac-header-search-close" data-search-close="">
+    <i class="dac-sprite dac-back-arrow"></i>
+  </button>
+
+  <div class="dac-header-search-inner">
+    <i class="dac-sprite dac-search-white dac-header-search-icon"></i>
+    
+    <input id="search_autocomplete" type="text" value="" autocomplete="off" name="q" class="dac-header-search-input" placeholder="Search">
+    <button class="dac-header-search-clear dac-hidden" data-search-clear="">
+      <i class="dac-sprite dac-close-black"></i>
+    </button>
+  </div>
+</form>
+
+        
+      </div><!--/.header-wrap.wrap-->
+    </div><!--/.header-->
+
+    
+
+<div id="search-results" class="dac-search-results">
+  <div id="dac-search-results-history" class="dac-search-results-history">
+    <div class="wrap dac-search-results-history-wrap">
+      <div class="cols">
+        <div class="col-1of2 col-tablet-1of2 col-mobile-1of1">
+          
+          <h2>Most visited</h2>
+          <div class="resource-flow-layout" data-history-query="history:most/visited" data-maxresults="3" data-cardsizes="18x2"></div>
+        </div>
+
+        <div class="col-1of2 col-tablet-1of2 col-mobile-1of1">
+          
+          <h2>Recently visited</h2>
+          <div class="resource-flow-layout cols" data-history-query="history:recent" data-allow-duplicates="true" data-maxresults="3" data-cardsizes="18x2"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="dac-search-results-content" class="dac-search-results-content">
+    <div class="dac-search-results-metadata wrap">
+      <div class="dac-search-results-for">
+          <h2>
+          
+          Results for <span id="search-results-for"></span>
+          </h2>
+      </div>
+
+      <div id="dac-search-results-hero"></div>
+
+      <div class="dac-search-results-hero cols">
+        <div id="dac-search-results-reference" class="col-6of6 col-tablet-2of2 col-mobile-1of1">
+          <div class="suggest-card reference no-display">
+            <ul class="dac-search-results-reference">
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="cols dac-search-results-cse">
+        <script src="../../../../../../../cse.google.com/f4116.txt?cx=000521750095050289010:zpcpi1ea4s8" async></script>
+        <gcse:searchresults-only linkTarget="_self"></gcse:searchresults-only>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </header>
+
+  <a name="navigation" tabindex=0 class="nav-start-marker">navigation</a>
+  <nav class="dac-nav">
+    <div class="dac-nav-dimmer" data-dac-toggle-nav></div>
+    <div class="dac-nav-sidebar" data-swap data-dynamic="false" data-transition-speed="300" data-dac-nav>
+      <div data-swap-container>
+        
+        <a class="dac-nav-back-button dac-swap-section dac-up dac-no-anim" tabindex=0 data-swap-button>
+          
+          
+          <i class="dac-sprite dac-nav-back"></i> <span class="dac-nav-back-title">Back</span>
+        </a>
+
+        <div class="dac-nav-sub dac-swap-section dac-right dac-active" itemscope
+            itemtype="http://schema.org/SiteNavigationElement">
+          
+          
+            
+              
+              <button data-fullscreen="" class="dac-nav-fullscreen">
+                <i class="dac-sprite dac-fullscreen"></i>
+              </button>
+              <script>$('[data-fullscreen]').dacFullscreen();</script>
+              <div id="devdoc-nav">
+                <div id="api-nav-header">
+                  <div id="api-level-toggle">
+                    <label for="apiLevelCheckbox" class="disabled"
+                        
+                        title="Select your target API level to dim unavailable APIs">
+                        
+                        API:
+                    </label>
+                    <div class="select-wrapper">
+                      <select id="apiLevelSelector"></select>
+                    </div>
+                  </div><!-- end toggle -->
+                  <div id="api-nav-title">
+                    <select id="reference-selector">
+                      
+                      <option value="android">Android Platform</option>
+                      
+                      
+                      <option value="android/support">Android Support Library</option>
+                      
+                      
+                      <option value="android/arch">Architecture Components</option>
+                      
+                      <option value="android/support/constraint">Constraint Library</option>
+                      
+                      <option value="com/android/billingclient">Play Billing Library</option>
+                      
+                      <option value="android/support/test">Test Support Library</option>
+                      
+                      <option value="android/support/wearable">Wearable Library</option>
+                    </select>
+                  </div>
+                </div><!-- end nav header -->
+                <script>
+                  buildApiLevelSelector();
+                  initReferenceSelector();
+                </script>
+                <div class="dac-reference-nav" data-reference-tree="">
+                  <ul class="dac-reference-nav-list" data-reference-namespaces="">
+                    <li class="api no-toggle"><a href="../../../classes.html" >Class Index</a></li><li class="api no-toggle"><a href="../../../packages.html" >Package Index</a></li><li class="api apilevel-25.4.0"><a href="../../../animation/package-summary.html" >android.support.animation</a></li><li class="api apilevel-"><a href="../../../annotation/package-summary.html" >android.support.annotation</a></li><li class="api apilevel-24.1.0"><a href="../../../app/recommendation/package-summary.html" >android.support.app.recommendation</a></li><li class="api apilevel-"><a href="../../../compat/package-summary.html" >android.support.compat</a></li><li class="api apilevel-27.0.0"><a href="../../../content/package-summary.html" >android.support.content</a></li><li class="api apilevel-"><a href="../../../coreui/package-summary.html" >android.support.coreui</a></li><li class="api apilevel-"><a href="../../../coreutils/package-summary.html" >android.support.coreutils</a></li><li class="api apilevel-24.1.0"><a href="../../../customtabs/package-summary.html" >android.support.customtabs</a></li><li class="api apilevel-"><a href="../../../design/package-summary.html" >android.support.design</a></li><li class="api apilevel-24.1.0"><a href="../../../design/widget/package-summary.html" >android.support.design.widget</a></li><li class="api apilevel-"><a href="../../../dynamicanimation/package-summary.html" >android.support.dynamicanimation</a></li><li class="api apilevel-"><a href="../../../exifinterface/package-summary.html" >android.support.exifinterface</a></li><li class="api apilevel-"><a href="../../../fragment/package-summary.html" >android.support.fragment</a></li><li class="api apilevel-24.1.0"><a href="../../../graphics/drawable/package-summary.html" >android.support.graphics.drawable</a></li><li class="api apilevel-"><a href="../../../graphics/drawable/animated/package-summary.html" >android.support.graphics.drawable.animated</a></li><li class="api apilevel-25.1.0"><a href="../../../media/package-summary.html" >android.support.media</a></li><li class="api apilevel-26.1.0"><a href="../../../media/tv/package-summary.html" >android.support.media.tv</a></li><li class="api apilevel-"><a href="../../../mediacompat/package-summary.html" >android.support.mediacompat</a></li><li class="api apilevel-"><a href="../../../mediacompat/testlib/package-summary.html" >android.support.mediacompat.testlib</a></li><li class="api apilevel-24.1.0"><a href="../../../percent/package-summary.html" >android.support.percent</a></li><li class="api apilevel-"><a href="../../../recommendation/package-summary.html" >android.support.recommendation</a></li><li class="api apilevel-26.1.0"><a href="../../../text/emoji/package-summary.html" >android.support.text.emoji</a></li><li class="api apilevel-"><a href="../../../text/emoji/appcompat/package-summary.html" >android.support.text.emoji.appcompat</a></li><li class="api apilevel-26.1.0"><a href="../../../text/emoji/bundled/package-summary.html" >android.support.text.emoji.bundled</a></li><li class="api apilevel-26.1.0"><a href="../../../text/emoji/widget/package-summary.html" >android.support.text.emoji.widget</a></li><li class="api apilevel-25.1.0"><a href="../../../transition/package-summary.html" >android.support.transition</a></li><li class="api apilevel-"><a href="../../../v13/package-summary.html" >android.support.v13</a></li><li class="api apilevel-22.1.0"><a href="../../../v13/app/package-summary.html" >android.support.v13.app</a></li><li class="api apilevel-24.1.0"><a href="../../../v13/view/package-summary.html" >android.support.v13.view</a></li><li class="api apilevel-25.1.0"><a href="../../../v13/view/inputmethod/package-summary.html" >android.support.v13.view.inputmethod</a></li><li class="api apilevel-24.1.0"><a href="../../../v14/preference/package-summary.html" >android.support.v14.preference</a></li><li class="api apilevel-"><a href="../package-summary.html" >android.support.v17.leanback</a></li><li class="api apilevel-22.1.0"><a href="../app/package-summary.html" >android.support.v17.leanback.app</a></li><li class="api apilevel-22.1.0"><a href="../database/package-summary.html" >android.support.v17.leanback.database</a></li><li class="api apilevel-22.1.0"><a href="../graphics/package-summary.html" >android.support.v17.leanback.graphics</a></li><li class="api apilevel-25.1.0"><a href="../media/package-summary.html" >android.support.v17.leanback.media</a></li><li class="api apilevel-24.1.0"><a href="../system/package-summary.html" >android.support.v17.leanback.system</a></li><li class="api apilevel-22.1.0"><a href="package-summary.html" >android.support.v17.leanback.widget</a></li><li class="api apilevel-24.1.0"><a href="picker/package-summary.html" >android.support.v17.leanback.widget.picker</a></li><li class="api apilevel-24.1.0"><a href="../../preference/package-summary.html" >android.support.v17.preference</a></li><li class="api apilevel-"><a href="../../../v4/package-summary.html" >android.support.v4</a></li><li class="api apilevel-22.1.0"><a href="../../../v4/accessibilityservice/package-summary.html" >android.support.v4.accessibilityservice</a></li><li class="api apilevel-22.1.0"><a href="../../../v4/app/package-summary.html" >android.support.v4.app</a></li><li class="api apilevel-22.1.0"><a href="../../../v4/content/package-summary.html" >android.support.v4.content</a></li><li class="api apilevel-24.1.0"><a href="../../../v4/content/pm/package-summary.html" >android.support.v4.content.pm</a></li><li class="api apilevel-24.1.0"><a href="../../../v4/content/res/package-summary.html" >android.support.v4.content.res</a></li><li class="api apilevel-22.1.0"><a href="../../../v4/database/package-summary.html" >android.support.v4.database</a></li><li class="api apilevel-22.1.0"><a href="../../../v4/graphics/package-summary.html" >android.support.v4.graphics</a></li><li class="api apilevel-22.1.0"><a href="../../../v4/graphics/drawable/package-summary.html" >android.support.v4.graphics.drawable</a></li><li class="api apilevel-22.1.0"><a href="../../../v4/hardware/display/package-summary.html" >android.support.v4.hardware.display</a></li><li class="api apilevel-24.1.0"><a href="../../../v4/hardware/fingerprint/package-summary.html" >android.support.v4.hardware.fingerprint</a></li><li class="api apilevel-26.1.0"><a href="../../../v4/math/package-summary.html" >android.support.v4.math</a></li><li class="api apilevel-22.1.0"><a href="../../../v4/media/package-summary.html" >android.support.v4.media</a></li><li class="api apilevel-26.1.0"><a href="../../../v4/media/app/package-summary.html" >android.support.v4.media.app</a></li><li class="api apilevel-22.1.0"><a href="../../../v4/media/session/package-summary.html" >android.support.v4.media.session</a></li><li class="api apilevel-22.1.0"><a href="../../../v4/net/package-summary.html" >android.support.v4.net</a></li><li class="api apilevel-22.1.0"><a href="../../../v4/os/package-summary.html" >android.support.v4.os</a></li><li class="api apilevel-22.1.0"><a href="../../../v4/print/package-summary.html" >android.support.v4.print</a></li><li class="api apilevel-22.1.0"><a href="../../../v4/provider/package-summary.html" >android.support.v4.provider</a></li><li class="api apilevel-22.1.0"><a href="../../../v4/text/package-summary.html" >android.support.v4.text</a></li><li class="api apilevel-25.1.0"><a href="../../../v4/text/util/package-summary.html" >android.support.v4.text.util</a></li><li class="api apilevel-22.1.0"><a href="../../../v4/util/package-summary.html" >android.support.v4.util</a></li><li class="api apilevel-22.1.0"><a href="../../../v4/view/package-summary.html" >android.support.v4.view</a></li><li class="api apilevel-22.1.0"><a href="../../../v4/view/accessibility/package-summary.html" >android.support.v4.view.accessibility</a></li><li class="api apilevel-22.1.0"><a href="../../../v4/view/animation/package-summary.html" >android.support.v4.view.animation</a></li><li class="api apilevel-22.1.0"><a href="../../../v4/widget/package-summary.html" >android.support.v4.widget</a></li><li class="api apilevel-22.1.0"><a href="../../../v7/app/package-summary.html" >android.support.v7.app</a></li><li class="api apilevel-24.1.0"><a href="../../../v7/appcompat/package-summary.html" >android.support.v7.appcompat</a></li><li class="api apilevel-"><a href="../../../v7/cardview/package-summary.html" >android.support.v7.cardview</a></li><li class="api apilevel-24.1.0"><a href="../../../v7/content/res/package-summary.html" >android.support.v7.content.res</a></li><li class="api apilevel-22.1.0"><a href="../../../v7/graphics/package-summary.html" >android.support.v7.graphics</a></li><li class="api apilevel-24.1.0"><a href="../../../v7/graphics/drawable/package-summary.html" >android.support.v7.graphics.drawable</a></li><li class="api apilevel-"><a href="../../../v7/gridlayout/package-summary.html" >android.support.v7.gridlayout</a></li><li class="api apilevel-22.1.0"><a href="../../../v7/media/package-summary.html" >android.support.v7.media</a></li><li class="api apilevel-"><a href="../../../v7/mediarouter/package-summary.html" >android.support.v7.mediarouter</a></li><li class="api apilevel-"><a href="../../../v7/palette/package-summary.html" >android.support.v7.palette</a></li><li class="api apilevel-24.1.0"><a href="../../../v7/preference/package-summary.html" >android.support.v7.preference</a></li><li class="api apilevel-24.1.0"><a href="../../../v7/recyclerview/package-summary.html" >android.support.v7.recyclerview</a></li><li class="api apilevel-22.1.0"><a href="../../../v7/util/package-summary.html" >android.support.v7.util</a></li><li class="api apilevel-22.1.0"><a href="../../../v7/view/package-summary.html" >android.support.v7.view</a></li><li class="api apilevel-22.1.0"><a href="../../../v7/widget/package-summary.html" >android.support.v7.widget</a></li><li class="api apilevel-24.1.0"><a href="../../../v7/widget/helper/package-summary.html" >android.support.v7.widget.helper</a></li><li class="api apilevel-22.1.0"><a href="../../../v7/widget/util/package-summary.html" >android.support.v7.widget.util</a></li><li class="api apilevel-"><a href="../../../wear/package-summary.html" >android.support.wear</a></li><li class="api apilevel-27.0.0"><a href="../../../wear/ambient/package-summary.html" >android.support.wear.ambient</a></li><li class="api apilevel-27.0.0"><a href="../../../wear/utils/package-summary.html" >android.support.wear.utils</a></li><li class="api apilevel-26.1.0"><a href="../../../wear/widget/package-summary.html" >android.support.wear.widget</a></li><li class="api apilevel-26.1.0"><a href="../../../wear/widget/drawer/package-summary.html" >android.support.wear.widget.drawer</a></li>
+                  </ul>
+                </div>
+              </div>
+            
+          
+        </div>
+        
+        
+          
+
+
+
+<ul id="dac-main-navigation" class="dac-nav-list dac-swap-section dac-left dac-no-anim" tabindex=0>
+  <li class="dac-nav-item home">
+    
+    <a class="dac-nav-link" href="https://developer.android.com/index.html">Home</a>
+    <i class="dac-sprite dac-expand-more-black dac-nav-sub-slider" tabindex=0></i>
+    <ul class="dac-nav-secondary about">
+      <li class="dac-nav-item versions">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/about/versions/o/index.html">Android</a>
+      </li>
+      <li class="dac-nav-item wear">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/wear/index.html">Wear</a>
+      </li>
+      <li class="dac-nav-item tv">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/tv/index.html">TV</a>
+      </li>
+      <li class="dac-nav-item auto">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/auto/index.html">Auto</a>
+      </li>
+      
+      <li class="dac-nav-item chrome-os">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/chrome-os/index.html">Chrome OS</a>
+      </li>
+      
+      <li class="dac-nav-item things">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/things/index.html">Things</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dac-nav-item design">
+    <a class="dac-nav-link" href="https://developer.android.com/design/index.html"
+       zh-tw-lang="設計"
+       zh-cn-lang="设计"
+       ru-lang="Проектирование"
+       ko-lang="디자인"
+       ja-lang="設計"
+       es-lang="Diseñar">
+      
+      Design</a>
+  </li>
+  <li class="dac-nav-item develop">
+    <a class="dac-nav-link" href="https://developer.android.com/develop/index.html"
+       zh-tw-lang="開發"
+       zh-cn-lang="开发"
+       ru-lang="Разработка"
+       ko-lang="개발"
+       ja-lang="開発"
+       es-lang="Desarrollar">
+      
+      Develop</a>
+    <i class="dac-sprite dac-expand-more-black dac-nav-sub-slider" tabindex=0></i>
+    <ul class="dac-nav-secondary develop">
+      <li class="dac-nav-item training">
+        <a class="dac-nav-link" href="https://developer.android.com/training/index.html"
+           zh-tw-lang="訓練課程"
+           zh-cn-lang="培训"
+           ru-lang="Курсы"
+           ko-lang="교육"
+           ja-lang="トレーニング"
+           es-lang="Capacitación">
+            
+            Training</a>
+      </li>
+      <li class="dac-nav-item guide">
+        <a class="dac-nav-link" href="https://developer.android.com/guide/index.html"
+           zh-tw-lang="API 指南"
+           zh-cn-lang="API 指南"
+           ru-lang="Руководства по API"
+           ko-lang="API 가이드"
+           ja-lang="API ガイド"
+           es-lang="Guías de la API">
+          
+          API Guides</a>
+      </li>
+      <li class="dac-nav-item reference">
+        <a class="dac-nav-link" href="../../../../../packages.html"
+           zh-tw-lang="參考資源"
+           zh-cn-lang="参考"
+           ru-lang="Справочник"
+           ko-lang="참조문서"
+           ja-lang="リファレンス"
+           es-lang="Referencia">
+          
+          Reference</a>
+      </li>
+      <li class="dac-nav-item samples">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/samples/index.html">Samples</a>
+      </li>
+      <li class="dac-nav-item libraries">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/topic/libraries/index.html">Libraries</a></li>
+      <li class="dac-nav-item studio">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/studio/index.html">Android Studio</a></li>
+      <li class="dac-nav-item ndk">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/ndk/index.html">Android NDK</a></li>
+      <li class="dac-nav-item google">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/google/index.html">Google Services</a>
+      </li>
+      <li class="dac-nav-item quality-guidelines">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/develop/quality-guidelines/index.html">Quality Guidelines</a>
+      </li>
+      <li class="dac-nav-item kotlin">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/kotlin/index.html">Kotlin</a>
+       </li>
+    </ul>
+  </li>
+  <li class="dac-nav-item distribute">
+    <a class="dac-nav-link" href="https://developer.android.com/distribute/index.html"
+       zh-tw-lang="發佈"
+       zh-cn-lang="分发"
+       ru-lang="Распространение"
+       ko-lang="배포"
+       ja-lang="配布"
+       de-lang="Vertrieb"
+       es-lang="Distribuir"
+       es-419-lang="Distribuye"
+       fr-lang="Distribuer"
+       id-lang="Distribusikan"
+       pt-br-lang="Distribuição"
+       th-lang="จัดจำหน่าย"
+       tr-lang="Dağıtma"
+       vi-lang="Phân phối">
+      
+      Distribute</a>
+    <i class="dac-sprite dac-expand-more-black dac-nav-sub-slider" tabindex=0></i>
+    <ul class="dac-nav-secondary distribute">
+      <li class="dac-nav-item google-play">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/distribute/google-play/index.html">Google Play</a>
+      </li>
+      <li class="dac-nav-item console">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/distribute/console/index.html">Play Console</a>
+      </li>
+      <li class="dac-nav-item best-practices">
+        <a class="dac-nav-link" href="https://developer.android.com/distribute/best-practices/index.html"
+          es-419-lang="Recomendaciones"
+          fr-lang="Bonnes pratiques"
+          id-lang="Praktik terbaik"
+          ja-lang="おすすめの方法"
+          ko-lang="권장사항"
+          pt-br-lang="Práticas recomendadas"
+          ru-lang="Рекомендации"
+          th-lang="จัดจำหน่าย"
+          tr-lang="En iyi uygulamalar"
+          vi-lang="Các phương pháp hay nhất"
+          zh-cn-lang="最佳做法"
+          zh-tw-lang="最佳做法">
+          
+          Best practices</a>
+      </li>
+      <li class="dac-nav-item marketing-tools">
+        <a class="dac-nav-link" href="https://developer.android.com/distribute/marketing-tools/index.html"
+          de-lang="Marketing-Tools"
+          es-419-lang="Herramientas de marketing"
+          fr-lang="Outils marketing"
+          id-lang="Fitur pemasaran"
+          ja-lang="マーケティング ツール"
+          ko-lang="마케팅 도구"
+          pt-br-lang="Ferramentas de marketing"
+          ru-lang="Маркетинговые инструменты"
+          th-lang="เครื่องมือการตลาด"
+          tr-lang="Pazarlama araçları"
+          vi-lang="Công cụ tiếp thị"
+          zh-cn-lang="营销工具"
+          zh-tw-lang="行銷工具">
+          
+          Marketing tools</a>
+      </li>
+      <li class="dac-nav-item policy-center">
+        
+        <a class="dac-nav-link" href="https://play.google.com/about/developer-content-policy/" target="_blank">Policy center</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dac-nav-item stories">
+    
+    <a class="dac-nav-link" href="https://developer.android.com/stories/index.html">Stories</a>
+  </li>
+  
+  <li class="dac-nav-item preview">
+    
+    <a class="dac-nav-link" href="https://developer.android.com/preview/index.html">Preview</a>
+  </li>
+  
+</ul>
+
+        
+      </div>
+    </div>
+  </nav>
+
+  <a name="top" tabindex="0"></a>
+  
+  <div class="wrap clearfix" id="body-content">
+  
+    
+      
+    
+    <div class="jd-descr " itemprop="articleBody">
+      <div id="doc-api-level" class="22.1.0" style="display:none"></div>
+
+
+
+
+<div id="naMessage"></div>
+
+<div id="api-info-block">
+<div class="api-level">
+  
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 22.1.0</a>
+  
+    <br>
+  belongs to Maven artifact com.android.support:leanback-v17:27.0.0</a>
+  
+  
+  
+  
+
+</div>
+
+
+
+  
+   
+  
+  
+  
+  
+
+  
+   
+  
+  
+  
+  
+
+
+<div class="sum-details-links">
+
+Summary:
+
+  <a href="#nestedclasses">Nested Classes</a>
+  
+
+
+  &#124; <a href="#lattrs">XML Attrs</a>
+  
+
+
+
+
+  &#124; <a href="#constants">Constants</a>
+  
+
+
+
+
+
+  &#124; <a href="#pubctors">Ctors</a>
+  
+
+
+
+  &#124; <a href="#pubmethods">Methods</a>
+  
+
+
+  &#124; <a href="#promethods">Protected Methods</a>
+  
+
+
+  &#124; <a href="#inhmethods">Inherited Methods</a>
+
+&#124; <a href="#" onclick="return toggleAllClassInherited()" id="toggleAllClassInherited">[Expand All]</a>
+
+</div><!-- end sum-details-links -->
+</div><!-- end api-info-block -->
+
+<div class="api apilevel-22.1.0" id="jd-content">
+
+<!-- ======== START OF CLASS DATA ======== -->
+
+<h1 class="api-title">GuidedActionsStylist</h1>
+<p>
+<code class="api-signature">
+  public
+  
+  
+  
+  class
+  GuidedActionsStylist
+</code>
+<br>
+
+
+<code class="api-signature">
+  
+    extends Object
+  
+  
+  
+</code>
+
+<code class="api-signature">
+  
+  
+      implements
+      
+        <a href="FragmentAnimationProvider.html">FragmentAnimationProvider</a>
+      
+  
+  
+</code>
+
+</p><table class="jd-inheritance-table">
+
+
+  <tr>
+    
+    <td colspan="2" class="jd-inheritance-class-cell">java.lang.Object
+    </td>
+  </tr>
+  
+
+  <tr>
+    
+      <td class="jd-inheritance-space">&nbsp;&nbsp;&nbsp;&#x21b3;</td>
+    
+    <td colspan="1" class="jd-inheritance-class-cell">android.support.v17.leanback.widget.GuidedActionsStylist
+    </td>
+  </tr>
+  
+
+</table>
+  
+
+    
+
+<br><hr>
+
+
+  <p>GuidedActionsStylist is used within a <code><a href="../app/GuidedStepFragment.html">GuidedStepFragment</a></code>
+ to supply the right-side panel where users can take actions. It consists of a container for the
+ list of actions, and a stationary selector view that indicates visually the location of focus.
+ GuidedActionsStylist has two different layouts: default is for normal actions including text,
+ radio, checkbox, DatePicker, etc, the other when <code><a href="GuidedActionsStylist.html#setAsButtonActions()">setAsButtonActions()</a></code> is called is
+ recommended for button actions such as "yes", "no".
+ <p>
+ Many aspects of the base GuidedActionsStylist can be customized through theming; see the
+ theme attributes below. Note that these attributes are not set on individual elements in layout
+ XML, but instead would be set in a custom theme. See
+ <a href="http://developer.android.com/guide/topics/ui/themes.html">Styles and Themes</a>
+ for more information.
+ <p>
+ If these hooks are insufficient, this class may also be subclassed. Subclasses may wish to
+ override the <code><a href="GuidedActionsStylist.html#onProvideLayoutId()">onProvideLayoutId()</a></code> method to change the layout used to display the
+ list container and selector; override <code><a href="GuidedActionsStylist.html#onProvideItemLayoutId(int)">onProvideItemLayoutId(int)</a></code> and
+ <code><a href="GuidedActionsStylist.html#getItemViewType(android.support.v17.leanback.widget.GuidedAction)">getItemViewType(GuidedAction)</a></code> method to change the layout used to display each action.
+ <p>
+ To support a "click to activate" view similar to DatePicker, app needs:
+ <li> Override <code><a href="GuidedActionsStylist.html#onProvideItemLayoutId(int)">onProvideItemLayoutId(int)</a></code> and <code><a href="GuidedActionsStylist.html#getItemViewType(android.support.v17.leanback.widget.GuidedAction)">getItemViewType(GuidedAction)</a></code>,
+ provides a layout id for the action.
+ <li> The layout must include a widget with id "guidedactions_activator_item", the widget is
+ toggled edit mode by <code><a href="../../../../view/View.html#setActivated(boolean)">setActivated(boolean)</a></code>.
+ <li> Override <code><a href="GuidedActionsStylist.html#onBindActivatorView(android.support.v17.leanback.widget.GuidedActionsStylist.ViewHolder, android.support.v17.leanback.widget.GuidedAction)">onBindActivatorView(ViewHolder, GuidedAction)</a></code> to populate values into View.
+ <li> Override <code><a href="GuidedActionsStylist.html#onUpdateActivatorView(android.support.v17.leanback.widget.GuidedActionsStylist.ViewHolder, android.support.v17.leanback.widget.GuidedAction)">onUpdateActivatorView(ViewHolder, GuidedAction)</a></code> to update action.
+ <p>
+ Note: If an alternate list layout is provided, the following view IDs must be supplied:
+ <ul>
+ <li><code><a href="../R.id.html#guidedactions_list">guidedactions_list</a></code></li>
+ </ul><p>
+ These view IDs must be present in order for the stylist to function. The list ID must correspond
+ to a <code><a href="VerticalGridView.html">VerticalGridView</a></code> or subclass.
+ <p>
+ If an alternate item layout is provided, the following view IDs should be used to refer to base
+ elements:
+ <ul>
+ <li><code><a href="../R.id.html#guidedactions_item_content">guidedactions_item_content</a></code></li>
+ <li><code><a href="../R.id.html#guidedactions_item_title">guidedactions_item_title</a></code></li>
+ <li><code><a href="../R.id.html#guidedactions_item_description">guidedactions_item_description</a></code></li>
+ <li><code><a href="../R.id.html#guidedactions_item_icon">guidedactions_item_icon</a></code></li>
+ <li><code><a href="../R.id.html#guidedactions_item_checkmark">guidedactions_item_checkmark</a></code></li>
+ <li><code><a href="../R.id.html#guidedactions_item_chevron">guidedactions_item_chevron</a></code></li>
+ </ul><p>
+ These view IDs are allowed to be missing, in which case the corresponding views in <code><a href="GuidedActionsStylist.ViewHolder.html">GuidedActionsStylist.ViewHolder</a></code> will be null.
+ <p>
+ In order to support editable actions, the view associated with guidedactions_item_title should
+ be a subclass of <code><a href="../../../../widget/EditText.html">EditText</a></code>, and should satisfy the <code><a href="ImeKeyMonitor.html">ImeKeyMonitor</a></code> interface.</p>
+
+
+
+
+
+  <div>
+      <p><b>See also:</b></p>
+      <ul class="nolist"><li><code><a href="https://developer.android.com/">ERROR(/android.R.styleable#Theme_listChoiceIndicatorSingle)</a></code></li><li><code><a href="https://developer.android.com/">ERROR(/android.R.styleable#Theme_listChoiceIndicatorMultiple)</a></code></li><li><code><a href="../app/GuidedStepFragment.html">GuidedStepFragment</a></code></li><li><code><a href="GuidedAction.html">GuidedAction</a></code></li>
+      </ul>
+  </div>
+
+
+
+
+<h2 class="api-section">Summary</h2>
+
+
+
+<!-- ======== NESTED CLASS SUMMARY ======== -->
+<table id="nestedclasses" class="responsive">
+<tr><th colspan="2"><h3>Nested classes</h3></th></tr>
+
+
+  
+    <tr class="api apilevel-22.1.0" >
+      <td class="jd-typecol"><code>
+        
+        
+        
+        
+        class</code></td>
+      <td class="jd-descrcol" width="100%">
+        <code><a href="GuidedActionsStylist.ViewHolder.html">GuidedActionsStylist.ViewHolder</a></code>
+        <p>ViewHolder caches information about the action item layouts' subviews.&nbsp;
+        
+    
+</p>
+      </td>
+    </tr>
+    
+    
+
+
+
+
+
+<!-- =========== FIELD SUMMARY =========== -->
+<table id="lattrs" class="responsive">
+<tr><th colspan="2"><h3>XML attributes</h3></th></tr>
+
+
+    
+    <tr class="api apilevel-" >
+        <td><a href="GuidedActionsStylist.html#attr_LeanbackGuidedStepTheme_guidedActionDescriptionMinLines"><code>LeanbackGuidedStepTheme_guidedActionDescriptionMinLines</code></a></td>
+        <td width="100%">
+          &nbsp;
+          
+    
+
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-" >
+        <td><a href="GuidedActionsStylist.html#attr_LeanbackGuidedStepTheme_guidedActionDisabledChevronAlpha"><code>LeanbackGuidedStepTheme_guidedActionDisabledChevronAlpha</code></a></td>
+        <td width="100%">
+          &nbsp;
+          
+    
+
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-" >
+        <td><a href="GuidedActionsStylist.html#attr_LeanbackGuidedStepTheme_guidedActionEnabledChevronAlpha"><code>LeanbackGuidedStepTheme_guidedActionEnabledChevronAlpha</code></a></td>
+        <td width="100%">
+          &nbsp;
+          
+    
+
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-" >
+        <td><a href="GuidedActionsStylist.html#attr_LeanbackGuidedStepTheme_guidedActionItemCheckmarkStyle"><code>LeanbackGuidedStepTheme_guidedActionItemCheckmarkStyle</code></a></td>
+        <td width="100%">
+          &nbsp;
+          
+    
+
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-" >
+        <td><a href="GuidedActionsStylist.html#attr_LeanbackGuidedStepTheme_guidedActionItemChevronStyle"><code>LeanbackGuidedStepTheme_guidedActionItemChevronStyle</code></a></td>
+        <td width="100%">
+          &nbsp;
+          
+    
+
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-" >
+        <td><a href="GuidedActionsStylist.html#attr_LeanbackGuidedStepTheme_guidedActionItemContainerStyle"><code>LeanbackGuidedStepTheme_guidedActionItemContainerStyle</code></a></td>
+        <td width="100%">
+          &nbsp;
+          
+    
+
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-" >
+        <td><a href="GuidedActionsStylist.html#attr_LeanbackGuidedStepTheme_guidedActionItemContentStyle"><code>LeanbackGuidedStepTheme_guidedActionItemContentStyle</code></a></td>
+        <td width="100%">
+          &nbsp;
+          
+    
+
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-" >
+        <td><a href="GuidedActionsStylist.html#attr_LeanbackGuidedStepTheme_guidedActionItemDescriptionStyle"><code>LeanbackGuidedStepTheme_guidedActionItemDescriptionStyle</code></a></td>
+        <td width="100%">
+          &nbsp;
+          
+    
+
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-" >
+        <td><a href="GuidedActionsStylist.html#attr_LeanbackGuidedStepTheme_guidedActionItemIconStyle"><code>LeanbackGuidedStepTheme_guidedActionItemIconStyle</code></a></td>
+        <td width="100%">
+          &nbsp;
+          
+    
+
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-" >
+        <td><a href="GuidedActionsStylist.html#attr_LeanbackGuidedStepTheme_guidedActionItemTitleStyle"><code>LeanbackGuidedStepTheme_guidedActionItemTitleStyle</code></a></td>
+        <td width="100%">
+          &nbsp;
+          
+    
+
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-" >
+        <td><a href="GuidedActionsStylist.html#attr_LeanbackGuidedStepTheme_guidedActionPressedAnimation"><code>LeanbackGuidedStepTheme_guidedActionPressedAnimation</code></a></td>
+        <td width="100%">
+          &nbsp;
+          
+    
+
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-" >
+        <td><a href="GuidedActionsStylist.html#attr_LeanbackGuidedStepTheme_guidedActionTitleMaxLines"><code>LeanbackGuidedStepTheme_guidedActionTitleMaxLines</code></a></td>
+        <td width="100%">
+          &nbsp;
+          
+    
+
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-" >
+        <td><a href="GuidedActionsStylist.html#attr_LeanbackGuidedStepTheme_guidedActionTitleMinLines"><code>LeanbackGuidedStepTheme_guidedActionTitleMinLines</code></a></td>
+        <td width="100%">
+          &nbsp;
+          
+    
+
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-" >
+        <td><a href="GuidedActionsStylist.html#attr_LeanbackGuidedStepTheme_guidedActionUnpressedAnimation"><code>LeanbackGuidedStepTheme_guidedActionUnpressedAnimation</code></a></td>
+        <td width="100%">
+          &nbsp;
+          
+    
+
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-" >
+        <td><a href="GuidedActionsStylist.html#attr_LeanbackGuidedStepTheme_guidedActionVerticalPadding"><code>LeanbackGuidedStepTheme_guidedActionVerticalPadding</code></a></td>
+        <td width="100%">
+          &nbsp;
+          
+    
+
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-" >
+        <td><a href="GuidedActionsStylist.html#attr_LeanbackGuidedStepTheme_guidedActionsListStyle"><code>LeanbackGuidedStepTheme_guidedActionsListStyle</code></a></td>
+        <td width="100%">
+          &nbsp;
+          
+    
+
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-" >
+        <td><a href="GuidedActionsStylist.html#attr_LeanbackGuidedStepTheme_guidedActionsSelectorDrawable"><code>LeanbackGuidedStepTheme_guidedActionsSelectorDrawable</code></a></td>
+        <td width="100%">
+          &nbsp;
+          
+    
+
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-" >
+        <td><a href="GuidedActionsStylist.html#attr_LeanbackGuidedStepTheme_guidedButtonActionsListStyle"><code>LeanbackGuidedStepTheme_guidedButtonActionsListStyle</code></a></td>
+        <td width="100%">
+          &nbsp;
+          
+    
+
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-" >
+        <td><a href="GuidedActionsStylist.html#attr_LeanbackGuidedStepTheme_guidedStepImeAppearingAnimation"><code>LeanbackGuidedStepTheme_guidedStepImeAppearingAnimation</code></a></td>
+        <td width="100%">
+          &nbsp;
+          
+    
+
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-" >
+        <td><a href="GuidedActionsStylist.html#attr_LeanbackGuidedStepTheme_guidedStepImeDisappearingAnimation"><code>LeanbackGuidedStepTheme_guidedStepImeDisappearingAnimation</code></a></td>
+        <td width="100%">
+          &nbsp;
+          
+    
+
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-" >
+        <td><a href="GuidedActionsStylist.html#attr_LeanbackGuidedStepTheme_guidedSubActionsListStyle"><code>LeanbackGuidedStepTheme_guidedSubActionsListStyle</code></a></td>
+        <td width="100%">
+          &nbsp;
+          
+    
+
+        </td>
+    </tr>
+    
+    
+
+
+
+
+
+
+
+
+
+
+<!-- =========== ENUM CONSTANT SUMMARY =========== -->
+<table id="constants" class="responsive constants">
+<tr><th colspan="2"><h3>Constants</h3></th></tr>
+
+
+    
+    <tr class="api apilevel-24.1.0" >
+        <td><code>int</code></td>
+        <td width="100%">
+          <code><a href="GuidedActionsStylist.html#VIEW_TYPE_DATE_PICKER">VIEW_TYPE_DATE_PICKER</a></code>
+          <p>ViewType for DatePicker.
+          
+    
+</p>
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-24.1.0" >
+        <td><code>int</code></td>
+        <td width="100%">
+          <code><a href="GuidedActionsStylist.html#VIEW_TYPE_DEFAULT">VIEW_TYPE_DEFAULT</a></code>
+          <p>Default viewType that associated with default layout Id for the action item.
+          
+    
+</p>
+        </td>
+    </tr>
+    
+    
+
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<table id="pubctors" class="responsive constructors">
+<tr><th colspan="2"><h3>Public constructors</h3></th></tr>
+
+
+
+  
+  <tr class="api apilevel-22.1.0" >
+  
+  
+    <td width="100%">
+      <code>
+      <a href="GuidedActionsStylist.html#GuidedActionsStylist()">GuidedActionsStylist</a>()
+      </code>
+      
+    </td>
+  </tr>
+  
+
+
+</table>
+
+
+
+
+
+
+<!-- ========== METHOD SUMMARY =========== -->
+<table id="pubmethods" class="responsive methods">
+<tr><th colspan="2"><h3>Public methods</h3></th></tr>
+
+
+
+  
+  <tr class="api apilevel-25.1.0" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="GuidedActionsStylist.html#collapseAction(boolean)">collapseAction</a>(boolean withTransition)
+      </code>
+      
+        <p>Collapse expanded action.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-25.1.0" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="GuidedActionsStylist.html#expandAction(android.support.v17.leanback.widget.GuidedAction, boolean)">expandAction</a>(<a href="GuidedAction.html">GuidedAction</a> action, boolean withTransition)
+      </code>
+      
+        <p>Expand an action.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-22.1.0" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        <a href="VerticalGridView.html">VerticalGridView</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="GuidedActionsStylist.html#getActionsGridView()">getActionsGridView</a>()
+      </code>
+      
+        <p>Returns the VerticalGridView that displays the list of GuidedActions.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-24.1.0" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        <a href="GuidedAction.html">GuidedAction</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="GuidedActionsStylist.html#getExpandedAction()">getExpandedAction</a>()
+      </code>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-24.1.0" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        int</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="GuidedActionsStylist.html#getItemViewType(android.support.v17.leanback.widget.GuidedAction)">getItemViewType</a>(<a href="GuidedAction.html">GuidedAction</a> action)
+      </code>
+      
+        <p>Return view type of action, each different type can have differently associated layout Id.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-24.1.0" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        <a href="VerticalGridView.html">VerticalGridView</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="GuidedActionsStylist.html#getSubActionsGridView()">getSubActionsGridView</a>()
+      </code>
+      
+        <p>Returns the VerticalGridView that displays the sub actions list of an expanded action.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-25.1.0" >
+  
+  
+    <td><code>
+        
+        
+        
+        final
+        
+        boolean</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="GuidedActionsStylist.html#isBackKeyToCollapseActivatorView()">isBackKeyToCollapseActivatorView</a>()
+      </code>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-25.1.0" >
+  
+  
+    <td><code>
+        
+        
+        
+        final
+        
+        boolean</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="GuidedActionsStylist.html#isBackKeyToCollapseSubActions()">isBackKeyToCollapseSubActions</a>()
+      </code>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-24.1.0" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        boolean</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="GuidedActionsStylist.html#isButtonActions()">isButtonActions</a>()
+      </code>
+      
+        <p>Returns true if it is button actions list, false for normal actions list.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-24.1.0" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        boolean</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="GuidedActionsStylist.html#isExpandTransitionSupported()">isExpandTransitionSupported</a>()
+      </code>
+      
+        <p>Returns if expand/collapse animation is supported.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-25.1.0" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        boolean</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="GuidedActionsStylist.html#isExpanded()">isExpanded</a>()
+      </code>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-24.1.0" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        boolean</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="GuidedActionsStylist.html#isInExpandTransition()">isInExpandTransition</a>()
+      </code>
+      
+        <p>Returns true if it is running an expanding or collapsing transition, false otherwise.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-24.1.0" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        boolean</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="GuidedActionsStylist.html#isSubActionsExpanded()">isSubActionsExpanded</a>()
+      </code>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-22.1.0" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="GuidedActionsStylist.html#onAnimateItemChecked(android.support.v17.leanback.widget.GuidedActionsStylist.ViewHolder, boolean)">onAnimateItemChecked</a>(<a href="GuidedActionsStylist.ViewHolder.html">GuidedActionsStylist.ViewHolder</a> vh, boolean checked)
+      </code>
+      
+        <p>Animates the view holder's view (or subviews thereof) when the action has had its check state
+ changed.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-22.1.0" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="GuidedActionsStylist.html#onAnimateItemFocused(android.support.v17.leanback.widget.GuidedActionsStylist.ViewHolder, boolean)">onAnimateItemFocused</a>(<a href="GuidedActionsStylist.ViewHolder.html">GuidedActionsStylist.ViewHolder</a> vh, boolean focused)
+      </code>
+      
+        <p>Animates the view holder's view (or subviews thereof) when the action has had its focus
+ state changed.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-22.1.0" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="GuidedActionsStylist.html#onAnimateItemPressed(android.support.v17.leanback.widget.GuidedActionsStylist.ViewHolder, boolean)">onAnimateItemPressed</a>(<a href="GuidedActionsStylist.ViewHolder.html">GuidedActionsStylist.ViewHolder</a> vh, boolean pressed)
+      </code>
+      
+        <p>Animates the view holder's view (or subviews thereof) when the action has had its press
+ state changed.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-24.1.0" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="GuidedActionsStylist.html#onAnimateItemPressedCancelled(android.support.v17.leanback.widget.GuidedActionsStylist.ViewHolder)">onAnimateItemPressedCancelled</a>(<a href="GuidedActionsStylist.ViewHolder.html">GuidedActionsStylist.ViewHolder</a> vh)
+      </code>
+      
+        <p>Resets the view holder's view to unpressed state.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-24.1.0" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="GuidedActionsStylist.html#onBindActivatorView(android.support.v17.leanback.widget.GuidedActionsStylist.ViewHolder, android.support.v17.leanback.widget.GuidedAction)">onBindActivatorView</a>(<a href="GuidedActionsStylist.ViewHolder.html">GuidedActionsStylist.ViewHolder</a> vh, <a href="GuidedAction.html">GuidedAction</a> action)
+      </code>
+      
+        <p>Performs binding activator view value to action.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-24.1.0" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="GuidedActionsStylist.html#onBindCheckMarkView(android.support.v17.leanback.widget.GuidedActionsStylist.ViewHolder, android.support.v17.leanback.widget.GuidedAction)">onBindCheckMarkView</a>(<a href="GuidedActionsStylist.ViewHolder.html">GuidedActionsStylist.ViewHolder</a> vh, <a href="GuidedAction.html">GuidedAction</a> action)
+      </code>
+      
+        <p>Sets states of check mark view, called by <code><a href="GuidedActionsStylist.html#onBindViewHolder(android.support.v17.leanback.widget.GuidedActionsStylist.ViewHolder, android.support.v17.leanback.widget.GuidedAction)">onBindViewHolder(ViewHolder, GuidedAction)</a></code>
+ when action's checkset Id is other than <code><a href="GuidedAction.html#NO_CHECK_SET">NO_CHECK_SET</a></code>.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-24.1.0" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="GuidedActionsStylist.html#onBindChevronView(android.support.v17.leanback.widget.GuidedActionsStylist.ViewHolder, android.support.v17.leanback.widget.GuidedAction)">onBindChevronView</a>(<a href="GuidedActionsStylist.ViewHolder.html">GuidedActionsStylist.ViewHolder</a> vh, <a href="GuidedAction.html">GuidedAction</a> action)
+      </code>
+      
+        <p>Sets states of chevron view, called by <code><a href="GuidedActionsStylist.html#onBindViewHolder(android.support.v17.leanback.widget.GuidedActionsStylist.ViewHolder, android.support.v17.leanback.widget.GuidedAction)">onBindViewHolder(ViewHolder, GuidedAction)</a></code>.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-22.1.0" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="GuidedActionsStylist.html#onBindViewHolder(android.support.v17.leanback.widget.GuidedActionsStylist.ViewHolder, android.support.v17.leanback.widget.GuidedAction)">onBindViewHolder</a>(<a href="GuidedActionsStylist.ViewHolder.html">GuidedActionsStylist.ViewHolder</a> vh, <a href="GuidedAction.html">GuidedAction</a> action)
+      </code>
+      
+        <p>Binds a <code><a href="GuidedActionsStylist.ViewHolder.html">GuidedActionsStylist.ViewHolder</a></code> to a particular <code><a href="GuidedAction.html">GuidedAction</a></code>.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-22.1.0" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        <a href="../../../../view/View.html">View</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="GuidedActionsStylist.html#onCreateView(android.view.LayoutInflater, android.view.ViewGroup)">onCreateView</a>(<a href="../../../../view/LayoutInflater.html">LayoutInflater</a> inflater, <a href="../../../../view/ViewGroup.html">ViewGroup</a> container)
+      </code>
+      
+        <p>Creates a view appropriate for displaying a list of GuidedActions, using the provided
+ inflater and container.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-24.1.0" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        <a href="GuidedActionsStylist.ViewHolder.html">GuidedActionsStylist.ViewHolder</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="GuidedActionsStylist.html#onCreateViewHolder(android.view.ViewGroup, int)">onCreateViewHolder</a>(<a href="../../../../view/ViewGroup.html">ViewGroup</a> parent, int viewType)
+      </code>
+      
+        <p>Constructs a <code><a href="GuidedActionsStylist.ViewHolder.html">GuidedActionsStylist.ViewHolder</a></code> capable of representing <code><a href="GuidedAction.html">GuidedAction</a></code>s.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-22.1.0" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        <a href="GuidedActionsStylist.ViewHolder.html">GuidedActionsStylist.ViewHolder</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="GuidedActionsStylist.html#onCreateViewHolder(android.view.ViewGroup)">onCreateViewHolder</a>(<a href="../../../../view/ViewGroup.html">ViewGroup</a> parent)
+      </code>
+      
+        <p>Constructs a <code><a href="GuidedActionsStylist.ViewHolder.html">GuidedActionsStylist.ViewHolder</a></code> capable of representing <code><a href="GuidedAction.html">GuidedAction</a></code>s.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-24.1.0" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="GuidedActionsStylist.html#onDestroyView()">onDestroyView</a>()
+      </code>
+      
+        <p>Called when destroy the View created by GuidedActionsStylist.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-24.1.0" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="GuidedActionsStylist.html#onImeAppearing(java.util.List<android.animation.Animator>)">onImeAppearing</a>(List&lt;<a href="../../../../animation/Animator.html">Animator</a>&gt; animators)
+      </code>
+      
+        <p>Animates the fragment in response to the IME appearing.
+
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-24.1.0" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="GuidedActionsStylist.html#onImeDisappearing(java.util.List<android.animation.Animator>)">onImeDisappearing</a>(List&lt;<a href="../../../../animation/Animator.html">Animator</a>&gt; animators)
+      </code>
+      
+        <p>Animates the fragment in response to the IME disappearing.
+
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-22.1.0" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        int</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="GuidedActionsStylist.html#onProvideItemLayoutId()">onProvideItemLayoutId</a>()
+      </code>
+      
+        <p>Provides the resource ID of the layout defining the view for an individual guided actions.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-24.1.0" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        int</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="GuidedActionsStylist.html#onProvideItemLayoutId(int)">onProvideItemLayoutId</a>(int viewType)
+      </code>
+      
+        <p>Provides the resource ID of the layout defining the view for an individual guided actions.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-22.1.0" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        int</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="GuidedActionsStylist.html#onProvideLayoutId()">onProvideLayoutId</a>()
+      </code>
+      
+        <p>Provides the resource ID of the layout defining the host view for the list of guided actions.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-24.1.0" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        boolean</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="GuidedActionsStylist.html#onUpdateActivatorView(android.support.v17.leanback.widget.GuidedActionsStylist.ViewHolder, android.support.v17.leanback.widget.GuidedAction)">onUpdateActivatorView</a>(<a href="GuidedActionsStylist.ViewHolder.html">GuidedActionsStylist.ViewHolder</a> vh, <a href="GuidedAction.html">GuidedAction</a> action)
+      </code>
+      
+        <p>Performs updating GuidedAction from activator view.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-24.1.0" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="GuidedActionsStylist.html#onUpdateExpandedViewHolder(android.support.v17.leanback.widget.GuidedActionsStylist.ViewHolder)">onUpdateExpandedViewHolder</a>(<a href="GuidedActionsStylist.ViewHolder.html">GuidedActionsStylist.ViewHolder</a> avh)
+      </code>
+      
+        <p>Expand or collapse GuidedActionStylist.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-26.1.0" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="GuidedActionsStylist.html#openInEditMode(android.support.v17.leanback.widget.GuidedAction)">openInEditMode</a>(<a href="GuidedAction.html">GuidedAction</a> action)
+      </code>
+      
+        <p>Switches action to edit mode and pops up the keyboard.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-24.1.0" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="GuidedActionsStylist.html#setAsButtonActions()">setAsButtonActions</a>()
+      </code>
+      
+        <p>Choose the layout resource for button actions in <code><a href="GuidedActionsStylist.html#onProvideLayoutId()">onProvideLayoutId()</a></code>.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-25.1.0" >
+  
+  
+    <td><code>
+        
+        
+        
+        final
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="GuidedActionsStylist.html#setBackKeyToCollapseActivatorView(boolean)">setBackKeyToCollapseActivatorView</a>(boolean backToCollapse)
+      </code>
+      
+        <p>Enable or disable using BACK key to collapse <code><a href="GuidedAction.html">GuidedAction</a></code> with editable activator
+ view.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-25.1.0" >
+  
+  
+    <td><code>
+        
+        
+        
+        final
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="GuidedActionsStylist.html#setBackKeyToCollapseSubActions(boolean)">setBackKeyToCollapseSubActions</a>(boolean backToCollapse)
+      </code>
+      
+        <p>Enable or disable using BACK key to collapse sub actions list.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-24.1.0" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="GuidedActionsStylist.html#setEditingMode(android.support.v17.leanback.widget.GuidedActionsStylist.ViewHolder, android.support.v17.leanback.widget.GuidedAction, boolean)">setEditingMode</a>(<a href="GuidedActionsStylist.ViewHolder.html">GuidedActionsStylist.ViewHolder</a> vh, <a href="GuidedAction.html">GuidedAction</a> action, boolean editing)
+      </code>
+      
+        <p><em>
+      This method was deprecated
+      in API level 25.1.0.
+    This method is for internal library use only and should not
+             be called directly.
+</em>
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-24.1.0" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="GuidedActionsStylist.html#setExpandedViewHolder(android.support.v17.leanback.widget.GuidedActionsStylist.ViewHolder)">setExpandedViewHolder</a>(<a href="GuidedActionsStylist.ViewHolder.html">GuidedActionsStylist.ViewHolder</a> avh)
+      </code>
+      
+        <p><em>
+      This method was deprecated
+      in API level 25.1.0.
+    use <code><a href="GuidedActionsStylist.html#expandAction(android.support.v17.leanback.widget.GuidedAction, boolean)">expandAction(GuidedAction, boolean)</a></code> and
+ <code><a href="GuidedActionsStylist.html#collapseAction(boolean)">collapseAction(boolean)</a></code>
+</em>
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-24.1.0" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="GuidedActionsStylist.html#startExpandedTransition(android.support.v17.leanback.widget.GuidedActionsStylist.ViewHolder)">startExpandedTransition</a>(<a href="GuidedActionsStylist.ViewHolder.html">GuidedActionsStylist.ViewHolder</a> avh)
+      </code>
+      
+        <p><em>
+      This method was deprecated
+      in API level 25.1.0.
+    use <code><a href="GuidedActionsStylist.html#expandAction(android.support.v17.leanback.widget.GuidedAction, boolean)">expandAction(GuidedAction, boolean)</a></code> and
+ <code><a href="GuidedActionsStylist.html#collapseAction(boolean)">collapseAction(boolean)</a></code>
+</em>
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+
+</table>
+
+
+
+
+<!-- ========== METHOD SUMMARY =========== -->
+<table id="promethods" class="reponsive methods">
+<tr><th colspan="2"><h3>Protected methods</h3></th></tr>
+
+
+
+  
+  <tr class="api apilevel-24.1.0" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="GuidedActionsStylist.html#onEditingModeChange(android.support.v17.leanback.widget.GuidedActionsStylist.ViewHolder, android.support.v17.leanback.widget.GuidedAction, boolean)">onEditingModeChange</a>(<a href="GuidedActionsStylist.ViewHolder.html">GuidedActionsStylist.ViewHolder</a> vh, <a href="GuidedAction.html">GuidedAction</a> action, boolean editing)
+      </code>
+      
+        <p><em>
+      This method was deprecated
+      in API level 25.1.0.
+    Use <code><a href="GuidedActionsStylist.html#onEditingModeChange(android.support.v17.leanback.widget.GuidedActionsStylist.ViewHolder, boolean, boolean)">onEditingModeChange(ViewHolder, boolean, boolean)</a></code>.
+</em>
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-25.1.0" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="GuidedActionsStylist.html#onEditingModeChange(android.support.v17.leanback.widget.GuidedActionsStylist.ViewHolder, boolean, boolean)">onEditingModeChange</a>(<a href="GuidedActionsStylist.ViewHolder.html">GuidedActionsStylist.ViewHolder</a> vh, boolean editing, boolean withTransition)
+      </code>
+      
+        <p>Called when editing mode of an ViewHolder is changed.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-24.1.0" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="GuidedActionsStylist.html#setupImeOptions(android.support.v17.leanback.widget.GuidedActionsStylist.ViewHolder, android.support.v17.leanback.widget.GuidedAction)">setupImeOptions</a>(<a href="GuidedActionsStylist.ViewHolder.html">GuidedActionsStylist.ViewHolder</a> vh, <a href="GuidedAction.html">GuidedAction</a> action)
+      </code>
+      
+        <p>Called by <code><a href="GuidedActionsStylist.html#onBindViewHolder(android.support.v17.leanback.widget.GuidedActionsStylist.ViewHolder, android.support.v17.leanback.widget.GuidedAction)">onBindViewHolder(ViewHolder, GuidedAction)</a></code> to setup IME options.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+
+</table>
+
+
+
+
+
+<!-- ========== METHOD SUMMARY =========== -->
+<table id="inhmethods" class="methods inhtable">
+<tr><th><h3>Inherited methods</h3></th></tr>
+
+
+<tr class="api apilevel-" >
+<td colspan="2">
+  <a href="#" id="inherited-methods-java.lang.Object" class="jd-expando-trigger closed"
+     onclick="return toggleInherited(this, null)" >
+    <img id="inherited-methods-java.lang.Object-trigger" class="jd-expando-trigger-img"
+         height="34"
+         src="../../../../../../assets/images/styles/disclosure_down.png" />
+  </a>From
+class
+<code>
+  
+    java.lang.Object
+  
+</code>
+<div id="inherited-methods-java.lang.Object">
+  <div id="inherited-methods-java.lang.Object-list"
+        class="jd-inheritedlinks">
+  </div>
+  <div id="inherited-methods-java.lang.Object-summary" style="display: none;">
+    <table class="jd-sumtable-expando responsive">
+      
+
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        Object</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      clone()
+      </code>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        boolean</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      equals(Object arg0)
+      </code>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      finalize()
+      </code>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        final
+        
+        Class&lt;?&gt;</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      getClass()
+      </code>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        int</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      hashCode()
+      </code>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        final
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      notify()
+      </code>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        final
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      notifyAll()
+      </code>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        String</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      toString()
+      </code>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        final
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      wait(long arg0, int arg1)
+      </code>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        final
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      wait(long arg0)
+      </code>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        final
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      wait()
+      </code>
+      
+    </td>
+  </tr>
+  
+
+
+    </table>
+  </div>
+</div>
+</td></tr>
+
+
+
+<tr class="api apilevel-" >
+<td colspan="2">
+  <a href="#" id="inherited-methods-android.support.v17.leanback.widget.FragmentAnimationProvider" class="jd-expando-trigger closed"
+     onclick="return toggleInherited(this, null)" >
+    <img id="inherited-methods-android.support.v17.leanback.widget.FragmentAnimationProvider-trigger" class="jd-expando-trigger-img"
+         height="34"
+         src="../../../../../../assets/images/styles/disclosure_down.png" />
+  </a>From
+interface
+<code>
+  
+    <a href="FragmentAnimationProvider.html">android.support.v17.leanback.widget.FragmentAnimationProvider</a>
+  
+</code>
+<div id="inherited-methods-android.support.v17.leanback.widget.FragmentAnimationProvider">
+  <div id="inherited-methods-android.support.v17.leanback.widget.FragmentAnimationProvider-list"
+        class="jd-inheritedlinks">
+  </div>
+  <div id="inherited-methods-android.support.v17.leanback.widget.FragmentAnimationProvider-summary" style="display: none;">
+    <table class="jd-sumtable-expando responsive">
+      
+
+
+  
+  <tr class="api apilevel-24.1.0" >
+  
+  
+    <td><code>
+        abstract
+        
+        
+        
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="FragmentAnimationProvider.html#onImeAppearing(java.util.List<android.animation.Animator>)">onImeAppearing</a>(List&lt;<a href="../../../../animation/Animator.html">Animator</a>&gt; animators)
+      </code>
+      
+        <p>Animates the fragment in response to the IME appearing.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-24.1.0" >
+  
+  
+    <td><code>
+        abstract
+        
+        
+        
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="FragmentAnimationProvider.html#onImeDisappearing(java.util.List<android.animation.Animator>)">onImeDisappearing</a>(List&lt;<a href="../../../../animation/Animator.html">Animator</a>&gt; animators)
+      </code>
+      
+        <p>Animates the fragment in response to the IME disappearing.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+
+    </table>
+  </div>
+</div>
+</td></tr>
+
+
+</table>
+
+
+
+<!-- XML Attributes -->
+
+
+<!-- ========= FIELD DETAIL ======== -->
+<h2 class="api-section">XML attributes</h2>
+
+
+
+<A NAME="attr_LeanbackGuidedStepTheme_guidedActionDescriptionMinLines"></A>
+<h3 class="api-name">LeanbackGuidedStepTheme_guidedActionDescriptionMinLines</h3>
+
+    
+
+
+  <p></p></p>
+
+
+
+
+<A NAME="attr_LeanbackGuidedStepTheme_guidedActionDisabledChevronAlpha"></A>
+<h3 class="api-name">LeanbackGuidedStepTheme_guidedActionDisabledChevronAlpha</h3>
+
+    
+
+
+  <p></p></p>
+
+
+
+
+<A NAME="attr_LeanbackGuidedStepTheme_guidedActionEnabledChevronAlpha"></A>
+<h3 class="api-name">LeanbackGuidedStepTheme_guidedActionEnabledChevronAlpha</h3>
+
+    
+
+
+  <p></p></p>
+
+
+
+
+<A NAME="attr_LeanbackGuidedStepTheme_guidedActionItemCheckmarkStyle"></A>
+<h3 class="api-name">LeanbackGuidedStepTheme_guidedActionItemCheckmarkStyle</h3>
+
+    
+
+
+  <p></p></p>
+
+
+
+
+<A NAME="attr_LeanbackGuidedStepTheme_guidedActionItemChevronStyle"></A>
+<h3 class="api-name">LeanbackGuidedStepTheme_guidedActionItemChevronStyle</h3>
+
+    
+
+
+  <p></p></p>
+
+
+
+
+<A NAME="attr_LeanbackGuidedStepTheme_guidedActionItemContainerStyle"></A>
+<h3 class="api-name">LeanbackGuidedStepTheme_guidedActionItemContainerStyle</h3>
+
+    
+
+
+  <p></p></p>
+
+
+
+
+<A NAME="attr_LeanbackGuidedStepTheme_guidedActionItemContentStyle"></A>
+<h3 class="api-name">LeanbackGuidedStepTheme_guidedActionItemContentStyle</h3>
+
+    
+
+
+  <p></p></p>
+
+
+
+
+<A NAME="attr_LeanbackGuidedStepTheme_guidedActionItemDescriptionStyle"></A>
+<h3 class="api-name">LeanbackGuidedStepTheme_guidedActionItemDescriptionStyle</h3>
+
+    
+
+
+  <p></p></p>
+
+
+
+
+<A NAME="attr_LeanbackGuidedStepTheme_guidedActionItemIconStyle"></A>
+<h3 class="api-name">LeanbackGuidedStepTheme_guidedActionItemIconStyle</h3>
+
+    
+
+
+  <p></p></p>
+
+
+
+
+<A NAME="attr_LeanbackGuidedStepTheme_guidedActionItemTitleStyle"></A>
+<h3 class="api-name">LeanbackGuidedStepTheme_guidedActionItemTitleStyle</h3>
+
+    
+
+
+  <p></p></p>
+
+
+
+
+<A NAME="attr_LeanbackGuidedStepTheme_guidedActionPressedAnimation"></A>
+<h3 class="api-name">LeanbackGuidedStepTheme_guidedActionPressedAnimation</h3>
+
+    
+
+
+  <p></p></p>
+
+
+
+
+<A NAME="attr_LeanbackGuidedStepTheme_guidedActionTitleMaxLines"></A>
+<h3 class="api-name">LeanbackGuidedStepTheme_guidedActionTitleMaxLines</h3>
+
+    
+
+
+  <p></p></p>
+
+
+
+
+<A NAME="attr_LeanbackGuidedStepTheme_guidedActionTitleMinLines"></A>
+<h3 class="api-name">LeanbackGuidedStepTheme_guidedActionTitleMinLines</h3>
+
+    
+
+
+  <p></p></p>
+
+
+
+
+<A NAME="attr_LeanbackGuidedStepTheme_guidedActionUnpressedAnimation"></A>
+<h3 class="api-name">LeanbackGuidedStepTheme_guidedActionUnpressedAnimation</h3>
+
+    
+
+
+  <p></p></p>
+
+
+
+
+<A NAME="attr_LeanbackGuidedStepTheme_guidedActionVerticalPadding"></A>
+<h3 class="api-name">LeanbackGuidedStepTheme_guidedActionVerticalPadding</h3>
+
+    
+
+
+  <p></p></p>
+
+
+
+
+<A NAME="attr_LeanbackGuidedStepTheme_guidedActionsListStyle"></A>
+<h3 class="api-name">LeanbackGuidedStepTheme_guidedActionsListStyle</h3>
+
+    
+
+
+  <p></p></p>
+
+
+
+
+<A NAME="attr_LeanbackGuidedStepTheme_guidedActionsSelectorDrawable"></A>
+<h3 class="api-name">LeanbackGuidedStepTheme_guidedActionsSelectorDrawable</h3>
+
+    
+
+
+  <p></p></p>
+
+
+
+
+<A NAME="attr_LeanbackGuidedStepTheme_guidedButtonActionsListStyle"></A>
+<h3 class="api-name">LeanbackGuidedStepTheme_guidedButtonActionsListStyle</h3>
+
+    
+
+
+  <p></p></p>
+
+
+
+
+<A NAME="attr_LeanbackGuidedStepTheme_guidedStepImeAppearingAnimation"></A>
+<h3 class="api-name">LeanbackGuidedStepTheme_guidedStepImeAppearingAnimation</h3>
+
+    
+
+
+  <p></p></p>
+
+
+
+
+<A NAME="attr_LeanbackGuidedStepTheme_guidedStepImeDisappearingAnimation"></A>
+<h3 class="api-name">LeanbackGuidedStepTheme_guidedStepImeDisappearingAnimation</h3>
+
+    
+
+
+  <p></p></p>
+
+
+
+
+<A NAME="attr_LeanbackGuidedStepTheme_guidedSubActionsListStyle"></A>
+<h3 class="api-name">LeanbackGuidedStepTheme_guidedSubActionsListStyle</h3>
+
+    
+
+
+  <p></p></p>
+
+
+
+
+
+
+<!-- Enum Values -->
+
+
+<!-- Constants -->
+
+
+<!-- ========= ENUM CONSTANTS DETAIL ======== -->
+<h2 class="api-section">Constants</h2>
+
+
+
+
+<A NAME="VIEW_TYPE_DATE_PICKER"></A>
+
+<div class="api apilevel-24.1.0">
+    <h3 class="api-name">VIEW_TYPE_DATE_PICKER</h3>
+    <div class="api-level">
+      
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 24.1.0</a>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+int VIEW_TYPE_DATE_PICKER</pre>
+    
+    
+
+    
+  <p>ViewType for DatePicker.
+</p></p>
+
+    
+      <p>Constant Value:
+      
+          1
+          (0x00000001)
+      
+    
+</div>
+
+
+
+<A NAME="VIEW_TYPE_DEFAULT"></A>
+
+<div class="api apilevel-24.1.0">
+    <h3 class="api-name">VIEW_TYPE_DEFAULT</h3>
+    <div class="api-level">
+      
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 24.1.0</a>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+int VIEW_TYPE_DEFAULT</pre>
+    
+    
+
+    
+  <p>Default viewType that associated with default layout Id for the action item.</p></p>
+  <div>
+      <p><b>See also:</b></p>
+      <ul class="nolist"><li><code><a href="GuidedActionsStylist.html#getItemViewType(android.support.v17.leanback.widget.GuidedAction)">getItemViewType(GuidedAction)</a></code></li><li><code><a href="GuidedActionsStylist.html#onProvideItemLayoutId(int)">onProvideItemLayoutId(int)</a></code></li><li><code><a href="GuidedActionsStylist.html#onCreateViewHolder(android.view.ViewGroup, int)">onCreateViewHolder(ViewGroup, int)</a></code></li>
+      </ul>
+  </div>
+
+    
+      <p>Constant Value:
+      
+          0
+          (0x00000000)
+      
+    
+</div>
+
+
+
+
+<!-- Fields -->
+
+
+<!-- Public ctors -->
+
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<h2 class="api-section">Public constructors</h2>
+
+
+
+<A NAME="GuidedActionsStylist()"></A>
+
+<div class="api apilevel-22.1.0">
+    <h3 class="api-name">GuidedActionsStylist</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 22.1.0</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+GuidedActionsStylist ()</pre>
+    
+    
+
+    
+  <p></p></p>
+
+</div>
+
+
+
+
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<!-- Protected ctors -->
+
+
+
+<!-- ========= METHOD DETAIL ======== -->
+<!-- Public methdos -->
+
+<h2 class="api-section">Public methods</h2>
+
+
+
+<A NAME="collapseAction(boolean)"></A>
+
+<div class="api apilevel-25.1.0">
+    <h3 class="api-name">collapseAction</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 25.1.0</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+void collapseAction (boolean withTransition)</pre>
+    
+    
+
+    
+  <p>Collapse expanded action. Do nothing if it is in animation or there is no action expanded.</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>withTransition</code></td>
+        <td width="100%">
+          <code>boolean</code>: True to run transition animation, false otherwsie.
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="expandAction(android.support.v17.leanback.widget.GuidedAction, boolean)"></A>
+
+<div class="api apilevel-25.1.0">
+    <h3 class="api-name">expandAction</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 25.1.0</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+void expandAction (<a href="GuidedAction.html">GuidedAction</a> action, 
+                boolean withTransition)</pre>
+    
+    
+
+    
+  <p>Expand an action. Do nothing if it is in animation or there is action expanded.</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>action</code></td>
+        <td width="100%">
+          <code>GuidedAction</code>: Action to expand.</p></td>
+      </tr>
+      <tr>
+        <td><code>withTransition</code></td>
+        <td width="100%">
+          <code>boolean</code>: True to run transition animation, false otherwsie.
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="getActionsGridView()"></A>
+
+<div class="api apilevel-22.1.0">
+    <h3 class="api-name">getActionsGridView</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 22.1.0</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="VerticalGridView.html">VerticalGridView</a> getActionsGridView ()</pre>
+    
+    
+
+    
+  <p>Returns the VerticalGridView that displays the list of GuidedActions.</p></p>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="VerticalGridView.html">VerticalGridView</a></code></td>
+        <td width="100%">The VerticalGridView for this presenter.
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="getExpandedAction()"></A>
+
+<div class="api apilevel-24.1.0">
+    <h3 class="api-name">getExpandedAction</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 24.1.0</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="GuidedAction.html">GuidedAction</a> getExpandedAction ()</pre>
+    
+    
+
+    
+  <p></p></p>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="GuidedAction.html">GuidedAction</a></code></td>
+        <td width="100%">Current expanded GuidedAction or null if not expanded.
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="getItemViewType(android.support.v17.leanback.widget.GuidedAction)"></A>
+
+<div class="api apilevel-24.1.0">
+    <h3 class="api-name">getItemViewType</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 24.1.0</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+int getItemViewType (<a href="GuidedAction.html">GuidedAction</a> action)</pre>
+    
+    
+
+    
+  <p>Return view type of action, each different type can have differently associated layout Id.
+ Default implementation returns <code><a href="GuidedActionsStylist.html#VIEW_TYPE_DEFAULT">VIEW_TYPE_DEFAULT</a></code>.</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>action</code></td>
+        <td width="100%">
+          <code>GuidedAction</code>: The action object.</p></td>
+      </tr>
+    </table>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code>int</code></td>
+        <td width="100%">View type that used in <code><a href="GuidedActionsStylist.html#onProvideItemLayoutId(int)">onProvideItemLayoutId(int)</a></code>.
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="getSubActionsGridView()"></A>
+
+<div class="api apilevel-24.1.0">
+    <h3 class="api-name">getSubActionsGridView</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 24.1.0</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="VerticalGridView.html">VerticalGridView</a> getSubActionsGridView ()</pre>
+    
+    
+
+    
+  <p>Returns the VerticalGridView that displays the sub actions list of an expanded action.</p></p>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="VerticalGridView.html">VerticalGridView</a></code></td>
+        <td width="100%">The VerticalGridView that displays the sub actions list of an expanded action.
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="isBackKeyToCollapseActivatorView()"></A>
+
+<div class="api apilevel-25.1.0">
+    <h3 class="api-name">isBackKeyToCollapseActivatorView</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 25.1.0</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+boolean isBackKeyToCollapseActivatorView ()</pre>
+    
+    
+
+    
+  <p></p></p>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code>boolean</code></td>
+        <td width="100%">True if using BACK key to collapse <code><a href="GuidedAction.html">GuidedAction</a></code> with editable activator
+ view, false otherwise. Default value is true.</p></td>
+      </tr>
+    </table>
+  <div>
+      <p><b>See also:</b></p>
+      <ul class="nolist"><li><code><a href="GuidedAction.html#hasEditableActivatorView()">hasEditableActivatorView()</a></code></li>
+      </ul>
+  </div>
+
+</div>
+
+
+<A NAME="isBackKeyToCollapseSubActions()"></A>
+
+<div class="api apilevel-25.1.0">
+    <h3 class="api-name">isBackKeyToCollapseSubActions</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 25.1.0</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+boolean isBackKeyToCollapseSubActions ()</pre>
+    
+    
+
+    
+  <p></p></p>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code>boolean</code></td>
+        <td width="100%">True if using BACK key to collapse sub actions list, false otherwise. Default value
+ is true.</p></td>
+      </tr>
+    </table>
+  <div>
+      <p><b>See also:</b></p>
+      <ul class="nolist"><li><code><a href="GuidedAction.html#hasSubActions()">hasSubActions()</a></code></li><li><code><a href="GuidedAction.html#getSubActions()">getSubActions()</a></code></li>
+      </ul>
+  </div>
+
+</div>
+
+
+<A NAME="isButtonActions()"></A>
+
+<div class="api apilevel-24.1.0">
+    <h3 class="api-name">isButtonActions</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 24.1.0</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+boolean isButtonActions ()</pre>
+    
+    
+
+    
+  <p>Returns true if it is button actions list, false for normal actions list.</p></p>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code>boolean</code></td>
+        <td width="100%">True if it is button actions list, false for normal actions list.
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="isExpandTransitionSupported()"></A>
+
+<div class="api apilevel-24.1.0">
+    <h3 class="api-name">isExpandTransitionSupported</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 24.1.0</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+boolean isExpandTransitionSupported ()</pre>
+    
+    
+
+    
+  <p>Returns if expand/collapse animation is supported.  When this method returns true,
+ <code><a href="GuidedActionsStylist.html#startExpandedTransition(android.support.v17.leanback.widget.GuidedActionsStylist.ViewHolder)">startExpandedTransition(ViewHolder)</a></code> will be used.  When this method returns false,
+ <code><a href="GuidedActionsStylist.html#onUpdateExpandedViewHolder(android.support.v17.leanback.widget.GuidedActionsStylist.ViewHolder)">onUpdateExpandedViewHolder(ViewHolder)</a></code> will be called.</p></p>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code>boolean</code></td>
+        <td width="100%">True if it is running an expanding or collapsing transition, false otherwise.
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="isExpanded()"></A>
+
+<div class="api apilevel-25.1.0">
+    <h3 class="api-name">isExpanded</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 25.1.0</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+boolean isExpanded ()</pre>
+    
+    
+
+    
+  <p></p></p>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code>boolean</code></td>
+        <td width="100%">True if there is <code><a href="GuidedActionsStylist.html#getExpandedAction()">getExpandedAction()</a></code> is not null, false otherwise.
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="isInExpandTransition()"></A>
+
+<div class="api apilevel-24.1.0">
+    <h3 class="api-name">isInExpandTransition</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 24.1.0</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+boolean isInExpandTransition ()</pre>
+    
+    
+
+    
+  <p>Returns true if it is running an expanding or collapsing transition, false otherwise.</p></p>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code>boolean</code></td>
+        <td width="100%">True if it is running an expanding or collapsing transition, false otherwise.
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="isSubActionsExpanded()"></A>
+
+<div class="api apilevel-24.1.0">
+    <h3 class="api-name">isSubActionsExpanded</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 24.1.0</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+boolean isSubActionsExpanded ()</pre>
+    
+    
+
+    
+  <p></p></p>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code>boolean</code></td>
+        <td width="100%">True if sub actions list is expanded.
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="onAnimateItemChecked(android.support.v17.leanback.widget.GuidedActionsStylist.ViewHolder, boolean)"></A>
+
+<div class="api apilevel-22.1.0">
+    <h3 class="api-name">onAnimateItemChecked</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 22.1.0</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+void onAnimateItemChecked (<a href="GuidedActionsStylist.ViewHolder.html">GuidedActionsStylist.ViewHolder</a> vh, 
+                boolean checked)</pre>
+    
+    
+
+    
+  <p>Animates the view holder's view (or subviews thereof) when the action has had its check state
+ changed. Default implementation calls setChecked() if <code><a href="GuidedActionsStylist.ViewHolder.html#getCheckmarkView()">getCheckmarkView()</a></code>
+ is instance of <code><a href="../../../../widget/Checkable.html">Checkable</a></code>.</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>vh</code></td>
+        <td width="100%">
+          <code>GuidedActionsStylist.ViewHolder</code>: The view holder associated with the relevant action.</p></td>
+      </tr>
+      <tr>
+        <td><code>checked</code></td>
+        <td width="100%">
+          <code>boolean</code>: True if the action has become checked, false if it has become unchecked.</p></td>
+      </tr>
+    </table>
+  <div>
+      <p><b>See also:</b></p>
+      <ul class="nolist"><li><code><a href="GuidedActionsStylist.html#onBindCheckMarkView(android.support.v17.leanback.widget.GuidedActionsStylist.ViewHolder, android.support.v17.leanback.widget.GuidedAction)">onBindCheckMarkView(ViewHolder, GuidedAction)</a></code></li>
+      </ul>
+  </div>
+
+</div>
+
+
+<A NAME="onAnimateItemFocused(android.support.v17.leanback.widget.GuidedActionsStylist.ViewHolder, boolean)"></A>
+
+<div class="api apilevel-22.1.0">
+    <h3 class="api-name">onAnimateItemFocused</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 22.1.0</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+void onAnimateItemFocused (<a href="GuidedActionsStylist.ViewHolder.html">GuidedActionsStylist.ViewHolder</a> vh, 
+                boolean focused)</pre>
+    
+    
+
+    
+  <p>Animates the view holder's view (or subviews thereof) when the action has had its focus
+ state changed.</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>vh</code></td>
+        <td width="100%">
+          <code>GuidedActionsStylist.ViewHolder</code>: The view holder associated with the relevant action.</p></td>
+      </tr>
+      <tr>
+        <td><code>focused</code></td>
+        <td width="100%">
+          <code>boolean</code>: True if the action has become focused, false if it has lost focus.
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="onAnimateItemPressed(android.support.v17.leanback.widget.GuidedActionsStylist.ViewHolder, boolean)"></A>
+
+<div class="api apilevel-22.1.0">
+    <h3 class="api-name">onAnimateItemPressed</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 22.1.0</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+void onAnimateItemPressed (<a href="GuidedActionsStylist.ViewHolder.html">GuidedActionsStylist.ViewHolder</a> vh, 
+                boolean pressed)</pre>
+    
+    
+
+    
+  <p>Animates the view holder's view (or subviews thereof) when the action has had its press
+ state changed.</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>vh</code></td>
+        <td width="100%">
+          <code>GuidedActionsStylist.ViewHolder</code>: The view holder associated with the relevant action.</p></td>
+      </tr>
+      <tr>
+        <td><code>pressed</code></td>
+        <td width="100%">
+          <code>boolean</code>: True if the action has been pressed, false if it has been unpressed.
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="onAnimateItemPressedCancelled(android.support.v17.leanback.widget.GuidedActionsStylist.ViewHolder)"></A>
+
+<div class="api apilevel-24.1.0">
+    <h3 class="api-name">onAnimateItemPressedCancelled</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 24.1.0</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+void onAnimateItemPressedCancelled (<a href="GuidedActionsStylist.ViewHolder.html">GuidedActionsStylist.ViewHolder</a> vh)</pre>
+    
+    
+
+    
+  <p>Resets the view holder's view to unpressed state.</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>vh</code></td>
+        <td width="100%">
+          <code>GuidedActionsStylist.ViewHolder</code>: The view holder associated with the relevant action.
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="onBindActivatorView(android.support.v17.leanback.widget.GuidedActionsStylist.ViewHolder, android.support.v17.leanback.widget.GuidedAction)"></A>
+
+<div class="api apilevel-24.1.0">
+    <h3 class="api-name">onBindActivatorView</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 24.1.0</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+void onBindActivatorView (<a href="GuidedActionsStylist.ViewHolder.html">GuidedActionsStylist.ViewHolder</a> vh, 
+                <a href="GuidedAction.html">GuidedAction</a> action)</pre>
+    
+    
+
+    
+  <p>Performs binding activator view value to action.  Default implementation supports
+ GuidedDatePickerAction, subclass may override to add support of other views.</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>vh</code></td>
+        <td width="100%">
+          <code>GuidedActionsStylist.ViewHolder</code>: ViewHolder of activator view.</p></td>
+      </tr>
+      <tr>
+        <td><code>action</code></td>
+        <td width="100%">
+          <code>GuidedAction</code>: GuidedAction to bind.
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="onBindCheckMarkView(android.support.v17.leanback.widget.GuidedActionsStylist.ViewHolder, android.support.v17.leanback.widget.GuidedAction)"></A>
+
+<div class="api apilevel-24.1.0">
+    <h3 class="api-name">onBindCheckMarkView</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 24.1.0</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+void onBindCheckMarkView (<a href="GuidedActionsStylist.ViewHolder.html">GuidedActionsStylist.ViewHolder</a> vh, 
+                <a href="GuidedAction.html">GuidedAction</a> action)</pre>
+    
+    
+
+    
+  <p>Sets states of check mark view, called by <code><a href="GuidedActionsStylist.html#onBindViewHolder(android.support.v17.leanback.widget.GuidedActionsStylist.ViewHolder, android.support.v17.leanback.widget.GuidedAction)">onBindViewHolder(ViewHolder, GuidedAction)</a></code>
+ when action's checkset Id is other than <code><a href="GuidedAction.html#NO_CHECK_SET">NO_CHECK_SET</a></code>. Default
+ implementation assigns drawable loaded from theme attribute
+ <code><a href="../../../../R.attr.html#listChoiceIndicatorMultiple">listChoiceIndicatorMultiple</a></code> for checkbox or
+ <code><a href="../../../../R.attr.html#listChoiceIndicatorSingle">listChoiceIndicatorSingle</a></code> for radio button. Subclass rarely needs
+ override the method, instead app can provide its own drawable that supports transition
+ animations, change theme attributes <code><a href="../../../../R.attr.html#listChoiceIndicatorMultiple">listChoiceIndicatorMultiple</a></code> and
+ <code><a href="../../../../R.attr.html#listChoiceIndicatorSingle">listChoiceIndicatorSingle</a></code> in {android.support.v17.leanback.R.
+ styleable#LeanbackGuidedStepTheme}.</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>vh</code></td>
+        <td width="100%">
+          <code>GuidedActionsStylist.ViewHolder</code>: The view holder associated with the relevant action.</p></td>
+      </tr>
+      <tr>
+        <td><code>action</code></td>
+        <td width="100%">
+          <code>GuidedAction</code>: The GuidedAction object to bind to.</p></td>
+      </tr>
+    </table>
+  <div>
+      <p><b>See also:</b></p>
+      <ul class="nolist"><li><code><a href="GuidedActionsStylist.html#onAnimateItemChecked(android.support.v17.leanback.widget.GuidedActionsStylist.ViewHolder, boolean)">onAnimateItemChecked(ViewHolder, boolean)</a></code></li>
+      </ul>
+  </div>
+
+</div>
+
+
+<A NAME="onBindChevronView(android.support.v17.leanback.widget.GuidedActionsStylist.ViewHolder, android.support.v17.leanback.widget.GuidedAction)"></A>
+
+<div class="api apilevel-24.1.0">
+    <h3 class="api-name">onBindChevronView</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 24.1.0</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+void onBindChevronView (<a href="GuidedActionsStylist.ViewHolder.html">GuidedActionsStylist.ViewHolder</a> vh, 
+                <a href="GuidedAction.html">GuidedAction</a> action)</pre>
+    
+    
+
+    
+  <p>Sets states of chevron view, called by <code><a href="GuidedActionsStylist.html#onBindViewHolder(android.support.v17.leanback.widget.GuidedActionsStylist.ViewHolder, android.support.v17.leanback.widget.GuidedAction)">onBindViewHolder(ViewHolder, GuidedAction)</a></code>.
+ Subclass may override.</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>vh</code></td>
+        <td width="100%">
+          <code>GuidedActionsStylist.ViewHolder</code>: The view holder associated with the relevant action.</p></td>
+      </tr>
+      <tr>
+        <td><code>action</code></td>
+        <td width="100%">
+          <code>GuidedAction</code>: The GuidedAction object to bind to.
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="onBindViewHolder(android.support.v17.leanback.widget.GuidedActionsStylist.ViewHolder, android.support.v17.leanback.widget.GuidedAction)"></A>
+
+<div class="api apilevel-22.1.0">
+    <h3 class="api-name">onBindViewHolder</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 22.1.0</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+void onBindViewHolder (<a href="GuidedActionsStylist.ViewHolder.html">GuidedActionsStylist.ViewHolder</a> vh, 
+                <a href="GuidedAction.html">GuidedAction</a> action)</pre>
+    
+    
+
+    
+  <p>Binds a <code><a href="GuidedActionsStylist.ViewHolder.html">GuidedActionsStylist.ViewHolder</a></code> to a particular <code><a href="GuidedAction.html">GuidedAction</a></code>.</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>vh</code></td>
+        <td width="100%">
+          <code>GuidedActionsStylist.ViewHolder</code>: The view holder to be associated with the given action.</p></td>
+      </tr>
+      <tr>
+        <td><code>action</code></td>
+        <td width="100%">
+          <code>GuidedAction</code>: The guided action to be displayed by the view holder's view.</p></td>
+      </tr>
+    </table>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code>void</code></td>
+        <td width="100%">The view to be added to the caller's view hierarchy.
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="onCreateView(android.view.LayoutInflater, android.view.ViewGroup)"></A>
+
+<div class="api apilevel-22.1.0">
+    <h3 class="api-name">onCreateView</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 22.1.0</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="../../../../view/View.html">View</a> onCreateView (<a href="../../../../view/LayoutInflater.html">LayoutInflater</a> inflater, 
+                <a href="../../../../view/ViewGroup.html">ViewGroup</a> container)</pre>
+    
+    
+
+    
+  <p>Creates a view appropriate for displaying a list of GuidedActions, using the provided
+ inflater and container.
+ <p>
+ <i>Note: Does not actually add the created view to the container; the caller should do
+ this.</i></p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>inflater</code></td>
+        <td width="100%">
+          <code>LayoutInflater</code>: The layout inflater to be used when constructing the view.</p></td>
+      </tr>
+      <tr>
+        <td><code>container</code></td>
+        <td width="100%">
+          <code>ViewGroup</code>: The view group to be passed in the call to
+ <code>LayoutInflater.inflate</code>.</p></td>
+      </tr>
+    </table>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="../../../../view/View.html">View</a></code></td>
+        <td width="100%">The view to be added to the caller's view hierarchy.
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="onCreateViewHolder(android.view.ViewGroup, int)"></A>
+
+<div class="api apilevel-24.1.0">
+    <h3 class="api-name">onCreateViewHolder</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 24.1.0</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="GuidedActionsStylist.ViewHolder.html">GuidedActionsStylist.ViewHolder</a> onCreateViewHolder (<a href="../../../../view/ViewGroup.html">ViewGroup</a> parent, 
+                int viewType)</pre>
+    
+    
+
+    
+  <p>Constructs a <code><a href="GuidedActionsStylist.ViewHolder.html">GuidedActionsStylist.ViewHolder</a></code> capable of representing <code><a href="GuidedAction.html">GuidedAction</a></code>s. Subclasses
+ may choose to return a subclass of ViewHolder.
+ <p>
+ <i>Note: Should not actually add the created view to the parent; the caller will do
+ this.</i></p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>parent</code></td>
+        <td width="100%">
+          <code>ViewGroup</code>: The view group to be used as the parent of the new view.</p></td>
+      </tr>
+      <tr>
+        <td><code>viewType</code></td>
+        <td width="100%">
+          <code>int</code>: The viewType returned by <code><a href="GuidedActionsStylist.html#getItemViewType(android.support.v17.leanback.widget.GuidedAction)">getItemViewType(GuidedAction)</a></code></p></td>
+      </tr>
+    </table>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="GuidedActionsStylist.ViewHolder.html">GuidedActionsStylist.ViewHolder</a></code></td>
+        <td width="100%">The view to be added to the caller's view hierarchy.
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="onCreateViewHolder(android.view.ViewGroup)"></A>
+
+<div class="api apilevel-22.1.0">
+    <h3 class="api-name">onCreateViewHolder</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 22.1.0</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="GuidedActionsStylist.ViewHolder.html">GuidedActionsStylist.ViewHolder</a> onCreateViewHolder (<a href="../../../../view/ViewGroup.html">ViewGroup</a> parent)</pre>
+    
+    
+
+    
+  <p>Constructs a <code><a href="GuidedActionsStylist.ViewHolder.html">GuidedActionsStylist.ViewHolder</a></code> capable of representing <code><a href="GuidedAction.html">GuidedAction</a></code>s. Subclasses
+ may choose to return a subclass of ViewHolder.  To support different view types, override
+ <code><a href="GuidedActionsStylist.html#onCreateViewHolder(android.view.ViewGroup, int)">onCreateViewHolder(ViewGroup, int)</a></code>
+ <p>
+ <i>Note: Should not actually add the created view to the parent; the caller will do
+ this.</i></p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>parent</code></td>
+        <td width="100%">
+          <code>ViewGroup</code>: The view group to be used as the parent of the new view.</p></td>
+      </tr>
+    </table>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="GuidedActionsStylist.ViewHolder.html">GuidedActionsStylist.ViewHolder</a></code></td>
+        <td width="100%">The view to be added to the caller's view hierarchy.
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="onDestroyView()"></A>
+
+<div class="api apilevel-24.1.0">
+    <h3 class="api-name">onDestroyView</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 24.1.0</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+void onDestroyView ()</pre>
+    
+    
+
+    
+  <p>Called when destroy the View created by GuidedActionsStylist.
+</p></p>
+
+</div>
+
+
+<A NAME="onImeAppearing(java.util.List<android.animation.Animator>)"></A>
+
+<div class="api apilevel-24.1.0">
+    <h3 class="api-name">onImeAppearing</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 24.1.0</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+void onImeAppearing (List&lt;<a href="../../../../animation/Animator.html">Animator</a>&gt; animators)</pre>
+    
+    
+
+    
+  <p>Animates the fragment in response to the IME appearing.
+</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>animators</code></td>
+        <td width="100%">
+          <code>List</code>: A list of animations to which this provider's animations should be added.
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="onImeDisappearing(java.util.List<android.animation.Animator>)"></A>
+
+<div class="api apilevel-24.1.0">
+    <h3 class="api-name">onImeDisappearing</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 24.1.0</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+void onImeDisappearing (List&lt;<a href="../../../../animation/Animator.html">Animator</a>&gt; animators)</pre>
+    
+    
+
+    
+  <p>Animates the fragment in response to the IME disappearing.
+</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>animators</code></td>
+        <td width="100%">
+          <code>List</code>: A list of animations to which this provider's animations should be added.
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="onProvideItemLayoutId()"></A>
+
+<div class="api apilevel-22.1.0">
+    <h3 class="api-name">onProvideItemLayoutId</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 22.1.0</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+int onProvideItemLayoutId ()</pre>
+    
+    
+
+    
+  <p>Provides the resource ID of the layout defining the view for an individual guided actions.
+ Subclasses may override to provide their own customized layouts. The base implementation
+ returns <code><a href="../R.layout.html#lb_guidedactions_item">lb_guidedactions_item</a></code>. If overridden,
+ the substituted layout should contain matching IDs for any views that should be managed by
+ the base class; this can be achieved by starting with a copy of the base layout file. Note
+ that in order for the item to support editing, the title view should both subclass <code><a href="../../../../widget/EditText.html">EditText</a></code> and implement <code><a href="ImeKeyMonitor.html">ImeKeyMonitor</a></code>; see <code><a href="GuidedActionEditText.html">GuidedActionEditText</a></code>.  To support different types of Layouts, override <code><a href="GuidedActionsStylist.html#onProvideItemLayoutId(int)">onProvideItemLayoutId(int)</a></code>.</p></p>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code>int</code></td>
+        <td width="100%">The resource ID of the layout to be inflated to define the view to display an
+ individual GuidedAction.
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="onProvideItemLayoutId(int)"></A>
+
+<div class="api apilevel-24.1.0">
+    <h3 class="api-name">onProvideItemLayoutId</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 24.1.0</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+int onProvideItemLayoutId (int viewType)</pre>
+    
+    
+
+    
+  <p>Provides the resource ID of the layout defining the view for an individual guided actions.
+ Subclasses may override to provide their own customized layouts. The base implementation
+ supports:
+ <li><code><a href="../R.layout.html#lb_guidedactions_item">lb_guidedactions_item</a></code>
+ <li>{<code><a href="../R.layout.html#lb_guidedactions_datepicker_item">lb_guidedactions_datepicker_item</a></code>. If
+ overridden, the substituted layout should contain matching IDs for any views that should be
+ managed by the base class; this can be achieved by starting with a copy of the base layout
+ file. Note that in order for the item to support editing, the title view should both subclass
+ <code><a href="../../../../widget/EditText.html">EditText</a></code> and implement <code><a href="ImeKeyMonitor.html">ImeKeyMonitor</a></code>; see
+ <code><a href="GuidedActionEditText.html">GuidedActionEditText</a></code>.</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>viewType</code></td>
+        <td width="100%">
+          <code>int</code>: View type returned by <code><a href="GuidedActionsStylist.html#getItemViewType(android.support.v17.leanback.widget.GuidedAction)">getItemViewType(GuidedAction)</a></code></p></td>
+      </tr>
+    </table>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code>int</code></td>
+        <td width="100%">The resource ID of the layout to be inflated to define the view to display an
+         individual GuidedAction.
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="onProvideLayoutId()"></A>
+
+<div class="api apilevel-22.1.0">
+    <h3 class="api-name">onProvideLayoutId</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 22.1.0</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+int onProvideLayoutId ()</pre>
+    
+    
+
+    
+  <p>Provides the resource ID of the layout defining the host view for the list of guided actions.
+ Subclasses may override to provide their own customized layouts. The base implementation
+ returns <code><a href="../R.layout.html#lb_guidedactions">lb_guidedactions</a></code> or
+ <code><a href="../R.layout.html#lb_guidedbuttonactions">lb_guidedbuttonactions</a></code> if
+ <code><a href="GuidedActionsStylist.html#isButtonActions()">isButtonActions()</a></code> is true. If overridden, the substituted layout should contain
+ matching IDs for any views that should be managed by the base class; this can be achieved by
+ starting with a copy of the base layout file.</p></p>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code>int</code></td>
+        <td width="100%">The resource ID of the layout to be inflated to define the host view for the list of
+         GuidedActions.
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="onUpdateActivatorView(android.support.v17.leanback.widget.GuidedActionsStylist.ViewHolder, android.support.v17.leanback.widget.GuidedAction)"></A>
+
+<div class="api apilevel-24.1.0">
+    <h3 class="api-name">onUpdateActivatorView</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 24.1.0</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+boolean onUpdateActivatorView (<a href="GuidedActionsStylist.ViewHolder.html">GuidedActionsStylist.ViewHolder</a> vh, 
+                <a href="GuidedAction.html">GuidedAction</a> action)</pre>
+    
+    
+
+    
+  <p>Performs updating GuidedAction from activator view.  Default implementation supports
+ GuidedDatePickerAction, subclass may override to add support of other views.</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>vh</code></td>
+        <td width="100%">
+          <code>GuidedActionsStylist.ViewHolder</code>: ViewHolder of activator view.</p></td>
+      </tr>
+      <tr>
+        <td><code>action</code></td>
+        <td width="100%">
+          <code>GuidedAction</code>: GuidedAction to update.</p></td>
+      </tr>
+    </table>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code>boolean</code></td>
+        <td width="100%">True if value has been updated, false otherwise.
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="onUpdateExpandedViewHolder(android.support.v17.leanback.widget.GuidedActionsStylist.ViewHolder)"></A>
+
+<div class="api apilevel-24.1.0">
+    <h3 class="api-name">onUpdateExpandedViewHolder</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 24.1.0</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+void onUpdateExpandedViewHolder (<a href="GuidedActionsStylist.ViewHolder.html">GuidedActionsStylist.ViewHolder</a> avh)</pre>
+    
+    
+
+    
+  <p>Expand or collapse GuidedActionStylist.</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>avh</code></td>
+        <td width="100%">
+          <code>GuidedActionsStylist.ViewHolder</code>: When not null, the GuidedActionStylist expands the sub actions of avh.  When null
+ the GuidedActionStylist will collapse sub actions.
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="openInEditMode(android.support.v17.leanback.widget.GuidedAction)"></A>
+
+<div class="api apilevel-26.1.0">
+    <h3 class="api-name">openInEditMode</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 26.1.0</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+void openInEditMode (<a href="GuidedAction.html">GuidedAction</a> action)</pre>
+    
+    
+
+    
+  <p>Switches action to edit mode and pops up the keyboard.
+</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>action</code></td>
+        <td width="100%">
+          <code>GuidedAction</code> <!-- no parameter comment --></p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="setAsButtonActions()"></A>
+
+<div class="api apilevel-24.1.0">
+    <h3 class="api-name">setAsButtonActions</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 24.1.0</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+void setAsButtonActions ()</pre>
+    
+    
+
+    
+  <p>Choose the layout resource for button actions in <code><a href="GuidedActionsStylist.html#onProvideLayoutId()">onProvideLayoutId()</a></code>.
+</p></p>
+
+</div>
+
+
+<A NAME="setBackKeyToCollapseActivatorView(boolean)"></A>
+
+<div class="api apilevel-25.1.0">
+    <h3 class="api-name">setBackKeyToCollapseActivatorView</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 25.1.0</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+void setBackKeyToCollapseActivatorView (boolean backToCollapse)</pre>
+    
+    
+
+    
+  <p>Enable or disable using BACK key to collapse <code><a href="GuidedAction.html">GuidedAction</a></code> with editable activator
+ view. Default is enabled.</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>backToCollapse</code></td>
+        <td width="100%">
+          <code>boolean</code>: True to enable using BACK key to collapse <code><a href="GuidedAction.html">GuidedAction</a></code> with
+                       editable activator view.</p></td>
+      </tr>
+    </table>
+  <div>
+      <p><b>See also:</b></p>
+      <ul class="nolist"><li><code><a href="GuidedAction.html#hasEditableActivatorView()">hasEditableActivatorView()</a></code></li>
+      </ul>
+  </div>
+
+</div>
+
+
+<A NAME="setBackKeyToCollapseSubActions(boolean)"></A>
+
+<div class="api apilevel-25.1.0">
+    <h3 class="api-name">setBackKeyToCollapseSubActions</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 25.1.0</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+void setBackKeyToCollapseSubActions (boolean backToCollapse)</pre>
+    
+    
+
+    
+  <p>Enable or disable using BACK key to collapse sub actions list. Default is enabled.</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>backToCollapse</code></td>
+        <td width="100%">
+          <code>boolean</code>: True to enable using BACK key to collapse sub actions list, false
+                       to disable.</p></td>
+      </tr>
+    </table>
+  <div>
+      <p><b>See also:</b></p>
+      <ul class="nolist"><li><code><a href="GuidedAction.html#hasSubActions()">hasSubActions()</a></code></li><li><code><a href="GuidedAction.html#getSubActions()">getSubActions()</a></code></li>
+      </ul>
+  </div>
+
+</div>
+
+
+<A NAME="setEditingMode(android.support.v17.leanback.widget.GuidedActionsStylist.ViewHolder, android.support.v17.leanback.widget.GuidedAction, boolean)"></A>
+
+<div class="api apilevel-24.1.0">
+    <h3 class="api-name">setEditingMode</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 24.1.0</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+void setEditingMode (<a href="GuidedActionsStylist.ViewHolder.html">GuidedActionsStylist.ViewHolder</a> vh, 
+                <a href="GuidedAction.html">GuidedAction</a> action, 
+                boolean editing)</pre>
+    
+    
+
+    <p>
+  <p class="caution"><strong>
+      This method was deprecated
+      in API level 25.1.0.</strong><br/>
+    This method is for internal library use only and should not
+             be called directly.
+
+  </p>
+  <p></p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>vh</code></td>
+        <td width="100%">
+          <code>GuidedActionsStylist.ViewHolder</code> <!-- no parameter comment --></p></td>
+      </tr>
+      <tr>
+        <td><code>action</code></td>
+        <td width="100%">
+          <code>GuidedAction</code> <!-- no parameter comment --></p></td>
+      </tr>
+      <tr>
+        <td><code>editing</code></td>
+        <td width="100%">
+          <code>boolean</code> <!-- no parameter comment --></p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="setExpandedViewHolder(android.support.v17.leanback.widget.GuidedActionsStylist.ViewHolder)"></A>
+
+<div class="api apilevel-24.1.0">
+    <h3 class="api-name">setExpandedViewHolder</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 24.1.0</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+void setExpandedViewHolder (<a href="GuidedActionsStylist.ViewHolder.html">GuidedActionsStylist.ViewHolder</a> avh)</pre>
+    
+    
+
+    <p>
+  <p class="caution"><strong>
+      This method was deprecated
+      in API level 25.1.0.</strong><br/>
+    use <code><a href="GuidedActionsStylist.html#expandAction(android.support.v17.leanback.widget.GuidedAction, boolean)">expandAction(GuidedAction, boolean)</a></code> and
+ <code><a href="GuidedActionsStylist.html#collapseAction(boolean)">collapseAction(boolean)</a></code>
+
+  </p>
+  <p>Expands or collapse the sub actions list view with transition animation</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>avh</code></td>
+        <td width="100%">
+          <code>GuidedActionsStylist.ViewHolder</code>: When not null, fill sub actions list of this ViewHolder into sub actions list and
+ hide the other items in main list.  When null, collapse the sub actions list.</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="startExpandedTransition(android.support.v17.leanback.widget.GuidedActionsStylist.ViewHolder)"></A>
+
+<div class="api apilevel-24.1.0">
+    <h3 class="api-name">startExpandedTransition</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 24.1.0</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+void startExpandedTransition (<a href="GuidedActionsStylist.ViewHolder.html">GuidedActionsStylist.ViewHolder</a> avh)</pre>
+    
+    
+
+    <p>
+  <p class="caution"><strong>
+      This method was deprecated
+      in API level 25.1.0.</strong><br/>
+    use <code><a href="GuidedActionsStylist.html#expandAction(android.support.v17.leanback.widget.GuidedAction, boolean)">expandAction(GuidedAction, boolean)</a></code> and
+ <code><a href="GuidedActionsStylist.html#collapseAction(boolean)">collapseAction(boolean)</a></code>
+
+  </p>
+  <p>Start transition to expand or collapse GuidedActionStylist.</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>avh</code></td>
+        <td width="100%">
+          <code>GuidedActionsStylist.ViewHolder</code>: When not null, the GuidedActionStylist expands the sub actions of avh.  When null
+ the GuidedActionStylist will collapse sub actions.</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+
+
+
+<!-- ========= METHOD DETAIL ======== -->
+
+<h2 class="api-section">Protected methods</h2>
+
+
+
+<A NAME="onEditingModeChange(android.support.v17.leanback.widget.GuidedActionsStylist.ViewHolder, android.support.v17.leanback.widget.GuidedAction, boolean)"></A>
+
+<div class="api apilevel-24.1.0">
+    <h3 class="api-name">onEditingModeChange</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 24.1.0</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+void onEditingModeChange (<a href="GuidedActionsStylist.ViewHolder.html">GuidedActionsStylist.ViewHolder</a> vh, 
+                <a href="GuidedAction.html">GuidedAction</a> action, 
+                boolean editing)</pre>
+    
+    
+
+    <p>
+  <p class="caution"><strong>
+      This method was deprecated
+      in API level 25.1.0.</strong><br/>
+    Use <code><a href="GuidedActionsStylist.html#onEditingModeChange(android.support.v17.leanback.widget.GuidedActionsStylist.ViewHolder, boolean, boolean)">onEditingModeChange(ViewHolder, boolean, boolean)</a></code>.
+
+  </p>
+  <p></p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>vh</code></td>
+        <td width="100%">
+          <code>GuidedActionsStylist.ViewHolder</code> <!-- no parameter comment --></p></td>
+      </tr>
+      <tr>
+        <td><code>action</code></td>
+        <td width="100%">
+          <code>GuidedAction</code> <!-- no parameter comment --></p></td>
+      </tr>
+      <tr>
+        <td><code>editing</code></td>
+        <td width="100%">
+          <code>boolean</code> <!-- no parameter comment --></p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="onEditingModeChange(android.support.v17.leanback.widget.GuidedActionsStylist.ViewHolder, boolean, boolean)"></A>
+
+<div class="api apilevel-25.1.0">
+    <h3 class="api-name">onEditingModeChange</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 25.1.0</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+void onEditingModeChange (<a href="GuidedActionsStylist.ViewHolder.html">GuidedActionsStylist.ViewHolder</a> vh, 
+                boolean editing, 
+                boolean withTransition)</pre>
+    
+    
+
+    
+  <p>Called when editing mode of an ViewHolder is changed.  Subclass must call
+ <code>super.onEditingModeChange(vh,editing,withTransition)</code>.</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>vh</code></td>
+        <td width="100%">
+          <code>GuidedActionsStylist.ViewHolder</code>: ViewHolder to change editing mode.</p></td>
+      </tr>
+      <tr>
+        <td><code>editing</code></td>
+        <td width="100%">
+          <code>boolean</code>: True to enable editing, false to stop editing</p></td>
+      </tr>
+      <tr>
+        <td><code>withTransition</code></td>
+        <td width="100%">
+          <code>boolean</code>: True to run expand transiiton, false otherwise.
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="setupImeOptions(android.support.v17.leanback.widget.GuidedActionsStylist.ViewHolder, android.support.v17.leanback.widget.GuidedAction)"></A>
+
+<div class="api apilevel-24.1.0">
+    <h3 class="api-name">setupImeOptions</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 24.1.0</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+void setupImeOptions (<a href="GuidedActionsStylist.ViewHolder.html">GuidedActionsStylist.ViewHolder</a> vh, 
+                <a href="GuidedAction.html">GuidedAction</a> action)</pre>
+    
+    
+
+    
+  <p>Called by <code><a href="GuidedActionsStylist.html#onBindViewHolder(android.support.v17.leanback.widget.GuidedActionsStylist.ViewHolder, android.support.v17.leanback.widget.GuidedAction)">onBindViewHolder(ViewHolder, GuidedAction)</a></code> to setup IME options.  Default
+ implementation assigns <code><a href="../../../../view/inputmethod/EditorInfo.html#IME_ACTION_DONE">IME_ACTION_DONE</a></code>.  Subclass may override.</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>vh</code></td>
+        <td width="100%">
+          <code>GuidedActionsStylist.ViewHolder</code>: The view holder to be associated with the given action.</p></td>
+      </tr>
+      <tr>
+        <td><code>action</code></td>
+        <td width="100%">
+          <code>GuidedAction</code>: The guided action to be displayed by the view holder's view.
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+
+
+
+<!-- ========= END OF CLASS DATA ========= -->
+
+</div><!-- end jd-content -->
+
+
+
+<div class="data-reference-resources-wrapper">
+  
+  <ul data-reference-resources>
+    
+    
+    <li><h2>Interfaces</h2>
+      <ul>
+          <li class="api apilevel-22.1.0"><a href="BaseGridView.OnKeyInterceptListener.html">BaseGridView.OnKeyInterceptListener</a></li>
+          <li class="api apilevel-22.1.0"><a href="BaseGridView.OnMotionInterceptListener.html">BaseGridView.OnMotionInterceptListener</a></li>
+          <li class="api apilevel-22.1.0"><a href="BaseGridView.OnTouchInterceptListener.html">BaseGridView.OnTouchInterceptListener</a></li>
+          <li class="api apilevel-22.1.0"><a href="BaseGridView.OnUnhandledKeyListener.html">BaseGridView.OnUnhandledKeyListener</a></li>
+          <li class="api apilevel-24.1.0"><a href="BaseOnItemViewClickedListener.html">BaseOnItemViewClickedListener</a></li>
+          <li class="api apilevel-24.1.0"><a href="BaseOnItemViewSelectedListener.html">BaseOnItemViewSelectedListener</a></li>
+          <li class="api apilevel-22.1.0"><a href="BrowseFrameLayout.OnChildFocusListener.html">BrowseFrameLayout.OnChildFocusListener</a></li>
+          <li class="api apilevel-22.1.0"><a href="BrowseFrameLayout.OnFocusSearchListener.html">BrowseFrameLayout.OnFocusSearchListener</a></li>
+          <li class="api apilevel-24.1.0"><a href="FacetProvider.html">FacetProvider</a></li>
+          <li class="api apilevel-24.1.0"><a href="FacetProviderAdapter.html">FacetProviderAdapter</a></li>
+          <li class="api apilevel-22.1.0"><a href="FocusHighlight.html">FocusHighlight</a></li>
+          <li class="api apilevel-22.1.0"><a href="FragmentAnimationProvider.html">FragmentAnimationProvider</a></li>
+          <li class="api apilevel-24.1.0"><a href="ImeKeyMonitor.html">ImeKeyMonitor</a></li>
+          <li class="api apilevel-24.1.0"><a href="ImeKeyMonitor.ImeKeyListener.html">ImeKeyMonitor.ImeKeyListener</a></li>
+          <li class="api apilevel-24.1.0"><a href="MultiActionsProvider.html">MultiActionsProvider</a></li>
+          <li class="api apilevel-22.1.0"><a href="OnActionClickedListener.html">OnActionClickedListener</a></li>
+          <li class="api apilevel-22.1.0"><a href="OnChildLaidOutListener.html">OnChildLaidOutListener</a></li>
+          <li class="api apilevel-22.1.0"><a href="OnChildSelectedListener.html">OnChildSelectedListener</a></li>
+          <li class="api apilevel-22.1.0"><a href="OnItemViewClickedListener.html">OnItemViewClickedListener</a></li>
+          <li class="api apilevel-22.1.0"><a href="OnItemViewSelectedListener.html">OnItemViewSelectedListener</a></li>
+          <li class="api apilevel-26.1.0"><a href="PlaybackSeekUi.html">PlaybackSeekUi</a></li>
+          <li class="api apilevel-22.1.0"><a href="SearchBar.SearchBarListener.html">SearchBar.SearchBarListener</a></li>
+          <li class="api apilevel-24.1.0"><a href="SearchBar.SearchBarPermissionListener.html">SearchBar.SearchBarPermissionListener</a></li>
+          <li class="api apilevel-22.1.0"><a href="SearchEditText.OnKeyboardDismissListener.html">SearchEditText.OnKeyboardDismissListener</a></li>
+          <li class="api apilevel-22.1.0"><a href="SpeechRecognitionCallback.html">SpeechRecognitionCallback</a></li>
+          <li class="api apilevel-24.1.0"><a href="TitleViewAdapter.Provider.html">TitleViewAdapter.Provider</a></li>
+          <li class="api apilevel-24.1.0"><a href="ViewHolderTask.html">ViewHolderTask</a></li>
+      </ul>
+    </li>
+    
+    <li><h2>Classes</h2>
+      <ul>
+          <li class="api apilevel-22.1.0"><a href="AbstractDetailsDescriptionPresenter.html">AbstractDetailsDescriptionPresenter</a></li>
+          <li class="api apilevel-22.1.0"><a href="AbstractDetailsDescriptionPresenter.ViewHolder.html">AbstractDetailsDescriptionPresenter.ViewHolder</a></li>
+          <li class="api apilevel-24.1.0"><a href="AbstractMediaItemPresenter.html">AbstractMediaItemPresenter</a></li>
+          <li class="api apilevel-24.1.0"><a href="AbstractMediaItemPresenter.ViewHolder.html">AbstractMediaItemPresenter.ViewHolder</a></li>
+          <li class="api apilevel-24.1.0"><a href="AbstractMediaListHeaderPresenter.html">AbstractMediaListHeaderPresenter</a></li>
+          <li class="api apilevel-24.1.0"><a href="AbstractMediaListHeaderPresenter.ViewHolder.html">AbstractMediaListHeaderPresenter.ViewHolder</a></li>
+          <li class="api apilevel-22.1.0"><a href="Action.html">Action</a></li>
+          <li class="api apilevel-22.1.0"><a href="ArrayObjectAdapter.html">ArrayObjectAdapter</a></li>
+          <li class="api apilevel-22.1.0"><a href="BaseCardView.html">BaseCardView</a></li>
+          <li class="api apilevel-22.1.0"><a href="BaseCardView.LayoutParams.html">BaseCardView.LayoutParams</a></li>
+          <li class="api apilevel-22.1.0"><a href="BaseGridView.html">BaseGridView</a></li>
+          <li class="api apilevel-22.1.0"><a href="BrowseFrameLayout.html">BrowseFrameLayout</a></li>
+          <li class="api apilevel-22.1.0"><a href="ClassPresenterSelector.html">ClassPresenterSelector</a></li>
+          <li class="api apilevel-22.1.0"><a href="ControlButtonPresenterSelector.html">ControlButtonPresenterSelector</a></li>
+          <li class="api apilevel-22.1.0"><a href="CursorObjectAdapter.html">CursorObjectAdapter</a></li>
+          <li class="api apilevel-24.1.0"><a href="DetailsOverviewLogoPresenter.html">DetailsOverviewLogoPresenter</a></li>
+          <li class="api apilevel-24.1.0"><a href="DetailsOverviewLogoPresenter.ViewHolder.html">DetailsOverviewLogoPresenter.ViewHolder</a></li>
+          <li class="api apilevel-22.1.0"><a href="DetailsOverviewRow.html">DetailsOverviewRow</a></li>
+          <li class="api apilevel-24.1.0"><a href="DetailsOverviewRow.Listener.html">DetailsOverviewRow.Listener</a></li>
+          <li class="api apilevel-22.1.0"><a href="DetailsOverviewRowPresenter.html">DetailsOverviewRowPresenter</a></li>
+          <li class="api apilevel-22.1.0"><a href="DetailsOverviewRowPresenter.ViewHolder.html">DetailsOverviewRowPresenter.ViewHolder</a></li>
+          <li class="api apilevel-25.4.0"><a href="DetailsParallax.html">DetailsParallax</a></li>
+          <li class="api apilevel-27.0.0"><a href="DiffCallback.html">DiffCallback</a></li>
+          <li class="api apilevel-24.1.0"><a href="DividerPresenter.html">DividerPresenter</a></li>
+          <li class="api apilevel-24.1.0"><a href="DividerRow.html">DividerRow</a></li>
+          <li class="api apilevel-22.1.0"><a href="FocusHighlightHelper.html">FocusHighlightHelper</a></li>
+          <li class="api apilevel-24.1.0"><a href="FullWidthDetailsOverviewRowPresenter.html">FullWidthDetailsOverviewRowPresenter</a></li>
+          <li class="api apilevel-24.1.0"><a href="FullWidthDetailsOverviewRowPresenter.Listener.html">FullWidthDetailsOverviewRowPresenter.Listener</a></li>
+          <li class="api apilevel-24.1.0"><a href="FullWidthDetailsOverviewRowPresenter.ViewHolder.html">FullWidthDetailsOverviewRowPresenter.ViewHolder</a></li>
+          <li class="api apilevel-24.1.0"><a href="FullWidthDetailsOverviewRowPresenter.ViewHolder.DetailsOverviewRowListener.html">FullWidthDetailsOverviewRowPresenter.ViewHolder.DetailsOverviewRowListener</a></li>
+          <li class="api apilevel-24.1.0"><a href="FullWidthDetailsOverviewSharedElementHelper.html">FullWidthDetailsOverviewSharedElementHelper</a></li>
+          <li class="api apilevel-22.1.0"><a href="GuidanceStylist.html">GuidanceStylist</a></li>
+          <li class="api apilevel-22.1.0"><a href="GuidanceStylist.Guidance.html">GuidanceStylist.Guidance</a></li>
+          <li class="api apilevel-22.1.0"><a href="GuidedAction.html">GuidedAction</a></li>
+          <li class="api apilevel-22.1.0"><a href="GuidedAction.Builder.html">GuidedAction.Builder</a></li>
+          <li class="api apilevel-24.1.0"><a href="GuidedAction.BuilderBase.html">GuidedAction.BuilderBase</a></li>
+          <li class="api apilevel-24.1.0"><a href="GuidedActionEditText.html">GuidedActionEditText</a></li>
+          <li class="selected api apilevel-22.1.0"><a href="GuidedActionsStylist.html">GuidedActionsStylist</a></li>
+          <li class="api apilevel-22.1.0"><a href="GuidedActionsStylist.ViewHolder.html">GuidedActionsStylist.ViewHolder</a></li>
+          <li class="api apilevel-24.1.0"><a href="GuidedDatePickerAction.html">GuidedDatePickerAction</a></li>
+          <li class="api apilevel-24.1.0"><a href="GuidedDatePickerAction.Builder.html">GuidedDatePickerAction.Builder</a></li>
+          <li class="api apilevel-24.1.0"><a href="GuidedDatePickerAction.BuilderBase.html">GuidedDatePickerAction.BuilderBase</a></li>
+          <li class="api apilevel-22.1.0"><a href="HeaderItem.html">HeaderItem</a></li>
+          <li class="api apilevel-22.1.0"><a href="HorizontalGridView.html">HorizontalGridView</a></li>
+          <li class="api apilevel-22.1.0"><a href="HorizontalHoverCardSwitcher.html">HorizontalHoverCardSwitcher</a></li>
+          <li class="api apilevel-22.1.0"><a href="ImageCardView.html">ImageCardView</a></li>
+          <li class="api apilevel-24.1.0"><a href="ItemAlignmentFacet.html">ItemAlignmentFacet</a></li>
+          <li class="api apilevel-24.1.0"><a href="ItemAlignmentFacet.ItemAlignmentDef.html">ItemAlignmentFacet.ItemAlignmentDef</a></li>
+          <li class="api apilevel-22.1.0"><a href="ItemBridgeAdapter.html">ItemBridgeAdapter</a></li>
+          <li class="api apilevel-22.1.0"><a href="ItemBridgeAdapter.AdapterListener.html">ItemBridgeAdapter.AdapterListener</a></li>
+          <li class="api apilevel-22.1.0"><a href="ItemBridgeAdapter.ViewHolder.html">ItemBridgeAdapter.ViewHolder</a></li>
+          <li class="api apilevel-22.1.0"><a href="ItemBridgeAdapter.Wrapper.html">ItemBridgeAdapter.Wrapper</a></li>
+          <li class="api apilevel-24.1.0"><a href="ItemBridgeAdapterShadowOverlayWrapper.html">ItemBridgeAdapterShadowOverlayWrapper</a></li>
+          <li class="api apilevel-22.1.0"><a href="ListRow.html">ListRow</a></li>
+          <li class="api apilevel-22.1.0"><a href="ListRowHoverCardView.html">ListRowHoverCardView</a></li>
+          <li class="api apilevel-22.1.0"><a href="ListRowPresenter.html">ListRowPresenter</a></li>
+          <li class="api apilevel-24.1.0"><a href="ListRowPresenter.SelectItemViewHolderTask.html">ListRowPresenter.SelectItemViewHolderTask</a></li>
+          <li class="api apilevel-22.1.0"><a href="ListRowPresenter.ViewHolder.html">ListRowPresenter.ViewHolder</a></li>
+          <li class="api apilevel-22.1.0"><a href="ListRowView.html">ListRowView</a></li>
+          <li class="api apilevel-24.1.0"><a href="MultiActionsProvider.MultiAction.html">MultiActionsProvider.MultiAction</a></li>
+          <li class="api apilevel-22.1.0"><a href="ObjectAdapter.html">ObjectAdapter</a></li>
+          <li class="api apilevel-22.1.0"><a href="ObjectAdapter.DataObserver.html">ObjectAdapter.DataObserver</a></li>
+          <li class="api apilevel-24.1.0"><a href="OnChildViewHolderSelectedListener.html">OnChildViewHolderSelectedListener</a></li>
+          <li class="api apilevel-24.1.0"><a href="PageRow.html">PageRow</a></li>
+          <li class="api apilevel-25.4.0"><a href="Parallax.html">Parallax</a></li>
+          <li class="api apilevel-25.4.0"><a href="Parallax.FloatProperty.html">Parallax.FloatProperty</a></li>
+          <li class="api apilevel-25.4.0"><a href="Parallax.IntProperty.html">Parallax.IntProperty</a></li>
+          <li class="api apilevel-25.4.0"><a href="Parallax.PropertyMarkerValue.html">Parallax.PropertyMarkerValue</a></li>
+          <li class="api apilevel-25.4.0"><a href="ParallaxEffect.html">ParallaxEffect</a></li>
+          <li class="api apilevel-25.4.0"><a href="ParallaxTarget.html">ParallaxTarget</a></li>
+          <li class="api apilevel-25.4.0"><a href="ParallaxTarget.DirectPropertyTarget.html">ParallaxTarget.DirectPropertyTarget</a></li>
+          <li class="api apilevel-25.4.0"><a href="ParallaxTarget.PropertyValuesHolderTarget.html">ParallaxTarget.PropertyValuesHolderTarget</a></li>
+          <li class="api apilevel-22.1.0"><a href="PlaybackControlsRow.html">PlaybackControlsRow</a></li>
+          <li class="api apilevel-22.1.0"><a href="PlaybackControlsRow.ClosedCaptioningAction.html">PlaybackControlsRow.ClosedCaptioningAction</a></li>
+          <li class="api apilevel-22.1.0"><a href="PlaybackControlsRow.FastForwardAction.html">PlaybackControlsRow.FastForwardAction</a></li>
+          <li class="api apilevel-22.1.0"><a href="PlaybackControlsRow.HighQualityAction.html">PlaybackControlsRow.HighQualityAction</a></li>
+          <li class="api apilevel-22.1.0"><a href="PlaybackControlsRow.MoreActions.html">PlaybackControlsRow.MoreActions</a></li>
+          <li class="api apilevel-22.1.0"><a href="PlaybackControlsRow.MultiAction.html">PlaybackControlsRow.MultiAction</a></li>
+          <li class="api apilevel-26.1.0"><a href="PlaybackControlsRow.OnPlaybackProgressCallback.html">PlaybackControlsRow.OnPlaybackProgressCallback</a></li>
+          <li class="api apilevel-24.1.0"><a href="PlaybackControlsRow.PictureInPictureAction.html">PlaybackControlsRow.PictureInPictureAction</a></li>
+          <li class="api apilevel-22.1.0"><a href="PlaybackControlsRow.PlayPauseAction.html">PlaybackControlsRow.PlayPauseAction</a></li>
+          <li class="api apilevel-22.1.0"><a href="PlaybackControlsRow.RepeatAction.html">PlaybackControlsRow.RepeatAction</a></li>
+          <li class="api apilevel-22.1.0"><a href="PlaybackControlsRow.RewindAction.html">PlaybackControlsRow.RewindAction</a></li>
+          <li class="api apilevel-22.1.0"><a href="PlaybackControlsRow.ShuffleAction.html">PlaybackControlsRow.ShuffleAction</a></li>
+          <li class="api apilevel-22.1.0"><a href="PlaybackControlsRow.SkipNextAction.html">PlaybackControlsRow.SkipNextAction</a></li>
+          <li class="api apilevel-22.1.0"><a href="PlaybackControlsRow.SkipPreviousAction.html">PlaybackControlsRow.SkipPreviousAction</a></li>
+          <li class="api apilevel-22.1.0"><a href="PlaybackControlsRow.ThumbsAction.html">PlaybackControlsRow.ThumbsAction</a></li>
+          <li class="api apilevel-22.1.0"><a href="PlaybackControlsRow.ThumbsDownAction.html">PlaybackControlsRow.ThumbsDownAction</a></li>
+          <li class="api apilevel-22.1.0"><a href="PlaybackControlsRow.ThumbsUpAction.html">PlaybackControlsRow.ThumbsUpAction</a></li>
+          <li class="api apilevel-22.1.0"><a href="PlaybackControlsRowPresenter.html">PlaybackControlsRowPresenter</a></li>
+          <li class="api apilevel-22.1.0"><a href="PlaybackControlsRowPresenter.ViewHolder.html">PlaybackControlsRowPresenter.ViewHolder</a></li>
+          <li class="api apilevel-25.1.0"><a href="PlaybackRowPresenter.html">PlaybackRowPresenter</a></li>
+          <li class="api apilevel-25.1.0"><a href="PlaybackRowPresenter.ViewHolder.html">PlaybackRowPresenter.ViewHolder</a></li>
+          <li class="api apilevel-26.1.0"><a href="PlaybackSeekDataProvider.html">PlaybackSeekDataProvider</a></li>
+          <li class="api apilevel-26.1.0"><a href="PlaybackSeekDataProvider.ResultCallback.html">PlaybackSeekDataProvider.ResultCallback</a></li>
+          <li class="api apilevel-26.1.0"><a href="PlaybackSeekUi.Client.html">PlaybackSeekUi.Client</a></li>
+          <li class="api apilevel-26.1.0"><a href="PlaybackTransportRowPresenter.html">PlaybackTransportRowPresenter</a></li>
+          <li class="api apilevel-26.1.0"><a href="PlaybackTransportRowPresenter.ViewHolder.html">PlaybackTransportRowPresenter.ViewHolder</a></li>
+          <li class="api apilevel-22.1.0"><a href="Presenter.html">Presenter</a></li>
+          <li class="api apilevel-22.1.0"><a href="Presenter.ViewHolder.html">Presenter.ViewHolder</a></li>
+          <li class="api apilevel-24.1.0"><a href="Presenter.ViewHolderTask.html">Presenter.ViewHolderTask</a></li>
+          <li class="api apilevel-22.1.0"><a href="PresenterSelector.html">PresenterSelector</a></li>
+          <li class="api apilevel-22.1.0"><a href="PresenterSwitcher.html">PresenterSwitcher</a></li>
+          <li class="api apilevel-25.4.0"><a href="RecyclerViewParallax.html">RecyclerViewParallax</a></li>
+          <li class="api apilevel-25.4.0"><a href="RecyclerViewParallax.ChildPositionProperty.html">RecyclerViewParallax.ChildPositionProperty</a></li>
+          <li class="api apilevel-22.1.0"><a href="Row.html">Row</a></li>
+          <li class="api apilevel-22.1.0"><a href="RowHeaderPresenter.html">RowHeaderPresenter</a></li>
+          <li class="api apilevel-22.1.0"><a href="RowHeaderPresenter.ViewHolder.html">RowHeaderPresenter.ViewHolder</a></li>
+          <li class="api apilevel-22.1.0"><a href="RowHeaderView.html">RowHeaderView</a></li>
+          <li class="api apilevel-22.1.0"><a href="RowPresenter.html">RowPresenter</a></li>
+          <li class="api apilevel-22.1.0"><a href="RowPresenter.ViewHolder.html">RowPresenter.ViewHolder</a></li>
+          <li class="api apilevel-22.1.0"><a href="SearchBar.html">SearchBar</a></li>
+          <li class="api apilevel-22.1.0"><a href="SearchEditText.html">SearchEditText</a></li>
+          <li class="api apilevel-22.1.0"><a href="SearchOrbView.html">SearchOrbView</a></li>
+          <li class="api apilevel-22.1.0"><a href="SearchOrbView.Colors.html">SearchOrbView.Colors</a></li>
+          <li class="api apilevel-24.1.0"><a href="SectionRow.html">SectionRow</a></li>
+          <li class="api apilevel-22.1.0"><a href="ShadowOverlayContainer.html">ShadowOverlayContainer</a></li>
+          <li class="api apilevel-24.1.0"><a href="ShadowOverlayHelper.html">ShadowOverlayHelper</a></li>
+          <li class="api apilevel-24.1.0"><a href="ShadowOverlayHelper.Builder.html">ShadowOverlayHelper.Builder</a></li>
+          <li class="api apilevel-24.1.0"><a href="ShadowOverlayHelper.Options.html">ShadowOverlayHelper.Options</a></li>
+          <li class="api apilevel-22.1.0"><a href="SinglePresenterSelector.html">SinglePresenterSelector</a></li>
+          <li class="api apilevel-22.1.0"><a href="SparseArrayObjectAdapter.html">SparseArrayObjectAdapter</a></li>
+          <li class="api apilevel-22.1.0"><a href="SpeechOrbView.html">SpeechOrbView</a></li>
+          <li class="api apilevel-22.1.0"><a href="TitleHelper.html">TitleHelper</a></li>
+          <li class="api apilevel-22.1.0"><a href="TitleView.html">TitleView</a></li>
+          <li class="api apilevel-24.1.0"><a href="TitleViewAdapter.html">TitleViewAdapter</a></li>
+          <li class="api apilevel-22.1.0"><a href="VerticalGridPresenter.html">VerticalGridPresenter</a></li>
+          <li class="api apilevel-22.1.0"><a href="VerticalGridPresenter.ViewHolder.html">VerticalGridPresenter.ViewHolder</a></li>
+          <li class="api apilevel-22.1.0"><a href="VerticalGridView.html">VerticalGridView</a></li>
+      </ul>
+    </li>
+    
+    
+    
+  </ul>
+  
+</div>
+
+
+
+
+    </div>
+
+    
+
+  
+    
+  
+    
+
+
+
+
+  
+
+
+<footer class="devsite-footer-promos nocontent">
+  <nav class="devsite-full-site-width">
+    <ul class="devsite-footer-promos-list">
+      
+      <li class="devsite-footer-promo">
+        <a href="http://twitter.com/AndroidDev"
+           class="devsite-footer-promo-title gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Twitter Promo"
+           >
+          
+          
+          <img class="devsite-footer-promo-icon" src="https://developer.android.com/static/images/footer/logo-twitter.svg">
+          
+          
+            Twitter
+          
+        </a>
+        <div class="devsite-footer-promo-description">Follow @AndroidDev on Twitter</div>
+      </li>
+      
+      <li class="devsite-footer-promo">
+        <a href="http://plus.google.com/+AndroidDevelopers"
+           class="devsite-footer-promo-title gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Google+ Promo"
+           >
+          
+          
+          <img class="devsite-footer-promo-icon" src="../../../../../../../www.gstatic.com/images/branding/product/2x/google_plus_48dp.png">
+          
+          
+            Google+
+          
+        </a>
+        <div class="devsite-footer-promo-description">Follow Android Developers on Google+</div>
+      </li>
+      
+      <li class="devsite-footer-promo">
+        <a href="http://www.youtube.com/user/androiddevelopers"
+           class="devsite-footer-promo-title gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer YouTube Promo"
+           >
+          
+          
+          <img class="devsite-footer-promo-icon" src="../../../../../../../www.gstatic.com/images/icons/material/product/2x/youtube_48dp.png">
+          
+          
+            YouTube
+          
+        </a>
+        <div class="devsite-footer-promo-description">Check out Android Developers on YouTube</div>
+      </li>
+      
+    </ul>
+  </nav>
+</footer>
+
+
+
+<div class="wrap dac-footer-container">
+  <footer class="dac-footer ">
+    <div class="cols dac-footer-main">
+      <div class="col-1of1">
+        <div class="dac-footer-contact">
+          
+          <a class="dac-footer-contact-link" href="https://developer.android.com/newsletter/index.html" title="Newsletter">Newsletter</a>
+          
+          <a class="dac-footer-contact-link" href="https://android-developers.blogspot.com/" title="Blog" target="_blank">Blog</a>
+          
+          <a class="dac-footer-contact-link" href="https://developer.android.com/support.html" title="Support">Support</a>
+          
+          <a class="dac-footer-contact-link" href="https://docs.google.com/forms/d/e/1FAIpQLSf27XIxoFmNpTjTYdk-m1uKWGqEnd7_4C_E1AD5fdCfyTBWNA/viewform?usp=pp_url&amp;entry.1909689089&amp;entry.208743710&amp;entry.408796755&amp;entry.1341430893&amp;entry.594931249&amp;entry.1640656812&amp;entry.1759804042&amp;entry.1441312344=developer.android.com" title="Join user studies" target="_blank">Join user studies</a>
+        </div>
+      </div>
+    </div>
+
+    <hr class="dac-footer-separator"/>
+      
+      <p class="dac-footer-copyright">
+        
+        Except as noted, this content is licensed under <a href="http://creativecommons.org/licenses/by/2.5/" target="_blank">Creative Commons Attribution 2.5</a>. For details and restrictions, see the <a href="https://developer.android.com/license.html">Content License</a>.
+      </p>
+    
+
+    <p class="dac-footer-links">
+      
+      <a href="https://www.android.com/" title="Android.com" target="_blank">Android.com</a>
+      
+      <a href="https://developer.android.com/" title="Android Developers">Android Developers</a>
+      
+      <a href="https://developer.android.com/studio/index.html" title="Android Studio">Android Studio</a>
+      
+      <a href="https://developer.android.com/distribute/console/index.html" title="Google Play Console">Google Play Console</a>
+      
+      <a href="https://developer.android.com/legal.html" title="Legal Notice">Legal Notice</a>
+    </p>
+
+    
+    <form class="devsite-utility-footer-language" id="setlang" action="https://developer.android.com/i18n/setlang/" method="post">
+      <input type="hidden" name="xsrf_token" value="wClEMe7YmU4Fu9j-PsfhhaGaotEdBdcApTVYz3yBz4I6MTUxMTExMDk2MDYwNjg5MA" />
+      <input type="hidden" name="next" value="GuidedActionsStylist.html">
+      <span id="language" class="locales">
+        <select class="devsite-utility-footer-language-select" name="language">
+          
+          <option value="id"
+            >
+            Bahasa Indonesia
+          </option>
+          
+          <option value="de"
+            >
+            Deutsch
+          </option>
+          
+          <option value="en"
+             selected="selected" >
+            English
+          </option>
+          
+          <option value="es"
+            >
+            español
+          </option>
+          
+          <option value="es-419"
+            >
+            Español (América Latina)
+          </option>
+          
+          <option value="fr"
+            >
+            français
+          </option>
+          
+          <option value="pt-br"
+            >
+            Português Brasileiro
+          </option>
+          
+          <option value="vi"
+            >
+            Tiếng Việt
+          </option>
+          
+          <option value="tr"
+            >
+            Türkçe
+          </option>
+          
+          <option value="ru"
+            >
+            Русский
+          </option>
+          
+          <option value="th"
+            >
+            ภาษาไทย
+          </option>
+          
+          <option value="ja"
+            >
+            日本語
+          </option>
+          
+          <option value="zh-cn"
+            >
+            简体中文
+          </option>
+          
+          <option value="zh-tw"
+            >
+            繁體中文
+          </option>
+          
+          <option value="ko"
+            >
+            한국어
+          </option>
+          
+        </select>
+      </span>
+    </form>
+  </footer>
+</div><!--/.wrap -->
+
+<div class="dac-toast-group">
+  <div class="dac-toast" data-toast>
+    <div class="dac-toast-wrap">
+      
+      This site uses cookies to store your preferences for site-specific language and display options.
+      <button class="dac-toast-close-btn">
+        
+        <span class="dac-button dac-raised dac-primary">OK</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<div data-modal="newsletter" data-newsletter-fb data-swap class="dac-modal newsletter">
+  <div class="dac-modal-container">
+    <div class="dac-modal-window">
+      <header class="dac-modal-header">
+        <div class="dac-modal-header-actions">
+          <button class="dac-modal-header-close" data-modal-toggle></button>
+        </div>
+        <div class="dac-swap" data-swap-container>
+          <section class="dac-swap-section dac-active dac-down">
+            
+            <h2 class="norule dac-modal-header-title" data-t="newsletter.title">Get the latest Android developer news and tips that will help you find success on Google Play.</h2>
+            
+            <p class="dac-modal-header-subtitle" data-t="newsletter.requiredHint">* Required Fields</p>
+          </section>
+          <section class="dac-swap-section dac-up">
+            
+            <h2 class="norule dac-modal-header-title" data-t="newsletter.successTitle">Hooray!</h2>
+          </section>
+        </div>
+      </header>
+      <div class="dac-swap" data-swap-container>
+        <section class="dac-swap-section dac-active dac-left">
+          <form action="https://services.google.com/fb/submissions/android-developer-mailing-list/" class="dac-form" method="post">
+            <section class="dac-modal-content">
+              <fieldset class="dac-form-fieldset">
+                <div class="cols">
+                  <div class="col-1of2 newsletter-leftCol">
+                    <div class="dac-form-input-group">
+                      
+                      <label for="newsletter-full-name" class="dac-form-floatlabel" data-t="newsletter.name">Full name</label>
+                      <input type="text" class="dac-form-input" name="fullname" id="newsletter-full-name" required>
+                      <span class="dac-form-required">*</span>
+                    </div>
+                    <div class="dac-form-input-group">
+                      
+                      <label for="newsletter-email" class="dac-form-floatlabel" data-t="newsletter.email">Email address</label>
+                      <input type="email" class="dac-form-input" name="emailaddress" id="newsletter-email" required>
+                      <span class="dac-form-required">*</span>
+                    </div>
+                  </div>
+                  <div class="col-1of2 newsletter-rightCol">
+                    <div class="dac-form-input-group">
+                      
+                      <label for="newsletter-company" class="dac-form-floatlabel" data-t="newsletter.company">Company / developer name</label>
+                      <input type="text" class="dac-form-input" name="companydevelopername" id="newsletter-company">
+                    </div>
+                    <div class="dac-form-input-group">
+                      
+                      <label for="newsletter-play-store" class="dac-form-floatlabel" data-t="newsletter.appUrl">One of your Play Store app URLs</label>
+                      <input type="url" class="dac-form-input" name="playstoreappurls" id="newsletter-play-store">
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+              <fieldset class="dac-form-fieldset">
+                <div class="cols">
+                  
+                  <div class="col-1of2 newsletter-leftCol newsletter-interested" data-validation-message="Please check at least one item.">
+                    
+                    <legend class="dac-form-legend">What are you interested in?<span class="dac-form-required">*</span></legend>
+                    <div class="dac-form-radio-group">
+                      <input type="checkbox" class="dac-form-checkbox" name="interested" id="interested-whats-new" value="whats-new">
+                      <label for="interested-whats-new" class="dac-form-checkbox-button"></label>
+                      
+                      <label for="interested-whats-new" class="dac-form-label">What's new</label>
+                    </div>
+                    <div class="dac-form-radio-group">
+                      <input type="checkbox" class="dac-form-checkbox" name="interested" id="interested-games-updates" value="games-updates">
+                      <label for="interested-games-updates" class="dac-form-checkbox-button"></label>
+                      
+                      <label for="interested-games-updates" class="dac-form-label">Games updates</label>
+                    </div>
+                    <div class="dac-form-radio-group">
+                      <input type="checkbox" class="dac-form-checkbox" name="interested" id="interested-android-development" value="android-development">
+                      <label for="interested-android-development" class="dac-form-checkbox-button"></label>
+                      
+                      <label for="interested-android-development" class="dac-form-label">Android development</label>
+                    </div>
+                  </div>
+                  <div class="col-1of2 newsletter-rightCol newsletter-checkboxes">
+                    <div class="dac-form-input-group">
+                      
+                      <label for="newsletter-receive-in">Receive newsletter in</label>
+                      <select name="language" class="dac-form-select" id="newsletter-receive-in">
+                        <option value="en-US" selected>English</option>
+                        <option value="ar">Arabic</option>
+                        <option value="zh">Chinese (Simplified)</option>
+                        <option value="zh-TW">Chinese (Traditional)</option>
+                        <option value="fr">French</option>
+                        <option value="de">German</option>
+                        <option value="id">Indonesian (Bahasa)</option>
+                        <option value="ja">Japanese</option>
+                        <option value="ko">Korean</option>
+                        <option value="pt-BR">Portuguese (Brazilian)</option>
+                        <option value="ru">Russian</option>
+                        <option value="es-419">Spanish (Latin American)</option>
+                        <option value="th">Thai</option>
+                        <option value="tr">Turkish</option>
+                        <option value="vi">Vietnamese</option>
+                      </select>
+                    </div>
+                    <div class="dac-form-radio-group">
+                      <div class="dac-media">
+                        <div class="dac-media-figure">
+                          <input type="checkbox" class="dac-form-checkbox" name="marketingoptin" id="newsletter-add" required value="Add me to the mailing list.">
+                          <label for="newsletter-add" class="dac-form-checkbox-button"></label>
+                        </div>
+                        <div class="dac-media-body">
+                          <label for="newsletter-add" class="dac-form-label dac-form-aside">
+                            
+                            Add me to the mailing list.
+                            <span class="dac-form-required">*</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="dac-form-radio-group">
+                      <div class="dac-media">
+                        <div class="dac-media-figure">
+                          <input type="checkbox" class="dac-form-checkbox" name="privacystatement" id="newsletter-terms" required value="I acknowledge that the information provided in this form will be subject to Google's privacy policy (https://www.google.com/policies/privacy/).">
+                          <label for="newsletter-terms" class="dac-form-checkbox-button"></label>
+                        </div>
+                        <div class="dac-media-body">
+                          <label for="newsletter-terms" class="dac-form-label dac-form-aside"><span data-t="newsletter.privacyPolicy" data-t-html>
+                            
+                            I acknowledge that the information provided in this form will be subject to <a href="https://www.google.com/policies/privacy/">Google's privacy policy</a>.
+                          </span>
+                          <span class="dac-form-required">*</span></label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+            </section>
+            <input type="hidden" name="referrer" value="dac">
+            <footer class="dac-modal-footer">
+              <div class="cols">
+                <div class="col-2of5">
+                </div>
+              </div>
+              <button type="submit" value="Submit" class="dac-fab dac-primary dac-large dac-modal-action"><i class="dac-sprite dac-arrow-right"></i></button>
+            </footer>
+          </form>
+        </section>
+        <section class="dac-swap-section dac-right">
+          <div class="dac-modal-content">
+            <p class="newsletter-success-message" data-t="newsletter.successDetails">
+              
+              You have successfully signed up for the latest Android developer news and tips.
+            </p>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</div><!--/.dac-modal.newsletter-->
+
+<div data-modal="wechat" class="dac-modal">
+  <div class="dac-modal-container">
+    <div class="dac-modal-window">
+      <header class="dac-modal-header">
+        <div class="dac-modal-header-actions">
+          <button class="dac-modal-header-close" data-modal-toggle></button>
+        </div>
+        <section>
+          
+          <h2 class="norule dac-modal-header-title">Follow Google Developers on WeChat</h2>
+        </section>
+      </header>
+      <section class="dac-modal-content figure-center center-img">
+        <img src="../../../../../../static/images/qr-wechat.png">
+      </section>
+    </div>
+  </div>
+</div><!--/.dac-modal[dac-modal=wechat]-->
+
+
+<div data-modal="langform" class="dac-modal" id="langform">
+  <div class="dac-modal-container">
+    <div class="dac-modal-window">
+      <header class="dac-modal-header">
+        <div class="dac-modal-header-actions">
+          <button class="dac-modal-header-close" data-modal-toggle></button>
+        </div>
+        <section class="dac-swap-section dac-active dac-down">
+          <h2 class="norule dac-modal-header-title">
+            
+            Browse this site in <span class="span-target-lang"></span>?
+          </h2>
+        </section>
+      </header>
+      <section class="dac-swap-section dac-active dac-left">
+          <section class="dac-modal-content">
+            <fieldset class="dac-form-fieldset">
+              <div class="cols">
+                <div class="col-2of2 langform-leftCol">
+                  <p id="resetLangText">
+                    
+                    You requested a page in <span class="span-target-lang"></span>, but your language preference for this site is <span class="span-current-lang"></span>.
+                  </p>
+                  <p id="resetLangCta">
+                    
+                    Would you like to change your language preference and browse this site in <span class="span-target-lang"></span>? If you want to change your language preference later, use the language menu at the bottom of each page.
+                  </p>
+                </div>
+              </div>
+            </fieldset>
+          </section>
+          <footer class="dac-modal-footer" id="langfooter">
+            <div class="cols">
+              <div class="col-2of5">
+              </div>
+            </div>
+            <a href="#" class="yes" onclick="return false;">
+              <button class="button dac-primary dac-modal-action lang yes" data-t="newsletter.resetLangButtonYes" data-modal-toggle>
+                
+                Change Language
+              </button>
+            </a>
+            <a href="#" class="" onclick="return false;">
+              <button class="button dac-primary dac-modal-action lang no" data-t="newsletter.resetLangButtonNo" data-modal-toggle>
+                
+                Not Now
+              </button>
+            </a>
+          </footer>
+        </form>
+      </section>
+    </div>
+  </div>
+</div><!--/.dac-modal-->
+
+
+<div data-modal="api-unavailable" class="dac-modal" id="api-unavailable">
+  <div class="dac-modal-container">
+    <div class="dac-modal-window">
+      <header class="dac-modal-header">
+        <div class="dac-modal-header-actions">
+          <button class="dac-modal-header-close" data-modal-toggle></button>
+        </div>
+        <section class="dac-swap-section dac-active dac-down">
+          <h2 class="norule dac-modal-header-title">
+            
+            This class requires API level <span class="api-level"></span> or higher
+          </h2>
+        </section>
+      </header>
+      <section class="dac-swap-section dac-active dac-left">
+          <section class="dac-modal-content">
+            <p>
+              
+              This doc is hidden because your selected API level for the documentation is <span class="api-level"></span>. You can change the documentation API level with the selector above the left navigation.
+            </p>
+            
+            <p>For more information about specifying the API level your app requires, read <a href="https://developer.android.com/training/basics/supporting-devices/platforms.html">Supporting Different Platform Versions</a>.</p>
+          </section>
+          <footer class="dac-modal-footer" id="langfooter">
+            <div class="cols">
+              <div class="col-2of5">
+              </div>
+            </div>
+            <a href="#" class="ok" onclick="return false;">
+              <button class="button dac-primary dac-modal-action ok"
+              data-modal-toggle>
+                
+                OK, make this page visible
+              </button>
+            </a>
+          </footer>
+        </form>
+      </section>
+    </div>
+  </div>
+</div><!--/.dac-modal#api-unavailable-->
+
+    
+  </div><!--/#body-content-->
+
+  <!-- Nav Setup -->
+  <script>$('[data-dac-nav]').dacNav();</script>
+  <script type="text/javascript">
+    $('.slideshow-container').dacSlideshow({
+        btnPrev: '.slideshow-prev',
+        btnNext: '.slideshow-next',
+        btnPause: '#pauseButton'
+    });
+
+    $(".feed").dacTabbedList({
+      nav_id: '.feed-nav',
+      frame_id: '.feed-frame'
+    });
+  </script>
+  
+  <script src="../../../../../../ytblogger_lists_unified8941.js?v=2017111905" defer></script>
+  <script src="../../../../../../android_metadata_en8941.js?v=2017111905" defer></script>
+  
+  <script src="../../../../../lists8941.js?v=2017111905" defer></script>
+  <script src="../../../../../gms_lists8941.js?v=2017111905" defer></script>
+  <script src="../../../wearable/lists8941.js?v=2017111905" defer></script>
+  <script src="../../../test/lists8941.js?v=2017111905" defer></script>
+  <script src="../../../constraint/lists8941.js?v=2017111905" defer></script>
+  <script src="../../../../arch/lists8941.js?v=2017111905" defer></script>
+  <script src="https://developer.android.com/_static2/268f0926ba/jsi18n/"></script>
+  <script>
+    // Load localized metadata.
+    (function(lang) {
+      if (lang === 'en') { return; }
+      document.write('<script src="https://developer.android.com/android_metadata_en.js?v=2017111905" defer></' + 'script>');
+    })(getLangPref())
+
+    // Add skip to content for accessibility.
+    $('#skip-to-main').click(function() {
+      $('a[name=top]').focus();
+    });
+
+    $('.devsite-utility-footer-language-select').each(function() {
+      $(this).change(function() {
+        changeLangPref(this.value, true)
+        $('.devsite-utility-footer-language').submit();
+      });
+    });
+  </script>
+
+  <script>
+    (function($) {
+      devsite.analytics.InitAnalytics();
+      devsite.navigatingRadio.init();
+      devsite.kennedy.InitializeTabbars();
+      // overflowMenu must be initialized after tabbar.
+      devsite.overflowMenu.init();
+    })(jQuery);
+  </script>
+
+  
+
+
+<div id="survey-box-wrapper">
+  <div class="material-dialog" style="width:270px">
+    <div class="material-dialog-title">
+      Take a short survey?
+    </div>
+    <div class="material-dialog-description">
+      Help us improve the Android developer experience.
+      <br>(Sep 2017 survey)
+    </div>
+    <div class="material-button-bar">
+      <a class="dac-button dac-primary dac-raised" target="_blank"
+          href="https://goo.gl/dNPzCR">Okay</a>
+      <a class="dac-button" href="#">No thanks</a>
+    </div>
+  </div>
+</div>
+
+</body>
+
+<!-- Mirrored from developer.android.com/reference/android/support/v17/leanback/widget/GuidedActionsStylist.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 19 Nov 2017 17:20:13 GMT -->
+</html>

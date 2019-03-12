@@ -1,0 +1,4976 @@
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/Article">
+
+<!-- Mirrored from developer.android.com/reference/java/net/URI.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 19 Nov 2017 16:43:52 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+
+  
+
+
+
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+
+
+
+
+
+<script>var a=window.devsite||{};window.devsite=a;a.readyCallbacks=[];window.devsite.readyCallbacks=a.readyCallbacks;a.ready=function(b){a.readyCallbacks.push(b)};window.devsite.ready=a.ready;
+</script>
+
+<meta charset="utf-8">
+
+
+
+<meta name="xsrf_token" content="_le9QC4gix1gMIrIldh6VAvHcLpTyrl3ANuGpmsVdGU6MTUxMTEwNzIyOTIwMTE5MA" />
+
+  
+    <link rel="canonical" href="URI.html">
+  
+
+  
+    <link rel="alternate" href="URI.html" hreflang="en">
+  
+    <link rel="alternate" href="https://developer.android.google.cn/reference/java/net/URI.html" hreflang="en-cn">
+  
+
+  <link rel="alternate" href="URI.html" hreflang="x-default">
+
+
+
+
+<link rel="shortcut icon" href="../../../_static/268f0926ba/images/android/favicon.png">
+
+<link rel="apple-touch-icon" href="../../../_static/268f0926ba/images/android/touchicon-180.png">
+
+
+<title>
+
+  URI | Android Developers
+
+</title>
+
+
+
+  <meta itemprop="dateModified" content="2017-10-25T17:01:23.051420">
+
+
+<!-- STYLESHEETS -->
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto+Condensed">
+<link rel="stylesheet"
+    href="http://fonts.googleapis.com/css?family=Roboto:light,regular,medium,thin,italic,mediumitalic,bold"
+    title="roboto">
+<link rel="stylesheet" href="../../../_static/268f0926ba/css/dac-devsite.css">
+
+
+
+
+
+
+
+<link href="../../../static/css/default9a55.css?v=2017111904" rel="stylesheet" type="text/css">
+<!-- JAVASCRIPT -->
+<script src="../../../_static/268f0926ba/js/android_3p-bundle.js" type="text/javascript"></script>
+<script src="../../../_static/268f0926ba/js/script_foot_closure_android.js"></script>
+<script src="../../../_static/268f0926ba/js/script_foot_android.js"></script>
+
+<script type="text/javascript">
+  var toRoot = 'https://developer.android.com/';
+  devsite.permissions.init({"f62218c009ec029abef196bba5aa34cf": true, "098dafe57affddc137df300142652cfd": false, "8e03e230de0bd8a6fe173fdf172e8b3f": false, "cb025a64a50094835616312f4774a53d": true, "c95bf81627eb648c2345aec06a66200a": true, "51470233c56fc1fde50f00b73c52b216": false, "d169d485cf24243a263783dbe42029b1": true, "039e5d84b87fd75807ffb37b7f1bbf2c": true, "752953480de00a336d911a46966cc16d": false, "700def1a83e356c06c0925afb05de4b0": false, "6749dcb526ce9bde6993550c7d928d24": true});
+
+  var replaceBlog = false;
+  var replaceYouTube = false;
+  var siteDefaultLocale = 'en';
+
+  var ANDROID_LANGUAGES = [
+      'id','de','en','es','es-419','fr','pt-br','vi','tr','ru','th','ja','zh-cn','zh-tw','ko'
+  ];
+</script>
+<script src="../../../static/js/docs9a55.js?v=2017111904" type="text/javascript"></script>
+
+
+</head>
+
+<body class="gc-documentation
+            api apilevel-1
+            
+              develop
+              reference
+            
+            ">
+  
+
+
+  
+    <input class="google-analytics-id-json" type="hidden" value="{&quot;dimensions&quot;: {&quot;dimension6&quot;: &quot;en&quot;, &quot;dimension4&quot;: &quot;Reference&quot;, &quot;dimension5&quot;: &quot;en&quot;, &quot;dimension3&quot;: false, &quot;dimension1&quot;: &quot;Signed out&quot;, &quot;dimension8&quot;: null}, &quot;gaid&quot;: &quot;UA-49880327-2&quot;}">
+  
+    <input class="google-analytics-id-json" type="hidden" value="{&quot;dimensions&quot;: {&quot;dimension6&quot;: &quot;en&quot;, &quot;dimension4&quot;: &quot;Reference&quot;, &quot;dimension5&quot;: &quot;en&quot;, &quot;dimension3&quot;: false, &quot;dimension1&quot;: &quot;Signed out&quot;, &quot;dimension8&quot;: null}, &quot;gaid&quot;: &quot;UA-5831155-1&quot;}">
+  
+
+
+
+  
+  
+    <script>
+      var dataLayer = [{"freeTrialEligibleUser": "False", "userCountry": "BD", "language": {"requested": "en", "served": "en"}, "projectName": "Reference", "scriptsafe": null, "signedIn": "False", "internalUser": "False"}];
+    </script>
+  
+
+
+
+  
+  <a href="#top" id="skip-to-main">Skip to content</a>
+  <header id="header-wrapper">
+    <div class="dac-header" id="header">
+      <div class="dac-header-inner">
+        
+        <a class="dac-nav-toggle" data-dac-toggle-nav href="#" title="Open navigation">
+          <span class="dac-nav-hamburger">
+            <span class="dac-nav-hamburger-top"></span>
+            <span class="dac-nav-hamburger-mid"></span>
+            <span class="dac-nav-hamburger-bot"></span>
+          </span>
+        </a>
+        
+        <a class="dac-header-logo" href="https://developer.android.com/index.html">
+          <img class="dac-header-logo-image" src="../../../static/images/android_logo.png"
+              srcset="https://developer.android.com/static/images/android_logo_2x.png 2x"
+              width="32" height="36" alt="Android"> Developers</a>
+        <ul class="dac-header-tabs">
+          <li>
+            <a class="dac-header-tab" href="https://developer.android.com/design/index.html"
+               zh-tw-lang="設計"
+               zh-cn-lang="设计"
+               ru-lang="Проектирование"
+               ko-lang="디자인"
+               ja-lang="設計"
+               es-lang="Diseñar">
+              
+              Design</a>
+          </li>
+          <li>
+            <a class="dac-header-tab" href="https://developer.android.com/develop/index.html"
+               zh-tw-lang="開發"
+               zh-cn-lang="开发"
+               ru-lang="Разработка"
+               ko-lang="개발"
+               ja-lang="開発"
+               es-lang="Desarrollar">
+              
+              Develop</a>
+          </li>
+          <li>
+            <a class="dac-header-tab" href="https://developer.android.com/distribute/index.html"
+               zh-tw-lang="發佈"
+               zh-cn-lang="分发"
+               ru-lang="Распространение"
+               ko-lang="배포"
+               ja-lang="配布"
+               es-lang="Distribuir">
+              
+              Distribute</a>
+          </li>
+        </ul>
+
+
+        
+
+        <a class="dac-header-console-btn gc-analytics-event" href="https://play.google.com/apps/publish/"
+           data-category="User" data-action="Console" data-label="Clicked">
+          
+          <img src="https://developer.android.com/static/images/developer-console-icon.svg" width="18" height="19" alt="">Play Console</a>
+        
+
+<form data-search="" class="dac-header-search">
+  <button class="dac-header-search-close" data-search-close="">
+    <i class="dac-sprite dac-back-arrow"></i>
+  </button>
+
+  <div class="dac-header-search-inner">
+    <i class="dac-sprite dac-search-white dac-header-search-icon"></i>
+    
+    <input id="search_autocomplete" type="text" value="" autocomplete="off" name="q" class="dac-header-search-input" placeholder="Search">
+    <button class="dac-header-search-clear dac-hidden" data-search-clear="">
+      <i class="dac-sprite dac-close-black"></i>
+    </button>
+  </div>
+</form>
+
+        
+      </div><!--/.header-wrap.wrap-->
+    </div><!--/.header-->
+
+    
+
+<div id="search-results" class="dac-search-results">
+  <div id="dac-search-results-history" class="dac-search-results-history">
+    <div class="wrap dac-search-results-history-wrap">
+      <div class="cols">
+        <div class="col-1of2 col-tablet-1of2 col-mobile-1of1">
+          
+          <h2>Most visited</h2>
+          <div class="resource-flow-layout" data-history-query="history:most/visited" data-maxresults="3" data-cardsizes="18x2"></div>
+        </div>
+
+        <div class="col-1of2 col-tablet-1of2 col-mobile-1of1">
+          
+          <h2>Recently visited</h2>
+          <div class="resource-flow-layout cols" data-history-query="history:recent" data-allow-duplicates="true" data-maxresults="3" data-cardsizes="18x2"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="dac-search-results-content" class="dac-search-results-content">
+    <div class="dac-search-results-metadata wrap">
+      <div class="dac-search-results-for">
+          <h2>
+          
+          Results for <span id="search-results-for"></span>
+          </h2>
+      </div>
+
+      <div id="dac-search-results-hero"></div>
+
+      <div class="dac-search-results-hero cols">
+        <div id="dac-search-results-reference" class="col-6of6 col-tablet-2of2 col-mobile-1of1">
+          <div class="suggest-card reference no-display">
+            <ul class="dac-search-results-reference">
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="cols dac-search-results-cse">
+        <script src="../../../../cse.google.com/f4116.txt?cx=000521750095050289010:zpcpi1ea4s8" async></script>
+        <gcse:searchresults-only linkTarget="_self"></gcse:searchresults-only>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </header>
+
+  <a name="navigation" tabindex=0 class="nav-start-marker">navigation</a>
+  <nav class="dac-nav">
+    <div class="dac-nav-dimmer" data-dac-toggle-nav></div>
+    <div class="dac-nav-sidebar" data-swap data-dynamic="false" data-transition-speed="300" data-dac-nav>
+      <div data-swap-container>
+        
+        <a class="dac-nav-back-button dac-swap-section dac-up dac-no-anim" tabindex=0 data-swap-button>
+          
+          
+          <i class="dac-sprite dac-nav-back"></i> <span class="dac-nav-back-title">Back</span>
+        </a>
+
+        <div class="dac-nav-sub dac-swap-section dac-right dac-active" itemscope
+            itemtype="http://schema.org/SiteNavigationElement">
+          
+          
+            
+              
+              <button data-fullscreen="" class="dac-nav-fullscreen">
+                <i class="dac-sprite dac-fullscreen"></i>
+              </button>
+              <script>$('[data-fullscreen]').dacFullscreen();</script>
+              <div id="devdoc-nav">
+                <div id="api-nav-header">
+                  <div id="api-level-toggle">
+                    <label for="apiLevelCheckbox" class="disabled"
+                        
+                        title="Select your target API level to dim unavailable APIs">
+                        
+                        API:
+                    </label>
+                    <div class="select-wrapper">
+                      <select id="apiLevelSelector"></select>
+                    </div>
+                  </div><!-- end toggle -->
+                  <div id="api-nav-title">
+                    <select id="reference-selector">
+                      
+                      <option value="android">Android Platform</option>
+                      
+                      
+                      <option value="android/support">Android Support Library</option>
+                      
+                      
+                      <option value="android/arch">Architecture Components</option>
+                      
+                      <option value="android/support/constraint">Constraint Library</option>
+                      
+                      <option value="com/android/billingclient">Play Billing Library</option>
+                      
+                      <option value="android/support/test">Test Support Library</option>
+                      
+                      <option value="android/support/wearable">Wearable Library</option>
+                    </select>
+                  </div>
+                </div><!-- end nav header -->
+                <script>
+                  buildApiLevelSelector();
+                  initReferenceSelector();
+                </script>
+                <div class="dac-reference-nav" data-reference-tree="">
+                  <ul class="dac-reference-nav-list" data-reference-namespaces="">
+                    <li class="api no-toggle"><a href="../../classes.html" >Class Index</a></li><li class="api no-toggle"><a href="../../packages.html" >Package Index</a></li><li class="api apilevel-1"><a href="../../android/package-summary.html" >android</a></li><li class="api apilevel-4"><a href="../../android/accessibilityservice/package-summary.html" >android.accessibilityservice</a></li><li class="api apilevel-5"><a href="../../android/accounts/package-summary.html" >android.accounts</a></li><li class="api apilevel-11"><a href="../../android/animation/package-summary.html" >android.animation</a></li><li class="api apilevel-16"><a href="../../android/annotation/package-summary.html" >android.annotation</a></li><li class="api apilevel-1"><a href="../../android/app/package-summary.html" >android.app</a></li><li class="api apilevel-8"><a href="../../android/app/admin/package-summary.html" >android.app.admin</a></li><li class="api apilevel-23"><a href="../../android/app/assist/package-summary.html" >android.app.assist</a></li><li class="api apilevel-8"><a href="../../android/app/backup/package-summary.html" >android.app.backup</a></li><li class="api apilevel-21"><a href="../../android/app/job/package-summary.html" >android.app.job</a></li><li class="api apilevel-21"><a href="../../android/app/usage/package-summary.html" >android.app.usage</a></li><li class="api apilevel-3"><a href="../../android/appwidget/package-summary.html" >android.appwidget</a></li><li class="api apilevel-5"><a href="../../android/bluetooth/package-summary.html" >android.bluetooth</a></li><li class="api apilevel-21"><a href="../../android/bluetooth/le/package-summary.html" >android.bluetooth.le</a></li><li class="api apilevel-26"><a href="../../android/companion/package-summary.html" >android.companion</a></li><li class="api apilevel-1"><a href="../../android/content/package-summary.html" >android.content</a></li><li class="api apilevel-1"><a href="../../android/content/pm/package-summary.html" >android.content.pm</a></li><li class="api apilevel-1"><a href="../../android/content/res/package-summary.html" >android.content.res</a></li><li class="api apilevel-1"><a href="../../android/database/package-summary.html" >android.database</a></li><li class="api apilevel-1"><a href="../../android/database/sqlite/package-summary.html" >android.database.sqlite</a></li><li class="api apilevel-"><a href="../../android/databinding/package-summary.html" >android.databinding</a></li><li class="api apilevel-11"><a href="../../android/drm/package-summary.html" >android.drm</a></li><li class="api apilevel-4"><a href="../../android/gesture/package-summary.html" >android.gesture</a></li><li class="api apilevel-1"><a href="../../android/graphics/package-summary.html" >android.graphics</a></li><li class="api apilevel-1"><a href="../../android/graphics/drawable/package-summary.html" >android.graphics.drawable</a></li><li class="api apilevel-1"><a href="../../android/graphics/drawable/shapes/package-summary.html" >android.graphics.drawable.shapes</a></li><li class="api apilevel-26"><a href="../../android/graphics/fonts/package-summary.html" >android.graphics.fonts</a></li><li class="api apilevel-19"><a href="../../android/graphics/pdf/package-summary.html" >android.graphics.pdf</a></li><li class="api apilevel-1"><a href="../../android/hardware/package-summary.html" >android.hardware</a></li><li class="api apilevel-21"><a href="../../android/hardware/camera2/package-summary.html" >android.hardware.camera2</a></li><li class="api apilevel-21"><a href="../../android/hardware/camera2/params/package-summary.html" >android.hardware.camera2.params</a></li><li class="api apilevel-17"><a href="../../android/hardware/display/package-summary.html" >android.hardware.display</a></li><li class="api apilevel-23"><a href="../../android/hardware/fingerprint/package-summary.html" >android.hardware.fingerprint</a></li><li class="api apilevel-16"><a href="../../android/hardware/input/package-summary.html" >android.hardware.input</a></li><li class="api apilevel-12"><a href="../../android/hardware/usb/package-summary.html" >android.hardware.usb</a></li><li class="api apilevel-24"><a href="../../android/icu/lang/package-summary.html" >android.icu.lang</a></li><li class="api apilevel-24"><a href="../../android/icu/math/package-summary.html" >android.icu.math</a></li><li class="api apilevel-24"><a href="../../android/icu/text/package-summary.html" >android.icu.text</a></li><li class="api apilevel-24"><a href="../../android/icu/util/package-summary.html" >android.icu.util</a></li><li class="api apilevel-3"><a href="../../android/inputmethodservice/package-summary.html" >android.inputmethodservice</a></li><li class="api apilevel-1"><a href="../../android/location/package-summary.html" >android.location</a></li><li class="api apilevel-1"><a href="../../android/media/package-summary.html" >android.media</a></li><li class="api apilevel-9"><a href="../../android/media/audiofx/package-summary.html" >android.media.audiofx</a></li><li class="api apilevel-21"><a href="../../android/media/browse/package-summary.html" >android.media.browse</a></li><li class="api apilevel-14"><a href="../../android/media/effect/package-summary.html" >android.media.effect</a></li><li class="api apilevel-23"><a href="../../android/media/midi/package-summary.html" >android.media.midi</a></li><li class="api apilevel-21"><a href="../../android/media/projection/package-summary.html" >android.media.projection</a></li><li class="api apilevel-21"><a href="../../android/media/session/package-summary.html" >android.media.session</a></li><li class="api apilevel-21"><a href="../../android/media/tv/package-summary.html" >android.media.tv</a></li><li class="api apilevel-12"><a href="../../android/mtp/package-summary.html" >android.mtp</a></li><li class="api apilevel-1"><a href="../../android/net/package-summary.html" >android.net</a></li><li class="api apilevel-1"><a href="../../android/net/http/package-summary.html" >android.net.http</a></li><li class="api apilevel-16"><a href="../../android/net/nsd/package-summary.html" >android.net.nsd</a></li><li class="api apilevel-12"><a href="../../android/net/rtp/package-summary.html" >android.net.rtp</a></li><li class="api apilevel-9"><a href="../../android/net/sip/package-summary.html" >android.net.sip</a></li><li class="api apilevel-1"><a href="../../android/net/wifi/package-summary.html" >android.net.wifi</a></li><li class="api apilevel-26"><a href="../../android/net/wifi/aware/package-summary.html" >android.net.wifi.aware</a></li><li class="api apilevel-26"><a href="../../android/net/wifi/hotspot2/package-summary.html" >android.net.wifi.hotspot2</a></li><li class="api apilevel-26"><a href="../../android/net/wifi/hotspot2/omadm/package-summary.html" >android.net.wifi.hotspot2.omadm</a></li><li class="api apilevel-26"><a href="../../android/net/wifi/hotspot2/pps/package-summary.html" >android.net.wifi.hotspot2.pps</a></li><li class="api apilevel-14"><a href="../../android/net/wifi/p2p/package-summary.html" >android.net.wifi.p2p</a></li><li class="api apilevel-16"><a href="../../android/net/wifi/p2p/nsd/package-summary.html" >android.net.wifi.p2p.nsd</a></li><li class="api apilevel-9"><a href="../../android/nfc/package-summary.html" >android.nfc</a></li><li class="api apilevel-19"><a href="../../android/nfc/cardemulation/package-summary.html" >android.nfc.cardemulation</a></li><li class="api apilevel-10"><a href="../../android/nfc/tech/package-summary.html" >android.nfc.tech</a></li><li class="api apilevel-1"><a href="../../android/opengl/package-summary.html" >android.opengl</a></li><li class="api apilevel-1"><a href="../../android/os/package-summary.html" >android.os</a></li><li class="api apilevel-24"><a href="../../android/os/health/package-summary.html" >android.os.health</a></li><li class="api apilevel-9"><a href="../../android/os/storage/package-summary.html" >android.os.storage</a></li><li class="api apilevel-1"><a href="../../android/preference/package-summary.html" >android.preference</a></li><li class="api apilevel-19"><a href="../../android/print/package-summary.html" >android.print</a></li><li class="api apilevel-19"><a href="../../android/print/pdf/package-summary.html" >android.print.pdf</a></li><li class="api apilevel-19"><a href="../../android/printservice/package-summary.html" >android.printservice</a></li><li class="api apilevel-1"><a href="../../android/provider/package-summary.html" >android.provider</a></li><li class="api apilevel-11"><a href="../../android/renderscript/package-summary.html" >android.renderscript</a></li><li class="api apilevel-1"><a href="../../android/sax/package-summary.html" >android.sax</a></li><li class="api apilevel-14"><a href="../../android/security/package-summary.html" >android.security</a></li><li class="api apilevel-23"><a href="../../android/security/keystore/package-summary.html" >android.security.keystore</a></li><li class="api apilevel-26"><a href="../../android/service/autofill/package-summary.html" >android.service.autofill</a></li><li class="api apilevel-22"><a href="../../android/service/carrier/package-summary.html" >android.service.carrier</a></li><li class="api apilevel-23"><a href="../../android/service/chooser/package-summary.html" >android.service.chooser</a></li><li class="api apilevel-17"><a href="../../android/service/dreams/package-summary.html" >android.service.dreams</a></li><li class="api apilevel-21"><a href="../../android/service/media/package-summary.html" >android.service.media</a></li><li class="api apilevel-18"><a href="../../android/service/notification/package-summary.html" >android.service.notification</a></li><li class="api apilevel-24"><a href="../../android/service/quicksettings/package-summary.html" >android.service.quicksettings</a></li><li class="api apilevel-21"><a href="../../android/service/restrictions/package-summary.html" >android.service.restrictions</a></li><li class="api apilevel-14"><a href="../../android/service/textservice/package-summary.html" >android.service.textservice</a></li><li class="api apilevel-21"><a href="../../android/service/voice/package-summary.html" >android.service.voice</a></li><li class="api apilevel-24"><a href="../../android/service/vr/package-summary.html" >android.service.vr</a></li><li class="api apilevel-7"><a href="../../android/service/wallpaper/package-summary.html" >android.service.wallpaper</a></li><li class="api apilevel-3"><a href="../../android/speech/package-summary.html" >android.speech</a></li><li class="api apilevel-4"><a href="../../android/speech/tts/package-summary.html" >android.speech.tts</a></li><li class="api apilevel-21"><a href="../../android/system/package-summary.html" >android.system</a></li><li class="api apilevel-21"><a href="../../android/telecom/package-summary.html" >android.telecom</a></li><li class="api apilevel-1"><a href="../../android/telephony/package-summary.html" >android.telephony</a></li><li class="api apilevel-5"><a href="../../android/telephony/cdma/package-summary.html" >android.telephony.cdma</a></li><li class="api apilevel-1"><a href="../../android/telephony/gsm/package-summary.html" >android.telephony.gsm</a></li><li class="api apilevel-1"><a href="../../android/test/package-summary.html" >android.test</a></li><li class="api apilevel-1"><a href="../../android/test/mock/package-summary.html" >android.test.mock</a></li><li class="api apilevel-1"><a href="../../android/test/suitebuilder/package-summary.html" >android.test.suitebuilder</a></li><li class="api apilevel-1"><a href="../../android/test/suitebuilder/annotation/package-summary.html" >android.test.suitebuilder.annotation</a></li><li class="api apilevel-1"><a href="../../android/text/package-summary.html" >android.text</a></li><li class="api apilevel-3"><a href="../../android/text/format/package-summary.html" >android.text.format</a></li><li class="api apilevel-1"><a href="../../android/text/method/package-summary.html" >android.text.method</a></li><li class="api apilevel-1"><a href="../../android/text/style/package-summary.html" >android.text.style</a></li><li class="api apilevel-1"><a href="../../android/text/util/package-summary.html" >android.text.util</a></li><li class="api apilevel-19"><a href="../../android/transition/package-summary.html" >android.transition</a></li><li class="api apilevel-1"><a href="../../android/util/package-summary.html" >android.util</a></li><li class="api apilevel-1"><a href="../../android/view/package-summary.html" >android.view</a></li><li class="api apilevel-4"><a href="../../android/view/accessibility/package-summary.html" >android.view.accessibility</a></li><li class="api apilevel-1"><a href="../../android/view/animation/package-summary.html" >android.view.animation</a></li><li class="api apilevel-26"><a href="../../android/view/autofill/package-summary.html" >android.view.autofill</a></li><li class="api apilevel-3"><a href="../../android/view/inputmethod/package-summary.html" >android.view.inputmethod</a></li><li class="api apilevel-26"><a href="../../android/view/textclassifier/package-summary.html" >android.view.textclassifier</a></li><li class="api apilevel-14"><a href="../../android/view/textservice/package-summary.html" >android.view.textservice</a></li><li class="api apilevel-1"><a href="../../android/webkit/package-summary.html" >android.webkit</a></li><li class="api apilevel-1"><a href="../../android/widget/package-summary.html" >android.widget</a></li><li class="api apilevel-1"><a href="../../com/android/internal/util/package-summary.html" >com.android.internal.util</a></li><li class="api apilevel-1"><a href="../../dalvik/annotation/package-summary.html" >dalvik.annotation</a></li><li class="api apilevel-1"><a href="../../dalvik/bytecode/package-summary.html" >dalvik.bytecode</a></li><li class="api apilevel-1"><a href="../../dalvik/system/package-summary.html" >dalvik.system</a></li><li class="api apilevel-1"><a href="../awt/font/package-summary.html" >java.awt.font</a></li><li class="api apilevel-3"><a href="../beans/package-summary.html" >java.beans</a></li><li class="api apilevel-1"><a href="../io/package-summary.html" >java.io</a></li><li class="api apilevel-1"><a href="../lang/package-summary.html" >java.lang</a></li><li class="api apilevel-1"><a href="../lang/annotation/package-summary.html" >java.lang.annotation</a></li><li class="api apilevel-26"><a href="../lang/invoke/package-summary.html" >java.lang.invoke</a></li><li class="api apilevel-1"><a href="../lang/ref/package-summary.html" >java.lang.ref</a></li><li class="api apilevel-1"><a href="../lang/reflect/package-summary.html" >java.lang.reflect</a></li><li class="api apilevel-1"><a href="../math/package-summary.html" >java.math</a></li><li class="api apilevel-1"><a href="package-summary.html" >java.net</a></li><li class="api apilevel-1"><a href="../nio/package-summary.html" >java.nio</a></li><li class="api apilevel-1"><a href="../nio/channels/package-summary.html" >java.nio.channels</a></li><li class="api apilevel-1"><a href="../nio/channels/spi/package-summary.html" >java.nio.channels.spi</a></li><li class="api apilevel-1"><a href="../nio/charset/package-summary.html" >java.nio.charset</a></li><li class="api apilevel-1"><a href="../nio/charset/spi/package-summary.html" >java.nio.charset.spi</a></li><li class="api apilevel-26"><a href="../nio/file/package-summary.html" >java.nio.file</a></li><li class="api apilevel-26"><a href="../nio/file/attribute/package-summary.html" >java.nio.file.attribute</a></li><li class="api apilevel-26"><a href="../nio/file/spi/package-summary.html" >java.nio.file.spi</a></li><li class="api apilevel-1"><a href="../security/package-summary.html" >java.security</a></li><li class="api apilevel-1"><a href="../security/acl/package-summary.html" >java.security.acl</a></li><li class="api apilevel-1"><a href="../security/cert/package-summary.html" >java.security.cert</a></li><li class="api apilevel-1"><a href="../security/interfaces/package-summary.html" >java.security.interfaces</a></li><li class="api apilevel-1"><a href="../security/spec/package-summary.html" >java.security.spec</a></li><li class="api apilevel-1"><a href="../sql/package-summary.html" >java.sql</a></li><li class="api apilevel-1"><a href="../text/package-summary.html" >java.text</a></li><li class="api apilevel-26"><a href="../time/package-summary.html" >java.time</a></li><li class="api apilevel-26"><a href="../time/chrono/package-summary.html" >java.time.chrono</a></li><li class="api apilevel-26"><a href="../time/format/package-summary.html" >java.time.format</a></li><li class="api apilevel-26"><a href="../time/temporal/package-summary.html" >java.time.temporal</a></li><li class="api apilevel-26"><a href="../time/zone/package-summary.html" >java.time.zone</a></li><li class="api apilevel-1"><a href="../util/package-summary.html" >java.util</a></li><li class="api apilevel-1"><a href="../util/concurrent/package-summary.html" >java.util.concurrent</a></li><li class="api apilevel-1"><a href="../util/concurrent/atomic/package-summary.html" >java.util.concurrent.atomic</a></li><li class="api apilevel-1"><a href="../util/concurrent/locks/package-summary.html" >java.util.concurrent.locks</a></li><li class="api apilevel-24"><a href="../util/function/package-summary.html" >java.util.function</a></li><li class="api apilevel-1"><a href="../util/jar/package-summary.html" >java.util.jar</a></li><li class="api apilevel-1"><a href="../util/logging/package-summary.html" >java.util.logging</a></li><li class="api apilevel-1"><a href="../util/prefs/package-summary.html" >java.util.prefs</a></li><li class="api apilevel-1"><a href="../util/regex/package-summary.html" >java.util.regex</a></li><li class="api apilevel-24"><a href="../util/stream/package-summary.html" >java.util.stream</a></li><li class="api apilevel-1"><a href="../util/zip/package-summary.html" >java.util.zip</a></li><li class="api apilevel-1"><a href="../../javax/crypto/package-summary.html" >javax.crypto</a></li><li class="api apilevel-1"><a href="../../javax/crypto/interfaces/package-summary.html" >javax.crypto.interfaces</a></li><li class="api apilevel-1"><a href="../../javax/crypto/spec/package-summary.html" >javax.crypto.spec</a></li><li class="api apilevel-1"><a href="../../javax/microedition/khronos/egl/package-summary.html" >javax.microedition.khronos.egl</a></li><li class="api apilevel-1"><a href="../../javax/microedition/khronos/opengles/package-summary.html" >javax.microedition.khronos.opengles</a></li><li class="api apilevel-1"><a href="../../javax/net/package-summary.html" >javax.net</a></li><li class="api apilevel-1"><a href="../../javax/net/ssl/package-summary.html" >javax.net.ssl</a></li><li class="api apilevel-1"><a href="../../javax/security/auth/package-summary.html" >javax.security.auth</a></li><li class="api apilevel-1"><a href="../../javax/security/auth/callback/package-summary.html" >javax.security.auth.callback</a></li><li class="api apilevel-1"><a href="../../javax/security/auth/login/package-summary.html" >javax.security.auth.login</a></li><li class="api apilevel-1"><a href="../../javax/security/auth/x500/package-summary.html" >javax.security.auth.x500</a></li><li class="api apilevel-1"><a href="../../javax/security/cert/package-summary.html" >javax.security.cert</a></li><li class="api apilevel-1"><a href="../../javax/sql/package-summary.html" >javax.sql</a></li><li class="api apilevel-1"><a href="../../javax/xml/package-summary.html" >javax.xml</a></li><li class="api apilevel-8"><a href="../../javax/xml/datatype/package-summary.html" >javax.xml.datatype</a></li><li class="api apilevel-8"><a href="../../javax/xml/namespace/package-summary.html" >javax.xml.namespace</a></li><li class="api apilevel-1"><a href="../../javax/xml/parsers/package-summary.html" >javax.xml.parsers</a></li><li class="api apilevel-8"><a href="../../javax/xml/transform/package-summary.html" >javax.xml.transform</a></li><li class="api apilevel-8"><a href="../../javax/xml/transform/dom/package-summary.html" >javax.xml.transform.dom</a></li><li class="api apilevel-8"><a href="../../javax/xml/transform/sax/package-summary.html" >javax.xml.transform.sax</a></li><li class="api apilevel-8"><a href="../../javax/xml/transform/stream/package-summary.html" >javax.xml.transform.stream</a></li><li class="api apilevel-8"><a href="../../javax/xml/validation/package-summary.html" >javax.xml.validation</a></li><li class="api apilevel-8"><a href="../../javax/xml/xpath/package-summary.html" >javax.xml.xpath</a></li><li class="api apilevel-1"><a href="../../junit/framework/package-summary.html" >junit.framework</a></li><li class="api apilevel-1"><a href="../../junit/runner/package-summary.html" >junit.runner</a></li><li class="api apilevel-1"><a href="../../org/apache/http/conn/package-summary.html" >org.apache.http.conn</a></li><li class="api apilevel-1"><a href="../../org/apache/http/conn/scheme/package-summary.html" >org.apache.http.conn.scheme</a></li><li class="api apilevel-1"><a href="../../org/apache/http/conn/ssl/package-summary.html" >org.apache.http.conn.ssl</a></li><li class="api apilevel-1"><a href="../../org/apache/http/params/package-summary.html" >org.apache.http.params</a></li><li class="api apilevel-1"><a href="../../org/json/package-summary.html" >org.json</a></li><li class="api apilevel-1"><a href="../../org/w3c/dom/package-summary.html" >org.w3c.dom</a></li><li class="api apilevel-8"><a href="../../org/w3c/dom/ls/package-summary.html" >org.w3c.dom.ls</a></li><li class="api apilevel-1"><a href="../../org/xml/sax/package-summary.html" >org.xml.sax</a></li><li class="api apilevel-1"><a href="../../org/xml/sax/ext/package-summary.html" >org.xml.sax.ext</a></li><li class="api apilevel-1"><a href="../../org/xml/sax/helpers/package-summary.html" >org.xml.sax.helpers</a></li><li class="api apilevel-1"><a href="../../org/xmlpull/v1/package-summary.html" >org.xmlpull.v1</a></li><li class="api apilevel-1"><a href="../../org/xmlpull/v1/sax2/package-summary.html" >org.xmlpull.v1.sax2</a></li>
+                  </ul>
+                </div>
+              </div>
+            
+          
+        </div>
+        
+        
+          
+
+
+
+<ul id="dac-main-navigation" class="dac-nav-list dac-swap-section dac-left dac-no-anim" tabindex=0>
+  <li class="dac-nav-item home">
+    
+    <a class="dac-nav-link" href="https://developer.android.com/index.html">Home</a>
+    <i class="dac-sprite dac-expand-more-black dac-nav-sub-slider" tabindex=0></i>
+    <ul class="dac-nav-secondary about">
+      <li class="dac-nav-item versions">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/about/versions/o/index.html">Android</a>
+      </li>
+      <li class="dac-nav-item wear">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/wear/index.html">Wear</a>
+      </li>
+      <li class="dac-nav-item tv">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/tv/index.html">TV</a>
+      </li>
+      <li class="dac-nav-item auto">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/auto/index.html">Auto</a>
+      </li>
+      
+      <li class="dac-nav-item chrome-os">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/chrome-os/index.html">Chrome OS</a>
+      </li>
+      
+      <li class="dac-nav-item things">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/things/index.html">Things</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dac-nav-item design">
+    <a class="dac-nav-link" href="https://developer.android.com/design/index.html"
+       zh-tw-lang="設計"
+       zh-cn-lang="设计"
+       ru-lang="Проектирование"
+       ko-lang="디자인"
+       ja-lang="設計"
+       es-lang="Diseñar">
+      
+      Design</a>
+  </li>
+  <li class="dac-nav-item develop">
+    <a class="dac-nav-link" href="https://developer.android.com/develop/index.html"
+       zh-tw-lang="開發"
+       zh-cn-lang="开发"
+       ru-lang="Разработка"
+       ko-lang="개발"
+       ja-lang="開発"
+       es-lang="Desarrollar">
+      
+      Develop</a>
+    <i class="dac-sprite dac-expand-more-black dac-nav-sub-slider" tabindex=0></i>
+    <ul class="dac-nav-secondary develop">
+      <li class="dac-nav-item training">
+        <a class="dac-nav-link" href="https://developer.android.com/training/index.html"
+           zh-tw-lang="訓練課程"
+           zh-cn-lang="培训"
+           ru-lang="Курсы"
+           ko-lang="교육"
+           ja-lang="トレーニング"
+           es-lang="Capacitación">
+            
+            Training</a>
+      </li>
+      <li class="dac-nav-item guide">
+        <a class="dac-nav-link" href="https://developer.android.com/guide/index.html"
+           zh-tw-lang="API 指南"
+           zh-cn-lang="API 指南"
+           ru-lang="Руководства по API"
+           ko-lang="API 가이드"
+           ja-lang="API ガイド"
+           es-lang="Guías de la API">
+          
+          API Guides</a>
+      </li>
+      <li class="dac-nav-item reference">
+        <a class="dac-nav-link" href="../../packages.html"
+           zh-tw-lang="參考資源"
+           zh-cn-lang="参考"
+           ru-lang="Справочник"
+           ko-lang="참조문서"
+           ja-lang="リファレンス"
+           es-lang="Referencia">
+          
+          Reference</a>
+      </li>
+      <li class="dac-nav-item samples">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/samples/index.html">Samples</a>
+      </li>
+      <li class="dac-nav-item libraries">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/topic/libraries/index.html">Libraries</a></li>
+      <li class="dac-nav-item studio">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/studio/index.html">Android Studio</a></li>
+      <li class="dac-nav-item ndk">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/ndk/index.html">Android NDK</a></li>
+      <li class="dac-nav-item google">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/google/index.html">Google Services</a>
+      </li>
+      <li class="dac-nav-item quality-guidelines">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/develop/quality-guidelines/index.html">Quality Guidelines</a>
+      </li>
+      <li class="dac-nav-item kotlin">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/kotlin/index.html">Kotlin</a>
+       </li>
+    </ul>
+  </li>
+  <li class="dac-nav-item distribute">
+    <a class="dac-nav-link" href="https://developer.android.com/distribute/index.html"
+       zh-tw-lang="發佈"
+       zh-cn-lang="分发"
+       ru-lang="Распространение"
+       ko-lang="배포"
+       ja-lang="配布"
+       de-lang="Vertrieb"
+       es-lang="Distribuir"
+       es-419-lang="Distribuye"
+       fr-lang="Distribuer"
+       id-lang="Distribusikan"
+       pt-br-lang="Distribuição"
+       th-lang="จัดจำหน่าย"
+       tr-lang="Dağıtma"
+       vi-lang="Phân phối">
+      
+      Distribute</a>
+    <i class="dac-sprite dac-expand-more-black dac-nav-sub-slider" tabindex=0></i>
+    <ul class="dac-nav-secondary distribute">
+      <li class="dac-nav-item google-play">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/distribute/google-play/index.html">Google Play</a>
+      </li>
+      <li class="dac-nav-item console">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/distribute/console/index.html">Play Console</a>
+      </li>
+      <li class="dac-nav-item best-practices">
+        <a class="dac-nav-link" href="https://developer.android.com/distribute/best-practices/index.html"
+          es-419-lang="Recomendaciones"
+          fr-lang="Bonnes pratiques"
+          id-lang="Praktik terbaik"
+          ja-lang="おすすめの方法"
+          ko-lang="권장사항"
+          pt-br-lang="Práticas recomendadas"
+          ru-lang="Рекомендации"
+          th-lang="จัดจำหน่าย"
+          tr-lang="En iyi uygulamalar"
+          vi-lang="Các phương pháp hay nhất"
+          zh-cn-lang="最佳做法"
+          zh-tw-lang="最佳做法">
+          
+          Best practices</a>
+      </li>
+      <li class="dac-nav-item marketing-tools">
+        <a class="dac-nav-link" href="https://developer.android.com/distribute/marketing-tools/index.html"
+          de-lang="Marketing-Tools"
+          es-419-lang="Herramientas de marketing"
+          fr-lang="Outils marketing"
+          id-lang="Fitur pemasaran"
+          ja-lang="マーケティング ツール"
+          ko-lang="마케팅 도구"
+          pt-br-lang="Ferramentas de marketing"
+          ru-lang="Маркетинговые инструменты"
+          th-lang="เครื่องมือการตลาด"
+          tr-lang="Pazarlama araçları"
+          vi-lang="Công cụ tiếp thị"
+          zh-cn-lang="营销工具"
+          zh-tw-lang="行銷工具">
+          
+          Marketing tools</a>
+      </li>
+      <li class="dac-nav-item policy-center">
+        
+        <a class="dac-nav-link" href="https://play.google.com/about/developer-content-policy/" target="_blank">Policy center</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dac-nav-item stories">
+    
+    <a class="dac-nav-link" href="https://developer.android.com/stories/index.html">Stories</a>
+  </li>
+  
+  <li class="dac-nav-item preview">
+    
+    <a class="dac-nav-link" href="https://developer.android.com/preview/index.html">Preview</a>
+  </li>
+  
+</ul>
+
+        
+      </div>
+    </div>
+  </nav>
+
+  <a name="top" tabindex="0"></a>
+  
+  <div class="wrap clearfix" id="body-content">
+  
+    
+      
+    
+    <div class="jd-descr " itemprop="articleBody">
+      <div id="doc-api-level" class="1" style="display:none"></div>
+
+
+
+
+<div id="naMessage"></div>
+
+<div id="api-info-block">
+<div class="api-level">
+  
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 1</a>
+  
+  
+  
+  
+
+</div>
+
+
+
+  
+   
+  
+  
+  
+  
+
+  
+   
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+
+<div class="sum-details-links">
+
+Summary:
+
+
+
+
+
+
+
+
+
+  <a href="#pubctors">Ctors</a>
+  
+
+
+
+  &#124; <a href="#pubmethods">Methods</a>
+  
+
+
+
+  &#124; <a href="#inhmethods">Inherited Methods</a>
+
+&#124; <a href="#" onclick="return toggleAllClassInherited()" id="toggleAllClassInherited">[Expand All]</a>
+
+</div><!-- end sum-details-links -->
+</div><!-- end api-info-block -->
+
+<div class="api apilevel-1" id="jd-content">
+
+<!-- ======== START OF CLASS DATA ======== -->
+
+<h1 class="api-title">URI</h1>
+<p>
+<code class="api-signature">
+  public
+  
+  final
+  
+  class
+  URI
+</code>
+<br>
+
+
+<code class="api-signature">
+  
+    extends <a href="../lang/Object.html">Object</a>
+  
+  
+  
+</code>
+
+<code class="api-signature">
+  
+  
+      implements
+      
+        <a href="../lang/Comparable.html">Comparable</a>&lt;<a href="URI.html">URI</a>&gt;, 
+      
+        <a href="../io/Serializable.html">Serializable</a>
+      
+  
+  
+</code>
+
+</p><table class="jd-inheritance-table">
+
+
+  <tr>
+    
+    <td colspan="2" class="jd-inheritance-class-cell"><a href="../lang/Object.html">java.lang.Object</a>
+    </td>
+  </tr>
+  
+
+  <tr>
+    
+      <td class="jd-inheritance-space">&nbsp;&nbsp;&nbsp;&#x21b3;</td>
+    
+    <td colspan="1" class="jd-inheritance-class-cell">java.net.URI
+    </td>
+  </tr>
+  
+
+</table>
+  
+
+    
+
+<br><hr>
+
+
+  <p>Represents a Uniform Resource Identifier (URI) reference.
+
+ <p> Aside from some minor deviations noted below, an instance of this
+ class represents a URI reference as defined by
+ <a href="http://www.ietf.org/rfc/rfc2396.txt"><i>RFC&nbsp;2396: Uniform
+ Resource Identifiers (URI): Generic Syntax</i></a>, amended by <a
+ href="http://www.ietf.org/rfc/rfc2732.txt"><i>RFC&nbsp;2732: Format for
+ Literal IPv6 Addresses in URLs</i></a>. The Literal IPv6 address format
+ also supports scope_ids. The syntax and usage of scope_ids is described
+ <a href="Inet6Address.html#scoped">here</a>.
+ This class provides constructors for creating URI instances from
+ their components or by parsing their string forms, methods for accessing the
+ various components of an instance, and methods for normalizing, resolving,
+ and relativizing URI instances.  Instances of this class are immutable.
+
+
+ <h3> URI syntax and components </h3>
+
+ At the highest level a URI reference (hereinafter simply "URI") in string
+ form has the syntax
+
+ <blockquote>
+ [<i>scheme</i><b><code>:</code></b>]<i>scheme-specific-part</i>[<b><code>#</code></b><i>fragment</i>]
+ </blockquote>
+
+ where square brackets [...] delineate optional components and the characters
+ <b><code>:</code></b> and <b><code>#</code></b> stand for themselves.
+
+ <p> An <i>absolute</i> URI specifies a scheme; a URI that is not absolute is
+ said to be <i>relative</i>.  URIs are also classified according to whether
+ they are <i>opaque</i> or <i>hierarchical</i>.
+
+ <p> An <i>opaque</i> URI is an absolute URI whose scheme-specific part does
+ not begin with a slash character (<code>'/'</code>).  Opaque URIs are not
+ subject to further parsing.  Some examples of opaque URIs are:
+
+ <blockquote><table cellpadding=0 cellspacing=0 summary="layout">
+ <tr><td><code>mailto:java-net@java.sun.com</code><td></tr>
+ <tr><td><code>news:comp.lang.java</code><td></tr>
+ <tr><td><code>urn:isbn:096139210x</code></td></tr>
+ </table></blockquote>
+
+ <p> A <i>hierarchical</i> URI is either an absolute URI whose
+ scheme-specific part begins with a slash character, or a relative URI, that
+ is, a URI that does not specify a scheme.  Some examples of hierarchical
+ URIs are:
+
+ <blockquote>
+ <code>http://java.sun.com/j2se/1.3/</code><br>
+ <code>docs/guide/collections/designfaq.html#28</code><br>
+ <code>../../../demo/jfc/SwingSet2/src/SwingSet2.java</code><br>
+ <code>file:///~/calendar</code>
+ </blockquote>
+
+ <p> A hierarchical URI is subject to further parsing according to the syntax
+
+ <blockquote>
+ [<i>scheme</i><b><code>:</code></b>][<b><code>//</code></b><i>authority</i>][<i>path</i>][<b><code>?</code></b><i>query</i>][<b><code>#</code></b><i>fragment</i>]
+ </blockquote>
+
+ where the characters <b><code>:</code></b>, <b><code>/</code></b>,
+ <b><code>?</code></b>, and <b><code>#</code></b> stand for themselves.  The
+ scheme-specific part of a hierarchical URI consists of the characters
+ between the scheme and fragment components.
+
+ <p> The authority component of a hierarchical URI is, if specified, either
+ <i>server-based</i> or <i>registry-based</i>.  A server-based authority
+ parses according to the familiar syntax
+
+ <blockquote>
+ [<i>user-info</i><b><code>@</code></b>]<i>host</i>[<b><code>:</code></b><i>port</i>]
+ </blockquote>
+
+ where the characters <b><code>@</code></b> and <b><code>:</code></b> stand for
+ themselves.  Nearly all URI schemes currently in use are server-based.  An
+ authority component that does not parse in this way is considered to be
+ registry-based.
+
+ <p> The path component of a hierarchical URI is itself said to be absolute
+ if it begins with a slash character (<code>'/'</code>); otherwise it is
+ relative.  The path of a hierarchical URI that is either absolute or
+ specifies an authority is always absolute.
+
+ <p> All told, then, a URI instance has the following nine components:
+
+ <blockquote><table summary="Describes the components of a URI:scheme,scheme-specific-part,authority,user-info,host,port,path,query,fragment">
+ <tr><th><i>Component</i></th><th><i>Type</i></th></tr>
+ <tr><td>scheme</td><td><code>String</code></td></tr>
+ <tr><td>scheme-specific-part&nbsp;&nbsp;&nbsp;&nbsp;</td><td><code>String</code></td></tr>
+ <tr><td>authority</td><td><code>String</code></td></tr>
+ <tr><td>user-info</td><td><code>String</code></td></tr>
+ <tr><td>host</td><td><code>String</code></td></tr>
+ <tr><td>port</td><td><code>int</code></td></tr>
+ <tr><td>path</td><td><code>String</code></td></tr>
+ <tr><td>query</td><td><code>String</code></td></tr>
+ <tr><td>fragment</td><td><code>String</code></td></tr>
+ </table></blockquote>
+
+ In a given instance any particular component is either <i>undefined</i> or
+ <i>defined</i> with a distinct value.  Undefined string components are
+ represented by <code>null</code>, while undefined integer components are
+ represented by <code>-1</code>.  A string component may be defined to have the
+ empty string as its value; this is not equivalent to that component being
+ undefined.
+
+ <p> Whether a particular component is or is not defined in an instance
+ depends upon the type of the URI being represented.  An absolute URI has a
+ scheme component.  An opaque URI has a scheme, a scheme-specific part, and
+ possibly a fragment, but has no other components.  A hierarchical URI always
+ has a path (though it may be empty) and a scheme-specific-part (which at
+ least contains the path), and may have any of the other components.  If the
+ authority component is present and is server-based then the host component
+ will be defined and the user-information and port components may be defined.
+
+
+ <h4> Operations on URI instances </h4>
+
+ The key operations supported by this class are those of
+ <i>normalization</i>, <i>resolution</i>, and <i>relativization</i>.
+
+ <p> <i>Normalization</i> is the process of removing unnecessary <code>"."</code>
+ and <code>".."</code> segments from the path component of a hierarchical URI.
+ Each <code>"."</code> segment is simply removed.  A <code>".."</code> segment is
+ removed only if it is preceded by a non-<code>".."</code> segment.
+ Normalization has no effect upon opaque URIs.
+
+ <p> <i>Resolution</i> is the process of resolving one URI against another,
+ <i>base</i> URI.  The resulting URI is constructed from components of both
+ URIs in the manner specified by RFC&nbsp;2396, taking components from the
+ base URI for those not specified in the original.  For hierarchical URIs,
+ the path of the original is resolved against the path of the base and then
+ normalized.  The result, for example, of resolving
+
+ <blockquote>
+ <code>docs/guide/collections/designfaq.html#28</code>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ &nbsp;&nbsp;&nbsp;&nbsp;(1)
+ </blockquote>
+
+ against the base URI <code>http://java.sun.com/j2se/1.3/</code> is the result
+ URI
+
+ <blockquote>
+ <code>http://java.sun.com/j2se/1.3/docs/guide/collections/designfaq.html#28</code>
+ </blockquote>
+
+ Resolving the relative URI
+
+ <blockquote>
+ <code>../../../demo/jfc/SwingSet2/src/SwingSet2.java&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;</code>(2)
+ </blockquote>
+
+ against this result yields, in turn,
+
+ <blockquote>
+ <code>http://java.sun.com/j2se/1.3/demo/jfc/SwingSet2/src/SwingSet2.java</code>
+ </blockquote>
+
+ Resolution of both absolute and relative URIs, and of both absolute and
+ relative paths in the case of hierarchical URIs, is supported.  Resolving
+ the URI <code>file:///~calendar</code> against any other URI simply yields the
+ original URI, since it is absolute.  Resolving the relative URI (2) above
+ against the relative base URI (1) yields the normalized, but still relative,
+ URI
+
+ <blockquote>
+ <code>demo/jfc/SwingSet2/src/SwingSet2.java</code>
+ </blockquote>
+
+ <p> <i>Relativization</i>, finally, is the inverse of resolution: For any
+ two normalized URIs <i>u</i> and&nbsp;<i>v</i>,
+
+ <blockquote>
+   <i>u</i><code>.relativize(</code><i>u</i><code>.resolve(</code><i>v</i><code>)).equals(</code><i>v</i><code>)</code>&nbsp;&nbsp;and<br>
+   <i>u</i><code>.resolve(</code><i>u</i><code>.relativize(</code><i>v</i><code>)).equals(</code><i>v</i><code>)</code>&nbsp;&nbsp;.<br>
+ </blockquote>
+
+ This operation is often useful when constructing a document containing URIs
+ that must be made relative to the base URI of the document wherever
+ possible.  For example, relativizing the URI
+
+ <blockquote>
+ <code>http://java.sun.com/j2se/1.3/docs/guide/index.html</code>
+ </blockquote>
+
+ against the base URI
+
+ <blockquote>
+ <code>http://java.sun.com/j2se/1.3</code>
+ </blockquote>
+
+ yields the relative URI <code>docs/guide/index.html</code>.
+
+
+ <h4> Character categories </h4>
+
+ RFC&nbsp;2396 specifies precisely which characters are permitted in the
+ various components of a URI reference.  The following categories, most of
+ which are taken from that specification, are used below to describe these
+ constraints:
+
+ <blockquote><table cellspacing=2 summary="Describes categories alpha,digit,alphanum,unreserved,punct,reserved,escaped,and other">
+   <tr><th valign=top><i>alpha</i></th>
+       <td>The US-ASCII alphabetic characters,
+        <code>'A'</code>&nbsp;through&nbsp;<code>'Z'</code>
+        and <code>'a'</code>&nbsp;through&nbsp;<code>'z'</code></td></tr>
+   <tr><th valign=top><i>digit</i></th>
+       <td>The US-ASCII decimal digit characters,
+       <code>'0'</code>&nbsp;through&nbsp;<code>'9'</code></td></tr>
+   <tr><th valign=top><i>alphanum</i></th>
+       <td>All <i>alpha</i> and <i>digit</i> characters</td></tr>
+   <tr><th valign=top><i>unreserved</i>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+       <td>All <i>alphanum</i> characters together with those in the string
+        <code>"_-!.~'()*"</code></td></tr>
+   <tr><th valign=top><i>punct</i></th>
+       <td>The characters in the string <code>",;:$&amp;+="</code></td></tr>
+   <tr><th valign=top><i>reserved</i></th>
+       <td>All <i>punct</i> characters together with those in the string
+        <code>"?/[]@"</code></td></tr>
+   <tr><th valign=top><i>escaped</i></th>
+       <td>Escaped octets, that is, triplets consisting of the percent
+           character (<code>'%'</code>) followed by two hexadecimal digits
+           (<code>'0'</code>-<code>'9'</code>, <code>'A'</code>-<code>'F'</code>, and
+           <code>'a'</code>-<code>'f'</code>)</td></tr>
+   <tr><th valign=top><i>other</i></th>
+       <td>The Unicode characters that are not in the US-ASCII character set,
+           are not control characters (according to the <code><a href="../lang/Character.html#isISOControl(char)">Character.isISOControl</a></code>
+           method), and are not space characters (according to the <code><a href="../lang/Character.html#isSpaceChar(char)">Character.isSpaceChar</a></code>
+           method)&nbsp;&nbsp;<i>(<b>Deviation from RFC 2396</b>, which is
+           limited to US-ASCII)</i></td></tr>
+ </table></blockquote>
+
+ <p><a name="legal-chars"></a> The set of all legal URI characters consists of
+ the <i>unreserved</i>, <i>reserved</i>, <i>escaped</i>, and <i>other</i>
+ characters.
+
+
+ <h4> Escaped octets, quotation, encoding, and decoding </h4>
+
+ RFC 2396 allows escaped octets to appear in the user-info, path, query, and
+ fragment components.  Escaping serves two purposes in URIs:
+
+ <ul>
+
+   <li><p> To <i>encode</i> non-US-ASCII characters when a URI is required to
+   conform strictly to RFC&nbsp;2396 by not containing any <i>other</i>
+   characters.  </p></li>
+
+   <li><p> To <i>quote</i> characters that are otherwise illegal in a
+   component.  The user-info, path, query, and fragment components differ
+   slightly in terms of which characters are considered legal and illegal.
+   </p></li>
+
+ </ul>
+
+ These purposes are served in this class by three related operations:
+
+ <ul>
+
+   <li><p><a name="encode"></a> A character is <i>encoded</i> by replacing it
+   with the sequence of escaped octets that represent that character in the
+   UTF-8 character set.  The Euro currency symbol (<code>'&amp;#92;u20AC'</code>),
+   for example, is encoded as <code>"%E2%82%AC"</code>.  <i>(<b>Deviation from
+   RFC&nbsp;2396</b>, which does not specify any particular character
+   set.)</i> </p></li>
+
+   <li><p><a name="quote"></a> An illegal character is <i>quoted</i> simply by
+   encoding it.  The space character, for example, is quoted by replacing it
+   with <code>"%20"</code>.  UTF-8 contains US-ASCII, hence for US-ASCII
+   characters this transformation has exactly the effect required by
+   RFC&nbsp;2396. </p></li>
+
+   <li><p><a name="decode"></a>
+   A sequence of escaped octets is <i>decoded</i> by
+   replacing it with the sequence of characters that it represents in the
+   UTF-8 character set.  UTF-8 contains US-ASCII, hence decoding has the
+   effect of de-quoting any quoted US-ASCII characters as well as that of
+   decoding any encoded non-US-ASCII characters.  If a <a
+   href="../nio/charset/CharsetDecoder.html#ce">decoding error</a> occurs
+   when decoding the escaped octets then the erroneous octets are replaced by
+   <code>'&amp;#92;uFFFD'</code>, the Unicode replacement character.  </p></li>
+
+ </ul>
+
+ These operations are exposed in the constructors and methods of this class
+ as follows:
+
+ <ul>
+
+   <li><p> The <a href="URI.html#URI(java.lang.String)">single-argument
+   constructor</a></a> requires any illegal characters in its argument to be
+   quoted and preserves any escaped octets and <i>other</i> characters that
+   are present.  </p></li>
+
+   <li><p> The <a href="URI.html#URI(java.lang.String, java.lang.String, java.lang.String, int, java.lang.String, java.lang.String, java.lang.String)">multi-argument constructors</a></a> quote illegal characters as
+   required by the components in which they appear.  The percent character
+   (<code>'%'</code>) is always quoted by these constructors.  Any <i>other</i>
+   characters are preserved.  </p></li>
+
+   <li><p> The <code><a href="URI.html#getRawUserInfo()">getRawUserInfo</a></code>, <code><a href="URI.html#getRawPath()">getRawPath</a></code>, <code><a href="URI.html#getRawQuery()">getRawQuery</a></code>, <code><a href="URI.html#getRawFragment()">getRawFragment</a></code>, <code><a href="URI.html#getRawAuthority()">getRawAuthority</a></code>, and <code><a href="URI.html#getRawSchemeSpecificPart()">getRawSchemeSpecificPart</a></code> methods return the
+   values of their corresponding components in raw form, without interpreting
+   any escaped octets.  The strings returned by these methods may contain
+   both escaped octets and <i>other</i> characters, and will not contain any
+   illegal characters.  </p></li>
+
+   <li><p> The <code><a href="URI.html#getUserInfo()">getUserInfo</a></code>, <code><a href="URI.html#getPath()">getPath</a></code>, <code><a href="URI.html#getQuery()">getQuery</a></code>, <code><a href="URI.html#getFragment()">getFragment</a></code>, <code><a href="URI.html#getAuthority()">getAuthority</a></code>, and <code><a href="URI.html#getSchemeSpecificPart()">getSchemeSpecificPart</a></code> methods decode any escaped
+   octets in their corresponding components.  The strings returned by these
+   methods may contain both <i>other</i> characters and illegal characters,
+   and will not contain any escaped octets.  </p></li>
+
+   <li><p> The <code><a href="URI.html#toString()">toString</a></code> method returns a URI string with
+   all necessary quotation but which may contain <i>other</i> characters.
+   </p></li>
+
+   <li><p> The <code><a href="URI.html#toASCIIString()">toASCIIString</a></code> method returns a fully
+   quoted and encoded URI string that does not contain any <i>other</i>
+   characters.  </p></li>
+
+ </ul>
+
+
+ <h4> Identities </h4>
+
+ For any URI <i>u</i>, it is always the case that
+
+ <blockquote>
+ <code>new URI(</code><i>u</i><code>.toString()).equals(</code><i>u</i><code>)</code>&nbsp;.
+ </blockquote>
+
+ For any URI <i>u</i> that does not contain redundant syntax such as two
+ slashes before an empty authority (as in <code>file:///tmp/</code>&nbsp;) or a
+ colon following a host name but no port (as in
+ <code>http://java.sun.com:</code>&nbsp;), and that does not encode characters
+ except those that must be quoted, the following identities also hold:
+ <pre>
+     new URI(<i>u</i>.getScheme(),
+             <i>u</i>.getSchemeSpecificPart(),
+             <i>u</i>.getFragment())
+     .equals(<i>u</i>)</pre>
+ in all cases,
+ <pre>
+     new URI(<i>u</i>.getScheme(),
+             <i>u</i>.getUserInfo(), <i>u</i>.getAuthority(),
+             <i>u</i>.getPath(), <i>u</i>.getQuery(),
+             <i>u</i>.getFragment())
+     .equals(<i>u</i>)</pre>
+ if <i>u</i> is hierarchical, and
+ <pre>
+     new URI(<i>u</i>.getScheme(),
+             <i>u</i>.getUserInfo(), <i>u</i>.getHost(), <i>u</i>.getPort(),
+             <i>u</i>.getPath(), <i>u</i>.getQuery(),
+             <i>u</i>.getFragment())
+     .equals(<i>u</i>)</pre>
+ if <i>u</i> is hierarchical and has either no authority or a server-based
+ authority.
+
+
+ <h4> URIs, URLs, and URNs </h4>
+
+ A URI is a uniform resource <i>identifier</i> while a URL is a uniform
+ resource <i>locator</i>.  Hence every URL is a URI, abstractly speaking, but
+ not every URI is a URL.  This is because there is another subcategory of
+ URIs, uniform resource <i>names</i> (URNs), which name resources but do not
+ specify how to locate them.  The <code>mailto</code>, <code>news</code>, and
+ <code>isbn</code> URIs shown above are examples of URNs.
+
+ <p> The conceptual distinction between URIs and URLs is reflected in the
+ differences between this class and the <code><a href="URL.html">URL</a></code> class.
+
+ <p> An instance of this class represents a URI reference in the syntactic
+ sense defined by RFC&nbsp;2396.  A URI may be either absolute or relative.
+ A URI string is parsed according to the generic syntax without regard to the
+ scheme, if any, that it specifies.  No lookup of the host, if any, is
+ performed, and no scheme-dependent stream handler is constructed.  Equality,
+ hashing, and comparison are defined strictly in terms of the character
+ content of the instance.  In other words, a URI instance is little more than
+ a structured string that supports the syntactic, scheme-independent
+ operations of comparison, normalization, resolution, and relativization.
+
+ <p> An instance of the <code><a href="URL.html">URL</a></code> class, by contrast, represents the
+ syntactic components of a URL together with some of the information required
+ to access the resource that it describes.  A URL must be absolute, that is,
+ it must always specify a scheme.  A URL string is parsed according to its
+ scheme.  A stream handler is always established for a URL, and in fact it is
+ impossible to create a URL instance for a scheme for which no handler is
+ available.  Equality and hashing depend upon both the scheme and the
+ Internet address of the host, if any; comparison is not defined.  In other
+ words, a URL is a structured string that supports the syntactic operation of
+ resolution as well as the network I/O operations of looking up the host and
+ opening a connection to the specified resource.</p>
+
+
+
+
+
+  <div>
+      <p><b>See also:</b></p>
+      <ul class="nolist"><li><a href="http://www.ietf.org/rfc/rfc2279.txt">RFC&nbsp;2279: UTF-8, a transformation format of ISO 10646</a></li><li><a href="http://www.ietf.org/rfc/rfc2373.txt">RFC&nbsp;2373: IPv6 Addressing Architecture</a></li><li><a href="http://www.ietf.org/rfc/rfc2396.txt">RFC&nbsp;2396: Uniform Resource Identifiers (URI): Generic Syntax</a></li><li><a href="http://www.ietf.org/rfc/rfc2732.txt">RFC&nbsp;2732: Format for Literal IPv6 Addresses in URLs</a></li>
+      </ul>
+  </div>
+
+
+
+
+<h2 class="api-section">Summary</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<table id="pubctors" class="responsive constructors">
+<tr><th colspan="2"><h3>Public constructors</h3></th></tr>
+
+
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td width="100%">
+      <code>
+      <a href="URI.html#URI(java.lang.String)">URI</a>(<a href="../lang/String.html">String</a> str)
+      </code>
+      
+        <p>Constructs a URI by parsing the given string.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td width="100%">
+      <code>
+      <a href="URI.html#URI(java.lang.String, java.lang.String, java.lang.String, int, java.lang.String, java.lang.String, java.lang.String)">URI</a>(<a href="../lang/String.html">String</a> scheme, <a href="../lang/String.html">String</a> userInfo, <a href="../lang/String.html">String</a> host, int port, <a href="../lang/String.html">String</a> path, <a href="../lang/String.html">String</a> query, <a href="../lang/String.html">String</a> fragment)
+      </code>
+      
+        <p>Constructs a hierarchical URI from the given components.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td width="100%">
+      <code>
+      <a href="URI.html#URI(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)">URI</a>(<a href="../lang/String.html">String</a> scheme, <a href="../lang/String.html">String</a> authority, <a href="../lang/String.html">String</a> path, <a href="../lang/String.html">String</a> query, <a href="../lang/String.html">String</a> fragment)
+      </code>
+      
+        <p>Constructs a hierarchical URI from the given components.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td width="100%">
+      <code>
+      <a href="URI.html#URI(java.lang.String, java.lang.String, java.lang.String, java.lang.String)">URI</a>(<a href="../lang/String.html">String</a> scheme, <a href="../lang/String.html">String</a> host, <a href="../lang/String.html">String</a> path, <a href="../lang/String.html">String</a> fragment)
+      </code>
+      
+        <p>Constructs a hierarchical URI from the given components.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td width="100%">
+      <code>
+      <a href="URI.html#URI(java.lang.String, java.lang.String, java.lang.String)">URI</a>(<a href="../lang/String.html">String</a> scheme, <a href="../lang/String.html">String</a> ssp, <a href="../lang/String.html">String</a> fragment)
+      </code>
+      
+        <p>Constructs a URI from the given components.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+
+</table>
+
+
+
+
+
+
+<!-- ========== METHOD SUMMARY =========== -->
+<table id="pubmethods" class="responsive methods">
+<tr><th colspan="2"><h3>Public methods</h3></th></tr>
+
+
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        int</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="URI.html#compareTo(java.net.URI)">compareTo</a>(<a href="URI.html">URI</a> that)
+      </code>
+      
+        <p>Compares this URI to another object, which must be a URI.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        static
+        
+        
+        <a href="URI.html">URI</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="URI.html#create(java.lang.String)">create</a>(<a href="../lang/String.html">String</a> str)
+      </code>
+      
+        <p>Creates a URI by parsing the given string.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        boolean</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="URI.html#equals(java.lang.Object)">equals</a>(<a href="../lang/Object.html">Object</a> ob)
+      </code>
+      
+        <p>Tests this URI for equality with another object.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        <a href="../lang/String.html">String</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="URI.html#getAuthority()">getAuthority</a>()
+      </code>
+      
+        <p>Returns the decoded authority component of this URI.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        <a href="../lang/String.html">String</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="URI.html#getFragment()">getFragment</a>()
+      </code>
+      
+        <p>Returns the decoded fragment component of this URI.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        <a href="../lang/String.html">String</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="URI.html#getHost()">getHost</a>()
+      </code>
+      
+        <p>Returns the host component of this URI.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        <a href="../lang/String.html">String</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="URI.html#getPath()">getPath</a>()
+      </code>
+      
+        <p>Returns the decoded path component of this URI.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        int</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="URI.html#getPort()">getPort</a>()
+      </code>
+      
+        <p>Returns the port number of this URI.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        <a href="../lang/String.html">String</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="URI.html#getQuery()">getQuery</a>()
+      </code>
+      
+        <p>Returns the decoded query component of this URI.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        <a href="../lang/String.html">String</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="URI.html#getRawAuthority()">getRawAuthority</a>()
+      </code>
+      
+        <p>Returns the raw authority component of this URI.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        <a href="../lang/String.html">String</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="URI.html#getRawFragment()">getRawFragment</a>()
+      </code>
+      
+        <p>Returns the raw fragment component of this URI.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        <a href="../lang/String.html">String</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="URI.html#getRawPath()">getRawPath</a>()
+      </code>
+      
+        <p>Returns the raw path component of this URI.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        <a href="../lang/String.html">String</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="URI.html#getRawQuery()">getRawQuery</a>()
+      </code>
+      
+        <p>Returns the raw query component of this URI.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        <a href="../lang/String.html">String</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="URI.html#getRawSchemeSpecificPart()">getRawSchemeSpecificPart</a>()
+      </code>
+      
+        <p>Returns the raw scheme-specific part of this URI.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        <a href="../lang/String.html">String</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="URI.html#getRawUserInfo()">getRawUserInfo</a>()
+      </code>
+      
+        <p>Returns the raw user-information component of this URI.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        <a href="../lang/String.html">String</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="URI.html#getScheme()">getScheme</a>()
+      </code>
+      
+        <p>Returns the scheme component of this URI.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        <a href="../lang/String.html">String</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="URI.html#getSchemeSpecificPart()">getSchemeSpecificPart</a>()
+      </code>
+      
+        <p>Returns the decoded scheme-specific part of this URI.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        <a href="../lang/String.html">String</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="URI.html#getUserInfo()">getUserInfo</a>()
+      </code>
+      
+        <p>Returns the decoded user-information component of this URI.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        int</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="URI.html#hashCode()">hashCode</a>()
+      </code>
+      
+        <p>Returns a hash-code value for this URI.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        boolean</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="URI.html#isAbsolute()">isAbsolute</a>()
+      </code>
+      
+        <p>Tells whether or not this URI is absolute.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        boolean</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="URI.html#isOpaque()">isOpaque</a>()
+      </code>
+      
+        <p>Tells whether or not this URI is opaque.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        <a href="URI.html">URI</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="URI.html#normalize()">normalize</a>()
+      </code>
+      
+        <p>Normalizes this URI's path.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        <a href="URI.html">URI</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="URI.html#parseServerAuthority()">parseServerAuthority</a>()
+      </code>
+      
+        <p>Attempts to parse this URI's authority component, if defined, into
+ user-information, host, and port components.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        <a href="URI.html">URI</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="URI.html#relativize(java.net.URI)">relativize</a>(<a href="URI.html">URI</a> uri)
+      </code>
+      
+        <p>Relativizes the given URI against this URI.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        <a href="URI.html">URI</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="URI.html#resolve(java.net.URI)">resolve</a>(<a href="URI.html">URI</a> uri)
+      </code>
+      
+        <p>Resolves the given URI against this URI.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        <a href="URI.html">URI</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="URI.html#resolve(java.lang.String)">resolve</a>(<a href="../lang/String.html">String</a> str)
+      </code>
+      
+        <p>Constructs a new URI by parsing the given string and then resolving it
+ against this URI.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        <a href="../lang/String.html">String</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="URI.html#toASCIIString()">toASCIIString</a>()
+      </code>
+      
+        <p>Returns the content of this URI as a US-ASCII string.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        <a href="../lang/String.html">String</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="URI.html#toString()">toString</a>()
+      </code>
+      
+        <p>Returns the content of this URI as a string.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        <a href="URL.html">URL</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="URI.html#toURL()">toURL</a>()
+      </code>
+      
+        <p>Constructs a URL from this URI.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+
+</table>
+
+
+
+
+
+
+
+<!-- ========== METHOD SUMMARY =========== -->
+<table id="inhmethods" class="methods inhtable">
+<tr><th><h3>Inherited methods</h3></th></tr>
+
+
+<tr class="api apilevel-" >
+<td colspan="2">
+  <a href="#" id="inherited-methods-java.lang.Object" class="jd-expando-trigger closed"
+     onclick="return toggleInherited(this, null)" >
+    <img id="inherited-methods-java.lang.Object-trigger" class="jd-expando-trigger-img"
+         height="34"
+         src="../../../assets/images/styles/disclosure_down.png" />
+  </a>From
+class
+<code>
+  
+    <a href="../lang/Object.html">java.lang.Object</a>
+  
+</code>
+<div id="inherited-methods-java.lang.Object">
+  <div id="inherited-methods-java.lang.Object-list"
+        class="jd-inheritedlinks">
+  </div>
+  <div id="inherited-methods-java.lang.Object-summary" style="display: none;">
+    <table class="jd-sumtable-expando responsive">
+      
+
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        <a href="../lang/Object.html">Object</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../lang/Object.html#clone()">clone</a>()
+      </code>
+      
+        <p>Creates and returns a copy of this object.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        boolean</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../lang/Object.html#equals(java.lang.Object)">equals</a>(<a href="../lang/Object.html">Object</a> obj)
+      </code>
+      
+        <p>Indicates whether some other object is "equal to" this one.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../lang/Object.html#finalize()">finalize</a>()
+      </code>
+      
+        <p>Called by the garbage collector on an object when garbage collection
+ determines that there are no more references to the object.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        final
+        
+        <a href="../lang/Class.html">Class</a>&lt;?&gt;</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../lang/Object.html#getClass()">getClass</a>()
+      </code>
+      
+        <p>Returns the runtime class of this <code>Object</code>.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        int</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../lang/Object.html#hashCode()">hashCode</a>()
+      </code>
+      
+        <p>Returns a hash code value for the object.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        final
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../lang/Object.html#notify()">notify</a>()
+      </code>
+      
+        <p>Wakes up a single thread that is waiting on this object's
+ monitor.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        final
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../lang/Object.html#notifyAll()">notifyAll</a>()
+      </code>
+      
+        <p>Wakes up all threads that are waiting on this object's monitor.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        <a href="../lang/String.html">String</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../lang/Object.html#toString()">toString</a>()
+      </code>
+      
+        <p>Returns a string representation of the object.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        final
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../lang/Object.html#wait(long, int)">wait</a>(long millis, int nanos)
+      </code>
+      
+        <p>Causes the current thread to wait until another thread invokes the
+ <code><a href="../lang/Object.html#notify()">notify()</a></code> method or the
+ <code><a href="../lang/Object.html#notifyAll()">notifyAll()</a></code> method for this object, or
+ some other thread interrupts the current thread, or a certain
+ amount of real time has elapsed.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        final
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../lang/Object.html#wait(long)">wait</a>(long millis)
+      </code>
+      
+        <p>Causes the current thread to wait until either another thread invokes the
+ <code><a href="../lang/Object.html#notify()">notify()</a></code> method or the
+ <code><a href="../lang/Object.html#notifyAll()">notifyAll()</a></code> method for this object, or a
+ specified amount of time has elapsed.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        final
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../lang/Object.html#wait()">wait</a>()
+      </code>
+      
+        <p>Causes the current thread to wait until another thread invokes the
+ <code><a href="../lang/Object.html#notify()">notify()</a></code> method or the
+ <code><a href="../lang/Object.html#notifyAll()">notifyAll()</a></code> method for this object.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+
+    </table>
+  </div>
+</div>
+</td></tr>
+
+
+
+<tr class="api apilevel-" >
+<td colspan="2">
+  <a href="#" id="inherited-methods-java.lang.Comparable" class="jd-expando-trigger closed"
+     onclick="return toggleInherited(this, null)" >
+    <img id="inherited-methods-java.lang.Comparable-trigger" class="jd-expando-trigger-img"
+         height="34"
+         src="../../../assets/images/styles/disclosure_down.png" />
+  </a>From
+interface
+<code>
+  
+    <a href="../lang/Comparable.html">java.lang.Comparable</a>
+  
+</code>
+<div id="inherited-methods-java.lang.Comparable">
+  <div id="inherited-methods-java.lang.Comparable-list"
+        class="jd-inheritedlinks">
+  </div>
+  <div id="inherited-methods-java.lang.Comparable-summary" style="display: none;">
+    <table class="jd-sumtable-expando responsive">
+      
+
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        abstract
+        
+        
+        
+        
+        int</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../lang/Comparable.html#compareTo(T)">compareTo</a>(<a href="URI.html">URI</a> o)
+      </code>
+      
+        <p>Compares this object with the specified object for order.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+
+    </table>
+  </div>
+</div>
+</td></tr>
+
+
+
+
+</table>
+
+
+
+<!-- XML Attributes -->
+
+
+<!-- Enum Values -->
+
+
+<!-- Constants -->
+
+
+<!-- Fields -->
+
+
+<!-- Public ctors -->
+
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<h2 class="api-section">Public constructors</h2>
+
+
+
+<A NAME="URI(java.lang.String)"></A>
+
+<div class="api apilevel-1">
+    <h3 class="api-name">URI</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 1</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+URI (<a href="../lang/String.html">String</a> str)</pre>
+    
+    
+
+    
+  <p>Constructs a URI by parsing the given string.
+
+ <p> This constructor parses the given string exactly as specified by the
+ grammar in <a
+ href="http://www.ietf.org/rfc/rfc2396.txt">RFC&nbsp;2396</a>,
+ Appendix&nbsp;A, <b><i>except for the following deviations:</i></b> </p>
+
+ <ul>
+
+   <li><p> An empty authority component is permitted as long as it is
+   followed by a non-empty path, a query component, or a fragment
+   component.  This allows the parsing of URIs such as
+   <code>"file:///foo/bar"</code>, which seems to be the intent of
+   RFC&nbsp;2396 although the grammar does not permit it.  If the
+   authority component is empty then the user-information, host, and port
+   components are undefined. </p></li>
+
+   <li><p> Empty relative paths are permitted; this seems to be the
+   intent of RFC&nbsp;2396 although the grammar does not permit it.  The
+   primary consequence of this deviation is that a standalone fragment
+   such as <code>"#foo"</code> parses as a relative URI with an empty path
+   and the given fragment, and can be usefully <a
+   href="#resolve-frag">resolved</a> against a base URI.
+
+   <li><p> IPv4 addresses in host components are parsed rigorously, as
+   specified by <a
+   href="http://www.ietf.org/rfc/rfc2732.txt">RFC&nbsp;2732</a>: Each
+   element of a dotted-quad address must contain no more than three
+   decimal digits.  Each element is further constrained to have a value
+   no greater than 255. </p></li>
+
+   <li> <p> Hostnames in host components that comprise only a single
+   domain label are permitted to start with an <i>alphanum</i>
+   character. This seems to be the intent of <a
+   href="http://www.ietf.org/rfc/rfc2396.txt">RFC&nbsp;2396</a>
+   section&nbsp;3.2.2 although the grammar does not permit it. The
+   consequence of this deviation is that the authority component of a
+   hierarchical URI such as <code>s://123</code>, will parse as a server-based
+   authority. </p></li>
+
+   <li><p> IPv6 addresses are permitted for the host component.  An IPv6
+   address must be enclosed in square brackets (<code>'['</code> and
+   <code>']'</code>) as specified by <a
+   href="http://www.ietf.org/rfc/rfc2732.txt">RFC&nbsp;2732</a>.  The
+   IPv6 address itself must parse according to <a
+   href="http://www.ietf.org/rfc/rfc2373.txt">RFC&nbsp;2373</a>.  IPv6
+   addresses are further constrained to describe no more than sixteen
+   bytes of address information, a constraint implicit in RFC&nbsp;2373
+   but not expressible in the grammar. </p></li>
+
+   <li><p> Characters in the <i>other</i> category are permitted wherever
+   RFC&nbsp;2396 permits <i>escaped</i> octets, that is, in the
+   user-information, path, query, and fragment components, as well as in
+   the authority component if the authority is registry-based.  This
+   allows URIs to contain Unicode characters beyond those in the US-ASCII
+   character set. </p></li>
+
+ </ul></p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>str</code></td>
+        <td width="100%">
+          <code>String</code>: The string to be parsed into a URI</p></td>
+      </tr>
+    </table>
+      <table class="responsive">
+      <tr><th colspan=2>Throws</th></tr>
+        <tr>
+          <td><code><a href="../lang/NullPointerException.html">NullPointerException</a></code></td>
+          <td width="100%">If <code>str</code> is <code>null</code></td>
+        </tr>
+        <tr>
+          <td><code><a href="URISyntaxException.html">URISyntaxException</a></code></td>
+          <td width="100%">If the given string violates RFC&nbsp;2396, as augmented
+          by the above deviations
+</td>
+        </tr>
+      </table>
+  
+
+</div>
+
+
+<A NAME="URI(java.lang.String, java.lang.String, java.lang.String, int, java.lang.String, java.lang.String, java.lang.String)"></A>
+
+<div class="api apilevel-1">
+    <h3 class="api-name">URI</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 1</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+URI (<a href="../lang/String.html">String</a> scheme, 
+                <a href="../lang/String.html">String</a> userInfo, 
+                <a href="../lang/String.html">String</a> host, 
+                int port, 
+                <a href="../lang/String.html">String</a> path, 
+                <a href="../lang/String.html">String</a> query, 
+                <a href="../lang/String.html">String</a> fragment)</pre>
+    
+    
+
+    
+  <p>Constructs a hierarchical URI from the given components.
+
+ <p> If a scheme is given then the path, if also given, must either be
+ empty or begin with a slash character (<code>'/'</code>).  Otherwise a
+ component of the new URI may be left undefined by passing <code>null</code>
+ for the corresponding parameter or, in the case of the <code>port</code>
+ parameter, by passing <code>-1</code>.
+
+ <p> This constructor first builds a URI string from the given components
+ according to the rules specified in <a
+ href="http://www.ietf.org/rfc/rfc2396.txt">RFC&nbsp;2396</a>,
+ section&nbsp;5.2, step&nbsp;7: </p>
+
+ <ol>
+
+   <li><p> Initially, the result string is empty. </p></li>
+
+   <li><p> If a scheme is given then it is appended to the result,
+   followed by a colon character (<code>':'</code>).  </p></li>
+
+   <li><p> If user information, a host, or a port are given then the
+   string <code>"//"</code> is appended.  </p></li>
+
+   <li><p> If user information is given then it is appended, followed by
+   a commercial-at character (<code>'@'</code>).  Any character not in the
+   <i>unreserved</i>, <i>punct</i>, <i>escaped</i>, or <i>other</i>
+   categories is <a href="#quote">quoted</a>.  </p></li>
+
+   <li><p> If a host is given then it is appended.  If the host is a
+   literal IPv6 address but is not enclosed in square brackets
+   (<code>'['</code> and <code>']'</code>) then the square brackets are added.
+   </p></li>
+
+   <li><p> If a port number is given then a colon character
+   (<code>':'</code>) is appended, followed by the port number in decimal.
+   </p></li>
+
+   <li><p> If a path is given then it is appended.  Any character not in
+   the <i>unreserved</i>, <i>punct</i>, <i>escaped</i>, or <i>other</i>
+   categories, and not equal to the slash character (<code>'/'</code>) or the
+   commercial-at character (<code>'@'</code>), is quoted.  </p></li>
+
+   <li><p> If a query is given then a question-mark character
+   (<code>'?'</code>) is appended, followed by the query.  Any character that
+   is not a <a href="#legal-chars">legal URI character</a> is quoted.
+   </p></li>
+
+   <li><p> Finally, if a fragment is given then a hash character
+   (<code>'#'</code>) is appended, followed by the fragment.  Any character
+   that is not a legal URI character is quoted.  </p></li>
+
+ </ol>
+
+ <p> The resulting URI string is then parsed as if by invoking the <code><a href="URI.html#URI(java.lang.String)">URI(String)</a></code> constructor and then invoking the <code><a href="URI.html#parseServerAuthority()">parseServerAuthority()</a></code> method upon the result; this may cause a <code><a href="URISyntaxException.html">URISyntaxException</a></code> to be thrown.  </p></p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>scheme</code></td>
+        <td width="100%">
+          <code>String</code>: Scheme name</p></td>
+      </tr>
+      <tr>
+        <td><code>userInfo</code></td>
+        <td width="100%">
+          <code>String</code>: User name and authorization information</p></td>
+      </tr>
+      <tr>
+        <td><code>host</code></td>
+        <td width="100%">
+          <code>String</code>: Host name</p></td>
+      </tr>
+      <tr>
+        <td><code>port</code></td>
+        <td width="100%">
+          <code>int</code>: Port number</p></td>
+      </tr>
+      <tr>
+        <td><code>path</code></td>
+        <td width="100%">
+          <code>String</code>: Path</p></td>
+      </tr>
+      <tr>
+        <td><code>query</code></td>
+        <td width="100%">
+          <code>String</code>: Query</p></td>
+      </tr>
+      <tr>
+        <td><code>fragment</code></td>
+        <td width="100%">
+          <code>String</code>: Fragment</p></td>
+      </tr>
+    </table>
+      <table class="responsive">
+      <tr><th colspan=2>Throws</th></tr>
+        <tr>
+          <td><code><a href="URISyntaxException.html">URISyntaxException</a></code></td>
+          <td width="100%">If both a scheme and a path are given but the path is relative,
+         if the URI string constructed from the given components violates
+         RFC&nbsp;2396, or if the authority component of the string is
+         present but cannot be parsed as a server-based authority
+</td>
+        </tr>
+      </table>
+  
+
+</div>
+
+
+<A NAME="URI(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)"></A>
+
+<div class="api apilevel-1">
+    <h3 class="api-name">URI</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 1</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+URI (<a href="../lang/String.html">String</a> scheme, 
+                <a href="../lang/String.html">String</a> authority, 
+                <a href="../lang/String.html">String</a> path, 
+                <a href="../lang/String.html">String</a> query, 
+                <a href="../lang/String.html">String</a> fragment)</pre>
+    
+    
+
+    
+  <p>Constructs a hierarchical URI from the given components.
+
+ <p> If a scheme is given then the path, if also given, must either be
+ empty or begin with a slash character (<code>'/'</code>).  Otherwise a
+ component of the new URI may be left undefined by passing <code>null</code>
+ for the corresponding parameter.
+
+ <p> This constructor first builds a URI string from the given components
+ according to the rules specified in <a
+ href="http://www.ietf.org/rfc/rfc2396.txt">RFC&nbsp;2396</a>,
+ section&nbsp;5.2, step&nbsp;7: </p>
+
+ <ol>
+
+   <li><p> Initially, the result string is empty.  </p></li>
+
+   <li><p> If a scheme is given then it is appended to the result,
+   followed by a colon character (<code>':'</code>).  </p></li>
+
+   <li><p> If an authority is given then the string <code>"//"</code> is
+   appended, followed by the authority.  If the authority contains a
+   literal IPv6 address then the address must be enclosed in square
+   brackets (<code>'['</code> and <code>']'</code>).  Any character not in the
+   <i>unreserved</i>, <i>punct</i>, <i>escaped</i>, or <i>other</i>
+   categories, and not equal to the commercial-at character
+   (<code>'@'</code>), is <a href="#quote">quoted</a>.  </p></li>
+
+   <li><p> If a path is given then it is appended.  Any character not in
+   the <i>unreserved</i>, <i>punct</i>, <i>escaped</i>, or <i>other</i>
+   categories, and not equal to the slash character (<code>'/'</code>) or the
+   commercial-at character (<code>'@'</code>), is quoted.  </p></li>
+
+   <li><p> If a query is given then a question-mark character
+   (<code>'?'</code>) is appended, followed by the query.  Any character that
+   is not a <a href="#legal-chars">legal URI character</a> is quoted.
+   </p></li>
+
+   <li><p> Finally, if a fragment is given then a hash character
+   (<code>'#'</code>) is appended, followed by the fragment.  Any character
+   that is not a legal URI character is quoted.  </p></li>
+
+ </ol>
+
+ <p> The resulting URI string is then parsed as if by invoking the <code><a href="URI.html#URI(java.lang.String)">URI(String)</a></code> constructor and then invoking the <code><a href="URI.html#parseServerAuthority()">parseServerAuthority()</a></code> method upon the result; this may cause a <code><a href="URISyntaxException.html">URISyntaxException</a></code> to be thrown.  </p></p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>scheme</code></td>
+        <td width="100%">
+          <code>String</code>: Scheme name</p></td>
+      </tr>
+      <tr>
+        <td><code>authority</code></td>
+        <td width="100%">
+          <code>String</code>: Authority</p></td>
+      </tr>
+      <tr>
+        <td><code>path</code></td>
+        <td width="100%">
+          <code>String</code>: Path</p></td>
+      </tr>
+      <tr>
+        <td><code>query</code></td>
+        <td width="100%">
+          <code>String</code>: Query</p></td>
+      </tr>
+      <tr>
+        <td><code>fragment</code></td>
+        <td width="100%">
+          <code>String</code>: Fragment</p></td>
+      </tr>
+    </table>
+      <table class="responsive">
+      <tr><th colspan=2>Throws</th></tr>
+        <tr>
+          <td><code><a href="URISyntaxException.html">URISyntaxException</a></code></td>
+          <td width="100%">If both a scheme and a path are given but the path is relative,
+         if the URI string constructed from the given components violates
+         RFC&nbsp;2396, or if the authority component of the string is
+         present but cannot be parsed as a server-based authority
+</td>
+        </tr>
+      </table>
+  
+
+</div>
+
+
+<A NAME="URI(java.lang.String, java.lang.String, java.lang.String, java.lang.String)"></A>
+
+<div class="api apilevel-1">
+    <h3 class="api-name">URI</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 1</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+URI (<a href="../lang/String.html">String</a> scheme, 
+                <a href="../lang/String.html">String</a> host, 
+                <a href="../lang/String.html">String</a> path, 
+                <a href="../lang/String.html">String</a> fragment)</pre>
+    
+    
+
+    
+  <p>Constructs a hierarchical URI from the given components.
+
+ <p> A component may be left undefined by passing <code>null</code>.
+
+ <p> This convenience constructor works as if by invoking the
+ seven-argument constructor as follows:
+
+ <blockquote>
+ <code>new</code> <code><a href="URI.html#URI(java.lang.String, java.lang.String, java.lang.String, int, java.lang.String, java.lang.String, java.lang.String)">URI</a></code><code>(scheme, null, host, -1, path, null, fragment);</code>
+ </blockquote></p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>scheme</code></td>
+        <td width="100%">
+          <code>String</code>: Scheme name</p></td>
+      </tr>
+      <tr>
+        <td><code>host</code></td>
+        <td width="100%">
+          <code>String</code>: Host name</p></td>
+      </tr>
+      <tr>
+        <td><code>path</code></td>
+        <td width="100%">
+          <code>String</code>: Path</p></td>
+      </tr>
+      <tr>
+        <td><code>fragment</code></td>
+        <td width="100%">
+          <code>String</code>: Fragment</p></td>
+      </tr>
+    </table>
+      <table class="responsive">
+      <tr><th colspan=2>Throws</th></tr>
+        <tr>
+          <td><code><a href="URISyntaxException.html">URISyntaxException</a></code></td>
+          <td width="100%">If the URI string constructed from the given components
+          violates RFC&nbsp;2396
+</td>
+        </tr>
+      </table>
+  
+
+</div>
+
+
+<A NAME="URI(java.lang.String, java.lang.String, java.lang.String)"></A>
+
+<div class="api apilevel-1">
+    <h3 class="api-name">URI</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 1</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+URI (<a href="../lang/String.html">String</a> scheme, 
+                <a href="../lang/String.html">String</a> ssp, 
+                <a href="../lang/String.html">String</a> fragment)</pre>
+    
+    
+
+    
+  <p>Constructs a URI from the given components.
+
+ <p> A component may be left undefined by passing <code>null</code>.
+
+ <p> This constructor first builds a URI in string form using the given
+ components as follows:  </p>
+
+ <ol>
+
+   <li><p> Initially, the result string is empty.  </p></li>
+
+   <li><p> If a scheme is given then it is appended to the result,
+   followed by a colon character (<code>':'</code>).  </p></li>
+
+   <li><p> If a scheme-specific part is given then it is appended.  Any
+   character that is not a <a href="#legal-chars">legal URI character</a>
+   is <a href="#quote">quoted</a>.  </p></li>
+
+   <li><p> Finally, if a fragment is given then a hash character
+   (<code>'#'</code>) is appended to the string, followed by the fragment.
+   Any character that is not a legal URI character is quoted.  </p></li>
+
+ </ol>
+
+ <p> The resulting URI string is then parsed in order to create the new
+ URI instance as if by invoking the <code><a href="URI.html#URI(java.lang.String)">URI(String)</a></code> constructor;
+ this may cause a <code><a href="URISyntaxException.html">URISyntaxException</a></code> to be thrown.  </p></p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>scheme</code></td>
+        <td width="100%">
+          <code>String</code>: Scheme name</p></td>
+      </tr>
+      <tr>
+        <td><code>ssp</code></td>
+        <td width="100%">
+          <code>String</code>: Scheme-specific part</p></td>
+      </tr>
+      <tr>
+        <td><code>fragment</code></td>
+        <td width="100%">
+          <code>String</code>: Fragment</p></td>
+      </tr>
+    </table>
+      <table class="responsive">
+      <tr><th colspan=2>Throws</th></tr>
+        <tr>
+          <td><code><a href="URISyntaxException.html">URISyntaxException</a></code></td>
+          <td width="100%">If the URI string constructed from the given components
+          violates RFC&nbsp;2396
+</td>
+        </tr>
+      </table>
+  
+
+</div>
+
+
+
+
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<!-- Protected ctors -->
+
+
+
+<!-- ========= METHOD DETAIL ======== -->
+<!-- Public methdos -->
+
+<h2 class="api-section">Public methods</h2>
+
+
+
+<A NAME="compareTo(java.net.URI)"></A>
+
+<div class="api apilevel-1">
+    <h3 class="api-name">compareTo</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 1</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+int compareTo (<a href="URI.html">URI</a> that)</pre>
+    
+    
+
+    
+  <p>Compares this URI to another object, which must be a URI.
+
+ <p> When comparing corresponding components of two URIs, if one
+ component is undefined but the other is defined then the first is
+ considered to be less than the second.  Unless otherwise noted, string
+ components are ordered according to their natural, case-sensitive
+ ordering as defined by the <code><a href="../lang/Comparable.html#compareTo(T)">String.compareTo</a></code> method.  String components that are subject to
+ encoding are compared by comparing their raw forms rather than their
+ encoded forms.
+
+ <p> The ordering of URIs is defined as follows: </p>
+
+ <ul type=disc>
+
+   <li><p> Two URIs with different schemes are ordered according the
+   ordering of their schemes, without regard to case. </p></li>
+
+   <li><p> A hierarchical URI is considered to be less than an opaque URI
+   with an identical scheme. </p></li>
+
+   <li><p> Two opaque URIs with identical schemes are ordered according
+   to the ordering of their scheme-specific parts. </p></li>
+
+   <li><p> Two opaque URIs with identical schemes and scheme-specific
+   parts are ordered according to the ordering of their
+   fragments. </p></li>
+
+   <li><p> Two hierarchical URIs with identical schemes are ordered
+   according to the ordering of their authority components: </p>
+
+   <ul type=disc>
+
+     <li><p> If both authority components are server-based then the URIs
+     are ordered according to their user-information components; if these
+     components are identical then the URIs are ordered according to the
+     ordering of their hosts, without regard to case; if the hosts are
+     identical then the URIs are ordered according to the ordering of
+     their ports. </p></li>
+
+     <li><p> If one or both authority components are registry-based then
+     the URIs are ordered according to the ordering of their authority
+     components. </p></li>
+
+   </ul></li>
+
+   <li><p> Finally, two hierarchical URIs with identical schemes and
+   authority components are ordered according to the ordering of their
+   paths; if their paths are identical then they are ordered according to
+   the ordering of their queries; if the queries are identical then they
+   are ordered according to the order of their fragments. </p></li>
+
+ </ul>
+
+ <p> This method satisfies the general contract of the <code><a href="../lang/Comparable.html#compareTo(T)">Comparable.compareTo</a></code>
+ method. </p></p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>that</code></td>
+        <td width="100%">
+          <code>URI</code>: The object to which this URI is to be compared</p></td>
+      </tr>
+    </table>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code>int</code></td>
+        <td width="100%">A negative integer, zero, or a positive integer as this URI is
+          less than, equal to, or greater than the given URI</p></td>
+      </tr>
+    </table>
+      <table class="responsive">
+      <tr><th colspan=2>Throws</th></tr>
+        <tr>
+          <td><code><a href="../lang/ClassCastException.html">ClassCastException</a></code></td>
+          <td width="100%">If the given object is not a URI
+</td>
+        </tr>
+      </table>
+  
+
+</div>
+
+
+<A NAME="create(java.lang.String)"></A>
+
+<div class="api apilevel-1">
+    <h3 class="api-name">create</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 1</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="URI.html">URI</a> create (<a href="../lang/String.html">String</a> str)</pre>
+    
+    
+
+    
+  <p>Creates a URI by parsing the given string.
+
+ <p> This convenience factory method works as if by invoking the <code><a href="URI.html#URI(java.lang.String)">URI(String)</a></code> constructor; any <code><a href="URISyntaxException.html">URISyntaxException</a></code> thrown by the
+ constructor is caught and wrapped in a new <code><a href="../lang/IllegalArgumentException.html">IllegalArgumentException</a></code> object, which is then thrown.
+
+ <p> This method is provided for use in situations where it is known that
+ the given string is a legal URI, for example for URI constants declared
+ within in a program, and so it would be considered a programming error
+ for the string not to parse as such.  The constructors, which throw
+ <code><a href="URISyntaxException.html">URISyntaxException</a></code> directly, should be used situations where a
+ URI is being constructed from user input or from some other source that
+ may be prone to errors.  </p></p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>str</code></td>
+        <td width="100%">
+          <code>String</code>: The string to be parsed into a URI</p></td>
+      </tr>
+    </table>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="URI.html">URI</a></code></td>
+        <td width="100%">The new URI</p></td>
+      </tr>
+    </table>
+      <table class="responsive">
+      <tr><th colspan=2>Throws</th></tr>
+        <tr>
+          <td><code><a href="../lang/NullPointerException.html">NullPointerException</a></code></td>
+          <td width="100%">If <code>str</code> is <code>null</code></td>
+        </tr>
+        <tr>
+          <td><code><a href="../lang/IllegalArgumentException.html">IllegalArgumentException</a></code></td>
+          <td width="100%">If the given string violates RFC&nbsp;2396
+</td>
+        </tr>
+      </table>
+  
+
+</div>
+
+
+<A NAME="equals(java.lang.Object)"></A>
+
+<div class="api apilevel-1">
+    <h3 class="api-name">equals</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 1</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+boolean equals (<a href="../lang/Object.html">Object</a> ob)</pre>
+    
+    
+
+    
+  <p>Tests this URI for equality with another object.
+
+ <p> If the given object is not a URI then this method immediately
+ returns <code>false</code>.
+
+ <p> For two URIs to be considered equal requires that either both are
+ opaque or both are hierarchical.  Their schemes must either both be
+ undefined or else be equal without regard to case. Their fragments
+ must either both be undefined or else be equal.
+
+ <p> For two opaque URIs to be considered equal, their scheme-specific
+ parts must be equal.
+
+ <p> For two hierarchical URIs to be considered equal, their paths must
+ be equal and their queries must either both be undefined or else be
+ equal.  Their authorities must either both be undefined, or both be
+ registry-based, or both be server-based.  If their authorities are
+ defined and are registry-based, then they must be equal.  If their
+ authorities are defined and are server-based, then their hosts must be
+ equal without regard to case, their port numbers must be equal, and
+ their user-information components must be equal.
+
+ <p> When testing the user-information, path, query, fragment, authority,
+ or scheme-specific parts of two URIs for equality, the raw forms rather
+ than the encoded forms of these components are compared and the
+ hexadecimal digits of escaped octets are compared without regard to
+ case.
+
+ <p> This method satisfies the general contract of the <code><a href="../lang/Object.html#equals(java.lang.Object)">Object.equals</a></code> method. </p></p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>ob</code></td>
+        <td width="100%">
+          <code>Object</code>: The object to which this object is to be compared</p></td>
+      </tr>
+    </table>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code>boolean</code></td>
+        <td width="100%"><code>true</code> if, and only if, the given object is a URI that
+          is identical to this URI
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="getAuthority()"></A>
+
+<div class="api apilevel-1">
+    <h3 class="api-name">getAuthority</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 1</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="../lang/String.html">String</a> getAuthority ()</pre>
+    
+    
+
+    
+  <p>Returns the decoded authority component of this URI.
+
+ <p> The string returned by this method is equal to that returned by the
+ <code><a href="URI.html#getRawAuthority()">getRawAuthority</a></code> method except that all
+ sequences of escaped octets are <a href="#decode">decoded</a>.  </p></p></p>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="../lang/String.html">String</a></code></td>
+        <td width="100%">The decoded authority component of this URI,
+          or <code>null</code> if the authority is undefined
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="getFragment()"></A>
+
+<div class="api apilevel-1">
+    <h3 class="api-name">getFragment</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 1</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="../lang/String.html">String</a> getFragment ()</pre>
+    
+    
+
+    
+  <p>Returns the decoded fragment component of this URI.
+
+ <p> The string returned by this method is equal to that returned by the
+ <code><a href="URI.html#getRawFragment()">getRawFragment</a></code> method except that all
+ sequences of escaped octets are <a href="#decode">decoded</a>.  </p></p></p>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="../lang/String.html">String</a></code></td>
+        <td width="100%">The decoded fragment component of this URI,
+          or <code>null</code> if the fragment is undefined
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="getHost()"></A>
+
+<div class="api apilevel-1">
+    <h3 class="api-name">getHost</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 1</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="../lang/String.html">String</a> getHost ()</pre>
+    
+    
+
+    
+  <p>Returns the host component of this URI.
+
+ <p> The host component of a URI, if defined, will have one of the
+ following forms: </p>
+
+ <ul>
+
+   <li><p> A domain name consisting of one or more <i>labels</i>
+   separated by period characters (<code>'.'</code>), optionally followed by
+   a period character.  Each label consists of <i>alphanum</i> characters
+   as well as hyphen characters (<code>'-'</code>), though hyphens never
+   occur as the first or last characters in a label. The rightmost
+   label of a domain name consisting of two or more labels, begins
+   with an <i>alpha</i> character. </li>
+
+   <li><p> A dotted-quad IPv4 address of the form
+   <i>digit</i><code>+.</code><i>digit</i><code>+.</code><i>digit</i><code>+.</code><i>digit</i><code>+</code>,
+   where no <i>digit</i> sequence is longer than three characters and no
+   sequence has a value larger than 255. </p></li>
+
+   <li><p> An IPv6 address enclosed in square brackets (<code>'['</code> and
+   <code>']'</code>) and consisting of hexadecimal digits, colon characters
+   (<code>':'</code>), and possibly an embedded IPv4 address.  The full
+   syntax of IPv6 addresses is specified in <a
+   href="http://www.ietf.org/rfc/rfc2373.txt"><i>RFC&nbsp;2373: IPv6
+   Addressing Architecture</i></a>.  </p></li>
+
+ </ul>
+
+ The host component of a URI cannot contain escaped octets, hence this
+ method does not perform any decoding.</p></p>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="../lang/String.html">String</a></code></td>
+        <td width="100%">The host component of this URI,
+          or <code>null</code> if the host is undefined
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="getPath()"></A>
+
+<div class="api apilevel-1">
+    <h3 class="api-name">getPath</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 1</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="../lang/String.html">String</a> getPath ()</pre>
+    
+    
+
+    
+  <p>Returns the decoded path component of this URI.
+
+ <p> The string returned by this method is equal to that returned by the
+ <code><a href="URI.html#getRawPath()">getRawPath</a></code> method except that all sequences of
+ escaped octets are <a href="#decode">decoded</a>.  </p></p></p>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="../lang/String.html">String</a></code></td>
+        <td width="100%">The decoded path component of this URI,
+          or <code>null</code> if the path is undefined
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="getPort()"></A>
+
+<div class="api apilevel-1">
+    <h3 class="api-name">getPort</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 1</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+int getPort ()</pre>
+    
+    
+
+    
+  <p>Returns the port number of this URI.
+
+ <p> The port component of a URI, if defined, is a non-negative
+ integer. </p></p></p>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code>int</code></td>
+        <td width="100%">The port component of this URI,
+          or <code>-1</code> if the port is undefined
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="getQuery()"></A>
+
+<div class="api apilevel-1">
+    <h3 class="api-name">getQuery</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 1</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="../lang/String.html">String</a> getQuery ()</pre>
+    
+    
+
+    
+  <p>Returns the decoded query component of this URI.
+
+ <p> The string returned by this method is equal to that returned by the
+ <code><a href="URI.html#getRawQuery()">getRawQuery</a></code> method except that all sequences of
+ escaped octets are <a href="#decode">decoded</a>.  </p></p></p>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="../lang/String.html">String</a></code></td>
+        <td width="100%">The decoded query component of this URI,
+          or <code>null</code> if the query is undefined
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="getRawAuthority()"></A>
+
+<div class="api apilevel-1">
+    <h3 class="api-name">getRawAuthority</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 1</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="../lang/String.html">String</a> getRawAuthority ()</pre>
+    
+    
+
+    
+  <p>Returns the raw authority component of this URI.
+
+ <p> The authority component of a URI, if defined, only contains the
+ commercial-at character (<code>'@'</code>) and characters in the
+ <i>unreserved</i>, <i>punct</i>, <i>escaped</i>, and <i>other</i>
+ categories.  If the authority is server-based then it is further
+ constrained to have valid user-information, host, and port
+ components. </p></p></p>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="../lang/String.html">String</a></code></td>
+        <td width="100%">The raw authority component of this URI,
+          or <code>null</code> if the authority is undefined
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="getRawFragment()"></A>
+
+<div class="api apilevel-1">
+    <h3 class="api-name">getRawFragment</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 1</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="../lang/String.html">String</a> getRawFragment ()</pre>
+    
+    
+
+    
+  <p>Returns the raw fragment component of this URI.
+
+ <p> The fragment component of a URI, if defined, only contains legal URI
+ characters. </p></p></p>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="../lang/String.html">String</a></code></td>
+        <td width="100%">The raw fragment component of this URI,
+          or <code>null</code> if the fragment is undefined
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="getRawPath()"></A>
+
+<div class="api apilevel-1">
+    <h3 class="api-name">getRawPath</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 1</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="../lang/String.html">String</a> getRawPath ()</pre>
+    
+    
+
+    
+  <p>Returns the raw path component of this URI.
+
+ <p> The path component of a URI, if defined, only contains the slash
+ character (<code>'/'</code>), the commercial-at character (<code>'@'</code>),
+ and characters in the <i>unreserved</i>, <i>punct</i>, <i>escaped</i>,
+ and <i>other</i> categories. </p></p></p>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="../lang/String.html">String</a></code></td>
+        <td width="100%">The path component of this URI,
+          or <code>null</code> if the path is undefined
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="getRawQuery()"></A>
+
+<div class="api apilevel-1">
+    <h3 class="api-name">getRawQuery</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 1</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="../lang/String.html">String</a> getRawQuery ()</pre>
+    
+    
+
+    
+  <p>Returns the raw query component of this URI.
+
+ <p> The query component of a URI, if defined, only contains legal URI
+ characters. </p></p></p>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="../lang/String.html">String</a></code></td>
+        <td width="100%">The raw query component of this URI,
+          or <code>null</code> if the query is undefined
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="getRawSchemeSpecificPart()"></A>
+
+<div class="api apilevel-1">
+    <h3 class="api-name">getRawSchemeSpecificPart</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 1</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="../lang/String.html">String</a> getRawSchemeSpecificPart ()</pre>
+    
+    
+
+    
+  <p>Returns the raw scheme-specific part of this URI.  The scheme-specific
+ part is never undefined, though it may be empty.
+
+ <p> The scheme-specific part of a URI only contains legal URI
+ characters. </p></p></p>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="../lang/String.html">String</a></code></td>
+        <td width="100%">The raw scheme-specific part of this URI
+          (never <code>null</code>)
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="getRawUserInfo()"></A>
+
+<div class="api apilevel-1">
+    <h3 class="api-name">getRawUserInfo</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 1</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="../lang/String.html">String</a> getRawUserInfo ()</pre>
+    
+    
+
+    
+  <p>Returns the raw user-information component of this URI.
+
+ <p> The user-information component of a URI, if defined, only contains
+ characters in the <i>unreserved</i>, <i>punct</i>, <i>escaped</i>, and
+ <i>other</i> categories. </p></p></p>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="../lang/String.html">String</a></code></td>
+        <td width="100%">The raw user-information component of this URI,
+          or <code>null</code> if the user information is undefined
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="getScheme()"></A>
+
+<div class="api apilevel-1">
+    <h3 class="api-name">getScheme</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 1</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="../lang/String.html">String</a> getScheme ()</pre>
+    
+    
+
+    
+  <p>Returns the scheme component of this URI.
+
+ <p> The scheme component of a URI, if defined, only contains characters
+ in the <i>alphanum</i> category and in the string <code>"-.+"</code>.  A
+ scheme always starts with an <i>alpha</i> character. <p>
+
+ The scheme component of a URI cannot contain escaped octets, hence this
+ method does not perform any decoding.</p></p>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="../lang/String.html">String</a></code></td>
+        <td width="100%">The scheme component of this URI,
+          or <code>null</code> if the scheme is undefined
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="getSchemeSpecificPart()"></A>
+
+<div class="api apilevel-1">
+    <h3 class="api-name">getSchemeSpecificPart</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 1</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="../lang/String.html">String</a> getSchemeSpecificPart ()</pre>
+    
+    
+
+    
+  <p>Returns the decoded scheme-specific part of this URI.
+
+ <p> The string returned by this method is equal to that returned by the
+ <code><a href="URI.html#getRawSchemeSpecificPart()">getRawSchemeSpecificPart</a></code> method
+ except that all sequences of escaped octets are <a
+ href="#decode">decoded</a>.  </p></p></p>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="../lang/String.html">String</a></code></td>
+        <td width="100%">The decoded scheme-specific part of this URI
+          (never <code>null</code>)
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="getUserInfo()"></A>
+
+<div class="api apilevel-1">
+    <h3 class="api-name">getUserInfo</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 1</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="../lang/String.html">String</a> getUserInfo ()</pre>
+    
+    
+
+    
+  <p>Returns the decoded user-information component of this URI.
+
+ <p> The string returned by this method is equal to that returned by the
+ <code><a href="URI.html#getRawUserInfo()">getRawUserInfo</a></code> method except that all
+ sequences of escaped octets are <a href="#decode">decoded</a>.  </p></p></p>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="../lang/String.html">String</a></code></td>
+        <td width="100%">The decoded user-information component of this URI,
+          or <code>null</code> if the user information is undefined
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="hashCode()"></A>
+
+<div class="api apilevel-1">
+    <h3 class="api-name">hashCode</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 1</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+int hashCode ()</pre>
+    
+    
+
+    
+  <p>Returns a hash-code value for this URI.  The hash code is based upon all
+ of the URI's components, and satisfies the general contract of the
+ <code><a href="../lang/Object.html#hashCode()">Object.hashCode</a></code> method.</p></p>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code>int</code></td>
+        <td width="100%">A hash-code value for this URI
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="isAbsolute()"></A>
+
+<div class="api apilevel-1">
+    <h3 class="api-name">isAbsolute</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 1</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+boolean isAbsolute ()</pre>
+    
+    
+
+    
+  <p>Tells whether or not this URI is absolute.
+
+ <p> A URI is absolute if, and only if, it has a scheme component. </p></p></p>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code>boolean</code></td>
+        <td width="100%"><code>true</code> if, and only if, this URI is absolute
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="isOpaque()"></A>
+
+<div class="api apilevel-1">
+    <h3 class="api-name">isOpaque</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 1</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+boolean isOpaque ()</pre>
+    
+    
+
+    
+  <p>Tells whether or not this URI is opaque.
+
+ <p> A URI is opaque if, and only if, it is absolute and its
+ scheme-specific part does not begin with a slash character ('/').
+ An opaque URI has a scheme, a scheme-specific part, and possibly
+ a fragment; all other components are undefined. </p></p></p>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code>boolean</code></td>
+        <td width="100%"><code>true</code> if, and only if, this URI is opaque
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="normalize()"></A>
+
+<div class="api apilevel-1">
+    <h3 class="api-name">normalize</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 1</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="URI.html">URI</a> normalize ()</pre>
+    
+    
+
+    
+  <p>Normalizes this URI's path.
+
+ <p> If this URI is opaque, or if its path is already in normal form,
+ then this URI is returned.  Otherwise a new URI is constructed that is
+ identical to this URI except that its path is computed by normalizing
+ this URI's path in a manner consistent with <a
+ href="http://www.ietf.org/rfc/rfc2396.txt">RFC&nbsp;2396</a>,
+ section&nbsp;5.2, step&nbsp;6, sub-steps&nbsp;c through&nbsp;f; that is:
+ </p>
+
+ <ol>
+
+   <li><p> All <code>"."</code> segments are removed. </p></li>
+
+   <li><p> If a <code>".."</code> segment is preceded by a non-<code>".."</code>
+   segment then both of these segments are removed.  This step is
+   repeated until it is no longer applicable. </p></li>
+
+   <li><p> If the path is relative, and if its first segment contains a
+   colon character (<code>':'</code>), then a <code>"."</code> segment is
+   prepended.  This prevents a relative URI with a path such as
+   <code>"a:b/c/d"</code> from later being re-parsed as an opaque URI with a
+   scheme of <code>"a"</code> and a scheme-specific part of <code>"b/c/d"</code>.
+   <b><i>(Deviation from RFC&nbsp;2396)</i></b> </p></li>
+
+ </ol>
+
+ <p> A normalized path will begin with one or more <code>".."</code> segments
+ if there were insufficient non-<code>".."</code> segments preceding them to
+ allow their removal.  A normalized path will begin with a <code>"."</code>
+ segment if one was inserted by step 3 above.  Otherwise, a normalized
+ path will not contain any <code>"."</code> or <code>".."</code> segments. </p></p></p>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="URI.html">URI</a></code></td>
+        <td width="100%">A URI equivalent to this URI,
+          but whose path is in normal form
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="parseServerAuthority()"></A>
+
+<div class="api apilevel-1">
+    <h3 class="api-name">parseServerAuthority</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 1</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="URI.html">URI</a> parseServerAuthority ()</pre>
+    
+    
+
+    
+  <p>Attempts to parse this URI's authority component, if defined, into
+ user-information, host, and port components.
+
+ <p> If this URI's authority component has already been recognized as
+ being server-based then it will already have been parsed into
+ user-information, host, and port components.  In this case, or if this
+ URI has no authority component, this method simply returns this URI.
+
+ <p> Otherwise this method attempts once more to parse the authority
+ component into user-information, host, and port components, and throws
+ an exception describing why the authority component could not be parsed
+ in that way.
+
+ <p> This method is provided because the generic URI syntax specified in
+ <a href="http://www.ietf.org/rfc/rfc2396.txt">RFC&nbsp;2396</a>
+ cannot always distinguish a malformed server-based authority from a
+ legitimate registry-based authority.  It must therefore treat some
+ instances of the former as instances of the latter.  The authority
+ component in the URI string <code>"//foo:bar"</code>, for example, is not a
+ legal server-based authority but it is legal as a registry-based
+ authority.
+
+ <p> In many common situations, for example when working URIs that are
+ known to be either URNs or URLs, the hierarchical URIs being used will
+ always be server-based.  They therefore must either be parsed as such or
+ treated as an error.  In these cases a statement such as
+
+ <blockquote>
+ <code>URI </code><i>u</i><code>= new URI(str).parseServerAuthority();</code>
+ </blockquote>
+
+ <p> can be used to ensure that <i>u</i> always refers to a URI that, if
+ it has an authority component, has a server-based authority with proper
+ user-information, host, and port components.  Invoking this method also
+ ensures that if the authority could not be parsed in that way then an
+ appropriate diagnostic message can be issued based upon the exception
+ that is thrown. </p></p></p>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="URI.html">URI</a></code></td>
+        <td width="100%">A URI whose authority field has been parsed
+          as a server-based authority</p></td>
+      </tr>
+    </table>
+      <table class="responsive">
+      <tr><th colspan=2>Throws</th></tr>
+        <tr>
+          <td><code><a href="URISyntaxException.html">URISyntaxException</a></code></td>
+          <td width="100%">If the authority component of this URI is defined
+          but cannot be parsed as a server-based authority
+          according to RFC&nbsp;2396
+</td>
+        </tr>
+      </table>
+  
+
+</div>
+
+
+<A NAME="relativize(java.net.URI)"></A>
+
+<div class="api apilevel-1">
+    <h3 class="api-name">relativize</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 1</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="URI.html">URI</a> relativize (<a href="URI.html">URI</a> uri)</pre>
+    
+    
+
+    
+  <p>Relativizes the given URI against this URI.
+
+ <p> The relativization of the given URI against this URI is computed as
+ follows: </p>
+
+ <ol>
+
+   <li><p> If either this URI or the given URI are opaque, or if the
+   scheme and authority components of the two URIs are not identical, or
+   if the path of this URI is not a prefix of the path of the given URI,
+   then the given URI is returned. </p></li>
+
+   <li><p> Otherwise a new relative hierarchical URI is constructed with
+   query and fragment components taken from the given URI and with a path
+   component computed by removing this URI's path from the beginning of
+   the given URI's path. </p></li>
+
+ </ol></p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>uri</code></td>
+        <td width="100%">
+          <code>URI</code>: The URI to be relativized against this URI</p></td>
+      </tr>
+    </table>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="URI.html">URI</a></code></td>
+        <td width="100%">The resulting URI</p></td>
+      </tr>
+    </table>
+      <table class="responsive">
+      <tr><th colspan=2>Throws</th></tr>
+        <tr>
+          <td><code><a href="../lang/NullPointerException.html">NullPointerException</a></code></td>
+          <td width="100%">If <code>uri</code> is <code>null</code>
+</td>
+        </tr>
+      </table>
+  
+
+</div>
+
+
+<A NAME="resolve(java.net.URI)"></A>
+
+<div class="api apilevel-1">
+    <h3 class="api-name">resolve</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 1</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="URI.html">URI</a> resolve (<a href="URI.html">URI</a> uri)</pre>
+    
+    
+
+    
+  <p>Resolves the given URI against this URI.
+
+ <p> If the given URI is already absolute, or if this URI is opaque, then
+ the given URI is returned.
+
+ <p><a name="resolve-frag"></a> If the given URI's fragment component is
+ defined, its path component is empty, and its scheme, authority, and
+ query components are undefined, then a URI with the given fragment but
+ with all other components equal to those of this URI is returned.  This
+ allows a URI representing a standalone fragment reference, such as
+ <code>"#foo"</code>, to be usefully resolved against a base URI.
+
+ <p> Otherwise this method constructs a new hierarchical URI in a manner
+ consistent with <a
+ href="http://www.ietf.org/rfc/rfc2396.txt">RFC&nbsp;2396</a>,
+ section&nbsp;5.2; that is: </p>
+
+ <ol>
+
+   <li><p> A new URI is constructed with this URI's scheme and the given
+   URI's query and fragment components. </p></li>
+
+   <li><p> If the given URI has an authority component then the new URI's
+   authority and path are taken from the given URI. </p></li>
+
+   <li><p> Otherwise the new URI's authority component is copied from
+   this URI, and its path is computed as follows: </p>
+
+   <ol>
+
+     <li><p> If the given URI's path is absolute then the new URI's path
+     is taken from the given URI. </p></li>
+
+     <li><p> Otherwise the given URI's path is relative, and so the new
+     URI's path is computed by resolving the path of the given URI
+     against the path of this URI.  This is done by concatenating all but
+     the last segment of this URI's path, if any, with the given URI's
+     path and then normalizing the result as if by invoking the <code><a href="URI.html#normalize()">normalize</a></code> method. </p></li>
+
+   </ol></li>
+
+ </ol>
+
+ <p> The result of this method is absolute if, and only if, either this
+ URI is absolute or the given URI is absolute.  </p></p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>uri</code></td>
+        <td width="100%">
+          <code>URI</code>: The URI to be resolved against this URI</p></td>
+      </tr>
+    </table>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="URI.html">URI</a></code></td>
+        <td width="100%">The resulting URI</p></td>
+      </tr>
+    </table>
+      <table class="responsive">
+      <tr><th colspan=2>Throws</th></tr>
+        <tr>
+          <td><code><a href="../lang/NullPointerException.html">NullPointerException</a></code></td>
+          <td width="100%">If <code>uri</code> is <code>null</code>
+</td>
+        </tr>
+      </table>
+  
+
+</div>
+
+
+<A NAME="resolve(java.lang.String)"></A>
+
+<div class="api apilevel-1">
+    <h3 class="api-name">resolve</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 1</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="URI.html">URI</a> resolve (<a href="../lang/String.html">String</a> str)</pre>
+    
+    
+
+    
+  <p>Constructs a new URI by parsing the given string and then resolving it
+ against this URI.
+
+ <p> This convenience method works as if invoking it were equivalent to
+ evaluating the expression <code><a href="URI.html#resolve(java.net.URI)">resolve</a></code><code>(URI.</code><code><a href="URI.html#create(java.lang.String)">create</a></code><code>(str))</code>. </p></p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>str</code></td>
+        <td width="100%">
+          <code>String</code>: The string to be parsed into a URI</p></td>
+      </tr>
+    </table>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="URI.html">URI</a></code></td>
+        <td width="100%">The resulting URI</p></td>
+      </tr>
+    </table>
+      <table class="responsive">
+      <tr><th colspan=2>Throws</th></tr>
+        <tr>
+          <td><code><a href="../lang/NullPointerException.html">NullPointerException</a></code></td>
+          <td width="100%">If <code>str</code> is <code>null</code></td>
+        </tr>
+        <tr>
+          <td><code><a href="../lang/IllegalArgumentException.html">IllegalArgumentException</a></code></td>
+          <td width="100%">If the given string violates RFC&nbsp;2396
+</td>
+        </tr>
+      </table>
+  
+
+</div>
+
+
+<A NAME="toASCIIString()"></A>
+
+<div class="api apilevel-1">
+    <h3 class="api-name">toASCIIString</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 1</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="../lang/String.html">String</a> toASCIIString ()</pre>
+    
+    
+
+    
+  <p>Returns the content of this URI as a US-ASCII string.
+
+ <p> If this URI does not contain any characters in the <i>other</i>
+ category then an invocation of this method will return the same value as
+ an invocation of the <code><a href="URI.html#toString()">toString</a></code> method.  Otherwise
+ this method works as if by invoking that method and then <a
+ href="#encode">encoding</a> the result.  </p></p></p>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="../lang/String.html">String</a></code></td>
+        <td width="100%">The string form of this URI, encoded as needed
+          so that it only contains characters in the US-ASCII
+          charset
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="toString()"></A>
+
+<div class="api apilevel-1">
+    <h3 class="api-name">toString</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 1</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="../lang/String.html">String</a> toString ()</pre>
+    
+    
+
+    
+  <p>Returns the content of this URI as a string.
+
+ <p> If this URI was created by invoking one of the constructors in this
+ class then a string equivalent to the original input string, or to the
+ string computed from the originally-given components, as appropriate, is
+ returned.  Otherwise this URI was created by normalization, resolution,
+ or relativization, and so a string is constructed from this URI's
+ components according to the rules specified in <a
+ href="http://www.ietf.org/rfc/rfc2396.txt">RFC&nbsp;2396</a>,
+ section&nbsp;5.2, step&nbsp;7. </p></p></p>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="../lang/String.html">String</a></code></td>
+        <td width="100%">The string form of this URI
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="toURL()"></A>
+
+<div class="api apilevel-1">
+    <h3 class="api-name">toURL</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 1</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="URL.html">URL</a> toURL ()</pre>
+    
+    
+
+    
+  <p>Constructs a URL from this URI.
+
+ <p> This convenience method works as if invoking it were equivalent to
+ evaluating the expression <code>new&amp;nbsp;URL(this.toString())</code> after
+ first checking that this URI is absolute. </p></p></p>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="URL.html">URL</a></code></td>
+        <td width="100%">A URL constructed from this URI</p></td>
+      </tr>
+    </table>
+      <table class="responsive">
+      <tr><th colspan=2>Throws</th></tr>
+        <tr>
+          <td><code><a href="../lang/IllegalArgumentException.html">IllegalArgumentException</a></code></td>
+          <td width="100%">If this URL is not absolute</td>
+        </tr>
+        <tr>
+          <td><code><a href="MalformedURLException.html">MalformedURLException</a></code></td>
+          <td width="100%">If a protocol handler for the URL could not be found,
+          or if some other error occurred while constructing the URL
+</td>
+        </tr>
+      </table>
+  
+
+</div>
+
+
+
+
+
+<!-- ========= METHOD DETAIL ======== -->
+
+
+
+<!-- ========= END OF CLASS DATA ========= -->
+
+</div><!-- end jd-content -->
+
+
+
+<div class="data-reference-resources-wrapper">
+  
+  <ul data-reference-resources>
+    
+    
+    <li><h2>Interfaces</h2>
+      <ul>
+          <li class="api apilevel-1"><a href="ContentHandlerFactory.html">ContentHandlerFactory</a></li>
+          <li class="api apilevel-9"><a href="CookiePolicy.html">CookiePolicy</a></li>
+          <li class="api apilevel-9"><a href="CookieStore.html">CookieStore</a></li>
+          <li class="api apilevel-1"><a href="DatagramSocketImplFactory.html">DatagramSocketImplFactory</a></li>
+          <li class="api apilevel-1"><a href="FileNameMap.html">FileNameMap</a></li>
+          <li class="api apilevel-24"><a href="ProtocolFamily.html">ProtocolFamily</a></li>
+          <li class="api apilevel-1"><a href="SocketImplFactory.html">SocketImplFactory</a></li>
+          <li class="api apilevel-24"><a href="SocketOption.html">SocketOption</a></li>
+          <li class="api apilevel-1"><a href="SocketOptions.html">SocketOptions</a></li>
+          <li class="api apilevel-1"><a href="URLStreamHandlerFactory.html">URLStreamHandlerFactory</a></li>
+      </ul>
+    </li>
+    
+    <li><h2>Classes</h2>
+      <ul>
+          <li class="api apilevel-1"><a href="Authenticator.html">Authenticator</a></li>
+          <li class="api apilevel-1"><a href="CacheRequest.html">CacheRequest</a></li>
+          <li class="api apilevel-1"><a href="CacheResponse.html">CacheResponse</a></li>
+          <li class="api apilevel-1"><a href="ContentHandler.html">ContentHandler</a></li>
+          <li class="api apilevel-1"><a href="CookieHandler.html">CookieHandler</a></li>
+          <li class="api apilevel-9"><a href="CookieManager.html">CookieManager</a></li>
+          <li class="api apilevel-1"><a href="DatagramPacket.html">DatagramPacket</a></li>
+          <li class="api apilevel-1"><a href="DatagramSocket.html">DatagramSocket</a></li>
+          <li class="api apilevel-1"><a href="DatagramSocketImpl.html">DatagramSocketImpl</a></li>
+          <li class="api apilevel-9"><a href="HttpCookie.html">HttpCookie</a></li>
+          <li class="api apilevel-1"><a href="HttpURLConnection.html">HttpURLConnection</a></li>
+          <li class="api apilevel-9"><a href="IDN.html">IDN</a></li>
+          <li class="api apilevel-1"><a href="Inet4Address.html">Inet4Address</a></li>
+          <li class="api apilevel-1"><a href="Inet6Address.html">Inet6Address</a></li>
+          <li class="api apilevel-1"><a href="InetAddress.html">InetAddress</a></li>
+          <li class="api apilevel-1"><a href="InetSocketAddress.html">InetSocketAddress</a></li>
+          <li class="api apilevel-9"><a href="InterfaceAddress.html">InterfaceAddress</a></li>
+          <li class="api apilevel-1"><a href="JarURLConnection.html">JarURLConnection</a></li>
+          <li class="api apilevel-1"><a href="MulticastSocket.html">MulticastSocket</a></li>
+          <li class="api apilevel-1"><a href="NetPermission.html">NetPermission</a></li>
+          <li class="api apilevel-1"><a href="NetworkInterface.html">NetworkInterface</a></li>
+          <li class="api apilevel-1"><a href="PasswordAuthentication.html">PasswordAuthentication</a></li>
+          <li class="api apilevel-1"><a href="Proxy.html">Proxy</a></li>
+          <li class="api apilevel-1"><a href="ProxySelector.html">ProxySelector</a></li>
+          <li class="api apilevel-1"><a href="ResponseCache.html">ResponseCache</a></li>
+          <li class="api apilevel-1"><a href="SecureCacheResponse.html">SecureCacheResponse</a></li>
+          <li class="api apilevel-1"><a href="ServerSocket.html">ServerSocket</a></li>
+          <li class="api apilevel-1"><a href="Socket.html">Socket</a></li>
+          <li class="api apilevel-1"><a href="SocketAddress.html">SocketAddress</a></li>
+          <li class="api apilevel-1"><a href="SocketImpl.html">SocketImpl</a></li>
+          <li class="api apilevel-1"><a href="SocketPermission.html">SocketPermission</a></li>
+          <li class="api apilevel-24"><a href="StandardSocketOptions.html">StandardSocketOptions</a></li>
+          <li class="selected api apilevel-1"><a href="URI.html">URI</a></li>
+          <li class="api apilevel-1"><a href="URL.html">URL</a></li>
+          <li class="api apilevel-1"><a href="URLClassLoader.html">URLClassLoader</a></li>
+          <li class="api apilevel-1"><a href="URLConnection.html">URLConnection</a></li>
+          <li class="api apilevel-1"><a href="URLDecoder.html">URLDecoder</a></li>
+          <li class="api apilevel-1"><a href="URLEncoder.html">URLEncoder</a></li>
+          <li class="api apilevel-1"><a href="URLStreamHandler.html">URLStreamHandler</a></li>
+      </ul>
+    </li>
+    
+    <li><h2>Enums</h2>
+      <ul>
+          <li class="api apilevel-1"><a href="Authenticator.RequestorType.html">Authenticator.RequestorType</a></li>
+          <li class="api apilevel-1"><a href="Proxy.Type.html">Proxy.Type</a></li>
+          <li class="api apilevel-24"><a href="StandardProtocolFamily.html">StandardProtocolFamily</a></li>
+      </ul>
+    </li>
+    
+    <li><h2>Exceptions</h2>
+      <ul>
+          <li class="api apilevel-1"><a href="BindException.html">BindException</a></li>
+          <li class="api apilevel-1"><a href="ConnectException.html">ConnectException</a></li>
+          <li class="api apilevel-1"><a href="HttpRetryException.html">HttpRetryException</a></li>
+          <li class="api apilevel-1"><a href="MalformedURLException.html">MalformedURLException</a></li>
+          <li class="api apilevel-1"><a href="NoRouteToHostException.html">NoRouteToHostException</a></li>
+          <li class="api apilevel-1"><a href="PortUnreachableException.html">PortUnreachableException</a></li>
+          <li class="api apilevel-1"><a href="ProtocolException.html">ProtocolException</a></li>
+          <li class="api apilevel-1"><a href="SocketException.html">SocketException</a></li>
+          <li class="api apilevel-1"><a href="SocketTimeoutException.html">SocketTimeoutException</a></li>
+          <li class="api apilevel-1"><a href="UnknownHostException.html">UnknownHostException</a></li>
+          <li class="api apilevel-1"><a href="UnknownServiceException.html">UnknownServiceException</a></li>
+          <li class="api apilevel-1"><a href="URISyntaxException.html">URISyntaxException</a></li>
+      </ul>
+    </li>
+    
+  </ul>
+  
+</div>
+
+
+
+
+    </div>
+
+    
+
+  
+    
+  
+    
+
+
+
+
+  
+
+
+<footer class="devsite-footer-promos nocontent">
+  <nav class="devsite-full-site-width">
+    <ul class="devsite-footer-promos-list">
+      
+      <li class="devsite-footer-promo">
+        <a href="http://twitter.com/AndroidDev"
+           class="devsite-footer-promo-title gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Twitter Promo"
+           >
+          
+          
+          <img class="devsite-footer-promo-icon" src="https://developer.android.com/static/images/footer/logo-twitter.svg">
+          
+          
+            Twitter
+          
+        </a>
+        <div class="devsite-footer-promo-description">Follow @AndroidDev on Twitter</div>
+      </li>
+      
+      <li class="devsite-footer-promo">
+        <a href="http://plus.google.com/+AndroidDevelopers"
+           class="devsite-footer-promo-title gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Google+ Promo"
+           >
+          
+          
+          <img class="devsite-footer-promo-icon" src="../../../../www.gstatic.com/images/branding/product/2x/google_plus_48dp.png">
+          
+          
+            Google+
+          
+        </a>
+        <div class="devsite-footer-promo-description">Follow Android Developers on Google+</div>
+      </li>
+      
+      <li class="devsite-footer-promo">
+        <a href="http://www.youtube.com/user/androiddevelopers"
+           class="devsite-footer-promo-title gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer YouTube Promo"
+           >
+          
+          
+          <img class="devsite-footer-promo-icon" src="../../../../www.gstatic.com/images/icons/material/product/2x/youtube_48dp.png">
+          
+          
+            YouTube
+          
+        </a>
+        <div class="devsite-footer-promo-description">Check out Android Developers on YouTube</div>
+      </li>
+      
+    </ul>
+  </nav>
+</footer>
+
+
+
+<div class="wrap dac-footer-container">
+  <footer class="dac-footer ">
+    <div class="cols dac-footer-main">
+      <div class="col-1of1">
+        <div class="dac-footer-contact">
+          
+          <a class="dac-footer-contact-link" href="https://developer.android.com/newsletter/index.html" title="Newsletter">Newsletter</a>
+          
+          <a class="dac-footer-contact-link" href="https://android-developers.blogspot.com/" title="Blog" target="_blank">Blog</a>
+          
+          <a class="dac-footer-contact-link" href="https://developer.android.com/support.html" title="Support">Support</a>
+          
+          <a class="dac-footer-contact-link" href="https://docs.google.com/forms/d/e/1FAIpQLSf27XIxoFmNpTjTYdk-m1uKWGqEnd7_4C_E1AD5fdCfyTBWNA/viewform?usp=pp_url&amp;entry.1909689089&amp;entry.208743710&amp;entry.408796755&amp;entry.1341430893&amp;entry.594931249&amp;entry.1640656812&amp;entry.1759804042&amp;entry.1441312344=developer.android.com" title="Join user studies" target="_blank">Join user studies</a>
+        </div>
+      </div>
+    </div>
+
+    <hr class="dac-footer-separator"/>
+      
+      <p class="dac-footer-copyright">
+        
+        Except as noted, this content is licensed under <a href="http://creativecommons.org/licenses/by/2.5/" target="_blank">Creative Commons Attribution 2.5</a>. For details and restrictions, see the <a href="https://developer.android.com/license.html">Content License</a>.
+      </p>
+    
+
+    <p class="dac-footer-links">
+      
+      <a href="https://www.android.com/" title="Android.com" target="_blank">Android.com</a>
+      
+      <a href="https://developer.android.com/" title="Android Developers">Android Developers</a>
+      
+      <a href="https://developer.android.com/studio/index.html" title="Android Studio">Android Studio</a>
+      
+      <a href="https://developer.android.com/distribute/console/index.html" title="Google Play Console">Google Play Console</a>
+      
+      <a href="https://developer.android.com/legal.html" title="Legal Notice">Legal Notice</a>
+    </p>
+
+    
+    <form class="devsite-utility-footer-language" id="setlang" action="https://developer.android.com/i18n/setlang/" method="post">
+      <input type="hidden" name="xsrf_token" value="_le9QC4gix1gMIrIldh6VAvHcLpTyrl3ANuGpmsVdGU6MTUxMTEwNzIyOTIwMTE5MA" />
+      <input type="hidden" name="next" value="URI.html">
+      <span id="language" class="locales">
+        <select class="devsite-utility-footer-language-select" name="language">
+          
+          <option value="id"
+            >
+            Bahasa Indonesia
+          </option>
+          
+          <option value="de"
+            >
+            Deutsch
+          </option>
+          
+          <option value="en"
+             selected="selected" >
+            English
+          </option>
+          
+          <option value="es"
+            >
+            español
+          </option>
+          
+          <option value="es-419"
+            >
+            Español (América Latina)
+          </option>
+          
+          <option value="fr"
+            >
+            français
+          </option>
+          
+          <option value="pt-br"
+            >
+            Português Brasileiro
+          </option>
+          
+          <option value="vi"
+            >
+            Tiếng Việt
+          </option>
+          
+          <option value="tr"
+            >
+            Türkçe
+          </option>
+          
+          <option value="ru"
+            >
+            Русский
+          </option>
+          
+          <option value="th"
+            >
+            ภาษาไทย
+          </option>
+          
+          <option value="ja"
+            >
+            日本語
+          </option>
+          
+          <option value="zh-cn"
+            >
+            简体中文
+          </option>
+          
+          <option value="zh-tw"
+            >
+            繁體中文
+          </option>
+          
+          <option value="ko"
+            >
+            한국어
+          </option>
+          
+        </select>
+      </span>
+    </form>
+  </footer>
+</div><!--/.wrap -->
+
+<div class="dac-toast-group">
+  <div class="dac-toast" data-toast>
+    <div class="dac-toast-wrap">
+      
+      This site uses cookies to store your preferences for site-specific language and display options.
+      <button class="dac-toast-close-btn">
+        
+        <span class="dac-button dac-raised dac-primary">OK</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<div data-modal="newsletter" data-newsletter-fb data-swap class="dac-modal newsletter">
+  <div class="dac-modal-container">
+    <div class="dac-modal-window">
+      <header class="dac-modal-header">
+        <div class="dac-modal-header-actions">
+          <button class="dac-modal-header-close" data-modal-toggle></button>
+        </div>
+        <div class="dac-swap" data-swap-container>
+          <section class="dac-swap-section dac-active dac-down">
+            
+            <h2 class="norule dac-modal-header-title" data-t="newsletter.title">Get the latest Android developer news and tips that will help you find success on Google Play.</h2>
+            
+            <p class="dac-modal-header-subtitle" data-t="newsletter.requiredHint">* Required Fields</p>
+          </section>
+          <section class="dac-swap-section dac-up">
+            
+            <h2 class="norule dac-modal-header-title" data-t="newsletter.successTitle">Hooray!</h2>
+          </section>
+        </div>
+      </header>
+      <div class="dac-swap" data-swap-container>
+        <section class="dac-swap-section dac-active dac-left">
+          <form action="https://services.google.com/fb/submissions/android-developer-mailing-list/" class="dac-form" method="post">
+            <section class="dac-modal-content">
+              <fieldset class="dac-form-fieldset">
+                <div class="cols">
+                  <div class="col-1of2 newsletter-leftCol">
+                    <div class="dac-form-input-group">
+                      
+                      <label for="newsletter-full-name" class="dac-form-floatlabel" data-t="newsletter.name">Full name</label>
+                      <input type="text" class="dac-form-input" name="fullname" id="newsletter-full-name" required>
+                      <span class="dac-form-required">*</span>
+                    </div>
+                    <div class="dac-form-input-group">
+                      
+                      <label for="newsletter-email" class="dac-form-floatlabel" data-t="newsletter.email">Email address</label>
+                      <input type="email" class="dac-form-input" name="emailaddress" id="newsletter-email" required>
+                      <span class="dac-form-required">*</span>
+                    </div>
+                  </div>
+                  <div class="col-1of2 newsletter-rightCol">
+                    <div class="dac-form-input-group">
+                      
+                      <label for="newsletter-company" class="dac-form-floatlabel" data-t="newsletter.company">Company / developer name</label>
+                      <input type="text" class="dac-form-input" name="companydevelopername" id="newsletter-company">
+                    </div>
+                    <div class="dac-form-input-group">
+                      
+                      <label for="newsletter-play-store" class="dac-form-floatlabel" data-t="newsletter.appUrl">One of your Play Store app URLs</label>
+                      <input type="url" class="dac-form-input" name="playstoreappurls" id="newsletter-play-store">
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+              <fieldset class="dac-form-fieldset">
+                <div class="cols">
+                  
+                  <div class="col-1of2 newsletter-leftCol newsletter-interested" data-validation-message="Please check at least one item.">
+                    
+                    <legend class="dac-form-legend">What are you interested in?<span class="dac-form-required">*</span></legend>
+                    <div class="dac-form-radio-group">
+                      <input type="checkbox" class="dac-form-checkbox" name="interested" id="interested-whats-new" value="whats-new">
+                      <label for="interested-whats-new" class="dac-form-checkbox-button"></label>
+                      
+                      <label for="interested-whats-new" class="dac-form-label">What's new</label>
+                    </div>
+                    <div class="dac-form-radio-group">
+                      <input type="checkbox" class="dac-form-checkbox" name="interested" id="interested-games-updates" value="games-updates">
+                      <label for="interested-games-updates" class="dac-form-checkbox-button"></label>
+                      
+                      <label for="interested-games-updates" class="dac-form-label">Games updates</label>
+                    </div>
+                    <div class="dac-form-radio-group">
+                      <input type="checkbox" class="dac-form-checkbox" name="interested" id="interested-android-development" value="android-development">
+                      <label for="interested-android-development" class="dac-form-checkbox-button"></label>
+                      
+                      <label for="interested-android-development" class="dac-form-label">Android development</label>
+                    </div>
+                  </div>
+                  <div class="col-1of2 newsletter-rightCol newsletter-checkboxes">
+                    <div class="dac-form-input-group">
+                      
+                      <label for="newsletter-receive-in">Receive newsletter in</label>
+                      <select name="language" class="dac-form-select" id="newsletter-receive-in">
+                        <option value="en-US" selected>English</option>
+                        <option value="ar">Arabic</option>
+                        <option value="zh">Chinese (Simplified)</option>
+                        <option value="zh-TW">Chinese (Traditional)</option>
+                        <option value="fr">French</option>
+                        <option value="de">German</option>
+                        <option value="id">Indonesian (Bahasa)</option>
+                        <option value="ja">Japanese</option>
+                        <option value="ko">Korean</option>
+                        <option value="pt-BR">Portuguese (Brazilian)</option>
+                        <option value="ru">Russian</option>
+                        <option value="es-419">Spanish (Latin American)</option>
+                        <option value="th">Thai</option>
+                        <option value="tr">Turkish</option>
+                        <option value="vi">Vietnamese</option>
+                      </select>
+                    </div>
+                    <div class="dac-form-radio-group">
+                      <div class="dac-media">
+                        <div class="dac-media-figure">
+                          <input type="checkbox" class="dac-form-checkbox" name="marketingoptin" id="newsletter-add" required value="Add me to the mailing list.">
+                          <label for="newsletter-add" class="dac-form-checkbox-button"></label>
+                        </div>
+                        <div class="dac-media-body">
+                          <label for="newsletter-add" class="dac-form-label dac-form-aside">
+                            
+                            Add me to the mailing list.
+                            <span class="dac-form-required">*</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="dac-form-radio-group">
+                      <div class="dac-media">
+                        <div class="dac-media-figure">
+                          <input type="checkbox" class="dac-form-checkbox" name="privacystatement" id="newsletter-terms" required value="I acknowledge that the information provided in this form will be subject to Google's privacy policy (https://www.google.com/policies/privacy/).">
+                          <label for="newsletter-terms" class="dac-form-checkbox-button"></label>
+                        </div>
+                        <div class="dac-media-body">
+                          <label for="newsletter-terms" class="dac-form-label dac-form-aside"><span data-t="newsletter.privacyPolicy" data-t-html>
+                            
+                            I acknowledge that the information provided in this form will be subject to <a href="https://www.google.com/policies/privacy/">Google's privacy policy</a>.
+                          </span>
+                          <span class="dac-form-required">*</span></label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+            </section>
+            <input type="hidden" name="referrer" value="dac">
+            <footer class="dac-modal-footer">
+              <div class="cols">
+                <div class="col-2of5">
+                </div>
+              </div>
+              <button type="submit" value="Submit" class="dac-fab dac-primary dac-large dac-modal-action"><i class="dac-sprite dac-arrow-right"></i></button>
+            </footer>
+          </form>
+        </section>
+        <section class="dac-swap-section dac-right">
+          <div class="dac-modal-content">
+            <p class="newsletter-success-message" data-t="newsletter.successDetails">
+              
+              You have successfully signed up for the latest Android developer news and tips.
+            </p>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</div><!--/.dac-modal.newsletter-->
+
+<div data-modal="wechat" class="dac-modal">
+  <div class="dac-modal-container">
+    <div class="dac-modal-window">
+      <header class="dac-modal-header">
+        <div class="dac-modal-header-actions">
+          <button class="dac-modal-header-close" data-modal-toggle></button>
+        </div>
+        <section>
+          
+          <h2 class="norule dac-modal-header-title">Follow Google Developers on WeChat</h2>
+        </section>
+      </header>
+      <section class="dac-modal-content figure-center center-img">
+        <img src="../../../static/images/qr-wechat.png">
+      </section>
+    </div>
+  </div>
+</div><!--/.dac-modal[dac-modal=wechat]-->
+
+
+<div data-modal="langform" class="dac-modal" id="langform">
+  <div class="dac-modal-container">
+    <div class="dac-modal-window">
+      <header class="dac-modal-header">
+        <div class="dac-modal-header-actions">
+          <button class="dac-modal-header-close" data-modal-toggle></button>
+        </div>
+        <section class="dac-swap-section dac-active dac-down">
+          <h2 class="norule dac-modal-header-title">
+            
+            Browse this site in <span class="span-target-lang"></span>?
+          </h2>
+        </section>
+      </header>
+      <section class="dac-swap-section dac-active dac-left">
+          <section class="dac-modal-content">
+            <fieldset class="dac-form-fieldset">
+              <div class="cols">
+                <div class="col-2of2 langform-leftCol">
+                  <p id="resetLangText">
+                    
+                    You requested a page in <span class="span-target-lang"></span>, but your language preference for this site is <span class="span-current-lang"></span>.
+                  </p>
+                  <p id="resetLangCta">
+                    
+                    Would you like to change your language preference and browse this site in <span class="span-target-lang"></span>? If you want to change your language preference later, use the language menu at the bottom of each page.
+                  </p>
+                </div>
+              </div>
+            </fieldset>
+          </section>
+          <footer class="dac-modal-footer" id="langfooter">
+            <div class="cols">
+              <div class="col-2of5">
+              </div>
+            </div>
+            <a href="#" class="yes" onclick="return false;">
+              <button class="button dac-primary dac-modal-action lang yes" data-t="newsletter.resetLangButtonYes" data-modal-toggle>
+                
+                Change Language
+              </button>
+            </a>
+            <a href="#" class="" onclick="return false;">
+              <button class="button dac-primary dac-modal-action lang no" data-t="newsletter.resetLangButtonNo" data-modal-toggle>
+                
+                Not Now
+              </button>
+            </a>
+          </footer>
+        </form>
+      </section>
+    </div>
+  </div>
+</div><!--/.dac-modal-->
+
+
+<div data-modal="api-unavailable" class="dac-modal" id="api-unavailable">
+  <div class="dac-modal-container">
+    <div class="dac-modal-window">
+      <header class="dac-modal-header">
+        <div class="dac-modal-header-actions">
+          <button class="dac-modal-header-close" data-modal-toggle></button>
+        </div>
+        <section class="dac-swap-section dac-active dac-down">
+          <h2 class="norule dac-modal-header-title">
+            
+            This class requires API level <span class="api-level"></span> or higher
+          </h2>
+        </section>
+      </header>
+      <section class="dac-swap-section dac-active dac-left">
+          <section class="dac-modal-content">
+            <p>
+              
+              This doc is hidden because your selected API level for the documentation is <span class="api-level"></span>. You can change the documentation API level with the selector above the left navigation.
+            </p>
+            
+            <p>For more information about specifying the API level your app requires, read <a href="https://developer.android.com/training/basics/supporting-devices/platforms.html">Supporting Different Platform Versions</a>.</p>
+          </section>
+          <footer class="dac-modal-footer" id="langfooter">
+            <div class="cols">
+              <div class="col-2of5">
+              </div>
+            </div>
+            <a href="#" class="ok" onclick="return false;">
+              <button class="button dac-primary dac-modal-action ok"
+              data-modal-toggle>
+                
+                OK, make this page visible
+              </button>
+            </a>
+          </footer>
+        </form>
+      </section>
+    </div>
+  </div>
+</div><!--/.dac-modal#api-unavailable-->
+
+    
+  </div><!--/#body-content-->
+
+  <!-- Nav Setup -->
+  <script>$('[data-dac-nav]').dacNav();</script>
+  <script type="text/javascript">
+    $('.slideshow-container').dacSlideshow({
+        btnPrev: '.slideshow-prev',
+        btnNext: '.slideshow-next',
+        btnPause: '#pauseButton'
+    });
+
+    $(".feed").dacTabbedList({
+      nav_id: '.feed-nav',
+      frame_id: '.feed-frame'
+    });
+  </script>
+  
+  <script src="../../../ytblogger_lists_unified9a55.js?v=2017111904" defer></script>
+  <script src="../../../android_metadata_en9a55.js?v=2017111904" defer></script>
+  
+  <script src="../../lists9a55.js?v=2017111904" defer></script>
+  <script src="../../gms_lists9a55.js?v=2017111904" defer></script>
+  <script src="../../android/support/wearable/lists9a55.js?v=2017111904" defer></script>
+  <script src="../../android/support/test/lists9a55.js?v=2017111904" defer></script>
+  <script src="../../android/support/constraint/lists9a55.js?v=2017111904" defer></script>
+  <script src="../../android/arch/lists9a55.js?v=2017111904" defer></script>
+  <script src="https://developer.android.com/_static2/268f0926ba/jsi18n/"></script>
+  <script>
+    // Load localized metadata.
+    (function(lang) {
+      if (lang === 'en') { return; }
+      document.write('<script src="https://developer.android.com/android_metadata_en.js?v=2017111904" defer></' + 'script>');
+    })(getLangPref())
+
+    // Add skip to content for accessibility.
+    $('#skip-to-main').click(function() {
+      $('a[name=top]').focus();
+    });
+
+    $('.devsite-utility-footer-language-select').each(function() {
+      $(this).change(function() {
+        changeLangPref(this.value, true)
+        $('.devsite-utility-footer-language').submit();
+      });
+    });
+  </script>
+
+  <script>
+    (function($) {
+      devsite.analytics.InitAnalytics();
+      devsite.navigatingRadio.init();
+      devsite.kennedy.InitializeTabbars();
+      // overflowMenu must be initialized after tabbar.
+      devsite.overflowMenu.init();
+    })(jQuery);
+  </script>
+
+  
+
+
+<div id="survey-box-wrapper">
+  <div class="material-dialog" style="width:270px">
+    <div class="material-dialog-title">
+      Take a short survey?
+    </div>
+    <div class="material-dialog-description">
+      Help us improve the Android developer experience.
+      <br>(Sep 2017 survey)
+    </div>
+    <div class="material-button-bar">
+      <a class="dac-button dac-primary dac-raised" target="_blank"
+          href="https://goo.gl/dNPzCR">Okay</a>
+      <a class="dac-button" href="#">No thanks</a>
+    </div>
+  </div>
+</div>
+
+</body>
+
+<!-- Mirrored from developer.android.com/reference/java/net/URI.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 19 Nov 2017 16:43:52 GMT -->
+</html>

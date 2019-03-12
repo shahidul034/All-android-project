@@ -1,0 +1,6167 @@
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/Article">
+
+<!-- Mirrored from developer.android.com/reference/android/support/v4/app/NotificationCompat.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 19 Nov 2017 17:17:17 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+
+  
+
+
+
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+
+
+
+
+
+<script>var a=window.devsite||{};window.devsite=a;a.readyCallbacks=[];window.devsite.readyCallbacks=a.readyCallbacks;a.ready=function(b){a.readyCallbacks.push(b)};window.devsite.ready=a.ready;
+</script>
+
+<meta charset="utf-8">
+
+
+
+<meta name="xsrf_token" content="a93PppNj6rxQgfoyvmWSxpWweTVTB9r6f8cWdvIAS-Y6MTUxMTExMDE5NTkxMDMyMA" />
+
+  
+    <link rel="canonical" href="NotificationCompat.html">
+  
+
+  
+    <link rel="alternate" href="NotificationCompat.html" hreflang="en">
+  
+    <link rel="alternate" href="https://developer.android.google.cn/reference/android/support/v4/app/NotificationCompat.html" hreflang="en-cn">
+  
+
+  <link rel="alternate" href="NotificationCompat.html" hreflang="x-default">
+
+
+
+
+<link rel="shortcut icon" href="../../../../../_static/268f0926ba/images/android/favicon.png">
+
+<link rel="apple-touch-icon" href="../../../../../_static/268f0926ba/images/android/touchicon-180.png">
+
+
+<title>
+
+  NotificationCompat | Android Developers
+
+</title>
+
+
+
+  <meta itemprop="dateModified" content="2017-10-25T17:01:55.326620">
+
+
+<!-- STYLESHEETS -->
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto+Condensed">
+<link rel="stylesheet"
+    href="http://fonts.googleapis.com/css?family=Roboto:light,regular,medium,thin,italic,mediumitalic,bold"
+    title="roboto">
+<link rel="stylesheet" href="../../../../../_static/268f0926ba/css/dac-devsite.css">
+
+
+
+
+
+
+
+<link href="../../../../../static/css/default9a55.css?v=2017111904" rel="stylesheet" type="text/css">
+<!-- JAVASCRIPT -->
+<script src="../../../../../_static/268f0926ba/js/android_3p-bundle.js" type="text/javascript"></script>
+<script src="../../../../../_static/268f0926ba/js/script_foot_closure_android.js"></script>
+<script src="../../../../../_static/268f0926ba/js/script_foot_android.js"></script>
+
+<script type="text/javascript">
+  var toRoot = 'https://developer.android.com/';
+  devsite.permissions.init({"f62218c009ec029abef196bba5aa34cf": true, "098dafe57affddc137df300142652cfd": false, "8e03e230de0bd8a6fe173fdf172e8b3f": false, "cb025a64a50094835616312f4774a53d": true, "c95bf81627eb648c2345aec06a66200a": true, "51470233c56fc1fde50f00b73c52b216": false, "d169d485cf24243a263783dbe42029b1": true, "039e5d84b87fd75807ffb37b7f1bbf2c": true, "752953480de00a336d911a46966cc16d": false, "700def1a83e356c06c0925afb05de4b0": false, "6749dcb526ce9bde6993550c7d928d24": true});
+
+  var replaceBlog = false;
+  var replaceYouTube = false;
+  var siteDefaultLocale = 'en';
+
+  var ANDROID_LANGUAGES = [
+      'id','de','en','es','es-419','fr','pt-br','vi','tr','ru','th','ja','zh-cn','zh-tw','ko'
+  ];
+</script>
+<script src="../../../../../static/js/docs9a55.js?v=2017111904" type="text/javascript"></script>
+
+
+</head>
+
+<body class="gc-documentation
+            api apilevel-22.1.0
+            
+              develop
+              reference
+            
+            ">
+  
+
+
+  
+    <input class="google-analytics-id-json" type="hidden" value="{&quot;dimensions&quot;: {&quot;dimension6&quot;: &quot;en&quot;, &quot;dimension4&quot;: &quot;Reference&quot;, &quot;dimension5&quot;: &quot;en&quot;, &quot;dimension3&quot;: false, &quot;dimension1&quot;: &quot;Signed out&quot;, &quot;dimension8&quot;: null}, &quot;gaid&quot;: &quot;UA-49880327-2&quot;}">
+  
+    <input class="google-analytics-id-json" type="hidden" value="{&quot;dimensions&quot;: {&quot;dimension6&quot;: &quot;en&quot;, &quot;dimension4&quot;: &quot;Reference&quot;, &quot;dimension5&quot;: &quot;en&quot;, &quot;dimension3&quot;: false, &quot;dimension1&quot;: &quot;Signed out&quot;, &quot;dimension8&quot;: null}, &quot;gaid&quot;: &quot;UA-5831155-1&quot;}">
+  
+
+
+
+  
+  
+    <script>
+      var dataLayer = [{"freeTrialEligibleUser": "False", "userCountry": "BD", "language": {"requested": "en", "served": "en"}, "projectName": "Reference", "scriptsafe": null, "signedIn": "False", "internalUser": "False"}];
+    </script>
+  
+
+
+
+  
+  <a href="#top" id="skip-to-main">Skip to content</a>
+  <header id="header-wrapper">
+    <div class="dac-header" id="header">
+      <div class="dac-header-inner">
+        
+        <a class="dac-nav-toggle" data-dac-toggle-nav href="#" title="Open navigation">
+          <span class="dac-nav-hamburger">
+            <span class="dac-nav-hamburger-top"></span>
+            <span class="dac-nav-hamburger-mid"></span>
+            <span class="dac-nav-hamburger-bot"></span>
+          </span>
+        </a>
+        
+        <a class="dac-header-logo" href="https://developer.android.com/index.html">
+          <img class="dac-header-logo-image" src="../../../../../static/images/android_logo.png"
+              srcset="https://developer.android.com/static/images/android_logo_2x.png 2x"
+              width="32" height="36" alt="Android"> Developers</a>
+        <ul class="dac-header-tabs">
+          <li>
+            <a class="dac-header-tab" href="https://developer.android.com/design/index.html"
+               zh-tw-lang="設計"
+               zh-cn-lang="设计"
+               ru-lang="Проектирование"
+               ko-lang="디자인"
+               ja-lang="設計"
+               es-lang="Diseñar">
+              
+              Design</a>
+          </li>
+          <li>
+            <a class="dac-header-tab" href="https://developer.android.com/develop/index.html"
+               zh-tw-lang="開發"
+               zh-cn-lang="开发"
+               ru-lang="Разработка"
+               ko-lang="개발"
+               ja-lang="開発"
+               es-lang="Desarrollar">
+              
+              Develop</a>
+          </li>
+          <li>
+            <a class="dac-header-tab" href="https://developer.android.com/distribute/index.html"
+               zh-tw-lang="發佈"
+               zh-cn-lang="分发"
+               ru-lang="Распространение"
+               ko-lang="배포"
+               ja-lang="配布"
+               es-lang="Distribuir">
+              
+              Distribute</a>
+          </li>
+        </ul>
+
+
+        
+
+        <a class="dac-header-console-btn gc-analytics-event" href="https://play.google.com/apps/publish/"
+           data-category="User" data-action="Console" data-label="Clicked">
+          
+          <img src="https://developer.android.com/static/images/developer-console-icon.svg" width="18" height="19" alt="">Play Console</a>
+        
+
+<form data-search="" class="dac-header-search">
+  <button class="dac-header-search-close" data-search-close="">
+    <i class="dac-sprite dac-back-arrow"></i>
+  </button>
+
+  <div class="dac-header-search-inner">
+    <i class="dac-sprite dac-search-white dac-header-search-icon"></i>
+    
+    <input id="search_autocomplete" type="text" value="" autocomplete="off" name="q" class="dac-header-search-input" placeholder="Search">
+    <button class="dac-header-search-clear dac-hidden" data-search-clear="">
+      <i class="dac-sprite dac-close-black"></i>
+    </button>
+  </div>
+</form>
+
+        
+      </div><!--/.header-wrap.wrap-->
+    </div><!--/.header-->
+
+    
+
+<div id="search-results" class="dac-search-results">
+  <div id="dac-search-results-history" class="dac-search-results-history">
+    <div class="wrap dac-search-results-history-wrap">
+      <div class="cols">
+        <div class="col-1of2 col-tablet-1of2 col-mobile-1of1">
+          
+          <h2>Most visited</h2>
+          <div class="resource-flow-layout" data-history-query="history:most/visited" data-maxresults="3" data-cardsizes="18x2"></div>
+        </div>
+
+        <div class="col-1of2 col-tablet-1of2 col-mobile-1of1">
+          
+          <h2>Recently visited</h2>
+          <div class="resource-flow-layout cols" data-history-query="history:recent" data-allow-duplicates="true" data-maxresults="3" data-cardsizes="18x2"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="dac-search-results-content" class="dac-search-results-content">
+    <div class="dac-search-results-metadata wrap">
+      <div class="dac-search-results-for">
+          <h2>
+          
+          Results for <span id="search-results-for"></span>
+          </h2>
+      </div>
+
+      <div id="dac-search-results-hero"></div>
+
+      <div class="dac-search-results-hero cols">
+        <div id="dac-search-results-reference" class="col-6of6 col-tablet-2of2 col-mobile-1of1">
+          <div class="suggest-card reference no-display">
+            <ul class="dac-search-results-reference">
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="cols dac-search-results-cse">
+        <script src="../../../../../../cse.google.com/f4116.txt?cx=000521750095050289010:zpcpi1ea4s8" async></script>
+        <gcse:searchresults-only linkTarget="_self"></gcse:searchresults-only>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </header>
+
+  <a name="navigation" tabindex=0 class="nav-start-marker">navigation</a>
+  <nav class="dac-nav">
+    <div class="dac-nav-dimmer" data-dac-toggle-nav></div>
+    <div class="dac-nav-sidebar" data-swap data-dynamic="false" data-transition-speed="300" data-dac-nav>
+      <div data-swap-container>
+        
+        <a class="dac-nav-back-button dac-swap-section dac-up dac-no-anim" tabindex=0 data-swap-button>
+          
+          
+          <i class="dac-sprite dac-nav-back"></i> <span class="dac-nav-back-title">Back</span>
+        </a>
+
+        <div class="dac-nav-sub dac-swap-section dac-right dac-active" itemscope
+            itemtype="http://schema.org/SiteNavigationElement">
+          
+          
+            
+              
+              <button data-fullscreen="" class="dac-nav-fullscreen">
+                <i class="dac-sprite dac-fullscreen"></i>
+              </button>
+              <script>$('[data-fullscreen]').dacFullscreen();</script>
+              <div id="devdoc-nav">
+                <div id="api-nav-header">
+                  <div id="api-level-toggle">
+                    <label for="apiLevelCheckbox" class="disabled"
+                        
+                        title="Select your target API level to dim unavailable APIs">
+                        
+                        API:
+                    </label>
+                    <div class="select-wrapper">
+                      <select id="apiLevelSelector"></select>
+                    </div>
+                  </div><!-- end toggle -->
+                  <div id="api-nav-title">
+                    <select id="reference-selector">
+                      
+                      <option value="android">Android Platform</option>
+                      
+                      
+                      <option value="android/support">Android Support Library</option>
+                      
+                      
+                      <option value="android/arch">Architecture Components</option>
+                      
+                      <option value="android/support/constraint">Constraint Library</option>
+                      
+                      <option value="com/android/billingclient">Play Billing Library</option>
+                      
+                      <option value="android/support/test">Test Support Library</option>
+                      
+                      <option value="android/support/wearable">Wearable Library</option>
+                    </select>
+                  </div>
+                </div><!-- end nav header -->
+                <script>
+                  buildApiLevelSelector();
+                  initReferenceSelector();
+                </script>
+                <div class="dac-reference-nav" data-reference-tree="">
+                  <ul class="dac-reference-nav-list" data-reference-namespaces="">
+                    <li class="api no-toggle"><a href="../../classes.html" >Class Index</a></li><li class="api no-toggle"><a href="../../packages.html" >Package Index</a></li><li class="api apilevel-25.4.0"><a href="../../animation/package-summary.html" >android.support.animation</a></li><li class="api apilevel-"><a href="../../annotation/package-summary.html" >android.support.annotation</a></li><li class="api apilevel-24.1.0"><a href="../../app/recommendation/package-summary.html" >android.support.app.recommendation</a></li><li class="api apilevel-"><a href="../../compat/package-summary.html" >android.support.compat</a></li><li class="api apilevel-27.0.0"><a href="../../content/package-summary.html" >android.support.content</a></li><li class="api apilevel-"><a href="../../coreui/package-summary.html" >android.support.coreui</a></li><li class="api apilevel-"><a href="../../coreutils/package-summary.html" >android.support.coreutils</a></li><li class="api apilevel-24.1.0"><a href="../../customtabs/package-summary.html" >android.support.customtabs</a></li><li class="api apilevel-"><a href="../../design/package-summary.html" >android.support.design</a></li><li class="api apilevel-24.1.0"><a href="../../design/widget/package-summary.html" >android.support.design.widget</a></li><li class="api apilevel-"><a href="../../dynamicanimation/package-summary.html" >android.support.dynamicanimation</a></li><li class="api apilevel-"><a href="../../exifinterface/package-summary.html" >android.support.exifinterface</a></li><li class="api apilevel-"><a href="../../fragment/package-summary.html" >android.support.fragment</a></li><li class="api apilevel-24.1.0"><a href="../../graphics/drawable/package-summary.html" >android.support.graphics.drawable</a></li><li class="api apilevel-"><a href="../../graphics/drawable/animated/package-summary.html" >android.support.graphics.drawable.animated</a></li><li class="api apilevel-25.1.0"><a href="../../media/package-summary.html" >android.support.media</a></li><li class="api apilevel-26.1.0"><a href="../../media/tv/package-summary.html" >android.support.media.tv</a></li><li class="api apilevel-"><a href="../../mediacompat/package-summary.html" >android.support.mediacompat</a></li><li class="api apilevel-"><a href="../../mediacompat/testlib/package-summary.html" >android.support.mediacompat.testlib</a></li><li class="api apilevel-24.1.0"><a href="../../percent/package-summary.html" >android.support.percent</a></li><li class="api apilevel-"><a href="../../recommendation/package-summary.html" >android.support.recommendation</a></li><li class="api apilevel-26.1.0"><a href="../../text/emoji/package-summary.html" >android.support.text.emoji</a></li><li class="api apilevel-"><a href="../../text/emoji/appcompat/package-summary.html" >android.support.text.emoji.appcompat</a></li><li class="api apilevel-26.1.0"><a href="../../text/emoji/bundled/package-summary.html" >android.support.text.emoji.bundled</a></li><li class="api apilevel-26.1.0"><a href="../../text/emoji/widget/package-summary.html" >android.support.text.emoji.widget</a></li><li class="api apilevel-25.1.0"><a href="../../transition/package-summary.html" >android.support.transition</a></li><li class="api apilevel-"><a href="../../v13/package-summary.html" >android.support.v13</a></li><li class="api apilevel-22.1.0"><a href="../../v13/app/package-summary.html" >android.support.v13.app</a></li><li class="api apilevel-24.1.0"><a href="../../v13/view/package-summary.html" >android.support.v13.view</a></li><li class="api apilevel-25.1.0"><a href="../../v13/view/inputmethod/package-summary.html" >android.support.v13.view.inputmethod</a></li><li class="api apilevel-24.1.0"><a href="../../v14/preference/package-summary.html" >android.support.v14.preference</a></li><li class="api apilevel-"><a href="../../v17/leanback/package-summary.html" >android.support.v17.leanback</a></li><li class="api apilevel-22.1.0"><a href="../../v17/leanback/app/package-summary.html" >android.support.v17.leanback.app</a></li><li class="api apilevel-22.1.0"><a href="../../v17/leanback/database/package-summary.html" >android.support.v17.leanback.database</a></li><li class="api apilevel-22.1.0"><a href="../../v17/leanback/graphics/package-summary.html" >android.support.v17.leanback.graphics</a></li><li class="api apilevel-25.1.0"><a href="../../v17/leanback/media/package-summary.html" >android.support.v17.leanback.media</a></li><li class="api apilevel-24.1.0"><a href="../../v17/leanback/system/package-summary.html" >android.support.v17.leanback.system</a></li><li class="api apilevel-22.1.0"><a href="../../v17/leanback/widget/package-summary.html" >android.support.v17.leanback.widget</a></li><li class="api apilevel-24.1.0"><a href="../../v17/leanback/widget/picker/package-summary.html" >android.support.v17.leanback.widget.picker</a></li><li class="api apilevel-24.1.0"><a href="../../v17/preference/package-summary.html" >android.support.v17.preference</a></li><li class="api apilevel-"><a href="../package-summary.html" >android.support.v4</a></li><li class="api apilevel-22.1.0"><a href="../accessibilityservice/package-summary.html" >android.support.v4.accessibilityservice</a></li><li class="api apilevel-22.1.0"><a href="package-summary.html" >android.support.v4.app</a></li><li class="api apilevel-22.1.0"><a href="../content/package-summary.html" >android.support.v4.content</a></li><li class="api apilevel-24.1.0"><a href="../content/pm/package-summary.html" >android.support.v4.content.pm</a></li><li class="api apilevel-24.1.0"><a href="../content/res/package-summary.html" >android.support.v4.content.res</a></li><li class="api apilevel-22.1.0"><a href="../database/package-summary.html" >android.support.v4.database</a></li><li class="api apilevel-22.1.0"><a href="../graphics/package-summary.html" >android.support.v4.graphics</a></li><li class="api apilevel-22.1.0"><a href="../graphics/drawable/package-summary.html" >android.support.v4.graphics.drawable</a></li><li class="api apilevel-22.1.0"><a href="../hardware/display/package-summary.html" >android.support.v4.hardware.display</a></li><li class="api apilevel-24.1.0"><a href="../hardware/fingerprint/package-summary.html" >android.support.v4.hardware.fingerprint</a></li><li class="api apilevel-26.1.0"><a href="../math/package-summary.html" >android.support.v4.math</a></li><li class="api apilevel-22.1.0"><a href="../media/package-summary.html" >android.support.v4.media</a></li><li class="api apilevel-26.1.0"><a href="../media/app/package-summary.html" >android.support.v4.media.app</a></li><li class="api apilevel-22.1.0"><a href="../media/session/package-summary.html" >android.support.v4.media.session</a></li><li class="api apilevel-22.1.0"><a href="../net/package-summary.html" >android.support.v4.net</a></li><li class="api apilevel-22.1.0"><a href="../os/package-summary.html" >android.support.v4.os</a></li><li class="api apilevel-22.1.0"><a href="../print/package-summary.html" >android.support.v4.print</a></li><li class="api apilevel-22.1.0"><a href="../provider/package-summary.html" >android.support.v4.provider</a></li><li class="api apilevel-22.1.0"><a href="../text/package-summary.html" >android.support.v4.text</a></li><li class="api apilevel-25.1.0"><a href="../text/util/package-summary.html" >android.support.v4.text.util</a></li><li class="api apilevel-22.1.0"><a href="../util/package-summary.html" >android.support.v4.util</a></li><li class="api apilevel-22.1.0"><a href="../view/package-summary.html" >android.support.v4.view</a></li><li class="api apilevel-22.1.0"><a href="../view/accessibility/package-summary.html" >android.support.v4.view.accessibility</a></li><li class="api apilevel-22.1.0"><a href="../view/animation/package-summary.html" >android.support.v4.view.animation</a></li><li class="api apilevel-22.1.0"><a href="../widget/package-summary.html" >android.support.v4.widget</a></li><li class="api apilevel-22.1.0"><a href="../../v7/app/package-summary.html" >android.support.v7.app</a></li><li class="api apilevel-24.1.0"><a href="../../v7/appcompat/package-summary.html" >android.support.v7.appcompat</a></li><li class="api apilevel-"><a href="../../v7/cardview/package-summary.html" >android.support.v7.cardview</a></li><li class="api apilevel-24.1.0"><a href="../../v7/content/res/package-summary.html" >android.support.v7.content.res</a></li><li class="api apilevel-22.1.0"><a href="../../v7/graphics/package-summary.html" >android.support.v7.graphics</a></li><li class="api apilevel-24.1.0"><a href="../../v7/graphics/drawable/package-summary.html" >android.support.v7.graphics.drawable</a></li><li class="api apilevel-"><a href="../../v7/gridlayout/package-summary.html" >android.support.v7.gridlayout</a></li><li class="api apilevel-22.1.0"><a href="../../v7/media/package-summary.html" >android.support.v7.media</a></li><li class="api apilevel-"><a href="../../v7/mediarouter/package-summary.html" >android.support.v7.mediarouter</a></li><li class="api apilevel-"><a href="../../v7/palette/package-summary.html" >android.support.v7.palette</a></li><li class="api apilevel-24.1.0"><a href="../../v7/preference/package-summary.html" >android.support.v7.preference</a></li><li class="api apilevel-24.1.0"><a href="../../v7/recyclerview/package-summary.html" >android.support.v7.recyclerview</a></li><li class="api apilevel-22.1.0"><a href="../../v7/util/package-summary.html" >android.support.v7.util</a></li><li class="api apilevel-22.1.0"><a href="../../v7/view/package-summary.html" >android.support.v7.view</a></li><li class="api apilevel-22.1.0"><a href="../../v7/widget/package-summary.html" >android.support.v7.widget</a></li><li class="api apilevel-24.1.0"><a href="../../v7/widget/helper/package-summary.html" >android.support.v7.widget.helper</a></li><li class="api apilevel-22.1.0"><a href="../../v7/widget/util/package-summary.html" >android.support.v7.widget.util</a></li><li class="api apilevel-"><a href="../../wear/package-summary.html" >android.support.wear</a></li><li class="api apilevel-27.0.0"><a href="../../wear/ambient/package-summary.html" >android.support.wear.ambient</a></li><li class="api apilevel-27.0.0"><a href="../../wear/utils/package-summary.html" >android.support.wear.utils</a></li><li class="api apilevel-26.1.0"><a href="../../wear/widget/package-summary.html" >android.support.wear.widget</a></li><li class="api apilevel-26.1.0"><a href="../../wear/widget/drawer/package-summary.html" >android.support.wear.widget.drawer</a></li>
+                  </ul>
+                </div>
+              </div>
+            
+          
+        </div>
+        
+        
+          
+
+
+
+<ul id="dac-main-navigation" class="dac-nav-list dac-swap-section dac-left dac-no-anim" tabindex=0>
+  <li class="dac-nav-item home">
+    
+    <a class="dac-nav-link" href="https://developer.android.com/index.html">Home</a>
+    <i class="dac-sprite dac-expand-more-black dac-nav-sub-slider" tabindex=0></i>
+    <ul class="dac-nav-secondary about">
+      <li class="dac-nav-item versions">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/about/versions/o/index.html">Android</a>
+      </li>
+      <li class="dac-nav-item wear">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/wear/index.html">Wear</a>
+      </li>
+      <li class="dac-nav-item tv">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/tv/index.html">TV</a>
+      </li>
+      <li class="dac-nav-item auto">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/auto/index.html">Auto</a>
+      </li>
+      
+      <li class="dac-nav-item chrome-os">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/chrome-os/index.html">Chrome OS</a>
+      </li>
+      
+      <li class="dac-nav-item things">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/things/index.html">Things</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dac-nav-item design">
+    <a class="dac-nav-link" href="https://developer.android.com/design/index.html"
+       zh-tw-lang="設計"
+       zh-cn-lang="设计"
+       ru-lang="Проектирование"
+       ko-lang="디자인"
+       ja-lang="設計"
+       es-lang="Diseñar">
+      
+      Design</a>
+  </li>
+  <li class="dac-nav-item develop">
+    <a class="dac-nav-link" href="https://developer.android.com/develop/index.html"
+       zh-tw-lang="開發"
+       zh-cn-lang="开发"
+       ru-lang="Разработка"
+       ko-lang="개발"
+       ja-lang="開発"
+       es-lang="Desarrollar">
+      
+      Develop</a>
+    <i class="dac-sprite dac-expand-more-black dac-nav-sub-slider" tabindex=0></i>
+    <ul class="dac-nav-secondary develop">
+      <li class="dac-nav-item training">
+        <a class="dac-nav-link" href="https://developer.android.com/training/index.html"
+           zh-tw-lang="訓練課程"
+           zh-cn-lang="培训"
+           ru-lang="Курсы"
+           ko-lang="교육"
+           ja-lang="トレーニング"
+           es-lang="Capacitación">
+            
+            Training</a>
+      </li>
+      <li class="dac-nav-item guide">
+        <a class="dac-nav-link" href="https://developer.android.com/guide/index.html"
+           zh-tw-lang="API 指南"
+           zh-cn-lang="API 指南"
+           ru-lang="Руководства по API"
+           ko-lang="API 가이드"
+           ja-lang="API ガイド"
+           es-lang="Guías de la API">
+          
+          API Guides</a>
+      </li>
+      <li class="dac-nav-item reference">
+        <a class="dac-nav-link" href="../../../../packages.html"
+           zh-tw-lang="參考資源"
+           zh-cn-lang="参考"
+           ru-lang="Справочник"
+           ko-lang="참조문서"
+           ja-lang="リファレンス"
+           es-lang="Referencia">
+          
+          Reference</a>
+      </li>
+      <li class="dac-nav-item samples">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/samples/index.html">Samples</a>
+      </li>
+      <li class="dac-nav-item libraries">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/topic/libraries/index.html">Libraries</a></li>
+      <li class="dac-nav-item studio">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/studio/index.html">Android Studio</a></li>
+      <li class="dac-nav-item ndk">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/ndk/index.html">Android NDK</a></li>
+      <li class="dac-nav-item google">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/google/index.html">Google Services</a>
+      </li>
+      <li class="dac-nav-item quality-guidelines">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/develop/quality-guidelines/index.html">Quality Guidelines</a>
+      </li>
+      <li class="dac-nav-item kotlin">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/kotlin/index.html">Kotlin</a>
+       </li>
+    </ul>
+  </li>
+  <li class="dac-nav-item distribute">
+    <a class="dac-nav-link" href="https://developer.android.com/distribute/index.html"
+       zh-tw-lang="發佈"
+       zh-cn-lang="分发"
+       ru-lang="Распространение"
+       ko-lang="배포"
+       ja-lang="配布"
+       de-lang="Vertrieb"
+       es-lang="Distribuir"
+       es-419-lang="Distribuye"
+       fr-lang="Distribuer"
+       id-lang="Distribusikan"
+       pt-br-lang="Distribuição"
+       th-lang="จัดจำหน่าย"
+       tr-lang="Dağıtma"
+       vi-lang="Phân phối">
+      
+      Distribute</a>
+    <i class="dac-sprite dac-expand-more-black dac-nav-sub-slider" tabindex=0></i>
+    <ul class="dac-nav-secondary distribute">
+      <li class="dac-nav-item google-play">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/distribute/google-play/index.html">Google Play</a>
+      </li>
+      <li class="dac-nav-item console">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/distribute/console/index.html">Play Console</a>
+      </li>
+      <li class="dac-nav-item best-practices">
+        <a class="dac-nav-link" href="https://developer.android.com/distribute/best-practices/index.html"
+          es-419-lang="Recomendaciones"
+          fr-lang="Bonnes pratiques"
+          id-lang="Praktik terbaik"
+          ja-lang="おすすめの方法"
+          ko-lang="권장사항"
+          pt-br-lang="Práticas recomendadas"
+          ru-lang="Рекомендации"
+          th-lang="จัดจำหน่าย"
+          tr-lang="En iyi uygulamalar"
+          vi-lang="Các phương pháp hay nhất"
+          zh-cn-lang="最佳做法"
+          zh-tw-lang="最佳做法">
+          
+          Best practices</a>
+      </li>
+      <li class="dac-nav-item marketing-tools">
+        <a class="dac-nav-link" href="https://developer.android.com/distribute/marketing-tools/index.html"
+          de-lang="Marketing-Tools"
+          es-419-lang="Herramientas de marketing"
+          fr-lang="Outils marketing"
+          id-lang="Fitur pemasaran"
+          ja-lang="マーケティング ツール"
+          ko-lang="마케팅 도구"
+          pt-br-lang="Ferramentas de marketing"
+          ru-lang="Маркетинговые инструменты"
+          th-lang="เครื่องมือการตลาด"
+          tr-lang="Pazarlama araçları"
+          vi-lang="Công cụ tiếp thị"
+          zh-cn-lang="营销工具"
+          zh-tw-lang="行銷工具">
+          
+          Marketing tools</a>
+      </li>
+      <li class="dac-nav-item policy-center">
+        
+        <a class="dac-nav-link" href="https://play.google.com/about/developer-content-policy/" target="_blank">Policy center</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dac-nav-item stories">
+    
+    <a class="dac-nav-link" href="https://developer.android.com/stories/index.html">Stories</a>
+  </li>
+  
+  <li class="dac-nav-item preview">
+    
+    <a class="dac-nav-link" href="https://developer.android.com/preview/index.html">Preview</a>
+  </li>
+  
+</ul>
+
+        
+      </div>
+    </div>
+  </nav>
+
+  <a name="top" tabindex="0"></a>
+  
+  <div class="wrap clearfix" id="body-content">
+  
+    
+      
+    
+    <div class="jd-descr " itemprop="articleBody">
+      <div id="doc-api-level" class="22.1.0" style="display:none"></div>
+
+
+
+
+<div id="naMessage"></div>
+
+<div id="api-info-block">
+<div class="api-level">
+  
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 22.1.0</a>
+  
+    <br>
+  belongs to Maven artifact com.android.support:support-compat:27.0.0</a>
+  
+  
+  
+  
+
+</div>
+
+
+
+  
+   
+  
+  
+  
+  
+
+
+<div class="sum-details-links">
+
+Summary:
+
+  <a href="#nestedclasses">Nested Classes</a>
+  
+
+
+
+
+
+  &#124; <a href="#constants">Constants</a>
+  
+
+
+
+
+
+  &#124; <a href="#pubctors">Ctors</a>
+  
+
+
+
+  &#124; <a href="#pubmethods">Methods</a>
+  
+
+
+
+  &#124; <a href="#inhmethods">Inherited Methods</a>
+
+&#124; <a href="#" onclick="return toggleAllClassInherited()" id="toggleAllClassInherited">[Expand All]</a>
+
+</div><!-- end sum-details-links -->
+</div><!-- end api-info-block -->
+
+<div class="api apilevel-22.1.0" id="jd-content">
+
+<!-- ======== START OF CLASS DATA ======== -->
+
+<h1 class="api-title">NotificationCompat</h1>
+<p>
+<code class="api-signature">
+  public
+  
+  
+  
+  class
+  NotificationCompat
+</code>
+<br>
+
+
+<code class="api-signature">
+  
+    extends Object
+  
+  
+  
+</code>
+
+<code class="api-signature">
+  
+  
+  
+</code>
+
+</p><table class="jd-inheritance-table">
+
+
+  <tr>
+    
+    <td colspan="2" class="jd-inheritance-class-cell">java.lang.Object
+    </td>
+  </tr>
+  
+
+  <tr>
+    
+      <td class="jd-inheritance-space">&nbsp;&nbsp;&nbsp;&#x21b3;</td>
+    
+    <td colspan="1" class="jd-inheritance-class-cell">android.support.v4.app.NotificationCompat
+    </td>
+  </tr>
+  
+
+</table>
+  
+
+    
+
+<br><hr>
+
+
+  <p>Helper for accessing features in <code><a href="../../../app/Notification.html">Notification</a></code>.
+</p>
+
+
+
+
+
+
+
+
+
+<h2 class="api-section">Summary</h2>
+
+
+
+<!-- ======== NESTED CLASS SUMMARY ======== -->
+<table id="nestedclasses" class="responsive">
+<tr><th colspan="2"><h3>Nested classes</h3></th></tr>
+
+
+  
+    <tr class="api apilevel-22.1.0" >
+      <td class="jd-typecol"><code>
+        
+        
+        
+        
+        class</code></td>
+      <td class="jd-descrcol" width="100%">
+        <code><a href="NotificationCompat.Action.html">NotificationCompat.Action</a></code>
+        <p>Structure to encapsulate a named action that can be shown as part of this notification.&nbsp;
+        
+    
+</p>
+      </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-22.1.0" >
+      <td class="jd-typecol"><code>
+        
+        
+        
+        
+        class</code></td>
+      <td class="jd-descrcol" width="100%">
+        <code><a href="NotificationCompat.BigPictureStyle.html">NotificationCompat.BigPictureStyle</a></code>
+        <p>Helper class for generating large-format notifications that include a large image attachment.&nbsp;
+        
+    
+</p>
+      </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-22.1.0" >
+      <td class="jd-typecol"><code>
+        
+        
+        
+        
+        class</code></td>
+      <td class="jd-descrcol" width="100%">
+        <code><a href="NotificationCompat.BigTextStyle.html">NotificationCompat.BigTextStyle</a></code>
+        <p>Helper class for generating large-format notifications that include a lot of text.&nbsp;
+        
+    
+</p>
+      </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-22.1.0" >
+      <td class="jd-typecol"><code>
+        
+        
+        
+        
+        class</code></td>
+      <td class="jd-descrcol" width="100%">
+        <code><a href="NotificationCompat.Builder.html">NotificationCompat.Builder</a></code>
+        <p>Builder class for <code><a href="NotificationCompat.html">NotificationCompat</a></code> objects.&nbsp;
+        
+    
+</p>
+      </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-22.1.0" >
+      <td class="jd-typecol"><code>
+        
+        
+        
+        
+        class</code></td>
+      <td class="jd-descrcol" width="100%">
+        <code><a href="NotificationCompat.CarExtender.html">NotificationCompat.CarExtender</a></code>
+        <p><p>Helper class to add Android Auto extensions to notifications.&nbsp;
+        
+    
+</p>
+      </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-26.1.0" >
+      <td class="jd-typecol"><code>
+        
+        
+        
+        
+        class</code></td>
+      <td class="jd-descrcol" width="100%">
+        <code><a href="NotificationCompat.DecoratedCustomViewStyle.html">NotificationCompat.DecoratedCustomViewStyle</a></code>
+        <p>Notification style for custom views that are decorated by the system.&nbsp;
+        
+    
+</p>
+      </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-22.1.0" >
+      <td class="jd-typecol"><code>
+        
+        
+        
+        
+        interface</code></td>
+      <td class="jd-descrcol" width="100%">
+        <code><a href="NotificationCompat.Extender.html">NotificationCompat.Extender</a></code>
+        <p>Extender interface for use with <code><a href="NotificationCompat.Builder.html#extend(android.support.v4.app.NotificationCompat.Extender)">extend(NotificationCompat.Extender)</a></code>.&nbsp;
+        
+    
+</p>
+      </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-22.1.0" >
+      <td class="jd-typecol"><code>
+        
+        
+        
+        
+        class</code></td>
+      <td class="jd-descrcol" width="100%">
+        <code><a href="NotificationCompat.InboxStyle.html">NotificationCompat.InboxStyle</a></code>
+        <p>Helper class for generating large-format notifications that include a list of (up to 5) strings.&nbsp;
+        
+    
+</p>
+      </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-24.1.0" >
+      <td class="jd-typecol"><code>
+        
+        
+        
+        
+        class</code></td>
+      <td class="jd-descrcol" width="100%">
+        <code><a href="NotificationCompat.MessagingStyle.html">NotificationCompat.MessagingStyle</a></code>
+        <p>Helper class for generating large-format notifications that include multiple back-and-forth
+ messages of varying types between any number of people.&nbsp;
+        
+    
+</p>
+      </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-22.1.0" >
+      <td class="jd-typecol"><code>
+        
+        
+        
+        
+        class</code></td>
+      <td class="jd-descrcol" width="100%">
+        <code><a href="NotificationCompat.Style.html">NotificationCompat.Style</a></code>
+        <p>An object that can apply a rich notification style to a <code><a href="../../../app/Notification.CarExtender.Builder.html">Notification.CarExtender.Builder</a></code>
+ object.&nbsp;
+        
+    
+</p>
+      </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-22.1.0" >
+      <td class="jd-typecol"><code>
+        
+        
+        
+        
+        class</code></td>
+      <td class="jd-descrcol" width="100%">
+        <code><a href="NotificationCompat.WearableExtender.html">NotificationCompat.WearableExtender</a></code>
+        <p>Helper class to add wearable extensions to notifications.&nbsp;
+        
+    
+</p>
+      </td>
+    </tr>
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- =========== ENUM CONSTANT SUMMARY =========== -->
+<table id="constants" class="responsive constants">
+<tr><th colspan="2"><h3>Constants</h3></th></tr>
+
+
+    
+    <tr class="api apilevel-26.1.0" >
+        <td><code>int</code></td>
+        <td width="100%">
+          <code><a href="NotificationCompat.html#BADGE_ICON_LARGE">BADGE_ICON_LARGE</a></code>
+          <p>If this notification is being shown as a badge, use the icon provided to
+ {@link Builder#setLargeIcon(Bitmap) to represent this notification.
+          
+    
+</p>
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-26.1.0" >
+        <td><code>int</code></td>
+        <td width="100%">
+          <code><a href="NotificationCompat.html#BADGE_ICON_NONE">BADGE_ICON_NONE</a></code>
+          <p>If this notification is being shown as a badge, always show as a number.
+          
+    
+</p>
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-26.1.0" >
+        <td><code>int</code></td>
+        <td width="100%">
+          <code><a href="NotificationCompat.html#BADGE_ICON_SMALL">BADGE_ICON_SMALL</a></code>
+          <p>If this notification is being shown as a badge, use the icon provided to
+ <code><a href="NotificationCompat.Builder.html#setSmallIcon(int)">setSmallIcon(int)</a></code> to represent this notification.
+          
+    
+</p>
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-22.1.0" >
+        <td><code>String</code></td>
+        <td width="100%">
+          <code><a href="NotificationCompat.html#CATEGORY_ALARM">CATEGORY_ALARM</a></code>
+          <p>Notification category: alarm or timer.
+          
+    
+</p>
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-22.1.0" >
+        <td><code>String</code></td>
+        <td width="100%">
+          <code><a href="NotificationCompat.html#CATEGORY_CALL">CATEGORY_CALL</a></code>
+          <p>Notification category: incoming call (voice or video) or similar synchronous communication request.
+          
+    
+</p>
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-22.1.0" >
+        <td><code>String</code></td>
+        <td width="100%">
+          <code><a href="NotificationCompat.html#CATEGORY_EMAIL">CATEGORY_EMAIL</a></code>
+          <p>Notification category: asynchronous bulk message (email).
+          
+    
+</p>
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-22.1.0" >
+        <td><code>String</code></td>
+        <td width="100%">
+          <code><a href="NotificationCompat.html#CATEGORY_ERROR">CATEGORY_ERROR</a></code>
+          <p>Notification category: error in background operation or authentication status.
+          
+    
+</p>
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-22.1.0" >
+        <td><code>String</code></td>
+        <td width="100%">
+          <code><a href="NotificationCompat.html#CATEGORY_EVENT">CATEGORY_EVENT</a></code>
+          <p>Notification category: calendar event.
+          
+    
+</p>
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-22.1.0" >
+        <td><code>String</code></td>
+        <td width="100%">
+          <code><a href="NotificationCompat.html#CATEGORY_MESSAGE">CATEGORY_MESSAGE</a></code>
+          <p>Notification category: incoming direct message (SMS, instant message, etc.).
+          
+    
+</p>
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-22.1.0" >
+        <td><code>String</code></td>
+        <td width="100%">
+          <code><a href="NotificationCompat.html#CATEGORY_PROGRESS">CATEGORY_PROGRESS</a></code>
+          <p>Notification category: progress of a long-running background operation.
+          
+    
+</p>
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-22.1.0" >
+        <td><code>String</code></td>
+        <td width="100%">
+          <code><a href="NotificationCompat.html#CATEGORY_PROMO">CATEGORY_PROMO</a></code>
+          <p>Notification category: promotion or advertisement.
+          
+    
+</p>
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-22.1.0" >
+        <td><code>String</code></td>
+        <td width="100%">
+          <code><a href="NotificationCompat.html#CATEGORY_RECOMMENDATION">CATEGORY_RECOMMENDATION</a></code>
+          <p>Notification category: a specific, timely recommendation for a single thing.
+          
+    
+</p>
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-24.1.0" >
+        <td><code>String</code></td>
+        <td width="100%">
+          <code><a href="NotificationCompat.html#CATEGORY_REMINDER">CATEGORY_REMINDER</a></code>
+          <p>Notification category: user-scheduled reminder.
+          
+    
+</p>
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-22.1.0" >
+        <td><code>String</code></td>
+        <td width="100%">
+          <code><a href="NotificationCompat.html#CATEGORY_SERVICE">CATEGORY_SERVICE</a></code>
+          <p>Notification category: indication of running background service.
+          
+    
+</p>
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-22.1.0" >
+        <td><code>String</code></td>
+        <td width="100%">
+          <code><a href="NotificationCompat.html#CATEGORY_SOCIAL">CATEGORY_SOCIAL</a></code>
+          <p>Notification category: social network or sharing update.
+          
+    
+</p>
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-22.1.0" >
+        <td><code>String</code></td>
+        <td width="100%">
+          <code><a href="NotificationCompat.html#CATEGORY_STATUS">CATEGORY_STATUS</a></code>
+          <p>Notification category: ongoing information about device or contextual status.
+          
+    
+</p>
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-22.1.0" >
+        <td><code>String</code></td>
+        <td width="100%">
+          <code><a href="NotificationCompat.html#CATEGORY_SYSTEM">CATEGORY_SYSTEM</a></code>
+          <p>Notification category: system or device status update.
+          
+    
+</p>
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-22.1.0" >
+        <td><code>String</code></td>
+        <td width="100%">
+          <code><a href="NotificationCompat.html#CATEGORY_TRANSPORT">CATEGORY_TRANSPORT</a></code>
+          <p>Notification category: media transport control for playback.
+          
+    
+</p>
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-22.1.0" >
+        <td><code>int</code></td>
+        <td width="100%">
+          <code><a href="NotificationCompat.html#COLOR_DEFAULT">COLOR_DEFAULT</a></code>
+          <p>Value of <code><a href="../../../app/Notification.html#color">color</a></code> equal to 0 (also known as
+ <code><a href="../../../graphics/Color.html#TRANSPARENT">Color.TRANSPARENT</a></code>),
+ telling the system not to decorate this notification with any special color but instead use
+ default colors when presenting this notification.
+          
+    
+</p>
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-22.1.0" >
+        <td><code>int</code></td>
+        <td width="100%">
+          <code><a href="NotificationCompat.html#DEFAULT_ALL">DEFAULT_ALL</a></code>
+          <p>Use all default values (where applicable).
+          
+    
+</p>
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-22.1.0" >
+        <td><code>int</code></td>
+        <td width="100%">
+          <code><a href="NotificationCompat.html#DEFAULT_LIGHTS">DEFAULT_LIGHTS</a></code>
+          <p>Use the default notification lights.
+          
+    
+</p>
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-22.1.0" >
+        <td><code>int</code></td>
+        <td width="100%">
+          <code><a href="NotificationCompat.html#DEFAULT_SOUND">DEFAULT_SOUND</a></code>
+          <p>Use the default notification sound.
+          
+    
+</p>
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-22.1.0" >
+        <td><code>int</code></td>
+        <td width="100%">
+          <code><a href="NotificationCompat.html#DEFAULT_VIBRATE">DEFAULT_VIBRATE</a></code>
+          <p>Use the default notification vibrate.
+          
+    
+</p>
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-26.1.0" >
+        <td><code>String</code></td>
+        <td width="100%">
+          <code><a href="NotificationCompat.html#EXTRA_AUDIO_CONTENTS_URI">EXTRA_AUDIO_CONTENTS_URI</a></code>
+          <p>Keys into the <code><a href="NotificationCompat.html#getExtras(android.app.Notification)">getExtras(Notification)</a></code> Bundle: the audio contents of this notification.
+          
+    
+</p>
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-22.1.0" >
+        <td><code>String</code></td>
+        <td width="100%">
+          <code><a href="NotificationCompat.html#EXTRA_BACKGROUND_IMAGE_URI">EXTRA_BACKGROUND_IMAGE_URI</a></code>
+          <p>Notification extras key: A
+ <code><a href="../../../content/ContentUris.html">content URI</a></code> pointing to an image that can be displayed
+ in the background when the notification is selected.
+          
+    
+</p>
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-22.1.0" >
+        <td><code>String</code></td>
+        <td width="100%">
+          <code><a href="NotificationCompat.html#EXTRA_BIG_TEXT">EXTRA_BIG_TEXT</a></code>
+          <p>Notification extras key: this is the longer text shown in the big form of a
+ <code><a href="NotificationCompat.BigTextStyle.html">NotificationCompat.BigTextStyle</a></code> notification, as supplied to
+ <code><a href="NotificationCompat.BigTextStyle.html#bigText(java.lang.CharSequence)">bigText(CharSequence)</a></code>.
+          
+    
+</p>
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-22.1.0" >
+        <td><code>String</code></td>
+        <td width="100%">
+          <code><a href="NotificationCompat.html#EXTRA_COMPACT_ACTIONS">EXTRA_COMPACT_ACTIONS</a></code>
+          <p>Notification extras key: the indices of actions to be shown in the compact view,
+ as supplied to (e.g.) <code><a href="../../../app/Notification.MediaStyle.html#setShowActionsInCompactView(int...)">setShowActionsInCompactView(int)</a></code>.
+          
+    
+</p>
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-24.1.0" >
+        <td><code>String</code></td>
+        <td width="100%">
+          <code><a href="NotificationCompat.html#EXTRA_CONVERSATION_TITLE">EXTRA_CONVERSATION_TITLE</a></code>
+          <p>Notification key: a <code><a href="../../../../java/lang/String.html">String</a></code> to be displayed as the title to a conversation
+ represented by a <code><a href="NotificationCompat.MessagingStyle.html">NotificationCompat.MessagingStyle</a></code>
+
+          
+    
+</p>
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-22.1.0" >
+        <td><code>String</code></td>
+        <td width="100%">
+          <code><a href="NotificationCompat.html#EXTRA_INFO_TEXT">EXTRA_INFO_TEXT</a></code>
+          <p>Notification extras key: this is a small piece of additional text as supplied to
+ <code><a href="NotificationCompat.Builder.html#setContentInfo(java.lang.CharSequence)">setContentInfo(CharSequence)</a></code>.
+          
+    
+</p>
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-22.1.0" >
+        <td><code>String</code></td>
+        <td width="100%">
+          <code><a href="NotificationCompat.html#EXTRA_LARGE_ICON">EXTRA_LARGE_ICON</a></code>
+          <p>Notification extras key: this is a bitmap to be used instead of the small icon when showing the
+ notification payload, as
+ supplied to <code><a href="NotificationCompat.Builder.html#setLargeIcon(android.graphics.Bitmap)">setLargeIcon(android.graphics.Bitmap)</a></code>.
+          
+    
+</p>
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-22.1.0" >
+        <td><code>String</code></td>
+        <td width="100%">
+          <code><a href="NotificationCompat.html#EXTRA_LARGE_ICON_BIG">EXTRA_LARGE_ICON_BIG</a></code>
+          <p>Notification extras key: this is a bitmap to be used instead of the one from
+ <code><a href="NotificationCompat.Builder.html#setLargeIcon(android.graphics.Bitmap)">setLargeIcon(android.graphics.Bitmap)</a></code> when the notification is
+ shown in its expanded form, as supplied to
+ <code><a href="NotificationCompat.BigPictureStyle.html#bigLargeIcon(android.graphics.Bitmap)">bigLargeIcon(android.graphics.Bitmap)</a></code>.
+          
+    
+</p>
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-22.1.0" >
+        <td><code>String</code></td>
+        <td width="100%">
+          <code><a href="NotificationCompat.html#EXTRA_MEDIA_SESSION">EXTRA_MEDIA_SESSION</a></code>
+          <p>Notification key: A
+ <code><a href="../../../media/session/MediaSession.Token.html">MediaSession.Token</a></code> associated with a
+ <code><a href="../../../app/Notification.MediaStyle.html">Notification.MediaStyle</a></code> notification.
+          
+    
+</p>
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-24.1.0" >
+        <td><code>String</code></td>
+        <td width="100%">
+          <code><a href="NotificationCompat.html#EXTRA_MESSAGES">EXTRA_MESSAGES</a></code>
+          <p>Notification key: an array of <code><a href="../../../os/Bundle.html">Bundle</a></code> objects representing
+ <code><a href="NotificationCompat.MessagingStyle.Message.html">NotificationCompat.MessagingStyle.Message</a></code> objects for a <code><a href="NotificationCompat.MessagingStyle.html">NotificationCompat.MessagingStyle</a></code> notification.
+          
+    
+</p>
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-22.1.0" >
+        <td><code>String</code></td>
+        <td width="100%">
+          <code><a href="NotificationCompat.html#EXTRA_PEOPLE">EXTRA_PEOPLE</a></code>
+          <p>Notification extras key: A String array containing the people that this
+ notification relates to, each of which was supplied to
+ <code><a href="NotificationCompat.Builder.html#addPerson(java.lang.String)">addPerson(String)</a></code>.
+          
+    
+</p>
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-22.1.0" >
+        <td><code>String</code></td>
+        <td width="100%">
+          <code><a href="NotificationCompat.html#EXTRA_PICTURE">EXTRA_PICTURE</a></code>
+          <p>Notification extras key: this is a bitmap to be shown in <code><a href="NotificationCompat.BigPictureStyle.html">NotificationCompat.BigPictureStyle</a></code> expanded
+ notifications, supplied to <code><a href="NotificationCompat.BigPictureStyle.html#bigPicture(android.graphics.Bitmap)">bigPicture(android.graphics.Bitmap)</a></code>.
+          
+    
+</p>
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-22.1.0" >
+        <td><code>String</code></td>
+        <td width="100%">
+          <code><a href="NotificationCompat.html#EXTRA_PROGRESS">EXTRA_PROGRESS</a></code>
+          <p>Notification extras key: this is the progress value supplied to
+ <code><a href="NotificationCompat.Builder.html#setProgress(int, int, boolean)">setProgress(int, int, boolean)</a></code>.
+          
+    
+</p>
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-22.1.0" >
+        <td><code>String</code></td>
+        <td width="100%">
+          <code><a href="NotificationCompat.html#EXTRA_PROGRESS_INDETERMINATE">EXTRA_PROGRESS_INDETERMINATE</a></code>
+          <p>Notification extras key: whether the progress bar is indeterminate, supplied to
+ <code><a href="NotificationCompat.Builder.html#setProgress(int, int, boolean)">setProgress(int, int, boolean)</a></code>.
+          
+    
+</p>
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-22.1.0" >
+        <td><code>String</code></td>
+        <td width="100%">
+          <code><a href="NotificationCompat.html#EXTRA_PROGRESS_MAX">EXTRA_PROGRESS_MAX</a></code>
+          <p>Notification extras key: this is the maximum value supplied to
+ <code><a href="NotificationCompat.Builder.html#setProgress(int, int, boolean)">setProgress(int, int, boolean)</a></code>.
+          
+    
+</p>
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-24.1.0" >
+        <td><code>String</code></td>
+        <td width="100%">
+          <code><a href="NotificationCompat.html#EXTRA_REMOTE_INPUT_HISTORY">EXTRA_REMOTE_INPUT_HISTORY</a></code>
+          <p>Notification extras key: this is the remote input history, as supplied to
+ <code><a href="NotificationCompat.Builder.html#setRemoteInputHistory(java.lang.CharSequence[])">setRemoteInputHistory(CharSequence[])</a></code>.
+          
+    
+</p>
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-24.1.0" >
+        <td><code>String</code></td>
+        <td width="100%">
+          <code><a href="NotificationCompat.html#EXTRA_SELF_DISPLAY_NAME">EXTRA_SELF_DISPLAY_NAME</a></code>
+          <p>Notification key: the username to be displayed for all messages sent by the user
+ including
+ direct replies
+ <code><a href="NotificationCompat.MessagingStyle.html">NotificationCompat.MessagingStyle</a></code> notification.
+          
+    
+</p>
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-22.1.0" >
+        <td><code>String</code></td>
+        <td width="100%">
+          <code><a href="NotificationCompat.html#EXTRA_SHOW_CHRONOMETER">EXTRA_SHOW_CHRONOMETER</a></code>
+          <p>Notification extras key: whether the when field set using <code><a href="NotificationCompat.Builder.html#setWhen(long)">setWhen(long)</a></code> should
+ be shown as a count-up timer (specifically a <code><a href="../../../widget/Chronometer.html">Chronometer</a></code>) instead
+ of a timestamp, as supplied to <code><a href="NotificationCompat.Builder.html#setUsesChronometer(boolean)">setUsesChronometer(boolean)</a></code>.
+          
+    
+</p>
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-22.1.0" >
+        <td><code>String</code></td>
+        <td width="100%">
+          <code><a href="NotificationCompat.html#EXTRA_SHOW_WHEN">EXTRA_SHOW_WHEN</a></code>
+          <p>Notification extras key: whether the when field set using <code><a href="NotificationCompat.Builder.html#setWhen(long)">setWhen(long)</a></code> should
+ be shown, as supplied to <code><a href="NotificationCompat.Builder.html#setShowWhen(boolean)">setShowWhen(boolean)</a></code>.
+          
+    
+</p>
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-22.1.0" >
+        <td><code>String</code></td>
+        <td width="100%">
+          <code><a href="NotificationCompat.html#EXTRA_SMALL_ICON">EXTRA_SMALL_ICON</a></code>
+          <p>Notification extras key: this is the resource ID of the notification's main small icon, as
+ supplied to <code><a href="NotificationCompat.Builder.html#setSmallIcon(int)">setSmallIcon(int)</a></code>.
+          
+    
+</p>
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-22.1.0" >
+        <td><code>String</code></td>
+        <td width="100%">
+          <code><a href="NotificationCompat.html#EXTRA_SUB_TEXT">EXTRA_SUB_TEXT</a></code>
+          <p>Notification extras key: this is a third line of text, as supplied to
+ <code><a href="NotificationCompat.Builder.html#setSubText(java.lang.CharSequence)">setSubText(CharSequence)</a></code>.
+          
+    
+</p>
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-22.1.0" >
+        <td><code>String</code></td>
+        <td width="100%">
+          <code><a href="NotificationCompat.html#EXTRA_SUMMARY_TEXT">EXTRA_SUMMARY_TEXT</a></code>
+          <p>Notification extras key: this is a line of summary information intended to be shown
+ alongside expanded notifications, as supplied to (e.g.)
+ <code><a href="NotificationCompat.BigTextStyle.html#setSummaryText(java.lang.CharSequence)">setSummaryText(CharSequence)</a></code>.
+          
+    
+</p>
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-22.1.0" >
+        <td><code>String</code></td>
+        <td width="100%">
+          <code><a href="NotificationCompat.html#EXTRA_TEMPLATE">EXTRA_TEMPLATE</a></code>
+          <p>Notification extras key: A string representing the name of the specific
+ <code><a href="../../../app/Notification.Style.html">Notification.Style</a></code> used to create this notification.
+          
+    
+</p>
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-22.1.0" >
+        <td><code>String</code></td>
+        <td width="100%">
+          <code><a href="NotificationCompat.html#EXTRA_TEXT">EXTRA_TEXT</a></code>
+          <p>Notification extras key: this is the main text payload, as supplied to
+ <code><a href="NotificationCompat.Builder.html#setContentText(java.lang.CharSequence)">setContentText(CharSequence)</a></code>.
+          
+    
+</p>
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-22.1.0" >
+        <td><code>String</code></td>
+        <td width="100%">
+          <code><a href="NotificationCompat.html#EXTRA_TEXT_LINES">EXTRA_TEXT_LINES</a></code>
+          <p>Notification extras key: An array of CharSequences to show in <code><a href="NotificationCompat.InboxStyle.html">NotificationCompat.InboxStyle</a></code> expanded
+ notifications, each of which was supplied to <code><a href="NotificationCompat.InboxStyle.html#addLine(java.lang.CharSequence)">addLine(CharSequence)</a></code>.
+          
+    
+</p>
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-22.1.0" >
+        <td><code>String</code></td>
+        <td width="100%">
+          <code><a href="NotificationCompat.html#EXTRA_TITLE">EXTRA_TITLE</a></code>
+          <p>Notification extras key: this is the title of the notification,
+ as supplied to <code><a href="NotificationCompat.Builder.html#setContentTitle(java.lang.CharSequence)">setContentTitle(CharSequence)</a></code>.
+          
+    
+</p>
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-22.1.0" >
+        <td><code>String</code></td>
+        <td width="100%">
+          <code><a href="NotificationCompat.html#EXTRA_TITLE_BIG">EXTRA_TITLE_BIG</a></code>
+          <p>Notification extras key: this is the title of the notification when shown in expanded form,
+ e.g.
+          
+    
+</p>
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-22.1.0" >
+        <td><code>int</code></td>
+        <td width="100%">
+          <code><a href="NotificationCompat.html#FLAG_AUTO_CANCEL">FLAG_AUTO_CANCEL</a></code>
+          <p>Bit set in the Notification flags field if the notification should be canceled when
+ it is clicked by the user.
+          
+    
+</p>
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-22.1.0" >
+        <td><code>int</code></td>
+        <td width="100%">
+          <code><a href="NotificationCompat.html#FLAG_FOREGROUND_SERVICE">FLAG_FOREGROUND_SERVICE</a></code>
+          <p>Bit set in the Notification flags field if this notification represents a currently
+ running service.
+          
+    
+</p>
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-22.1.0" >
+        <td><code>int</code></td>
+        <td width="100%">
+          <code><a href="NotificationCompat.html#FLAG_GROUP_SUMMARY">FLAG_GROUP_SUMMARY</a></code>
+          <p>Bit set in the Notification flags field if this notification is the group summary for a
+ group of notifications.
+          
+    
+</p>
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-22.1.0" >
+        <td><code>int</code></td>
+        <td width="100%">
+          <code><a href="NotificationCompat.html#FLAG_HIGH_PRIORITY">FLAG_HIGH_PRIORITY</a></code>
+          <p><em>
+      This constant was deprecated
+      in API level 22.1.0.
+    Use <code><a href="NotificationCompat.Builder.html#setPriority(int)">setPriority(int)</a></code> with a positive value.
+</em>
+          
+    
+</p>
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-22.1.0" >
+        <td><code>int</code></td>
+        <td width="100%">
+          <code><a href="NotificationCompat.html#FLAG_INSISTENT">FLAG_INSISTENT</a></code>
+          <p>Bit set in the Notification flags field if
+ the audio will be repeated until the notification is
+ cancelled or the notification window is opened.
+          
+    
+</p>
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-22.1.0" >
+        <td><code>int</code></td>
+        <td width="100%">
+          <code><a href="NotificationCompat.html#FLAG_LOCAL_ONLY">FLAG_LOCAL_ONLY</a></code>
+          <p>Bit set in the Notification flags field if this notification is relevant to the current
+ device only and it is not recommended that it bridge to other devices.
+          
+    
+</p>
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-22.1.0" >
+        <td><code>int</code></td>
+        <td width="100%">
+          <code><a href="NotificationCompat.html#FLAG_NO_CLEAR">FLAG_NO_CLEAR</a></code>
+          <p>Bit set in the Notification flags field if the notification should not be canceled
+ when the user clicks the Clear all button.
+          
+    
+</p>
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-22.1.0" >
+        <td><code>int</code></td>
+        <td width="100%">
+          <code><a href="NotificationCompat.html#FLAG_ONGOING_EVENT">FLAG_ONGOING_EVENT</a></code>
+          <p>Bit set in the Notification flags field if this notification is in
+ reference to something that is ongoing, like a phone call.
+          
+    
+</p>
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-22.1.0" >
+        <td><code>int</code></td>
+        <td width="100%">
+          <code><a href="NotificationCompat.html#FLAG_ONLY_ALERT_ONCE">FLAG_ONLY_ALERT_ONCE</a></code>
+          <p>Bit set in the Notification flags field if the notification's sound,
+ vibrate and ticker should only be played if the notification is not already showing.
+          
+    
+</p>
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-22.1.0" >
+        <td><code>int</code></td>
+        <td width="100%">
+          <code><a href="NotificationCompat.html#FLAG_SHOW_LIGHTS">FLAG_SHOW_LIGHTS</a></code>
+          <p>Bit set in the Notification flags field when LEDs should be turned on
+ for this notification.
+          
+    
+</p>
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-26.1.0" >
+        <td><code>int</code></td>
+        <td width="100%">
+          <code><a href="NotificationCompat.html#GROUP_ALERT_ALL">GROUP_ALERT_ALL</a></code>
+          <p>Constant for <code><a href="NotificationCompat.Builder.html#setGroupAlertBehavior(int)">setGroupAlertBehavior(int)</a></code>, meaning that all notifications in a
+ group with sound or vibration ought to make sound or vibrate (respectively), so this
+ notification will not be muted when it is in a group.
+          
+    
+</p>
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-26.1.0" >
+        <td><code>int</code></td>
+        <td width="100%">
+          <code><a href="NotificationCompat.html#GROUP_ALERT_CHILDREN">GROUP_ALERT_CHILDREN</a></code>
+          <p>Constant for <code><a href="NotificationCompat.Builder.html#setGroupAlertBehavior(int)">setGroupAlertBehavior(int)</a></code>, meaning that the summary
+ notification in a group should be silenced (no sound or vibration) even if they would
+ otherwise make sound or vibrate.
+          
+    
+</p>
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-26.1.0" >
+        <td><code>int</code></td>
+        <td width="100%">
+          <code><a href="NotificationCompat.html#GROUP_ALERT_SUMMARY">GROUP_ALERT_SUMMARY</a></code>
+          <p>Constant for <code><a href="NotificationCompat.Builder.html#setGroupAlertBehavior(int)">setGroupAlertBehavior(int)</a></code>, meaning that all children
+ notification in a group should be silenced (no sound or vibration) even if they would
+ otherwise make sound or vibrate.
+          
+    
+</p>
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-22.1.0" >
+        <td><code>int</code></td>
+        <td width="100%">
+          <code><a href="NotificationCompat.html#PRIORITY_DEFAULT">PRIORITY_DEFAULT</a></code>
+          <p>Default notification priority for <code><a href="NotificationCompat.Builder.html#setPriority(int)">setPriority(int)</a></code>.
+          
+    
+</p>
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-22.1.0" >
+        <td><code>int</code></td>
+        <td width="100%">
+          <code><a href="NotificationCompat.html#PRIORITY_HIGH">PRIORITY_HIGH</a></code>
+          <p>Higher notification priority for <code><a href="NotificationCompat.Builder.html#setPriority(int)">setPriority(int)</a></code>,
+ for more important notifications or alerts.
+          
+    
+</p>
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-22.1.0" >
+        <td><code>int</code></td>
+        <td width="100%">
+          <code><a href="NotificationCompat.html#PRIORITY_LOW">PRIORITY_LOW</a></code>
+          <p>Lower notification priority for <code><a href="NotificationCompat.Builder.html#setPriority(int)">setPriority(int)</a></code>,
+ for items that are less important.
+          
+    
+</p>
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-22.1.0" >
+        <td><code>int</code></td>
+        <td width="100%">
+          <code><a href="NotificationCompat.html#PRIORITY_MAX">PRIORITY_MAX</a></code>
+          <p>Highest notification priority for <code><a href="NotificationCompat.Builder.html#setPriority(int)">setPriority(int)</a></code>,
+ for your application's most important items that require the user's
+ prompt attention or input.
+          
+    
+</p>
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-22.1.0" >
+        <td><code>int</code></td>
+        <td width="100%">
+          <code><a href="NotificationCompat.html#PRIORITY_MIN">PRIORITY_MIN</a></code>
+          <p>Lowest notification priority for <code><a href="NotificationCompat.Builder.html#setPriority(int)">setPriority(int)</a></code>;
+ these items might not be shown to the user except under
+ special circumstances, such as detailed notification logs.
+          
+    
+</p>
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-22.1.0" >
+        <td><code>int</code></td>
+        <td width="100%">
+          <code><a href="NotificationCompat.html#STREAM_DEFAULT">STREAM_DEFAULT</a></code>
+          <p>Use this constant as the value for audioStreamType to request that
+ the default stream type for notifications be used.
+          
+    
+</p>
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-22.1.0" >
+        <td><code>int</code></td>
+        <td width="100%">
+          <code><a href="NotificationCompat.html#VISIBILITY_PRIVATE">VISIBILITY_PRIVATE</a></code>
+          <p>Notification visibility: Show this notification on all lockscreens, but conceal sensitive or
+ private information on secure lockscreens.
+          
+    
+</p>
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-22.1.0" >
+        <td><code>int</code></td>
+        <td width="100%">
+          <code><a href="NotificationCompat.html#VISIBILITY_PUBLIC">VISIBILITY_PUBLIC</a></code>
+          <p>Notification visibility: Show this notification in its entirety on all lockscreens.
+          
+    
+</p>
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-22.1.0" >
+        <td><code>int</code></td>
+        <td width="100%">
+          <code><a href="NotificationCompat.html#VISIBILITY_SECRET">VISIBILITY_SECRET</a></code>
+          <p>Notification visibility: Do not reveal any part of this notification on a secure lockscreen.
+          
+    
+</p>
+        </td>
+    </tr>
+    
+    
+
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<table id="pubctors" class="responsive constructors">
+<tr><th colspan="2"><h3>Public constructors</h3></th></tr>
+
+
+
+  
+  <tr class="api apilevel-22.1.0" >
+  
+  
+    <td width="100%">
+      <code>
+      <a href="NotificationCompat.html#NotificationCompat()">NotificationCompat</a>()
+      </code>
+      
+    </td>
+  </tr>
+  
+
+
+</table>
+
+
+
+
+
+
+<!-- ========== METHOD SUMMARY =========== -->
+<table id="pubmethods" class="responsive methods">
+<tr><th colspan="2"><h3>Public methods</h3></th></tr>
+
+
+
+  
+  <tr class="api apilevel-22.1.0" >
+  
+  
+    <td><code>
+        
+        
+        static
+        
+        
+        <a href="NotificationCompat.Action.html">NotificationCompat.Action</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="NotificationCompat.html#getAction(android.app.Notification, int)">getAction</a>(<a href="../../../app/Notification.html">Notification</a> notification, int actionIndex)
+      </code>
+      
+        <p>Get an action on this notification in a backwards compatible
+ manner.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-22.1.0" >
+  
+  
+    <td><code>
+        
+        
+        static
+        
+        
+        int</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="NotificationCompat.html#getActionCount(android.app.Notification)">getActionCount</a>(<a href="../../../app/Notification.html">Notification</a> notification)
+      </code>
+      
+        <p>Get the number of actions in this notification in a backwards compatible
+ manner.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-26.1.0" >
+  
+  
+    <td><code>
+        
+        
+        static
+        
+        
+        int</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="NotificationCompat.html#getBadgeIconType(android.app.Notification)">getBadgeIconType</a>(<a href="../../../app/Notification.html">Notification</a> notification)
+      </code>
+      
+        <p>Returns what icon should be shown for this notification if it is being displayed in a
+ Launcher that supports badging.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-22.1.0" >
+  
+  
+    <td><code>
+        
+        
+        static
+        
+        
+        String</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="NotificationCompat.html#getCategory(android.app.Notification)">getCategory</a>(<a href="../../../app/Notification.html">Notification</a> notification)
+      </code>
+      
+        <p>Get the category of this notification in a backwards compatible
+ manner.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-26.1.0" >
+  
+  
+    <td><code>
+        
+        
+        static
+        
+        
+        String</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="NotificationCompat.html#getChannelId(android.app.Notification)">getChannelId</a>(<a href="../../../app/Notification.html">Notification</a> notification)
+      </code>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-22.1.0" >
+  
+  
+    <td><code>
+        
+        
+        static
+        
+        
+        <a href="../../../os/Bundle.html">Bundle</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="NotificationCompat.html#getExtras(android.app.Notification)">getExtras</a>(<a href="../../../app/Notification.html">Notification</a> notification)
+      </code>
+      
+        <p>Gets the <code><a href="../../../app/Notification.html#extras">extras</a></code> field from a notification in a backwards
+ compatible manner.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-22.1.0" >
+  
+  
+    <td><code>
+        
+        
+        static
+        
+        
+        String</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="NotificationCompat.html#getGroup(android.app.Notification)">getGroup</a>(<a href="../../../app/Notification.html">Notification</a> notification)
+      </code>
+      
+        <p>Get the key used to group this notification into a cluster or stack
+ with other notifications on devices which support such rendering.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-26.1.0" >
+  
+  
+    <td><code>
+        
+        
+        static
+        
+        
+        int</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="NotificationCompat.html#getGroupAlertBehavior(android.app.Notification)">getGroupAlertBehavior</a>(<a href="../../../app/Notification.html">Notification</a> notification)
+      </code>
+      
+        <p>Returns which type of notifications in a group are responsible for audibly alerting the
+ user.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-22.1.0" >
+  
+  
+    <td><code>
+        
+        
+        static
+        
+        
+        boolean</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="NotificationCompat.html#getLocalOnly(android.app.Notification)">getLocalOnly</a>(<a href="../../../app/Notification.html">Notification</a> notification)
+      </code>
+      
+        <p>Get whether or not this notification is only relevant to the current device.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-26.1.0" >
+  
+  
+    <td><code>
+        
+        
+        static
+        
+        
+        String</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="NotificationCompat.html#getShortcutId(android.app.Notification)">getShortcutId</a>(<a href="../../../app/Notification.html">Notification</a> notification)
+      </code>
+      
+        <p>Returns the <code><a href="../content/pm/ShortcutInfoCompat.html#getId()">id</a></code> that this
+ notification supersedes, if any.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-22.1.0" >
+  
+  
+    <td><code>
+        
+        
+        static
+        
+        
+        String</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="NotificationCompat.html#getSortKey(android.app.Notification)">getSortKey</a>(<a href="../../../app/Notification.html">Notification</a> notification)
+      </code>
+      
+        <p>Get a sort key that orders this notification among other notifications from the
+ same package.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-26.1.0" >
+  
+  
+    <td><code>
+        
+        
+        static
+        
+        
+        long</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="NotificationCompat.html#getTimeoutAfter(android.app.Notification)">getTimeoutAfter</a>(<a href="../../../app/Notification.html">Notification</a> notification)
+      </code>
+      
+        <p>Returns the time at which this notification should be canceled by the system, if it's not
+ canceled already.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-22.1.0" >
+  
+  
+    <td><code>
+        
+        
+        static
+        
+        
+        boolean</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="NotificationCompat.html#isGroupSummary(android.app.Notification)">isGroupSummary</a>(<a href="../../../app/Notification.html">Notification</a> notification)
+      </code>
+      
+        <p>Get whether this notification to be the group summary for a group of notifications.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+
+</table>
+
+
+
+
+
+
+
+<!-- ========== METHOD SUMMARY =========== -->
+<table id="inhmethods" class="methods inhtable">
+<tr><th><h3>Inherited methods</h3></th></tr>
+
+
+<tr class="api apilevel-" >
+<td colspan="2">
+  <a href="#" id="inherited-methods-java.lang.Object" class="jd-expando-trigger closed"
+     onclick="return toggleInherited(this, null)" >
+    <img id="inherited-methods-java.lang.Object-trigger" class="jd-expando-trigger-img"
+         height="34"
+         src="../../../../../assets/images/styles/disclosure_down.png" />
+  </a>From
+class
+<code>
+  
+    java.lang.Object
+  
+</code>
+<div id="inherited-methods-java.lang.Object">
+  <div id="inherited-methods-java.lang.Object-list"
+        class="jd-inheritedlinks">
+  </div>
+  <div id="inherited-methods-java.lang.Object-summary" style="display: none;">
+    <table class="jd-sumtable-expando responsive">
+      
+
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        Object</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      clone()
+      </code>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        boolean</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      equals(Object arg0)
+      </code>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      finalize()
+      </code>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        final
+        
+        Class&lt;?&gt;</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      getClass()
+      </code>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        int</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      hashCode()
+      </code>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        final
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      notify()
+      </code>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        final
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      notifyAll()
+      </code>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        String</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      toString()
+      </code>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        final
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      wait(long arg0, int arg1)
+      </code>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        final
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      wait(long arg0)
+      </code>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        final
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      wait()
+      </code>
+      
+    </td>
+  </tr>
+  
+
+
+    </table>
+  </div>
+</div>
+</td></tr>
+
+
+</table>
+
+
+
+<!-- XML Attributes -->
+
+
+<!-- Enum Values -->
+
+
+<!-- Constants -->
+
+
+<!-- ========= ENUM CONSTANTS DETAIL ======== -->
+<h2 class="api-section">Constants</h2>
+
+
+
+
+<A NAME="BADGE_ICON_LARGE"></A>
+
+<div class="api apilevel-26.1.0">
+    <h3 class="api-name">BADGE_ICON_LARGE</h3>
+    <div class="api-level">
+      
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 26.1.0</a>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+int BADGE_ICON_LARGE</pre>
+    
+    
+
+    
+  <p>If this notification is being shown as a badge, use the icon provided to
+ {@link Builder#setLargeIcon(Bitmap) to represent this notification.
+</p></p>
+
+    
+      <p>Constant Value:
+      
+          2
+          (0x00000002)
+      
+    
+</div>
+
+
+
+<A NAME="BADGE_ICON_NONE"></A>
+
+<div class="api apilevel-26.1.0">
+    <h3 class="api-name">BADGE_ICON_NONE</h3>
+    <div class="api-level">
+      
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 26.1.0</a>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+int BADGE_ICON_NONE</pre>
+    
+    
+
+    
+  <p>If this notification is being shown as a badge, always show as a number.
+</p></p>
+
+    
+      <p>Constant Value:
+      
+          0
+          (0x00000000)
+      
+    
+</div>
+
+
+
+<A NAME="BADGE_ICON_SMALL"></A>
+
+<div class="api apilevel-26.1.0">
+    <h3 class="api-name">BADGE_ICON_SMALL</h3>
+    <div class="api-level">
+      
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 26.1.0</a>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+int BADGE_ICON_SMALL</pre>
+    
+    
+
+    
+  <p>If this notification is being shown as a badge, use the icon provided to
+ <code><a href="NotificationCompat.Builder.html#setSmallIcon(int)">setSmallIcon(int)</a></code> to represent this notification.
+</p></p>
+
+    
+      <p>Constant Value:
+      
+          1
+          (0x00000001)
+      
+    
+</div>
+
+
+
+<A NAME="CATEGORY_ALARM"></A>
+
+<div class="api apilevel-22.1.0">
+    <h3 class="api-name">CATEGORY_ALARM</h3>
+    <div class="api-level">
+      
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 22.1.0</a>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+String CATEGORY_ALARM</pre>
+    
+    
+
+    
+  <p>Notification category: alarm or timer.
+</p></p>
+
+    
+      <p>Constant Value:
+      
+          "alarm"
+      
+    
+</div>
+
+
+
+<A NAME="CATEGORY_CALL"></A>
+
+<div class="api apilevel-22.1.0">
+    <h3 class="api-name">CATEGORY_CALL</h3>
+    <div class="api-level">
+      
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 22.1.0</a>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+String CATEGORY_CALL</pre>
+    
+    
+
+    
+  <p>Notification category: incoming call (voice or video) or similar synchronous communication request.
+</p></p>
+
+    
+      <p>Constant Value:
+      
+          "call"
+      
+    
+</div>
+
+
+
+<A NAME="CATEGORY_EMAIL"></A>
+
+<div class="api apilevel-22.1.0">
+    <h3 class="api-name">CATEGORY_EMAIL</h3>
+    <div class="api-level">
+      
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 22.1.0</a>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+String CATEGORY_EMAIL</pre>
+    
+    
+
+    
+  <p>Notification category: asynchronous bulk message (email).
+</p></p>
+
+    
+      <p>Constant Value:
+      
+          "email"
+      
+    
+</div>
+
+
+
+<A NAME="CATEGORY_ERROR"></A>
+
+<div class="api apilevel-22.1.0">
+    <h3 class="api-name">CATEGORY_ERROR</h3>
+    <div class="api-level">
+      
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 22.1.0</a>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+String CATEGORY_ERROR</pre>
+    
+    
+
+    
+  <p>Notification category: error in background operation or authentication status.
+</p></p>
+
+    
+      <p>Constant Value:
+      
+          "err"
+      
+    
+</div>
+
+
+
+<A NAME="CATEGORY_EVENT"></A>
+
+<div class="api apilevel-22.1.0">
+    <h3 class="api-name">CATEGORY_EVENT</h3>
+    <div class="api-level">
+      
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 22.1.0</a>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+String CATEGORY_EVENT</pre>
+    
+    
+
+    
+  <p>Notification category: calendar event.
+</p></p>
+
+    
+      <p>Constant Value:
+      
+          "event"
+      
+    
+</div>
+
+
+
+<A NAME="CATEGORY_MESSAGE"></A>
+
+<div class="api apilevel-22.1.0">
+    <h3 class="api-name">CATEGORY_MESSAGE</h3>
+    <div class="api-level">
+      
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 22.1.0</a>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+String CATEGORY_MESSAGE</pre>
+    
+    
+
+    
+  <p>Notification category: incoming direct message (SMS, instant message, etc.).
+</p></p>
+
+    
+      <p>Constant Value:
+      
+          "msg"
+      
+    
+</div>
+
+
+
+<A NAME="CATEGORY_PROGRESS"></A>
+
+<div class="api apilevel-22.1.0">
+    <h3 class="api-name">CATEGORY_PROGRESS</h3>
+    <div class="api-level">
+      
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 22.1.0</a>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+String CATEGORY_PROGRESS</pre>
+    
+    
+
+    
+  <p>Notification category: progress of a long-running background operation.
+</p></p>
+
+    
+      <p>Constant Value:
+      
+          "progress"
+      
+    
+</div>
+
+
+
+<A NAME="CATEGORY_PROMO"></A>
+
+<div class="api apilevel-22.1.0">
+    <h3 class="api-name">CATEGORY_PROMO</h3>
+    <div class="api-level">
+      
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 22.1.0</a>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+String CATEGORY_PROMO</pre>
+    
+    
+
+    
+  <p>Notification category: promotion or advertisement.
+</p></p>
+
+    
+      <p>Constant Value:
+      
+          "promo"
+      
+    
+</div>
+
+
+
+<A NAME="CATEGORY_RECOMMENDATION"></A>
+
+<div class="api apilevel-22.1.0">
+    <h3 class="api-name">CATEGORY_RECOMMENDATION</h3>
+    <div class="api-level">
+      
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 22.1.0</a>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+String CATEGORY_RECOMMENDATION</pre>
+    
+    
+
+    
+  <p>Notification category: a specific, timely recommendation for a single thing.
+ For example, a news app might want to recommend a news story it believes the user will
+ want to read next.
+</p></p>
+
+    
+      <p>Constant Value:
+      
+          "recommendation"
+      
+    
+</div>
+
+
+
+<A NAME="CATEGORY_REMINDER"></A>
+
+<div class="api apilevel-24.1.0">
+    <h3 class="api-name">CATEGORY_REMINDER</h3>
+    <div class="api-level">
+      
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 24.1.0</a>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+String CATEGORY_REMINDER</pre>
+    
+    
+
+    
+  <p>Notification category: user-scheduled reminder.
+</p></p>
+
+    
+      <p>Constant Value:
+      
+          "reminder"
+      
+    
+</div>
+
+
+
+<A NAME="CATEGORY_SERVICE"></A>
+
+<div class="api apilevel-22.1.0">
+    <h3 class="api-name">CATEGORY_SERVICE</h3>
+    <div class="api-level">
+      
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 22.1.0</a>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+String CATEGORY_SERVICE</pre>
+    
+    
+
+    
+  <p>Notification category: indication of running background service.
+</p></p>
+
+    
+      <p>Constant Value:
+      
+          "service"
+      
+    
+</div>
+
+
+
+<A NAME="CATEGORY_SOCIAL"></A>
+
+<div class="api apilevel-22.1.0">
+    <h3 class="api-name">CATEGORY_SOCIAL</h3>
+    <div class="api-level">
+      
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 22.1.0</a>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+String CATEGORY_SOCIAL</pre>
+    
+    
+
+    
+  <p>Notification category: social network or sharing update.
+</p></p>
+
+    
+      <p>Constant Value:
+      
+          "social"
+      
+    
+</div>
+
+
+
+<A NAME="CATEGORY_STATUS"></A>
+
+<div class="api apilevel-22.1.0">
+    <h3 class="api-name">CATEGORY_STATUS</h3>
+    <div class="api-level">
+      
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 22.1.0</a>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+String CATEGORY_STATUS</pre>
+    
+    
+
+    
+  <p>Notification category: ongoing information about device or contextual status.
+</p></p>
+
+    
+      <p>Constant Value:
+      
+          "status"
+      
+    
+</div>
+
+
+
+<A NAME="CATEGORY_SYSTEM"></A>
+
+<div class="api apilevel-22.1.0">
+    <h3 class="api-name">CATEGORY_SYSTEM</h3>
+    <div class="api-level">
+      
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 22.1.0</a>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+String CATEGORY_SYSTEM</pre>
+    
+    
+
+    
+  <p>Notification category: system or device status update.  Reserved for system use.
+</p></p>
+
+    
+      <p>Constant Value:
+      
+          "sys"
+      
+    
+</div>
+
+
+
+<A NAME="CATEGORY_TRANSPORT"></A>
+
+<div class="api apilevel-22.1.0">
+    <h3 class="api-name">CATEGORY_TRANSPORT</h3>
+    <div class="api-level">
+      
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 22.1.0</a>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+String CATEGORY_TRANSPORT</pre>
+    
+    
+
+    
+  <p>Notification category: media transport control for playback.
+</p></p>
+
+    
+      <p>Constant Value:
+      
+          "transport"
+      
+    
+</div>
+
+
+
+<A NAME="COLOR_DEFAULT"></A>
+
+<div class="api apilevel-22.1.0">
+    <h3 class="api-name">COLOR_DEFAULT</h3>
+    <div class="api-level">
+      
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 22.1.0</a>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+int COLOR_DEFAULT</pre>
+    
+    
+
+    
+  <p>Value of <code><a href="../../../app/Notification.html#color">color</a></code> equal to 0 (also known as
+ <code><a href="../../../graphics/Color.html#TRANSPARENT">Color.TRANSPARENT</a></code>),
+ telling the system not to decorate this notification with any special color but instead use
+ default colors when presenting this notification.
+</p></p>
+
+    
+      <p>Constant Value:
+      
+          0
+          (0x00000000)
+      
+    
+</div>
+
+
+
+<A NAME="DEFAULT_ALL"></A>
+
+<div class="api apilevel-22.1.0">
+    <h3 class="api-name">DEFAULT_ALL</h3>
+    <div class="api-level">
+      
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 22.1.0</a>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+int DEFAULT_ALL</pre>
+    
+    
+
+    
+  <p>Use all default values (where applicable).
+</p></p>
+
+    
+      <p>Constant Value:
+      
+          -1
+          (0xffffffff)
+      
+    
+</div>
+
+
+
+<A NAME="DEFAULT_LIGHTS"></A>
+
+<div class="api apilevel-22.1.0">
+    <h3 class="api-name">DEFAULT_LIGHTS</h3>
+    <div class="api-level">
+      
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 22.1.0</a>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+int DEFAULT_LIGHTS</pre>
+    
+    
+
+    
+  <p>Use the default notification lights. This will ignore the
+ <code><a href="NotificationCompat.html#FLAG_SHOW_LIGHTS">FLAG_SHOW_LIGHTS</a></code> bit, and values set with <code><a href="NotificationCompat.Builder.html#setLights(int, int, int)">setLights(int, int, int)</a></code>.</p></p>
+  <div>
+      <p><b>See also:</b></p>
+      <ul class="nolist"><li><code><a href="NotificationCompat.Builder.html#setDefaults(int)">setDefaults(int)</a></code></li>
+      </ul>
+  </div>
+
+    
+      <p>Constant Value:
+      
+          4
+          (0x00000004)
+      
+    
+</div>
+
+
+
+<A NAME="DEFAULT_SOUND"></A>
+
+<div class="api apilevel-22.1.0">
+    <h3 class="api-name">DEFAULT_SOUND</h3>
+    <div class="api-level">
+      
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 22.1.0</a>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+int DEFAULT_SOUND</pre>
+    
+    
+
+    
+  <p>Use the default notification sound. This will ignore any sound set using
+ <code><a href="NotificationCompat.Builder.html#setSound(android.net.Uri)">setSound(Uri)</a></code>
+
+ <p>
+ A notification that is noisy is more likely to be presented as a heads-up notification,
+ on some platforms.
+ </p></p></p>
+  <div>
+      <p><b>See also:</b></p>
+      <ul class="nolist"><li><code><a href="NotificationCompat.Builder.html#setDefaults(int)">setDefaults(int)</a></code></li>
+      </ul>
+  </div>
+
+    
+      <p>Constant Value:
+      
+          1
+          (0x00000001)
+      
+    
+</div>
+
+
+
+<A NAME="DEFAULT_VIBRATE"></A>
+
+<div class="api apilevel-22.1.0">
+    <h3 class="api-name">DEFAULT_VIBRATE</h3>
+    <div class="api-level">
+      
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 22.1.0</a>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+int DEFAULT_VIBRATE</pre>
+    
+    
+
+    
+  <p>Use the default notification vibrate. This will ignore any vibrate set using
+ <code><a href="NotificationCompat.Builder.html#setVibrate(long[])">setVibrate(long[])</a></code>. Using phone vibration requires the
+ <code><a href="../../../Manifest.permission.html#VIBRATE">VIBRATE</a></code> permission.
+
+ <p>
+ A notification that vibrates is more likely to be presented as a heads-up notification,
+ on some platforms.
+ </p></p></p>
+  <div>
+      <p><b>See also:</b></p>
+      <ul class="nolist"><li><code><a href="NotificationCompat.Builder.html#setDefaults(int)">setDefaults(int)</a></code></li>
+      </ul>
+  </div>
+
+    
+      <p>Constant Value:
+      
+          2
+          (0x00000002)
+      
+    
+</div>
+
+
+
+<A NAME="EXTRA_AUDIO_CONTENTS_URI"></A>
+
+<div class="api apilevel-26.1.0">
+    <h3 class="api-name">EXTRA_AUDIO_CONTENTS_URI</h3>
+    <div class="api-level">
+      
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 26.1.0</a>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+String EXTRA_AUDIO_CONTENTS_URI</pre>
+    
+    
+
+    
+  <p>Keys into the <code><a href="NotificationCompat.html#getExtras(android.app.Notification)">getExtras(Notification)</a></code> Bundle: the audio contents of this notification.
+
+ This is for use when rendering the notification on an audio-focused interface;
+ the audio contents are a complete sound sample that contains the contents/body of the
+ notification. This may be used in substitute of a Text-to-Speech reading of the
+ notification. For example if the notification represents a voice message this should point
+ to the audio of that message.
+
+ The data stored under this key should be a String representation of a Uri that contains the
+ audio contents in one of the following formats: WAV, PCM 16-bit, AMR-WB.
+
+ This extra is unnecessary if you are using <code>MessagingStyle</code> since each <code>Message</code>
+ has a field for holding data URI. That field can be used for audio.
+ See <code>Message#setData</code>.
+
+ Example usage:
+ <pre>
+ <code>NotificationCompat.Builder myBuilder = (build your Notification as normal);
+ myBuilder.getExtras().putString(EXTRA_AUDIO_CONTENTS_URI, myAudioUri.toString());
+ </code>
+ </pre>
+</p></p>
+
+    
+      <p>Constant Value:
+      
+          "android.audioContents"
+      
+    
+</div>
+
+
+
+<A NAME="EXTRA_BACKGROUND_IMAGE_URI"></A>
+
+<div class="api apilevel-22.1.0">
+    <h3 class="api-name">EXTRA_BACKGROUND_IMAGE_URI</h3>
+    <div class="api-level">
+      
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 22.1.0</a>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+String EXTRA_BACKGROUND_IMAGE_URI</pre>
+    
+    
+
+    
+  <p>Notification extras key: A
+ <code><a href="../../../content/ContentUris.html">content URI</a></code> pointing to an image that can be displayed
+ in the background when the notification is selected. The URI must point to an image stream
+ suitable for passing into
+ <code><a href="../../../graphics/BitmapFactory.html#decodeStream(java.io.InputStream)">BitmapFactory.decodeStream</a></code>; all other content types will be ignored. The content provider
+ URI used for this purpose must require no permissions to read the image data.
+</p></p>
+
+    
+      <p>Constant Value:
+      
+          "android.backgroundImageUri"
+      
+    
+</div>
+
+
+
+<A NAME="EXTRA_BIG_TEXT"></A>
+
+<div class="api apilevel-22.1.0">
+    <h3 class="api-name">EXTRA_BIG_TEXT</h3>
+    <div class="api-level">
+      
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 22.1.0</a>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+String EXTRA_BIG_TEXT</pre>
+    
+    
+
+    
+  <p>Notification extras key: this is the longer text shown in the big form of a
+ <code><a href="NotificationCompat.BigTextStyle.html">NotificationCompat.BigTextStyle</a></code> notification, as supplied to
+ <code><a href="NotificationCompat.BigTextStyle.html#bigText(java.lang.CharSequence)">bigText(CharSequence)</a></code>.
+</p></p>
+
+    
+      <p>Constant Value:
+      
+          "android.bigText"
+      
+    
+</div>
+
+
+
+<A NAME="EXTRA_COMPACT_ACTIONS"></A>
+
+<div class="api apilevel-22.1.0">
+    <h3 class="api-name">EXTRA_COMPACT_ACTIONS</h3>
+    <div class="api-level">
+      
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 22.1.0</a>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+String EXTRA_COMPACT_ACTIONS</pre>
+    
+    
+
+    
+  <p>Notification extras key: the indices of actions to be shown in the compact view,
+ as supplied to (e.g.) <code><a href="../../../app/Notification.MediaStyle.html#setShowActionsInCompactView(int...)">setShowActionsInCompactView(int)</a></code>.
+</p></p>
+
+    
+      <p>Constant Value:
+      
+          "android.compactActions"
+      
+    
+</div>
+
+
+
+<A NAME="EXTRA_CONVERSATION_TITLE"></A>
+
+<div class="api apilevel-24.1.0">
+    <h3 class="api-name">EXTRA_CONVERSATION_TITLE</h3>
+    <div class="api-level">
+      
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 24.1.0</a>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+String EXTRA_CONVERSATION_TITLE</pre>
+    
+    
+
+    
+  <p>Notification key: a <code><a href="../../../../java/lang/String.html">String</a></code> to be displayed as the title to a conversation
+ represented by a <code><a href="NotificationCompat.MessagingStyle.html">NotificationCompat.MessagingStyle</a></code>
+</p></p>
+
+    
+      <p>Constant Value:
+      
+          "android.conversationTitle"
+      
+    
+</div>
+
+
+
+<A NAME="EXTRA_INFO_TEXT"></A>
+
+<div class="api apilevel-22.1.0">
+    <h3 class="api-name">EXTRA_INFO_TEXT</h3>
+    <div class="api-level">
+      
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 22.1.0</a>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+String EXTRA_INFO_TEXT</pre>
+    
+    
+
+    
+  <p>Notification extras key: this is a small piece of additional text as supplied to
+ <code><a href="NotificationCompat.Builder.html#setContentInfo(java.lang.CharSequence)">setContentInfo(CharSequence)</a></code>.
+</p></p>
+
+    
+      <p>Constant Value:
+      
+          "android.infoText"
+      
+    
+</div>
+
+
+
+<A NAME="EXTRA_LARGE_ICON"></A>
+
+<div class="api apilevel-22.1.0">
+    <h3 class="api-name">EXTRA_LARGE_ICON</h3>
+    <div class="api-level">
+      
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 22.1.0</a>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+String EXTRA_LARGE_ICON</pre>
+    
+    
+
+    
+  <p>Notification extras key: this is a bitmap to be used instead of the small icon when showing the
+ notification payload, as
+ supplied to <code><a href="NotificationCompat.Builder.html#setLargeIcon(android.graphics.Bitmap)">setLargeIcon(android.graphics.Bitmap)</a></code>.
+</p></p>
+
+    
+      <p>Constant Value:
+      
+          "android.largeIcon"
+      
+    
+</div>
+
+
+
+<A NAME="EXTRA_LARGE_ICON_BIG"></A>
+
+<div class="api apilevel-22.1.0">
+    <h3 class="api-name">EXTRA_LARGE_ICON_BIG</h3>
+    <div class="api-level">
+      
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 22.1.0</a>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+String EXTRA_LARGE_ICON_BIG</pre>
+    
+    
+
+    
+  <p>Notification extras key: this is a bitmap to be used instead of the one from
+ <code><a href="NotificationCompat.Builder.html#setLargeIcon(android.graphics.Bitmap)">setLargeIcon(android.graphics.Bitmap)</a></code> when the notification is
+ shown in its expanded form, as supplied to
+ <code><a href="NotificationCompat.BigPictureStyle.html#bigLargeIcon(android.graphics.Bitmap)">bigLargeIcon(android.graphics.Bitmap)</a></code>.
+</p></p>
+
+    
+      <p>Constant Value:
+      
+          "android.largeIcon.big"
+      
+    
+</div>
+
+
+
+<A NAME="EXTRA_MEDIA_SESSION"></A>
+
+<div class="api apilevel-22.1.0">
+    <h3 class="api-name">EXTRA_MEDIA_SESSION</h3>
+    <div class="api-level">
+      
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 22.1.0</a>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+String EXTRA_MEDIA_SESSION</pre>
+    
+    
+
+    
+  <p>Notification key: A
+ <code><a href="../../../media/session/MediaSession.Token.html">MediaSession.Token</a></code> associated with a
+ <code><a href="../../../app/Notification.MediaStyle.html">Notification.MediaStyle</a></code> notification.
+</p></p>
+
+    
+      <p>Constant Value:
+      
+          "android.mediaSession"
+      
+    
+</div>
+
+
+
+<A NAME="EXTRA_MESSAGES"></A>
+
+<div class="api apilevel-24.1.0">
+    <h3 class="api-name">EXTRA_MESSAGES</h3>
+    <div class="api-level">
+      
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 24.1.0</a>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+String EXTRA_MESSAGES</pre>
+    
+    
+
+    
+  <p>Notification key: an array of <code><a href="../../../os/Bundle.html">Bundle</a></code> objects representing
+ <code><a href="NotificationCompat.MessagingStyle.Message.html">NotificationCompat.MessagingStyle.Message</a></code> objects for a <code><a href="NotificationCompat.MessagingStyle.html">NotificationCompat.MessagingStyle</a></code> notification.
+</p></p>
+
+    
+      <p>Constant Value:
+      
+          "android.messages"
+      
+    
+</div>
+
+
+
+<A NAME="EXTRA_PEOPLE"></A>
+
+<div class="api apilevel-22.1.0">
+    <h3 class="api-name">EXTRA_PEOPLE</h3>
+    <div class="api-level">
+      
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 22.1.0</a>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+String EXTRA_PEOPLE</pre>
+    
+    
+
+    
+  <p>Notification extras key: A String array containing the people that this
+ notification relates to, each of which was supplied to
+ <code><a href="NotificationCompat.Builder.html#addPerson(java.lang.String)">addPerson(String)</a></code>.
+</p></p>
+
+    
+      <p>Constant Value:
+      
+          "android.people"
+      
+    
+</div>
+
+
+
+<A NAME="EXTRA_PICTURE"></A>
+
+<div class="api apilevel-22.1.0">
+    <h3 class="api-name">EXTRA_PICTURE</h3>
+    <div class="api-level">
+      
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 22.1.0</a>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+String EXTRA_PICTURE</pre>
+    
+    
+
+    
+  <p>Notification extras key: this is a bitmap to be shown in <code><a href="NotificationCompat.BigPictureStyle.html">NotificationCompat.BigPictureStyle</a></code> expanded
+ notifications, supplied to <code><a href="NotificationCompat.BigPictureStyle.html#bigPicture(android.graphics.Bitmap)">bigPicture(android.graphics.Bitmap)</a></code>.
+</p></p>
+
+    
+      <p>Constant Value:
+      
+          "android.picture"
+      
+    
+</div>
+
+
+
+<A NAME="EXTRA_PROGRESS"></A>
+
+<div class="api apilevel-22.1.0">
+    <h3 class="api-name">EXTRA_PROGRESS</h3>
+    <div class="api-level">
+      
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 22.1.0</a>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+String EXTRA_PROGRESS</pre>
+    
+    
+
+    
+  <p>Notification extras key: this is the progress value supplied to
+ <code><a href="NotificationCompat.Builder.html#setProgress(int, int, boolean)">setProgress(int, int, boolean)</a></code>.
+</p></p>
+
+    
+      <p>Constant Value:
+      
+          "android.progress"
+      
+    
+</div>
+
+
+
+<A NAME="EXTRA_PROGRESS_INDETERMINATE"></A>
+
+<div class="api apilevel-22.1.0">
+    <h3 class="api-name">EXTRA_PROGRESS_INDETERMINATE</h3>
+    <div class="api-level">
+      
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 22.1.0</a>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+String EXTRA_PROGRESS_INDETERMINATE</pre>
+    
+    
+
+    
+  <p>Notification extras key: whether the progress bar is indeterminate, supplied to
+ <code><a href="NotificationCompat.Builder.html#setProgress(int, int, boolean)">setProgress(int, int, boolean)</a></code>.
+</p></p>
+
+    
+      <p>Constant Value:
+      
+          "android.progressIndeterminate"
+      
+    
+</div>
+
+
+
+<A NAME="EXTRA_PROGRESS_MAX"></A>
+
+<div class="api apilevel-22.1.0">
+    <h3 class="api-name">EXTRA_PROGRESS_MAX</h3>
+    <div class="api-level">
+      
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 22.1.0</a>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+String EXTRA_PROGRESS_MAX</pre>
+    
+    
+
+    
+  <p>Notification extras key: this is the maximum value supplied to
+ <code><a href="NotificationCompat.Builder.html#setProgress(int, int, boolean)">setProgress(int, int, boolean)</a></code>.
+</p></p>
+
+    
+      <p>Constant Value:
+      
+          "android.progressMax"
+      
+    
+</div>
+
+
+
+<A NAME="EXTRA_REMOTE_INPUT_HISTORY"></A>
+
+<div class="api apilevel-24.1.0">
+    <h3 class="api-name">EXTRA_REMOTE_INPUT_HISTORY</h3>
+    <div class="api-level">
+      
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 24.1.0</a>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+String EXTRA_REMOTE_INPUT_HISTORY</pre>
+    
+    
+
+    
+  <p>Notification extras key: this is the remote input history, as supplied to
+ <code><a href="NotificationCompat.Builder.html#setRemoteInputHistory(java.lang.CharSequence[])">setRemoteInputHistory(CharSequence[])</a></code>.
+
+ Apps can fill this through <code><a href="NotificationCompat.Builder.html#setRemoteInputHistory(java.lang.CharSequence[])">setRemoteInputHistory(CharSequence[])</a></code>
+ with the most recent inputs that have been sent through a <code><a href="RemoteInput.html">RemoteInput</a></code> of this
+ Notification and are expected to clear it once the it is no longer relevant (e.g. for chat
+ notifications once the other party has responded).
+
+ The extra with this key is of type CharSequence[] and contains the most recent entry at
+ the 0 index, the second most recent at the 1 index, etc.</p></p>
+  <div>
+      <p><b>See also:</b></p>
+      <ul class="nolist"><li><code><a href="NotificationCompat.Builder.html#setRemoteInputHistory(java.lang.CharSequence[])">setRemoteInputHistory(CharSequence[])</a></code></li>
+      </ul>
+  </div>
+
+    
+      <p>Constant Value:
+      
+          "android.remoteInputHistory"
+      
+    
+</div>
+
+
+
+<A NAME="EXTRA_SELF_DISPLAY_NAME"></A>
+
+<div class="api apilevel-24.1.0">
+    <h3 class="api-name">EXTRA_SELF_DISPLAY_NAME</h3>
+    <div class="api-level">
+      
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 24.1.0</a>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+String EXTRA_SELF_DISPLAY_NAME</pre>
+    
+    
+
+    
+  <p>Notification key: the username to be displayed for all messages sent by the user
+ including
+ direct replies
+ <code><a href="NotificationCompat.MessagingStyle.html">NotificationCompat.MessagingStyle</a></code> notification.
+</p></p>
+
+    
+      <p>Constant Value:
+      
+          "android.selfDisplayName"
+      
+    
+</div>
+
+
+
+<A NAME="EXTRA_SHOW_CHRONOMETER"></A>
+
+<div class="api apilevel-22.1.0">
+    <h3 class="api-name">EXTRA_SHOW_CHRONOMETER</h3>
+    <div class="api-level">
+      
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 22.1.0</a>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+String EXTRA_SHOW_CHRONOMETER</pre>
+    
+    
+
+    
+  <p>Notification extras key: whether the when field set using <code><a href="NotificationCompat.Builder.html#setWhen(long)">setWhen(long)</a></code> should
+ be shown as a count-up timer (specifically a <code><a href="../../../widget/Chronometer.html">Chronometer</a></code>) instead
+ of a timestamp, as supplied to <code><a href="NotificationCompat.Builder.html#setUsesChronometer(boolean)">setUsesChronometer(boolean)</a></code>.
+</p></p>
+
+    
+      <p>Constant Value:
+      
+          "android.showChronometer"
+      
+    
+</div>
+
+
+
+<A NAME="EXTRA_SHOW_WHEN"></A>
+
+<div class="api apilevel-22.1.0">
+    <h3 class="api-name">EXTRA_SHOW_WHEN</h3>
+    <div class="api-level">
+      
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 22.1.0</a>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+String EXTRA_SHOW_WHEN</pre>
+    
+    
+
+    
+  <p>Notification extras key: whether the when field set using <code><a href="NotificationCompat.Builder.html#setWhen(long)">setWhen(long)</a></code> should
+ be shown, as supplied to <code><a href="NotificationCompat.Builder.html#setShowWhen(boolean)">setShowWhen(boolean)</a></code>.
+</p></p>
+
+    
+      <p>Constant Value:
+      
+          "android.showWhen"
+      
+    
+</div>
+
+
+
+<A NAME="EXTRA_SMALL_ICON"></A>
+
+<div class="api apilevel-22.1.0">
+    <h3 class="api-name">EXTRA_SMALL_ICON</h3>
+    <div class="api-level">
+      
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 22.1.0</a>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+String EXTRA_SMALL_ICON</pre>
+    
+    
+
+    
+  <p>Notification extras key: this is the resource ID of the notification's main small icon, as
+ supplied to <code><a href="NotificationCompat.Builder.html#setSmallIcon(int)">setSmallIcon(int)</a></code>.
+</p></p>
+
+    
+      <p>Constant Value:
+      
+          "android.icon"
+      
+    
+</div>
+
+
+
+<A NAME="EXTRA_SUB_TEXT"></A>
+
+<div class="api apilevel-22.1.0">
+    <h3 class="api-name">EXTRA_SUB_TEXT</h3>
+    <div class="api-level">
+      
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 22.1.0</a>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+String EXTRA_SUB_TEXT</pre>
+    
+    
+
+    
+  <p>Notification extras key: this is a third line of text, as supplied to
+ <code><a href="NotificationCompat.Builder.html#setSubText(java.lang.CharSequence)">setSubText(CharSequence)</a></code>.
+</p></p>
+
+    
+      <p>Constant Value:
+      
+          "android.subText"
+      
+    
+</div>
+
+
+
+<A NAME="EXTRA_SUMMARY_TEXT"></A>
+
+<div class="api apilevel-22.1.0">
+    <h3 class="api-name">EXTRA_SUMMARY_TEXT</h3>
+    <div class="api-level">
+      
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 22.1.0</a>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+String EXTRA_SUMMARY_TEXT</pre>
+    
+    
+
+    
+  <p>Notification extras key: this is a line of summary information intended to be shown
+ alongside expanded notifications, as supplied to (e.g.)
+ <code><a href="NotificationCompat.BigTextStyle.html#setSummaryText(java.lang.CharSequence)">setSummaryText(CharSequence)</a></code>.
+</p></p>
+
+    
+      <p>Constant Value:
+      
+          "android.summaryText"
+      
+    
+</div>
+
+
+
+<A NAME="EXTRA_TEMPLATE"></A>
+
+<div class="api apilevel-22.1.0">
+    <h3 class="api-name">EXTRA_TEMPLATE</h3>
+    <div class="api-level">
+      
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 22.1.0</a>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+String EXTRA_TEMPLATE</pre>
+    
+    
+
+    
+  <p>Notification extras key: A string representing the name of the specific
+ <code><a href="../../../app/Notification.Style.html">Notification.Style</a></code> used to create this notification.
+</p></p>
+
+    
+      <p>Constant Value:
+      
+          "android.template"
+      
+    
+</div>
+
+
+
+<A NAME="EXTRA_TEXT"></A>
+
+<div class="api apilevel-22.1.0">
+    <h3 class="api-name">EXTRA_TEXT</h3>
+    <div class="api-level">
+      
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 22.1.0</a>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+String EXTRA_TEXT</pre>
+    
+    
+
+    
+  <p>Notification extras key: this is the main text payload, as supplied to
+ <code><a href="NotificationCompat.Builder.html#setContentText(java.lang.CharSequence)">setContentText(CharSequence)</a></code>.
+</p></p>
+
+    
+      <p>Constant Value:
+      
+          "android.text"
+      
+    
+</div>
+
+
+
+<A NAME="EXTRA_TEXT_LINES"></A>
+
+<div class="api apilevel-22.1.0">
+    <h3 class="api-name">EXTRA_TEXT_LINES</h3>
+    <div class="api-level">
+      
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 22.1.0</a>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+String EXTRA_TEXT_LINES</pre>
+    
+    
+
+    
+  <p>Notification extras key: An array of CharSequences to show in <code><a href="NotificationCompat.InboxStyle.html">NotificationCompat.InboxStyle</a></code> expanded
+ notifications, each of which was supplied to <code><a href="NotificationCompat.InboxStyle.html#addLine(java.lang.CharSequence)">addLine(CharSequence)</a></code>.
+</p></p>
+
+    
+      <p>Constant Value:
+      
+          "android.textLines"
+      
+    
+</div>
+
+
+
+<A NAME="EXTRA_TITLE"></A>
+
+<div class="api apilevel-22.1.0">
+    <h3 class="api-name">EXTRA_TITLE</h3>
+    <div class="api-level">
+      
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 22.1.0</a>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+String EXTRA_TITLE</pre>
+    
+    
+
+    
+  <p>Notification extras key: this is the title of the notification,
+ as supplied to <code><a href="NotificationCompat.Builder.html#setContentTitle(java.lang.CharSequence)">setContentTitle(CharSequence)</a></code>.
+</p></p>
+
+    
+      <p>Constant Value:
+      
+          "android.title"
+      
+    
+</div>
+
+
+
+<A NAME="EXTRA_TITLE_BIG"></A>
+
+<div class="api apilevel-22.1.0">
+    <h3 class="api-name">EXTRA_TITLE_BIG</h3>
+    <div class="api-level">
+      
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 22.1.0</a>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+String EXTRA_TITLE_BIG</pre>
+    
+    
+
+    
+  <p>Notification extras key: this is the title of the notification when shown in expanded form,
+ e.g. as supplied to <code><a href="NotificationCompat.BigTextStyle.html#setBigContentTitle(java.lang.CharSequence)">setBigContentTitle(CharSequence)</a></code>.
+</p></p>
+
+    
+      <p>Constant Value:
+      
+          "android.title.big"
+      
+    
+</div>
+
+
+
+<A NAME="FLAG_AUTO_CANCEL"></A>
+
+<div class="api apilevel-22.1.0">
+    <h3 class="api-name">FLAG_AUTO_CANCEL</h3>
+    <div class="api-level">
+      
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 22.1.0</a>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+int FLAG_AUTO_CANCEL</pre>
+    
+    
+
+    
+  <p>Bit set in the Notification flags field if the notification should be canceled when
+ it is clicked by the user.
+</p></p>
+
+    
+      <p>Constant Value:
+      
+          16
+          (0x00000010)
+      
+    
+</div>
+
+
+
+<A NAME="FLAG_FOREGROUND_SERVICE"></A>
+
+<div class="api apilevel-22.1.0">
+    <h3 class="api-name">FLAG_FOREGROUND_SERVICE</h3>
+    <div class="api-level">
+      
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 22.1.0</a>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+int FLAG_FOREGROUND_SERVICE</pre>
+    
+    
+
+    
+  <p>Bit set in the Notification flags field if this notification represents a currently
+ running service.  This will normally be set for you by
+ <code><a href="../../../app/Service.html#startForeground(int, android.app.Notification)">startForeground(int, Notification)</a></code>.
+</p></p>
+
+    
+      <p>Constant Value:
+      
+          64
+          (0x00000040)
+      
+    
+</div>
+
+
+
+<A NAME="FLAG_GROUP_SUMMARY"></A>
+
+<div class="api apilevel-22.1.0">
+    <h3 class="api-name">FLAG_GROUP_SUMMARY</h3>
+    <div class="api-level">
+      
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 22.1.0</a>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+int FLAG_GROUP_SUMMARY</pre>
+    
+    
+
+    
+  <p>Bit set in the Notification flags field if this notification is the group summary for a
+ group of notifications. Grouped notifications may display in a cluster or stack on devices
+ which support such rendering. Requires a group key also be set using
+ <code><a href="NotificationCompat.Builder.html#setGroup(java.lang.String)">setGroup(String)</a></code>.
+</p></p>
+
+    
+      <p>Constant Value:
+      
+          512
+          (0x00000200)
+      
+    
+</div>
+
+
+
+<A NAME="FLAG_HIGH_PRIORITY"></A>
+
+<div class="api apilevel-22.1.0">
+    <h3 class="api-name">FLAG_HIGH_PRIORITY</h3>
+    <div class="api-level">
+      
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 22.1.0</a>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+int FLAG_HIGH_PRIORITY</pre>
+    
+    
+
+    <p>
+  <p class="caution"><strong>
+      This constant was deprecated
+      in API level 22.1.0.</strong><br/>
+    Use <code><a href="NotificationCompat.Builder.html#setPriority(int)">setPriority(int)</a></code> with a positive value.
+
+  </p>
+  <p>Obsolete flag indicating high-priority notifications; use the priority field instead.</p></p>
+
+    
+      <p>Constant Value:
+      
+          128
+          (0x00000080)
+      
+    
+</div>
+
+
+
+<A NAME="FLAG_INSISTENT"></A>
+
+<div class="api apilevel-22.1.0">
+    <h3 class="api-name">FLAG_INSISTENT</h3>
+    <div class="api-level">
+      
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 22.1.0</a>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+int FLAG_INSISTENT</pre>
+    
+    
+
+    
+  <p>Bit set in the Notification flags field if
+ the audio will be repeated until the notification is
+ cancelled or the notification window is opened.
+</p></p>
+
+    
+      <p>Constant Value:
+      
+          4
+          (0x00000004)
+      
+    
+</div>
+
+
+
+<A NAME="FLAG_LOCAL_ONLY"></A>
+
+<div class="api apilevel-22.1.0">
+    <h3 class="api-name">FLAG_LOCAL_ONLY</h3>
+    <div class="api-level">
+      
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 22.1.0</a>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+int FLAG_LOCAL_ONLY</pre>
+    
+    
+
+    
+  <p>Bit set in the Notification flags field if this notification is relevant to the current
+ device only and it is not recommended that it bridge to other devices.
+</p></p>
+
+    
+      <p>Constant Value:
+      
+          256
+          (0x00000100)
+      
+    
+</div>
+
+
+
+<A NAME="FLAG_NO_CLEAR"></A>
+
+<div class="api apilevel-22.1.0">
+    <h3 class="api-name">FLAG_NO_CLEAR</h3>
+    <div class="api-level">
+      
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 22.1.0</a>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+int FLAG_NO_CLEAR</pre>
+    
+    
+
+    
+  <p>Bit set in the Notification flags field if the notification should not be canceled
+ when the user clicks the Clear all button.
+</p></p>
+
+    
+      <p>Constant Value:
+      
+          32
+          (0x00000020)
+      
+    
+</div>
+
+
+
+<A NAME="FLAG_ONGOING_EVENT"></A>
+
+<div class="api apilevel-22.1.0">
+    <h3 class="api-name">FLAG_ONGOING_EVENT</h3>
+    <div class="api-level">
+      
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 22.1.0</a>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+int FLAG_ONGOING_EVENT</pre>
+    
+    
+
+    
+  <p>Bit set in the Notification flags field if this notification is in
+ reference to something that is ongoing, like a phone call.  It should
+ not be set if this notification is in reference to something that
+ happened at a particular point in time, like a missed phone call.
+</p></p>
+
+    
+      <p>Constant Value:
+      
+          2
+          (0x00000002)
+      
+    
+</div>
+
+
+
+<A NAME="FLAG_ONLY_ALERT_ONCE"></A>
+
+<div class="api apilevel-22.1.0">
+    <h3 class="api-name">FLAG_ONLY_ALERT_ONCE</h3>
+    <div class="api-level">
+      
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 22.1.0</a>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+int FLAG_ONLY_ALERT_ONCE</pre>
+    
+    
+
+    
+  <p>Bit set in the Notification flags field if the notification's sound,
+ vibrate and ticker should only be played if the notification is not already showing.
+</p></p>
+
+    
+      <p>Constant Value:
+      
+          8
+          (0x00000008)
+      
+    
+</div>
+
+
+
+<A NAME="FLAG_SHOW_LIGHTS"></A>
+
+<div class="api apilevel-22.1.0">
+    <h3 class="api-name">FLAG_SHOW_LIGHTS</h3>
+    <div class="api-level">
+      
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 22.1.0</a>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+int FLAG_SHOW_LIGHTS</pre>
+    
+    
+
+    
+  <p>Bit set in the Notification flags field when LEDs should be turned on
+ for this notification.
+</p></p>
+
+    
+      <p>Constant Value:
+      
+          1
+          (0x00000001)
+      
+    
+</div>
+
+
+
+<A NAME="GROUP_ALERT_ALL"></A>
+
+<div class="api apilevel-26.1.0">
+    <h3 class="api-name">GROUP_ALERT_ALL</h3>
+    <div class="api-level">
+      
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 26.1.0</a>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+int GROUP_ALERT_ALL</pre>
+    
+    
+
+    
+  <p>Constant for <code><a href="NotificationCompat.Builder.html#setGroupAlertBehavior(int)">setGroupAlertBehavior(int)</a></code>, meaning that all notifications in a
+ group with sound or vibration ought to make sound or vibrate (respectively), so this
+ notification will not be muted when it is in a group.
+</p></p>
+
+    
+      <p>Constant Value:
+      
+          0
+          (0x00000000)
+      
+    
+</div>
+
+
+
+<A NAME="GROUP_ALERT_CHILDREN"></A>
+
+<div class="api apilevel-26.1.0">
+    <h3 class="api-name">GROUP_ALERT_CHILDREN</h3>
+    <div class="api-level">
+      
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 26.1.0</a>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+int GROUP_ALERT_CHILDREN</pre>
+    
+    
+
+    
+  <p>Constant for <code><a href="NotificationCompat.Builder.html#setGroupAlertBehavior(int)">setGroupAlertBehavior(int)</a></code>, meaning that the summary
+ notification in a group should be silenced (no sound or vibration) even if they would
+ otherwise make sound or vibrate. Use this constant
+ to mute this notification if this notification is a group summary.
+
+ <p>For example, you might want to use this constant if only the children notifications
+ in your group have content and the summary is only used to visually group notifications
+ rather than to alert the user that new information is available.
+</p></p>
+
+    
+      <p>Constant Value:
+      
+          2
+          (0x00000002)
+      
+    
+</div>
+
+
+
+<A NAME="GROUP_ALERT_SUMMARY"></A>
+
+<div class="api apilevel-26.1.0">
+    <h3 class="api-name">GROUP_ALERT_SUMMARY</h3>
+    <div class="api-level">
+      
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 26.1.0</a>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+int GROUP_ALERT_SUMMARY</pre>
+    
+    
+
+    
+  <p>Constant for <code><a href="NotificationCompat.Builder.html#setGroupAlertBehavior(int)">setGroupAlertBehavior(int)</a></code>, meaning that all children
+ notification in a group should be silenced (no sound or vibration) even if they would
+ otherwise make sound or vibrate. Use this constant to mute this notification if this
+ notification is a group child. This must be applied to all children notifications you want
+ to mute.
+
+ <p> For example, you might want to use this constant if you post a number of children
+ notifications at once (say, after a periodic sync), and only need to notify the user
+ audibly once.
+</p></p>
+
+    
+      <p>Constant Value:
+      
+          1
+          (0x00000001)
+      
+    
+</div>
+
+
+
+<A NAME="PRIORITY_DEFAULT"></A>
+
+<div class="api apilevel-22.1.0">
+    <h3 class="api-name">PRIORITY_DEFAULT</h3>
+    <div class="api-level">
+      
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 22.1.0</a>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+int PRIORITY_DEFAULT</pre>
+    
+    
+
+    
+  <p>Default notification priority for <code><a href="NotificationCompat.Builder.html#setPriority(int)">setPriority(int)</a></code>.
+ If your application does not prioritize its own notifications,
+ use this value for all notifications.
+</p></p>
+
+    
+      <p>Constant Value:
+      
+          0
+          (0x00000000)
+      
+    
+</div>
+
+
+
+<A NAME="PRIORITY_HIGH"></A>
+
+<div class="api apilevel-22.1.0">
+    <h3 class="api-name">PRIORITY_HIGH</h3>
+    <div class="api-level">
+      
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 22.1.0</a>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+int PRIORITY_HIGH</pre>
+    
+    
+
+    
+  <p>Higher notification priority for <code><a href="NotificationCompat.Builder.html#setPriority(int)">setPriority(int)</a></code>,
+ for more important notifications or alerts. The UI may choose
+ to show these items larger, or at a different position in
+ notification lists, compared with your app's <code><a href="NotificationCompat.html#PRIORITY_DEFAULT">PRIORITY_DEFAULT</a></code> items.
+</p></p>
+
+    
+      <p>Constant Value:
+      
+          1
+          (0x00000001)
+      
+    
+</div>
+
+
+
+<A NAME="PRIORITY_LOW"></A>
+
+<div class="api apilevel-22.1.0">
+    <h3 class="api-name">PRIORITY_LOW</h3>
+    <div class="api-level">
+      
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 22.1.0</a>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+int PRIORITY_LOW</pre>
+    
+    
+
+    
+  <p>Lower notification priority for <code><a href="NotificationCompat.Builder.html#setPriority(int)">setPriority(int)</a></code>,
+ for items that are less important. The UI may choose to show
+ these items smaller, or at a different position in the list,
+ compared with your app's <code><a href="NotificationCompat.html#PRIORITY_DEFAULT">PRIORITY_DEFAULT</a></code> items.
+</p></p>
+
+    
+      <p>Constant Value:
+      
+          -1
+          (0xffffffff)
+      
+    
+</div>
+
+
+
+<A NAME="PRIORITY_MAX"></A>
+
+<div class="api apilevel-22.1.0">
+    <h3 class="api-name">PRIORITY_MAX</h3>
+    <div class="api-level">
+      
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 22.1.0</a>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+int PRIORITY_MAX</pre>
+    
+    
+
+    
+  <p>Highest notification priority for <code><a href="NotificationCompat.Builder.html#setPriority(int)">setPriority(int)</a></code>,
+ for your application's most important items that require the user's
+ prompt attention or input.
+</p></p>
+
+    
+      <p>Constant Value:
+      
+          2
+          (0x00000002)
+      
+    
+</div>
+
+
+
+<A NAME="PRIORITY_MIN"></A>
+
+<div class="api apilevel-22.1.0">
+    <h3 class="api-name">PRIORITY_MIN</h3>
+    <div class="api-level">
+      
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 22.1.0</a>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+int PRIORITY_MIN</pre>
+    
+    
+
+    
+  <p>Lowest notification priority for <code><a href="NotificationCompat.Builder.html#setPriority(int)">setPriority(int)</a></code>;
+ these items might not be shown to the user except under
+ special circumstances, such as detailed notification logs.
+</p></p>
+
+    
+      <p>Constant Value:
+      
+          -2
+          (0xfffffffe)
+      
+    
+</div>
+
+
+
+<A NAME="STREAM_DEFAULT"></A>
+
+<div class="api apilevel-22.1.0">
+    <h3 class="api-name">STREAM_DEFAULT</h3>
+    <div class="api-level">
+      
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 22.1.0</a>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+int STREAM_DEFAULT</pre>
+    
+    
+
+    
+  <p>Use this constant as the value for audioStreamType to request that
+ the default stream type for notifications be used.  Currently the
+ default stream type is <code><a href="../../../media/AudioManager.html#STREAM_NOTIFICATION">STREAM_NOTIFICATION</a></code>.
+</p></p>
+
+    
+      <p>Constant Value:
+      
+          -1
+          (0xffffffff)
+      
+    
+</div>
+
+
+
+<A NAME="VISIBILITY_PRIVATE"></A>
+
+<div class="api apilevel-22.1.0">
+    <h3 class="api-name">VISIBILITY_PRIVATE</h3>
+    <div class="api-level">
+      
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 22.1.0</a>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+int VISIBILITY_PRIVATE</pre>
+    
+    
+
+    
+  <p>Notification visibility: Show this notification on all lockscreens, but conceal sensitive or
+ private information on secure lockscreens.
+
+ 
+</p></p>
+  <div>
+      <p><b>See also:</b></p>
+      <ul class="nolist"><li><code><a href="https://developer.android.com/https://developer.android.com/reference/android/app/Notification.html#visibility">visibility</a></code></li>
+      </ul>
+  </div>
+
+    
+      <p>Constant Value:
+      
+          0
+          (0x00000000)
+      
+    
+</div>
+
+
+
+<A NAME="VISIBILITY_PUBLIC"></A>
+
+<div class="api apilevel-22.1.0">
+    <h3 class="api-name">VISIBILITY_PUBLIC</h3>
+    <div class="api-level">
+      
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 22.1.0</a>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+int VISIBILITY_PUBLIC</pre>
+    
+    
+
+    
+  <p>Notification visibility: Show this notification in its entirety on all lockscreens.
+
+ 
+</p></p>
+  <div>
+      <p><b>See also:</b></p>
+      <ul class="nolist"><li><code><a href="https://developer.android.com/https://developer.android.com/reference/android/app/Notification.html#visibility">visibility</a></code></li>
+      </ul>
+  </div>
+
+    
+      <p>Constant Value:
+      
+          1
+          (0x00000001)
+      
+    
+</div>
+
+
+
+<A NAME="VISIBILITY_SECRET"></A>
+
+<div class="api apilevel-22.1.0">
+    <h3 class="api-name">VISIBILITY_SECRET</h3>
+    <div class="api-level">
+      
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 22.1.0</a>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+int VISIBILITY_SECRET</pre>
+    
+    
+
+    
+  <p>Notification visibility: Do not reveal any part of this notification on a secure lockscreen.
+
+ 
+</p></p>
+  <div>
+      <p><b>See also:</b></p>
+      <ul class="nolist"><li><code><a href="https://developer.android.com/https://developer.android.com/reference/android/app/Notification.html#visibility">visibility</a></code></li>
+      </ul>
+  </div>
+
+    
+      <p>Constant Value:
+      
+          -1
+          (0xffffffff)
+      
+    
+</div>
+
+
+
+
+<!-- Fields -->
+
+
+<!-- Public ctors -->
+
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<h2 class="api-section">Public constructors</h2>
+
+
+
+<A NAME="NotificationCompat()"></A>
+
+<div class="api apilevel-22.1.0">
+    <h3 class="api-name">NotificationCompat</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 22.1.0</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+NotificationCompat ()</pre>
+    
+    
+
+    
+  <p></p></p>
+
+</div>
+
+
+
+
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<!-- Protected ctors -->
+
+
+
+<!-- ========= METHOD DETAIL ======== -->
+<!-- Public methdos -->
+
+<h2 class="api-section">Public methods</h2>
+
+
+
+<A NAME="getAction(android.app.Notification, int)"></A>
+
+<div class="api apilevel-22.1.0">
+    <h3 class="api-name">getAction</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 22.1.0</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="NotificationCompat.Action.html">NotificationCompat.Action</a> getAction (<a href="../../../app/Notification.html">Notification</a> notification, 
+                int actionIndex)</pre>
+    
+    
+
+    
+  <p>Get an action on this notification in a backwards compatible
+ manner. Actions were supported from JellyBean (Api level 16) forwards.</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>notification</code></td>
+        <td width="100%">
+          <code>Notification</code>: The notification to inspect.</p></td>
+      </tr>
+      <tr>
+        <td><code>actionIndex</code></td>
+        <td width="100%">
+          <code>int</code>: The index of the action to retrieve.
+</p></td>
+      </tr>
+    </table>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="NotificationCompat.Action.html">NotificationCompat.Action</a></code></td>
+        <td width="100%"><!-- no returns description in source --></p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="getActionCount(android.app.Notification)"></A>
+
+<div class="api apilevel-22.1.0">
+    <h3 class="api-name">getActionCount</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 22.1.0</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+int getActionCount (<a href="../../../app/Notification.html">Notification</a> notification)</pre>
+    
+    
+
+    
+  <p>Get the number of actions in this notification in a backwards compatible
+ manner. Actions were supported from JellyBean (Api level 16) forwards.
+</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>notification</code></td>
+        <td width="100%">
+          <code>Notification</code> <!-- no parameter comment --></p></td>
+      </tr>
+    </table>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code>int</code></td>
+        <td width="100%"><!-- no returns description in source --></p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="getBadgeIconType(android.app.Notification)"></A>
+
+<div class="api apilevel-26.1.0">
+    <h3 class="api-name">getBadgeIconType</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 26.1.0</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+int getBadgeIconType (<a href="../../../app/Notification.html">Notification</a> notification)</pre>
+    
+    
+
+    
+  <p>Returns what icon should be shown for this notification if it is being displayed in a
+ Launcher that supports badging. Will be one of <code><a href="NotificationCompat.html#BADGE_ICON_NONE">BADGE_ICON_NONE</a></code>,
+ <code><a href="NotificationCompat.html#BADGE_ICON_SMALL">BADGE_ICON_SMALL</a></code>, or <code><a href="NotificationCompat.html#BADGE_ICON_LARGE">BADGE_ICON_LARGE</a></code>.
+</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>notification</code></td>
+        <td width="100%">
+          <code>Notification</code> <!-- no parameter comment --></p></td>
+      </tr>
+    </table>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code>int</code></td>
+        <td width="100%"><!-- no returns description in source --></p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="getCategory(android.app.Notification)"></A>
+
+<div class="api apilevel-22.1.0">
+    <h3 class="api-name">getCategory</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 22.1.0</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+String getCategory (<a href="../../../app/Notification.html">Notification</a> notification)</pre>
+    
+    
+
+    
+  <p>Get the category of this notification in a backwards compatible
+ manner.</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>notification</code></td>
+        <td width="100%">
+          <code>Notification</code>: The notification to inspect.
+</p></td>
+      </tr>
+    </table>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code>String</code></td>
+        <td width="100%"><!-- no returns description in source --></p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="getChannelId(android.app.Notification)"></A>
+
+<div class="api apilevel-26.1.0">
+    <h3 class="api-name">getChannelId</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 26.1.0</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+String getChannelId (<a href="../../../app/Notification.html">Notification</a> notification)</pre>
+    
+    
+
+    
+  <p></p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>notification</code></td>
+        <td width="100%">
+          <code>Notification</code> <!-- no parameter comment --></p></td>
+      </tr>
+    </table>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code>String</code></td>
+        <td width="100%">the ID of the channel this notification posts to.
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="getExtras(android.app.Notification)"></A>
+
+<div class="api apilevel-22.1.0">
+    <h3 class="api-name">getExtras</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 22.1.0</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="../../../os/Bundle.html">Bundle</a> getExtras (<a href="../../../app/Notification.html">Notification</a> notification)</pre>
+    
+    
+
+    
+  <p>Gets the <code><a href="../../../app/Notification.html#extras">extras</a></code> field from a notification in a backwards
+ compatible manner. Extras field was supported from JellyBean (Api level 16)
+ forwards. This function will return null on older api levels.
+</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>notification</code></td>
+        <td width="100%">
+          <code>Notification</code> <!-- no parameter comment --></p></td>
+      </tr>
+    </table>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="../../../os/Bundle.html">Bundle</a></code></td>
+        <td width="100%"><!-- no returns description in source --></p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="getGroup(android.app.Notification)"></A>
+
+<div class="api apilevel-22.1.0">
+    <h3 class="api-name">getGroup</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 22.1.0</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+String getGroup (<a href="../../../app/Notification.html">Notification</a> notification)</pre>
+    
+    
+
+    
+  <p>Get the key used to group this notification into a cluster or stack
+ with other notifications on devices which support such rendering.
+</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>notification</code></td>
+        <td width="100%">
+          <code>Notification</code> <!-- no parameter comment --></p></td>
+      </tr>
+    </table>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code>String</code></td>
+        <td width="100%"><!-- no returns description in source --></p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="getGroupAlertBehavior(android.app.Notification)"></A>
+
+<div class="api apilevel-26.1.0">
+    <h3 class="api-name">getGroupAlertBehavior</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 26.1.0</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+int getGroupAlertBehavior (<a href="../../../app/Notification.html">Notification</a> notification)</pre>
+    
+    
+
+    
+  <p>Returns which type of notifications in a group are responsible for audibly alerting the
+ user. See <code><a href="NotificationCompat.html#GROUP_ALERT_ALL">GROUP_ALERT_ALL</a></code>, <code><a href="NotificationCompat.html#GROUP_ALERT_CHILDREN">GROUP_ALERT_CHILDREN</a></code>,
+ <code><a href="NotificationCompat.html#GROUP_ALERT_SUMMARY">GROUP_ALERT_SUMMARY</a></code>.
+</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>notification</code></td>
+        <td width="100%">
+          <code>Notification</code> <!-- no parameter comment --></p></td>
+      </tr>
+    </table>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code>int</code></td>
+        <td width="100%"><!-- no returns description in source --></p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="getLocalOnly(android.app.Notification)"></A>
+
+<div class="api apilevel-22.1.0">
+    <h3 class="api-name">getLocalOnly</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 22.1.0</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+boolean getLocalOnly (<a href="../../../app/Notification.html">Notification</a> notification)</pre>
+    
+    
+
+    
+  <p>Get whether or not this notification is only relevant to the current device.
+
+ <p>Some notifications can be bridged to other devices for remote display.
+ If this hint is set, it is recommend that this notification not be bridged.
+</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>notification</code></td>
+        <td width="100%">
+          <code>Notification</code> <!-- no parameter comment --></p></td>
+      </tr>
+    </table>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code>boolean</code></td>
+        <td width="100%"><!-- no returns description in source --></p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="getShortcutId(android.app.Notification)"></A>
+
+<div class="api apilevel-26.1.0">
+    <h3 class="api-name">getShortcutId</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 26.1.0</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+String getShortcutId (<a href="../../../app/Notification.html">Notification</a> notification)</pre>
+    
+    
+
+    
+  <p>Returns the <code><a href="../content/pm/ShortcutInfoCompat.html#getId()">id</a></code> that this
+ notification supersedes, if any.
+</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>notification</code></td>
+        <td width="100%">
+          <code>Notification</code> <!-- no parameter comment --></p></td>
+      </tr>
+    </table>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code>String</code></td>
+        <td width="100%"><!-- no returns description in source --></p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="getSortKey(android.app.Notification)"></A>
+
+<div class="api apilevel-22.1.0">
+    <h3 class="api-name">getSortKey</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 22.1.0</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+String getSortKey (<a href="../../../app/Notification.html">Notification</a> notification)</pre>
+    
+    
+
+    
+  <p>Get a sort key that orders this notification among other notifications from the
+ same package. This can be useful if an external sort was already applied and an app
+ would like to preserve this. Notifications will be sorted lexicographically using this
+ value, although providing different priorities in addition to providing sort key may
+ cause this value to be ignored.
+
+ <p>This sort key can also be used to order members of a notification group. See
+ <code><a href="NotificationCompat.Builder.html#setGroup(java.lang.String)">setGroup(String)</a></code>.</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>notification</code></td>
+        <td width="100%">
+          <code>Notification</code> <!-- no parameter comment --></p></td>
+      </tr>
+    </table>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code>String</code></td>
+        <td width="100%"><!-- no returns description in source --></p></td>
+      </tr>
+    </table>
+  <div>
+      <p><b>See also:</b></p>
+      <ul class="nolist"><li><code><a href="../../../../java/lang/String.html#compareTo(java.lang.String)">compareTo(String)</a></code></li>
+      </ul>
+  </div>
+
+</div>
+
+
+<A NAME="getTimeoutAfter(android.app.Notification)"></A>
+
+<div class="api apilevel-26.1.0">
+    <h3 class="api-name">getTimeoutAfter</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 26.1.0</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+long getTimeoutAfter (<a href="../../../app/Notification.html">Notification</a> notification)</pre>
+    
+    
+
+    
+  <p>Returns the time at which this notification should be canceled by the system, if it's not
+ canceled already.
+</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>notification</code></td>
+        <td width="100%">
+          <code>Notification</code> <!-- no parameter comment --></p></td>
+      </tr>
+    </table>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code>long</code></td>
+        <td width="100%"><!-- no returns description in source --></p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="isGroupSummary(android.app.Notification)"></A>
+
+<div class="api apilevel-22.1.0">
+    <h3 class="api-name">isGroupSummary</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/topic/libraries/support-library/revisions.html">version 22.1.0</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+boolean isGroupSummary (<a href="../../../app/Notification.html">Notification</a> notification)</pre>
+    
+    
+
+    
+  <p>Get whether this notification to be the group summary for a group of notifications.
+ Grouped notifications may display in a cluster or stack on devices which
+ support such rendering. Requires a group key also be set using <code><a href="NotificationCompat.Builder.html#setGroup(java.lang.String)">setGroup(String)</a></code>.</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>notification</code></td>
+        <td width="100%">
+          <code>Notification</code> <!-- no parameter comment --></p></td>
+      </tr>
+    </table>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code>boolean</code></td>
+        <td width="100%">Whether this notification is a group summary.
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+
+
+
+<!-- ========= METHOD DETAIL ======== -->
+
+
+
+<!-- ========= END OF CLASS DATA ========= -->
+
+</div><!-- end jd-content -->
+
+
+
+<div class="data-reference-resources-wrapper">
+  
+  <ul data-reference-resources>
+    
+    
+    <li><h2>Interfaces</h2>
+      <ul>
+          <li class="api apilevel-22.1.0"><a href="ActionBarDrawerToggle.Delegate.html">ActionBarDrawerToggle.Delegate</a></li>
+          <li class="api apilevel-22.1.0"><a href="ActionBarDrawerToggle.DelegateProvider.html">ActionBarDrawerToggle.DelegateProvider</a></li>
+          <li class="api apilevel-24.1.0"><a href="ActivityCompat.OnRequestPermissionsResultCallback.html">ActivityCompat.OnRequestPermissionsResultCallback</a></li>
+          <li class="api apilevel-27.0.0"><a href="ActivityCompat.PermissionCompatDelegate.html">ActivityCompat.PermissionCompatDelegate</a></li>
+          <li class="api apilevel-22.1.0"><a href="FragmentManager.BackStackEntry.html">FragmentManager.BackStackEntry</a></li>
+          <li class="api apilevel-22.1.0"><a href="FragmentManager.OnBackStackChangedListener.html">FragmentManager.OnBackStackChangedListener</a></li>
+          <li class="api apilevel-22.1.0"><a href="LoaderManager.LoaderCallbacks.html">LoaderManager.LoaderCallbacks</a></li>
+          <li class="api apilevel-22.1.0"><a href="NotificationCompat.Action.Extender.html">NotificationCompat.Action.Extender</a></li>
+          <li class="api apilevel-22.1.0"><a href="NotificationCompat.Extender.html">NotificationCompat.Extender</a></li>
+          <li class="api apilevel-25.1.0"><a href="SharedElementCallback.OnSharedElementsReadyListener.html">SharedElementCallback.OnSharedElementsReadyListener</a></li>
+          <li class="api apilevel-22.1.0"><a href="TaskStackBuilder.SupportParentable.html">TaskStackBuilder.SupportParentable</a></li>
+      </ul>
+    </li>
+    
+    <li><h2>Classes</h2>
+      <ul>
+          <li class="api apilevel-22.1.0"><a href="ActionBarDrawerToggle.html">ActionBarDrawerToggle</a></li>
+          <li class="api apilevel-22.1.0"><a href="ActivityCompat.html">ActivityCompat</a></li>
+          <li class="api apilevel-22.1.0"><a href="ActivityManagerCompat.html">ActivityManagerCompat</a></li>
+          <li class="api apilevel-22.1.0"><a href="ActivityOptionsCompat.html">ActivityOptionsCompat</a></li>
+          <li class="api apilevel-26.1.0"><a href="AlarmManagerCompat.html">AlarmManagerCompat</a></li>
+          <li class="api apilevel-24.1.0"><a href="AppLaunchChecker.html">AppLaunchChecker</a></li>
+          <li class="api apilevel-24.1.0"><a href="AppOpsManagerCompat.html">AppOpsManagerCompat</a></li>
+          <li class="api apilevel-24.1.0"><a href="BundleCompat.html">BundleCompat</a></li>
+          <li class="api apilevel-22.1.0"><a href="DialogFragment.html">DialogFragment</a></li>
+          <li class="api apilevel-22.1.0"><a href="Fragment.html">Fragment</a></li>
+          <li class="api apilevel-22.1.0"><a href="Fragment.SavedState.html">Fragment.SavedState</a></li>
+          <li class="api apilevel-22.1.0"><a href="FragmentActivity.html">FragmentActivity</a></li>
+          <li class="api apilevel-24.1.0"><a href="FragmentContainer.html">FragmentContainer</a></li>
+          <li class="api apilevel-24.1.0"><a href="FragmentController.html">FragmentController</a></li>
+          <li class="api apilevel-24.1.0"><a href="FragmentHostCallback.html">FragmentHostCallback</a></li>
+          <li class="api apilevel-22.1.0"><a href="FragmentManager.html">FragmentManager</a></li>
+          <li class="api apilevel-25.1.0"><a href="FragmentManager.FragmentLifecycleCallbacks.html">FragmentManager.FragmentLifecycleCallbacks</a></li>
+          <li class="api apilevel-24.1.0"><a href="FragmentManagerNonConfig.html">FragmentManagerNonConfig</a></li>
+          <li class="api apilevel-22.1.0"><a href="FragmentPagerAdapter.html">FragmentPagerAdapter</a></li>
+          <li class="api apilevel-22.1.0"><a href="FragmentStatePagerAdapter.html">FragmentStatePagerAdapter</a></li>
+          <li class="api apilevel-22.1.0"><a href="FragmentTabHost.html">FragmentTabHost</a></li>
+          <li class="api apilevel-22.1.0"><a href="FragmentTransaction.html">FragmentTransaction</a></li>
+          <li class="api apilevel-26.1.0"><a href="FrameMetricsAggregator.html">FrameMetricsAggregator</a></li>
+          <li class="api apilevel-26.1.0"><a href="JobIntentService.html">JobIntentService</a></li>
+          <li class="api apilevel-22.1.0"><a href="ListFragment.html">ListFragment</a></li>
+          <li class="api apilevel-22.1.0"><a href="LoaderManager.html">LoaderManager</a></li>
+          <li class="api apilevel-22.1.0"><a href="NavUtils.html">NavUtils</a></li>
+          <li class="selected api apilevel-22.1.0"><a href="NotificationCompat.html">NotificationCompat</a></li>
+          <li class="api apilevel-22.1.0"><a href="NotificationCompat.Action.html">NotificationCompat.Action</a></li>
+          <li class="api apilevel-22.1.0"><a href="NotificationCompat.Action.Builder.html">NotificationCompat.Action.Builder</a></li>
+          <li class="api apilevel-22.1.0"><a href="NotificationCompat.Action.WearableExtender.html">NotificationCompat.Action.WearableExtender</a></li>
+          <li class="api apilevel-22.1.0"><a href="NotificationCompat.BigPictureStyle.html">NotificationCompat.BigPictureStyle</a></li>
+          <li class="api apilevel-22.1.0"><a href="NotificationCompat.BigTextStyle.html">NotificationCompat.BigTextStyle</a></li>
+          <li class="api apilevel-22.1.0"><a href="NotificationCompat.Builder.html">NotificationCompat.Builder</a></li>
+          <li class="api apilevel-22.1.0"><a href="NotificationCompat.CarExtender.html">NotificationCompat.CarExtender</a></li>
+          <li class="api apilevel-22.1.0"><a href="NotificationCompat.CarExtender.UnreadConversation.html">NotificationCompat.CarExtender.UnreadConversation</a></li>
+          <li class="api apilevel-22.1.0"><a href="NotificationCompat.CarExtender.UnreadConversation.Builder.html">NotificationCompat.CarExtender.UnreadConversation.Builder</a></li>
+          <li class="api apilevel-26.1.0"><a href="NotificationCompat.DecoratedCustomViewStyle.html">NotificationCompat.DecoratedCustomViewStyle</a></li>
+          <li class="api apilevel-22.1.0"><a href="NotificationCompat.InboxStyle.html">NotificationCompat.InboxStyle</a></li>
+          <li class="api apilevel-24.1.0"><a href="NotificationCompat.MessagingStyle.html">NotificationCompat.MessagingStyle</a></li>
+          <li class="api apilevel-24.1.0"><a href="NotificationCompat.MessagingStyle.Message.html">NotificationCompat.MessagingStyle.Message</a></li>
+          <li class="api apilevel-22.1.0"><a href="NotificationCompat.Style.html">NotificationCompat.Style</a></li>
+          <li class="api apilevel-22.1.0"><a href="NotificationCompat.WearableExtender.html">NotificationCompat.WearableExtender</a></li>
+          <li class="api apilevel-22.1.0"><a href="NotificationCompatExtras.html">NotificationCompatExtras</a></li>
+          <li class="api apilevel-22.1.0"><a href="NotificationCompatSideChannelService.html">NotificationCompatSideChannelService</a></li>
+          <li class="api apilevel-22.1.0"><a href="NotificationManagerCompat.html">NotificationManagerCompat</a></li>
+          <li class="api apilevel-22.1.0"><a href="RemoteInput.html">RemoteInput</a></li>
+          <li class="api apilevel-22.1.0"><a href="RemoteInput.Builder.html">RemoteInput.Builder</a></li>
+          <li class="api apilevel-22.1.0"><a href="ServiceCompat.html">ServiceCompat</a></li>
+          <li class="api apilevel-22.1.0"><a href="ShareCompat.html">ShareCompat</a></li>
+          <li class="api apilevel-22.1.0"><a href="ShareCompat.IntentBuilder.html">ShareCompat.IntentBuilder</a></li>
+          <li class="api apilevel-22.1.0"><a href="ShareCompat.IntentReader.html">ShareCompat.IntentReader</a></li>
+          <li class="api apilevel-22.1.0"><a href="SharedElementCallback.html">SharedElementCallback</a></li>
+          <li class="api apilevel-22.1.0"><a href="TaskStackBuilder.html">TaskStackBuilder</a></li>
+      </ul>
+    </li>
+    
+    
+    <li><h2>Exceptions</h2>
+      <ul>
+          <li class="api apilevel-22.1.0"><a href="Fragment.InstantiationException.html">Fragment.InstantiationException</a></li>
+      </ul>
+    </li>
+    
+  </ul>
+  
+</div>
+
+
+
+
+    </div>
+
+    
+
+  
+    
+  
+    
+
+
+
+
+  
+
+
+<footer class="devsite-footer-promos nocontent">
+  <nav class="devsite-full-site-width">
+    <ul class="devsite-footer-promos-list">
+      
+      <li class="devsite-footer-promo">
+        <a href="http://twitter.com/AndroidDev"
+           class="devsite-footer-promo-title gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Twitter Promo"
+           >
+          
+          
+          <img class="devsite-footer-promo-icon" src="https://developer.android.com/static/images/footer/logo-twitter.svg">
+          
+          
+            Twitter
+          
+        </a>
+        <div class="devsite-footer-promo-description">Follow @AndroidDev on Twitter</div>
+      </li>
+      
+      <li class="devsite-footer-promo">
+        <a href="http://plus.google.com/+AndroidDevelopers"
+           class="devsite-footer-promo-title gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Google+ Promo"
+           >
+          
+          
+          <img class="devsite-footer-promo-icon" src="../../../../../../www.gstatic.com/images/branding/product/2x/google_plus_48dp.png">
+          
+          
+            Google+
+          
+        </a>
+        <div class="devsite-footer-promo-description">Follow Android Developers on Google+</div>
+      </li>
+      
+      <li class="devsite-footer-promo">
+        <a href="http://www.youtube.com/user/androiddevelopers"
+           class="devsite-footer-promo-title gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer YouTube Promo"
+           >
+          
+          
+          <img class="devsite-footer-promo-icon" src="../../../../../../www.gstatic.com/images/icons/material/product/2x/youtube_48dp.png">
+          
+          
+            YouTube
+          
+        </a>
+        <div class="devsite-footer-promo-description">Check out Android Developers on YouTube</div>
+      </li>
+      
+    </ul>
+  </nav>
+</footer>
+
+
+
+<div class="wrap dac-footer-container">
+  <footer class="dac-footer ">
+    <div class="cols dac-footer-main">
+      <div class="col-1of1">
+        <div class="dac-footer-contact">
+          
+          <a class="dac-footer-contact-link" href="https://developer.android.com/newsletter/index.html" title="Newsletter">Newsletter</a>
+          
+          <a class="dac-footer-contact-link" href="https://android-developers.blogspot.com/" title="Blog" target="_blank">Blog</a>
+          
+          <a class="dac-footer-contact-link" href="https://developer.android.com/support.html" title="Support">Support</a>
+          
+          <a class="dac-footer-contact-link" href="https://docs.google.com/forms/d/e/1FAIpQLSf27XIxoFmNpTjTYdk-m1uKWGqEnd7_4C_E1AD5fdCfyTBWNA/viewform?usp=pp_url&amp;entry.1909689089&amp;entry.208743710&amp;entry.408796755&amp;entry.1341430893&amp;entry.594931249&amp;entry.1640656812&amp;entry.1759804042&amp;entry.1441312344=developer.android.com" title="Join user studies" target="_blank">Join user studies</a>
+        </div>
+      </div>
+    </div>
+
+    <hr class="dac-footer-separator"/>
+      
+      <p class="dac-footer-copyright">
+        
+        Except as noted, this content is licensed under <a href="http://creativecommons.org/licenses/by/2.5/" target="_blank">Creative Commons Attribution 2.5</a>. For details and restrictions, see the <a href="https://developer.android.com/license.html">Content License</a>.
+      </p>
+    
+
+    <p class="dac-footer-links">
+      
+      <a href="https://www.android.com/" title="Android.com" target="_blank">Android.com</a>
+      
+      <a href="https://developer.android.com/" title="Android Developers">Android Developers</a>
+      
+      <a href="https://developer.android.com/studio/index.html" title="Android Studio">Android Studio</a>
+      
+      <a href="https://developer.android.com/distribute/console/index.html" title="Google Play Console">Google Play Console</a>
+      
+      <a href="https://developer.android.com/legal.html" title="Legal Notice">Legal Notice</a>
+    </p>
+
+    
+    <form class="devsite-utility-footer-language" id="setlang" action="https://developer.android.com/i18n/setlang/" method="post">
+      <input type="hidden" name="xsrf_token" value="a93PppNj6rxQgfoyvmWSxpWweTVTB9r6f8cWdvIAS-Y6MTUxMTExMDE5NTkxMDMyMA" />
+      <input type="hidden" name="next" value="NotificationCompat.html">
+      <span id="language" class="locales">
+        <select class="devsite-utility-footer-language-select" name="language">
+          
+          <option value="id"
+            >
+            Bahasa Indonesia
+          </option>
+          
+          <option value="de"
+            >
+            Deutsch
+          </option>
+          
+          <option value="en"
+             selected="selected" >
+            English
+          </option>
+          
+          <option value="es"
+            >
+            español
+          </option>
+          
+          <option value="es-419"
+            >
+            Español (América Latina)
+          </option>
+          
+          <option value="fr"
+            >
+            français
+          </option>
+          
+          <option value="pt-br"
+            >
+            Português Brasileiro
+          </option>
+          
+          <option value="vi"
+            >
+            Tiếng Việt
+          </option>
+          
+          <option value="tr"
+            >
+            Türkçe
+          </option>
+          
+          <option value="ru"
+            >
+            Русский
+          </option>
+          
+          <option value="th"
+            >
+            ภาษาไทย
+          </option>
+          
+          <option value="ja"
+            >
+            日本語
+          </option>
+          
+          <option value="zh-cn"
+            >
+            简体中文
+          </option>
+          
+          <option value="zh-tw"
+            >
+            繁體中文
+          </option>
+          
+          <option value="ko"
+            >
+            한국어
+          </option>
+          
+        </select>
+      </span>
+    </form>
+  </footer>
+</div><!--/.wrap -->
+
+<div class="dac-toast-group">
+  <div class="dac-toast" data-toast>
+    <div class="dac-toast-wrap">
+      
+      This site uses cookies to store your preferences for site-specific language and display options.
+      <button class="dac-toast-close-btn">
+        
+        <span class="dac-button dac-raised dac-primary">OK</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<div data-modal="newsletter" data-newsletter-fb data-swap class="dac-modal newsletter">
+  <div class="dac-modal-container">
+    <div class="dac-modal-window">
+      <header class="dac-modal-header">
+        <div class="dac-modal-header-actions">
+          <button class="dac-modal-header-close" data-modal-toggle></button>
+        </div>
+        <div class="dac-swap" data-swap-container>
+          <section class="dac-swap-section dac-active dac-down">
+            
+            <h2 class="norule dac-modal-header-title" data-t="newsletter.title">Get the latest Android developer news and tips that will help you find success on Google Play.</h2>
+            
+            <p class="dac-modal-header-subtitle" data-t="newsletter.requiredHint">* Required Fields</p>
+          </section>
+          <section class="dac-swap-section dac-up">
+            
+            <h2 class="norule dac-modal-header-title" data-t="newsletter.successTitle">Hooray!</h2>
+          </section>
+        </div>
+      </header>
+      <div class="dac-swap" data-swap-container>
+        <section class="dac-swap-section dac-active dac-left">
+          <form action="https://services.google.com/fb/submissions/android-developer-mailing-list/" class="dac-form" method="post">
+            <section class="dac-modal-content">
+              <fieldset class="dac-form-fieldset">
+                <div class="cols">
+                  <div class="col-1of2 newsletter-leftCol">
+                    <div class="dac-form-input-group">
+                      
+                      <label for="newsletter-full-name" class="dac-form-floatlabel" data-t="newsletter.name">Full name</label>
+                      <input type="text" class="dac-form-input" name="fullname" id="newsletter-full-name" required>
+                      <span class="dac-form-required">*</span>
+                    </div>
+                    <div class="dac-form-input-group">
+                      
+                      <label for="newsletter-email" class="dac-form-floatlabel" data-t="newsletter.email">Email address</label>
+                      <input type="email" class="dac-form-input" name="emailaddress" id="newsletter-email" required>
+                      <span class="dac-form-required">*</span>
+                    </div>
+                  </div>
+                  <div class="col-1of2 newsletter-rightCol">
+                    <div class="dac-form-input-group">
+                      
+                      <label for="newsletter-company" class="dac-form-floatlabel" data-t="newsletter.company">Company / developer name</label>
+                      <input type="text" class="dac-form-input" name="companydevelopername" id="newsletter-company">
+                    </div>
+                    <div class="dac-form-input-group">
+                      
+                      <label for="newsletter-play-store" class="dac-form-floatlabel" data-t="newsletter.appUrl">One of your Play Store app URLs</label>
+                      <input type="url" class="dac-form-input" name="playstoreappurls" id="newsletter-play-store">
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+              <fieldset class="dac-form-fieldset">
+                <div class="cols">
+                  
+                  <div class="col-1of2 newsletter-leftCol newsletter-interested" data-validation-message="Please check at least one item.">
+                    
+                    <legend class="dac-form-legend">What are you interested in?<span class="dac-form-required">*</span></legend>
+                    <div class="dac-form-radio-group">
+                      <input type="checkbox" class="dac-form-checkbox" name="interested" id="interested-whats-new" value="whats-new">
+                      <label for="interested-whats-new" class="dac-form-checkbox-button"></label>
+                      
+                      <label for="interested-whats-new" class="dac-form-label">What's new</label>
+                    </div>
+                    <div class="dac-form-radio-group">
+                      <input type="checkbox" class="dac-form-checkbox" name="interested" id="interested-games-updates" value="games-updates">
+                      <label for="interested-games-updates" class="dac-form-checkbox-button"></label>
+                      
+                      <label for="interested-games-updates" class="dac-form-label">Games updates</label>
+                    </div>
+                    <div class="dac-form-radio-group">
+                      <input type="checkbox" class="dac-form-checkbox" name="interested" id="interested-android-development" value="android-development">
+                      <label for="interested-android-development" class="dac-form-checkbox-button"></label>
+                      
+                      <label for="interested-android-development" class="dac-form-label">Android development</label>
+                    </div>
+                  </div>
+                  <div class="col-1of2 newsletter-rightCol newsletter-checkboxes">
+                    <div class="dac-form-input-group">
+                      
+                      <label for="newsletter-receive-in">Receive newsletter in</label>
+                      <select name="language" class="dac-form-select" id="newsletter-receive-in">
+                        <option value="en-US" selected>English</option>
+                        <option value="ar">Arabic</option>
+                        <option value="zh">Chinese (Simplified)</option>
+                        <option value="zh-TW">Chinese (Traditional)</option>
+                        <option value="fr">French</option>
+                        <option value="de">German</option>
+                        <option value="id">Indonesian (Bahasa)</option>
+                        <option value="ja">Japanese</option>
+                        <option value="ko">Korean</option>
+                        <option value="pt-BR">Portuguese (Brazilian)</option>
+                        <option value="ru">Russian</option>
+                        <option value="es-419">Spanish (Latin American)</option>
+                        <option value="th">Thai</option>
+                        <option value="tr">Turkish</option>
+                        <option value="vi">Vietnamese</option>
+                      </select>
+                    </div>
+                    <div class="dac-form-radio-group">
+                      <div class="dac-media">
+                        <div class="dac-media-figure">
+                          <input type="checkbox" class="dac-form-checkbox" name="marketingoptin" id="newsletter-add" required value="Add me to the mailing list.">
+                          <label for="newsletter-add" class="dac-form-checkbox-button"></label>
+                        </div>
+                        <div class="dac-media-body">
+                          <label for="newsletter-add" class="dac-form-label dac-form-aside">
+                            
+                            Add me to the mailing list.
+                            <span class="dac-form-required">*</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="dac-form-radio-group">
+                      <div class="dac-media">
+                        <div class="dac-media-figure">
+                          <input type="checkbox" class="dac-form-checkbox" name="privacystatement" id="newsletter-terms" required value="I acknowledge that the information provided in this form will be subject to Google's privacy policy (https://www.google.com/policies/privacy/).">
+                          <label for="newsletter-terms" class="dac-form-checkbox-button"></label>
+                        </div>
+                        <div class="dac-media-body">
+                          <label for="newsletter-terms" class="dac-form-label dac-form-aside"><span data-t="newsletter.privacyPolicy" data-t-html>
+                            
+                            I acknowledge that the information provided in this form will be subject to <a href="https://www.google.com/policies/privacy/">Google's privacy policy</a>.
+                          </span>
+                          <span class="dac-form-required">*</span></label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+            </section>
+            <input type="hidden" name="referrer" value="dac">
+            <footer class="dac-modal-footer">
+              <div class="cols">
+                <div class="col-2of5">
+                </div>
+              </div>
+              <button type="submit" value="Submit" class="dac-fab dac-primary dac-large dac-modal-action"><i class="dac-sprite dac-arrow-right"></i></button>
+            </footer>
+          </form>
+        </section>
+        <section class="dac-swap-section dac-right">
+          <div class="dac-modal-content">
+            <p class="newsletter-success-message" data-t="newsletter.successDetails">
+              
+              You have successfully signed up for the latest Android developer news and tips.
+            </p>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</div><!--/.dac-modal.newsletter-->
+
+<div data-modal="wechat" class="dac-modal">
+  <div class="dac-modal-container">
+    <div class="dac-modal-window">
+      <header class="dac-modal-header">
+        <div class="dac-modal-header-actions">
+          <button class="dac-modal-header-close" data-modal-toggle></button>
+        </div>
+        <section>
+          
+          <h2 class="norule dac-modal-header-title">Follow Google Developers on WeChat</h2>
+        </section>
+      </header>
+      <section class="dac-modal-content figure-center center-img">
+        <img src="../../../../../static/images/qr-wechat.png">
+      </section>
+    </div>
+  </div>
+</div><!--/.dac-modal[dac-modal=wechat]-->
+
+
+<div data-modal="langform" class="dac-modal" id="langform">
+  <div class="dac-modal-container">
+    <div class="dac-modal-window">
+      <header class="dac-modal-header">
+        <div class="dac-modal-header-actions">
+          <button class="dac-modal-header-close" data-modal-toggle></button>
+        </div>
+        <section class="dac-swap-section dac-active dac-down">
+          <h2 class="norule dac-modal-header-title">
+            
+            Browse this site in <span class="span-target-lang"></span>?
+          </h2>
+        </section>
+      </header>
+      <section class="dac-swap-section dac-active dac-left">
+          <section class="dac-modal-content">
+            <fieldset class="dac-form-fieldset">
+              <div class="cols">
+                <div class="col-2of2 langform-leftCol">
+                  <p id="resetLangText">
+                    
+                    You requested a page in <span class="span-target-lang"></span>, but your language preference for this site is <span class="span-current-lang"></span>.
+                  </p>
+                  <p id="resetLangCta">
+                    
+                    Would you like to change your language preference and browse this site in <span class="span-target-lang"></span>? If you want to change your language preference later, use the language menu at the bottom of each page.
+                  </p>
+                </div>
+              </div>
+            </fieldset>
+          </section>
+          <footer class="dac-modal-footer" id="langfooter">
+            <div class="cols">
+              <div class="col-2of5">
+              </div>
+            </div>
+            <a href="#" class="yes" onclick="return false;">
+              <button class="button dac-primary dac-modal-action lang yes" data-t="newsletter.resetLangButtonYes" data-modal-toggle>
+                
+                Change Language
+              </button>
+            </a>
+            <a href="#" class="" onclick="return false;">
+              <button class="button dac-primary dac-modal-action lang no" data-t="newsletter.resetLangButtonNo" data-modal-toggle>
+                
+                Not Now
+              </button>
+            </a>
+          </footer>
+        </form>
+      </section>
+    </div>
+  </div>
+</div><!--/.dac-modal-->
+
+
+<div data-modal="api-unavailable" class="dac-modal" id="api-unavailable">
+  <div class="dac-modal-container">
+    <div class="dac-modal-window">
+      <header class="dac-modal-header">
+        <div class="dac-modal-header-actions">
+          <button class="dac-modal-header-close" data-modal-toggle></button>
+        </div>
+        <section class="dac-swap-section dac-active dac-down">
+          <h2 class="norule dac-modal-header-title">
+            
+            This class requires API level <span class="api-level"></span> or higher
+          </h2>
+        </section>
+      </header>
+      <section class="dac-swap-section dac-active dac-left">
+          <section class="dac-modal-content">
+            <p>
+              
+              This doc is hidden because your selected API level for the documentation is <span class="api-level"></span>. You can change the documentation API level with the selector above the left navigation.
+            </p>
+            
+            <p>For more information about specifying the API level your app requires, read <a href="https://developer.android.com/training/basics/supporting-devices/platforms.html">Supporting Different Platform Versions</a>.</p>
+          </section>
+          <footer class="dac-modal-footer" id="langfooter">
+            <div class="cols">
+              <div class="col-2of5">
+              </div>
+            </div>
+            <a href="#" class="ok" onclick="return false;">
+              <button class="button dac-primary dac-modal-action ok"
+              data-modal-toggle>
+                
+                OK, make this page visible
+              </button>
+            </a>
+          </footer>
+        </form>
+      </section>
+    </div>
+  </div>
+</div><!--/.dac-modal#api-unavailable-->
+
+    
+  </div><!--/#body-content-->
+
+  <!-- Nav Setup -->
+  <script>$('[data-dac-nav]').dacNav();</script>
+  <script type="text/javascript">
+    $('.slideshow-container').dacSlideshow({
+        btnPrev: '.slideshow-prev',
+        btnNext: '.slideshow-next',
+        btnPause: '#pauseButton'
+    });
+
+    $(".feed").dacTabbedList({
+      nav_id: '.feed-nav',
+      frame_id: '.feed-frame'
+    });
+  </script>
+  
+  <script src="../../../../../ytblogger_lists_unified9a55.js?v=2017111904" defer></script>
+  <script src="../../../../../android_metadata_en9a55.js?v=2017111904" defer></script>
+  
+  <script src="../../../../lists9a55.js?v=2017111904" defer></script>
+  <script src="../../../../gms_lists9a55.js?v=2017111904" defer></script>
+  <script src="../../wearable/lists9a55.js?v=2017111904" defer></script>
+  <script src="../../test/lists9a55.js?v=2017111904" defer></script>
+  <script src="../../constraint/lists9a55.js?v=2017111904" defer></script>
+  <script src="../../../arch/lists9a55.js?v=2017111904" defer></script>
+  <script src="https://developer.android.com/_static2/268f0926ba/jsi18n/"></script>
+  <script>
+    // Load localized metadata.
+    (function(lang) {
+      if (lang === 'en') { return; }
+      document.write('<script src="https://developer.android.com/android_metadata_en.js?v=2017111904" defer></' + 'script>');
+    })(getLangPref())
+
+    // Add skip to content for accessibility.
+    $('#skip-to-main').click(function() {
+      $('a[name=top]').focus();
+    });
+
+    $('.devsite-utility-footer-language-select').each(function() {
+      $(this).change(function() {
+        changeLangPref(this.value, true)
+        $('.devsite-utility-footer-language').submit();
+      });
+    });
+  </script>
+
+  <script>
+    (function($) {
+      devsite.analytics.InitAnalytics();
+      devsite.navigatingRadio.init();
+      devsite.kennedy.InitializeTabbars();
+      // overflowMenu must be initialized after tabbar.
+      devsite.overflowMenu.init();
+    })(jQuery);
+  </script>
+
+  
+
+
+<div id="survey-box-wrapper">
+  <div class="material-dialog" style="width:270px">
+    <div class="material-dialog-title">
+      Take a short survey?
+    </div>
+    <div class="material-dialog-description">
+      Help us improve the Android developer experience.
+      <br>(Sep 2017 survey)
+    </div>
+    <div class="material-button-bar">
+      <a class="dac-button dac-primary dac-raised" target="_blank"
+          href="https://goo.gl/dNPzCR">Okay</a>
+      <a class="dac-button" href="#">No thanks</a>
+    </div>
+  </div>
+</div>
+
+</body>
+
+<!-- Mirrored from developer.android.com/reference/android/support/v4/app/NotificationCompat.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 19 Nov 2017 17:17:17 GMT -->
+</html>

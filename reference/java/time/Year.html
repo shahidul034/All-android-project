@@ -1,0 +1,5544 @@
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/Article">
+
+<!-- Mirrored from developer.android.com/reference/java/time/Year.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 19 Nov 2017 16:49:08 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+
+  
+
+
+
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+
+
+
+
+
+<script>var a=window.devsite||{};window.devsite=a;a.readyCallbacks=[];window.devsite.readyCallbacks=a.readyCallbacks;a.ready=function(b){a.readyCallbacks.push(b)};window.devsite.ready=a.ready;
+</script>
+
+<meta charset="utf-8">
+
+
+
+<meta name="xsrf_token" content="PFuyobOGPc9tWYdCpCeH3YJV02IFuVavxrlWIaZhWis6MTUxMTEwODkzNDg3Nzg0MA" />
+
+  
+    <link rel="canonical" href="Year.html">
+  
+
+  
+    <link rel="alternate" href="Year.html" hreflang="en">
+  
+    <link rel="alternate" href="https://developer.android.google.cn/reference/java/time/Year.html" hreflang="en-cn">
+  
+
+  <link rel="alternate" href="Year.html" hreflang="x-default">
+
+
+
+
+<link rel="shortcut icon" href="../../../_static/268f0926ba/images/android/favicon.png">
+
+<link rel="apple-touch-icon" href="../../../_static/268f0926ba/images/android/touchicon-180.png">
+
+
+<title>
+
+  Year | Android Developers
+
+</title>
+
+
+
+  <meta itemprop="dateModified" content="2017-10-25T17:02:04.819470">
+
+
+<!-- STYLESHEETS -->
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto+Condensed">
+<link rel="stylesheet"
+    href="http://fonts.googleapis.com/css?family=Roboto:light,regular,medium,thin,italic,mediumitalic,bold"
+    title="roboto">
+<link rel="stylesheet" href="../../../_static/268f0926ba/css/dac-devsite.css">
+
+
+
+
+
+
+
+<link href="../../../static/css/default9a55.css?v=2017111904" rel="stylesheet" type="text/css">
+<!-- JAVASCRIPT -->
+<script src="../../../_static/268f0926ba/js/android_3p-bundle.js" type="text/javascript"></script>
+<script src="../../../_static/268f0926ba/js/script_foot_closure_android.js"></script>
+<script src="../../../_static/268f0926ba/js/script_foot_android.js"></script>
+
+<script type="text/javascript">
+  var toRoot = 'https://developer.android.com/';
+  devsite.permissions.init({"f62218c009ec029abef196bba5aa34cf": true, "098dafe57affddc137df300142652cfd": false, "8e03e230de0bd8a6fe173fdf172e8b3f": false, "cb025a64a50094835616312f4774a53d": true, "c95bf81627eb648c2345aec06a66200a": true, "51470233c56fc1fde50f00b73c52b216": false, "d169d485cf24243a263783dbe42029b1": true, "039e5d84b87fd75807ffb37b7f1bbf2c": true, "752953480de00a336d911a46966cc16d": false, "700def1a83e356c06c0925afb05de4b0": false, "6749dcb526ce9bde6993550c7d928d24": true});
+
+  var replaceBlog = false;
+  var replaceYouTube = false;
+  var siteDefaultLocale = 'en';
+
+  var ANDROID_LANGUAGES = [
+      'id','de','en','es','es-419','fr','pt-br','vi','tr','ru','th','ja','zh-cn','zh-tw','ko'
+  ];
+</script>
+<script src="../../../static/js/docs9a55.js?v=2017111904" type="text/javascript"></script>
+
+
+</head>
+
+<body class="gc-documentation
+            api apilevel-26
+            
+              develop
+              reference
+            
+            ">
+  
+
+
+  
+    <input class="google-analytics-id-json" type="hidden" value="{&quot;dimensions&quot;: {&quot;dimension6&quot;: &quot;en&quot;, &quot;dimension4&quot;: &quot;Reference&quot;, &quot;dimension5&quot;: &quot;en&quot;, &quot;dimension3&quot;: false, &quot;dimension1&quot;: &quot;Signed out&quot;, &quot;dimension8&quot;: null}, &quot;gaid&quot;: &quot;UA-49880327-2&quot;}">
+  
+    <input class="google-analytics-id-json" type="hidden" value="{&quot;dimensions&quot;: {&quot;dimension6&quot;: &quot;en&quot;, &quot;dimension4&quot;: &quot;Reference&quot;, &quot;dimension5&quot;: &quot;en&quot;, &quot;dimension3&quot;: false, &quot;dimension1&quot;: &quot;Signed out&quot;, &quot;dimension8&quot;: null}, &quot;gaid&quot;: &quot;UA-5831155-1&quot;}">
+  
+
+
+
+  
+  
+    <script>
+      var dataLayer = [{"freeTrialEligibleUser": "False", "userCountry": "BD", "language": {"requested": "en", "served": "en"}, "projectName": "Reference", "scriptsafe": null, "signedIn": "False", "internalUser": "False"}];
+    </script>
+  
+
+
+
+  
+  <a href="#top" id="skip-to-main">Skip to content</a>
+  <header id="header-wrapper">
+    <div class="dac-header" id="header">
+      <div class="dac-header-inner">
+        
+        <a class="dac-nav-toggle" data-dac-toggle-nav href="#" title="Open navigation">
+          <span class="dac-nav-hamburger">
+            <span class="dac-nav-hamburger-top"></span>
+            <span class="dac-nav-hamburger-mid"></span>
+            <span class="dac-nav-hamburger-bot"></span>
+          </span>
+        </a>
+        
+        <a class="dac-header-logo" href="https://developer.android.com/index.html">
+          <img class="dac-header-logo-image" src="../../../static/images/android_logo.png"
+              srcset="https://developer.android.com/static/images/android_logo_2x.png 2x"
+              width="32" height="36" alt="Android"> Developers</a>
+        <ul class="dac-header-tabs">
+          <li>
+            <a class="dac-header-tab" href="https://developer.android.com/design/index.html"
+               zh-tw-lang="設計"
+               zh-cn-lang="设计"
+               ru-lang="Проектирование"
+               ko-lang="디자인"
+               ja-lang="設計"
+               es-lang="Diseñar">
+              
+              Design</a>
+          </li>
+          <li>
+            <a class="dac-header-tab" href="https://developer.android.com/develop/index.html"
+               zh-tw-lang="開發"
+               zh-cn-lang="开发"
+               ru-lang="Разработка"
+               ko-lang="개발"
+               ja-lang="開発"
+               es-lang="Desarrollar">
+              
+              Develop</a>
+          </li>
+          <li>
+            <a class="dac-header-tab" href="https://developer.android.com/distribute/index.html"
+               zh-tw-lang="發佈"
+               zh-cn-lang="分发"
+               ru-lang="Распространение"
+               ko-lang="배포"
+               ja-lang="配布"
+               es-lang="Distribuir">
+              
+              Distribute</a>
+          </li>
+        </ul>
+
+
+        
+
+        <a class="dac-header-console-btn gc-analytics-event" href="https://play.google.com/apps/publish/"
+           data-category="User" data-action="Console" data-label="Clicked">
+          
+          <img src="https://developer.android.com/static/images/developer-console-icon.svg" width="18" height="19" alt="">Play Console</a>
+        
+
+<form data-search="" class="dac-header-search">
+  <button class="dac-header-search-close" data-search-close="">
+    <i class="dac-sprite dac-back-arrow"></i>
+  </button>
+
+  <div class="dac-header-search-inner">
+    <i class="dac-sprite dac-search-white dac-header-search-icon"></i>
+    
+    <input id="search_autocomplete" type="text" value="" autocomplete="off" name="q" class="dac-header-search-input" placeholder="Search">
+    <button class="dac-header-search-clear dac-hidden" data-search-clear="">
+      <i class="dac-sprite dac-close-black"></i>
+    </button>
+  </div>
+</form>
+
+        
+      </div><!--/.header-wrap.wrap-->
+    </div><!--/.header-->
+
+    
+
+<div id="search-results" class="dac-search-results">
+  <div id="dac-search-results-history" class="dac-search-results-history">
+    <div class="wrap dac-search-results-history-wrap">
+      <div class="cols">
+        <div class="col-1of2 col-tablet-1of2 col-mobile-1of1">
+          
+          <h2>Most visited</h2>
+          <div class="resource-flow-layout" data-history-query="history:most/visited" data-maxresults="3" data-cardsizes="18x2"></div>
+        </div>
+
+        <div class="col-1of2 col-tablet-1of2 col-mobile-1of1">
+          
+          <h2>Recently visited</h2>
+          <div class="resource-flow-layout cols" data-history-query="history:recent" data-allow-duplicates="true" data-maxresults="3" data-cardsizes="18x2"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="dac-search-results-content" class="dac-search-results-content">
+    <div class="dac-search-results-metadata wrap">
+      <div class="dac-search-results-for">
+          <h2>
+          
+          Results for <span id="search-results-for"></span>
+          </h2>
+      </div>
+
+      <div id="dac-search-results-hero"></div>
+
+      <div class="dac-search-results-hero cols">
+        <div id="dac-search-results-reference" class="col-6of6 col-tablet-2of2 col-mobile-1of1">
+          <div class="suggest-card reference no-display">
+            <ul class="dac-search-results-reference">
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="cols dac-search-results-cse">
+        <script src="../../../../cse.google.com/f4116.txt?cx=000521750095050289010:zpcpi1ea4s8" async></script>
+        <gcse:searchresults-only linkTarget="_self"></gcse:searchresults-only>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </header>
+
+  <a name="navigation" tabindex=0 class="nav-start-marker">navigation</a>
+  <nav class="dac-nav">
+    <div class="dac-nav-dimmer" data-dac-toggle-nav></div>
+    <div class="dac-nav-sidebar" data-swap data-dynamic="false" data-transition-speed="300" data-dac-nav>
+      <div data-swap-container>
+        
+        <a class="dac-nav-back-button dac-swap-section dac-up dac-no-anim" tabindex=0 data-swap-button>
+          
+          
+          <i class="dac-sprite dac-nav-back"></i> <span class="dac-nav-back-title">Back</span>
+        </a>
+
+        <div class="dac-nav-sub dac-swap-section dac-right dac-active" itemscope
+            itemtype="http://schema.org/SiteNavigationElement">
+          
+          
+            
+              
+              <button data-fullscreen="" class="dac-nav-fullscreen">
+                <i class="dac-sprite dac-fullscreen"></i>
+              </button>
+              <script>$('[data-fullscreen]').dacFullscreen();</script>
+              <div id="devdoc-nav">
+                <div id="api-nav-header">
+                  <div id="api-level-toggle">
+                    <label for="apiLevelCheckbox" class="disabled"
+                        
+                        title="Select your target API level to dim unavailable APIs">
+                        
+                        API:
+                    </label>
+                    <div class="select-wrapper">
+                      <select id="apiLevelSelector"></select>
+                    </div>
+                  </div><!-- end toggle -->
+                  <div id="api-nav-title">
+                    <select id="reference-selector">
+                      
+                      <option value="android">Android Platform</option>
+                      
+                      
+                      <option value="android/support">Android Support Library</option>
+                      
+                      
+                      <option value="android/arch">Architecture Components</option>
+                      
+                      <option value="android/support/constraint">Constraint Library</option>
+                      
+                      <option value="com/android/billingclient">Play Billing Library</option>
+                      
+                      <option value="android/support/test">Test Support Library</option>
+                      
+                      <option value="android/support/wearable">Wearable Library</option>
+                    </select>
+                  </div>
+                </div><!-- end nav header -->
+                <script>
+                  buildApiLevelSelector();
+                  initReferenceSelector();
+                </script>
+                <div class="dac-reference-nav" data-reference-tree="">
+                  <ul class="dac-reference-nav-list" data-reference-namespaces="">
+                    <li class="api no-toggle"><a href="../../classes.html" >Class Index</a></li><li class="api no-toggle"><a href="../../packages.html" >Package Index</a></li><li class="api apilevel-1"><a href="../../android/package-summary.html" >android</a></li><li class="api apilevel-4"><a href="../../android/accessibilityservice/package-summary.html" >android.accessibilityservice</a></li><li class="api apilevel-5"><a href="../../android/accounts/package-summary.html" >android.accounts</a></li><li class="api apilevel-11"><a href="../../android/animation/package-summary.html" >android.animation</a></li><li class="api apilevel-16"><a href="../../android/annotation/package-summary.html" >android.annotation</a></li><li class="api apilevel-1"><a href="../../android/app/package-summary.html" >android.app</a></li><li class="api apilevel-8"><a href="../../android/app/admin/package-summary.html" >android.app.admin</a></li><li class="api apilevel-23"><a href="../../android/app/assist/package-summary.html" >android.app.assist</a></li><li class="api apilevel-8"><a href="../../android/app/backup/package-summary.html" >android.app.backup</a></li><li class="api apilevel-21"><a href="../../android/app/job/package-summary.html" >android.app.job</a></li><li class="api apilevel-21"><a href="../../android/app/usage/package-summary.html" >android.app.usage</a></li><li class="api apilevel-3"><a href="../../android/appwidget/package-summary.html" >android.appwidget</a></li><li class="api apilevel-5"><a href="../../android/bluetooth/package-summary.html" >android.bluetooth</a></li><li class="api apilevel-21"><a href="../../android/bluetooth/le/package-summary.html" >android.bluetooth.le</a></li><li class="api apilevel-26"><a href="../../android/companion/package-summary.html" >android.companion</a></li><li class="api apilevel-1"><a href="../../android/content/package-summary.html" >android.content</a></li><li class="api apilevel-1"><a href="../../android/content/pm/package-summary.html" >android.content.pm</a></li><li class="api apilevel-1"><a href="../../android/content/res/package-summary.html" >android.content.res</a></li><li class="api apilevel-1"><a href="../../android/database/package-summary.html" >android.database</a></li><li class="api apilevel-1"><a href="../../android/database/sqlite/package-summary.html" >android.database.sqlite</a></li><li class="api apilevel-"><a href="../../android/databinding/package-summary.html" >android.databinding</a></li><li class="api apilevel-11"><a href="../../android/drm/package-summary.html" >android.drm</a></li><li class="api apilevel-4"><a href="../../android/gesture/package-summary.html" >android.gesture</a></li><li class="api apilevel-1"><a href="../../android/graphics/package-summary.html" >android.graphics</a></li><li class="api apilevel-1"><a href="../../android/graphics/drawable/package-summary.html" >android.graphics.drawable</a></li><li class="api apilevel-1"><a href="../../android/graphics/drawable/shapes/package-summary.html" >android.graphics.drawable.shapes</a></li><li class="api apilevel-26"><a href="../../android/graphics/fonts/package-summary.html" >android.graphics.fonts</a></li><li class="api apilevel-19"><a href="../../android/graphics/pdf/package-summary.html" >android.graphics.pdf</a></li><li class="api apilevel-1"><a href="../../android/hardware/package-summary.html" >android.hardware</a></li><li class="api apilevel-21"><a href="../../android/hardware/camera2/package-summary.html" >android.hardware.camera2</a></li><li class="api apilevel-21"><a href="../../android/hardware/camera2/params/package-summary.html" >android.hardware.camera2.params</a></li><li class="api apilevel-17"><a href="../../android/hardware/display/package-summary.html" >android.hardware.display</a></li><li class="api apilevel-23"><a href="../../android/hardware/fingerprint/package-summary.html" >android.hardware.fingerprint</a></li><li class="api apilevel-16"><a href="../../android/hardware/input/package-summary.html" >android.hardware.input</a></li><li class="api apilevel-12"><a href="../../android/hardware/usb/package-summary.html" >android.hardware.usb</a></li><li class="api apilevel-24"><a href="../../android/icu/lang/package-summary.html" >android.icu.lang</a></li><li class="api apilevel-24"><a href="../../android/icu/math/package-summary.html" >android.icu.math</a></li><li class="api apilevel-24"><a href="../../android/icu/text/package-summary.html" >android.icu.text</a></li><li class="api apilevel-24"><a href="../../android/icu/util/package-summary.html" >android.icu.util</a></li><li class="api apilevel-3"><a href="../../android/inputmethodservice/package-summary.html" >android.inputmethodservice</a></li><li class="api apilevel-1"><a href="../../android/location/package-summary.html" >android.location</a></li><li class="api apilevel-1"><a href="../../android/media/package-summary.html" >android.media</a></li><li class="api apilevel-9"><a href="../../android/media/audiofx/package-summary.html" >android.media.audiofx</a></li><li class="api apilevel-21"><a href="../../android/media/browse/package-summary.html" >android.media.browse</a></li><li class="api apilevel-14"><a href="../../android/media/effect/package-summary.html" >android.media.effect</a></li><li class="api apilevel-23"><a href="../../android/media/midi/package-summary.html" >android.media.midi</a></li><li class="api apilevel-21"><a href="../../android/media/projection/package-summary.html" >android.media.projection</a></li><li class="api apilevel-21"><a href="../../android/media/session/package-summary.html" >android.media.session</a></li><li class="api apilevel-21"><a href="../../android/media/tv/package-summary.html" >android.media.tv</a></li><li class="api apilevel-12"><a href="../../android/mtp/package-summary.html" >android.mtp</a></li><li class="api apilevel-1"><a href="../../android/net/package-summary.html" >android.net</a></li><li class="api apilevel-1"><a href="../../android/net/http/package-summary.html" >android.net.http</a></li><li class="api apilevel-16"><a href="../../android/net/nsd/package-summary.html" >android.net.nsd</a></li><li class="api apilevel-12"><a href="../../android/net/rtp/package-summary.html" >android.net.rtp</a></li><li class="api apilevel-9"><a href="../../android/net/sip/package-summary.html" >android.net.sip</a></li><li class="api apilevel-1"><a href="../../android/net/wifi/package-summary.html" >android.net.wifi</a></li><li class="api apilevel-26"><a href="../../android/net/wifi/aware/package-summary.html" >android.net.wifi.aware</a></li><li class="api apilevel-26"><a href="../../android/net/wifi/hotspot2/package-summary.html" >android.net.wifi.hotspot2</a></li><li class="api apilevel-26"><a href="../../android/net/wifi/hotspot2/omadm/package-summary.html" >android.net.wifi.hotspot2.omadm</a></li><li class="api apilevel-26"><a href="../../android/net/wifi/hotspot2/pps/package-summary.html" >android.net.wifi.hotspot2.pps</a></li><li class="api apilevel-14"><a href="../../android/net/wifi/p2p/package-summary.html" >android.net.wifi.p2p</a></li><li class="api apilevel-16"><a href="../../android/net/wifi/p2p/nsd/package-summary.html" >android.net.wifi.p2p.nsd</a></li><li class="api apilevel-9"><a href="../../android/nfc/package-summary.html" >android.nfc</a></li><li class="api apilevel-19"><a href="../../android/nfc/cardemulation/package-summary.html" >android.nfc.cardemulation</a></li><li class="api apilevel-10"><a href="../../android/nfc/tech/package-summary.html" >android.nfc.tech</a></li><li class="api apilevel-1"><a href="../../android/opengl/package-summary.html" >android.opengl</a></li><li class="api apilevel-1"><a href="../../android/os/package-summary.html" >android.os</a></li><li class="api apilevel-24"><a href="../../android/os/health/package-summary.html" >android.os.health</a></li><li class="api apilevel-9"><a href="../../android/os/storage/package-summary.html" >android.os.storage</a></li><li class="api apilevel-1"><a href="../../android/preference/package-summary.html" >android.preference</a></li><li class="api apilevel-19"><a href="../../android/print/package-summary.html" >android.print</a></li><li class="api apilevel-19"><a href="../../android/print/pdf/package-summary.html" >android.print.pdf</a></li><li class="api apilevel-19"><a href="../../android/printservice/package-summary.html" >android.printservice</a></li><li class="api apilevel-1"><a href="../../android/provider/package-summary.html" >android.provider</a></li><li class="api apilevel-11"><a href="../../android/renderscript/package-summary.html" >android.renderscript</a></li><li class="api apilevel-1"><a href="../../android/sax/package-summary.html" >android.sax</a></li><li class="api apilevel-14"><a href="../../android/security/package-summary.html" >android.security</a></li><li class="api apilevel-23"><a href="../../android/security/keystore/package-summary.html" >android.security.keystore</a></li><li class="api apilevel-26"><a href="../../android/service/autofill/package-summary.html" >android.service.autofill</a></li><li class="api apilevel-22"><a href="../../android/service/carrier/package-summary.html" >android.service.carrier</a></li><li class="api apilevel-23"><a href="../../android/service/chooser/package-summary.html" >android.service.chooser</a></li><li class="api apilevel-17"><a href="../../android/service/dreams/package-summary.html" >android.service.dreams</a></li><li class="api apilevel-21"><a href="../../android/service/media/package-summary.html" >android.service.media</a></li><li class="api apilevel-18"><a href="../../android/service/notification/package-summary.html" >android.service.notification</a></li><li class="api apilevel-24"><a href="../../android/service/quicksettings/package-summary.html" >android.service.quicksettings</a></li><li class="api apilevel-21"><a href="../../android/service/restrictions/package-summary.html" >android.service.restrictions</a></li><li class="api apilevel-14"><a href="../../android/service/textservice/package-summary.html" >android.service.textservice</a></li><li class="api apilevel-21"><a href="../../android/service/voice/package-summary.html" >android.service.voice</a></li><li class="api apilevel-24"><a href="../../android/service/vr/package-summary.html" >android.service.vr</a></li><li class="api apilevel-7"><a href="../../android/service/wallpaper/package-summary.html" >android.service.wallpaper</a></li><li class="api apilevel-3"><a href="../../android/speech/package-summary.html" >android.speech</a></li><li class="api apilevel-4"><a href="../../android/speech/tts/package-summary.html" >android.speech.tts</a></li><li class="api apilevel-21"><a href="../../android/system/package-summary.html" >android.system</a></li><li class="api apilevel-21"><a href="../../android/telecom/package-summary.html" >android.telecom</a></li><li class="api apilevel-1"><a href="../../android/telephony/package-summary.html" >android.telephony</a></li><li class="api apilevel-5"><a href="../../android/telephony/cdma/package-summary.html" >android.telephony.cdma</a></li><li class="api apilevel-1"><a href="../../android/telephony/gsm/package-summary.html" >android.telephony.gsm</a></li><li class="api apilevel-1"><a href="../../android/test/package-summary.html" >android.test</a></li><li class="api apilevel-1"><a href="../../android/test/mock/package-summary.html" >android.test.mock</a></li><li class="api apilevel-1"><a href="../../android/test/suitebuilder/package-summary.html" >android.test.suitebuilder</a></li><li class="api apilevel-1"><a href="../../android/test/suitebuilder/annotation/package-summary.html" >android.test.suitebuilder.annotation</a></li><li class="api apilevel-1"><a href="../../android/text/package-summary.html" >android.text</a></li><li class="api apilevel-3"><a href="../../android/text/format/package-summary.html" >android.text.format</a></li><li class="api apilevel-1"><a href="../../android/text/method/package-summary.html" >android.text.method</a></li><li class="api apilevel-1"><a href="../../android/text/style/package-summary.html" >android.text.style</a></li><li class="api apilevel-1"><a href="../../android/text/util/package-summary.html" >android.text.util</a></li><li class="api apilevel-19"><a href="../../android/transition/package-summary.html" >android.transition</a></li><li class="api apilevel-1"><a href="../../android/util/package-summary.html" >android.util</a></li><li class="api apilevel-1"><a href="../../android/view/package-summary.html" >android.view</a></li><li class="api apilevel-4"><a href="../../android/view/accessibility/package-summary.html" >android.view.accessibility</a></li><li class="api apilevel-1"><a href="../../android/view/animation/package-summary.html" >android.view.animation</a></li><li class="api apilevel-26"><a href="../../android/view/autofill/package-summary.html" >android.view.autofill</a></li><li class="api apilevel-3"><a href="../../android/view/inputmethod/package-summary.html" >android.view.inputmethod</a></li><li class="api apilevel-26"><a href="../../android/view/textclassifier/package-summary.html" >android.view.textclassifier</a></li><li class="api apilevel-14"><a href="../../android/view/textservice/package-summary.html" >android.view.textservice</a></li><li class="api apilevel-1"><a href="../../android/webkit/package-summary.html" >android.webkit</a></li><li class="api apilevel-1"><a href="../../android/widget/package-summary.html" >android.widget</a></li><li class="api apilevel-1"><a href="../../com/android/internal/util/package-summary.html" >com.android.internal.util</a></li><li class="api apilevel-1"><a href="../../dalvik/annotation/package-summary.html" >dalvik.annotation</a></li><li class="api apilevel-1"><a href="../../dalvik/bytecode/package-summary.html" >dalvik.bytecode</a></li><li class="api apilevel-1"><a href="../../dalvik/system/package-summary.html" >dalvik.system</a></li><li class="api apilevel-1"><a href="../awt/font/package-summary.html" >java.awt.font</a></li><li class="api apilevel-3"><a href="../beans/package-summary.html" >java.beans</a></li><li class="api apilevel-1"><a href="../io/package-summary.html" >java.io</a></li><li class="api apilevel-1"><a href="../lang/package-summary.html" >java.lang</a></li><li class="api apilevel-1"><a href="../lang/annotation/package-summary.html" >java.lang.annotation</a></li><li class="api apilevel-26"><a href="../lang/invoke/package-summary.html" >java.lang.invoke</a></li><li class="api apilevel-1"><a href="../lang/ref/package-summary.html" >java.lang.ref</a></li><li class="api apilevel-1"><a href="../lang/reflect/package-summary.html" >java.lang.reflect</a></li><li class="api apilevel-1"><a href="../math/package-summary.html" >java.math</a></li><li class="api apilevel-1"><a href="../net/package-summary.html" >java.net</a></li><li class="api apilevel-1"><a href="../nio/package-summary.html" >java.nio</a></li><li class="api apilevel-1"><a href="../nio/channels/package-summary.html" >java.nio.channels</a></li><li class="api apilevel-1"><a href="../nio/channels/spi/package-summary.html" >java.nio.channels.spi</a></li><li class="api apilevel-1"><a href="../nio/charset/package-summary.html" >java.nio.charset</a></li><li class="api apilevel-1"><a href="../nio/charset/spi/package-summary.html" >java.nio.charset.spi</a></li><li class="api apilevel-26"><a href="../nio/file/package-summary.html" >java.nio.file</a></li><li class="api apilevel-26"><a href="../nio/file/attribute/package-summary.html" >java.nio.file.attribute</a></li><li class="api apilevel-26"><a href="../nio/file/spi/package-summary.html" >java.nio.file.spi</a></li><li class="api apilevel-1"><a href="../security/package-summary.html" >java.security</a></li><li class="api apilevel-1"><a href="../security/acl/package-summary.html" >java.security.acl</a></li><li class="api apilevel-1"><a href="../security/cert/package-summary.html" >java.security.cert</a></li><li class="api apilevel-1"><a href="../security/interfaces/package-summary.html" >java.security.interfaces</a></li><li class="api apilevel-1"><a href="../security/spec/package-summary.html" >java.security.spec</a></li><li class="api apilevel-1"><a href="../sql/package-summary.html" >java.sql</a></li><li class="api apilevel-1"><a href="../text/package-summary.html" >java.text</a></li><li class="api apilevel-26"><a href="package-summary.html" >java.time</a></li><li class="api apilevel-26"><a href="chrono/package-summary.html" >java.time.chrono</a></li><li class="api apilevel-26"><a href="format/package-summary.html" >java.time.format</a></li><li class="api apilevel-26"><a href="temporal/package-summary.html" >java.time.temporal</a></li><li class="api apilevel-26"><a href="zone/package-summary.html" >java.time.zone</a></li><li class="api apilevel-1"><a href="../util/package-summary.html" >java.util</a></li><li class="api apilevel-1"><a href="../util/concurrent/package-summary.html" >java.util.concurrent</a></li><li class="api apilevel-1"><a href="../util/concurrent/atomic/package-summary.html" >java.util.concurrent.atomic</a></li><li class="api apilevel-1"><a href="../util/concurrent/locks/package-summary.html" >java.util.concurrent.locks</a></li><li class="api apilevel-24"><a href="../util/function/package-summary.html" >java.util.function</a></li><li class="api apilevel-1"><a href="../util/jar/package-summary.html" >java.util.jar</a></li><li class="api apilevel-1"><a href="../util/logging/package-summary.html" >java.util.logging</a></li><li class="api apilevel-1"><a href="../util/prefs/package-summary.html" >java.util.prefs</a></li><li class="api apilevel-1"><a href="../util/regex/package-summary.html" >java.util.regex</a></li><li class="api apilevel-24"><a href="../util/stream/package-summary.html" >java.util.stream</a></li><li class="api apilevel-1"><a href="../util/zip/package-summary.html" >java.util.zip</a></li><li class="api apilevel-1"><a href="../../javax/crypto/package-summary.html" >javax.crypto</a></li><li class="api apilevel-1"><a href="../../javax/crypto/interfaces/package-summary.html" >javax.crypto.interfaces</a></li><li class="api apilevel-1"><a href="../../javax/crypto/spec/package-summary.html" >javax.crypto.spec</a></li><li class="api apilevel-1"><a href="../../javax/microedition/khronos/egl/package-summary.html" >javax.microedition.khronos.egl</a></li><li class="api apilevel-1"><a href="../../javax/microedition/khronos/opengles/package-summary.html" >javax.microedition.khronos.opengles</a></li><li class="api apilevel-1"><a href="../../javax/net/package-summary.html" >javax.net</a></li><li class="api apilevel-1"><a href="../../javax/net/ssl/package-summary.html" >javax.net.ssl</a></li><li class="api apilevel-1"><a href="../../javax/security/auth/package-summary.html" >javax.security.auth</a></li><li class="api apilevel-1"><a href="../../javax/security/auth/callback/package-summary.html" >javax.security.auth.callback</a></li><li class="api apilevel-1"><a href="../../javax/security/auth/login/package-summary.html" >javax.security.auth.login</a></li><li class="api apilevel-1"><a href="../../javax/security/auth/x500/package-summary.html" >javax.security.auth.x500</a></li><li class="api apilevel-1"><a href="../../javax/security/cert/package-summary.html" >javax.security.cert</a></li><li class="api apilevel-1"><a href="../../javax/sql/package-summary.html" >javax.sql</a></li><li class="api apilevel-1"><a href="../../javax/xml/package-summary.html" >javax.xml</a></li><li class="api apilevel-8"><a href="../../javax/xml/datatype/package-summary.html" >javax.xml.datatype</a></li><li class="api apilevel-8"><a href="../../javax/xml/namespace/package-summary.html" >javax.xml.namespace</a></li><li class="api apilevel-1"><a href="../../javax/xml/parsers/package-summary.html" >javax.xml.parsers</a></li><li class="api apilevel-8"><a href="../../javax/xml/transform/package-summary.html" >javax.xml.transform</a></li><li class="api apilevel-8"><a href="../../javax/xml/transform/dom/package-summary.html" >javax.xml.transform.dom</a></li><li class="api apilevel-8"><a href="../../javax/xml/transform/sax/package-summary.html" >javax.xml.transform.sax</a></li><li class="api apilevel-8"><a href="../../javax/xml/transform/stream/package-summary.html" >javax.xml.transform.stream</a></li><li class="api apilevel-8"><a href="../../javax/xml/validation/package-summary.html" >javax.xml.validation</a></li><li class="api apilevel-8"><a href="../../javax/xml/xpath/package-summary.html" >javax.xml.xpath</a></li><li class="api apilevel-1"><a href="../../junit/framework/package-summary.html" >junit.framework</a></li><li class="api apilevel-1"><a href="../../junit/runner/package-summary.html" >junit.runner</a></li><li class="api apilevel-1"><a href="../../org/apache/http/conn/package-summary.html" >org.apache.http.conn</a></li><li class="api apilevel-1"><a href="../../org/apache/http/conn/scheme/package-summary.html" >org.apache.http.conn.scheme</a></li><li class="api apilevel-1"><a href="../../org/apache/http/conn/ssl/package-summary.html" >org.apache.http.conn.ssl</a></li><li class="api apilevel-1"><a href="../../org/apache/http/params/package-summary.html" >org.apache.http.params</a></li><li class="api apilevel-1"><a href="../../org/json/package-summary.html" >org.json</a></li><li class="api apilevel-1"><a href="../../org/w3c/dom/package-summary.html" >org.w3c.dom</a></li><li class="api apilevel-8"><a href="../../org/w3c/dom/ls/package-summary.html" >org.w3c.dom.ls</a></li><li class="api apilevel-1"><a href="../../org/xml/sax/package-summary.html" >org.xml.sax</a></li><li class="api apilevel-1"><a href="../../org/xml/sax/ext/package-summary.html" >org.xml.sax.ext</a></li><li class="api apilevel-1"><a href="../../org/xml/sax/helpers/package-summary.html" >org.xml.sax.helpers</a></li><li class="api apilevel-1"><a href="../../org/xmlpull/v1/package-summary.html" >org.xmlpull.v1</a></li><li class="api apilevel-1"><a href="../../org/xmlpull/v1/sax2/package-summary.html" >org.xmlpull.v1.sax2</a></li>
+                  </ul>
+                </div>
+              </div>
+            
+          
+        </div>
+        
+        
+          
+
+
+
+<ul id="dac-main-navigation" class="dac-nav-list dac-swap-section dac-left dac-no-anim" tabindex=0>
+  <li class="dac-nav-item home">
+    
+    <a class="dac-nav-link" href="https://developer.android.com/index.html">Home</a>
+    <i class="dac-sprite dac-expand-more-black dac-nav-sub-slider" tabindex=0></i>
+    <ul class="dac-nav-secondary about">
+      <li class="dac-nav-item versions">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/about/versions/o/index.html">Android</a>
+      </li>
+      <li class="dac-nav-item wear">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/wear/index.html">Wear</a>
+      </li>
+      <li class="dac-nav-item tv">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/tv/index.html">TV</a>
+      </li>
+      <li class="dac-nav-item auto">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/auto/index.html">Auto</a>
+      </li>
+      
+      <li class="dac-nav-item chrome-os">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/chrome-os/index.html">Chrome OS</a>
+      </li>
+      
+      <li class="dac-nav-item things">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/things/index.html">Things</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dac-nav-item design">
+    <a class="dac-nav-link" href="https://developer.android.com/design/index.html"
+       zh-tw-lang="設計"
+       zh-cn-lang="设计"
+       ru-lang="Проектирование"
+       ko-lang="디자인"
+       ja-lang="設計"
+       es-lang="Diseñar">
+      
+      Design</a>
+  </li>
+  <li class="dac-nav-item develop">
+    <a class="dac-nav-link" href="https://developer.android.com/develop/index.html"
+       zh-tw-lang="開發"
+       zh-cn-lang="开发"
+       ru-lang="Разработка"
+       ko-lang="개발"
+       ja-lang="開発"
+       es-lang="Desarrollar">
+      
+      Develop</a>
+    <i class="dac-sprite dac-expand-more-black dac-nav-sub-slider" tabindex=0></i>
+    <ul class="dac-nav-secondary develop">
+      <li class="dac-nav-item training">
+        <a class="dac-nav-link" href="https://developer.android.com/training/index.html"
+           zh-tw-lang="訓練課程"
+           zh-cn-lang="培训"
+           ru-lang="Курсы"
+           ko-lang="교육"
+           ja-lang="トレーニング"
+           es-lang="Capacitación">
+            
+            Training</a>
+      </li>
+      <li class="dac-nav-item guide">
+        <a class="dac-nav-link" href="https://developer.android.com/guide/index.html"
+           zh-tw-lang="API 指南"
+           zh-cn-lang="API 指南"
+           ru-lang="Руководства по API"
+           ko-lang="API 가이드"
+           ja-lang="API ガイド"
+           es-lang="Guías de la API">
+          
+          API Guides</a>
+      </li>
+      <li class="dac-nav-item reference">
+        <a class="dac-nav-link" href="../../packages.html"
+           zh-tw-lang="參考資源"
+           zh-cn-lang="参考"
+           ru-lang="Справочник"
+           ko-lang="참조문서"
+           ja-lang="リファレンス"
+           es-lang="Referencia">
+          
+          Reference</a>
+      </li>
+      <li class="dac-nav-item samples">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/samples/index.html">Samples</a>
+      </li>
+      <li class="dac-nav-item libraries">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/topic/libraries/index.html">Libraries</a></li>
+      <li class="dac-nav-item studio">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/studio/index.html">Android Studio</a></li>
+      <li class="dac-nav-item ndk">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/ndk/index.html">Android NDK</a></li>
+      <li class="dac-nav-item google">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/google/index.html">Google Services</a>
+      </li>
+      <li class="dac-nav-item quality-guidelines">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/develop/quality-guidelines/index.html">Quality Guidelines</a>
+      </li>
+      <li class="dac-nav-item kotlin">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/kotlin/index.html">Kotlin</a>
+       </li>
+    </ul>
+  </li>
+  <li class="dac-nav-item distribute">
+    <a class="dac-nav-link" href="https://developer.android.com/distribute/index.html"
+       zh-tw-lang="發佈"
+       zh-cn-lang="分发"
+       ru-lang="Распространение"
+       ko-lang="배포"
+       ja-lang="配布"
+       de-lang="Vertrieb"
+       es-lang="Distribuir"
+       es-419-lang="Distribuye"
+       fr-lang="Distribuer"
+       id-lang="Distribusikan"
+       pt-br-lang="Distribuição"
+       th-lang="จัดจำหน่าย"
+       tr-lang="Dağıtma"
+       vi-lang="Phân phối">
+      
+      Distribute</a>
+    <i class="dac-sprite dac-expand-more-black dac-nav-sub-slider" tabindex=0></i>
+    <ul class="dac-nav-secondary distribute">
+      <li class="dac-nav-item google-play">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/distribute/google-play/index.html">Google Play</a>
+      </li>
+      <li class="dac-nav-item console">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/distribute/console/index.html">Play Console</a>
+      </li>
+      <li class="dac-nav-item best-practices">
+        <a class="dac-nav-link" href="https://developer.android.com/distribute/best-practices/index.html"
+          es-419-lang="Recomendaciones"
+          fr-lang="Bonnes pratiques"
+          id-lang="Praktik terbaik"
+          ja-lang="おすすめの方法"
+          ko-lang="권장사항"
+          pt-br-lang="Práticas recomendadas"
+          ru-lang="Рекомендации"
+          th-lang="จัดจำหน่าย"
+          tr-lang="En iyi uygulamalar"
+          vi-lang="Các phương pháp hay nhất"
+          zh-cn-lang="最佳做法"
+          zh-tw-lang="最佳做法">
+          
+          Best practices</a>
+      </li>
+      <li class="dac-nav-item marketing-tools">
+        <a class="dac-nav-link" href="https://developer.android.com/distribute/marketing-tools/index.html"
+          de-lang="Marketing-Tools"
+          es-419-lang="Herramientas de marketing"
+          fr-lang="Outils marketing"
+          id-lang="Fitur pemasaran"
+          ja-lang="マーケティング ツール"
+          ko-lang="마케팅 도구"
+          pt-br-lang="Ferramentas de marketing"
+          ru-lang="Маркетинговые инструменты"
+          th-lang="เครื่องมือการตลาด"
+          tr-lang="Pazarlama araçları"
+          vi-lang="Công cụ tiếp thị"
+          zh-cn-lang="营销工具"
+          zh-tw-lang="行銷工具">
+          
+          Marketing tools</a>
+      </li>
+      <li class="dac-nav-item policy-center">
+        
+        <a class="dac-nav-link" href="https://play.google.com/about/developer-content-policy/" target="_blank">Policy center</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dac-nav-item stories">
+    
+    <a class="dac-nav-link" href="https://developer.android.com/stories/index.html">Stories</a>
+  </li>
+  
+  <li class="dac-nav-item preview">
+    
+    <a class="dac-nav-link" href="https://developer.android.com/preview/index.html">Preview</a>
+  </li>
+  
+</ul>
+
+        
+      </div>
+    </div>
+  </nav>
+
+  <a name="top" tabindex="0"></a>
+  
+  <div class="wrap clearfix" id="body-content">
+  
+    
+      
+    
+    <div class="jd-descr " itemprop="articleBody">
+      <div id="doc-api-level" class="26" style="display:none"></div>
+
+
+
+
+<div id="naMessage"></div>
+
+<div id="api-info-block">
+<div class="api-level">
+  
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 26</a>
+  
+  
+  
+  
+
+</div>
+
+
+
+  
+   
+  
+  
+  
+  
+
+  
+   
+  
+  
+  
+  
+
+  
+   
+  
+  
+  
+  
+
+  
+   
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+   
+  
+  
+  
+  
+
+
+<div class="sum-details-links">
+
+Summary:
+
+
+
+
+
+  <a href="#constants">Constants</a>
+  
+
+
+
+
+
+
+
+  &#124; <a href="#pubmethods">Methods</a>
+  
+
+
+
+  &#124; <a href="#inhmethods">Inherited Methods</a>
+
+&#124; <a href="#" onclick="return toggleAllClassInherited()" id="toggleAllClassInherited">[Expand All]</a>
+
+</div><!-- end sum-details-links -->
+</div><!-- end api-info-block -->
+
+<div class="api apilevel-26" id="jd-content">
+
+<!-- ======== START OF CLASS DATA ======== -->
+
+<h1 class="api-title">Year</h1>
+<p>
+<code class="api-signature">
+  public
+  
+  final
+  
+  class
+  Year
+</code>
+<br>
+
+
+<code class="api-signature">
+  
+    extends <a href="../lang/Object.html">Object</a>
+  
+  
+  
+</code>
+
+<code class="api-signature">
+  
+  
+      implements
+      
+        <a href="temporal/Temporal.html">Temporal</a>, 
+      
+        <a href="temporal/TemporalAdjuster.html">TemporalAdjuster</a>, 
+      
+        <a href="../lang/Comparable.html">Comparable</a>&lt;<a href="Year.html">Year</a>&gt;, 
+      
+        <a href="../io/Serializable.html">Serializable</a>
+      
+  
+  
+</code>
+
+</p><table class="jd-inheritance-table">
+
+
+  <tr>
+    
+    <td colspan="2" class="jd-inheritance-class-cell"><a href="../lang/Object.html">java.lang.Object</a>
+    </td>
+  </tr>
+  
+
+  <tr>
+    
+      <td class="jd-inheritance-space">&nbsp;&nbsp;&nbsp;&#x21b3;</td>
+    
+    <td colspan="1" class="jd-inheritance-class-cell">java.time.Year
+    </td>
+  </tr>
+  
+
+</table>
+  
+
+    
+
+<br><hr>
+
+
+  <p>A year in the ISO-8601 calendar system, such as <code>2007</code>.
+ <p>
+ <code>Year</code> is an immutable date-time object that represents a year.
+ Any field that can be derived from a year can be obtained.
+ <p>
+ <b>Note that years in the ISO chronology only align with years in the
+ Gregorian-Julian system for modern years. Parts of Russia did not switch to the
+ modern Gregorian/ISO rules until 1920.
+ As such, historical years must be treated with caution.</b>
+ <p>
+ This class does not store or represent a month, day, time or time-zone.
+ For example, the value "2007" can be stored in a <code>Year</code>.
+ <p>
+ Years represented by this class follow the ISO-8601 standard and use
+ the proleptic numbering system. Year 1 is preceded by year 0, then by year -1.
+ <p>
+ The ISO-8601 calendar system is the modern civil calendar system used today
+ in most of the world. It is equivalent to the proleptic Gregorian calendar
+ system, in which today's rules for leap years are applied for all time.
+ For most applications written today, the ISO-8601 rules are entirely suitable.
+ However, any application that makes use of historical dates, and requires them
+ to be accurate will find the ISO-8601 approach unsuitable.</p>
+
+
+
+
+
+
+
+
+
+<h2 class="api-section">Summary</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- =========== ENUM CONSTANT SUMMARY =========== -->
+<table id="constants" class="responsive constants">
+<tr><th colspan="2"><h3>Constants</h3></th></tr>
+
+
+    
+    <tr class="api apilevel-26" >
+        <td><code>int</code></td>
+        <td width="100%">
+          <code><a href="Year.html#MAX_VALUE">MAX_VALUE</a></code>
+          <p>The maximum supported year, '+999,999,999'.
+          
+    
+</p>
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-26" >
+        <td><code>int</code></td>
+        <td width="100%">
+          <code><a href="Year.html#MIN_VALUE">MIN_VALUE</a></code>
+          <p>The minimum supported year, '-999,999,999'.
+          
+    
+</p>
+        </td>
+    </tr>
+    
+    
+
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ========== METHOD SUMMARY =========== -->
+<table id="pubmethods" class="responsive methods">
+<tr><th colspan="2"><h3>Public methods</h3></th></tr>
+
+
+
+  
+  <tr class="api apilevel-26" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        <a href="temporal/Temporal.html">Temporal</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="Year.html#adjustInto(java.time.temporal.Temporal)">adjustInto</a>(<a href="temporal/Temporal.html">Temporal</a> temporal)
+      </code>
+      
+        <p>Adjusts the specified temporal object to have this year.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-26" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        <a href="LocalDate.html">LocalDate</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="Year.html#atDay(int)">atDay</a>(int dayOfYear)
+      </code>
+      
+        <p>Combines this year with a day-of-year to create a <code>LocalDate</code>.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-26" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        <a href="YearMonth.html">YearMonth</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="Year.html#atMonth(int)">atMonth</a>(int month)
+      </code>
+      
+        <p>Combines this year with a month to create a <code>YearMonth</code>.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-26" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        <a href="YearMonth.html">YearMonth</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="Year.html#atMonth(java.time.Month)">atMonth</a>(<a href="Month.html">Month</a> month)
+      </code>
+      
+        <p>Combines this year with a month to create a <code>YearMonth</code>.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-26" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        <a href="LocalDate.html">LocalDate</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="Year.html#atMonthDay(java.time.MonthDay)">atMonthDay</a>(<a href="MonthDay.html">MonthDay</a> monthDay)
+      </code>
+      
+        <p>Combines this year with a month-day to create a <code>LocalDate</code>.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-26" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        int</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="Year.html#compareTo(java.time.Year)">compareTo</a>(<a href="Year.html">Year</a> other)
+      </code>
+      
+        <p>Compares this year to another year.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-26" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        boolean</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="Year.html#equals(java.lang.Object)">equals</a>(<a href="../lang/Object.html">Object</a> obj)
+      </code>
+      
+        <p>Checks if this year is equal to another year.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-26" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        <a href="../lang/String.html">String</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="Year.html#format(java.time.format.DateTimeFormatter)">format</a>(<a href="format/DateTimeFormatter.html">DateTimeFormatter</a> formatter)
+      </code>
+      
+        <p>Formats this year using the specified formatter.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-26" >
+  
+  
+    <td><code>
+        
+        
+        static
+        
+        
+        <a href="Year.html">Year</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="Year.html#from(java.time.temporal.TemporalAccessor)">from</a>(<a href="temporal/TemporalAccessor.html">TemporalAccessor</a> temporal)
+      </code>
+      
+        <p>Obtains an instance of <code>Year</code> from a temporal object.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        int</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="Year.html#get(java.time.temporal.TemporalField)">get</a>(<a href="temporal/TemporalField.html">TemporalField</a> field)
+      </code>
+      
+        <p>Gets the value of the specified field from this year as an <code>int</code>.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-26" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        long</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="Year.html#getLong(java.time.temporal.TemporalField)">getLong</a>(<a href="temporal/TemporalField.html">TemporalField</a> field)
+      </code>
+      
+        <p>Gets the value of the specified field from this year as a <code>long</code>.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-26" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        int</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="Year.html#getValue()">getValue</a>()
+      </code>
+      
+        <p>Gets the year value.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-26" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        int</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="Year.html#hashCode()">hashCode</a>()
+      </code>
+      
+        <p>A hash code for this year.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-26" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        boolean</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="Year.html#isAfter(java.time.Year)">isAfter</a>(<a href="Year.html">Year</a> other)
+      </code>
+      
+        <p>Checks if this year is after the specified year.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-26" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        boolean</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="Year.html#isBefore(java.time.Year)">isBefore</a>(<a href="Year.html">Year</a> other)
+      </code>
+      
+        <p>Checks if this year is before the specified year.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-26" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        boolean</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="Year.html#isLeap()">isLeap</a>()
+      </code>
+      
+        <p>Checks if the year is a leap year, according to the ISO proleptic
+ calendar system rules.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-26" >
+  
+  
+    <td><code>
+        
+        
+        static
+        
+        
+        boolean</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="Year.html#isLeap(long)">isLeap</a>(long year)
+      </code>
+      
+        <p>Checks if the year is a leap year, according to the ISO proleptic
+ calendar system rules.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-26" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        boolean</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="Year.html#isSupported(java.time.temporal.TemporalUnit)">isSupported</a>(<a href="temporal/TemporalUnit.html">TemporalUnit</a> unit)
+      </code>
+      
+        <p>Checks if the specified unit is supported.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-26" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        boolean</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="Year.html#isSupported(java.time.temporal.TemporalField)">isSupported</a>(<a href="temporal/TemporalField.html">TemporalField</a> field)
+      </code>
+      
+        <p>Checks if the specified field is supported.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-26" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        boolean</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="Year.html#isValidMonthDay(java.time.MonthDay)">isValidMonthDay</a>(<a href="MonthDay.html">MonthDay</a> monthDay)
+      </code>
+      
+        <p>Checks if the month-day is valid for this year.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-26" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        int</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="Year.html#length()">length</a>()
+      </code>
+      
+        <p>Gets the length of this year in days.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-27" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        <a href="Year.html">Year</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="Year.html#minus(java.time.temporal.TemporalAmount)">minus</a>(<a href="temporal/TemporalAmount.html">TemporalAmount</a> amountToSubtract)
+      </code>
+      
+        <p>Returns a copy of this year with the specified amount subtracted.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-27" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        <a href="Year.html">Year</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="Year.html#minus(long, java.time.temporal.TemporalUnit)">minus</a>(long amountToSubtract, <a href="temporal/TemporalUnit.html">TemporalUnit</a> unit)
+      </code>
+      
+        <p>Returns a copy of this year with the specified amount subtracted.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-26" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        <a href="Year.html">Year</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="Year.html#minusYears(long)">minusYears</a>(long yearsToSubtract)
+      </code>
+      
+        <p>Returns a copy of this <code>Year</code> with the specified number of years subtracted.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-26" >
+  
+  
+    <td><code>
+        
+        
+        static
+        
+        
+        <a href="Year.html">Year</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="Year.html#now(java.time.ZoneId)">now</a>(<a href="ZoneId.html">ZoneId</a> zone)
+      </code>
+      
+        <p>Obtains the current year from the system clock in the specified time-zone.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-26" >
+  
+  
+    <td><code>
+        
+        
+        static
+        
+        
+        <a href="Year.html">Year</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="Year.html#now()">now</a>()
+      </code>
+      
+        <p>Obtains the current year from the system clock in the default time-zone.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-26" >
+  
+  
+    <td><code>
+        
+        
+        static
+        
+        
+        <a href="Year.html">Year</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="Year.html#now(java.time.Clock)">now</a>(<a href="Clock.html">Clock</a> clock)
+      </code>
+      
+        <p>Obtains the current year from the specified clock.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-26" >
+  
+  
+    <td><code>
+        
+        
+        static
+        
+        
+        <a href="Year.html">Year</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="Year.html#of(int)">of</a>(int isoYear)
+      </code>
+      
+        <p>Obtains an instance of <code>Year</code>.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-26" >
+  
+  
+    <td><code>
+        
+        
+        static
+        
+        
+        <a href="Year.html">Year</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="Year.html#parse(java.lang.CharSequence, java.time.format.DateTimeFormatter)">parse</a>(<a href="../lang/CharSequence.html">CharSequence</a> text, <a href="format/DateTimeFormatter.html">DateTimeFormatter</a> formatter)
+      </code>
+      
+        <p>Obtains an instance of <code>Year</code> from a text string using a specific formatter.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-26" >
+  
+  
+    <td><code>
+        
+        
+        static
+        
+        
+        <a href="Year.html">Year</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="Year.html#parse(java.lang.CharSequence)">parse</a>(<a href="../lang/CharSequence.html">CharSequence</a> text)
+      </code>
+      
+        <p>Obtains an instance of <code>Year</code> from a text string such as <code>2007</code>.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-27" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        <a href="Year.html">Year</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="Year.html#plus(java.time.temporal.TemporalAmount)">plus</a>(<a href="temporal/TemporalAmount.html">TemporalAmount</a> amountToAdd)
+      </code>
+      
+        <p>Returns a copy of this year with the specified amount added.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-26" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        <a href="Year.html">Year</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="Year.html#plus(long, java.time.temporal.TemporalUnit)">plus</a>(long amountToAdd, <a href="temporal/TemporalUnit.html">TemporalUnit</a> unit)
+      </code>
+      
+        <p>Returns a copy of this year with the specified amount added.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-26" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        <a href="Year.html">Year</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="Year.html#plusYears(long)">plusYears</a>(long yearsToAdd)
+      </code>
+      
+        <p>Returns a copy of this <code>Year</code> with the specified number of years added.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        &lt;R&gt;
+        R</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="Year.html#query(java.time.temporal.TemporalQuery<R>)">query</a>(<a href="temporal/TemporalQuery.html">TemporalQuery</a>&lt;R&gt; query)
+      </code>
+      
+        <p>Queries this year using the specified query.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        <a href="temporal/ValueRange.html">ValueRange</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="Year.html#range(java.time.temporal.TemporalField)">range</a>(<a href="temporal/TemporalField.html">TemporalField</a> field)
+      </code>
+      
+        <p>Gets the range of valid values for the specified field.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-26" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        <a href="../lang/String.html">String</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="Year.html#toString()">toString</a>()
+      </code>
+      
+        <p>Outputs this year as a <code>String</code>.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-26" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        long</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="Year.html#until(java.time.temporal.Temporal, java.time.temporal.TemporalUnit)">until</a>(<a href="temporal/Temporal.html">Temporal</a> endExclusive, <a href="temporal/TemporalUnit.html">TemporalUnit</a> unit)
+      </code>
+      
+        <p>Calculates the amount of time until another year in terms of the specified unit.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-26" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        <a href="Year.html">Year</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="Year.html#with(java.time.temporal.TemporalField, long)">with</a>(<a href="temporal/TemporalField.html">TemporalField</a> field, long newValue)
+      </code>
+      
+        <p>Returns a copy of this year with the specified field set to a new value.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-27" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        <a href="Year.html">Year</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="Year.html#with(java.time.temporal.TemporalAdjuster)">with</a>(<a href="temporal/TemporalAdjuster.html">TemporalAdjuster</a> adjuster)
+      </code>
+      
+        <p>Returns an adjusted copy of this year.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+
+</table>
+
+
+
+
+
+
+
+<!-- ========== METHOD SUMMARY =========== -->
+<table id="inhmethods" class="methods inhtable">
+<tr><th><h3>Inherited methods</h3></th></tr>
+
+
+<tr class="api apilevel-" >
+<td colspan="2">
+  <a href="#" id="inherited-methods-java.lang.Object" class="jd-expando-trigger closed"
+     onclick="return toggleInherited(this, null)" >
+    <img id="inherited-methods-java.lang.Object-trigger" class="jd-expando-trigger-img"
+         height="34"
+         src="../../../assets/images/styles/disclosure_down.png" />
+  </a>From
+class
+<code>
+  
+    <a href="../lang/Object.html">java.lang.Object</a>
+  
+</code>
+<div id="inherited-methods-java.lang.Object">
+  <div id="inherited-methods-java.lang.Object-list"
+        class="jd-inheritedlinks">
+  </div>
+  <div id="inherited-methods-java.lang.Object-summary" style="display: none;">
+    <table class="jd-sumtable-expando responsive">
+      
+
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        <a href="../lang/Object.html">Object</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../lang/Object.html#clone()">clone</a>()
+      </code>
+      
+        <p>Creates and returns a copy of this object.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        boolean</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../lang/Object.html#equals(java.lang.Object)">equals</a>(<a href="../lang/Object.html">Object</a> obj)
+      </code>
+      
+        <p>Indicates whether some other object is "equal to" this one.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../lang/Object.html#finalize()">finalize</a>()
+      </code>
+      
+        <p>Called by the garbage collector on an object when garbage collection
+ determines that there are no more references to the object.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        final
+        
+        <a href="../lang/Class.html">Class</a>&lt;?&gt;</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../lang/Object.html#getClass()">getClass</a>()
+      </code>
+      
+        <p>Returns the runtime class of this <code>Object</code>.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        int</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../lang/Object.html#hashCode()">hashCode</a>()
+      </code>
+      
+        <p>Returns a hash code value for the object.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        final
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../lang/Object.html#notify()">notify</a>()
+      </code>
+      
+        <p>Wakes up a single thread that is waiting on this object's
+ monitor.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        final
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../lang/Object.html#notifyAll()">notifyAll</a>()
+      </code>
+      
+        <p>Wakes up all threads that are waiting on this object's monitor.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        <a href="../lang/String.html">String</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../lang/Object.html#toString()">toString</a>()
+      </code>
+      
+        <p>Returns a string representation of the object.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        final
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../lang/Object.html#wait(long, int)">wait</a>(long millis, int nanos)
+      </code>
+      
+        <p>Causes the current thread to wait until another thread invokes the
+ <code><a href="../lang/Object.html#notify()">notify()</a></code> method or the
+ <code><a href="../lang/Object.html#notifyAll()">notifyAll()</a></code> method for this object, or
+ some other thread interrupts the current thread, or a certain
+ amount of real time has elapsed.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        final
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../lang/Object.html#wait(long)">wait</a>(long millis)
+      </code>
+      
+        <p>Causes the current thread to wait until either another thread invokes the
+ <code><a href="../lang/Object.html#notify()">notify()</a></code> method or the
+ <code><a href="../lang/Object.html#notifyAll()">notifyAll()</a></code> method for this object, or a
+ specified amount of time has elapsed.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        final
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../lang/Object.html#wait()">wait</a>()
+      </code>
+      
+        <p>Causes the current thread to wait until another thread invokes the
+ <code><a href="../lang/Object.html#notify()">notify()</a></code> method or the
+ <code><a href="../lang/Object.html#notifyAll()">notifyAll()</a></code> method for this object.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+
+    </table>
+  </div>
+</div>
+</td></tr>
+
+
+
+<tr class="api apilevel-" >
+<td colspan="2">
+  <a href="#" id="inherited-methods-java.time.temporal.Temporal" class="jd-expando-trigger closed"
+     onclick="return toggleInherited(this, null)" >
+    <img id="inherited-methods-java.time.temporal.Temporal-trigger" class="jd-expando-trigger-img"
+         height="34"
+         src="../../../assets/images/styles/disclosure_down.png" />
+  </a>From
+interface
+<code>
+  
+    <a href="temporal/Temporal.html">java.time.temporal.Temporal</a>
+  
+</code>
+<div id="inherited-methods-java.time.temporal.Temporal">
+  <div id="inherited-methods-java.time.temporal.Temporal-list"
+        class="jd-inheritedlinks">
+  </div>
+  <div id="inherited-methods-java.time.temporal.Temporal-summary" style="display: none;">
+    <table class="jd-sumtable-expando responsive">
+      
+
+
+  
+  <tr class="api apilevel-26" >
+  
+  
+    <td><code>
+        abstract
+        
+        
+        
+        
+        boolean</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="temporal/Temporal.html#isSupported(java.time.temporal.TemporalUnit)">isSupported</a>(<a href="temporal/TemporalUnit.html">TemporalUnit</a> unit)
+      </code>
+      
+        <p>Checks if the specified unit is supported.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-26" >
+  
+  
+    <td><code>
+        
+        default
+        
+        
+        
+        <a href="temporal/Temporal.html">Temporal</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="temporal/Temporal.html#minus(java.time.temporal.TemporalAmount)">minus</a>(<a href="temporal/TemporalAmount.html">TemporalAmount</a> amount)
+      </code>
+      
+        <p>Returns an object of the same type as this object with an amount subtracted.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-26" >
+  
+  
+    <td><code>
+        
+        default
+        
+        
+        
+        <a href="temporal/Temporal.html">Temporal</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="temporal/Temporal.html#minus(long, java.time.temporal.TemporalUnit)">minus</a>(long amountToSubtract, <a href="temporal/TemporalUnit.html">TemporalUnit</a> unit)
+      </code>
+      
+        <p>Returns an object of the same type as this object with the specified period subtracted.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-26" >
+  
+  
+    <td><code>
+        abstract
+        
+        
+        
+        
+        <a href="temporal/Temporal.html">Temporal</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="temporal/Temporal.html#plus(long, java.time.temporal.TemporalUnit)">plus</a>(long amountToAdd, <a href="temporal/TemporalUnit.html">TemporalUnit</a> unit)
+      </code>
+      
+        <p>Returns an object of the same type as this object with the specified period added.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-26" >
+  
+  
+    <td><code>
+        
+        default
+        
+        
+        
+        <a href="temporal/Temporal.html">Temporal</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="temporal/Temporal.html#plus(java.time.temporal.TemporalAmount)">plus</a>(<a href="temporal/TemporalAmount.html">TemporalAmount</a> amount)
+      </code>
+      
+        <p>Returns an object of the same type as this object with an amount added.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-26" >
+  
+  
+    <td><code>
+        abstract
+        
+        
+        
+        
+        long</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="temporal/Temporal.html#until(java.time.temporal.Temporal, java.time.temporal.TemporalUnit)">until</a>(<a href="temporal/Temporal.html">Temporal</a> endExclusive, <a href="temporal/TemporalUnit.html">TemporalUnit</a> unit)
+      </code>
+      
+        <p>Calculates the amount of time until another temporal in terms of the specified unit.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-26" >
+  
+  
+    <td><code>
+        abstract
+        
+        
+        
+        
+        <a href="temporal/Temporal.html">Temporal</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="temporal/Temporal.html#with(java.time.temporal.TemporalField, long)">with</a>(<a href="temporal/TemporalField.html">TemporalField</a> field, long newValue)
+      </code>
+      
+        <p>Returns an object of the same type as this object with the specified field altered.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-26" >
+  
+  
+    <td><code>
+        
+        default
+        
+        
+        
+        <a href="temporal/Temporal.html">Temporal</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="temporal/Temporal.html#with(java.time.temporal.TemporalAdjuster)">with</a>(<a href="temporal/TemporalAdjuster.html">TemporalAdjuster</a> adjuster)
+      </code>
+      
+        <p>Returns an adjusted object of the same type as this object with the adjustment made.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+
+    </table>
+  </div>
+</div>
+</td></tr>
+
+
+
+<tr class="api apilevel-" >
+<td colspan="2">
+  <a href="#" id="inherited-methods-java.time.temporal.TemporalAdjuster" class="jd-expando-trigger closed"
+     onclick="return toggleInherited(this, null)" >
+    <img id="inherited-methods-java.time.temporal.TemporalAdjuster-trigger" class="jd-expando-trigger-img"
+         height="34"
+         src="../../../assets/images/styles/disclosure_down.png" />
+  </a>From
+interface
+<code>
+  
+    <a href="temporal/TemporalAdjuster.html">java.time.temporal.TemporalAdjuster</a>
+  
+</code>
+<div id="inherited-methods-java.time.temporal.TemporalAdjuster">
+  <div id="inherited-methods-java.time.temporal.TemporalAdjuster-list"
+        class="jd-inheritedlinks">
+  </div>
+  <div id="inherited-methods-java.time.temporal.TemporalAdjuster-summary" style="display: none;">
+    <table class="jd-sumtable-expando responsive">
+      
+
+
+  
+  <tr class="api apilevel-26" >
+  
+  
+    <td><code>
+        abstract
+        
+        
+        
+        
+        <a href="temporal/Temporal.html">Temporal</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="temporal/TemporalAdjuster.html#adjustInto(java.time.temporal.Temporal)">adjustInto</a>(<a href="temporal/Temporal.html">Temporal</a> temporal)
+      </code>
+      
+        <p>Adjusts the specified temporal object.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+
+    </table>
+  </div>
+</div>
+</td></tr>
+
+
+
+<tr class="api apilevel-" >
+<td colspan="2">
+  <a href="#" id="inherited-methods-java.lang.Comparable" class="jd-expando-trigger closed"
+     onclick="return toggleInherited(this, null)" >
+    <img id="inherited-methods-java.lang.Comparable-trigger" class="jd-expando-trigger-img"
+         height="34"
+         src="../../../assets/images/styles/disclosure_down.png" />
+  </a>From
+interface
+<code>
+  
+    <a href="../lang/Comparable.html">java.lang.Comparable</a>
+  
+</code>
+<div id="inherited-methods-java.lang.Comparable">
+  <div id="inherited-methods-java.lang.Comparable-list"
+        class="jd-inheritedlinks">
+  </div>
+  <div id="inherited-methods-java.lang.Comparable-summary" style="display: none;">
+    <table class="jd-sumtable-expando responsive">
+      
+
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        abstract
+        
+        
+        
+        
+        int</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../lang/Comparable.html#compareTo(T)">compareTo</a>(<a href="Year.html">Year</a> o)
+      </code>
+      
+        <p>Compares this object with the specified object for order.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+
+    </table>
+  </div>
+</div>
+</td></tr>
+
+
+
+
+
+<tr class="api apilevel-" >
+<td colspan="2">
+  <a href="#" id="inherited-methods-java.time.temporal.TemporalAccessor" class="jd-expando-trigger closed"
+     onclick="return toggleInherited(this, null)" >
+    <img id="inherited-methods-java.time.temporal.TemporalAccessor-trigger" class="jd-expando-trigger-img"
+         height="34"
+         src="../../../assets/images/styles/disclosure_down.png" />
+  </a>From
+interface
+<code>
+  
+    <a href="temporal/TemporalAccessor.html">java.time.temporal.TemporalAccessor</a>
+  
+</code>
+<div id="inherited-methods-java.time.temporal.TemporalAccessor">
+  <div id="inherited-methods-java.time.temporal.TemporalAccessor-list"
+        class="jd-inheritedlinks">
+  </div>
+  <div id="inherited-methods-java.time.temporal.TemporalAccessor-summary" style="display: none;">
+    <table class="jd-sumtable-expando responsive">
+      
+
+
+  
+  <tr class="api apilevel-26" >
+  
+  
+    <td><code>
+        
+        default
+        
+        
+        
+        int</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="temporal/TemporalAccessor.html#get(java.time.temporal.TemporalField)">get</a>(<a href="temporal/TemporalField.html">TemporalField</a> field)
+      </code>
+      
+        <p>Gets the value of the specified field as an <code>int</code>.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-26" >
+  
+  
+    <td><code>
+        abstract
+        
+        
+        
+        
+        long</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="temporal/TemporalAccessor.html#getLong(java.time.temporal.TemporalField)">getLong</a>(<a href="temporal/TemporalField.html">TemporalField</a> field)
+      </code>
+      
+        <p>Gets the value of the specified field as a <code>long</code>.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-26" >
+  
+  
+    <td><code>
+        abstract
+        
+        
+        
+        
+        boolean</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="temporal/TemporalAccessor.html#isSupported(java.time.temporal.TemporalField)">isSupported</a>(<a href="temporal/TemporalField.html">TemporalField</a> field)
+      </code>
+      
+        <p>Checks if the specified field is supported.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-26" >
+  
+  
+    <td><code>
+        
+        default
+        
+        
+        &lt;R&gt;
+        R</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="temporal/TemporalAccessor.html#query(java.time.temporal.TemporalQuery<R>)">query</a>(<a href="temporal/TemporalQuery.html">TemporalQuery</a>&lt;R&gt; query)
+      </code>
+      
+        <p>Queries this date-time.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-26" >
+  
+  
+    <td><code>
+        
+        default
+        
+        
+        
+        <a href="temporal/ValueRange.html">ValueRange</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="temporal/TemporalAccessor.html#range(java.time.temporal.TemporalField)">range</a>(<a href="temporal/TemporalField.html">TemporalField</a> field)
+      </code>
+      
+        <p>Gets the range of valid values for the specified field.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+
+    </table>
+  </div>
+</div>
+</td></tr>
+
+
+</table>
+
+
+
+<!-- XML Attributes -->
+
+
+<!-- Enum Values -->
+
+
+<!-- Constants -->
+
+
+<!-- ========= ENUM CONSTANTS DETAIL ======== -->
+<h2 class="api-section">Constants</h2>
+
+
+
+
+<A NAME="MAX_VALUE"></A>
+
+<div class="api apilevel-26">
+    <h3 class="api-name">MAX_VALUE</h3>
+    <div class="api-level">
+      
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 26</a>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+int MAX_VALUE</pre>
+    
+    
+
+    
+  <p>The maximum supported year, '+999,999,999'.
+</p></p>
+
+    
+      <p>Constant Value:
+      
+          999999999
+          (0x3b9ac9ff)
+      
+    
+</div>
+
+
+
+<A NAME="MIN_VALUE"></A>
+
+<div class="api apilevel-26">
+    <h3 class="api-name">MIN_VALUE</h3>
+    <div class="api-level">
+      
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 26</a>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+int MIN_VALUE</pre>
+    
+    
+
+    
+  <p>The minimum supported year, '-999,999,999'.
+</p></p>
+
+    
+      <p>Constant Value:
+      
+          -999999999
+          (0xc4653601)
+      
+    
+</div>
+
+
+
+
+<!-- Fields -->
+
+
+<!-- Public ctors -->
+
+
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<!-- Protected ctors -->
+
+
+
+<!-- ========= METHOD DETAIL ======== -->
+<!-- Public methdos -->
+
+<h2 class="api-section">Public methods</h2>
+
+
+
+<A NAME="adjustInto(java.time.temporal.Temporal)"></A>
+
+<div class="api apilevel-26">
+    <h3 class="api-name">adjustInto</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 26</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="temporal/Temporal.html">Temporal</a> adjustInto (<a href="temporal/Temporal.html">Temporal</a> temporal)</pre>
+    
+    
+
+    
+  <p>Adjusts the specified temporal object to have this year.
+ <p>
+ This returns a temporal object of the same observable type as the input
+ with the year changed to be the same as this.
+ <p>
+ The adjustment is equivalent to using <code><a href="temporal/Temporal.html#with(java.time.temporal.TemporalField, long)">with(TemporalField, long)</a></code>
+ passing <code><a href="temporal/ChronoField.html#YEAR">YEAR</a></code> as the field.
+ If the specified temporal object does not use the ISO calendar system then
+ a <code>DateTimeException</code> is thrown.
+ <p>
+ In most cases, it is clearer to reverse the calling pattern by using
+ <code><a href="temporal/Temporal.html#with(java.time.temporal.TemporalAdjuster)">with(TemporalAdjuster)</a></code>:
+ <pre>
+   // these two lines are equivalent, but the second approach is recommended
+   temporal = thisYear.adjustInto(temporal);
+   temporal = temporal.with(thisYear);
+ </pre>
+ <p>
+ This instance is immutable and unaffected by this method call.</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>temporal</code></td>
+        <td width="100%">
+          <code>Temporal</code>: the target object to be adjusted, not null</p></td>
+      </tr>
+    </table>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="temporal/Temporal.html">Temporal</a></code></td>
+        <td width="100%">the adjusted object, not null</p></td>
+      </tr>
+    </table>
+      <table class="responsive">
+      <tr><th colspan=2>Throws</th></tr>
+        <tr>
+          <td><code><a href="DateTimeException.html">DateTimeException</a></code></td>
+          <td width="100%">if unable to make the adjustment</td>
+        </tr>
+        <tr>
+          <td><code><a href="../lang/ArithmeticException.html">ArithmeticException</a></code></td>
+          <td width="100%">if numeric overflow occurs
+</td>
+        </tr>
+      </table>
+  
+
+</div>
+
+
+<A NAME="atDay(int)"></A>
+
+<div class="api apilevel-26">
+    <h3 class="api-name">atDay</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 26</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="LocalDate.html">LocalDate</a> atDay (int dayOfYear)</pre>
+    
+    
+
+    
+  <p>Combines this year with a day-of-year to create a <code>LocalDate</code>.
+ <p>
+ This returns a <code>LocalDate</code> formed from this year and the specified day-of-year.
+ <p>
+ The day-of-year value 366 is only valid in a leap year.</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>dayOfYear</code></td>
+        <td width="100%">
+          <code>int</code>: the day-of-year to use, from 1 to 365-366</p></td>
+      </tr>
+    </table>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="LocalDate.html">LocalDate</a></code></td>
+        <td width="100%">the local date formed from this year and the specified date of year, not null</p></td>
+      </tr>
+    </table>
+      <table class="responsive">
+      <tr><th colspan=2>Throws</th></tr>
+        <tr>
+          <td><code><a href="DateTimeException.html">DateTimeException</a></code></td>
+          <td width="100%">if the day of year is zero or less, 366 or greater or equal
+  to 366 and this is not a leap year
+</td>
+        </tr>
+      </table>
+  
+
+</div>
+
+
+<A NAME="atMonth(int)"></A>
+
+<div class="api apilevel-26">
+    <h3 class="api-name">atMonth</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 26</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="YearMonth.html">YearMonth</a> atMonth (int month)</pre>
+    
+    
+
+    
+  <p>Combines this year with a month to create a <code>YearMonth</code>.
+ <p>
+ This returns a <code>YearMonth</code> formed from this year and the specified month.
+ All possible combinations of year and month are valid.
+ <p>
+ This method can be used as part of a chain to produce a date:
+ <pre>
+  LocalDate date = year.atMonth(month).atDay(day);
+ </pre></p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>month</code></td>
+        <td width="100%">
+          <code>int</code>: the month-of-year to use, from 1 (January) to 12 (December)</p></td>
+      </tr>
+    </table>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="YearMonth.html">YearMonth</a></code></td>
+        <td width="100%">the year-month formed from this year and the specified month, not null</p></td>
+      </tr>
+    </table>
+      <table class="responsive">
+      <tr><th colspan=2>Throws</th></tr>
+        <tr>
+          <td><code><a href="DateTimeException.html">DateTimeException</a></code></td>
+          <td width="100%">if the month is invalid
+</td>
+        </tr>
+      </table>
+  
+
+</div>
+
+
+<A NAME="atMonth(java.time.Month)"></A>
+
+<div class="api apilevel-26">
+    <h3 class="api-name">atMonth</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 26</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="YearMonth.html">YearMonth</a> atMonth (<a href="Month.html">Month</a> month)</pre>
+    
+    
+
+    
+  <p>Combines this year with a month to create a <code>YearMonth</code>.
+ <p>
+ This returns a <code>YearMonth</code> formed from this year and the specified month.
+ All possible combinations of year and month are valid.
+ <p>
+ This method can be used as part of a chain to produce a date:
+ <pre>
+  LocalDate date = year.atMonth(month).atDay(day);
+ </pre></p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>month</code></td>
+        <td width="100%">
+          <code>Month</code>: the month-of-year to use, not null</p></td>
+      </tr>
+    </table>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="YearMonth.html">YearMonth</a></code></td>
+        <td width="100%">the year-month formed from this year and the specified month, not null
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="atMonthDay(java.time.MonthDay)"></A>
+
+<div class="api apilevel-26">
+    <h3 class="api-name">atMonthDay</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 26</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="LocalDate.html">LocalDate</a> atMonthDay (<a href="MonthDay.html">MonthDay</a> monthDay)</pre>
+    
+    
+
+    
+  <p>Combines this year with a month-day to create a <code>LocalDate</code>.
+ <p>
+ This returns a <code>LocalDate</code> formed from this year and the specified month-day.
+ <p>
+ A month-day of February 29th will be adjusted to February 28th in the resulting
+ date if the year is not a leap year.</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>monthDay</code></td>
+        <td width="100%">
+          <code>MonthDay</code>: the month-day to use, not null</p></td>
+      </tr>
+    </table>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="LocalDate.html">LocalDate</a></code></td>
+        <td width="100%">the local date formed from this year and the specified month-day, not null
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="compareTo(java.time.Year)"></A>
+
+<div class="api apilevel-26">
+    <h3 class="api-name">compareTo</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 26</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+int compareTo (<a href="Year.html">Year</a> other)</pre>
+    
+    
+
+    
+  <p>Compares this year to another year.
+ <p>
+ The comparison is based on the value of the year.
+ It is "consistent with equals", as defined by <code><a href="../lang/Comparable.html">Comparable</a></code>.</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>other</code></td>
+        <td width="100%">
+          <code>Year</code>: the other year to compare to, not null</p></td>
+      </tr>
+    </table>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code>int</code></td>
+        <td width="100%">the comparator value, negative if less, positive if greater
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="equals(java.lang.Object)"></A>
+
+<div class="api apilevel-26">
+    <h3 class="api-name">equals</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 26</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+boolean equals (<a href="../lang/Object.html">Object</a> obj)</pre>
+    
+    
+
+    
+  <p>Checks if this year is equal to another year.
+ <p>
+ The comparison is based on the time-line position of the years.</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>obj</code></td>
+        <td width="100%">
+          <code>Object</code>: the object to check, null returns false</p></td>
+      </tr>
+    </table>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code>boolean</code></td>
+        <td width="100%">true if this is equal to the other year
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="format(java.time.format.DateTimeFormatter)"></A>
+
+<div class="api apilevel-26">
+    <h3 class="api-name">format</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 26</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="../lang/String.html">String</a> format (<a href="format/DateTimeFormatter.html">DateTimeFormatter</a> formatter)</pre>
+    
+    
+
+    
+  <p>Formats this year using the specified formatter.
+ <p>
+ This year will be passed to the formatter to produce a string.</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>formatter</code></td>
+        <td width="100%">
+          <code>DateTimeFormatter</code>: the formatter to use, not null</p></td>
+      </tr>
+    </table>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="../lang/String.html">String</a></code></td>
+        <td width="100%">the formatted year string, not null</p></td>
+      </tr>
+    </table>
+      <table class="responsive">
+      <tr><th colspan=2>Throws</th></tr>
+        <tr>
+          <td><code><a href="DateTimeException.html">DateTimeException</a></code></td>
+          <td width="100%">if an error occurs during printing
+</td>
+        </tr>
+      </table>
+  
+
+</div>
+
+
+<A NAME="from(java.time.temporal.TemporalAccessor)"></A>
+
+<div class="api apilevel-26">
+    <h3 class="api-name">from</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 26</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="Year.html">Year</a> from (<a href="temporal/TemporalAccessor.html">TemporalAccessor</a> temporal)</pre>
+    
+    
+
+    
+  <p>Obtains an instance of <code>Year</code> from a temporal object.
+ <p>
+ This obtains a year based on the specified temporal.
+ A <code>TemporalAccessor</code> represents an arbitrary set of date and time information,
+ which this factory converts to an instance of <code>Year</code>.
+ <p>
+ The conversion extracts the <code><a href="temporal/ChronoField.html#YEAR">year</a></code> field.
+ The extraction is only permitted if the temporal object has an ISO
+ chronology, or can be converted to a <code>LocalDate</code>.
+ <p>
+ This method matches the signature of the functional interface <code><a href="temporal/TemporalQuery.html">TemporalQuery</a></code>
+ allowing it to be used as a query via method reference, <code>Year::from</code>.</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>temporal</code></td>
+        <td width="100%">
+          <code>TemporalAccessor</code>: the temporal object to convert, not null</p></td>
+      </tr>
+    </table>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="Year.html">Year</a></code></td>
+        <td width="100%">the year, not null</p></td>
+      </tr>
+    </table>
+      <table class="responsive">
+      <tr><th colspan=2>Throws</th></tr>
+        <tr>
+          <td><code><a href="DateTimeException.html">DateTimeException</a></code></td>
+          <td width="100%">if unable to convert to a <code>Year</code>
+</td>
+        </tr>
+      </table>
+  
+
+</div>
+
+
+<A NAME="get(java.time.temporal.TemporalField)"></A>
+
+<div class="api apilevel-">
+    <h3 class="api-name">get</h3>
+    <div class="api-level">
+      <div></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+int get (<a href="temporal/TemporalField.html">TemporalField</a> field)</pre>
+    
+    
+
+    
+  <p>Gets the value of the specified field from this year as an <code>int</code>.
+ <p>
+ This queries this year for the value of the specified field.
+ The returned value will always be within the valid range of values for the field.
+ If it is not possible to return the value, because the field is not supported
+ or for some other reason, an exception is thrown.
+ <p>
+ If the field is a <code><a href="temporal/ChronoField.html">ChronoField</a></code> then the query is implemented here.
+ The <code><a href="Year.html#isSupported(java.time.temporal.TemporalField)">supported fields</a></code> will return valid
+ values based on this year.
+ All other <code>ChronoField</code> instances will throw an <code>UnsupportedTemporalTypeException</code>.
+ <p>
+ If the field is not a <code>ChronoField</code>, then the result of this method
+ is obtained by invoking <code>TemporalField.getFrom(TemporalAccessor)</code>
+ passing <code>this</code> as the argument. Whether the value can be obtained,
+ and what the value represents, is determined by the field.</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>field</code></td>
+        <td width="100%">
+          <code>TemporalField</code>: the field to get, not null</p></td>
+      </tr>
+    </table>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code>int</code></td>
+        <td width="100%">the value for the field</p></td>
+      </tr>
+    </table>
+      <table class="responsive">
+      <tr><th colspan=2>Throws</th></tr>
+        <tr>
+          <td><code><a href="DateTimeException.html">DateTimeException</a></code></td>
+          <td width="100%">if a value for the field cannot be obtained or
+         the value is outside the range of valid values for the field</td>
+        </tr>
+        <tr>
+          <td><code><a href="temporal/UnsupportedTemporalTypeException.html">UnsupportedTemporalTypeException</a></code></td>
+          <td width="100%">if the field is not supported or
+         the range of values exceeds an <code>int</code></td>
+        </tr>
+        <tr>
+          <td><code><a href="../lang/ArithmeticException.html">ArithmeticException</a></code></td>
+          <td width="100%">if numeric overflow occurs
+</td>
+        </tr>
+      </table>
+  
+
+</div>
+
+
+<A NAME="getLong(java.time.temporal.TemporalField)"></A>
+
+<div class="api apilevel-26">
+    <h3 class="api-name">getLong</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 26</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+long getLong (<a href="temporal/TemporalField.html">TemporalField</a> field)</pre>
+    
+    
+
+    
+  <p>Gets the value of the specified field from this year as a <code>long</code>.
+ <p>
+ This queries this year for the value of the specified field.
+ If it is not possible to return the value, because the field is not supported
+ or for some other reason, an exception is thrown.
+ <p>
+ If the field is a <code><a href="temporal/ChronoField.html">ChronoField</a></code> then the query is implemented here.
+ The <code><a href="Year.html#isSupported(java.time.temporal.TemporalField)">supported fields</a></code> will return valid
+ values based on this year.
+ All other <code>ChronoField</code> instances will throw an <code>UnsupportedTemporalTypeException</code>.
+ <p>
+ If the field is not a <code>ChronoField</code>, then the result of this method
+ is obtained by invoking <code>TemporalField.getFrom(TemporalAccessor)</code>
+ passing <code>this</code> as the argument. Whether the value can be obtained,
+ and what the value represents, is determined by the field.</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>field</code></td>
+        <td width="100%">
+          <code>TemporalField</code>: the field to get, not null</p></td>
+      </tr>
+    </table>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code>long</code></td>
+        <td width="100%">the value for the field</p></td>
+      </tr>
+    </table>
+      <table class="responsive">
+      <tr><th colspan=2>Throws</th></tr>
+        <tr>
+          <td><code><a href="DateTimeException.html">DateTimeException</a></code></td>
+          <td width="100%">if a value for the field cannot be obtained</td>
+        </tr>
+        <tr>
+          <td><code><a href="temporal/UnsupportedTemporalTypeException.html">UnsupportedTemporalTypeException</a></code></td>
+          <td width="100%">if the field is not supported</td>
+        </tr>
+        <tr>
+          <td><code><a href="../lang/ArithmeticException.html">ArithmeticException</a></code></td>
+          <td width="100%">if numeric overflow occurs
+</td>
+        </tr>
+      </table>
+  
+
+</div>
+
+
+<A NAME="getValue()"></A>
+
+<div class="api apilevel-26">
+    <h3 class="api-name">getValue</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 26</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+int getValue ()</pre>
+    
+    
+
+    
+  <p>Gets the year value.
+ <p>
+ The year returned by this method is proleptic as per <code>get(YEAR)</code>.</p></p>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code>int</code></td>
+        <td width="100%">the year, <code>MIN_VALUE</code> to <code>MAX_VALUE</code>
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="hashCode()"></A>
+
+<div class="api apilevel-26">
+    <h3 class="api-name">hashCode</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 26</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+int hashCode ()</pre>
+    
+    
+
+    
+  <p>A hash code for this year.</p></p>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code>int</code></td>
+        <td width="100%">a suitable hash code
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="isAfter(java.time.Year)"></A>
+
+<div class="api apilevel-26">
+    <h3 class="api-name">isAfter</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 26</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+boolean isAfter (<a href="Year.html">Year</a> other)</pre>
+    
+    
+
+    
+  <p>Checks if this year is after the specified year.</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>other</code></td>
+        <td width="100%">
+          <code>Year</code>: the other year to compare to, not null</p></td>
+      </tr>
+    </table>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code>boolean</code></td>
+        <td width="100%">true if this is after the specified year
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="isBefore(java.time.Year)"></A>
+
+<div class="api apilevel-26">
+    <h3 class="api-name">isBefore</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 26</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+boolean isBefore (<a href="Year.html">Year</a> other)</pre>
+    
+    
+
+    
+  <p>Checks if this year is before the specified year.</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>other</code></td>
+        <td width="100%">
+          <code>Year</code>: the other year to compare to, not null</p></td>
+      </tr>
+    </table>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code>boolean</code></td>
+        <td width="100%">true if this point is before the specified year
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="isLeap()"></A>
+
+<div class="api apilevel-26">
+    <h3 class="api-name">isLeap</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 26</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+boolean isLeap ()</pre>
+    
+    
+
+    
+  <p>Checks if the year is a leap year, according to the ISO proleptic
+ calendar system rules.
+ <p>
+ This method applies the current rules for leap years across the whole time-line.
+ In general, a year is a leap year if it is divisible by four without
+ remainder. However, years divisible by 100, are not leap years, with
+ the exception of years divisible by 400 which are.
+ <p>
+ For example, 1904 is a leap year it is divisible by 4.
+ 1900 was not a leap year as it is divisible by 100, however 2000 was a
+ leap year as it is divisible by 400.
+ <p>
+ The calculation is proleptic - applying the same rules into the far future and far past.
+ This is historically inaccurate, but is correct for the ISO-8601 standard.</p></p>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code>boolean</code></td>
+        <td width="100%">true if the year is leap, false otherwise
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="isLeap(long)"></A>
+
+<div class="api apilevel-26">
+    <h3 class="api-name">isLeap</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 26</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+boolean isLeap (long year)</pre>
+    
+    
+
+    
+  <p>Checks if the year is a leap year, according to the ISO proleptic
+ calendar system rules.
+ <p>
+ This method applies the current rules for leap years across the whole time-line.
+ In general, a year is a leap year if it is divisible by four without
+ remainder. However, years divisible by 100, are not leap years, with
+ the exception of years divisible by 400 which are.
+ <p>
+ For example, 1904 is a leap year it is divisible by 4.
+ 1900 was not a leap year as it is divisible by 100, however 2000 was a
+ leap year as it is divisible by 400.
+ <p>
+ The calculation is proleptic - applying the same rules into the far future and far past.
+ This is historically inaccurate, but is correct for the ISO-8601 standard.</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>year</code></td>
+        <td width="100%">
+          <code>long</code>: the year to check</p></td>
+      </tr>
+    </table>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code>boolean</code></td>
+        <td width="100%">true if the year is leap, false otherwise
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="isSupported(java.time.temporal.TemporalUnit)"></A>
+
+<div class="api apilevel-26">
+    <h3 class="api-name">isSupported</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 26</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+boolean isSupported (<a href="temporal/TemporalUnit.html">TemporalUnit</a> unit)</pre>
+    
+    
+
+    
+  <p>Checks if the specified unit is supported.
+ <p>
+ This checks if the specified unit can be added to, or subtracted from, this year.
+ If false, then calling the <code><a href="Year.html#plus(long, java.time.temporal.TemporalUnit)">plus(long, TemporalUnit)</a></code> and
+ <code><a href="Year.html#minus(long, java.time.temporal.TemporalUnit)">minus</a></code> methods will throw an exception.
+ <p>
+ If the unit is a <code><a href="temporal/ChronoUnit.html">ChronoUnit</a></code> then the query is implemented here.
+ The supported units are:
+ <ul>
+ <li><code>YEARS</code>
+ <li><code>DECADES</code>
+ <li><code>CENTURIES</code>
+ <li><code>MILLENNIA</code>
+ <li><code>ERAS</code>
+ </ul>
+ All other <code>ChronoUnit</code> instances will return false.
+ <p>
+ If the unit is not a <code>ChronoUnit</code>, then the result of this method
+ is obtained by invoking <code>TemporalUnit.isSupportedBy(Temporal)</code>
+ passing <code>this</code> as the argument.
+ Whether the unit is supported is determined by the unit.</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>unit</code></td>
+        <td width="100%">
+          <code>TemporalUnit</code>: the unit to check, null returns false</p></td>
+      </tr>
+    </table>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code>boolean</code></td>
+        <td width="100%">true if the unit can be added/subtracted, false if not
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="isSupported(java.time.temporal.TemporalField)"></A>
+
+<div class="api apilevel-26">
+    <h3 class="api-name">isSupported</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 26</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+boolean isSupported (<a href="temporal/TemporalField.html">TemporalField</a> field)</pre>
+    
+    
+
+    
+  <p>Checks if the specified field is supported.
+ <p>
+ This checks if this year can be queried for the specified field.
+ If false, then calling the <code><a href="Year.html#range(java.time.temporal.TemporalField)">range</a></code>,
+ <code><a href="Year.html#get(java.time.temporal.TemporalField)">get</a></code> and <code><a href="Year.html#with(java.time.temporal.TemporalField, long)">with(TemporalField, long)</a></code>
+ methods will throw an exception.
+ <p>
+ If the field is a <code><a href="temporal/ChronoField.html">ChronoField</a></code> then the query is implemented here.
+ The supported fields are:
+ <ul>
+ <li><code>YEAR_OF_ERA</code>
+ <li><code>YEAR</code>
+ <li><code>ERA</code>
+ </ul>
+ All other <code>ChronoField</code> instances will return false.
+ <p>
+ If the field is not a <code>ChronoField</code>, then the result of this method
+ is obtained by invoking <code>TemporalField.isSupportedBy(TemporalAccessor)</code>
+ passing <code>this</code> as the argument.
+ Whether the field is supported is determined by the field.</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>field</code></td>
+        <td width="100%">
+          <code>TemporalField</code>: the field to check, null returns false</p></td>
+      </tr>
+    </table>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code>boolean</code></td>
+        <td width="100%">true if the field is supported on this year, false if not
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="isValidMonthDay(java.time.MonthDay)"></A>
+
+<div class="api apilevel-26">
+    <h3 class="api-name">isValidMonthDay</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 26</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+boolean isValidMonthDay (<a href="MonthDay.html">MonthDay</a> monthDay)</pre>
+    
+    
+
+    
+  <p>Checks if the month-day is valid for this year.
+ <p>
+ This method checks whether this year and the input month and day form
+ a valid date.</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>monthDay</code></td>
+        <td width="100%">
+          <code>MonthDay</code>: the month-day to validate, null returns false</p></td>
+      </tr>
+    </table>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code>boolean</code></td>
+        <td width="100%">true if the month and day are valid for this year
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="length()"></A>
+
+<div class="api apilevel-26">
+    <h3 class="api-name">length</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 26</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+int length ()</pre>
+    
+    
+
+    
+  <p>Gets the length of this year in days.</p></p>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code>int</code></td>
+        <td width="100%">the length of this year in days, 365 or 366
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="minus(java.time.temporal.TemporalAmount)"></A>
+
+<div class="api apilevel-27">
+    <h3 class="api-name">minus</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 27</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="Year.html">Year</a> minus (<a href="temporal/TemporalAmount.html">TemporalAmount</a> amountToSubtract)</pre>
+    
+    
+
+    
+  <p>Returns a copy of this year with the specified amount subtracted.
+ <p>
+ This returns a <code>Year</code>, based on this one, with the specified amount subtracted.
+ The amount is typically <code><a href="Period.html">Period</a></code> but may be any other type implementing
+ the <code><a href="temporal/TemporalAmount.html">TemporalAmount</a></code> interface.
+ <p>
+ The calculation is delegated to the amount object by calling
+ <code><a href="temporal/TemporalAmount.html#subtractFrom(java.time.temporal.Temporal)">subtractFrom(Temporal)</a></code>. The amount implementation is free
+ to implement the subtraction in any way it wishes, however it typically
+ calls back to <code><a href="Year.html#minus(long, java.time.temporal.TemporalUnit)">minus(long, TemporalUnit)</a></code>. Consult the documentation
+ of the amount implementation to determine if it can be successfully subtracted.
+ <p>
+ This instance is immutable and unaffected by this method call.</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>amountToSubtract</code></td>
+        <td width="100%">
+          <code>TemporalAmount</code>: the amount to subtract, not null</p></td>
+      </tr>
+    </table>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="Year.html">Year</a></code></td>
+        <td width="100%">a <code>Year</code> based on this year with the subtraction made, not null</p></td>
+      </tr>
+    </table>
+      <table class="responsive">
+      <tr><th colspan=2>Throws</th></tr>
+        <tr>
+          <td><code><a href="DateTimeException.html">DateTimeException</a></code></td>
+          <td width="100%">if the subtraction cannot be made</td>
+        </tr>
+        <tr>
+          <td><code><a href="../lang/ArithmeticException.html">ArithmeticException</a></code></td>
+          <td width="100%">if numeric overflow occurs
+</td>
+        </tr>
+      </table>
+  
+
+</div>
+
+
+<A NAME="minus(long, java.time.temporal.TemporalUnit)"></A>
+
+<div class="api apilevel-27">
+    <h3 class="api-name">minus</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 27</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="Year.html">Year</a> minus (long amountToSubtract, 
+                <a href="temporal/TemporalUnit.html">TemporalUnit</a> unit)</pre>
+    
+    
+
+    
+  <p>Returns a copy of this year with the specified amount subtracted.
+ <p>
+ This returns a <code>Year</code>, based on this one, with the amount
+ in terms of the unit subtracted. If it is not possible to subtract the amount,
+ because the unit is not supported or for some other reason, an exception is thrown.
+ <p>
+ This method is equivalent to <code><a href="Year.html#plus(long, java.time.temporal.TemporalUnit)">plus(long, TemporalUnit)</a></code> with the amount negated.
+ See that method for a full description of how addition, and thus subtraction, works.
+ <p>
+ This instance is immutable and unaffected by this method call.</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>amountToSubtract</code></td>
+        <td width="100%">
+          <code>long</code>: the amount of the unit to subtract from the result, may be negative</p></td>
+      </tr>
+      <tr>
+        <td><code>unit</code></td>
+        <td width="100%">
+          <code>TemporalUnit</code>: the unit of the amount to subtract, not null</p></td>
+      </tr>
+    </table>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="Year.html">Year</a></code></td>
+        <td width="100%">a <code>Year</code> based on this year with the specified amount subtracted, not null</p></td>
+      </tr>
+    </table>
+      <table class="responsive">
+      <tr><th colspan=2>Throws</th></tr>
+        <tr>
+          <td><code><a href="DateTimeException.html">DateTimeException</a></code></td>
+          <td width="100%">if the subtraction cannot be made</td>
+        </tr>
+        <tr>
+          <td><code><a href="temporal/UnsupportedTemporalTypeException.html">UnsupportedTemporalTypeException</a></code></td>
+          <td width="100%">if the unit is not supported</td>
+        </tr>
+        <tr>
+          <td><code><a href="../lang/ArithmeticException.html">ArithmeticException</a></code></td>
+          <td width="100%">if numeric overflow occurs
+</td>
+        </tr>
+      </table>
+  
+
+</div>
+
+
+<A NAME="minusYears(long)"></A>
+
+<div class="api apilevel-26">
+    <h3 class="api-name">minusYears</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 26</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="Year.html">Year</a> minusYears (long yearsToSubtract)</pre>
+    
+    
+
+    
+  <p>Returns a copy of this <code>Year</code> with the specified number of years subtracted.
+ <p>
+ This instance is immutable and unaffected by this method call.</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>yearsToSubtract</code></td>
+        <td width="100%">
+          <code>long</code>: the years to subtract, may be negative</p></td>
+      </tr>
+    </table>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="Year.html">Year</a></code></td>
+        <td width="100%">a <code>Year</code> based on this year with the year subtracted, not null</p></td>
+      </tr>
+    </table>
+      <table class="responsive">
+      <tr><th colspan=2>Throws</th></tr>
+        <tr>
+          <td><code><a href="DateTimeException.html">DateTimeException</a></code></td>
+          <td width="100%">if the result exceeds the supported range
+</td>
+        </tr>
+      </table>
+  
+
+</div>
+
+
+<A NAME="now(java.time.ZoneId)"></A>
+
+<div class="api apilevel-26">
+    <h3 class="api-name">now</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 26</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="Year.html">Year</a> now (<a href="ZoneId.html">ZoneId</a> zone)</pre>
+    
+    
+
+    
+  <p>Obtains the current year from the system clock in the specified time-zone.
+ <p>
+ This will query the <code><a href="Clock.html#system(java.time.ZoneId)">system clock</a></code> to obtain the current year.
+ Specifying the time-zone avoids dependence on the default time-zone.
+ <p>
+ Using this method will prevent the ability to use an alternate clock for testing
+ because the clock is hard-coded.</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>zone</code></td>
+        <td width="100%">
+          <code>ZoneId</code>: the zone ID to use, not null</p></td>
+      </tr>
+    </table>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="Year.html">Year</a></code></td>
+        <td width="100%">the current year using the system clock, not null
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="now()"></A>
+
+<div class="api apilevel-26">
+    <h3 class="api-name">now</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 26</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="Year.html">Year</a> now ()</pre>
+    
+    
+
+    
+  <p>Obtains the current year from the system clock in the default time-zone.
+ <p>
+ This will query the <code><a href="Clock.html#systemDefaultZone()">system clock</a></code> in the default
+ time-zone to obtain the current year.
+ <p>
+ Using this method will prevent the ability to use an alternate clock for testing
+ because the clock is hard-coded.</p></p>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="Year.html">Year</a></code></td>
+        <td width="100%">the current year using the system clock and default time-zone, not null
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="now(java.time.Clock)"></A>
+
+<div class="api apilevel-26">
+    <h3 class="api-name">now</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 26</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="Year.html">Year</a> now (<a href="Clock.html">Clock</a> clock)</pre>
+    
+    
+
+    
+  <p>Obtains the current year from the specified clock.
+ <p>
+ This will query the specified clock to obtain the current year.
+ Using this method allows the use of an alternate clock for testing.
+ The alternate clock may be introduced using <code><a href="Clock.html">dependency injection</a></code>.</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>clock</code></td>
+        <td width="100%">
+          <code>Clock</code>: the clock to use, not null</p></td>
+      </tr>
+    </table>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="Year.html">Year</a></code></td>
+        <td width="100%">the current year, not null
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="of(int)"></A>
+
+<div class="api apilevel-26">
+    <h3 class="api-name">of</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 26</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="Year.html">Year</a> of (int isoYear)</pre>
+    
+    
+
+    
+  <p>Obtains an instance of <code>Year</code>.
+ <p>
+ This method accepts a year value from the proleptic ISO calendar system.
+ <p>
+ The year 2AD/CE is represented by 2.<br>
+ The year 1AD/CE is represented by 1.<br>
+ The year 1BC/BCE is represented by 0.<br>
+ The year 2BC/BCE is represented by -1.<br></p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>isoYear</code></td>
+        <td width="100%">
+          <code>int</code>: the ISO proleptic year to represent, from <code>MIN_VALUE</code> to <code>MAX_VALUE</code></p></td>
+      </tr>
+    </table>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="Year.html">Year</a></code></td>
+        <td width="100%">the year, not null</p></td>
+      </tr>
+    </table>
+      <table class="responsive">
+      <tr><th colspan=2>Throws</th></tr>
+        <tr>
+          <td><code><a href="DateTimeException.html">DateTimeException</a></code></td>
+          <td width="100%">if the field is invalid
+</td>
+        </tr>
+      </table>
+  
+
+</div>
+
+
+<A NAME="parse(java.lang.CharSequence, java.time.format.DateTimeFormatter)"></A>
+
+<div class="api apilevel-26">
+    <h3 class="api-name">parse</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 26</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="Year.html">Year</a> parse (<a href="../lang/CharSequence.html">CharSequence</a> text, 
+                <a href="format/DateTimeFormatter.html">DateTimeFormatter</a> formatter)</pre>
+    
+    
+
+    
+  <p>Obtains an instance of <code>Year</code> from a text string using a specific formatter.
+ <p>
+ The text is parsed using the formatter, returning a year.</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>text</code></td>
+        <td width="100%">
+          <code>CharSequence</code>: the text to parse, not null</p></td>
+      </tr>
+      <tr>
+        <td><code>formatter</code></td>
+        <td width="100%">
+          <code>DateTimeFormatter</code>: the formatter to use, not null</p></td>
+      </tr>
+    </table>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="Year.html">Year</a></code></td>
+        <td width="100%">the parsed year, not null</p></td>
+      </tr>
+    </table>
+      <table class="responsive">
+      <tr><th colspan=2>Throws</th></tr>
+        <tr>
+          <td><code><a href="format/DateTimeParseException.html">DateTimeParseException</a></code></td>
+          <td width="100%">if the text cannot be parsed
+</td>
+        </tr>
+      </table>
+  
+
+</div>
+
+
+<A NAME="parse(java.lang.CharSequence)"></A>
+
+<div class="api apilevel-26">
+    <h3 class="api-name">parse</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 26</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="Year.html">Year</a> parse (<a href="../lang/CharSequence.html">CharSequence</a> text)</pre>
+    
+    
+
+    
+  <p>Obtains an instance of <code>Year</code> from a text string such as <code>2007</code>.
+ <p>
+ The string must represent a valid year.
+ Years outside the range 0000 to 9999 must be prefixed by the plus or minus symbol.</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>text</code></td>
+        <td width="100%">
+          <code>CharSequence</code>: the text to parse such as "2007", not null</p></td>
+      </tr>
+    </table>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="Year.html">Year</a></code></td>
+        <td width="100%">the parsed year, not null</p></td>
+      </tr>
+    </table>
+      <table class="responsive">
+      <tr><th colspan=2>Throws</th></tr>
+        <tr>
+          <td><code><a href="format/DateTimeParseException.html">DateTimeParseException</a></code></td>
+          <td width="100%">if the text cannot be parsed
+</td>
+        </tr>
+      </table>
+  
+
+</div>
+
+
+<A NAME="plus(java.time.temporal.TemporalAmount)"></A>
+
+<div class="api apilevel-27">
+    <h3 class="api-name">plus</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 27</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="Year.html">Year</a> plus (<a href="temporal/TemporalAmount.html">TemporalAmount</a> amountToAdd)</pre>
+    
+    
+
+    
+  <p>Returns a copy of this year with the specified amount added.
+ <p>
+ This returns a <code>Year</code>, based on this one, with the specified amount added.
+ The amount is typically <code><a href="Period.html">Period</a></code> but may be any other type implementing
+ the <code><a href="temporal/TemporalAmount.html">TemporalAmount</a></code> interface.
+ <p>
+ The calculation is delegated to the amount object by calling
+ <code><a href="temporal/TemporalAmount.html#addTo(java.time.temporal.Temporal)">addTo(Temporal)</a></code>. The amount implementation is free
+ to implement the addition in any way it wishes, however it typically
+ calls back to <code><a href="Year.html#plus(long, java.time.temporal.TemporalUnit)">plus(long, TemporalUnit)</a></code>. Consult the documentation
+ of the amount implementation to determine if it can be successfully added.
+ <p>
+ This instance is immutable and unaffected by this method call.</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>amountToAdd</code></td>
+        <td width="100%">
+          <code>TemporalAmount</code>: the amount to add, not null</p></td>
+      </tr>
+    </table>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="Year.html">Year</a></code></td>
+        <td width="100%">a <code>Year</code> based on this year with the addition made, not null</p></td>
+      </tr>
+    </table>
+      <table class="responsive">
+      <tr><th colspan=2>Throws</th></tr>
+        <tr>
+          <td><code><a href="DateTimeException.html">DateTimeException</a></code></td>
+          <td width="100%">if the addition cannot be made</td>
+        </tr>
+        <tr>
+          <td><code><a href="../lang/ArithmeticException.html">ArithmeticException</a></code></td>
+          <td width="100%">if numeric overflow occurs
+</td>
+        </tr>
+      </table>
+  
+
+</div>
+
+
+<A NAME="plus(long, java.time.temporal.TemporalUnit)"></A>
+
+<div class="api apilevel-26">
+    <h3 class="api-name">plus</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 26</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="Year.html">Year</a> plus (long amountToAdd, 
+                <a href="temporal/TemporalUnit.html">TemporalUnit</a> unit)</pre>
+    
+    
+
+    
+  <p>Returns a copy of this year with the specified amount added.
+ <p>
+ This returns a <code>Year</code>, based on this one, with the amount
+ in terms of the unit added. If it is not possible to add the amount, because the
+ unit is not supported or for some other reason, an exception is thrown.
+ <p>
+ If the field is a <code><a href="temporal/ChronoUnit.html">ChronoUnit</a></code> then the addition is implemented here.
+ The supported fields behave as follows:
+ <ul>
+ <li><code>YEARS</code> -
+  Returns a <code>Year</code> with the specified number of years added.
+  This is equivalent to <code><a href="Year.html#plusYears(long)">plusYears(long)</a></code>.
+ <li><code>DECADES</code> -
+  Returns a <code>Year</code> with the specified number of decades added.
+  This is equivalent to calling <code><a href="Year.html#plusYears(long)">plusYears(long)</a></code> with the amount
+  multiplied by 10.
+ <li><code>CENTURIES</code> -
+  Returns a <code>Year</code> with the specified number of centuries added.
+  This is equivalent to calling <code><a href="Year.html#plusYears(long)">plusYears(long)</a></code> with the amount
+  multiplied by 100.
+ <li><code>MILLENNIA</code> -
+  Returns a <code>Year</code> with the specified number of millennia added.
+  This is equivalent to calling <code><a href="Year.html#plusYears(long)">plusYears(long)</a></code> with the amount
+  multiplied by 1,000.
+ <li><code>ERAS</code> -
+  Returns a <code>Year</code> with the specified number of eras added.
+  Only two eras are supported so the amount must be one, zero or minus one.
+  If the amount is non-zero then the year is changed such that the year-of-era
+  is unchanged.
+ </ul>
+ <p>
+ All other <code>ChronoUnit</code> instances will throw an <code>UnsupportedTemporalTypeException</code>.
+ <p>
+ If the field is not a <code>ChronoUnit</code>, then the result of this method
+ is obtained by invoking <code>TemporalUnit.addTo(Temporal, long)</code>
+ passing <code>this</code> as the argument. In this case, the unit determines
+ whether and how to perform the addition.
+ <p>
+ This instance is immutable and unaffected by this method call.</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>amountToAdd</code></td>
+        <td width="100%">
+          <code>long</code>: the amount of the unit to add to the result, may be negative</p></td>
+      </tr>
+      <tr>
+        <td><code>unit</code></td>
+        <td width="100%">
+          <code>TemporalUnit</code>: the unit of the amount to add, not null</p></td>
+      </tr>
+    </table>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="Year.html">Year</a></code></td>
+        <td width="100%">a <code>Year</code> based on this year with the specified amount added, not null</p></td>
+      </tr>
+    </table>
+      <table class="responsive">
+      <tr><th colspan=2>Throws</th></tr>
+        <tr>
+          <td><code><a href="DateTimeException.html">DateTimeException</a></code></td>
+          <td width="100%">if the addition cannot be made</td>
+        </tr>
+        <tr>
+          <td><code><a href="temporal/UnsupportedTemporalTypeException.html">UnsupportedTemporalTypeException</a></code></td>
+          <td width="100%">if the unit is not supported</td>
+        </tr>
+        <tr>
+          <td><code><a href="../lang/ArithmeticException.html">ArithmeticException</a></code></td>
+          <td width="100%">if numeric overflow occurs
+</td>
+        </tr>
+      </table>
+  
+
+</div>
+
+
+<A NAME="plusYears(long)"></A>
+
+<div class="api apilevel-26">
+    <h3 class="api-name">plusYears</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 26</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="Year.html">Year</a> plusYears (long yearsToAdd)</pre>
+    
+    
+
+    
+  <p>Returns a copy of this <code>Year</code> with the specified number of years added.
+ <p>
+ This instance is immutable and unaffected by this method call.</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>yearsToAdd</code></td>
+        <td width="100%">
+          <code>long</code>: the years to add, may be negative</p></td>
+      </tr>
+    </table>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="Year.html">Year</a></code></td>
+        <td width="100%">a <code>Year</code> based on this year with the years added, not null</p></td>
+      </tr>
+    </table>
+      <table class="responsive">
+      <tr><th colspan=2>Throws</th></tr>
+        <tr>
+          <td><code><a href="DateTimeException.html">DateTimeException</a></code></td>
+          <td width="100%">if the result exceeds the supported range
+</td>
+        </tr>
+      </table>
+  
+
+</div>
+
+
+<A NAME="query(java.time.temporal.TemporalQuery<R>)"></A>
+
+<div class="api apilevel-">
+    <h3 class="api-name">query</h3>
+    <div class="api-level">
+      <div></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+R query (<a href="temporal/TemporalQuery.html">TemporalQuery</a>&lt;R&gt; query)</pre>
+    
+    
+
+    
+  <p>Queries this year using the specified query.
+ <p>
+ This queries this year using the specified query strategy object.
+ The <code>TemporalQuery</code> object defines the logic to be used to
+ obtain the result. Read the documentation of the query to understand
+ what the result of this method will be.
+ <p>
+ The result of this method is obtained by invoking the
+ <code><a href="temporal/TemporalQuery.html#queryFrom(java.time.temporal.TemporalAccessor)">queryFrom(TemporalAccessor)</a></code> method on the
+ specified query passing <code>this</code> as the argument.</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>query</code></td>
+        <td width="100%">
+          <code>TemporalQuery</code>: the query to invoke, not null</p></td>
+      </tr>
+    </table>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code>R</code></td>
+        <td width="100%">the query result, null may be returned (defined by the query)</p></td>
+      </tr>
+    </table>
+      <table class="responsive">
+      <tr><th colspan=2>Throws</th></tr>
+        <tr>
+          <td><code><a href="DateTimeException.html">DateTimeException</a></code></td>
+          <td width="100%">if unable to query (defined by the query)</td>
+        </tr>
+        <tr>
+          <td><code><a href="../lang/ArithmeticException.html">ArithmeticException</a></code></td>
+          <td width="100%">if numeric overflow occurs (defined by the query)
+</td>
+        </tr>
+      </table>
+  
+
+</div>
+
+
+<A NAME="range(java.time.temporal.TemporalField)"></A>
+
+<div class="api apilevel-">
+    <h3 class="api-name">range</h3>
+    <div class="api-level">
+      <div></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="temporal/ValueRange.html">ValueRange</a> range (<a href="temporal/TemporalField.html">TemporalField</a> field)</pre>
+    
+    
+
+    
+  <p>Gets the range of valid values for the specified field.
+ <p>
+ The range object expresses the minimum and maximum valid values for a field.
+ This year is used to enhance the accuracy of the returned range.
+ If it is not possible to return the range, because the field is not supported
+ or for some other reason, an exception is thrown.
+ <p>
+ If the field is a <code><a href="temporal/ChronoField.html">ChronoField</a></code> then the query is implemented here.
+ The <code><a href="Year.html#isSupported(java.time.temporal.TemporalField)">supported fields</a></code> will return
+ appropriate range instances.
+ All other <code>ChronoField</code> instances will throw an <code>UnsupportedTemporalTypeException</code>.
+ <p>
+ If the field is not a <code>ChronoField</code>, then the result of this method
+ is obtained by invoking <code>TemporalField.rangeRefinedBy(TemporalAccessor)</code>
+ passing <code>this</code> as the argument.
+ Whether the range can be obtained is determined by the field.</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>field</code></td>
+        <td width="100%">
+          <code>TemporalField</code>: the field to query the range for, not null</p></td>
+      </tr>
+    </table>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="temporal/ValueRange.html">ValueRange</a></code></td>
+        <td width="100%">the range of valid values for the field, not null</p></td>
+      </tr>
+    </table>
+      <table class="responsive">
+      <tr><th colspan=2>Throws</th></tr>
+        <tr>
+          <td><code><a href="DateTimeException.html">DateTimeException</a></code></td>
+          <td width="100%">if the range for the field cannot be obtained</td>
+        </tr>
+        <tr>
+          <td><code><a href="temporal/UnsupportedTemporalTypeException.html">UnsupportedTemporalTypeException</a></code></td>
+          <td width="100%">if the field is not supported
+</td>
+        </tr>
+      </table>
+  
+
+</div>
+
+
+<A NAME="toString()"></A>
+
+<div class="api apilevel-26">
+    <h3 class="api-name">toString</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 26</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="../lang/String.html">String</a> toString ()</pre>
+    
+    
+
+    
+  <p>Outputs this year as a <code>String</code>.</p></p>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="../lang/String.html">String</a></code></td>
+        <td width="100%">a string representation of this year, not null
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="until(java.time.temporal.Temporal, java.time.temporal.TemporalUnit)"></A>
+
+<div class="api apilevel-26">
+    <h3 class="api-name">until</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 26</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+long until (<a href="temporal/Temporal.html">Temporal</a> endExclusive, 
+                <a href="temporal/TemporalUnit.html">TemporalUnit</a> unit)</pre>
+    
+    
+
+    
+  <p>Calculates the amount of time until another year in terms of the specified unit.
+ <p>
+ This calculates the amount of time between two <code>Year</code>
+ objects in terms of a single <code>TemporalUnit</code>.
+ The start and end points are <code>this</code> and the specified year.
+ The result will be negative if the end is before the start.
+ The <code>Temporal</code> passed to this method is converted to a
+ <code>Year</code> using <code><a href="Year.html#from(java.time.temporal.TemporalAccessor)">from(TemporalAccessor)</a></code>.
+ For example, the amount in decades between two year can be calculated
+ using <code>startYear.until(endYear, DECADES)</code>.
+ <p>
+ The calculation returns a whole number, representing the number of
+ complete units between the two years.
+ For example, the amount in decades between 2012 and 2031
+ will only be one decade as it is one year short of two decades.
+ <p>
+ There are two equivalent ways of using this method.
+ The first is to invoke this method.
+ The second is to use <code><a href="temporal/TemporalUnit.html#between(java.time.temporal.Temporal, java.time.temporal.Temporal)">between(Temporal, Temporal)</a></code>:
+ <pre>
+   // these two lines are equivalent
+   amount = start.until(end, YEARS);
+   amount = YEARS.between(start, end);
+ </pre>
+ The choice should be made based on which makes the code more readable.
+ <p>
+ The calculation is implemented in this method for <code><a href="temporal/ChronoUnit.html">ChronoUnit</a></code>.
+ The units <code>YEARS</code>, <code>DECADES</code>, <code>CENTURIES</code>,
+ <code>MILLENNIA</code> and <code>ERAS</code> are supported.
+ Other <code>ChronoUnit</code> values will throw an exception.
+ <p>
+ If the unit is not a <code>ChronoUnit</code>, then the result of this method
+ is obtained by invoking <code>TemporalUnit.between(Temporal, Temporal)</code>
+ passing <code>this</code> as the first argument and the converted input temporal
+ as the second argument.
+ <p>
+ This instance is immutable and unaffected by this method call.</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>endExclusive</code></td>
+        <td width="100%">
+          <code>Temporal</code>: the end date, exclusive, which is converted to a <code>Year</code>, not null</p></td>
+      </tr>
+      <tr>
+        <td><code>unit</code></td>
+        <td width="100%">
+          <code>TemporalUnit</code>: the unit to measure the amount in, not null</p></td>
+      </tr>
+    </table>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code>long</code></td>
+        <td width="100%">the amount of time between this year and the end year</p></td>
+      </tr>
+    </table>
+      <table class="responsive">
+      <tr><th colspan=2>Throws</th></tr>
+        <tr>
+          <td><code><a href="DateTimeException.html">DateTimeException</a></code></td>
+          <td width="100%">if the amount cannot be calculated, or the end
+  temporal cannot be converted to a <code>Year</code></td>
+        </tr>
+        <tr>
+          <td><code><a href="temporal/UnsupportedTemporalTypeException.html">UnsupportedTemporalTypeException</a></code></td>
+          <td width="100%">if the unit is not supported</td>
+        </tr>
+        <tr>
+          <td><code><a href="../lang/ArithmeticException.html">ArithmeticException</a></code></td>
+          <td width="100%">if numeric overflow occurs
+</td>
+        </tr>
+      </table>
+  
+
+</div>
+
+
+<A NAME="with(java.time.temporal.TemporalField, long)"></A>
+
+<div class="api apilevel-26">
+    <h3 class="api-name">with</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 26</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="Year.html">Year</a> with (<a href="temporal/TemporalField.html">TemporalField</a> field, 
+                long newValue)</pre>
+    
+    
+
+    
+  <p>Returns a copy of this year with the specified field set to a new value.
+ <p>
+ This returns a <code>Year</code>, based on this one, with the value
+ for the specified field changed.
+ If it is not possible to set the value, because the field is not supported or for
+ some other reason, an exception is thrown.
+ <p>
+ If the field is a <code><a href="temporal/ChronoField.html">ChronoField</a></code> then the adjustment is implemented here.
+ The supported fields behave as follows:
+ <ul>
+ <li><code>YEAR_OF_ERA</code> -
+  Returns a <code>Year</code> with the specified year-of-era
+  The era will be unchanged.
+ <li><code>YEAR</code> -
+  Returns a <code>Year</code> with the specified year.
+  This completely replaces the date and is equivalent to <code><a href="Year.html#of(int)">of(int)</a></code>.
+ <li><code>ERA</code> -
+  Returns a <code>Year</code> with the specified era.
+  The year-of-era will be unchanged.
+ </ul>
+ <p>
+ In all cases, if the new value is outside the valid range of values for the field
+ then a <code>DateTimeException</code> will be thrown.
+ <p>
+ All other <code>ChronoField</code> instances will throw an <code>UnsupportedTemporalTypeException</code>.
+ <p>
+ If the field is not a <code>ChronoField</code>, then the result of this method
+ is obtained by invoking <code>TemporalField.adjustInto(Temporal, long)</code>
+ passing <code>this</code> as the argument. In this case, the field determines
+ whether and how to adjust the instant.
+ <p>
+ This instance is immutable and unaffected by this method call.</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>field</code></td>
+        <td width="100%">
+          <code>TemporalField</code>: the field to set in the result, not null</p></td>
+      </tr>
+      <tr>
+        <td><code>newValue</code></td>
+        <td width="100%">
+          <code>long</code>: the new value of the field in the result</p></td>
+      </tr>
+    </table>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="Year.html">Year</a></code></td>
+        <td width="100%">a <code>Year</code> based on <code>this</code> with the specified field set, not null</p></td>
+      </tr>
+    </table>
+      <table class="responsive">
+      <tr><th colspan=2>Throws</th></tr>
+        <tr>
+          <td><code><a href="DateTimeException.html">DateTimeException</a></code></td>
+          <td width="100%">if the field cannot be set</td>
+        </tr>
+        <tr>
+          <td><code><a href="temporal/UnsupportedTemporalTypeException.html">UnsupportedTemporalTypeException</a></code></td>
+          <td width="100%">if the field is not supported</td>
+        </tr>
+        <tr>
+          <td><code><a href="../lang/ArithmeticException.html">ArithmeticException</a></code></td>
+          <td width="100%">if numeric overflow occurs
+</td>
+        </tr>
+      </table>
+  
+
+</div>
+
+
+<A NAME="with(java.time.temporal.TemporalAdjuster)"></A>
+
+<div class="api apilevel-27">
+    <h3 class="api-name">with</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 27</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="Year.html">Year</a> with (<a href="temporal/TemporalAdjuster.html">TemporalAdjuster</a> adjuster)</pre>
+    
+    
+
+    
+  <p>Returns an adjusted copy of this year.
+ <p>
+ This returns a <code>Year</code>, based on this one, with the year adjusted.
+ The adjustment takes place using the specified adjuster strategy object.
+ Read the documentation of the adjuster to understand what adjustment will be made.
+ <p>
+ The result of this method is obtained by invoking the
+ <code><a href="temporal/TemporalAdjuster.html#adjustInto(java.time.temporal.Temporal)">adjustInto(Temporal)</a></code> method on the
+ specified adjuster passing <code>this</code> as the argument.
+ <p>
+ This instance is immutable and unaffected by this method call.</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>adjuster</code></td>
+        <td width="100%">
+          <code>TemporalAdjuster</code>: the adjuster to use, not null</p></td>
+      </tr>
+    </table>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="Year.html">Year</a></code></td>
+        <td width="100%">a <code>Year</code> based on <code>this</code> with the adjustment made, not null</p></td>
+      </tr>
+    </table>
+      <table class="responsive">
+      <tr><th colspan=2>Throws</th></tr>
+        <tr>
+          <td><code><a href="DateTimeException.html">DateTimeException</a></code></td>
+          <td width="100%">if the adjustment cannot be made</td>
+        </tr>
+        <tr>
+          <td><code><a href="../lang/ArithmeticException.html">ArithmeticException</a></code></td>
+          <td width="100%">if numeric overflow occurs
+</td>
+        </tr>
+      </table>
+  
+
+</div>
+
+
+
+
+
+<!-- ========= METHOD DETAIL ======== -->
+
+
+
+<!-- ========= END OF CLASS DATA ========= -->
+
+</div><!-- end jd-content -->
+
+
+
+<div class="data-reference-resources-wrapper">
+  
+  <ul data-reference-resources>
+    
+    
+    
+    <li><h2>Classes</h2>
+      <ul>
+          <li class="api apilevel-26"><a href="Clock.html">Clock</a></li>
+          <li class="api apilevel-26"><a href="Duration.html">Duration</a></li>
+          <li class="api apilevel-26"><a href="Instant.html">Instant</a></li>
+          <li class="api apilevel-26"><a href="LocalDate.html">LocalDate</a></li>
+          <li class="api apilevel-26"><a href="LocalDateTime.html">LocalDateTime</a></li>
+          <li class="api apilevel-26"><a href="LocalTime.html">LocalTime</a></li>
+          <li class="api apilevel-26"><a href="MonthDay.html">MonthDay</a></li>
+          <li class="api apilevel-26"><a href="OffsetDateTime.html">OffsetDateTime</a></li>
+          <li class="api apilevel-26"><a href="OffsetTime.html">OffsetTime</a></li>
+          <li class="api apilevel-26"><a href="Period.html">Period</a></li>
+          <li class="selected api apilevel-26"><a href="Year.html">Year</a></li>
+          <li class="api apilevel-26"><a href="YearMonth.html">YearMonth</a></li>
+          <li class="api apilevel-26"><a href="ZonedDateTime.html">ZonedDateTime</a></li>
+          <li class="api apilevel-26"><a href="ZoneId.html">ZoneId</a></li>
+          <li class="api apilevel-26"><a href="ZoneOffset.html">ZoneOffset</a></li>
+      </ul>
+    </li>
+    
+    <li><h2>Enums</h2>
+      <ul>
+          <li class="api apilevel-26"><a href="DayOfWeek.html">DayOfWeek</a></li>
+          <li class="api apilevel-26"><a href="Month.html">Month</a></li>
+      </ul>
+    </li>
+    
+    <li><h2>Exceptions</h2>
+      <ul>
+          <li class="api apilevel-26"><a href="DateTimeException.html">DateTimeException</a></li>
+      </ul>
+    </li>
+    
+  </ul>
+  
+</div>
+
+
+
+
+    </div>
+
+    
+
+  
+    
+  
+    
+
+
+
+
+  
+
+
+<footer class="devsite-footer-promos nocontent">
+  <nav class="devsite-full-site-width">
+    <ul class="devsite-footer-promos-list">
+      
+      <li class="devsite-footer-promo">
+        <a href="http://twitter.com/AndroidDev"
+           class="devsite-footer-promo-title gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Twitter Promo"
+           >
+          
+          
+          <img class="devsite-footer-promo-icon" src="https://developer.android.com/static/images/footer/logo-twitter.svg">
+          
+          
+            Twitter
+          
+        </a>
+        <div class="devsite-footer-promo-description">Follow @AndroidDev on Twitter</div>
+      </li>
+      
+      <li class="devsite-footer-promo">
+        <a href="http://plus.google.com/+AndroidDevelopers"
+           class="devsite-footer-promo-title gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Google+ Promo"
+           >
+          
+          
+          <img class="devsite-footer-promo-icon" src="../../../../www.gstatic.com/images/branding/product/2x/google_plus_48dp.png">
+          
+          
+            Google+
+          
+        </a>
+        <div class="devsite-footer-promo-description">Follow Android Developers on Google+</div>
+      </li>
+      
+      <li class="devsite-footer-promo">
+        <a href="http://www.youtube.com/user/androiddevelopers"
+           class="devsite-footer-promo-title gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer YouTube Promo"
+           >
+          
+          
+          <img class="devsite-footer-promo-icon" src="../../../../www.gstatic.com/images/icons/material/product/2x/youtube_48dp.png">
+          
+          
+            YouTube
+          
+        </a>
+        <div class="devsite-footer-promo-description">Check out Android Developers on YouTube</div>
+      </li>
+      
+    </ul>
+  </nav>
+</footer>
+
+
+
+<div class="wrap dac-footer-container">
+  <footer class="dac-footer ">
+    <div class="cols dac-footer-main">
+      <div class="col-1of1">
+        <div class="dac-footer-contact">
+          
+          <a class="dac-footer-contact-link" href="https://developer.android.com/newsletter/index.html" title="Newsletter">Newsletter</a>
+          
+          <a class="dac-footer-contact-link" href="https://android-developers.blogspot.com/" title="Blog" target="_blank">Blog</a>
+          
+          <a class="dac-footer-contact-link" href="https://developer.android.com/support.html" title="Support">Support</a>
+          
+          <a class="dac-footer-contact-link" href="https://docs.google.com/forms/d/e/1FAIpQLSf27XIxoFmNpTjTYdk-m1uKWGqEnd7_4C_E1AD5fdCfyTBWNA/viewform?usp=pp_url&amp;entry.1909689089&amp;entry.208743710&amp;entry.408796755&amp;entry.1341430893&amp;entry.594931249&amp;entry.1640656812&amp;entry.1759804042&amp;entry.1441312344=developer.android.com" title="Join user studies" target="_blank">Join user studies</a>
+        </div>
+      </div>
+    </div>
+
+    <hr class="dac-footer-separator"/>
+      
+      <p class="dac-footer-copyright">
+        
+        Except as noted, this content is licensed under <a href="http://creativecommons.org/licenses/by/2.5/" target="_blank">Creative Commons Attribution 2.5</a>. For details and restrictions, see the <a href="https://developer.android.com/license.html">Content License</a>.
+      </p>
+    
+
+    <p class="dac-footer-links">
+      
+      <a href="https://www.android.com/" title="Android.com" target="_blank">Android.com</a>
+      
+      <a href="https://developer.android.com/" title="Android Developers">Android Developers</a>
+      
+      <a href="https://developer.android.com/studio/index.html" title="Android Studio">Android Studio</a>
+      
+      <a href="https://developer.android.com/distribute/console/index.html" title="Google Play Console">Google Play Console</a>
+      
+      <a href="https://developer.android.com/legal.html" title="Legal Notice">Legal Notice</a>
+    </p>
+
+    
+    <form class="devsite-utility-footer-language" id="setlang" action="https://developer.android.com/i18n/setlang/" method="post">
+      <input type="hidden" name="xsrf_token" value="PFuyobOGPc9tWYdCpCeH3YJV02IFuVavxrlWIaZhWis6MTUxMTEwODkzNDg3Nzg0MA" />
+      <input type="hidden" name="next" value="Year.html">
+      <span id="language" class="locales">
+        <select class="devsite-utility-footer-language-select" name="language">
+          
+          <option value="id"
+            >
+            Bahasa Indonesia
+          </option>
+          
+          <option value="de"
+            >
+            Deutsch
+          </option>
+          
+          <option value="en"
+             selected="selected" >
+            English
+          </option>
+          
+          <option value="es"
+            >
+            español
+          </option>
+          
+          <option value="es-419"
+            >
+            Español (América Latina)
+          </option>
+          
+          <option value="fr"
+            >
+            français
+          </option>
+          
+          <option value="pt-br"
+            >
+            Português Brasileiro
+          </option>
+          
+          <option value="vi"
+            >
+            Tiếng Việt
+          </option>
+          
+          <option value="tr"
+            >
+            Türkçe
+          </option>
+          
+          <option value="ru"
+            >
+            Русский
+          </option>
+          
+          <option value="th"
+            >
+            ภาษาไทย
+          </option>
+          
+          <option value="ja"
+            >
+            日本語
+          </option>
+          
+          <option value="zh-cn"
+            >
+            简体中文
+          </option>
+          
+          <option value="zh-tw"
+            >
+            繁體中文
+          </option>
+          
+          <option value="ko"
+            >
+            한국어
+          </option>
+          
+        </select>
+      </span>
+    </form>
+  </footer>
+</div><!--/.wrap -->
+
+<div class="dac-toast-group">
+  <div class="dac-toast" data-toast>
+    <div class="dac-toast-wrap">
+      
+      This site uses cookies to store your preferences for site-specific language and display options.
+      <button class="dac-toast-close-btn">
+        
+        <span class="dac-button dac-raised dac-primary">OK</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<div data-modal="newsletter" data-newsletter-fb data-swap class="dac-modal newsletter">
+  <div class="dac-modal-container">
+    <div class="dac-modal-window">
+      <header class="dac-modal-header">
+        <div class="dac-modal-header-actions">
+          <button class="dac-modal-header-close" data-modal-toggle></button>
+        </div>
+        <div class="dac-swap" data-swap-container>
+          <section class="dac-swap-section dac-active dac-down">
+            
+            <h2 class="norule dac-modal-header-title" data-t="newsletter.title">Get the latest Android developer news and tips that will help you find success on Google Play.</h2>
+            
+            <p class="dac-modal-header-subtitle" data-t="newsletter.requiredHint">* Required Fields</p>
+          </section>
+          <section class="dac-swap-section dac-up">
+            
+            <h2 class="norule dac-modal-header-title" data-t="newsletter.successTitle">Hooray!</h2>
+          </section>
+        </div>
+      </header>
+      <div class="dac-swap" data-swap-container>
+        <section class="dac-swap-section dac-active dac-left">
+          <form action="https://services.google.com/fb/submissions/android-developer-mailing-list/" class="dac-form" method="post">
+            <section class="dac-modal-content">
+              <fieldset class="dac-form-fieldset">
+                <div class="cols">
+                  <div class="col-1of2 newsletter-leftCol">
+                    <div class="dac-form-input-group">
+                      
+                      <label for="newsletter-full-name" class="dac-form-floatlabel" data-t="newsletter.name">Full name</label>
+                      <input type="text" class="dac-form-input" name="fullname" id="newsletter-full-name" required>
+                      <span class="dac-form-required">*</span>
+                    </div>
+                    <div class="dac-form-input-group">
+                      
+                      <label for="newsletter-email" class="dac-form-floatlabel" data-t="newsletter.email">Email address</label>
+                      <input type="email" class="dac-form-input" name="emailaddress" id="newsletter-email" required>
+                      <span class="dac-form-required">*</span>
+                    </div>
+                  </div>
+                  <div class="col-1of2 newsletter-rightCol">
+                    <div class="dac-form-input-group">
+                      
+                      <label for="newsletter-company" class="dac-form-floatlabel" data-t="newsletter.company">Company / developer name</label>
+                      <input type="text" class="dac-form-input" name="companydevelopername" id="newsletter-company">
+                    </div>
+                    <div class="dac-form-input-group">
+                      
+                      <label for="newsletter-play-store" class="dac-form-floatlabel" data-t="newsletter.appUrl">One of your Play Store app URLs</label>
+                      <input type="url" class="dac-form-input" name="playstoreappurls" id="newsletter-play-store">
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+              <fieldset class="dac-form-fieldset">
+                <div class="cols">
+                  
+                  <div class="col-1of2 newsletter-leftCol newsletter-interested" data-validation-message="Please check at least one item.">
+                    
+                    <legend class="dac-form-legend">What are you interested in?<span class="dac-form-required">*</span></legend>
+                    <div class="dac-form-radio-group">
+                      <input type="checkbox" class="dac-form-checkbox" name="interested" id="interested-whats-new" value="whats-new">
+                      <label for="interested-whats-new" class="dac-form-checkbox-button"></label>
+                      
+                      <label for="interested-whats-new" class="dac-form-label">What's new</label>
+                    </div>
+                    <div class="dac-form-radio-group">
+                      <input type="checkbox" class="dac-form-checkbox" name="interested" id="interested-games-updates" value="games-updates">
+                      <label for="interested-games-updates" class="dac-form-checkbox-button"></label>
+                      
+                      <label for="interested-games-updates" class="dac-form-label">Games updates</label>
+                    </div>
+                    <div class="dac-form-radio-group">
+                      <input type="checkbox" class="dac-form-checkbox" name="interested" id="interested-android-development" value="android-development">
+                      <label for="interested-android-development" class="dac-form-checkbox-button"></label>
+                      
+                      <label for="interested-android-development" class="dac-form-label">Android development</label>
+                    </div>
+                  </div>
+                  <div class="col-1of2 newsletter-rightCol newsletter-checkboxes">
+                    <div class="dac-form-input-group">
+                      
+                      <label for="newsletter-receive-in">Receive newsletter in</label>
+                      <select name="language" class="dac-form-select" id="newsletter-receive-in">
+                        <option value="en-US" selected>English</option>
+                        <option value="ar">Arabic</option>
+                        <option value="zh">Chinese (Simplified)</option>
+                        <option value="zh-TW">Chinese (Traditional)</option>
+                        <option value="fr">French</option>
+                        <option value="de">German</option>
+                        <option value="id">Indonesian (Bahasa)</option>
+                        <option value="ja">Japanese</option>
+                        <option value="ko">Korean</option>
+                        <option value="pt-BR">Portuguese (Brazilian)</option>
+                        <option value="ru">Russian</option>
+                        <option value="es-419">Spanish (Latin American)</option>
+                        <option value="th">Thai</option>
+                        <option value="tr">Turkish</option>
+                        <option value="vi">Vietnamese</option>
+                      </select>
+                    </div>
+                    <div class="dac-form-radio-group">
+                      <div class="dac-media">
+                        <div class="dac-media-figure">
+                          <input type="checkbox" class="dac-form-checkbox" name="marketingoptin" id="newsletter-add" required value="Add me to the mailing list.">
+                          <label for="newsletter-add" class="dac-form-checkbox-button"></label>
+                        </div>
+                        <div class="dac-media-body">
+                          <label for="newsletter-add" class="dac-form-label dac-form-aside">
+                            
+                            Add me to the mailing list.
+                            <span class="dac-form-required">*</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="dac-form-radio-group">
+                      <div class="dac-media">
+                        <div class="dac-media-figure">
+                          <input type="checkbox" class="dac-form-checkbox" name="privacystatement" id="newsletter-terms" required value="I acknowledge that the information provided in this form will be subject to Google's privacy policy (https://www.google.com/policies/privacy/).">
+                          <label for="newsletter-terms" class="dac-form-checkbox-button"></label>
+                        </div>
+                        <div class="dac-media-body">
+                          <label for="newsletter-terms" class="dac-form-label dac-form-aside"><span data-t="newsletter.privacyPolicy" data-t-html>
+                            
+                            I acknowledge that the information provided in this form will be subject to <a href="https://www.google.com/policies/privacy/">Google's privacy policy</a>.
+                          </span>
+                          <span class="dac-form-required">*</span></label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+            </section>
+            <input type="hidden" name="referrer" value="dac">
+            <footer class="dac-modal-footer">
+              <div class="cols">
+                <div class="col-2of5">
+                </div>
+              </div>
+              <button type="submit" value="Submit" class="dac-fab dac-primary dac-large dac-modal-action"><i class="dac-sprite dac-arrow-right"></i></button>
+            </footer>
+          </form>
+        </section>
+        <section class="dac-swap-section dac-right">
+          <div class="dac-modal-content">
+            <p class="newsletter-success-message" data-t="newsletter.successDetails">
+              
+              You have successfully signed up for the latest Android developer news and tips.
+            </p>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</div><!--/.dac-modal.newsletter-->
+
+<div data-modal="wechat" class="dac-modal">
+  <div class="dac-modal-container">
+    <div class="dac-modal-window">
+      <header class="dac-modal-header">
+        <div class="dac-modal-header-actions">
+          <button class="dac-modal-header-close" data-modal-toggle></button>
+        </div>
+        <section>
+          
+          <h2 class="norule dac-modal-header-title">Follow Google Developers on WeChat</h2>
+        </section>
+      </header>
+      <section class="dac-modal-content figure-center center-img">
+        <img src="../../../static/images/qr-wechat.png">
+      </section>
+    </div>
+  </div>
+</div><!--/.dac-modal[dac-modal=wechat]-->
+
+
+<div data-modal="langform" class="dac-modal" id="langform">
+  <div class="dac-modal-container">
+    <div class="dac-modal-window">
+      <header class="dac-modal-header">
+        <div class="dac-modal-header-actions">
+          <button class="dac-modal-header-close" data-modal-toggle></button>
+        </div>
+        <section class="dac-swap-section dac-active dac-down">
+          <h2 class="norule dac-modal-header-title">
+            
+            Browse this site in <span class="span-target-lang"></span>?
+          </h2>
+        </section>
+      </header>
+      <section class="dac-swap-section dac-active dac-left">
+          <section class="dac-modal-content">
+            <fieldset class="dac-form-fieldset">
+              <div class="cols">
+                <div class="col-2of2 langform-leftCol">
+                  <p id="resetLangText">
+                    
+                    You requested a page in <span class="span-target-lang"></span>, but your language preference for this site is <span class="span-current-lang"></span>.
+                  </p>
+                  <p id="resetLangCta">
+                    
+                    Would you like to change your language preference and browse this site in <span class="span-target-lang"></span>? If you want to change your language preference later, use the language menu at the bottom of each page.
+                  </p>
+                </div>
+              </div>
+            </fieldset>
+          </section>
+          <footer class="dac-modal-footer" id="langfooter">
+            <div class="cols">
+              <div class="col-2of5">
+              </div>
+            </div>
+            <a href="#" class="yes" onclick="return false;">
+              <button class="button dac-primary dac-modal-action lang yes" data-t="newsletter.resetLangButtonYes" data-modal-toggle>
+                
+                Change Language
+              </button>
+            </a>
+            <a href="#" class="" onclick="return false;">
+              <button class="button dac-primary dac-modal-action lang no" data-t="newsletter.resetLangButtonNo" data-modal-toggle>
+                
+                Not Now
+              </button>
+            </a>
+          </footer>
+        </form>
+      </section>
+    </div>
+  </div>
+</div><!--/.dac-modal-->
+
+
+<div data-modal="api-unavailable" class="dac-modal" id="api-unavailable">
+  <div class="dac-modal-container">
+    <div class="dac-modal-window">
+      <header class="dac-modal-header">
+        <div class="dac-modal-header-actions">
+          <button class="dac-modal-header-close" data-modal-toggle></button>
+        </div>
+        <section class="dac-swap-section dac-active dac-down">
+          <h2 class="norule dac-modal-header-title">
+            
+            This class requires API level <span class="api-level"></span> or higher
+          </h2>
+        </section>
+      </header>
+      <section class="dac-swap-section dac-active dac-left">
+          <section class="dac-modal-content">
+            <p>
+              
+              This doc is hidden because your selected API level for the documentation is <span class="api-level"></span>. You can change the documentation API level with the selector above the left navigation.
+            </p>
+            
+            <p>For more information about specifying the API level your app requires, read <a href="https://developer.android.com/training/basics/supporting-devices/platforms.html">Supporting Different Platform Versions</a>.</p>
+          </section>
+          <footer class="dac-modal-footer" id="langfooter">
+            <div class="cols">
+              <div class="col-2of5">
+              </div>
+            </div>
+            <a href="#" class="ok" onclick="return false;">
+              <button class="button dac-primary dac-modal-action ok"
+              data-modal-toggle>
+                
+                OK, make this page visible
+              </button>
+            </a>
+          </footer>
+        </form>
+      </section>
+    </div>
+  </div>
+</div><!--/.dac-modal#api-unavailable-->
+
+    
+  </div><!--/#body-content-->
+
+  <!-- Nav Setup -->
+  <script>$('[data-dac-nav]').dacNav();</script>
+  <script type="text/javascript">
+    $('.slideshow-container').dacSlideshow({
+        btnPrev: '.slideshow-prev',
+        btnNext: '.slideshow-next',
+        btnPause: '#pauseButton'
+    });
+
+    $(".feed").dacTabbedList({
+      nav_id: '.feed-nav',
+      frame_id: '.feed-frame'
+    });
+  </script>
+  
+  <script src="../../../ytblogger_lists_unified9a55.js?v=2017111904" defer></script>
+  <script src="../../../android_metadata_en9a55.js?v=2017111904" defer></script>
+  
+  <script src="../../lists9a55.js?v=2017111904" defer></script>
+  <script src="../../gms_lists9a55.js?v=2017111904" defer></script>
+  <script src="../../android/support/wearable/lists9a55.js?v=2017111904" defer></script>
+  <script src="../../android/support/test/lists9a55.js?v=2017111904" defer></script>
+  <script src="../../android/support/constraint/lists9a55.js?v=2017111904" defer></script>
+  <script src="../../android/arch/lists9a55.js?v=2017111904" defer></script>
+  <script src="https://developer.android.com/_static2/268f0926ba/jsi18n/"></script>
+  <script>
+    // Load localized metadata.
+    (function(lang) {
+      if (lang === 'en') { return; }
+      document.write('<script src="https://developer.android.com/android_metadata_en.js?v=2017111904" defer></' + 'script>');
+    })(getLangPref())
+
+    // Add skip to content for accessibility.
+    $('#skip-to-main').click(function() {
+      $('a[name=top]').focus();
+    });
+
+    $('.devsite-utility-footer-language-select').each(function() {
+      $(this).change(function() {
+        changeLangPref(this.value, true)
+        $('.devsite-utility-footer-language').submit();
+      });
+    });
+  </script>
+
+  <script>
+    (function($) {
+      devsite.analytics.InitAnalytics();
+      devsite.navigatingRadio.init();
+      devsite.kennedy.InitializeTabbars();
+      // overflowMenu must be initialized after tabbar.
+      devsite.overflowMenu.init();
+    })(jQuery);
+  </script>
+
+  
+
+
+<div id="survey-box-wrapper">
+  <div class="material-dialog" style="width:270px">
+    <div class="material-dialog-title">
+      Take a short survey?
+    </div>
+    <div class="material-dialog-description">
+      Help us improve the Android developer experience.
+      <br>(Sep 2017 survey)
+    </div>
+    <div class="material-button-bar">
+      <a class="dac-button dac-primary dac-raised" target="_blank"
+          href="https://goo.gl/dNPzCR">Okay</a>
+      <a class="dac-button" href="#">No thanks</a>
+    </div>
+  </div>
+</div>
+
+</body>
+
+<!-- Mirrored from developer.android.com/reference/java/time/Year.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 19 Nov 2017 16:49:08 GMT -->
+</html>

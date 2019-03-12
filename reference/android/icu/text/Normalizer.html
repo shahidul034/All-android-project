@@ -1,0 +1,2839 @@
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/Article">
+
+<!-- Mirrored from developer.android.com/reference/android/icu/text/Normalizer.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 19 Nov 2017 16:43:01 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+
+  
+
+
+
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+
+
+
+
+
+<script>var a=window.devsite||{};window.devsite=a;a.readyCallbacks=[];window.devsite.readyCallbacks=a.readyCallbacks;a.ready=function(b){a.readyCallbacks.push(b)};window.devsite.ready=a.ready;
+</script>
+
+<meta charset="utf-8">
+
+
+
+<meta name="xsrf_token" content="jC_KacXKZw2fjrc1PN_5bwpHAenjOcntn_7Ym5hAPHk6MTUxMTEwNjk4MTYzMDcyMA" />
+
+  
+    <link rel="canonical" href="Normalizer.html">
+  
+
+  
+    <link rel="alternate" href="Normalizer.html" hreflang="en">
+  
+    <link rel="alternate" href="https://developer.android.google.cn/reference/android/icu/text/Normalizer.html" hreflang="en-cn">
+  
+
+  <link rel="alternate" href="Normalizer.html" hreflang="x-default">
+
+
+
+
+<link rel="shortcut icon" href="../../../../_static/268f0926ba/images/android/favicon.png">
+
+<link rel="apple-touch-icon" href="../../../../_static/268f0926ba/images/android/touchicon-180.png">
+
+
+<title>
+
+  Normalizer | Android Developers
+
+</title>
+
+
+
+  <meta itemprop="dateModified" content="2017-10-25T17:01:10.032450">
+
+
+<!-- STYLESHEETS -->
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto+Condensed">
+<link rel="stylesheet"
+    href="http://fonts.googleapis.com/css?family=Roboto:light,regular,medium,thin,italic,mediumitalic,bold"
+    title="roboto">
+<link rel="stylesheet" href="../../../../_static/268f0926ba/css/dac-devsite.css">
+
+
+
+
+
+
+
+<link href="../../../../static/css/default543b.css?v=2017111903" rel="stylesheet" type="text/css">
+<!-- JAVASCRIPT -->
+<script src="../../../../_static/268f0926ba/js/android_3p-bundle.js" type="text/javascript"></script>
+<script src="../../../../_static/268f0926ba/js/script_foot_closure_android.js"></script>
+<script src="../../../../_static/268f0926ba/js/script_foot_android.js"></script>
+
+<script type="text/javascript">
+  var toRoot = 'https://developer.android.com/';
+  devsite.permissions.init({"f62218c009ec029abef196bba5aa34cf": true, "098dafe57affddc137df300142652cfd": false, "8e03e230de0bd8a6fe173fdf172e8b3f": false, "cb025a64a50094835616312f4774a53d": true, "c95bf81627eb648c2345aec06a66200a": true, "51470233c56fc1fde50f00b73c52b216": false, "d169d485cf24243a263783dbe42029b1": true, "039e5d84b87fd75807ffb37b7f1bbf2c": true, "752953480de00a336d911a46966cc16d": false, "700def1a83e356c06c0925afb05de4b0": false, "6749dcb526ce9bde6993550c7d928d24": true});
+
+  var replaceBlog = false;
+  var replaceYouTube = false;
+  var siteDefaultLocale = 'en';
+
+  var ANDROID_LANGUAGES = [
+      'id','de','en','es','es-419','fr','pt-br','vi','tr','ru','th','ja','zh-cn','zh-tw','ko'
+  ];
+</script>
+<script src="../../../../static/js/docs543b.js?v=2017111903" type="text/javascript"></script>
+
+
+</head>
+
+<body class="gc-documentation
+            api apilevel-24
+            
+              develop
+              reference
+            
+            ">
+  
+
+
+  
+    <input class="google-analytics-id-json" type="hidden" value="{&quot;dimensions&quot;: {&quot;dimension6&quot;: &quot;en&quot;, &quot;dimension4&quot;: &quot;Reference&quot;, &quot;dimension5&quot;: &quot;en&quot;, &quot;dimension3&quot;: false, &quot;dimension1&quot;: &quot;Signed out&quot;, &quot;dimension8&quot;: null}, &quot;gaid&quot;: &quot;UA-49880327-2&quot;}">
+  
+    <input class="google-analytics-id-json" type="hidden" value="{&quot;dimensions&quot;: {&quot;dimension6&quot;: &quot;en&quot;, &quot;dimension4&quot;: &quot;Reference&quot;, &quot;dimension5&quot;: &quot;en&quot;, &quot;dimension3&quot;: false, &quot;dimension1&quot;: &quot;Signed out&quot;, &quot;dimension8&quot;: null}, &quot;gaid&quot;: &quot;UA-5831155-1&quot;}">
+  
+
+
+
+  
+  
+    <script>
+      var dataLayer = [{"freeTrialEligibleUser": "False", "userCountry": "BD", "language": {"requested": "en", "served": "en"}, "projectName": "Reference", "scriptsafe": null, "signedIn": "False", "internalUser": "False"}];
+    </script>
+  
+
+
+
+  
+  <a href="#top" id="skip-to-main">Skip to content</a>
+  <header id="header-wrapper">
+    <div class="dac-header" id="header">
+      <div class="dac-header-inner">
+        
+        <a class="dac-nav-toggle" data-dac-toggle-nav href="#" title="Open navigation">
+          <span class="dac-nav-hamburger">
+            <span class="dac-nav-hamburger-top"></span>
+            <span class="dac-nav-hamburger-mid"></span>
+            <span class="dac-nav-hamburger-bot"></span>
+          </span>
+        </a>
+        
+        <a class="dac-header-logo" href="https://developer.android.com/index.html">
+          <img class="dac-header-logo-image" src="../../../../static/images/android_logo.png"
+              srcset="https://developer.android.com/static/images/android_logo_2x.png 2x"
+              width="32" height="36" alt="Android"> Developers</a>
+        <ul class="dac-header-tabs">
+          <li>
+            <a class="dac-header-tab" href="https://developer.android.com/design/index.html"
+               zh-tw-lang="設計"
+               zh-cn-lang="设计"
+               ru-lang="Проектирование"
+               ko-lang="디자인"
+               ja-lang="設計"
+               es-lang="Diseñar">
+              
+              Design</a>
+          </li>
+          <li>
+            <a class="dac-header-tab" href="https://developer.android.com/develop/index.html"
+               zh-tw-lang="開發"
+               zh-cn-lang="开发"
+               ru-lang="Разработка"
+               ko-lang="개발"
+               ja-lang="開発"
+               es-lang="Desarrollar">
+              
+              Develop</a>
+          </li>
+          <li>
+            <a class="dac-header-tab" href="https://developer.android.com/distribute/index.html"
+               zh-tw-lang="發佈"
+               zh-cn-lang="分发"
+               ru-lang="Распространение"
+               ko-lang="배포"
+               ja-lang="配布"
+               es-lang="Distribuir">
+              
+              Distribute</a>
+          </li>
+        </ul>
+
+
+        
+
+        <a class="dac-header-console-btn gc-analytics-event" href="https://play.google.com/apps/publish/"
+           data-category="User" data-action="Console" data-label="Clicked">
+          
+          <img src="https://developer.android.com/static/images/developer-console-icon.svg" width="18" height="19" alt="">Play Console</a>
+        
+
+<form data-search="" class="dac-header-search">
+  <button class="dac-header-search-close" data-search-close="">
+    <i class="dac-sprite dac-back-arrow"></i>
+  </button>
+
+  <div class="dac-header-search-inner">
+    <i class="dac-sprite dac-search-white dac-header-search-icon"></i>
+    
+    <input id="search_autocomplete" type="text" value="" autocomplete="off" name="q" class="dac-header-search-input" placeholder="Search">
+    <button class="dac-header-search-clear dac-hidden" data-search-clear="">
+      <i class="dac-sprite dac-close-black"></i>
+    </button>
+  </div>
+</form>
+
+        
+      </div><!--/.header-wrap.wrap-->
+    </div><!--/.header-->
+
+    
+
+<div id="search-results" class="dac-search-results">
+  <div id="dac-search-results-history" class="dac-search-results-history">
+    <div class="wrap dac-search-results-history-wrap">
+      <div class="cols">
+        <div class="col-1of2 col-tablet-1of2 col-mobile-1of1">
+          
+          <h2>Most visited</h2>
+          <div class="resource-flow-layout" data-history-query="history:most/visited" data-maxresults="3" data-cardsizes="18x2"></div>
+        </div>
+
+        <div class="col-1of2 col-tablet-1of2 col-mobile-1of1">
+          
+          <h2>Recently visited</h2>
+          <div class="resource-flow-layout cols" data-history-query="history:recent" data-allow-duplicates="true" data-maxresults="3" data-cardsizes="18x2"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="dac-search-results-content" class="dac-search-results-content">
+    <div class="dac-search-results-metadata wrap">
+      <div class="dac-search-results-for">
+          <h2>
+          
+          Results for <span id="search-results-for"></span>
+          </h2>
+      </div>
+
+      <div id="dac-search-results-hero"></div>
+
+      <div class="dac-search-results-hero cols">
+        <div id="dac-search-results-reference" class="col-6of6 col-tablet-2of2 col-mobile-1of1">
+          <div class="suggest-card reference no-display">
+            <ul class="dac-search-results-reference">
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="cols dac-search-results-cse">
+        <script src="../../../../../cse.google.com/f4116.txt?cx=000521750095050289010:zpcpi1ea4s8" async></script>
+        <gcse:searchresults-only linkTarget="_self"></gcse:searchresults-only>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </header>
+
+  <a name="navigation" tabindex=0 class="nav-start-marker">navigation</a>
+  <nav class="dac-nav">
+    <div class="dac-nav-dimmer" data-dac-toggle-nav></div>
+    <div class="dac-nav-sidebar" data-swap data-dynamic="false" data-transition-speed="300" data-dac-nav>
+      <div data-swap-container>
+        
+        <a class="dac-nav-back-button dac-swap-section dac-up dac-no-anim" tabindex=0 data-swap-button>
+          
+          
+          <i class="dac-sprite dac-nav-back"></i> <span class="dac-nav-back-title">Back</span>
+        </a>
+
+        <div class="dac-nav-sub dac-swap-section dac-right dac-active" itemscope
+            itemtype="http://schema.org/SiteNavigationElement">
+          
+          
+            
+              
+              <button data-fullscreen="" class="dac-nav-fullscreen">
+                <i class="dac-sprite dac-fullscreen"></i>
+              </button>
+              <script>$('[data-fullscreen]').dacFullscreen();</script>
+              <div id="devdoc-nav">
+                <div id="api-nav-header">
+                  <div id="api-level-toggle">
+                    <label for="apiLevelCheckbox" class="disabled"
+                        
+                        title="Select your target API level to dim unavailable APIs">
+                        
+                        API:
+                    </label>
+                    <div class="select-wrapper">
+                      <select id="apiLevelSelector"></select>
+                    </div>
+                  </div><!-- end toggle -->
+                  <div id="api-nav-title">
+                    <select id="reference-selector">
+                      
+                      <option value="android">Android Platform</option>
+                      
+                      
+                      <option value="android/support">Android Support Library</option>
+                      
+                      
+                      <option value="android/arch">Architecture Components</option>
+                      
+                      <option value="android/support/constraint">Constraint Library</option>
+                      
+                      <option value="com/android/billingclient">Play Billing Library</option>
+                      
+                      <option value="android/support/test">Test Support Library</option>
+                      
+                      <option value="android/support/wearable">Wearable Library</option>
+                    </select>
+                  </div>
+                </div><!-- end nav header -->
+                <script>
+                  buildApiLevelSelector();
+                  initReferenceSelector();
+                </script>
+                <div class="dac-reference-nav" data-reference-tree="">
+                  <ul class="dac-reference-nav-list" data-reference-namespaces="">
+                    <li class="api no-toggle"><a href="../../../classes.html" >Class Index</a></li><li class="api no-toggle"><a href="../../../packages.html" >Package Index</a></li><li class="api apilevel-1"><a href="../../package-summary.html" >android</a></li><li class="api apilevel-4"><a href="../../accessibilityservice/package-summary.html" >android.accessibilityservice</a></li><li class="api apilevel-5"><a href="../../accounts/package-summary.html" >android.accounts</a></li><li class="api apilevel-11"><a href="../../animation/package-summary.html" >android.animation</a></li><li class="api apilevel-16"><a href="../../annotation/package-summary.html" >android.annotation</a></li><li class="api apilevel-1"><a href="../../app/package-summary.html" >android.app</a></li><li class="api apilevel-8"><a href="../../app/admin/package-summary.html" >android.app.admin</a></li><li class="api apilevel-23"><a href="../../app/assist/package-summary.html" >android.app.assist</a></li><li class="api apilevel-8"><a href="../../app/backup/package-summary.html" >android.app.backup</a></li><li class="api apilevel-21"><a href="../../app/job/package-summary.html" >android.app.job</a></li><li class="api apilevel-21"><a href="../../app/usage/package-summary.html" >android.app.usage</a></li><li class="api apilevel-3"><a href="../../appwidget/package-summary.html" >android.appwidget</a></li><li class="api apilevel-5"><a href="../../bluetooth/package-summary.html" >android.bluetooth</a></li><li class="api apilevel-21"><a href="../../bluetooth/le/package-summary.html" >android.bluetooth.le</a></li><li class="api apilevel-26"><a href="../../companion/package-summary.html" >android.companion</a></li><li class="api apilevel-1"><a href="../../content/package-summary.html" >android.content</a></li><li class="api apilevel-1"><a href="../../content/pm/package-summary.html" >android.content.pm</a></li><li class="api apilevel-1"><a href="../../content/res/package-summary.html" >android.content.res</a></li><li class="api apilevel-1"><a href="../../database/package-summary.html" >android.database</a></li><li class="api apilevel-1"><a href="../../database/sqlite/package-summary.html" >android.database.sqlite</a></li><li class="api apilevel-"><a href="../../databinding/package-summary.html" >android.databinding</a></li><li class="api apilevel-11"><a href="../../drm/package-summary.html" >android.drm</a></li><li class="api apilevel-4"><a href="../../gesture/package-summary.html" >android.gesture</a></li><li class="api apilevel-1"><a href="../../graphics/package-summary.html" >android.graphics</a></li><li class="api apilevel-1"><a href="../../graphics/drawable/package-summary.html" >android.graphics.drawable</a></li><li class="api apilevel-1"><a href="../../graphics/drawable/shapes/package-summary.html" >android.graphics.drawable.shapes</a></li><li class="api apilevel-26"><a href="../../graphics/fonts/package-summary.html" >android.graphics.fonts</a></li><li class="api apilevel-19"><a href="../../graphics/pdf/package-summary.html" >android.graphics.pdf</a></li><li class="api apilevel-1"><a href="../../hardware/package-summary.html" >android.hardware</a></li><li class="api apilevel-21"><a href="../../hardware/camera2/package-summary.html" >android.hardware.camera2</a></li><li class="api apilevel-21"><a href="../../hardware/camera2/params/package-summary.html" >android.hardware.camera2.params</a></li><li class="api apilevel-17"><a href="../../hardware/display/package-summary.html" >android.hardware.display</a></li><li class="api apilevel-23"><a href="../../hardware/fingerprint/package-summary.html" >android.hardware.fingerprint</a></li><li class="api apilevel-16"><a href="../../hardware/input/package-summary.html" >android.hardware.input</a></li><li class="api apilevel-12"><a href="../../hardware/usb/package-summary.html" >android.hardware.usb</a></li><li class="api apilevel-24"><a href="../lang/package-summary.html" >android.icu.lang</a></li><li class="api apilevel-24"><a href="../math/package-summary.html" >android.icu.math</a></li><li class="api apilevel-24"><a href="package-summary.html" >android.icu.text</a></li><li class="api apilevel-24"><a href="../util/package-summary.html" >android.icu.util</a></li><li class="api apilevel-3"><a href="../../inputmethodservice/package-summary.html" >android.inputmethodservice</a></li><li class="api apilevel-1"><a href="../../location/package-summary.html" >android.location</a></li><li class="api apilevel-1"><a href="../../media/package-summary.html" >android.media</a></li><li class="api apilevel-9"><a href="../../media/audiofx/package-summary.html" >android.media.audiofx</a></li><li class="api apilevel-21"><a href="../../media/browse/package-summary.html" >android.media.browse</a></li><li class="api apilevel-14"><a href="../../media/effect/package-summary.html" >android.media.effect</a></li><li class="api apilevel-23"><a href="../../media/midi/package-summary.html" >android.media.midi</a></li><li class="api apilevel-21"><a href="../../media/projection/package-summary.html" >android.media.projection</a></li><li class="api apilevel-21"><a href="../../media/session/package-summary.html" >android.media.session</a></li><li class="api apilevel-21"><a href="../../media/tv/package-summary.html" >android.media.tv</a></li><li class="api apilevel-12"><a href="../../mtp/package-summary.html" >android.mtp</a></li><li class="api apilevel-1"><a href="../../net/package-summary.html" >android.net</a></li><li class="api apilevel-1"><a href="../../net/http/package-summary.html" >android.net.http</a></li><li class="api apilevel-16"><a href="../../net/nsd/package-summary.html" >android.net.nsd</a></li><li class="api apilevel-12"><a href="../../net/rtp/package-summary.html" >android.net.rtp</a></li><li class="api apilevel-9"><a href="../../net/sip/package-summary.html" >android.net.sip</a></li><li class="api apilevel-1"><a href="../../net/wifi/package-summary.html" >android.net.wifi</a></li><li class="api apilevel-26"><a href="../../net/wifi/aware/package-summary.html" >android.net.wifi.aware</a></li><li class="api apilevel-26"><a href="../../net/wifi/hotspot2/package-summary.html" >android.net.wifi.hotspot2</a></li><li class="api apilevel-26"><a href="../../net/wifi/hotspot2/omadm/package-summary.html" >android.net.wifi.hotspot2.omadm</a></li><li class="api apilevel-26"><a href="../../net/wifi/hotspot2/pps/package-summary.html" >android.net.wifi.hotspot2.pps</a></li><li class="api apilevel-14"><a href="../../net/wifi/p2p/package-summary.html" >android.net.wifi.p2p</a></li><li class="api apilevel-16"><a href="../../net/wifi/p2p/nsd/package-summary.html" >android.net.wifi.p2p.nsd</a></li><li class="api apilevel-9"><a href="../../nfc/package-summary.html" >android.nfc</a></li><li class="api apilevel-19"><a href="../../nfc/cardemulation/package-summary.html" >android.nfc.cardemulation</a></li><li class="api apilevel-10"><a href="../../nfc/tech/package-summary.html" >android.nfc.tech</a></li><li class="api apilevel-1"><a href="../../opengl/package-summary.html" >android.opengl</a></li><li class="api apilevel-1"><a href="../../os/package-summary.html" >android.os</a></li><li class="api apilevel-24"><a href="../../os/health/package-summary.html" >android.os.health</a></li><li class="api apilevel-9"><a href="../../os/storage/package-summary.html" >android.os.storage</a></li><li class="api apilevel-1"><a href="../../preference/package-summary.html" >android.preference</a></li><li class="api apilevel-19"><a href="../../print/package-summary.html" >android.print</a></li><li class="api apilevel-19"><a href="../../print/pdf/package-summary.html" >android.print.pdf</a></li><li class="api apilevel-19"><a href="../../printservice/package-summary.html" >android.printservice</a></li><li class="api apilevel-1"><a href="../../provider/package-summary.html" >android.provider</a></li><li class="api apilevel-11"><a href="../../renderscript/package-summary.html" >android.renderscript</a></li><li class="api apilevel-1"><a href="../../sax/package-summary.html" >android.sax</a></li><li class="api apilevel-14"><a href="../../security/package-summary.html" >android.security</a></li><li class="api apilevel-23"><a href="../../security/keystore/package-summary.html" >android.security.keystore</a></li><li class="api apilevel-26"><a href="../../service/autofill/package-summary.html" >android.service.autofill</a></li><li class="api apilevel-22"><a href="../../service/carrier/package-summary.html" >android.service.carrier</a></li><li class="api apilevel-23"><a href="../../service/chooser/package-summary.html" >android.service.chooser</a></li><li class="api apilevel-17"><a href="../../service/dreams/package-summary.html" >android.service.dreams</a></li><li class="api apilevel-21"><a href="../../service/media/package-summary.html" >android.service.media</a></li><li class="api apilevel-18"><a href="../../service/notification/package-summary.html" >android.service.notification</a></li><li class="api apilevel-24"><a href="../../service/quicksettings/package-summary.html" >android.service.quicksettings</a></li><li class="api apilevel-21"><a href="../../service/restrictions/package-summary.html" >android.service.restrictions</a></li><li class="api apilevel-14"><a href="../../service/textservice/package-summary.html" >android.service.textservice</a></li><li class="api apilevel-21"><a href="../../service/voice/package-summary.html" >android.service.voice</a></li><li class="api apilevel-24"><a href="../../service/vr/package-summary.html" >android.service.vr</a></li><li class="api apilevel-7"><a href="../../service/wallpaper/package-summary.html" >android.service.wallpaper</a></li><li class="api apilevel-3"><a href="../../speech/package-summary.html" >android.speech</a></li><li class="api apilevel-4"><a href="../../speech/tts/package-summary.html" >android.speech.tts</a></li><li class="api apilevel-21"><a href="../../system/package-summary.html" >android.system</a></li><li class="api apilevel-21"><a href="../../telecom/package-summary.html" >android.telecom</a></li><li class="api apilevel-1"><a href="../../telephony/package-summary.html" >android.telephony</a></li><li class="api apilevel-5"><a href="../../telephony/cdma/package-summary.html" >android.telephony.cdma</a></li><li class="api apilevel-1"><a href="../../telephony/gsm/package-summary.html" >android.telephony.gsm</a></li><li class="api apilevel-1"><a href="../../test/package-summary.html" >android.test</a></li><li class="api apilevel-1"><a href="../../test/mock/package-summary.html" >android.test.mock</a></li><li class="api apilevel-1"><a href="../../test/suitebuilder/package-summary.html" >android.test.suitebuilder</a></li><li class="api apilevel-1"><a href="../../test/suitebuilder/annotation/package-summary.html" >android.test.suitebuilder.annotation</a></li><li class="api apilevel-1"><a href="../../text/package-summary.html" >android.text</a></li><li class="api apilevel-3"><a href="../../text/format/package-summary.html" >android.text.format</a></li><li class="api apilevel-1"><a href="../../text/method/package-summary.html" >android.text.method</a></li><li class="api apilevel-1"><a href="../../text/style/package-summary.html" >android.text.style</a></li><li class="api apilevel-1"><a href="../../text/util/package-summary.html" >android.text.util</a></li><li class="api apilevel-19"><a href="../../transition/package-summary.html" >android.transition</a></li><li class="api apilevel-1"><a href="../../util/package-summary.html" >android.util</a></li><li class="api apilevel-1"><a href="../../view/package-summary.html" >android.view</a></li><li class="api apilevel-4"><a href="../../view/accessibility/package-summary.html" >android.view.accessibility</a></li><li class="api apilevel-1"><a href="../../view/animation/package-summary.html" >android.view.animation</a></li><li class="api apilevel-26"><a href="../../view/autofill/package-summary.html" >android.view.autofill</a></li><li class="api apilevel-3"><a href="../../view/inputmethod/package-summary.html" >android.view.inputmethod</a></li><li class="api apilevel-26"><a href="../../view/textclassifier/package-summary.html" >android.view.textclassifier</a></li><li class="api apilevel-14"><a href="../../view/textservice/package-summary.html" >android.view.textservice</a></li><li class="api apilevel-1"><a href="../../webkit/package-summary.html" >android.webkit</a></li><li class="api apilevel-1"><a href="../../widget/package-summary.html" >android.widget</a></li><li class="api apilevel-1"><a href="../../../com/android/internal/util/package-summary.html" >com.android.internal.util</a></li><li class="api apilevel-1"><a href="../../../dalvik/annotation/package-summary.html" >dalvik.annotation</a></li><li class="api apilevel-1"><a href="../../../dalvik/bytecode/package-summary.html" >dalvik.bytecode</a></li><li class="api apilevel-1"><a href="../../../dalvik/system/package-summary.html" >dalvik.system</a></li><li class="api apilevel-1"><a href="../../../java/awt/font/package-summary.html" >java.awt.font</a></li><li class="api apilevel-3"><a href="../../../java/beans/package-summary.html" >java.beans</a></li><li class="api apilevel-1"><a href="../../../java/io/package-summary.html" >java.io</a></li><li class="api apilevel-1"><a href="../../../java/lang/package-summary.html" >java.lang</a></li><li class="api apilevel-1"><a href="../../../java/lang/annotation/package-summary.html" >java.lang.annotation</a></li><li class="api apilevel-26"><a href="../../../java/lang/invoke/package-summary.html" >java.lang.invoke</a></li><li class="api apilevel-1"><a href="../../../java/lang/ref/package-summary.html" >java.lang.ref</a></li><li class="api apilevel-1"><a href="../../../java/lang/reflect/package-summary.html" >java.lang.reflect</a></li><li class="api apilevel-1"><a href="../../../java/math/package-summary.html" >java.math</a></li><li class="api apilevel-1"><a href="../../../java/net/package-summary.html" >java.net</a></li><li class="api apilevel-1"><a href="../../../java/nio/package-summary.html" >java.nio</a></li><li class="api apilevel-1"><a href="../../../java/nio/channels/package-summary.html" >java.nio.channels</a></li><li class="api apilevel-1"><a href="../../../java/nio/channels/spi/package-summary.html" >java.nio.channels.spi</a></li><li class="api apilevel-1"><a href="../../../java/nio/charset/package-summary.html" >java.nio.charset</a></li><li class="api apilevel-1"><a href="../../../java/nio/charset/spi/package-summary.html" >java.nio.charset.spi</a></li><li class="api apilevel-26"><a href="../../../java/nio/file/package-summary.html" >java.nio.file</a></li><li class="api apilevel-26"><a href="../../../java/nio/file/attribute/package-summary.html" >java.nio.file.attribute</a></li><li class="api apilevel-26"><a href="../../../java/nio/file/spi/package-summary.html" >java.nio.file.spi</a></li><li class="api apilevel-1"><a href="../../../java/security/package-summary.html" >java.security</a></li><li class="api apilevel-1"><a href="../../../java/security/acl/package-summary.html" >java.security.acl</a></li><li class="api apilevel-1"><a href="../../../java/security/cert/package-summary.html" >java.security.cert</a></li><li class="api apilevel-1"><a href="../../../java/security/interfaces/package-summary.html" >java.security.interfaces</a></li><li class="api apilevel-1"><a href="../../../java/security/spec/package-summary.html" >java.security.spec</a></li><li class="api apilevel-1"><a href="../../../java/sql/package-summary.html" >java.sql</a></li><li class="api apilevel-1"><a href="../../../java/text/package-summary.html" >java.text</a></li><li class="api apilevel-26"><a href="../../../java/time/package-summary.html" >java.time</a></li><li class="api apilevel-26"><a href="../../../java/time/chrono/package-summary.html" >java.time.chrono</a></li><li class="api apilevel-26"><a href="../../../java/time/format/package-summary.html" >java.time.format</a></li><li class="api apilevel-26"><a href="../../../java/time/temporal/package-summary.html" >java.time.temporal</a></li><li class="api apilevel-26"><a href="../../../java/time/zone/package-summary.html" >java.time.zone</a></li><li class="api apilevel-1"><a href="../../../java/util/package-summary.html" >java.util</a></li><li class="api apilevel-1"><a href="../../../java/util/concurrent/package-summary.html" >java.util.concurrent</a></li><li class="api apilevel-1"><a href="../../../java/util/concurrent/atomic/package-summary.html" >java.util.concurrent.atomic</a></li><li class="api apilevel-1"><a href="../../../java/util/concurrent/locks/package-summary.html" >java.util.concurrent.locks</a></li><li class="api apilevel-24"><a href="../../../java/util/function/package-summary.html" >java.util.function</a></li><li class="api apilevel-1"><a href="../../../java/util/jar/package-summary.html" >java.util.jar</a></li><li class="api apilevel-1"><a href="../../../java/util/logging/package-summary.html" >java.util.logging</a></li><li class="api apilevel-1"><a href="../../../java/util/prefs/package-summary.html" >java.util.prefs</a></li><li class="api apilevel-1"><a href="../../../java/util/regex/package-summary.html" >java.util.regex</a></li><li class="api apilevel-24"><a href="../../../java/util/stream/package-summary.html" >java.util.stream</a></li><li class="api apilevel-1"><a href="../../../java/util/zip/package-summary.html" >java.util.zip</a></li><li class="api apilevel-1"><a href="../../../javax/crypto/package-summary.html" >javax.crypto</a></li><li class="api apilevel-1"><a href="../../../javax/crypto/interfaces/package-summary.html" >javax.crypto.interfaces</a></li><li class="api apilevel-1"><a href="../../../javax/crypto/spec/package-summary.html" >javax.crypto.spec</a></li><li class="api apilevel-1"><a href="../../../javax/microedition/khronos/egl/package-summary.html" >javax.microedition.khronos.egl</a></li><li class="api apilevel-1"><a href="../../../javax/microedition/khronos/opengles/package-summary.html" >javax.microedition.khronos.opengles</a></li><li class="api apilevel-1"><a href="../../../javax/net/package-summary.html" >javax.net</a></li><li class="api apilevel-1"><a href="../../../javax/net/ssl/package-summary.html" >javax.net.ssl</a></li><li class="api apilevel-1"><a href="../../../javax/security/auth/package-summary.html" >javax.security.auth</a></li><li class="api apilevel-1"><a href="../../../javax/security/auth/callback/package-summary.html" >javax.security.auth.callback</a></li><li class="api apilevel-1"><a href="../../../javax/security/auth/login/package-summary.html" >javax.security.auth.login</a></li><li class="api apilevel-1"><a href="../../../javax/security/auth/x500/package-summary.html" >javax.security.auth.x500</a></li><li class="api apilevel-1"><a href="../../../javax/security/cert/package-summary.html" >javax.security.cert</a></li><li class="api apilevel-1"><a href="../../../javax/sql/package-summary.html" >javax.sql</a></li><li class="api apilevel-1"><a href="../../../javax/xml/package-summary.html" >javax.xml</a></li><li class="api apilevel-8"><a href="../../../javax/xml/datatype/package-summary.html" >javax.xml.datatype</a></li><li class="api apilevel-8"><a href="../../../javax/xml/namespace/package-summary.html" >javax.xml.namespace</a></li><li class="api apilevel-1"><a href="../../../javax/xml/parsers/package-summary.html" >javax.xml.parsers</a></li><li class="api apilevel-8"><a href="../../../javax/xml/transform/package-summary.html" >javax.xml.transform</a></li><li class="api apilevel-8"><a href="../../../javax/xml/transform/dom/package-summary.html" >javax.xml.transform.dom</a></li><li class="api apilevel-8"><a href="../../../javax/xml/transform/sax/package-summary.html" >javax.xml.transform.sax</a></li><li class="api apilevel-8"><a href="../../../javax/xml/transform/stream/package-summary.html" >javax.xml.transform.stream</a></li><li class="api apilevel-8"><a href="../../../javax/xml/validation/package-summary.html" >javax.xml.validation</a></li><li class="api apilevel-8"><a href="../../../javax/xml/xpath/package-summary.html" >javax.xml.xpath</a></li><li class="api apilevel-1"><a href="../../../junit/framework/package-summary.html" >junit.framework</a></li><li class="api apilevel-1"><a href="../../../junit/runner/package-summary.html" >junit.runner</a></li><li class="api apilevel-1"><a href="../../../org/apache/http/conn/package-summary.html" >org.apache.http.conn</a></li><li class="api apilevel-1"><a href="../../../org/apache/http/conn/scheme/package-summary.html" >org.apache.http.conn.scheme</a></li><li class="api apilevel-1"><a href="../../../org/apache/http/conn/ssl/package-summary.html" >org.apache.http.conn.ssl</a></li><li class="api apilevel-1"><a href="../../../org/apache/http/params/package-summary.html" >org.apache.http.params</a></li><li class="api apilevel-1"><a href="../../../org/json/package-summary.html" >org.json</a></li><li class="api apilevel-1"><a href="../../../org/w3c/dom/package-summary.html" >org.w3c.dom</a></li><li class="api apilevel-8"><a href="../../../org/w3c/dom/ls/package-summary.html" >org.w3c.dom.ls</a></li><li class="api apilevel-1"><a href="../../../org/xml/sax/package-summary.html" >org.xml.sax</a></li><li class="api apilevel-1"><a href="../../../org/xml/sax/ext/package-summary.html" >org.xml.sax.ext</a></li><li class="api apilevel-1"><a href="../../../org/xml/sax/helpers/package-summary.html" >org.xml.sax.helpers</a></li><li class="api apilevel-1"><a href="../../../org/xmlpull/v1/package-summary.html" >org.xmlpull.v1</a></li><li class="api apilevel-1"><a href="../../../org/xmlpull/v1/sax2/package-summary.html" >org.xmlpull.v1.sax2</a></li>
+                  </ul>
+                </div>
+              </div>
+            
+          
+        </div>
+        
+        
+          
+
+
+
+<ul id="dac-main-navigation" class="dac-nav-list dac-swap-section dac-left dac-no-anim" tabindex=0>
+  <li class="dac-nav-item home">
+    
+    <a class="dac-nav-link" href="https://developer.android.com/index.html">Home</a>
+    <i class="dac-sprite dac-expand-more-black dac-nav-sub-slider" tabindex=0></i>
+    <ul class="dac-nav-secondary about">
+      <li class="dac-nav-item versions">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/about/versions/o/index.html">Android</a>
+      </li>
+      <li class="dac-nav-item wear">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/wear/index.html">Wear</a>
+      </li>
+      <li class="dac-nav-item tv">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/tv/index.html">TV</a>
+      </li>
+      <li class="dac-nav-item auto">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/auto/index.html">Auto</a>
+      </li>
+      
+      <li class="dac-nav-item chrome-os">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/chrome-os/index.html">Chrome OS</a>
+      </li>
+      
+      <li class="dac-nav-item things">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/things/index.html">Things</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dac-nav-item design">
+    <a class="dac-nav-link" href="https://developer.android.com/design/index.html"
+       zh-tw-lang="設計"
+       zh-cn-lang="设计"
+       ru-lang="Проектирование"
+       ko-lang="디자인"
+       ja-lang="設計"
+       es-lang="Diseñar">
+      
+      Design</a>
+  </li>
+  <li class="dac-nav-item develop">
+    <a class="dac-nav-link" href="https://developer.android.com/develop/index.html"
+       zh-tw-lang="開發"
+       zh-cn-lang="开发"
+       ru-lang="Разработка"
+       ko-lang="개발"
+       ja-lang="開発"
+       es-lang="Desarrollar">
+      
+      Develop</a>
+    <i class="dac-sprite dac-expand-more-black dac-nav-sub-slider" tabindex=0></i>
+    <ul class="dac-nav-secondary develop">
+      <li class="dac-nav-item training">
+        <a class="dac-nav-link" href="https://developer.android.com/training/index.html"
+           zh-tw-lang="訓練課程"
+           zh-cn-lang="培训"
+           ru-lang="Курсы"
+           ko-lang="교육"
+           ja-lang="トレーニング"
+           es-lang="Capacitación">
+            
+            Training</a>
+      </li>
+      <li class="dac-nav-item guide">
+        <a class="dac-nav-link" href="https://developer.android.com/guide/index.html"
+           zh-tw-lang="API 指南"
+           zh-cn-lang="API 指南"
+           ru-lang="Руководства по API"
+           ko-lang="API 가이드"
+           ja-lang="API ガイド"
+           es-lang="Guías de la API">
+          
+          API Guides</a>
+      </li>
+      <li class="dac-nav-item reference">
+        <a class="dac-nav-link" href="../../../packages.html"
+           zh-tw-lang="參考資源"
+           zh-cn-lang="参考"
+           ru-lang="Справочник"
+           ko-lang="참조문서"
+           ja-lang="リファレンス"
+           es-lang="Referencia">
+          
+          Reference</a>
+      </li>
+      <li class="dac-nav-item samples">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/samples/index.html">Samples</a>
+      </li>
+      <li class="dac-nav-item libraries">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/topic/libraries/index.html">Libraries</a></li>
+      <li class="dac-nav-item studio">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/studio/index.html">Android Studio</a></li>
+      <li class="dac-nav-item ndk">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/ndk/index.html">Android NDK</a></li>
+      <li class="dac-nav-item google">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/google/index.html">Google Services</a>
+      </li>
+      <li class="dac-nav-item quality-guidelines">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/develop/quality-guidelines/index.html">Quality Guidelines</a>
+      </li>
+      <li class="dac-nav-item kotlin">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/kotlin/index.html">Kotlin</a>
+       </li>
+    </ul>
+  </li>
+  <li class="dac-nav-item distribute">
+    <a class="dac-nav-link" href="https://developer.android.com/distribute/index.html"
+       zh-tw-lang="發佈"
+       zh-cn-lang="分发"
+       ru-lang="Распространение"
+       ko-lang="배포"
+       ja-lang="配布"
+       de-lang="Vertrieb"
+       es-lang="Distribuir"
+       es-419-lang="Distribuye"
+       fr-lang="Distribuer"
+       id-lang="Distribusikan"
+       pt-br-lang="Distribuição"
+       th-lang="จัดจำหน่าย"
+       tr-lang="Dağıtma"
+       vi-lang="Phân phối">
+      
+      Distribute</a>
+    <i class="dac-sprite dac-expand-more-black dac-nav-sub-slider" tabindex=0></i>
+    <ul class="dac-nav-secondary distribute">
+      <li class="dac-nav-item google-play">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/distribute/google-play/index.html">Google Play</a>
+      </li>
+      <li class="dac-nav-item console">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/distribute/console/index.html">Play Console</a>
+      </li>
+      <li class="dac-nav-item best-practices">
+        <a class="dac-nav-link" href="https://developer.android.com/distribute/best-practices/index.html"
+          es-419-lang="Recomendaciones"
+          fr-lang="Bonnes pratiques"
+          id-lang="Praktik terbaik"
+          ja-lang="おすすめの方法"
+          ko-lang="권장사항"
+          pt-br-lang="Práticas recomendadas"
+          ru-lang="Рекомендации"
+          th-lang="จัดจำหน่าย"
+          tr-lang="En iyi uygulamalar"
+          vi-lang="Các phương pháp hay nhất"
+          zh-cn-lang="最佳做法"
+          zh-tw-lang="最佳做法">
+          
+          Best practices</a>
+      </li>
+      <li class="dac-nav-item marketing-tools">
+        <a class="dac-nav-link" href="https://developer.android.com/distribute/marketing-tools/index.html"
+          de-lang="Marketing-Tools"
+          es-419-lang="Herramientas de marketing"
+          fr-lang="Outils marketing"
+          id-lang="Fitur pemasaran"
+          ja-lang="マーケティング ツール"
+          ko-lang="마케팅 도구"
+          pt-br-lang="Ferramentas de marketing"
+          ru-lang="Маркетинговые инструменты"
+          th-lang="เครื่องมือการตลาด"
+          tr-lang="Pazarlama araçları"
+          vi-lang="Công cụ tiếp thị"
+          zh-cn-lang="营销工具"
+          zh-tw-lang="行銷工具">
+          
+          Marketing tools</a>
+      </li>
+      <li class="dac-nav-item policy-center">
+        
+        <a class="dac-nav-link" href="https://play.google.com/about/developer-content-policy/" target="_blank">Policy center</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dac-nav-item stories">
+    
+    <a class="dac-nav-link" href="https://developer.android.com/stories/index.html">Stories</a>
+  </li>
+  
+  <li class="dac-nav-item preview">
+    
+    <a class="dac-nav-link" href="https://developer.android.com/preview/index.html">Preview</a>
+  </li>
+  
+</ul>
+
+        
+      </div>
+    </div>
+  </nav>
+
+  <a name="top" tabindex="0"></a>
+  
+  <div class="wrap clearfix" id="body-content">
+  
+    
+      
+    
+    <div class="jd-descr " itemprop="articleBody">
+      <div id="doc-api-level" class="24" style="display:none"></div>
+
+
+
+
+<div id="naMessage"></div>
+
+<div id="api-info-block">
+<div class="api-level">
+  
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 24</a>
+  
+  
+  
+  
+
+</div>
+
+
+
+  
+   
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+
+<div class="sum-details-links">
+
+Summary:
+
+  <a href="#nestedclasses">Nested Classes</a>
+  
+
+
+
+
+
+  &#124; <a href="#constants">Constants</a>
+  
+
+
+
+  &#124; <a href="#lfields">Fields</a>
+  
+
+
+
+
+
+  &#124; <a href="#pubmethods">Methods</a>
+  
+
+
+
+  &#124; <a href="#inhmethods">Inherited Methods</a>
+
+&#124; <a href="#" onclick="return toggleAllClassInherited()" id="toggleAllClassInherited">[Expand All]</a>
+
+</div><!-- end sum-details-links -->
+</div><!-- end api-info-block -->
+
+<div class="api apilevel-24" id="jd-content">
+
+<!-- ======== START OF CLASS DATA ======== -->
+
+<h1 class="api-title">Normalizer</h1>
+<p>
+<code class="api-signature">
+  public
+  
+  final
+  
+  class
+  Normalizer
+</code>
+<br>
+
+
+<code class="api-signature">
+  
+    extends <a href="../../../java/lang/Object.html">Object</a>
+  
+  
+  
+</code>
+
+<code class="api-signature">
+  
+  
+      implements
+      
+        <a href="../../../java/lang/Cloneable.html">Cloneable</a>
+      
+  
+  
+</code>
+
+</p><table class="jd-inheritance-table">
+
+
+  <tr>
+    
+    <td colspan="2" class="jd-inheritance-class-cell"><a href="../../../java/lang/Object.html">java.lang.Object</a>
+    </td>
+  </tr>
+  
+
+  <tr>
+    
+      <td class="jd-inheritance-space">&nbsp;&nbsp;&nbsp;&#x21b3;</td>
+    
+    <td colspan="1" class="jd-inheritance-class-cell">android.icu.text.Normalizer
+    </td>
+  </tr>
+  
+
+</table>
+  
+
+    
+
+<br><hr>
+
+
+  <p>Old Unicode normalization API.
+
+ <p>This API has been replaced by the <code><a href="Normalizer2.html">Normalizer2</a></code> class and is only available
+ for backward compatibility. This class simply delegates to the Normalizer2 class.
+ There are two exceptions: The new API does not provide a replacement for
+ <code>QuickCheckResult</code> and <code>compare()</code>.
+
+ <p><code>normalize</code> transforms Unicode text into an equivalent composed or
+ decomposed form, allowing for easier sorting and searching of text.
+ <code>normalize</code> supports the standard normalization forms described in
+ <a href="http://www.unicode.org/unicode/reports/tr15/" target="unicode">
+ Unicode Standard Annex #15 &mdash; Unicode Normalization Forms</a>.
+
+ <p>Characters with accents or other adornments can be encoded in
+ several different ways in Unicode.  For example, take the character A-acute.
+ In Unicode, this can be encoded as a single character (the
+ "composed" form):
+
+ <pre>
+      00C1    LATIN CAPITAL LETTER A WITH ACUTE
+ </pre>
+
+ or as two separate characters (the "decomposed" form):
+
+ <pre>
+      0041    LATIN CAPITAL LETTER A
+      0301    COMBINING ACUTE ACCENT
+ </pre>
+
+ <p>To a user of your program, however, both of these sequences should be
+ treated as the same "user-level" character "A with acute accent".  When you
+ are searching or comparing text, you must ensure that these two sequences are
+ treated equivalently.  In addition, you must handle characters with more than
+ one accent.  Sometimes the order of a character's combining accents is
+ significant, while in other cases accent sequences in different orders are
+ really equivalent.
+
+ <p>Similarly, the string "ffi" can be encoded as three separate letters:
+
+ <pre>
+      0066    LATIN SMALL LETTER F
+      0066    LATIN SMALL LETTER F
+      0069    LATIN SMALL LETTER I
+ </pre>
+
+ or as the single character
+
+ <pre>
+      FB03    LATIN SMALL LIGATURE FFI
+ </pre>
+
+ <p>The ffi ligature is not a distinct semantic character, and strictly speaking
+ it shouldn't be in Unicode at all, but it was included for compatibility
+ with existing character sets that already provided it.  The Unicode standard
+ identifies such characters by giving them "compatibility" decompositions
+ into the corresponding semantic characters.  When sorting and searching, you
+ will often want to use these mappings.
+
+ <p><code>normalize</code> helps solve these problems by transforming text into
+ the canonical composed and decomposed forms as shown in the first example
+ above. In addition, you can have it perform compatibility decompositions so
+ that you can treat compatibility characters the same as their equivalents.
+ Finally, <code>normalize</code> rearranges accents into the proper canonical
+ order, so that you do not have to worry about accent rearrangement on your
+ own.
+
+ <p>Form FCD, "Fast C or D", is also designed for collation.
+ It allows to work on strings that are not necessarily normalized
+ with an algorithm (like in collation) that works under "canonical closure",
+ i.e., it treats precomposed characters and their decomposed equivalents the
+ same.
+
+ <p>It is not a normalization form because it does not provide for uniqueness of
+ representation. Multiple strings may be canonically equivalent (their NFDs
+ are identical) and may all conform to FCD without being identical themselves.
+
+ <p>The form is defined such that the "raw decomposition", the recursive
+ canonical decomposition of each character, results in a string that is
+ canonically ordered. This means that precomposed characters are allowed for
+ as long as their decompositions do not need canonical reordering.
+
+ <p>Its advantage for a process like collation is that all NFD and most NFC texts
+ - and many unnormalized texts - already conform to FCD and do not need to be
+ normalized (NFD) for such a process. The FCD quick check will return YES for
+ most strings in practice.
+
+ <p>normalize(FCD) may be implemented with NFD.
+
+ <p>For more details on FCD see Unicode Technical Note #5 (Canonical Equivalence in Applications):
+ http://www.unicode.org/notes/tn5/#FCD
+
+ <p>ICU collation performs either NFD or FCD normalization automatically if
+ normalization is turned on for the collator object. Beyond collation and
+ string search, normalized strings may be useful for string equivalence
+ comparisons, transliteration/transcription, unique representations, etc.
+
+ <p>The W3C generally recommends to exchange texts in NFC.
+ Note also that most legacy character encodings use only precomposed forms and
+ often do not encode any combining marks by themselves. For conversion to such
+ character encodings the Unicode text needs to be normalized to NFC.
+ For more usage examples, see the Unicode Standard Annex.
+
+ <p>Note: The Normalizer class also provides API for iterative normalization.
+ While the setIndex() and getIndex() refer to indices in the
+ underlying Unicode input text, the next() and previous() methods
+ iterate through characters in the normalized output.
+ This means that there is not necessarily a one-to-one correspondence
+ between characters returned by next() and previous() and the indices
+ passed to and returned from setIndex() and getIndex().
+ It is for this reason that Normalizer does not implement the CharacterIterator interface.
+</p>
+
+
+
+
+
+
+
+
+
+<h2 class="api-section">Summary</h2>
+
+
+
+<!-- ======== NESTED CLASS SUMMARY ======== -->
+<table id="nestedclasses" class="responsive">
+<tr><th colspan="2"><h3>Nested classes</h3></th></tr>
+
+
+  
+    <tr class="api apilevel-24" >
+      <td class="jd-typecol"><code>
+        
+        
+        
+        
+        class</code></td>
+      <td class="jd-descrcol" width="100%">
+        <code><a href="Normalizer.QuickCheckResult.html">Normalizer.QuickCheckResult</a></code>
+        <p>Result values for quickCheck().&nbsp;
+        
+    
+</p>
+      </td>
+    </tr>
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- =========== ENUM CONSTANT SUMMARY =========== -->
+<table id="constants" class="responsive constants">
+<tr><th colspan="2"><h3>Constants</h3></th></tr>
+
+
+    
+    <tr class="api apilevel-24" >
+        <td><code>int</code></td>
+        <td width="100%">
+          <code><a href="Normalizer.html#COMPARE_CODE_POINT_ORDER">COMPARE_CODE_POINT_ORDER</a></code>
+          <p>Option bit for compare:
+ Compare strings in code point order instead of code unit order.
+          
+    
+</p>
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-24" >
+        <td><code>int</code></td>
+        <td width="100%">
+          <code><a href="Normalizer.html#COMPARE_IGNORE_CASE">COMPARE_IGNORE_CASE</a></code>
+          <p>Option bit for compare:
+ Perform case-insensitive comparison.
+          
+    
+</p>
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-24" >
+        <td><code>int</code></td>
+        <td width="100%">
+          <code><a href="Normalizer.html#FOLD_CASE_DEFAULT">FOLD_CASE_DEFAULT</a></code>
+          <p>Option bit for compare:
+ Case sensitively compare the strings
+
+          
+    
+</p>
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-24" >
+        <td><code>int</code></td>
+        <td width="100%">
+          <code><a href="Normalizer.html#FOLD_CASE_EXCLUDE_SPECIAL_I">FOLD_CASE_EXCLUDE_SPECIAL_I</a></code>
+          <p>Option value for case folding:
+ Use the modified set of mappings provided in CaseFolding.txt to handle dotted I
+ and dotless i appropriately for Turkic languages (tr, az).
+          
+    
+</p>
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-24" >
+        <td><code>int</code></td>
+        <td width="100%">
+          <code><a href="Normalizer.html#INPUT_IS_FCD">INPUT_IS_FCD</a></code>
+          <p>Option bit for compare:
+ Both input strings are assumed to fulfill FCD conditions.
+          
+    
+</p>
+        </td>
+    </tr>
+    
+    
+
+</table>
+
+
+
+
+
+
+
+<!-- =========== FIELD SUMMARY =========== -->
+<table id="lfields" class="responsive properties">
+<tr><th colspan="2"><h3>Fields</h3></th></tr>
+
+
+
+  <tr class="api apilevel-24" >
+    <td><code>
+    public
+    static
+    final
+    <a href="Normalizer.QuickCheckResult.html">Normalizer.QuickCheckResult</a></code></td>
+    <td width="100%">
+      <code><a href="Normalizer.html#MAYBE">MAYBE</a></code>
+      <p>Indicates it cannot be determined if string is in the normalized
+ format without further thorough checks.
+      
+    
+</p>
+    </td>
+  </tr>
+  
+
+  <tr class="api apilevel-24" >
+    <td><code>
+    public
+    static
+    final
+    <a href="Normalizer.QuickCheckResult.html">Normalizer.QuickCheckResult</a></code></td>
+    <td width="100%">
+      <code><a href="Normalizer.html#NO">NO</a></code>
+      <p>Indicates that string is not in the normalized format
+
+      
+    
+</p>
+    </td>
+  </tr>
+  
+
+  <tr class="api apilevel-24" >
+    <td><code>
+    public
+    static
+    final
+    <a href="Normalizer.QuickCheckResult.html">Normalizer.QuickCheckResult</a></code></td>
+    <td width="100%">
+      <code><a href="Normalizer.html#YES">YES</a></code>
+      <p>Indicates that string is in the normalized format
+
+      
+    
+</p>
+    </td>
+  </tr>
+  
+
+
+</table>
+
+
+
+
+
+
+
+
+
+
+
+<!-- ========== METHOD SUMMARY =========== -->
+<table id="pubmethods" class="responsive methods">
+<tr><th colspan="2"><h3>Public methods</h3></th></tr>
+
+
+
+  
+  <tr class="api apilevel-24" >
+  
+  
+    <td><code>
+        
+        
+        static
+        
+        
+        int</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="Normalizer.html#compare(char[], char[], int)">compare</a>(char[] s1, char[] s2, int options)
+      </code>
+      
+        <p>Compare two strings for canonical equivalence.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-24" >
+  
+  
+    <td><code>
+        
+        
+        static
+        
+        
+        int</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="Normalizer.html#compare(char[], int, int, char[], int, int, int)">compare</a>(char[] s1, int s1Start, int s1Limit, char[] s2, int s2Start, int s2Limit, int options)
+      </code>
+      
+        <p>Compare two strings for canonical equivalence.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-24" >
+  
+  
+    <td><code>
+        
+        
+        static
+        
+        
+        int</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="Normalizer.html#compare(int, int, int)">compare</a>(int char32a, int char32b, int options)
+      </code>
+      
+        <p>Convenience method that can have faster implementation
+ by not allocating buffers.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-24" >
+  
+  
+    <td><code>
+        
+        
+        static
+        
+        
+        int</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="Normalizer.html#compare(java.lang.String, java.lang.String, int)">compare</a>(<a href="../../../java/lang/String.html">String</a> s1, <a href="../../../java/lang/String.html">String</a> s2, int options)
+      </code>
+      
+        <p>Compare two strings for canonical equivalence.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-24" >
+  
+  
+    <td><code>
+        
+        
+        static
+        
+        
+        int</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="Normalizer.html#compare(int, java.lang.String, int)">compare</a>(int char32a, <a href="../../../java/lang/String.html">String</a> str2, int options)
+      </code>
+      
+        <p>Convenience method that can have faster implementation
+ by not allocating buffers.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+
+</table>
+
+
+
+
+
+
+
+<!-- ========== METHOD SUMMARY =========== -->
+<table id="inhmethods" class="methods inhtable">
+<tr><th><h3>Inherited methods</h3></th></tr>
+
+
+<tr class="api apilevel-" >
+<td colspan="2">
+  <a href="#" id="inherited-methods-java.lang.Object" class="jd-expando-trigger closed"
+     onclick="return toggleInherited(this, null)" >
+    <img id="inherited-methods-java.lang.Object-trigger" class="jd-expando-trigger-img"
+         height="34"
+         src="../../../../assets/images/styles/disclosure_down.png" />
+  </a>From
+class
+<code>
+  
+    <a href="../../../java/lang/Object.html">java.lang.Object</a>
+  
+</code>
+<div id="inherited-methods-java.lang.Object">
+  <div id="inherited-methods-java.lang.Object-list"
+        class="jd-inheritedlinks">
+  </div>
+  <div id="inherited-methods-java.lang.Object-summary" style="display: none;">
+    <table class="jd-sumtable-expando responsive">
+      
+
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        <a href="../../../java/lang/Object.html">Object</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../../../java/lang/Object.html#clone()">clone</a>()
+      </code>
+      
+        <p>Creates and returns a copy of this object.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        boolean</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../../../java/lang/Object.html#equals(java.lang.Object)">equals</a>(<a href="../../../java/lang/Object.html">Object</a> obj)
+      </code>
+      
+        <p>Indicates whether some other object is "equal to" this one.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../../../java/lang/Object.html#finalize()">finalize</a>()
+      </code>
+      
+        <p>Called by the garbage collector on an object when garbage collection
+ determines that there are no more references to the object.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        final
+        
+        <a href="../../../java/lang/Class.html">Class</a>&lt;?&gt;</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../../../java/lang/Object.html#getClass()">getClass</a>()
+      </code>
+      
+        <p>Returns the runtime class of this <code>Object</code>.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        int</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../../../java/lang/Object.html#hashCode()">hashCode</a>()
+      </code>
+      
+        <p>Returns a hash code value for the object.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        final
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../../../java/lang/Object.html#notify()">notify</a>()
+      </code>
+      
+        <p>Wakes up a single thread that is waiting on this object's
+ monitor.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        final
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../../../java/lang/Object.html#notifyAll()">notifyAll</a>()
+      </code>
+      
+        <p>Wakes up all threads that are waiting on this object's monitor.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        <a href="../../../java/lang/String.html">String</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../../../java/lang/Object.html#toString()">toString</a>()
+      </code>
+      
+        <p>Returns a string representation of the object.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        final
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../../../java/lang/Object.html#wait(long, int)">wait</a>(long millis, int nanos)
+      </code>
+      
+        <p>Causes the current thread to wait until another thread invokes the
+ <code><a href="../../../java/lang/Object.html#notify()">notify()</a></code> method or the
+ <code><a href="../../../java/lang/Object.html#notifyAll()">notifyAll()</a></code> method for this object, or
+ some other thread interrupts the current thread, or a certain
+ amount of real time has elapsed.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        final
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../../../java/lang/Object.html#wait(long)">wait</a>(long millis)
+      </code>
+      
+        <p>Causes the current thread to wait until either another thread invokes the
+ <code><a href="../../../java/lang/Object.html#notify()">notify()</a></code> method or the
+ <code><a href="../../../java/lang/Object.html#notifyAll()">notifyAll()</a></code> method for this object, or a
+ specified amount of time has elapsed.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        
+        
+        
+        final
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../../../java/lang/Object.html#wait()">wait</a>()
+      </code>
+      
+        <p>Causes the current thread to wait until another thread invokes the
+ <code><a href="../../../java/lang/Object.html#notify()">notify()</a></code> method or the
+ <code><a href="../../../java/lang/Object.html#notifyAll()">notifyAll()</a></code> method for this object.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+
+    </table>
+  </div>
+</div>
+</td></tr>
+
+
+
+
+</table>
+
+
+
+<!-- XML Attributes -->
+
+
+<!-- Enum Values -->
+
+
+<!-- Constants -->
+
+
+<!-- ========= ENUM CONSTANTS DETAIL ======== -->
+<h2 class="api-section">Constants</h2>
+
+
+
+
+<A NAME="COMPARE_CODE_POINT_ORDER"></A>
+
+<div class="api apilevel-24">
+    <h3 class="api-name">COMPARE_CODE_POINT_ORDER</h3>
+    <div class="api-level">
+      
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 24</a>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+int COMPARE_CODE_POINT_ORDER</pre>
+    
+    
+
+    
+  <p>Option bit for compare:
+ Compare strings in code point order instead of code unit order.
+</p></p>
+
+    
+      <p>Constant Value:
+      
+          32768
+          (0x00008000)
+      
+    
+</div>
+
+
+
+<A NAME="COMPARE_IGNORE_CASE"></A>
+
+<div class="api apilevel-24">
+    <h3 class="api-name">COMPARE_IGNORE_CASE</h3>
+    <div class="api-level">
+      
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 24</a>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+int COMPARE_IGNORE_CASE</pre>
+    
+    
+
+    
+  <p>Option bit for compare:
+ Perform case-insensitive comparison.
+</p></p>
+
+    
+      <p>Constant Value:
+      
+          65536
+          (0x00010000)
+      
+    
+</div>
+
+
+
+<A NAME="FOLD_CASE_DEFAULT"></A>
+
+<div class="api apilevel-24">
+    <h3 class="api-name">FOLD_CASE_DEFAULT</h3>
+    <div class="api-level">
+      
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 24</a>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+int FOLD_CASE_DEFAULT</pre>
+    
+    
+
+    
+  <p>Option bit for compare:
+ Case sensitively compare the strings
+</p></p>
+
+    
+      <p>Constant Value:
+      
+          0
+          (0x00000000)
+      
+    
+</div>
+
+
+
+<A NAME="FOLD_CASE_EXCLUDE_SPECIAL_I"></A>
+
+<div class="api apilevel-24">
+    <h3 class="api-name">FOLD_CASE_EXCLUDE_SPECIAL_I</h3>
+    <div class="api-level">
+      
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 24</a>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+int FOLD_CASE_EXCLUDE_SPECIAL_I</pre>
+    
+    
+
+    
+  <p>Option value for case folding:
+ Use the modified set of mappings provided in CaseFolding.txt to handle dotted I
+ and dotless i appropriately for Turkic languages (tr, az).</p></p>
+  <div>
+      <p><b>See also:</b></p>
+      <ul class="nolist"><li><code><a href="../lang/UCharacter.html#FOLD_CASE_EXCLUDE_SPECIAL_I">FOLD_CASE_EXCLUDE_SPECIAL_I</a></code></li>
+      </ul>
+  </div>
+
+    
+      <p>Constant Value:
+      
+          1
+          (0x00000001)
+      
+    
+</div>
+
+
+
+<A NAME="INPUT_IS_FCD"></A>
+
+<div class="api apilevel-24">
+    <h3 class="api-name">INPUT_IS_FCD</h3>
+    <div class="api-level">
+      
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 24</a>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+int INPUT_IS_FCD</pre>
+    
+    
+
+    
+  <p>Option bit for compare:
+ Both input strings are assumed to fulfill FCD conditions.
+</p></p>
+
+    
+      <p>Constant Value:
+      
+          131072
+          (0x00020000)
+      
+    
+</div>
+
+
+
+
+<!-- Fields -->
+
+
+<!-- ========= FIELD DETAIL ======== -->
+<h2 class="api-section">Fields</h2>
+
+
+
+
+<A NAME="MAYBE"></A>
+
+<div class="api apilevel-24">
+    <h3 class="api-name">MAYBE</h3>
+    <div class="api-level">
+      
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 24</a>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="Normalizer.QuickCheckResult.html">Normalizer.QuickCheckResult</a> MAYBE</pre>
+    
+    
+
+    
+  <p>Indicates it cannot be determined if string is in the normalized
+ format without further thorough checks.
+</p></p>
+
+    
+</div>
+
+
+
+<A NAME="NO"></A>
+
+<div class="api apilevel-24">
+    <h3 class="api-name">NO</h3>
+    <div class="api-level">
+      
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 24</a>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="Normalizer.QuickCheckResult.html">Normalizer.QuickCheckResult</a> NO</pre>
+    
+    
+
+    
+  <p>Indicates that string is not in the normalized format
+</p></p>
+
+    
+</div>
+
+
+
+<A NAME="YES"></A>
+
+<div class="api apilevel-24">
+    <h3 class="api-name">YES</h3>
+    <div class="api-level">
+      
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 24</a>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="Normalizer.QuickCheckResult.html">Normalizer.QuickCheckResult</a> YES</pre>
+    
+    
+
+    
+  <p>Indicates that string is in the normalized format
+</p></p>
+
+    
+</div>
+
+
+
+
+<!-- Public ctors -->
+
+
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<!-- Protected ctors -->
+
+
+
+<!-- ========= METHOD DETAIL ======== -->
+<!-- Public methdos -->
+
+<h2 class="api-section">Public methods</h2>
+
+
+
+<A NAME="compare(char[], char[], int)"></A>
+
+<div class="api apilevel-24">
+    <h3 class="api-name">compare</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 24</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+int compare (char[] s1, 
+                char[] s2, 
+                int options)</pre>
+    
+    
+
+    
+  <p>Compare two strings for canonical equivalence.
+ Further options include case-insensitive comparison and
+ code point order (as opposed to code unit order).
+ Convenience method.</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>s1</code></td>
+        <td width="100%">
+          <code>char</code>: First source string.</p></td>
+      </tr>
+      <tr>
+        <td><code>s2</code></td>
+        <td width="100%">
+          <code>char</code>: Second source string.</p></td>
+      </tr>
+      <tr>
+        <td><code>options</code></td>
+        <td width="100%">
+          <code>int</code>: A bit set of options:
+   - FOLD_CASE_DEFAULT or 0 is used for default options:
+     Case-sensitive comparison in code unit order, and the input strings
+     are quick-checked for FCD.
+
+   - INPUT_IS_FCD
+     Set if the caller knows that both s1 and s2 fulfill the FCD
+     conditions. If not set, the function will quickCheck for FCD
+     and normalize if necessary.
+
+   - COMPARE_CODE_POINT_ORDER
+     Set to choose code point order instead of code unit order
+
+   - COMPARE_IGNORE_CASE
+     Set to compare strings case-insensitively using case folding,
+     instead of case-sensitively.
+     If set, then the following case folding options are used.</p></td>
+      </tr>
+    </table>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code>int</code></td>
+        <td width="100%">&lt;0 or 0 or &gt;0 as usual for string comparisons
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="compare(char[], int, int, char[], int, int, int)"></A>
+
+<div class="api apilevel-24">
+    <h3 class="api-name">compare</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 24</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+int compare (char[] s1, 
+                int s1Start, 
+                int s1Limit, 
+                char[] s2, 
+                int s2Start, 
+                int s2Limit, 
+                int options)</pre>
+    
+    
+
+    
+  <p>Compare two strings for canonical equivalence.
+ Further options include case-insensitive comparison and
+ code point order (as opposed to code unit order).
+
+ Canonical equivalence between two strings is defined as their normalized
+ forms (NFD or NFC) being identical.
+ This function compares strings incrementally instead of normalizing
+ (and optionally case-folding) both strings entirely,
+ improving performance significantly.
+
+ Bulk normalization is only necessary if the strings do not fulfill the
+ FCD conditions. Only in this case, and only if the strings are relatively
+ long, is memory allocated temporarily.
+ For FCD strings and short non-FCD strings there is no memory allocation.
+
+ Semantically, this is equivalent to
+   strcmp[CodePointOrder](foldCase(NFD(s1)), foldCase(NFD(s2)))
+ where code point order and foldCase are all optional.</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>s1</code></td>
+        <td width="100%">
+          <code>char</code>: First source character array.</p></td>
+      </tr>
+      <tr>
+        <td><code>s1Start</code></td>
+        <td width="100%">
+          <code>int</code>: start index of source</p></td>
+      </tr>
+      <tr>
+        <td><code>s1Limit</code></td>
+        <td width="100%">
+          <code>int</code>: limit of the source</p></td>
+      </tr>
+      <tr>
+        <td><code>s2</code></td>
+        <td width="100%">
+          <code>char</code>: Second source character array.</p></td>
+      </tr>
+      <tr>
+        <td><code>s2Start</code></td>
+        <td width="100%">
+          <code>int</code>: start index of the source</p></td>
+      </tr>
+      <tr>
+        <td><code>s2Limit</code></td>
+        <td width="100%">
+          <code>int</code>: limit of the source</p></td>
+      </tr>
+      <tr>
+        <td><code>options</code></td>
+        <td width="100%">
+          <code>int</code>: A bit set of options:
+   - FOLD_CASE_DEFAULT or 0 is used for default options:
+     Case-sensitive comparison in code unit order, and the input strings
+     are quick-checked for FCD.
+
+   - INPUT_IS_FCD
+     Set if the caller knows that both s1 and s2 fulfill the FCD
+     conditions.If not set, the function will quickCheck for FCD
+     and normalize if necessary.
+
+   - COMPARE_CODE_POINT_ORDER
+     Set to choose code point order instead of code unit order
+
+   - COMPARE_IGNORE_CASE
+     Set to compare strings case-insensitively using case folding,
+     instead of case-sensitively.
+     If set, then the following case folding options are used.</p></td>
+      </tr>
+    </table>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code>int</code></td>
+        <td width="100%">&lt;0 or 0 or &gt;0 as usual for string comparisons
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="compare(int, int, int)"></A>
+
+<div class="api apilevel-24">
+    <h3 class="api-name">compare</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 24</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+int compare (int char32a, 
+                int char32b, 
+                int options)</pre>
+    
+    
+
+    
+  <p>Convenience method that can have faster implementation
+ by not allocating buffers.</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>char32a</code></td>
+        <td width="100%">
+          <code>int</code>: the first code point to be checked against the</p></td>
+      </tr>
+      <tr>
+        <td><code>char32b</code></td>
+        <td width="100%">
+          <code>int</code>: the second code point</p></td>
+      </tr>
+      <tr>
+        <td><code>options</code></td>
+        <td width="100%">
+          <code>int</code>: A bit set of options
+</p></td>
+      </tr>
+    </table>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code>int</code></td>
+        <td width="100%"><!-- no returns description in source --></p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="compare(java.lang.String, java.lang.String, int)"></A>
+
+<div class="api apilevel-24">
+    <h3 class="api-name">compare</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 24</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+int compare (<a href="../../../java/lang/String.html">String</a> s1, 
+                <a href="../../../java/lang/String.html">String</a> s2, 
+                int options)</pre>
+    
+    
+
+    
+  <p>Compare two strings for canonical equivalence.
+ Further options include case-insensitive comparison and
+ code point order (as opposed to code unit order).
+
+ Canonical equivalence between two strings is defined as their normalized
+ forms (NFD or NFC) being identical.
+ This function compares strings incrementally instead of normalizing
+ (and optionally case-folding) both strings entirely,
+ improving performance significantly.
+
+ Bulk normalization is only necessary if the strings do not fulfill the
+ FCD conditions. Only in this case, and only if the strings are relatively
+ long, is memory allocated temporarily.
+ For FCD strings and short non-FCD strings there is no memory allocation.
+
+ Semantically, this is equivalent to
+   strcmp[CodePointOrder](foldCase(NFD(s1)), foldCase(NFD(s2)))
+ where code point order and foldCase are all optional.</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>s1</code></td>
+        <td width="100%">
+          <code>String</code>: First source string.</p></td>
+      </tr>
+      <tr>
+        <td><code>s2</code></td>
+        <td width="100%">
+          <code>String</code>: Second source string.</p></td>
+      </tr>
+      <tr>
+        <td><code>options</code></td>
+        <td width="100%">
+          <code>int</code>: A bit set of options:
+   - FOLD_CASE_DEFAULT or 0 is used for default options:
+     Case-sensitive comparison in code unit order, and the input strings
+     are quick-checked for FCD.
+
+   - INPUT_IS_FCD
+     Set if the caller knows that both s1 and s2 fulfill the FCD
+     conditions. If not set, the function will quickCheck for FCD
+     and normalize if necessary.
+
+   - COMPARE_CODE_POINT_ORDER
+     Set to choose code point order instead of code unit order
+
+   - COMPARE_IGNORE_CASE
+     Set to compare strings case-insensitively using case folding,
+     instead of case-sensitively.
+     If set, then the following case folding options are used.</p></td>
+      </tr>
+    </table>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code>int</code></td>
+        <td width="100%">&lt;0 or 0 or &gt;0 as usual for string comparisons
+</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="compare(int, java.lang.String, int)"></A>
+
+<div class="api apilevel-24">
+    <h3 class="api-name">compare</h3>
+    <div class="api-level">
+      <div>
+    added in <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 24</a></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+int compare (int char32a, 
+                <a href="../../../java/lang/String.html">String</a> str2, 
+                int options)</pre>
+    
+    
+
+    
+  <p>Convenience method that can have faster implementation
+ by not allocating buffers.</p></p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>char32a</code></td>
+        <td width="100%">
+          <code>int</code>: the first code point to be checked against</p></td>
+      </tr>
+      <tr>
+        <td><code>str2</code></td>
+        <td width="100%">
+          <code>String</code>: the second string</p></td>
+      </tr>
+      <tr>
+        <td><code>options</code></td>
+        <td width="100%">
+          <code>int</code>: A bit set of options
+</p></td>
+      </tr>
+    </table>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code>int</code></td>
+        <td width="100%"><!-- no returns description in source --></p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+
+
+
+<!-- ========= METHOD DETAIL ======== -->
+
+
+
+<!-- ========= END OF CLASS DATA ========= -->
+
+</div><!-- end jd-content -->
+
+
+
+<div class="data-reference-resources-wrapper">
+  
+  <ul data-reference-resources>
+    
+    
+    <li><h2>Interfaces</h2>
+      <ul>
+          <li class="api apilevel-24"><a href="Collator.ReorderCodes.html">Collator.ReorderCodes</a></li>
+          <li class="api apilevel-24"><a href="Replaceable.html">Replaceable</a></li>
+          <li class="api apilevel-24"><a href="SymbolTable.html">SymbolTable</a></li>
+          <li class="api apilevel-24"><a href="UnicodeMatcher.html">UnicodeMatcher</a></li>
+      </ul>
+    </li>
+    
+    <li><h2>Classes</h2>
+      <ul>
+          <li class="api apilevel-24"><a href="AlphabeticIndex.html">AlphabeticIndex</a></li>
+          <li class="api apilevel-24"><a href="AlphabeticIndex.Bucket.html">AlphabeticIndex.Bucket</a></li>
+          <li class="api apilevel-24"><a href="AlphabeticIndex.ImmutableIndex.html">AlphabeticIndex.ImmutableIndex</a></li>
+          <li class="api apilevel-24"><a href="AlphabeticIndex.Record.html">AlphabeticIndex.Record</a></li>
+          <li class="api apilevel-24"><a href="BreakIterator.html">BreakIterator</a></li>
+          <li class="api apilevel-24"><a href="CollationElementIterator.html">CollationElementIterator</a></li>
+          <li class="api apilevel-24"><a href="CollationKey.html">CollationKey</a></li>
+          <li class="api apilevel-24"><a href="CollationKey.BoundMode.html">CollationKey.BoundMode</a></li>
+          <li class="api apilevel-24"><a href="Collator.html">Collator</a></li>
+          <li class="api apilevel-24"><a href="CompactDecimalFormat.html">CompactDecimalFormat</a></li>
+          <li class="api apilevel-24"><a href="CurrencyPluralInfo.html">CurrencyPluralInfo</a></li>
+          <li class="api apilevel-24"><a href="DateFormat.html">DateFormat</a></li>
+          <li class="api apilevel-24"><a href="DateFormat.Field.html">DateFormat.Field</a></li>
+          <li class="api apilevel-24"><a href="DateFormatSymbols.html">DateFormatSymbols</a></li>
+          <li class="api apilevel-24"><a href="DateIntervalFormat.html">DateIntervalFormat</a></li>
+          <li class="api apilevel-24"><a href="DateIntervalInfo.html">DateIntervalInfo</a></li>
+          <li class="api apilevel-24"><a href="DateIntervalInfo.PatternInfo.html">DateIntervalInfo.PatternInfo</a></li>
+          <li class="api apilevel-24"><a href="DateTimePatternGenerator.html">DateTimePatternGenerator</a></li>
+          <li class="api apilevel-24"><a href="DateTimePatternGenerator.PatternInfo.html">DateTimePatternGenerator.PatternInfo</a></li>
+          <li class="api apilevel-24"><a href="DecimalFormat.html">DecimalFormat</a></li>
+          <li class="api apilevel-24"><a href="DecimalFormatSymbols.html">DecimalFormatSymbols</a></li>
+          <li class="api apilevel-24"><a href="IDNA.html">IDNA</a></li>
+          <li class="api apilevel-24"><a href="IDNA.Info.html">IDNA.Info</a></li>
+          <li class="api apilevel-26"><a href="ListFormatter.html">ListFormatter</a></li>
+          <li class="api apilevel-24"><a href="LocaleDisplayNames.html">LocaleDisplayNames</a></li>
+          <li class="api apilevel-26"><a href="LocaleDisplayNames.UiListItem.html">LocaleDisplayNames.UiListItem</a></li>
+          <li class="api apilevel-24"><a href="MeasureFormat.html">MeasureFormat</a></li>
+          <li class="api apilevel-24"><a href="MessageFormat.html">MessageFormat</a></li>
+          <li class="api apilevel-24"><a href="MessageFormat.Field.html">MessageFormat.Field</a></li>
+          <li class="api apilevel-24"><a href="MessagePattern.html">MessagePattern</a></li>
+          <li class="api apilevel-24"><a href="MessagePattern.Part.html">MessagePattern.Part</a></li>
+          <li class="selected api apilevel-24"><a href="Normalizer.html">Normalizer</a></li>
+          <li class="api apilevel-24"><a href="Normalizer.QuickCheckResult.html">Normalizer.QuickCheckResult</a></li>
+          <li class="api apilevel-24"><a href="Normalizer2.html">Normalizer2</a></li>
+          <li class="api apilevel-24"><a href="NumberFormat.html">NumberFormat</a></li>
+          <li class="api apilevel-24"><a href="NumberFormat.Field.html">NumberFormat.Field</a></li>
+          <li class="api apilevel-24"><a href="NumberingSystem.html">NumberingSystem</a></li>
+          <li class="api apilevel-24"><a href="PluralFormat.html">PluralFormat</a></li>
+          <li class="api apilevel-24"><a href="PluralRules.html">PluralRules</a></li>
+          <li class="api apilevel-24"><a href="RelativeDateTimeFormatter.html">RelativeDateTimeFormatter</a></li>
+          <li class="api apilevel-24"><a href="RuleBasedCollator.html">RuleBasedCollator</a></li>
+          <li class="api apilevel-26"><a href="ScientificNumberFormatter.html">ScientificNumberFormatter</a></li>
+          <li class="api apilevel-24"><a href="SearchIterator.html">SearchIterator</a></li>
+          <li class="api apilevel-24"><a href="SelectFormat.html">SelectFormat</a></li>
+          <li class="api apilevel-24"><a href="SimpleDateFormat.html">SimpleDateFormat</a></li>
+          <li class="api apilevel-24"><a href="StringSearch.html">StringSearch</a></li>
+          <li class="api apilevel-24"><a href="TimeZoneFormat.html">TimeZoneFormat</a></li>
+          <li class="api apilevel-24"><a href="TimeZoneNames.html">TimeZoneNames</a></li>
+          <li class="api apilevel-24"><a href="UCharacterIterator.html">UCharacterIterator</a></li>
+          <li class="api apilevel-24"><a href="UFormat.html">UFormat</a></li>
+          <li class="api apilevel-24"><a href="UnicodeFilter.html">UnicodeFilter</a></li>
+          <li class="api apilevel-24"><a href="UnicodeSet.html">UnicodeSet</a></li>
+          <li class="api apilevel-24"><a href="UnicodeSet.EntryRange.html">UnicodeSet.EntryRange</a></li>
+          <li class="api apilevel-24"><a href="UnicodeSetIterator.html">UnicodeSetIterator</a></li>
+          <li class="api apilevel-24"><a href="UnicodeSetSpanner.html">UnicodeSetSpanner</a></li>
+      </ul>
+    </li>
+    
+    <li><h2>Enums</h2>
+      <ul>
+          <li class="api apilevel-24"><a href="AlphabeticIndex.Bucket.LabelType.html">AlphabeticIndex.Bucket.LabelType</a></li>
+          <li class="api apilevel-24"><a href="CompactDecimalFormat.CompactStyle.html">CompactDecimalFormat.CompactStyle</a></li>
+          <li class="api apilevel-24"><a href="DateFormat.BooleanAttribute.html">DateFormat.BooleanAttribute</a></li>
+          <li class="api apilevel-24"><a href="DisplayContext.html">DisplayContext</a></li>
+          <li class="api apilevel-24"><a href="DisplayContext.Type.html">DisplayContext.Type</a></li>
+          <li class="api apilevel-24"><a href="IDNA.Error.html">IDNA.Error</a></li>
+          <li class="api apilevel-24"><a href="LocaleDisplayNames.DialectHandling.html">LocaleDisplayNames.DialectHandling</a></li>
+          <li class="api apilevel-24"><a href="MeasureFormat.FormatWidth.html">MeasureFormat.FormatWidth</a></li>
+          <li class="api apilevel-24"><a href="MessagePattern.ApostropheMode.html">MessagePattern.ApostropheMode</a></li>
+          <li class="api apilevel-24"><a href="MessagePattern.ArgType.html">MessagePattern.ArgType</a></li>
+          <li class="api apilevel-24"><a href="MessagePattern.Part.Type.html">MessagePattern.Part.Type</a></li>
+          <li class="api apilevel-24"><a href="Normalizer2.Mode.html">Normalizer2.Mode</a></li>
+          <li class="api apilevel-24"><a href="PluralRules.PluralType.html">PluralRules.PluralType</a></li>
+          <li class="api apilevel-24"><a href="RelativeDateTimeFormatter.AbsoluteUnit.html">RelativeDateTimeFormatter.AbsoluteUnit</a></li>
+          <li class="api apilevel-24"><a href="RelativeDateTimeFormatter.Direction.html">RelativeDateTimeFormatter.Direction</a></li>
+          <li class="api apilevel-24"><a href="RelativeDateTimeFormatter.RelativeUnit.html">RelativeDateTimeFormatter.RelativeUnit</a></li>
+          <li class="api apilevel-24"><a href="RelativeDateTimeFormatter.Style.html">RelativeDateTimeFormatter.Style</a></li>
+          <li class="api apilevel-24"><a href="SearchIterator.ElementComparisonType.html">SearchIterator.ElementComparisonType</a></li>
+          <li class="api apilevel-24"><a href="TimeZoneFormat.GMTOffsetPatternType.html">TimeZoneFormat.GMTOffsetPatternType</a></li>
+          <li class="api apilevel-24"><a href="TimeZoneFormat.ParseOption.html">TimeZoneFormat.ParseOption</a></li>
+          <li class="api apilevel-24"><a href="TimeZoneFormat.Style.html">TimeZoneFormat.Style</a></li>
+          <li class="api apilevel-24"><a href="TimeZoneFormat.TimeType.html">TimeZoneFormat.TimeType</a></li>
+          <li class="api apilevel-24"><a href="TimeZoneNames.NameType.html">TimeZoneNames.NameType</a></li>
+          <li class="api apilevel-24"><a href="UnicodeSet.ComparisonStyle.html">UnicodeSet.ComparisonStyle</a></li>
+          <li class="api apilevel-24"><a href="UnicodeSet.SpanCondition.html">UnicodeSet.SpanCondition</a></li>
+          <li class="api apilevel-24"><a href="UnicodeSetSpanner.CountMethod.html">UnicodeSetSpanner.CountMethod</a></li>
+          <li class="api apilevel-24"><a href="UnicodeSetSpanner.TrimOption.html">UnicodeSetSpanner.TrimOption</a></li>
+      </ul>
+    </li>
+    
+    <li><h2>Exceptions</h2>
+      <ul>
+          <li class="api apilevel-24"><a href="StringPrepParseException.html">StringPrepParseException</a></li>
+      </ul>
+    </li>
+    
+  </ul>
+  
+</div>
+
+
+
+
+    </div>
+
+    
+
+  
+    
+  
+    
+
+
+
+
+  
+
+
+<footer class="devsite-footer-promos nocontent">
+  <nav class="devsite-full-site-width">
+    <ul class="devsite-footer-promos-list">
+      
+      <li class="devsite-footer-promo">
+        <a href="http://twitter.com/AndroidDev"
+           class="devsite-footer-promo-title gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Twitter Promo"
+           >
+          
+          
+          <img class="devsite-footer-promo-icon" src="https://developer.android.com/static/images/footer/logo-twitter.svg">
+          
+          
+            Twitter
+          
+        </a>
+        <div class="devsite-footer-promo-description">Follow @AndroidDev on Twitter</div>
+      </li>
+      
+      <li class="devsite-footer-promo">
+        <a href="http://plus.google.com/+AndroidDevelopers"
+           class="devsite-footer-promo-title gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Google+ Promo"
+           >
+          
+          
+          <img class="devsite-footer-promo-icon" src="../../../../../www.gstatic.com/images/branding/product/2x/google_plus_48dp.png">
+          
+          
+            Google+
+          
+        </a>
+        <div class="devsite-footer-promo-description">Follow Android Developers on Google+</div>
+      </li>
+      
+      <li class="devsite-footer-promo">
+        <a href="http://www.youtube.com/user/androiddevelopers"
+           class="devsite-footer-promo-title gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer YouTube Promo"
+           >
+          
+          
+          <img class="devsite-footer-promo-icon" src="../../../../../www.gstatic.com/images/icons/material/product/2x/youtube_48dp.png">
+          
+          
+            YouTube
+          
+        </a>
+        <div class="devsite-footer-promo-description">Check out Android Developers on YouTube</div>
+      </li>
+      
+    </ul>
+  </nav>
+</footer>
+
+
+
+<div class="wrap dac-footer-container">
+  <footer class="dac-footer ">
+    <div class="cols dac-footer-main">
+      <div class="col-1of1">
+        <div class="dac-footer-contact">
+          
+          <a class="dac-footer-contact-link" href="https://developer.android.com/newsletter/index.html" title="Newsletter">Newsletter</a>
+          
+          <a class="dac-footer-contact-link" href="https://android-developers.blogspot.com/" title="Blog" target="_blank">Blog</a>
+          
+          <a class="dac-footer-contact-link" href="https://developer.android.com/support.html" title="Support">Support</a>
+          
+          <a class="dac-footer-contact-link" href="https://docs.google.com/forms/d/e/1FAIpQLSf27XIxoFmNpTjTYdk-m1uKWGqEnd7_4C_E1AD5fdCfyTBWNA/viewform?usp=pp_url&amp;entry.1909689089&amp;entry.208743710&amp;entry.408796755&amp;entry.1341430893&amp;entry.594931249&amp;entry.1640656812&amp;entry.1759804042&amp;entry.1441312344=developer.android.com" title="Join user studies" target="_blank">Join user studies</a>
+        </div>
+      </div>
+    </div>
+
+    <hr class="dac-footer-separator"/>
+      
+      <p class="dac-footer-copyright">
+        
+        Except as noted, this content is licensed under <a href="http://creativecommons.org/licenses/by/2.5/" target="_blank">Creative Commons Attribution 2.5</a>. For details and restrictions, see the <a href="https://developer.android.com/license.html">Content License</a>.
+      </p>
+    
+
+    <p class="dac-footer-links">
+      
+      <a href="https://www.android.com/" title="Android.com" target="_blank">Android.com</a>
+      
+      <a href="https://developer.android.com/" title="Android Developers">Android Developers</a>
+      
+      <a href="https://developer.android.com/studio/index.html" title="Android Studio">Android Studio</a>
+      
+      <a href="https://developer.android.com/distribute/console/index.html" title="Google Play Console">Google Play Console</a>
+      
+      <a href="https://developer.android.com/legal.html" title="Legal Notice">Legal Notice</a>
+    </p>
+
+    
+    <form class="devsite-utility-footer-language" id="setlang" action="https://developer.android.com/i18n/setlang/" method="post">
+      <input type="hidden" name="xsrf_token" value="jC_KacXKZw2fjrc1PN_5bwpHAenjOcntn_7Ym5hAPHk6MTUxMTEwNjk4MTYzMDcyMA" />
+      <input type="hidden" name="next" value="Normalizer.html">
+      <span id="language" class="locales">
+        <select class="devsite-utility-footer-language-select" name="language">
+          
+          <option value="id"
+            >
+            Bahasa Indonesia
+          </option>
+          
+          <option value="de"
+            >
+            Deutsch
+          </option>
+          
+          <option value="en"
+             selected="selected" >
+            English
+          </option>
+          
+          <option value="es"
+            >
+            español
+          </option>
+          
+          <option value="es-419"
+            >
+            Español (América Latina)
+          </option>
+          
+          <option value="fr"
+            >
+            français
+          </option>
+          
+          <option value="pt-br"
+            >
+            Português Brasileiro
+          </option>
+          
+          <option value="vi"
+            >
+            Tiếng Việt
+          </option>
+          
+          <option value="tr"
+            >
+            Türkçe
+          </option>
+          
+          <option value="ru"
+            >
+            Русский
+          </option>
+          
+          <option value="th"
+            >
+            ภาษาไทย
+          </option>
+          
+          <option value="ja"
+            >
+            日本語
+          </option>
+          
+          <option value="zh-cn"
+            >
+            简体中文
+          </option>
+          
+          <option value="zh-tw"
+            >
+            繁體中文
+          </option>
+          
+          <option value="ko"
+            >
+            한국어
+          </option>
+          
+        </select>
+      </span>
+    </form>
+  </footer>
+</div><!--/.wrap -->
+
+<div class="dac-toast-group">
+  <div class="dac-toast" data-toast>
+    <div class="dac-toast-wrap">
+      
+      This site uses cookies to store your preferences for site-specific language and display options.
+      <button class="dac-toast-close-btn">
+        
+        <span class="dac-button dac-raised dac-primary">OK</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<div data-modal="newsletter" data-newsletter-fb data-swap class="dac-modal newsletter">
+  <div class="dac-modal-container">
+    <div class="dac-modal-window">
+      <header class="dac-modal-header">
+        <div class="dac-modal-header-actions">
+          <button class="dac-modal-header-close" data-modal-toggle></button>
+        </div>
+        <div class="dac-swap" data-swap-container>
+          <section class="dac-swap-section dac-active dac-down">
+            
+            <h2 class="norule dac-modal-header-title" data-t="newsletter.title">Get the latest Android developer news and tips that will help you find success on Google Play.</h2>
+            
+            <p class="dac-modal-header-subtitle" data-t="newsletter.requiredHint">* Required Fields</p>
+          </section>
+          <section class="dac-swap-section dac-up">
+            
+            <h2 class="norule dac-modal-header-title" data-t="newsletter.successTitle">Hooray!</h2>
+          </section>
+        </div>
+      </header>
+      <div class="dac-swap" data-swap-container>
+        <section class="dac-swap-section dac-active dac-left">
+          <form action="https://services.google.com/fb/submissions/android-developer-mailing-list/" class="dac-form" method="post">
+            <section class="dac-modal-content">
+              <fieldset class="dac-form-fieldset">
+                <div class="cols">
+                  <div class="col-1of2 newsletter-leftCol">
+                    <div class="dac-form-input-group">
+                      
+                      <label for="newsletter-full-name" class="dac-form-floatlabel" data-t="newsletter.name">Full name</label>
+                      <input type="text" class="dac-form-input" name="fullname" id="newsletter-full-name" required>
+                      <span class="dac-form-required">*</span>
+                    </div>
+                    <div class="dac-form-input-group">
+                      
+                      <label for="newsletter-email" class="dac-form-floatlabel" data-t="newsletter.email">Email address</label>
+                      <input type="email" class="dac-form-input" name="emailaddress" id="newsletter-email" required>
+                      <span class="dac-form-required">*</span>
+                    </div>
+                  </div>
+                  <div class="col-1of2 newsletter-rightCol">
+                    <div class="dac-form-input-group">
+                      
+                      <label for="newsletter-company" class="dac-form-floatlabel" data-t="newsletter.company">Company / developer name</label>
+                      <input type="text" class="dac-form-input" name="companydevelopername" id="newsletter-company">
+                    </div>
+                    <div class="dac-form-input-group">
+                      
+                      <label for="newsletter-play-store" class="dac-form-floatlabel" data-t="newsletter.appUrl">One of your Play Store app URLs</label>
+                      <input type="url" class="dac-form-input" name="playstoreappurls" id="newsletter-play-store">
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+              <fieldset class="dac-form-fieldset">
+                <div class="cols">
+                  
+                  <div class="col-1of2 newsletter-leftCol newsletter-interested" data-validation-message="Please check at least one item.">
+                    
+                    <legend class="dac-form-legend">What are you interested in?<span class="dac-form-required">*</span></legend>
+                    <div class="dac-form-radio-group">
+                      <input type="checkbox" class="dac-form-checkbox" name="interested" id="interested-whats-new" value="whats-new">
+                      <label for="interested-whats-new" class="dac-form-checkbox-button"></label>
+                      
+                      <label for="interested-whats-new" class="dac-form-label">What's new</label>
+                    </div>
+                    <div class="dac-form-radio-group">
+                      <input type="checkbox" class="dac-form-checkbox" name="interested" id="interested-games-updates" value="games-updates">
+                      <label for="interested-games-updates" class="dac-form-checkbox-button"></label>
+                      
+                      <label for="interested-games-updates" class="dac-form-label">Games updates</label>
+                    </div>
+                    <div class="dac-form-radio-group">
+                      <input type="checkbox" class="dac-form-checkbox" name="interested" id="interested-android-development" value="android-development">
+                      <label for="interested-android-development" class="dac-form-checkbox-button"></label>
+                      
+                      <label for="interested-android-development" class="dac-form-label">Android development</label>
+                    </div>
+                  </div>
+                  <div class="col-1of2 newsletter-rightCol newsletter-checkboxes">
+                    <div class="dac-form-input-group">
+                      
+                      <label for="newsletter-receive-in">Receive newsletter in</label>
+                      <select name="language" class="dac-form-select" id="newsletter-receive-in">
+                        <option value="en-US" selected>English</option>
+                        <option value="ar">Arabic</option>
+                        <option value="zh">Chinese (Simplified)</option>
+                        <option value="zh-TW">Chinese (Traditional)</option>
+                        <option value="fr">French</option>
+                        <option value="de">German</option>
+                        <option value="id">Indonesian (Bahasa)</option>
+                        <option value="ja">Japanese</option>
+                        <option value="ko">Korean</option>
+                        <option value="pt-BR">Portuguese (Brazilian)</option>
+                        <option value="ru">Russian</option>
+                        <option value="es-419">Spanish (Latin American)</option>
+                        <option value="th">Thai</option>
+                        <option value="tr">Turkish</option>
+                        <option value="vi">Vietnamese</option>
+                      </select>
+                    </div>
+                    <div class="dac-form-radio-group">
+                      <div class="dac-media">
+                        <div class="dac-media-figure">
+                          <input type="checkbox" class="dac-form-checkbox" name="marketingoptin" id="newsletter-add" required value="Add me to the mailing list.">
+                          <label for="newsletter-add" class="dac-form-checkbox-button"></label>
+                        </div>
+                        <div class="dac-media-body">
+                          <label for="newsletter-add" class="dac-form-label dac-form-aside">
+                            
+                            Add me to the mailing list.
+                            <span class="dac-form-required">*</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="dac-form-radio-group">
+                      <div class="dac-media">
+                        <div class="dac-media-figure">
+                          <input type="checkbox" class="dac-form-checkbox" name="privacystatement" id="newsletter-terms" required value="I acknowledge that the information provided in this form will be subject to Google's privacy policy (https://www.google.com/policies/privacy/).">
+                          <label for="newsletter-terms" class="dac-form-checkbox-button"></label>
+                        </div>
+                        <div class="dac-media-body">
+                          <label for="newsletter-terms" class="dac-form-label dac-form-aside"><span data-t="newsletter.privacyPolicy" data-t-html>
+                            
+                            I acknowledge that the information provided in this form will be subject to <a href="https://www.google.com/policies/privacy/">Google's privacy policy</a>.
+                          </span>
+                          <span class="dac-form-required">*</span></label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+            </section>
+            <input type="hidden" name="referrer" value="dac">
+            <footer class="dac-modal-footer">
+              <div class="cols">
+                <div class="col-2of5">
+                </div>
+              </div>
+              <button type="submit" value="Submit" class="dac-fab dac-primary dac-large dac-modal-action"><i class="dac-sprite dac-arrow-right"></i></button>
+            </footer>
+          </form>
+        </section>
+        <section class="dac-swap-section dac-right">
+          <div class="dac-modal-content">
+            <p class="newsletter-success-message" data-t="newsletter.successDetails">
+              
+              You have successfully signed up for the latest Android developer news and tips.
+            </p>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</div><!--/.dac-modal.newsletter-->
+
+<div data-modal="wechat" class="dac-modal">
+  <div class="dac-modal-container">
+    <div class="dac-modal-window">
+      <header class="dac-modal-header">
+        <div class="dac-modal-header-actions">
+          <button class="dac-modal-header-close" data-modal-toggle></button>
+        </div>
+        <section>
+          
+          <h2 class="norule dac-modal-header-title">Follow Google Developers on WeChat</h2>
+        </section>
+      </header>
+      <section class="dac-modal-content figure-center center-img">
+        <img src="../../../../static/images/qr-wechat.png">
+      </section>
+    </div>
+  </div>
+</div><!--/.dac-modal[dac-modal=wechat]-->
+
+
+<div data-modal="langform" class="dac-modal" id="langform">
+  <div class="dac-modal-container">
+    <div class="dac-modal-window">
+      <header class="dac-modal-header">
+        <div class="dac-modal-header-actions">
+          <button class="dac-modal-header-close" data-modal-toggle></button>
+        </div>
+        <section class="dac-swap-section dac-active dac-down">
+          <h2 class="norule dac-modal-header-title">
+            
+            Browse this site in <span class="span-target-lang"></span>?
+          </h2>
+        </section>
+      </header>
+      <section class="dac-swap-section dac-active dac-left">
+          <section class="dac-modal-content">
+            <fieldset class="dac-form-fieldset">
+              <div class="cols">
+                <div class="col-2of2 langform-leftCol">
+                  <p id="resetLangText">
+                    
+                    You requested a page in <span class="span-target-lang"></span>, but your language preference for this site is <span class="span-current-lang"></span>.
+                  </p>
+                  <p id="resetLangCta">
+                    
+                    Would you like to change your language preference and browse this site in <span class="span-target-lang"></span>? If you want to change your language preference later, use the language menu at the bottom of each page.
+                  </p>
+                </div>
+              </div>
+            </fieldset>
+          </section>
+          <footer class="dac-modal-footer" id="langfooter">
+            <div class="cols">
+              <div class="col-2of5">
+              </div>
+            </div>
+            <a href="#" class="yes" onclick="return false;">
+              <button class="button dac-primary dac-modal-action lang yes" data-t="newsletter.resetLangButtonYes" data-modal-toggle>
+                
+                Change Language
+              </button>
+            </a>
+            <a href="#" class="" onclick="return false;">
+              <button class="button dac-primary dac-modal-action lang no" data-t="newsletter.resetLangButtonNo" data-modal-toggle>
+                
+                Not Now
+              </button>
+            </a>
+          </footer>
+        </form>
+      </section>
+    </div>
+  </div>
+</div><!--/.dac-modal-->
+
+
+<div data-modal="api-unavailable" class="dac-modal" id="api-unavailable">
+  <div class="dac-modal-container">
+    <div class="dac-modal-window">
+      <header class="dac-modal-header">
+        <div class="dac-modal-header-actions">
+          <button class="dac-modal-header-close" data-modal-toggle></button>
+        </div>
+        <section class="dac-swap-section dac-active dac-down">
+          <h2 class="norule dac-modal-header-title">
+            
+            This class requires API level <span class="api-level"></span> or higher
+          </h2>
+        </section>
+      </header>
+      <section class="dac-swap-section dac-active dac-left">
+          <section class="dac-modal-content">
+            <p>
+              
+              This doc is hidden because your selected API level for the documentation is <span class="api-level"></span>. You can change the documentation API level with the selector above the left navigation.
+            </p>
+            
+            <p>For more information about specifying the API level your app requires, read <a href="https://developer.android.com/training/basics/supporting-devices/platforms.html">Supporting Different Platform Versions</a>.</p>
+          </section>
+          <footer class="dac-modal-footer" id="langfooter">
+            <div class="cols">
+              <div class="col-2of5">
+              </div>
+            </div>
+            <a href="#" class="ok" onclick="return false;">
+              <button class="button dac-primary dac-modal-action ok"
+              data-modal-toggle>
+                
+                OK, make this page visible
+              </button>
+            </a>
+          </footer>
+        </form>
+      </section>
+    </div>
+  </div>
+</div><!--/.dac-modal#api-unavailable-->
+
+    
+  </div><!--/#body-content-->
+
+  <!-- Nav Setup -->
+  <script>$('[data-dac-nav]').dacNav();</script>
+  <script type="text/javascript">
+    $('.slideshow-container').dacSlideshow({
+        btnPrev: '.slideshow-prev',
+        btnNext: '.slideshow-next',
+        btnPause: '#pauseButton'
+    });
+
+    $(".feed").dacTabbedList({
+      nav_id: '.feed-nav',
+      frame_id: '.feed-frame'
+    });
+  </script>
+  
+  <script src="../../../../ytblogger_lists_unified543b.js?v=2017111903" defer></script>
+  <script src="../../../../android_metadata_en543b.js?v=2017111903" defer></script>
+  
+  <script src="../../../lists543b.js?v=2017111903" defer></script>
+  <script src="../../../gms_lists543b.js?v=2017111903" defer></script>
+  <script src="../../support/wearable/lists543b.js?v=2017111903" defer></script>
+  <script src="../../support/test/lists543b.js?v=2017111903" defer></script>
+  <script src="../../support/constraint/lists543b.js?v=2017111903" defer></script>
+  <script src="../../arch/lists543b.js?v=2017111903" defer></script>
+  <script src="https://developer.android.com/_static2/268f0926ba/jsi18n/"></script>
+  <script>
+    // Load localized metadata.
+    (function(lang) {
+      if (lang === 'en') { return; }
+      document.write('<script src="https://developer.android.com/android_metadata_en.js?v=2017111903" defer></' + 'script>');
+    })(getLangPref())
+
+    // Add skip to content for accessibility.
+    $('#skip-to-main').click(function() {
+      $('a[name=top]').focus();
+    });
+
+    $('.devsite-utility-footer-language-select').each(function() {
+      $(this).change(function() {
+        changeLangPref(this.value, true)
+        $('.devsite-utility-footer-language').submit();
+      });
+    });
+  </script>
+
+  <script>
+    (function($) {
+      devsite.analytics.InitAnalytics();
+      devsite.navigatingRadio.init();
+      devsite.kennedy.InitializeTabbars();
+      // overflowMenu must be initialized after tabbar.
+      devsite.overflowMenu.init();
+    })(jQuery);
+  </script>
+
+  
+
+
+<div id="survey-box-wrapper">
+  <div class="material-dialog" style="width:270px">
+    <div class="material-dialog-title">
+      Take a short survey?
+    </div>
+    <div class="material-dialog-description">
+      Help us improve the Android developer experience.
+      <br>(Sep 2017 survey)
+    </div>
+    <div class="material-button-bar">
+      <a class="dac-button dac-primary dac-raised" target="_blank"
+          href="https://goo.gl/dNPzCR">Okay</a>
+      <a class="dac-button" href="#">No thanks</a>
+    </div>
+  </div>
+</div>
+
+</body>
+
+<!-- Mirrored from developer.android.com/reference/android/icu/text/Normalizer.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 19 Nov 2017 16:43:02 GMT -->
+</html>
